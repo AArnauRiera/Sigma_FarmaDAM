@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sigma_FarmaDAM
 {
-    public partial class Form1 : Form
+    public partial class LoginUser : Form
     {
-        public Form1()
+        public LoginUser()
         {
             InitializeComponent();
         }
