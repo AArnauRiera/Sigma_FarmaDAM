@@ -65,7 +65,7 @@ namespace Sigma_Controls
             {
 
                 case FieldTypes.DNI:
-                    regularExpresion = "^[0 - 9]{ 8,8}[A-Za-z]$";
+                    regularExpresion = "^[0-9]{8,8}[A-Z]$";
                     break;
                 case FieldTypes.Name:
                     regularExpresion = @"[a-zA-Z]{1,15}$";
