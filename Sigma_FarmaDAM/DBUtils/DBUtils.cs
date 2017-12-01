@@ -10,7 +10,7 @@ namespace ClassLibrary1
     public class DBUtils
     {
         #region Private Variables
-        private string _stringMySQL = "Server = 51.255.58.1; Database=g1s2am_FarmaDAM;Uid=g1s2am_SigmaCode;PASSWORD=12345aA";
+        private string _stringMySQL = "Server = g1s2am.sdslab.cat; Database=g1s2am_FarmaDAM;Uid=g1s2am_Admin;PASSWORD=12345aA";
         private MySqlConnection con;
         #endregion
 
