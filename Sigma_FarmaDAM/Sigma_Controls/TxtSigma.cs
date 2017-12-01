@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -13,7 +14,7 @@ namespace Sigma_Controls
 
         #region public variables
 
-        public enum FieldTipes
+        public enum FieldTypes
         {
             Name,
             LastName,
@@ -27,7 +28,7 @@ namespace Sigma_Controls
 
         #region private variables
 
-        private FieldTipes _fieldTipe;
+        private FieldTypes _fieldType;
 
         private string _dBReference;
 
@@ -42,10 +43,10 @@ namespace Sigma_Controls
             set { _dBReference = value; }
         }
 
-        public FieldTipes FieldTipe
+        public FieldTypes FieldType
         {
-            get { return _fieldTipe; }
-            set { _fieldTipe = value; }
+            get { return _fieldType; }
+            set { _fieldType = value; }
         }
 
         #endregion
@@ -59,24 +60,24 @@ namespace Sigma_Controls
         {
             string regularExpresion;
 
-            switch (_fieldTipe)
+            switch (_fieldType)
             {
-                case FieldTipes.Name:
+                case FieldTypes.Name:
                     regularExpresion = @"[a-zA-Z]{1,15}$";
                     break;
-                case FieldTipes.LastName:
+                case FieldTypes.LastName:
                     regularExpresion = @"[a-zA-Z]{1,15}$";
                     break;
-                case FieldTipes.Email:
+                case FieldTypes.Email:
                     regularExpresion = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
                     break;
-                case FieldTipes.Phone:
+                case FieldTypes.Phone:
                     regularExpresion = @"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}";
                     break;
-                case FieldTipes.Password:
+                case FieldTypes.Password:
                     regularExpresion = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$"; // The conditions are string must be between 8 and 15 characters long. string must contain at least one number. string must contain at least one uppercase letter. string must contain at least one lowercase letter.
                     break;
-                case FieldTipes.Date:
+                case FieldTypes.Date:
                     regularExpresion = @"([0][1-9]|[1][0-9|][2][0-9]|[3][0-1])\/([0][1-9]|[1][0-2])\/[1-2][0-9][0-9][0-9]";
                     break;
                 default:
@@ -98,9 +99,18 @@ namespace Sigma_Controls
 
             Match match = regex.Match(Text);
 
-            return match.Success;  
-            
+            return match.Success;
+
         }
+
+
+        protected override void OnLostFocus(EventArgs e)
+        {
+            base.OnLostFocus(e);
+
+            BackColor = DefaultBackColor;
+        }
+
 
         protected override void OnGotFocus(EventArgs e)
         {
@@ -108,11 +118,45 @@ namespace Sigma_Controls
             base.OnGotFocus(e);
 
             // Logic onFocus
-
+            BackColor = GetFocusColor();
 
         }
 
-        
+        private Color GetFocusColor()
+        {
+
+            Color color = new Color();
+
+            switch (_fieldType)
+            {
+                case FieldTypes.Name:
+                    color = Color.Red;
+                    break;
+                case FieldTypes.LastName:
+                    color = Color.Blue;
+                    break;
+                case FieldTypes.Email:
+                    color = Color.Green;
+                    break;
+                case FieldTypes.Phone:
+                    color = Color.Yellow;
+                    break;
+                case FieldTypes.Password:
+                    color = Color.Orange;
+                    break;
+                case FieldTypes.Date:
+                    color = Color.Purple;
+                    break;
+                default:
+                    color = Color.Pink;
+                    break;
+            }
+
+            return color;
+
+        }
+
+
     }
 
 }
