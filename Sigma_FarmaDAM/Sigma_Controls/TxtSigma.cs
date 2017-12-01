@@ -118,8 +118,23 @@ namespace Sigma_Controls
             base.OnGotFocus(e);
 
             // Logic onFocus
+            if (IsPassword())
+            {
+                PasswordChar = '*';
+            }
             BackColor = GetFocusColor();
 
+        }
+
+        private bool IsPassword()
+        {
+            Boolean ispassword = false;
+            if (_fieldType == FieldTypes.Password)
+            {
+                ispassword = true;
+            }
+
+            return ispassword;
         }
 
         private Color GetFocusColor()
