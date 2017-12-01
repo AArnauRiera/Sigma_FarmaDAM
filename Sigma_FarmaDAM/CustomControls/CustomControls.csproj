@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormulariBase.cs" />
+    <Compile Include="FormulariBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="FormulariBase.Designer.cs">
       <DependentUpon>FormulariBase.cs</DependentUpon>
     </Compile>
