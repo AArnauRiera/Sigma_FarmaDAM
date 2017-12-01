@@ -16,6 +16,7 @@ namespace Sigma_Controls
 
         public enum FieldTypes
         {
+            DNI,
             Name,
             LastName,
             Email,
@@ -62,6 +63,10 @@ namespace Sigma_Controls
 
             switch (_fieldType)
             {
+
+                case FieldTypes.DNI:
+                    regularExpresion = "^[0 - 9]{ 8,8}[A-Za-z]$";
+                    break;
                 case FieldTypes.Name:
                     regularExpresion = @"[a-zA-Z]{1,15}$";
                     break;
