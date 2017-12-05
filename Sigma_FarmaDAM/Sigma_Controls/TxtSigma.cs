@@ -10,9 +10,16 @@ using System.Windows.Forms;
 namespace Sigma_Controls
 {
     public class TxtSigma : TextBox
-    {
+    {        
+
+        public TxtSigma()
+        {
+            GotFocus += SetPlaceHolder;
+            LostFocus += RemovePlaceHolder;
+        }
 
         #region public variables
+
 
         public enum FieldTypes
         {
@@ -38,6 +45,8 @@ namespace Sigma_Controls
         private FieldTypes _fieldType;
 
         private string _dBReference;
+
+        private bool _isPlaceholder = true;
 
         #endregion
 
@@ -132,30 +141,51 @@ namespace Sigma_Controls
         {
             base.OnLostFocus(e);
 
-            BackColor = DefaultBackColor;
+            BackColor = DefaultBackColor;               
+        }
 
+        private void SetPlaceHolder()
+        {
             if (String.IsNullOrWhiteSpace(Text))
             {
                 Text = Placeholder;
-            }                
+                ForeColor = Color.Gray;
+                Font = new Font(Font, FontStyle.Italic);
+                _isPlaceholder = true;
+            }
         }
 
 
+        private void RemovePlaceHolder()
+        {
+            if (_isPlaceholder)
+            {
+                Text = "";
+                ForeColor = SystemColors.WindowText;
+                Font = new Font(Font, FontStyle.Regular);
+                _isPlaceholder = false;
+            }
+        }
+        private void SetPlaceHolder(object sender, EventArgs e)
+        {
+            SetPlaceHolder();
+        }
+
+        private void RemovePlaceHolder(object sender, EventArgs e)
+        {
+            RemovePlaceHolder();
+        }
         protected override void OnGotFocus(EventArgs e)
         {
 
             base.OnGotFocus(e);
-
-            if (String.IsNullOrWhiteSpace(Text))
-            {
-                Text = "";
-            }
 
             // Logic onFocus
             if (IsPassword())
             {
                 PasswordChar = '*';
             }
+
             BackColor = GetFocusColor();
 
         }
