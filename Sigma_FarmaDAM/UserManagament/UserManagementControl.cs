@@ -10,7 +10,6 @@ namespace UserManagament
     {
         public UserManagementControl()
         {
-
         }
         public UserManagementControl(string value, string valueType)
         {

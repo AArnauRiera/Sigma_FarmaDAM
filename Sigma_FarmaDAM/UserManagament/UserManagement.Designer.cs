@@ -49,9 +49,10 @@
             // tbxFirstName
             // 
             this.tbxFirstName.DBReference = null;
-            this.tbxFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Password;
+            this.tbxFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.tbxFirstName.Location = new System.Drawing.Point(150, 86);
             this.tbxFirstName.Name = "tbxFirstName";
+            this.tbxFirstName.Placeholder = "First Name";
             this.tbxFirstName.Size = new System.Drawing.Size(142, 20);
             this.tbxFirstName.TabIndex = 0;
             // 
@@ -77,9 +78,10 @@
             // tbxLastName1
             // 
             this.tbxLastName1.DBReference = null;
-            this.tbxLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.tbxLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.LastName;
             this.tbxLastName1.Location = new System.Drawing.Point(150, 121);
             this.tbxLastName1.Name = "tbxLastName1";
+            this.tbxLastName1.Placeholder = "LastName";
             this.tbxLastName1.Size = new System.Drawing.Size(142, 20);
             this.tbxLastName1.TabIndex = 2;
             // 
@@ -98,6 +100,7 @@
             this.tbxLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.tbxLastName2.Location = new System.Drawing.Point(150, 157);
             this.tbxLastName2.Name = "tbxLastName2";
+            this.tbxLastName2.Placeholder = "LastName";
             this.tbxLastName2.Size = new System.Drawing.Size(142, 20);
             this.tbxLastName2.TabIndex = 4;
             // 
@@ -114,9 +117,10 @@
             // tbxDNI
             // 
             this.tbxDNI.DBReference = null;
-            this.tbxDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.tbxDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.DNI;
             this.tbxDNI.Location = new System.Drawing.Point(150, 194);
             this.tbxDNI.Name = "tbxDNI";
+            this.tbxDNI.Placeholder = "DNI";
             this.tbxDNI.Size = new System.Drawing.Size(142, 20);
             this.tbxDNI.TabIndex = 6;
             this.tbxDNI.Tag = "";
@@ -137,6 +141,7 @@
             this.tbxEmail.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Email;
             this.tbxEmail.Location = new System.Drawing.Point(150, 234);
             this.tbxEmail.Name = "tbxEmail";
+            this.tbxEmail.Placeholder = "Email";
             this.tbxEmail.Size = new System.Drawing.Size(142, 20);
             this.tbxEmail.TabIndex = 8;
             // 
@@ -155,6 +160,7 @@
             this.txtSigma1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.txtSigma1.Location = new System.Drawing.Point(150, 270);
             this.txtSigma1.Name = "txtSigma1";
+            this.txtSigma1.Placeholder = "NTS";
             this.txtSigma1.Size = new System.Drawing.Size(142, 20);
             this.txtSigma1.TabIndex = 10;
             // 
