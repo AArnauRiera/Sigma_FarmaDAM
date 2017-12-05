@@ -31,5 +31,10 @@ namespace UserManagament
         {
 
         }
+
+        private void UserManagement_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

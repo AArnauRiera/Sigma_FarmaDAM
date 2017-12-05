@@ -49,8 +49,8 @@
             // tbxFirstName
             // 
             this.tbxFirstName.DBReference = null;
-            this.tbxFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
-            this.tbxFirstName.Location = new System.Drawing.Point(211, 89);
+            this.tbxFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Password;
+            this.tbxFirstName.Location = new System.Drawing.Point(150, 86);
             this.tbxFirstName.Name = "tbxFirstName";
             this.tbxFirstName.Size = new System.Drawing.Size(142, 20);
             this.tbxFirstName.TabIndex = 0;
@@ -58,7 +58,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(121, 92);
+            this.label1.Location = new System.Drawing.Point(60, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 1;
@@ -68,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(121, 127);
+            this.label2.Location = new System.Drawing.Point(60, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             this.tbxLastName1.DBReference = null;
             this.tbxLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
-            this.tbxLastName1.Location = new System.Drawing.Point(211, 124);
+            this.tbxLastName1.Location = new System.Drawing.Point(150, 121);
             this.tbxLastName1.Name = "tbxLastName1";
             this.tbxLastName1.Size = new System.Drawing.Size(142, 20);
             this.tbxLastName1.TabIndex = 2;
@@ -86,7 +86,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(121, 163);
+            this.label3.Location = new System.Drawing.Point(60, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 5;
@@ -96,7 +96,7 @@
             // 
             this.tbxLastName2.DBReference = null;
             this.tbxLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
-            this.tbxLastName2.Location = new System.Drawing.Point(211, 160);
+            this.tbxLastName2.Location = new System.Drawing.Point(150, 157);
             this.tbxLastName2.Name = "tbxLastName2";
             this.tbxLastName2.Size = new System.Drawing.Size(142, 20);
             this.tbxLastName2.TabIndex = 4;
@@ -104,7 +104,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(121, 200);
+            this.label4.Location = new System.Drawing.Point(60, 197);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(26, 13);
             this.label4.TabIndex = 7;
@@ -115,7 +115,7 @@
             // 
             this.tbxDNI.DBReference = null;
             this.tbxDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
-            this.tbxDNI.Location = new System.Drawing.Point(211, 197);
+            this.tbxDNI.Location = new System.Drawing.Point(150, 194);
             this.tbxDNI.Name = "tbxDNI";
             this.tbxDNI.Size = new System.Drawing.Size(142, 20);
             this.tbxDNI.TabIndex = 6;
@@ -125,7 +125,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(121, 240);
+            this.label5.Location = new System.Drawing.Point(60, 237);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 9;
@@ -135,7 +135,7 @@
             // 
             this.tbxEmail.DBReference = null;
             this.tbxEmail.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Email;
-            this.tbxEmail.Location = new System.Drawing.Point(211, 237);
+            this.tbxEmail.Location = new System.Drawing.Point(150, 234);
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(142, 20);
             this.tbxEmail.TabIndex = 8;
@@ -143,7 +143,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(121, 276);
+            this.label6.Location = new System.Drawing.Point(60, 273);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 13);
             this.label6.TabIndex = 11;
@@ -153,7 +153,7 @@
             // 
             this.txtSigma1.DBReference = null;
             this.txtSigma1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
-            this.txtSigma1.Location = new System.Drawing.Point(211, 273);
+            this.txtSigma1.Location = new System.Drawing.Point(150, 270);
             this.txtSigma1.Name = "txtSigma1";
             this.txtSigma1.Size = new System.Drawing.Size(142, 20);
             this.txtSigma1.TabIndex = 10;
@@ -161,7 +161,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(121, 316);
+            this.label7.Location = new System.Drawing.Point(60, 313);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 13);
             this.label7.TabIndex = 13;
@@ -170,14 +170,14 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(211, 313);
+            this.comboBox1.Location = new System.Drawing.Point(150, 310);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(142, 21);
             this.comboBox1.TabIndex = 14;
             // 
             // btnUserManagement
             // 
-            this.btnUserManagement.Location = new System.Drawing.Point(202, 364);
+            this.btnUserManagement.Location = new System.Drawing.Point(141, 361);
             this.btnUserManagement.Name = "btnUserManagement";
             this.btnUserManagement.Size = new System.Drawing.Size(75, 23);
             this.btnUserManagement.TabIndex = 15;
@@ -188,7 +188,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(100, 34);
+            this.lblTitle.Location = new System.Drawing.Point(39, 31);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(70, 26);
             this.lblTitle.TabIndex = 16;
@@ -198,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 518);
+            this.ClientSize = new System.Drawing.Size(354, 429);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnUserManagement);
             this.Controls.Add(this.comboBox1);
@@ -217,6 +217,7 @@
             this.Controls.Add(this.tbxFirstName);
             this.Name = "UserManagement";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.UserManagement_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
