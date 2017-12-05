@@ -56,6 +56,15 @@ namespace Sigma_Controls
             set { _fieldType = value; }
         }
 
+        private string _placeholder;
+
+        public string Placeholder
+        {
+            get { return _placeholder; }
+            set { _placeholder = value; }
+        }
+
+
         #endregion
 
 
@@ -71,21 +80,18 @@ namespace Sigma_Controls
             {
 
                 case FieldTypes.DNI:
-                    regularExpresion = "^[0-9]{8,8}[A-Z]$";
+                    regularExpresion = @"^[0-9]{8,8}[A-Z]$";
                     break;
                 case FieldTypes.NSS:
-                    regularExpresion = "^(\d{2})(\d{2})(\d{2})\d{5}$";
+                    regularExpresion = @"^(\d{2})(\d{2})(\d{2})\d{5}$";
                     break;
-                 //////////
-                 //IS NECESSARY TO MAKE A DIFFERENCE BETWEEN NAME AND LAST NAME ?
                 case FieldTypes.Name:
                     regularExpresion = @"[a-zA-Z]{1,15}$";
                     break;                
                 case FieldTypes.LastName:
                     regularExpresion = @"[a-zA-Z]{1,15}$";
                     break;
-                ////////////
-                //////////
+
                 case FieldTypes.Email:
                     regularExpresion = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
                     break;
@@ -127,6 +133,11 @@ namespace Sigma_Controls
             base.OnLostFocus(e);
 
             BackColor = DefaultBackColor;
+
+            if (String.IsNullOrWhiteSpace(Text))
+            {
+                Text = Placeholder;
+            }                
         }
 
 
@@ -134,6 +145,11 @@ namespace Sigma_Controls
         {
 
             base.OnGotFocus(e);
+
+            if (String.IsNullOrWhiteSpace(Text))
+            {
+                Text = "";
+            }
 
             // Logic onFocus
             if (IsPassword())
@@ -146,7 +162,7 @@ namespace Sigma_Controls
 
         private bool IsPassword()
         {
-            Boolean ispassword = false;
+            bool ispassword = false;
             if (_fieldType == FieldTypes.Password)
             {
                 ispassword = true;
