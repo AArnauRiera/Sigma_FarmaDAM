@@ -28,58 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtDrug = new System.Windows.Forms.TextBox();
-            this.txtClient = new System.Windows.Forms.TextBox();
-            this.lblDrug = new System.Windows.Forms.Label();
-            this.lblClient = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.lvwSearch = new System.Windows.Forms.ListView();
             this.btnSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtDrug
+            // txtSearch
             // 
-            this.txtDrug.Location = new System.Drawing.Point(80, 34);
-            this.txtDrug.Name = "txtDrug";
-            this.txtDrug.Size = new System.Drawing.Size(100, 20);
-            this.txtDrug.TabIndex = 0;
-            this.txtDrug.TextChanged += new System.EventHandler(this.txtDrug_TextChanged);
+            this.txtSearch.Location = new System.Drawing.Point(80, 34);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(100, 20);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtDrug_TextChanged);
             // 
-            // txtClient
+            // lblSearch
             // 
-            this.txtClient.Location = new System.Drawing.Point(80, 83);
-            this.txtClient.Name = "txtClient";
-            this.txtClient.Size = new System.Drawing.Size(100, 20);
-            this.txtClient.TabIndex = 1;
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(12, 37);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(57, 13);
+            this.lblSearch.TabIndex = 2;
+            this.lblSearch.Text = "Add Query";
             // 
-            // lblDrug
+            // lvwSearch
             // 
-            this.lblDrug.AutoSize = true;
-            this.lblDrug.Location = new System.Drawing.Point(12, 37);
-            this.lblDrug.Name = "lblDrug";
-            this.lblDrug.Size = new System.Drawing.Size(44, 13);
-            this.lblDrug.TabIndex = 2;
-            this.lblDrug.Text = "Drug ID";
-            // 
-            // lblClient
-            // 
-            this.lblClient.AutoSize = true;
-            this.lblClient.Location = new System.Drawing.Point(12, 86);
-            this.lblClient.Name = "lblClient";
-            this.lblClient.Size = new System.Drawing.Size(47, 13);
-            this.lblClient.TabIndex = 3;
-            this.lblClient.Text = "Client ID";
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(2, 156);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(381, 277);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lvwSearch.Location = new System.Drawing.Point(2, 74);
+            this.lvwSearch.Name = "lvwSearch";
+            this.lvwSearch.Size = new System.Drawing.Size(381, 359);
+            this.lvwSearch.TabIndex = 4;
+            this.lvwSearch.UseCompatibleStateImageBehavior = false;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(80, 127);
+            this.btnSearch.Location = new System.Drawing.Point(215, 31);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 5;
@@ -93,11 +75,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 433);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.lblClient);
-            this.Controls.Add(this.lblDrug);
-            this.Controls.Add(this.txtClient);
-            this.Controls.Add(this.txtDrug);
+            this.Controls.Add(this.lvwSearch);
+            this.Controls.Add(this.lblSearch);
+            this.Controls.Add(this.txtSearch);
             this.Name = "SearchSystem";
             this.Text = "SearchSystem";
             this.ResumeLayout(false);
@@ -107,11 +87,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtDrug;
-        private System.Windows.Forms.TextBox txtClient;
-        private System.Windows.Forms.Label lblDrug;
-        private System.Windows.Forms.Label lblClient;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.ListView lvwSearch;
         private System.Windows.Forms.Button btnSearch;
     }
 }
