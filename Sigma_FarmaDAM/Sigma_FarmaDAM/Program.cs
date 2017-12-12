@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RegisterEditDrugs;
 
 namespace Sigma_FarmaDAM
 {
@@ -16,7 +17,7 @@ namespace Sigma_FarmaDAM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginUser());
+            Application.Run(new frmAddEditDrugs());
         }
     }
 }

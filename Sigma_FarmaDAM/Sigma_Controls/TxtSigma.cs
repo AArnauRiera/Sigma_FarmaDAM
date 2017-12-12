@@ -71,10 +71,10 @@ namespace Sigma_Controls
             {
 
                 case FieldTypes.DNI:
-                    regularExpresion = "^[0-9]{8,8}[A-Z]$";
+                    regularExpresion = @"^[0-9]{8,8}[A-Z]$";
                     break;
                 case FieldTypes.NSS:
-                    regularExpresion = "^(\d{2})(\d{2})(\d{2})\d{5}$";
+                    regularExpresion = @"^(\d{2})(\d{2})(\d{2})\d{5}$";
                     break;
                  //////////
                  //IS NECESSARY TO MAKE A DIFFERENCE BETWEEN NAME AND LAST NAME ?
