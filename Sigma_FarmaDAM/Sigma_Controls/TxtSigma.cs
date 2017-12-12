@@ -44,6 +44,8 @@ namespace Sigma_Controls
 
         private FieldTypes _fieldType;
 
+        private string _table;
+
         private string _dBReference;
 
         private bool _isPlaceholder = true;
@@ -52,6 +54,12 @@ namespace Sigma_Controls
 
 
         #region Properties
+
+        public string Table
+        {
+            get { return _table; }
+            set { _table = value; }
+        }
 
         public string DBReference
         {
