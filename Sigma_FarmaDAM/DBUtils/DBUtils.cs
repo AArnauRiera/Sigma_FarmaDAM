@@ -28,7 +28,7 @@ namespace ClassLibrary1
             MySqlConnection con = new MySqlConnection(_stringMySQL);
             con.Open();
             con.InitializeLifetimeService();
-            MessageBox.Show("HEHE");
+            MessageBox.Show("HEHEHE");
         }
 
         public DataSet PortarPerConsulta(string query)
