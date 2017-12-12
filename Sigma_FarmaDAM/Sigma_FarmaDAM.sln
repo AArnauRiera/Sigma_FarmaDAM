@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigma_FarmaDAM", "Sigma_FarmaDAM\Sigma_FarmaDAM.csproj", "{63BBEC2A-B19A-4B1C-9CFF-A9B0A26D14C5}"
 EndProject
