@@ -48,16 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SearchSystem.cs">
+    <Compile Include="frmSearchSystem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchSystem.Designer.cs">
-      <DependentUpon>SearchSystem.cs</DependentUpon>
+    <Compile Include="frmSearchSystem.Designer.cs">
+      <DependentUpon>frmSearchSystem.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="SearchSystem.resx">
-      <DependentUpon>SearchSystem.cs</DependentUpon>
+    <EmbeddedResource Include="frmSearchSystem.resx">
+      <DependentUpon>frmSearchSystem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,16 +79,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\DBUtils\DBUtils.csproj">
       <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
       <Name>DBUtils</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Sigma_FarmaDAM\Sigma_FarmaDAM.csproj">
-      <Project>{63bbec2a-b19a-4b1c-9cff-a9b0a26d14c5}</Project>
-      <Name>Sigma_FarmaDAM</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

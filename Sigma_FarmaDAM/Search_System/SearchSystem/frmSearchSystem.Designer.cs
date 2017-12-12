@@ -1,6 +1,6 @@
 ﻿namespace SearchSystem
 {
-    partial class SearchSystem
+    partial class frmSearchSystem
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -40,7 +40,6 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(100, 20);
             this.txtSearch.TabIndex = 0;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // lblSearch
             // 
@@ -69,7 +68,7 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // SearchSystem
+            // frmSearchSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -78,7 +77,7 @@
             this.Controls.Add(this.lvwSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtSearch);
-            this.Name = "SearchSystem";
+            this.Name = "frmSearchSystem";
             this.Text = "SearchSystem";
             this.ResumeLayout(false);
             this.PerformLayout();

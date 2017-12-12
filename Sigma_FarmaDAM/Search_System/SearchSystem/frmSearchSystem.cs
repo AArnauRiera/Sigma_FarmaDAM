@@ -11,31 +11,25 @@ using System.Windows.Forms;
 
 namespace SearchSystem
 {
-    public partial class SearchSystem : Form
+    public partial class frmSearchSystem : Form
     {
 
 
 
-        
 
 
-        public SearchSystem()
+
+        public frmSearchSystem()
         {
             InitializeComponent();
-           
-           
+
+
 
         }
-       
-       
+
+
 
         private void btnSearch_Click(object sender, EventArgs e)
-        {
-            
-           
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             DBUtils.DBUtils DBUtils = new DBUtils.DBUtils();
 
@@ -43,7 +37,8 @@ namespace SearchSystem
 
             DBUtils.PortarPerConsulta(Querry);
 
-
         }
+
+      
     }
 }
