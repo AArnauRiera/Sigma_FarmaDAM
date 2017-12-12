@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Data;
-using System.Data.OleDb;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 
-namespace ClassLibrary1
+namespace DBUtils
 {
     public class DBUtils
     {
         #region Private Variables
-        private string _stringMySQL = "Server = g1s2am.sdslab.cat; Database=g1s2am_FarmaDAM;Uid=g1s2am_Admin;PASSWORD=12345aA";
-        private MySqlConnection con;
+            private string _stringMySQL = "SERVER=51.255.58.1;PORT=3306;DATABASE=g1s2am_FarmaDAM;Uid=g1s2am_SigmaCode;PASSWORD=12345aA";
+            private MySqlConnection con;
         #endregion
 
         #region Public Variables
@@ -25,10 +24,17 @@ namespace ClassLibrary1
         #region OleDBMethods
         public void Conexion()
         {
-            MySqlConnection con = new MySqlConnection(_stringMySQL);
-            con.Open();
-            con.InitializeLifetimeService();
-            MessageBox.Show("HEHEHE");
+            try
+            {
+                MySqlConnection con = new MySqlConnection(_stringMySQL);
+                con.Open();
+                con.InitializeLifetimeService();
+                MessageBox.Show("CONNECTION OK");
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("DATABASE CONNECTION FAILED");
+            }
         }
 
         public DataSet PortarPerConsulta(string query)
