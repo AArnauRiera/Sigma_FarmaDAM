@@ -245,8 +245,8 @@
         private Sigma_Controls.TxtSigma txtSigma1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button btnUserManagement;
-        private System.Windows.Forms.Label lblTitle;
+        public System.Windows.Forms.Label lblTitle;
+        public System.Windows.Forms.Button btnUserManagement;
     }
 }
 
