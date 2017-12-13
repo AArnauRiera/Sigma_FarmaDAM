@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using DBUtils;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace SearchSystem
 {
@@ -31,14 +33,19 @@ namespace SearchSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+          
+            DataSet dts = null;
+           
             DBUtils.DBUtils DBUtils = new DBUtils.DBUtils();
-
-            String Querry = txtSearch.Text;
-
-            DBUtils.PortarPerConsulta(Querry);
+             dts  = DBUtils.PortarPerConsulta("SELECT * FROM CLIENTS");
 
         }
 
-      
+        private void lvwSearch_Layout(object sender, LayoutEventArgs e)
+        {
+
+        }
+
+    
     }
 }

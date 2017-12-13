@@ -57,6 +57,7 @@
             this.lvwSearch.Size = new System.Drawing.Size(381, 359);
             this.lvwSearch.TabIndex = 4;
             this.lvwSearch.UseCompatibleStateImageBehavior = false;
+            this.lvwSearch.Layout += new System.Windows.Forms.LayoutEventHandler(this.lvwSearch_Layout);
             // 
             // btnSearch
             // 
