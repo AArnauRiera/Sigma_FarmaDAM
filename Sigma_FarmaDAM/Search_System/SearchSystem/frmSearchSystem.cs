@@ -30,20 +30,12 @@ namespace SearchSystem
             DBUtils.DBUtils DBUTILS = new DBUtils.DBUtils();
             query = "Select * from Clients";
             dts = DBUTILS.PortarPerConsulta(query);
-            BindingDades();
+            dgView_List.DataSource = dts;
 
             DBUTILS = null;
         }
-        private void BindingDades()
-        {
-          
-        }
-        
-        private void PortardadesSQL()
-        {
-            DBUtils.DBUtils DBUTILS = new DBUtils.DBUtils();
 
-        }
+        
 
         public frmSearchSystem()
         {
@@ -57,11 +49,10 @@ namespace SearchSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-          
-           
-           
-            
-            
+
+
+            portardadesSQL();
+                  
         }
 
         
