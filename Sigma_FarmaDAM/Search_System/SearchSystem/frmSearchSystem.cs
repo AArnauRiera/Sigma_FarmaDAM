@@ -16,10 +16,34 @@ namespace SearchSystem
     public partial class frmSearchSystem : Form
     {
 
+        public DataSet dts;
+
+        String query;
 
 
 
 
+
+
+        private  void portardadesSQL()
+        {
+            DBUtils.DBUtils DBUTILS = new DBUtils.DBUtils();
+            query = "Select * from Clients";
+            dts = DBUTILS.PortarPerConsulta(query);
+            BindingDades();
+
+            DBUTILS = null;
+        }
+        private void BindingDades()
+        {
+          
+        }
+        
+        private void PortardadesSQL()
+        {
+            DBUtils.DBUtils DBUTILS = new DBUtils.DBUtils();
+
+        }
 
         public frmSearchSystem()
         {
@@ -34,18 +58,12 @@ namespace SearchSystem
         private void btnSearch_Click(object sender, EventArgs e)
         {
           
-            DataSet dts = null;
            
-            DBUtils.DBUtils DBUtils = new DBUtils.DBUtils();
-             dts  = DBUtils.PortarPerConsulta("SELECT * FROM CLIENTS");
-
+           
+            
+            
         }
 
-        private void lvwSearch_Layout(object sender, LayoutEventArgs e)
-        {
-
-        }
-
-    
+        
     }
 }

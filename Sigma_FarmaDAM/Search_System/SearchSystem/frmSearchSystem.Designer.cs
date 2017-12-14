@@ -30,8 +30,9 @@
         {
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
-            this.lvwSearch = new System.Windows.Forms.ListView();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.dgView_List = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgView_List)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSearch
@@ -50,15 +51,6 @@
             this.lblSearch.TabIndex = 2;
             this.lblSearch.Text = "Add Query";
             // 
-            // lvwSearch
-            // 
-            this.lvwSearch.Location = new System.Drawing.Point(2, 74);
-            this.lvwSearch.Name = "lvwSearch";
-            this.lvwSearch.Size = new System.Drawing.Size(381, 359);
-            this.lvwSearch.TabIndex = 4;
-            this.lvwSearch.UseCompatibleStateImageBehavior = false;
-            this.lvwSearch.Layout += new System.Windows.Forms.LayoutEventHandler(this.lvwSearch_Layout);
-            // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(215, 31);
@@ -69,17 +61,26 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // dgView_List
+            // 
+            this.dgView_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgView_List.Location = new System.Drawing.Point(1, 60);
+            this.dgView_List.Name = "dgView_List";
+            this.dgView_List.Size = new System.Drawing.Size(380, 374);
+            this.dgView_List.TabIndex = 6;
+            // 
             // frmSearchSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 433);
+            this.Controls.Add(this.dgView_List);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.lvwSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtSearch);
             this.Name = "frmSearchSystem";
             this.Text = "SearchSystem";
+            ((System.ComponentModel.ISupportInitialize)(this.dgView_List)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,8 +90,8 @@
 
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.ListView lvwSearch;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.DataGridView dgView_List;
     }
 }
 

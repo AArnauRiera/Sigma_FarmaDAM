@@ -29,6 +29,7 @@ namespace DBUtils
                 MySqlConnection con = new MySqlConnection(_stringMySQL);
                 con.Open();
                 con.InitializeLifetimeService();
+                MessageBox.Show("DATABASE CONNECTION CORRECT");
             }
             catch(Exception e)
             {
@@ -49,6 +50,7 @@ namespace DBUtils
                 construct = new MySqlCommandBuilder(dta);
                 dts = new DataSet();
                 dta.Fill(dts, "Taula");
+               
             }
             catch (Exception e)
             {
@@ -60,6 +62,7 @@ namespace DBUtils
                 con.Close();
                 con.Dispose();
             }
+           
 
             return dts;
 
