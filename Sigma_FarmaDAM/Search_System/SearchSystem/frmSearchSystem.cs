@@ -30,7 +30,7 @@ namespace SearchSystem
             DBUtils.DBUtils DBUTILS = new DBUtils.DBUtils();
             query = "Select * from Clients";
             dts = DBUTILS.PortarPerConsulta(query);
-            dgView_List.DataSource = dts;
+            dgView_List.DataSource = dts.Tables[0];
 
             DBUTILS = null;
         }
