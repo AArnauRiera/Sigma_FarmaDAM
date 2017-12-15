@@ -28,11 +28,12 @@ namespace SearchSystem
         private  void portardadesSQL()
         {
             DBUtils.DBUtils DBUTILS = new DBUtils.DBUtils();
-            query = "Select * from Clients";
+            query = "select* from Clients where Name = '" + txtSearch.Text + "'";
             dts = DBUTILS.PortarPerConsulta(query);
-            dgView_List.DataSource = dts.Tables[0];
 
-            DBUTILS = null;
+            dgView_List.DataSource = dts.Tables[0].Rows[0].Table;
+        
+
         }
 
         
