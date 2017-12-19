@@ -29,7 +29,7 @@ namespace DBUtils
                 con = new MySqlConnection(_stringMySQL);
                 con.Open();
                 con.InitializeLifetimeService();
-                MessageBox.Show("DATABASE CONNECTION CORRECT");
+             
             }
             catch(Exception e)
             {

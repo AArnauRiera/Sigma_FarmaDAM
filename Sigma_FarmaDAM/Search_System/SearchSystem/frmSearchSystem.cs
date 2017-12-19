@@ -20,11 +20,7 @@ namespace SearchSystem
 
         String query;
 
-
-
-
-
-
+        ///*** FUNCTION SEARCH DATA IN BBDD***///
         private  void portardadesSQL()
         {
             DBUtils.DBUtils DBUTILS = new DBUtils.DBUtils();
@@ -32,28 +28,32 @@ namespace SearchSystem
             dts = DBUTILS.PortarPerConsulta(query);
 
             dgView_List.DataSource = dts.Tables[0].Rows[0].Table;
-        
 
+            dgView_List.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
         }
 
-        
 
+        ///***MAIN***///
         public frmSearchSystem()
         {
             InitializeComponent();
-
-
-
         }
-
-
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
+            portardadesSQL();         
+        }
 
-            portardadesSQL();
-                  
+        private void dgView_List_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgView_List.Rows[e.RowIndex].ReadOnly = true;
+
+            if (dgView_List.Rows[e.RowIndex].Cells[e.ColumnIndex].Value == null)
+
+            {
+
+                dgView_List.Rows[e.RowIndex].ReadOnly = false;
+            }
         }
 
         

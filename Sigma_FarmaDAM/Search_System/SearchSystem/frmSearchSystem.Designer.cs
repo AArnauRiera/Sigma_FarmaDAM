@@ -37,7 +37,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(80, 34);
+            this.txtSearch.Location = new System.Drawing.Point(225, 36);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(100, 20);
             this.txtSearch.TabIndex = 0;
@@ -45,7 +45,7 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(12, 37);
+            this.lblSearch.Location = new System.Drawing.Point(122, 39);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(57, 13);
             this.lblSearch.TabIndex = 2;
@@ -53,7 +53,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(215, 31);
+            this.btnSearch.Location = new System.Drawing.Point(515, 39);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 5;
@@ -64,16 +64,17 @@
             // dgView_List
             // 
             this.dgView_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgView_List.Location = new System.Drawing.Point(1, 60);
+            this.dgView_List.Location = new System.Drawing.Point(3, 75);
             this.dgView_List.Name = "dgView_List";
-            this.dgView_List.Size = new System.Drawing.Size(380, 374);
+            this.dgView_List.Size = new System.Drawing.Size(712, 451);
             this.dgView_List.TabIndex = 6;
+            this.dgView_List.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgView_List_CellClick);
             // 
             // frmSearchSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 433);
+            this.ClientSize = new System.Drawing.Size(719, 530);
             this.Controls.Add(this.dgView_List);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblSearch);
