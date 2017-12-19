@@ -36,5 +36,10 @@ namespace UserManagament
         {
 
         }
+
+        private void btnUserManagement_Click(object sender, EventArgs e)
+        {
+            var addUser = new UserManagementControl();
+        }
     }
 }

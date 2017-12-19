@@ -189,6 +189,7 @@
             this.btnUserManagement.TabIndex = 15;
             this.btnUserManagement.Text = "button1";
             this.btnUserManagement.UseVisualStyleBackColor = true;
+            this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
             // 
             // lblTitle
             // 
