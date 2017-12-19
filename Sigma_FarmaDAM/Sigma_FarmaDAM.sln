@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigma_Controls", "Sigma_Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddEditDrugs", "RegisterEditDrugs\AddEditDrugs.csproj", "{F3E8F703-29BA-47E5-B310-971E5DF41D3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBUtils", "DBUtils\DBUtils.csproj", "{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F3E8F703-29BA-47E5-B310-971E5DF41D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3E8F703-29BA-47E5-B310-971E5DF41D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3E8F703-29BA-47E5-B310-971E5DF41D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

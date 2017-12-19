@@ -273,6 +273,7 @@
             this.btnEditAdd.Size = new System.Drawing.Size(75, 23);
             this.btnEditAdd.TabIndex = 23;
             this.btnEditAdd.UseVisualStyleBackColor = true;
+            this.btnEditAdd.Click += new System.EventHandler(this.btnEditAdd_Click);
             // 
             // pnlAddEditDrugs
             // 
@@ -314,6 +315,7 @@
             this.Controls.Add(this.pnlAddEditDrugs);
             this.Name = "frmAddEditDrugs";
             this.Text = "frmRegisterEditDrugs";
+            this.Load += new System.EventHandler(this.frmAddEditDrugs_Load);
             this.pnlAddEditDrugs.ResumeLayout(false);
             this.pnlAddEditDrugs.PerformLayout();
             this.ResumeLayout(false);
