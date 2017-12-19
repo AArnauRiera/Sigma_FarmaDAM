@@ -53,11 +53,11 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(515, 39);
+            this.btnSearch.Location = new System.Drawing.Point(399, 33);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 5;
-            this.btnSearch.Text = "Search";
+            this.btnSearch.Text = " ";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 

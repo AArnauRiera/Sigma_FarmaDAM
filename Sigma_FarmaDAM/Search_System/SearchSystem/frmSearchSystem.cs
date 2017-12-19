@@ -18,13 +18,32 @@ namespace SearchSystem
 
         public DataSet dts;
 
-        String query;
+        String query, Value;
+        ///***BUTTON CALL FROM OTHER FORM***///
+
+        public string changebutton
+        {
+            get { return Value; }
+            set {Value  = value; }
+        }
+       
+        
+        
+
 
         ///*** FUNCTION SEARCH DATA IN BBDD***///
-        private  void portardadesSQL()
+        private void portardadesSQL()
         {
             DBUtils.DBUtils DBUTILS = new DBUtils.DBUtils();
-            query = "select* from Clients where Name = '" + txtSearch.Text + "'";
+            if (Value.Equals("Drugs"))
+            {
+                query = "select* from drugs where Register_Number = "+ txtSearch.Text + "'";
+            }
+            else
+            {
+                query = "select* from Clients where   Name =  '" + txtSearch.Text + "'";
+            }
+
             dts = DBUTILS.PortarPerConsulta(query);
 
             dgView_List.DataSource = dts.Tables[0].Rows[0].Table;
@@ -32,11 +51,11 @@ namespace SearchSystem
             dgView_List.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
         }
 
-
         ///***MAIN***///
         public frmSearchSystem()
         {
             InitializeComponent();
+
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
