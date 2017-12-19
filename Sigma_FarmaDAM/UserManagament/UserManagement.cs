@@ -17,29 +17,9 @@ namespace UserManagament
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSigma1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UserManagement_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnUserManagement_Click(object sender, EventArgs e)
         {
-            var addUser = new UserManagementControl();
+
         }
     }
 }

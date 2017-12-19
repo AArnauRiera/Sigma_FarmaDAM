@@ -64,7 +64,6 @@
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "First Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -112,7 +111,6 @@
             this.label4.Size = new System.Drawing.Size(26, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "DNI";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // tbxDNI
             // 
@@ -124,7 +122,6 @@
             this.tbxDNI.Size = new System.Drawing.Size(142, 20);
             this.tbxDNI.TabIndex = 6;
             this.tbxDNI.Tag = "";
-            this.tbxDNI.TextChanged += new System.EventHandler(this.txtSigma1_TextChanged);
             // 
             // label5
             // 
@@ -224,7 +221,6 @@
             this.Controls.Add(this.tbxFirstName);
             this.Name = "UserManagement";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.UserManagement_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
