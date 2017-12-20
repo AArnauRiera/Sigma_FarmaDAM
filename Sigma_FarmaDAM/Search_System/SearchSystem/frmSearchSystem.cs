@@ -37,11 +37,15 @@ namespace SearchSystem
             DBUtils.DBUtils DBUTILS = new DBUtils.DBUtils();
             if (Value.Equals("Drugs"))
             {
-                query = "select* from drugs where Register_Number = "+ txtSearch.Text + "'";
+                query = "select* from Drugs where Register_Number ='"+ txtSearch.Text + "'";
             }
-            else
+            if(Value.Equals("Clients"))
             {
                 query = "select* from Clients where   Name =  '" + txtSearch.Text + "'";
+            }
+            if (Value.Equals("Active_Principles"))
+            {
+                query = "select * form Active_Principles where Id ='" + txtSearch.Text + "'";
             }
 
             dts = DBUTILS.PortarPerConsulta(query);

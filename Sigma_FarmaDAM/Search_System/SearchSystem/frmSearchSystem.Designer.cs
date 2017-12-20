@@ -57,7 +57,7 @@
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 5;
-            this.btnSearch.Text = " ";
+            this.btnSearch.Text = " Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -66,7 +66,7 @@
             this.dgView_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgView_List.Location = new System.Drawing.Point(3, 75);
             this.dgView_List.Name = "dgView_List";
-            this.dgView_List.Size = new System.Drawing.Size(712, 451);
+            this.dgView_List.Size = new System.Drawing.Size(804, 465);
             this.dgView_List.TabIndex = 6;
             this.dgView_List.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgView_List_CellClick);
             // 
@@ -74,7 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 530);
+            this.ClientSize = new System.Drawing.Size(805, 580);
             this.Controls.Add(this.dgView_List);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblSearch);

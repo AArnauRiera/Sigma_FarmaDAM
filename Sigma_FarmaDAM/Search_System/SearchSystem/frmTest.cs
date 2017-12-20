@@ -52,5 +52,17 @@ namespace SearchSystem
 
 
         }
+
+        private void btnActive_Click(object sender, EventArgs e)
+        {
+
+            form = "Active_Principles";
+            frmSearchSystem f = new frmSearchSystem();
+            if (form.Equals("Active_Principles"))
+            {
+                f.changebutton = form;
+            }
+            f.Show();
+        }
     }
 }
