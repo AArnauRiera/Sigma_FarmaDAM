@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{63BBEC2A-B19A-4B1C-9CFF-A9B0A26D14C5}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>Sigma_FarmaDAM</RootNamespace>
-    <AssemblyName>Sigma_FarmaDAM</AssemblyName>
+    <ProjectGuid>{2D91CBE1-6B63-43A1-BB94-82B5CDA7D42B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SearchSystem</RootNamespace>
+    <AssemblyName>SearchSystem</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\dll\</OutputPath>
+    <OutputPath>Sigma_FarmaDAM\dll\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -30,6 +30,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,14 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestBD.cs">
+    <Compile Include="SearchSystem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestBD.Designer.cs">
-      <DependentUpon>TestBD.cs</DependentUpon>
+    <Compile Include="SearchSystem.Designer.cs">
+      <DependentUpon>SearchSystem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="SearchSystem.resx">
+      <DependentUpon>SearchSystem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,9 +68,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TestBD.resx">
-      <DependentUpon>TestBD.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -79,15 +82,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DBUtils\DBUtils.csproj">
+    <ProjectReference Include="..\..\DBUtils\DBUtils.csproj">
       <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
       <Name>DBUtils</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\UserManagament\UserManagament.csproj">
-      <Project>{fa9eb4d2-fe3b-4b28-9d36-a8ce141ca5d3}</Project>
-      <Name>UserManagament</Name>
+    <ProjectReference Include="..\..\Sigma_FarmaDAM\Sigma_FarmaDAM.csproj">
+      <Project>{63bbec2a-b19a-4b1c-9cff-a9b0a26d14c5}</Project>
+      <Name>Sigma_FarmaDAM</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigma_FarmaDAM", "Sigma_FarmaDAM\Sigma_FarmaDAM.csproj", "{63BBEC2A-B19A-4B1C-9CFF-A9B0A26D14C5}"
 EndProject
@@ -10,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigma_Controls", "Sigma_Controls\Sigma_Controls.csproj", "{BAFEA927-64A5-4FC5-BCD7-16DF3E7C71E4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagament", "UserManagament\UserManagament.csproj", "{FA9EB4D2-FE3B-4B28-9D36-A8CE141CA5D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBUtils", "DBUtils\DBUtils.csproj", "{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchSystem", "Search_System\SearchSystem\SearchSystem.csproj", "{2D91CBE1-6B63-43A1-BB94-82B5CDA7D42B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +29,18 @@ Global
 		{9932DF33-7AC1-4E6B-9D19-58BED7D00234}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9932DF33-7AC1-4E6B-9D19-58BED7D00234}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9932DF33-7AC1-4E6B-9D19-58BED7D00234}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BAFEA927-64A5-4FC5-BCD7-16DF3E7C71E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BAFEA927-64A5-4FC5-BCD7-16DF3E7C71E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAFEA927-64A5-4FC5-BCD7-16DF3E7C71E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAFEA927-64A5-4FC5-BCD7-16DF3E7C71E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D91CBE1-6B63-43A1-BB94-82B5CDA7D42B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D91CBE1-6B63-43A1-BB94-82B5CDA7D42B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D91CBE1-6B63-43A1-BB94-82B5CDA7D42B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D91CBE1-6B63-43A1-BB94-82B5CDA7D42B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FA9EB4D2-FE3B-4B28-9D36-A8CE141CA5D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FA9EB4D2-FE3B-4B28-9D36-A8CE141CA5D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA9EB4D2-FE3B-4B28-9D36-A8CE141CA5D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
