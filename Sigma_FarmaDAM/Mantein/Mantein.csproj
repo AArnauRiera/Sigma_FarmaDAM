@@ -48,6 +48,12 @@
     <Compile Include="frmManteinBase.Designer.cs">
       <DependentUpon>frmManteinBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmManteinUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinUsers.Designer.cs">
+      <DependentUpon>frmManteinUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
