@@ -45,7 +45,8 @@ namespace SearchSystem
             }
             if (Value.Equals("Active_Principles"))
             {
-                query = "select * form Active_Principles where Id ='" + txtSearch.Text + "'";
+                query = "select* from Active_Principles  where id ='" + txtSearch.Text + "'";
+
             }
 
             dts = DBUTILS.PortarPerConsulta(query);

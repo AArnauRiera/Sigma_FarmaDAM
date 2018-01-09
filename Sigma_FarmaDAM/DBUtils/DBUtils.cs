@@ -34,6 +34,9 @@ namespace DBUtils
             catch(Exception e)
             {
                 MessageBox.Show("DATABASE CONNECTION FAILED");
+             
+            
+
             }
         }
 
