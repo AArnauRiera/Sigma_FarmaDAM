@@ -291,3 +291,4 @@ __pycache__/
 Sigma_FarmaDAM/Sigma_FarmaDAM/Sigma_FarmaDAM.csproj.orig
 Sigma_FarmaDAM/Sigma_Controls/Sigma_Controls.csproj.orig
 Sigma_FarmaDAM/Sigma_FarmaDAM.sln.orig
+*.orig
