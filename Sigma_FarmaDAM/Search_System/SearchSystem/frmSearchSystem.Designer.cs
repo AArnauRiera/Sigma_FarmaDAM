@@ -63,10 +63,14 @@
             // 
             // dgView_List
             // 
+            this.dgView_List.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgView_List.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgView_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgView_List.Location = new System.Drawing.Point(3, 75);
             this.dgView_List.Name = "dgView_List";
-            this.dgView_List.Size = new System.Drawing.Size(804, 465);
+            this.dgView_List.Size = new System.Drawing.Size(806, 505);
             this.dgView_List.TabIndex = 6;
             this.dgView_List.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgView_List_CellClick);
             // 

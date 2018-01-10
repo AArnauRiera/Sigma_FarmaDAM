@@ -35,6 +35,7 @@ namespace SearchSystem
         private void portardadesSQL()
         {
             DBUtils.DBUtils DBUTILS = new DBUtils.DBUtils();
+            ///***Search in BBDD***///
             if (Value.Equals("Drugs"))
             {
                 query = "select* from Drugs where Register_Number ='"+ txtSearch.Text + "'";
@@ -50,9 +51,15 @@ namespace SearchSystem
             }
 
             dts = DBUTILS.PortarPerConsulta(query);
-
-            dgView_List.DataSource = dts.Tables[0].Rows[0].Table;
-
+            ///***Rows Count***///
+            if (dts.Tables[0].Rows.Count != 0)
+            {
+                dgView_List.DataSource = dts.Tables[0].Rows[0].Table;
+            }
+            else
+            {
+                MessageBox.Show("There are no values ");
+            }
             dgView_List.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
         }
 
@@ -70,14 +77,13 @@ namespace SearchSystem
 
         private void dgView_List_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgView_List.Rows[e.RowIndex].ReadOnly = true;
 
-            if (dgView_List.Rows[e.RowIndex].Cells[e.ColumnIndex].Value == null)
-
+            foreach (DataGridViewBand band in dgView_List.Columns)
             {
-
-                dgView_List.Rows[e.RowIndex].ReadOnly = false;
+                band.ReadOnly = true;
             }
+
+
         }
 
         
