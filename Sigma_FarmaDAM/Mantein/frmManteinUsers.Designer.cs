@@ -28,7 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // frmManteinUsers
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(712, 430);
+            this.Name = "frmManteinUsers";
+            ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

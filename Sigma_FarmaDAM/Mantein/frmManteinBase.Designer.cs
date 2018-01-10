@@ -30,11 +30,13 @@
         {
             this.dgwBase = new System.Windows.Forms.DataGridView();
             this.pnlButtons = new System.Windows.Forms.Panel();
-            this.pnlTextBox = new System.Windows.Forms.Panel();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnGet = new System.Windows.Forms.Button();
+            this.pnlTextBox = new System.Windows.Forms.Panel();
+            this.btnQuery = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwBase)).BeginInit();
             this.pnlButtons.SuspendLayout();
+            this.pnlTextBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgwBase
@@ -54,13 +56,6 @@
             this.pnlButtons.Size = new System.Drawing.Size(688, 45);
             this.pnlButtons.TabIndex = 1;
             // 
-            // pnlTextBox
-            // 
-            this.pnlTextBox.Location = new System.Drawing.Point(13, 13);
-            this.pnlTextBox.Name = "pnlTextBox";
-            this.pnlTextBox.Size = new System.Drawing.Size(687, 131);
-            this.pnlTextBox.TabIndex = 2;
-            // 
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(413, 11);
@@ -79,6 +74,24 @@
             this.btnGet.Text = "Get";
             this.btnGet.UseVisualStyleBackColor = true;
             // 
+            // pnlTextBox
+            // 
+            this.pnlTextBox.Controls.Add(this.btnQuery);
+            this.pnlTextBox.Location = new System.Drawing.Point(13, 13);
+            this.pnlTextBox.Name = "pnlTextBox";
+            this.pnlTextBox.Size = new System.Drawing.Size(687, 131);
+            this.pnlTextBox.TabIndex = 2;
+            // 
+            // btnQuery
+            // 
+            this.btnQuery.Location = new System.Drawing.Point(599, 12);
+            this.btnQuery.Name = "btnQuery";
+            this.btnQuery.Size = new System.Drawing.Size(75, 23);
+            this.btnQuery.TabIndex = 0;
+            this.btnQuery.Text = "Shearch";
+            this.btnQuery.UseVisualStyleBackColor = true;
+            this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click);
+            // 
             // frmManteinBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -91,6 +104,7 @@
             this.Text = "frmManteinBase";
             ((System.ComponentModel.ISupportInitialize)(this.dgwBase)).EndInit();
             this.pnlButtons.ResumeLayout(false);
+            this.pnlTextBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -102,5 +116,6 @@
         private System.Windows.Forms.Panel pnlTextBox;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnGet;
+        private System.Windows.Forms.Button btnQuery;
     }
 }

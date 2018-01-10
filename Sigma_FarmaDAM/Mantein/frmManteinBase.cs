@@ -63,5 +63,10 @@ namespace Mantein
             GetQuery();
             BindingDate();
         }
+
+        private void btnQuery_Click(object sender, EventArgs e)
+        {
+            //Open new queryTab
+        }
     }
 }
