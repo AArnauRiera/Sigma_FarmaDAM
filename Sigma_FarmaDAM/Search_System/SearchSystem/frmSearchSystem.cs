@@ -1,0 +1,91 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DBUtils;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
+
+namespace SearchSystem
+{
+    public partial class frmSearchSystem : Form
+    {
+
+        public DataSet dts;
+
+        String query, Value;
+        ///***BUTTON CALL FROM OTHER FORM***///
+
+        public string changebutton
+        {
+            get { return Value; }
+            set {Value  = value; }
+        }
+       
+        
+        
+
+
+        ///*** FUNCTION SEARCH DATA IN BBDD***///
+        private void portardadesSQL()
+        {
+            DBUtils.DBUtils DBUTILS = new DBUtils.DBUtils();
+            ///***Search in BBDD***///
+            if (Value.Equals("Drugs"))
+            {
+                query = "select* from Drugs where Register_Number ='"+ txtSearch.Text + "'";
+            }
+            if(Value.Equals("Clients"))
+            {
+                query = "select* from Clients where   Name =  '" + txtSearch.Text + "'";
+            }
+            if (Value.Equals("Active_Principles"))
+            {
+                query = "select* from Active_Principles  where id ='" + txtSearch.Text + "'";
+
+            }
+
+            dts = DBUTILS.PortarPerConsulta(query);
+            ///***Rows Count***///
+            if (dts.Tables[0].Rows.Count != 0)
+            {
+                dgView_List.DataSource = dts.Tables[0].Rows[0].Table;
+            }
+            else
+            {
+                MessageBox.Show("There are no values ");
+            }
+            dgView_List.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+        }
+
+        ///***MAIN***///
+        public frmSearchSystem()
+        {
+            InitializeComponent();
+
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+            portardadesSQL();         
+        }
+
+        private void dgView_List_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            foreach (DataGridViewBand band in dgView_List.Columns)
+            {
+                band.ReadOnly = true;
+            }
+
+
+        }
+
+        
+    }
+}

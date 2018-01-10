@@ -16,7 +16,7 @@ namespace SearchSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSearchSystem());
+            Application.Run(new SearchSystem());
         }
     }
 }
