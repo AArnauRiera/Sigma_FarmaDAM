@@ -16,14 +16,15 @@ namespace RegisterEditDrugs
 
     {
         private bool _edit;
-        DBUtils.DBUtils db = new DBUtils.DBUtils();
+        
         private DataSet dts = new DataSet();
         public frmAddEditDrugs()
         {
             InitializeComponent();
             _edit = false;
             btnEditAdd.Text = "Add";
-            CenterPanel(pnlAddEditDrugs);     
+            CenterPanel(pnlAddEditDrugs);
+
         }
 
         public frmAddEditDrugs(string drug)
@@ -32,15 +33,17 @@ namespace RegisterEditDrugs
             _edit = true;
             btnEditAdd.Text = "Edit";
             CenterPanel(pnlAddEditDrugs);
-        }
-
-        private void frmAddEditDrugs_Load(object sender, EventArgs e)
-        {
+            DBUtils.DBUtils db = new DBUtils.DBUtils();
             db.Conexion();
             if (_edit)
             {
                 SetDrugData();
             }
+        }
+
+        private void frmAddEditDrugs_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void SetDrugData()
@@ -58,22 +61,30 @@ namespace RegisterEditDrugs
 
         private void btnEditAdd_Click(object sender, EventArgs e)
         {
+            DBUtils.DBUtils db = new DBUtils.DBUtils();
+            db.Conexion();
             //string query = "select Register_Number, Sanitary_Register_Num, Denomination, Content,id_active from 'Drugs'";
-            string query = "SELECT * FROM 'Drugs'";
+            string query = "SELECT * FROM Drugs";
             dts = db.PortarPerConsulta(query);
 
             DataTable dt = dts.Tables[0];
             //DataTable dt = new DataTable("test");
-            dt.Columns.Add(new DataColumn("Register_Number", typeof(int)));
-            dt.Columns.Add(new DataColumn("Sanitary_Register_Num", typeof(int)));
-            dt.Columns.Add(new DataColumn("Content", typeof(string)));
-            dt.Columns.Add(new DataColumn("id_active", typeof(int)));
+            //dt.Columns.Add(new DataColumn("Register_Number", typeof(int)));
+            //dt.Columns.Add(new DataColumn("Sanitary_Register_Num", typeof(int)));
+            //dt.Columns.Add(new DataColumn("Content", typeof(string)));
+            //dt.Columns.Add(new DataColumn("id_active", typeof(int)));
 
-            DataRow dr = dt.NewRow();
-            dr["Register_Number"] = 1;
-            dr["Sanitary_Register_Num"] = 34;
-            dr["Content"] ="aaa";
-            dr["id_active"] = 12;
+            //DataRow dr = dt.NewRow();
+
+            DataRow dr = dts.Tables[0].NewRow();
+
+            dr["Register_Number"] = 50;
+            dr["Sanitary_Register_Num"] = 50;
+            dr["Denomination"] = "74174174174174";
+            dr["Replacable"] = 0;
+            dr["Generic"] = 0;
+            dr["Obligatory"] = 0;
+            dr["id_active"] = 50;
             //dt.Rows.Add(dr);
             //dts.Tables.Add(dt);
 
@@ -85,11 +96,11 @@ namespace RegisterEditDrugs
             //dr["Content"] = txtContent.Text;
             //dr["id_active"] = txtActivePrinciple.Text;
 
-            dt.Rows.Add(dr);
-            dts.Tables.Add(dt);
+            //dt.Rows.Add(dr);
+            //dts.Tables.Add(dt);
 
-            //dts.Tables[0].Rows.Add(dr);
-            //db.Actualizar(query, "Drugs", dts);
+            dts.Tables[0].Rows.Add(dr);
+            db.Actualizar(query, "Drugs", dts);
         }
     }
 }

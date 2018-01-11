@@ -22,7 +22,7 @@ namespace DBUtils
         #region OleDBMethods
         public void Conexion()
         {
-            MySqlConnection con = new MySqlConnection(_stringMySQL);
+            con = new MySqlConnection(_stringMySQL);
             con.Open();
             con.InitializeLifetimeService();
         }
