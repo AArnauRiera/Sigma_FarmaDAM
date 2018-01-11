@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using MySql.Data.MySqlClient;
 
 namespace ClassLibrary1
 {
     public class DBUtils
     {
         #region Private Variables
-        private string _stringSQLOLEDB;
-        private OleDbConnection con;
+        private string _stringSQLOLEDB = "SERVER=51.255.58.1;PORT=3306;DATABASE=g1s2am_FarmaDAM;Uid=g1s2am_SigmaCode;PASSWORD=12345aA";
+        private MySqlConnection con;
         #endregion
 
         #region Public Variables
@@ -28,7 +29,7 @@ namespace ClassLibrary1
         #region OleDBMethods
         public void Conexion()
         {
-            OleDbConnection con = new OleDbConnection(_stringSQLOLEDB);
+            con = new MySqlConnection(_stringSQLOLEDB);
             con.Open();
             con.InitializeLifetimeService();
         }
@@ -36,14 +37,14 @@ namespace ClassLibrary1
         public DataSet PortarPerConsulta(string query)
         {
 
-            OleDbDataAdapter dta;
-            OleDbCommandBuilder construct;
+            MySqlDataAdapter dta;
+            MySqlCommandBuilder construct;
             DataSet dts = null;
             try
             {
                 Conexion();
-                dta = new OleDbDataAdapter(query, con);
-                construct = new OleDbCommandBuilder(dta);
+                dta = new MySqlDataAdapter(query, con);
+                construct = new MySqlCommandBuilder(dta);
                 dts = new DataSet();
                 dta.Fill(dts, "Taula");
             }
@@ -65,13 +66,13 @@ namespace ClassLibrary1
         public bool Actualizar(string query, string taula, DataSet dts)
         {
             bool correct = true;
-            OleDbDataAdapter dta;
-            OleDbCommandBuilder construct;
+            MySqlDataAdapter dta;
+            MySqlCommandBuilder construct;
 
             try
             {
-                dta = new OleDbDataAdapter(query, con);
-                construct = new OleDbCommandBuilder(dta);
+                dta = new MySqlDataAdapter(query, con);
+                construct = new MySqlCommandBuilder(dta);
 
                 if (dts.HasChanges())
                 {

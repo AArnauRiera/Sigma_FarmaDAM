@@ -16,19 +16,22 @@ namespace Mantein
     {
 
         protected DataSet dts;
-
         protected string query;
+        protected DataGridView _dgw;
+
 
         public string Table { get; set; }
 
-        public frmQueryBase()
+        public frmQueryBase(DataGridView dgw, string table)
         {
             InitializeComponent();
+            _dgw = dgw;
+            Table = table;
         }
 
         protected void BindingDate()
         {
-            dgwDB.DataSource = dts.Tables[Table];
+            dgwDB.DataSource = dts.Tables["Taula"];
         }
 
         protected void GetQuery()
@@ -80,7 +83,8 @@ namespace Mantein
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            //dgwDB.SelectedColumns;
+            _dgw.DataSource = dgwDB.SelectedColumns;
+            this.Close();
         }
     }
 }

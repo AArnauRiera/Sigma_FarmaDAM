@@ -34,7 +34,7 @@ namespace Mantein
                 {
                     TxtSigma text = (TxtSigma)txt;
                     text.DataBindings.Clear();
-                    text.DataBindings.Add("Text", dts.Tables[Table], text.DBReference);
+                    text.DataBindings.Add("Text", dts.Tables["Taula"], text.DBReference);
                 }
             }
             dgwBase.DataSource = dts.Tables[Table];
@@ -67,6 +67,11 @@ namespace Mantein
         private void btnQuery_Click(object sender, EventArgs e)
         {
             //Open new queryTab
+        }
+
+        private void btnGet_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

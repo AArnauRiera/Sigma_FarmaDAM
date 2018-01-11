@@ -73,6 +73,7 @@
             this.btnGet.TabIndex = 12;
             this.btnGet.Text = "Get";
             this.btnGet.UseVisualStyleBackColor = true;
+            this.btnGet.Click += new System.EventHandler(this.btnGet_Click);
             // 
             // pnlTextBox
             // 
