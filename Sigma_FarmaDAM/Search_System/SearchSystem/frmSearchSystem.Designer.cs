@@ -49,12 +49,11 @@
             // lblSearch1
             // 
             this.lblSearch1.AutoSize = true;
-            this.lblSearch1.Location = new System.Drawing.Point(122, 39);
+            this.lblSearch1.Location = new System.Drawing.Point(66, 39);
             this.lblSearch1.Name = "lblSearch1";
             this.lblSearch1.Size = new System.Drawing.Size(57, 13);
             this.lblSearch1.TabIndex = 2;
             this.lblSearch1.Text = "Add Query";
-            this.lblSearch1.TextChanged += new System.EventHandler(this.lblSearch1_TextChanged);
             // 
             // btnSearch
             // 
@@ -72,17 +71,18 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgView_List.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgView_List.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgView_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgView_List.Location = new System.Drawing.Point(3, 148);
+            this.dgView_List.Location = new System.Drawing.Point(-2, 143);
             this.dgView_List.Name = "dgView_List";
-            this.dgView_List.Size = new System.Drawing.Size(848, 432);
+            this.dgView_List.Size = new System.Drawing.Size(853, 437);
             this.dgView_List.TabIndex = 6;
             this.dgView_List.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgView_List_CellClick);
             // 
             // lblSearch2
             // 
             this.lblSearch2.AutoSize = true;
-            this.lblSearch2.Location = new System.Drawing.Point(122, 77);
+            this.lblSearch2.Location = new System.Drawing.Point(66, 77);
             this.lblSearch2.Name = "lblSearch2";
             this.lblSearch2.Size = new System.Drawing.Size(57, 13);
             this.lblSearch2.TabIndex = 7;
@@ -91,7 +91,7 @@
             // lblSearch3
             // 
             this.lblSearch3.AutoSize = true;
-            this.lblSearch3.Location = new System.Drawing.Point(122, 120);
+            this.lblSearch3.Location = new System.Drawing.Point(66, 120);
             this.lblSearch3.Name = "lblSearch3";
             this.lblSearch3.Size = new System.Drawing.Size(57, 13);
             this.lblSearch3.TabIndex = 8;
