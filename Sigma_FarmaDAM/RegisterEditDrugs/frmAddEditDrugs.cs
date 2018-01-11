@@ -45,31 +45,51 @@ namespace RegisterEditDrugs
 
         private void SetDrugData()
         {
-            txtActivePrinciple.Text = "POLLA";
-            txtBasePrice.Text = "POLLA";
-            txtContent.Text = "POLLA";
-            txtIVA.Text = "POLLA";
-            txtNRN.Text = "POLLA";
-            txtNRS.Text = "POLLA";
-            txtName.Text = "POLLA";
-            txtPharmaceuticLab.Text = "POLLA";
+            txtActivePrinciple.Text = "AAAAA";
+            txtBasePrice.Text = "AAAAA";
+            txtContent.Text = "AAAAA";
+            txtIVA.Text = "AAAAA";
+            txtNRN.Text = "AAAAA";
+            txtNRS.Text = "AAAAA";
+            txtName.Text = "AAAAA";
+            txtPharmaceuticLab.Text = "AAAAA";
 
         }
 
         private void btnEditAdd_Click(object sender, EventArgs e)
         {
-            string query = "select * from Drugs";
+            //string query = "select Register_Number, Sanitary_Register_Num, Denomination, Content,id_active from 'Drugs'";
+            string query = "SELECT * FROM 'Drugs'";
             dts = db.PortarPerConsulta(query);
-            DataRow dr = dts.Tables[0].NewRow();
-            dr["Register_Number"] = txtNRN.Text;
-            dr["Sanitary_Register"] = txtNRS.Text;
-            dr["Denomination"] = txtName.Text;
-            dr["Content"] = txtContent.Text;
-            dr["IVA"] = txtIVA.Text;
-            dr["id_active"] = txtActivePrinciple.Text;
 
-            dts.Tables[0].Rows.Add(dr);
-            db.Actualizar(query, "Drugs", dts);
+            DataTable dt = dts.Tables[0];
+            //DataTable dt = new DataTable("test");
+            dt.Columns.Add(new DataColumn("Register_Number", typeof(int)));
+            dt.Columns.Add(new DataColumn("Sanitary_Register_Num", typeof(int)));
+            dt.Columns.Add(new DataColumn("Content", typeof(string)));
+            dt.Columns.Add(new DataColumn("id_active", typeof(int)));
+
+            DataRow dr = dt.NewRow();
+            dr["Register_Number"] = 1;
+            dr["Sanitary_Register_Num"] = 34;
+            dr["Content"] ="aaa";
+            dr["id_active"] = 12;
+            //dt.Rows.Add(dr);
+            //dts.Tables.Add(dt);
+
+            ////DataRow dr = dts.NewRow();
+            //dr = dts.Tables[0].Rows[0];
+            //dr["Register_Number"] = txtNRN.Text;
+            //dr["Sanitary_Register_Num"] = txtNRS.Text;
+            ////dr["Denomination"] = txtName.Text;
+            //dr["Content"] = txtContent.Text;
+            //dr["id_active"] = txtActivePrinciple.Text;
+
+            dt.Rows.Add(dr);
+            dts.Tables.Add(dt);
+
+            //dts.Tables[0].Rows.Add(dr);
+            //db.Actualizar(query, "Drugs", dts);
         }
     }
 }

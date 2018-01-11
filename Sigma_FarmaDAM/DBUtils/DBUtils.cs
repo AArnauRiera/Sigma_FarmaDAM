@@ -7,7 +7,7 @@ namespace DBUtils
     public class DBUtils
     {
         #region Private Variables
-        private string _stringMySQL = "SERVER= 51.255.58.1;Port=2083;g1s2am_FarmaDAM;UID=g1s2am_SigmaCode;PASSWORD=12345aA";
+        private string _stringMySQL = "SERVER=51.255.58.1;PORT=3306;DATABASE=g1s2am_FarmaDAM;Uid=g1s2am_SigmaCode;PASSWORD=12345aA";
         private MySqlConnection con;
         #endregion
 
