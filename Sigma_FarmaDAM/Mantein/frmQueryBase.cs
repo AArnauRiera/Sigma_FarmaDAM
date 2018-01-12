@@ -27,8 +27,14 @@ namespace Mantein
             InitializeComponent();
             _dgw = dgw;
             Table = table;
+
         }
 
+        public frmQueryBase()
+        {
+            InitializeComponent();
+
+        }
         protected void BindingDate()
         {
             dgwDB.DataSource = dts.Tables["Taula"];
@@ -61,14 +67,14 @@ namespace Mantein
         private string[] GetAllTxtSigma()
         {
             List<string> txtb = new List<string>();
-            foreach (var txt in pnlTextBox.Controls)
+            foreach (var txt in flpTexBox.Controls)
             {
                 if (txt is TxtSigma)
                 {
                     TxtSigma t = (TxtSigma)txt;
                     if (!String.IsNullOrWhiteSpace(t.Text))
                     {
-                        txtb.Add(t.Tag + " = " + t.Text);
+                        txtb.Add(t.Tag + " = '" + t.Text + "'");
                     }
                 }
             }

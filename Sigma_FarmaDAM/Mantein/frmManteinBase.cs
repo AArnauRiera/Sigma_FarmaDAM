@@ -67,6 +67,7 @@ namespace Mantein
         private void btnQuery_Click(object sender, EventArgs e)
         {
             //Open new queryTab
+
         }
 
         private void btnGet_Click(object sender, EventArgs e)
