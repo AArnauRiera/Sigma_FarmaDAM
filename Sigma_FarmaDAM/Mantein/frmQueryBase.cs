@@ -67,7 +67,7 @@ namespace Mantein
         private string[] GetAllTxtSigma()
         {
             List<string> txtb = new List<string>();
-            foreach (var txt in flpTexBox.Controls)
+            foreach (var txt in pnlTB.Controls)
             {
                 if (txt is TxtSigma)
                 {
