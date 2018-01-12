@@ -57,7 +57,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(380, 117);
+            this.btnSearch.Location = new System.Drawing.Point(432, 110);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 5;
@@ -71,7 +71,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgView_List.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgView_List.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgView_List.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgView_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgView_List.Location = new System.Drawing.Point(-2, 143);
             this.dgView_List.Name = "dgView_List";
