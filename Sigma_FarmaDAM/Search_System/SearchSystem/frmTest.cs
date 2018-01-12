@@ -28,6 +28,10 @@ namespace SearchSystem
                 {
 
                 f.changebutton = form;
+                f.LabelText1 = "Register Number";
+                f.LabelText2 = "Sanitary Register Number";
+                f.LabelText3 = "ID Active";
+              
                     
                 }
             f.Show();
@@ -45,8 +49,10 @@ namespace SearchSystem
                 if (form.Equals("Clients"))
                 {
                 f.changebutton = form;
-                    
-                }
+                f.LabelText1 = "DNI";
+                f.LabelText2 = "Name";
+                f.LabelText3 = "Last Name";
+            }
             f.Show();
 
 
@@ -61,6 +67,9 @@ namespace SearchSystem
             if (form.Equals("Active_Principles"))
             {
                 f.changebutton = form;
+                f.LabelText1 = "ID";
+                f.LabelText2 = "Sanitary Register Number";
+                f.LabelText3 = "Name";
             }
             f.Show();
         }
