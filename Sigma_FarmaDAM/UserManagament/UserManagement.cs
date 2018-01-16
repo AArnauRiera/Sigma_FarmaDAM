@@ -19,7 +19,24 @@ namespace UserManagament
 
         private void btnUserManagement_Click(object sender, EventArgs e)
         {
+        }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (tbxNTS.Text.Length > 0 && tbxNTS.Text != "NTS")
+            {
+                UserManagementControl umc = new UserManagementControl(tbxNTS.Text);
+
+            }
+            else
+            {
+                lblError.Text = "Entry not valid for search";
+            }
+        }
+
+        private void UserManagement_Load(object sender, EventArgs e)
+        {
+            tbxDNI.Focus();
         }
     }
 }

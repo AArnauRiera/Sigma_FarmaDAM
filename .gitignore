@@ -11,10 +11,12 @@
 *.dll
 *.exe
 
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
 # Build results
+dll/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
