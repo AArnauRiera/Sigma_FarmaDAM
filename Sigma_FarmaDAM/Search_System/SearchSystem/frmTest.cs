@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace SearchSystem
 {
+
     public partial class frmTest : Form
     {
         String form = "";
@@ -18,6 +19,9 @@ namespace SearchSystem
             InitializeComponent();
         }
 
+
+        ///***BTN DRUGS CLICK***///
+        #region
         private void btnDrugs_Click(object sender, EventArgs e)
         {
             form = "Drugs";
@@ -37,6 +41,9 @@ namespace SearchSystem
             f.Show();
 
         }
+        #endregion
+        ///***BTN CLIENT CLICK***///
+         #region
 
         private void btnClient_Click(object sender, EventArgs e)
         {
@@ -54,11 +61,11 @@ namespace SearchSystem
                 f.LabelText3 = "Last Name";
             }
             f.Show();
-
-
-
         }
+         #endregion
 
+        ///***BTN ACTIVE CLICK***///
+        #region
         private void btnActive_Click(object sender, EventArgs e)
         {
 
@@ -73,5 +80,6 @@ namespace SearchSystem
             }
             f.Show();
         }
+       #endregion
     }
 }
