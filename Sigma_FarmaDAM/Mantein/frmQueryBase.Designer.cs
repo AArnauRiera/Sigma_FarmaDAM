@@ -117,6 +117,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.Panel pnlButtons;
-        private System.Windows.Forms.Panel pnlTB;
+        protected System.Windows.Forms.Panel pnlTB;
     }
 }

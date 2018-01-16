@@ -17,7 +17,7 @@ namespace Sigma_FarmaDAM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmQueryBase(null,"Clients"));
+            Application.Run(new frmQueryClients(null, "Clients"));
         }
     }
 }

@@ -74,7 +74,7 @@ namespace Mantein
                     TxtSigma t = (TxtSigma)txt;
                     if (!String.IsNullOrWhiteSpace(t.Text))
                     {
-                        txtb.Add(t.Tag + " = '" + t.Text + "'");
+                        txtb.Add(t.DBReference + " = '" + t.Text + "'");
                     }
                 }
             }
