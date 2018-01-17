@@ -15,36 +15,48 @@ namespace UserManagament
         public UserManagementControl()
         {
             _formEdit = false;
-            UserManagement frm = new UserManagement();
 
         }
         public UserManagementControl(string value)
         {
-            UserManagement frm = new UserManagement();
-            SearchUser(value, frm);
             _formEdit = true;
 
         }
 
-        public void SearchUser (string value, UserManagement frm)
+        public string[] SearchUser (string value)
         {
+            string[] data = new string[0];
             DBUtils.DBUtils db = new DBUtils.DBUtils();
-            string query = "SELECT * FROM Clients";
+            string query = "SELECT * FROM Clients where NTS = '"+value+"'";
             try
             {
+                db.Conexion();
                 dts = db.PortarPerConsulta(query);
-                DataTable t = dts.Tables["Taula"];
-                DataRow r = t.NewRow();
+                DataTable t = dts.Tables[0];
+                if (t != null)
+                {
+                    DataRow r = dts.Tables[0].Rows[0];
+                    foreach (var val in r.ItemArray)
+                    {
+                        Array.Resize(ref data, data.Length + 1);
+                        data[data.Length - 1] = val.ToString();
 
-                MessageBox.Show(r["DNI"].ToString());
+                    }
+                }
+                else
+                {
+                    data = null;
+                }
 
-                dts.Tables[0].Rows.Add(r);
                 db.Actualizar(query, "Taula", dts);
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
+                data = null;
             }
+
+            return data;
         }
     }
 }

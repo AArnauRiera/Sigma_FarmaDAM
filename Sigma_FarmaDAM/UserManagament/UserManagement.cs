@@ -25,7 +25,8 @@ namespace UserManagament
         {
             if (tbxNTS.Text.Length > 0 && tbxNTS.Text != "NTS")
             {
-                UserManagementControl umc = new UserManagementControl(tbxNTS.Text);
+                UserManagementControl umc = new UserManagementControl();
+                umc.SearchUser(tbxNTS.Text);
 
             }
             else

@@ -26,10 +26,9 @@ namespace DBUtils
         {
             try
             {
-                MySqlConnection con = new MySqlConnection(_stringMySQL);
+                con = new MySqlConnection(_stringMySQL);
                 con.Open();
                 con.InitializeLifetimeService();
-                MessageBox.Show("CONNECTION OK");
             }
             catch(Exception e)
             {
@@ -45,7 +44,6 @@ namespace DBUtils
             DataSet dts = null;
             try
             {
-                Conexion();
                 dta = new MySqlDataAdapter(query, con);
                 construct = new MySqlCommandBuilder(dta);
                 dts = new DataSet();
