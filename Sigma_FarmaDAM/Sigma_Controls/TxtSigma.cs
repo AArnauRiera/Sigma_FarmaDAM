@@ -154,12 +154,16 @@ namespace Sigma_Controls
 
         private void SetPlaceHolder()
         {
-            if (String.IsNullOrWhiteSpace(Text) && String.IsNullOrWhiteSpace(Placeholder))
+            if (String.IsNullOrWhiteSpace(Text) && !String.IsNullOrWhiteSpace(Placeholder))
             {
                 Text = Placeholder;
                 ForeColor = Color.Gray;
                 Font = new Font(Font, FontStyle.Italic);
                 _isPlaceholder = true;
+            }
+            else
+            {
+                _isPlaceholder = false;
             }
         }
 
