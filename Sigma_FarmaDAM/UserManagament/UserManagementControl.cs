@@ -31,11 +31,12 @@ namespace UserManagament
                 db.Conexion();
                 dts = db.PortarPerConsulta(query);
                 DataTable t = dts.Tables[0];
-                DataRow r = t.Rows[0];
                 if (t.Rows.Count == 0)
                 {
-                    r = null;
+                    return null;
                 }
+                DataRow r = t.Rows[0];
+
                 return r;
             }
             catch (Exception e)

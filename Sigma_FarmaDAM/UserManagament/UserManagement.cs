@@ -28,11 +28,20 @@ namespace UserManagament
                 UserManagementControl umc = new UserManagementControl();
                 string query = "SELECT * FROM Clients where NTS = '" + tbxNTS.Text + "'";
                 DataRow r = umc.SearchFromQuery(query);
-                ShowSelectData(r);
+                if (r != null)
+                {
+                    lblError.Text = "";
+                    ShowSelectData(r);
+                } else
+                {
+                    lblError.Text = "Entry not valid for search";
+                    tbxNTS.Focus();
+                }
             }
             else
             {
                 lblError.Text = "Entry not valid for search";
+                tbxNTS.Focus();
             }
         }
 
