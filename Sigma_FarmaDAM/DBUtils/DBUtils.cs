@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -9,7 +8,8 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using MySql.Data.MySqlClient;
 
-namespace ClassLibrary1
+
+namespace DBUtils
 {
     public class DBUtils
     {
@@ -21,8 +21,8 @@ namespace ClassLibrary1
         #region Public Variables
         public string StringSQLOLEDB
         {
-            get { return _stringSQLOLEDB; }
-            set { _stringSQLOLEDB = value; }
+            get { return _stringMySQL; }
+            set { _stringMySQL = value; }
         }
         #endregion
 
