@@ -26,8 +26,9 @@ namespace UserManagament
             if (tbxNTS.Text.Length > 0 && tbxNTS.Text != "NTS")
             {
                 UserManagementControl umc = new UserManagementControl();
-                umc.SearchUser(tbxNTS.Text);
-
+                string query = "SELECT * FROM Clients where NTS = '" + tbxNTS.Text + "'";
+                DataRow r = umc.SearchFromQuery(query);
+                ShowSelectData(r);
             }
             else
             {
@@ -35,9 +36,35 @@ namespace UserManagament
             }
         }
 
+        private void ShowSelectData (DataRow r)
+        {
+            tbxDNI.Text = r.ItemArray[4].ToString();
+            tbxFirstName.Text = r.ItemArray[1].ToString();
+            tbxLastName1.Text = r.ItemArray[2].ToString();
+            tbxLastName2.Text = r.ItemArray[3].ToString();
+            cbxNTS_Type.SelectedIndex = Int32.Parse(r.ItemArray[6].ToString());
+        }
+
         private void UserManagement_Load(object sender, EventArgs e)
         {
-            tbxDNI.Focus();
+            UserManagementControl umc = new UserManagementControl();
+            string query = "SELECT name FROM Type_NTS";
+            DataTable t = umc.SearchTableFromQuery(query);
+            AddComboBoxData(t);
+        }
+         
+        private void AddComboBoxData(DataTable t)
+        {
+            cbxNTS_Type.Items.Add("Selecciona...");
+            cbxNTS_Type.SelectedIndex = 0;
+            for(var i = 0; i < t.Rows.Count; i++)
+            {
+                DataRow r = t.Rows[i];
+                if (r.ItemArray[0] != null)
+                {
+                    cbxNTS_Type.Items.Add(r.ItemArray[0].ToString());
+                }
+            }
         }
     }
 }

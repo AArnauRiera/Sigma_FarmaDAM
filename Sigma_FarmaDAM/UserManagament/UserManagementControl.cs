@@ -23,40 +23,65 @@ namespace UserManagament
 
         }
 
-        public string[] SearchUser (string value)
+        public DataRow SearchFromQuery (string query)
         {
-            string[] data = new string[0];
             DBUtils.DBUtils db = new DBUtils.DBUtils();
-            string query = "SELECT * FROM Clients where NTS = '"+value+"'";
             try
             {
                 db.Conexion();
                 dts = db.PortarPerConsulta(query);
                 DataTable t = dts.Tables[0];
-                if (t != null)
+                DataRow r = t.Rows[0];
+                if (t.Rows.Count == 0)
                 {
-                    DataRow r = dts.Tables[0].Rows[0];
-                    foreach (var val in r.ItemArray)
-                    {
-                        Array.Resize(ref data, data.Length + 1);
-                        data[data.Length - 1] = val.ToString();
-
-                    }
+                    r = null;
                 }
-                else
-                {
-                    data = null;
-                }
-
-                db.Actualizar(query, "Taula", dts);
+                return r;
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
-                data = null;
+                return null;
             }
+        }
+        public DataTable SearchTableFromQuery (string query)
+        {
+            DBUtils.DBUtils db = new DBUtils.DBUtils();
+            try
+            {
+                db.Conexion();
+                dts = db.PortarPerConsulta(query);
+                DataTable t = dts.Tables[0];
+                if (t.Rows.Count == 0)
+                {
+                    return null;
+                }
+                return t;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return null;
+            }
+        }
+        public bool SaveChanges (DataSet newDts, string query)
+        {
+            DBUtils.DBUtils db = new DBUtils.DBUtils();
+            bool OK;
 
-            return data;
+            try
+            {
+                db.Conexion();
+
+                OK = db.Actualizar(query, "Taula", newDts);
+
+                return OK;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+            }
         }
     }
 }

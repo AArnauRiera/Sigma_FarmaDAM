@@ -35,7 +35,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxNTS_Type = new System.Windows.Forms.ComboBox();
             this.btnUserManagement = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.tbxNTS = new Sigma_Controls.TxtSigma();
@@ -111,13 +111,14 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "NTS Type";
             // 
-            // comboBox1
+            // cbxNTS_Type
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(131, 168);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(142, 21);
-            this.comboBox1.TabIndex = 14;
+            this.cbxNTS_Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxNTS_Type.FormattingEnabled = true;
+            this.cbxNTS_Type.Location = new System.Drawing.Point(131, 168);
+            this.cbxNTS_Type.Name = "cbxNTS_Type";
+            this.cbxNTS_Type.Size = new System.Drawing.Size(142, 21);
+            this.cbxNTS_Type.TabIndex = 14;
             // 
             // btnUserManagement
             // 
@@ -228,7 +229,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnUserManagement);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxNTS_Type);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbxNTS);
@@ -268,7 +269,7 @@
         public Sigma_Controls.TxtSigma tbxDNI;
         public Sigma_Controls.TxtSigma tbxEmail;
         public Sigma_Controls.TxtSigma tbxNTS;
-        public System.Windows.Forms.ComboBox comboBox1;
+        protected System.Windows.Forms.ComboBox cbxNTS_Type;
     }
 }
 
