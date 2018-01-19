@@ -10,13 +10,12 @@
 *.sln.docstates
 *.dll
 *.exe
-
+dll/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
 # Build results
-dll/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -290,7 +289,4 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
-Sigma_FarmaDAM/Sigma_FarmaDAM/Sigma_FarmaDAM.csproj.orig
-Sigma_FarmaDAM/Sigma_Controls/Sigma_Controls.csproj.orig
-Sigma_FarmaDAM/Sigma_FarmaDAM.sln.orig
-*.orig
+Sigma_FarmaDAM/CustomControls/CustomControls.csproj.orig
