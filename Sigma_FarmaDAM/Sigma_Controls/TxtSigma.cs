@@ -10,9 +10,16 @@ using System.Windows.Forms;
 namespace Sigma_Controls
 {
     public class TxtSigma : TextBox
-    {
+    {        
+
+        public TxtSigma()
+        {
+            GotFocus += SetPlaceHolder;
+            LostFocus += RemovePlaceHolder;
+        }
 
         #region public variables
+
 
         public enum FieldTypes
         {
@@ -37,12 +44,22 @@ namespace Sigma_Controls
 
         private FieldTypes _fieldType;
 
+        private string _table;
+
         private string _dBReference;
+
+        private bool _isPlaceholder = true;
 
         #endregion
 
 
         #region Properties
+
+        public string Table
+        {
+            get { return _table; }
+            set { _table = value; }
+        }
 
         public string DBReference
         {
@@ -55,6 +72,15 @@ namespace Sigma_Controls
             get { return _fieldType; }
             set { _fieldType = value; }
         }
+
+        private string _placeholder;
+
+        public string Placeholder
+        {
+            get { return _placeholder; }
+            set { _placeholder = value; }
+        }
+
 
         #endregion
 
@@ -76,16 +102,13 @@ namespace Sigma_Controls
                 case FieldTypes.NSS:
                     regularExpresion = @"^(\d{2})(\d{2})(\d{2})\d{5}$";
                     break;
-                 //////////
-                 //IS NECESSARY TO MAKE A DIFFERENCE BETWEEN NAME AND LAST NAME ?
                 case FieldTypes.Name:
                     regularExpresion = @"[a-zA-Z]{1,15}$";
                     break;                
                 case FieldTypes.LastName:
                     regularExpresion = @"[a-zA-Z]{1,15}$";
                     break;
-                ////////////
-                //////////
+
                 case FieldTypes.Email:
                     regularExpresion = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
                     break;
@@ -126,10 +149,44 @@ namespace Sigma_Controls
         {
             base.OnLostFocus(e);
 
-            BackColor = DefaultBackColor;
+            BackColor = DefaultBackColor;               
+        }
+
+        private void SetPlaceHolder()
+        {
+            if (String.IsNullOrWhiteSpace(Text) && !String.IsNullOrWhiteSpace(Placeholder))
+            {
+                Text = Placeholder;
+                ForeColor = Color.Gray;
+                Font = new Font(Font, FontStyle.Italic);
+                _isPlaceholder = true;
+            }
+            else
+            {
+                _isPlaceholder = false;
+            }
         }
 
 
+        private void RemovePlaceHolder()
+        {
+            if (_isPlaceholder)
+            {
+                Text = "";
+                ForeColor = SystemColors.WindowText;
+                Font = new Font(Font, FontStyle.Regular);
+                _isPlaceholder = false;
+            }
+        }
+        private void SetPlaceHolder(object sender, EventArgs e)
+        {
+            SetPlaceHolder();
+        }
+
+        private void RemovePlaceHolder(object sender, EventArgs e)
+        {
+            RemovePlaceHolder();
+        }
         protected override void OnGotFocus(EventArgs e)
         {
 
@@ -140,13 +197,14 @@ namespace Sigma_Controls
             {
                 PasswordChar = '*';
             }
+
             BackColor = GetFocusColor();
 
         }
 
         private bool IsPassword()
         {
-            Boolean ispassword = false;
+            bool ispassword = false;
             if (_fieldType == FieldTypes.Password)
             {
                 ispassword = true;
