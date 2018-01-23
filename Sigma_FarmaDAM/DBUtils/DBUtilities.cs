@@ -4,7 +4,7 @@ using MySql.Data.MySqlClient;
 
 namespace DBUtils
 {
-    public class DBUtils
+    public class DBUtilities
     {
         #region Private Variables
         private string _stringMySQL = "SERVER=51.255.58.1;PORT=3306;DATABASE=g1s2am_FarmaDAM;Uid=g1s2am_SigmaCode;PASSWORD=12345aA";

@@ -33,7 +33,7 @@ namespace RegisterEditDrugs
             _edit = true;
             btnEditAdd.Text = "Edit";
             CenterPanel(pnlAddEditDrugs);
-            DBUtils.DBUtils db = new DBUtils.DBUtils();
+            DBUtils.DBUtilities db = new DBUtils.DBUtilities();
             db.Conexion();
             if (_edit)
             {
@@ -60,7 +60,7 @@ namespace RegisterEditDrugs
         }
         private void FuncEdit() {
 
-            DBUtils.DBUtils db = new DBUtils.DBUtils();
+            DBUtils.DBUtilities db = new DBUtils.DBUtilities();
             db.Conexion();
             string query = "SELECT * FROM Drugs WHERE Register_Number LIKE " + int.Parse(txtNRN.Text);
             dts = db.PortarPerConsulta(query);
@@ -85,7 +85,7 @@ namespace RegisterEditDrugs
         }
         private void btnEditAdd_Click(object sender, EventArgs e)
         {
-            DBUtils.DBUtils db = new DBUtils.DBUtils();
+            DBUtils.DBUtilities db = new DBUtils.DBUtilities();
             db.Conexion();
             
             string query = "SELECT * FROM Drugs";

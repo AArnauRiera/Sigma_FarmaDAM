@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigma_FarmaDAM", "Sigma_FarmaDAM\Sigma_FarmaDAM.csproj", "{63BBEC2A-B19A-4B1C-9CFF-A9B0A26D14C5}"
 EndProject
@@ -11,11 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigma_Controls", "Sigma_Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddEditDrugs", "RegisterEditDrugs\AddEditDrugs.csproj", "{F3E8F703-29BA-47E5-B310-971E5DF41D3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mantein", "Mantein\Mantein.csproj", "{951A95B0-6B1F-40D7-A091-29CA118D6756}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBUtils", "DBUtils\DBUtils.csproj", "{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{E1ADDEF3-7ED3-4C2B-B454-E637E10A6A35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mantein", "Mantein\Mantein.csproj", "{951A95B0-6B1F-40D7-A091-29CA118D6756}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{BAFEA927-64A5-4FC5-BCD7-16DF3E7C71E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAFEA927-64A5-4FC5-BCD7-16DF3E7C71E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAFEA927-64A5-4FC5-BCD7-16DF3E7C71E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{951A95B0-6B1F-40D7-A091-29CA118D6756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{951A95B0-6B1F-40D7-A091-29CA118D6756}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{951A95B0-6B1F-40D7-A091-29CA118D6756}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{951A95B0-6B1F-40D7-A091-29CA118D6756}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3E8F703-29BA-47E5-B310-971E5DF41D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3E8F703-29BA-47E5-B310-971E5DF41D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3E8F703-29BA-47E5-B310-971E5DF41D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3E8F703-29BA-47E5-B310-971E5DF41D3C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,6 +47,10 @@ Global
 		{E1ADDEF3-7ED3-4C2B-B454-E637E10A6A35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1ADDEF3-7ED3-4C2B-B454-E637E10A6A35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1ADDEF3-7ED3-4C2B-B454-E637E10A6A35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{951A95B0-6B1F-40D7-A091-29CA118D6756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{951A95B0-6B1F-40D7-A091-29CA118D6756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{951A95B0-6B1F-40D7-A091-29CA118D6756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{951A95B0-6B1F-40D7-A091-29CA118D6756}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
