@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DBUtils\DBUtils.csproj">
-      <Project>{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}</Project>
+      <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
       <Name>DBUtils</Name>
     </ProjectReference>
     <ProjectReference Include="..\Sigma_Controls\Sigma_Controls.csproj">

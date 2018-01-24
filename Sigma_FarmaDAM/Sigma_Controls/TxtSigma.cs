@@ -12,10 +12,12 @@ namespace Sigma_Controls
     public class TxtSigma : TextBox
     {        
 
-        public TxtSigma()
-        {
-            GotFocus += SetPlaceHolder;
-            LostFocus += RemovePlaceHolder;
+        public TxtSigma() : base ()
+        {            
+
+            _isPlaceholder = true;
+            LostFocus += SetPlaceHolder;
+            GotFocus += RemovePlaceHolder; 
         }
 
         #region public variables
@@ -25,13 +27,8 @@ namespace Sigma_Controls
         {
             NSS,
             DNI,
-
-            /// //////////
-            ////IS NECESSARY TO MAKE A DIFFERENCE BETWEEN NAME AND LAST NAME ?
             Name,
-            LastName,
-            /// ///////
-            /// //        
+            LastName,   
             Email,
             Phone,
             Password,
@@ -48,7 +45,7 @@ namespace Sigma_Controls
 
         private string _dBReference;
 
-        private bool _isPlaceholder = true;
+        private bool _isPlaceholder;
 
         #endregion
 
@@ -78,7 +75,12 @@ namespace Sigma_Controls
         public string Placeholder
         {
             get { return _placeholder; }
-            set { _placeholder = value; }
+            set {
+                _placeholder = value;
+                Text = Placeholder;
+                ForeColor = Color.Gray;
+                Font = new Font(Font, FontStyle.Italic);
+            }
         }
 
 
@@ -149,12 +151,13 @@ namespace Sigma_Controls
         {
             base.OnLostFocus(e);
 
-            BackColor = DefaultBackColor;               
+            BackColor = DefaultBackColor;
+
         }
 
         private void SetPlaceHolder()
         {
-            if (String.IsNullOrWhiteSpace(Text) && !String.IsNullOrWhiteSpace(Placeholder))
+            if (String.IsNullOrWhiteSpace(Text))
             {
                 Text = Placeholder;
                 ForeColor = Color.Gray;
@@ -175,7 +178,6 @@ namespace Sigma_Controls
                 Text = "";
                 ForeColor = SystemColors.WindowText;
                 Font = new Font(Font, FontStyle.Regular);
-                _isPlaceholder = false;
             }
         }
         private void SetPlaceHolder(object sender, EventArgs e)
@@ -199,12 +201,12 @@ namespace Sigma_Controls
             }
 
             BackColor = GetFocusColor();
-
         }
 
         private bool IsPassword()
         {
             bool ispassword = false;
+
             if (_fieldType == FieldTypes.Password)
             {
                 ispassword = true;

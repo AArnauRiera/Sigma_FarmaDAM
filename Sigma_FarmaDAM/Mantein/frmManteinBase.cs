@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClassLibrary1;
 using Sigma_Controls;
 
 namespace Mantein
@@ -42,14 +41,14 @@ namespace Mantein
 
         protected void GetQuery()
         {
-            DBUtils db = new DBUtils();
+            DBUtils.DBUtils db = new DBUtils.DBUtils();
             query = "select * from " + Table;
             dts = db.PortarPerConsulta(query);
         }
 
         protected void UpdateQuery()
         {
-            DBUtils db = new DBUtils();
+            DBUtils.DBUtils db = new DBUtils.DBUtils();
             db.Actualizar(query,Table,dts);
         }
        

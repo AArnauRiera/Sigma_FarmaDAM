@@ -96,8 +96,6 @@
       <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
       <Name>DBUtils</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\UserManagament\UserManagament.csproj">
       <Project>{fa9eb4d2-fe3b-4b28-9d36-a8ce141ca5d3}</Project>
       <Name>UserManagament</Name>

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Helpers;
 using System.Windows.Forms;
 
 namespace UserManagament
@@ -19,6 +20,7 @@ namespace UserManagament
 
         private void btnUserManagement_Click(object sender, EventArgs e)
         {
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -28,10 +30,11 @@ namespace UserManagament
                 UserManagementControl umc = new UserManagementControl();
                 string query = "SELECT * FROM Clients where NTS = '" + tbxNTS.Text + "'";
                 DataRow r = umc.SearchFromQuery(query);
+                DataSet dts = DBHelper.GetQuery("Clients", Controls, null, "=");
                 if (r != null)
                 {
                     lblError.Text = "";
-                    ShowSelectData(r);
+                    ShowSelectData(dts);
                 } else
                 {
                     lblError.Text = "Entry not valid for search";
@@ -45,13 +48,16 @@ namespace UserManagament
             }
         }
 
-        private void ShowSelectData (DataRow r)
+        private void ShowSelectData (DataSet dts)
         {
+            DBHelper.BindingTextBox(Controls, dts);
+            /*
             tbxDNI.Text = r.ItemArray[4].ToString();
             tbxFirstName.Text = r.ItemArray[1].ToString();
             tbxLastName1.Text = r.ItemArray[2].ToString();
             tbxLastName2.Text = r.ItemArray[3].ToString();
             cbxNTS_Type.SelectedIndex = Int32.Parse(r.ItemArray[6].ToString());
+            */
         }
 
         private void UserManagement_Load(object sender, EventArgs e)
