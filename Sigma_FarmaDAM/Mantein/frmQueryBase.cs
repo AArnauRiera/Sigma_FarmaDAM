@@ -42,7 +42,7 @@ namespace Mantein
 
         protected void GetQuery()
         {
-            DBUtilities db = new DBUtilities();
+            DBUtils.DBUtilities db = new DBUtils.DBUtilities();
 
             string conditions = Conditions();
             query = "select * from " + Table;

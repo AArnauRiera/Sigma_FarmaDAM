@@ -48,11 +48,15 @@
     <Compile Include="frmManteinBase.Designer.cs">
       <DependentUpon>frmManteinBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManteinUsers.cs" />
+    <Compile Include="frmManteinUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmManteinUsers.Designer.cs">
       <DependentUpon>frmManteinUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQueryActivePrinciple.cs" />
+    <Compile Include="frmQueryActivePrinciple.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQueryActivePrinciple.Designer.cs">
       <DependentUpon>frmQueryActivePrinciple.cs</DependentUpon>
     </Compile>
@@ -62,28 +66,42 @@
     <Compile Include="frmQueryBase.Designer.cs">
       <DependentUpon>frmQueryBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQueryClients.cs" />
-    <Compile Include="frmQueryDrugs.cs" />
+    <Compile Include="frmQueryClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQueryDrugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQueryDrugs.Designer.cs">
       <DependentUpon>frmQueryDrugs.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQueryIVA.cs" />
+    <Compile Include="frmQueryIVA.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQueryIVA.Designer.cs">
       <DependentUpon>frmQueryIVA.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQueryLaboratories.cs" />
+    <Compile Include="frmQueryLaboratories.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQueryLaboratories.Designer.cs">
       <DependentUpon>frmQueryLaboratories.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQueryProviders.cs" />
+    <Compile Include="frmQueryProviders.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQueryProviders.Designer.cs">
       <DependentUpon>frmQueryProviders.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuerySeller.cs" />
+    <Compile Include="frmQuerySeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQuerySeller.Designer.cs">
       <DependentUpon>frmQuerySeller.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQueryStock.cs" />
+    <Compile Include="frmQueryStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQueryStock.Designer.cs">
       <DependentUpon>frmQueryStock.cs</DependentUpon>
     </Compile>
