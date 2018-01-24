@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using SearchSystem;
+=======
+using Mantein;
+>>>>>>> master
 
 namespace Sigma_FarmaDAM
 {
@@ -17,7 +21,12 @@ namespace Sigma_FarmaDAM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new frmTest());
+=======
+            //Application.Run(new frmQueryBase(null,"Clients"));
+            Application.Run(new frmMain());
+>>>>>>> master
         }
     }
 }

@@ -45,8 +45,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+=======
+    <Compile Include="frmContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContent.Designer.cs">
+      <DependentUpon>frmContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmContent.resx">
+      <DependentUpon>frmContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> master
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -70,14 +93,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DBUtils\DBUtils.csproj">
-      <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
-      <Name>DBUtils</Name>
+    <ProjectReference Include="..\Mantein\Mantein.csproj">
+      <Project>{951a95b0-6b1f-40d7-a091-29ca118d6756}</Project>
+      <Name>Mantein</Name>
     </ProjectReference>
     <ProjectReference Include="..\Search_System\SearchSystem\SearchSystem.csproj">
       <Project>{2d91cbe1-6b63-43a1-bb94-82b5cda7d42b}</Project>
       <Name>SearchSystem</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\img\close_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
