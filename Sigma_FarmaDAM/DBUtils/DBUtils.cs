@@ -1,17 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
-<<<<<<< HEAD
 using System.Windows.Forms;
-=======
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.OleDb;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using MySql.Data.MySqlClient;
->>>>>>> master
 
 
 namespace DBUtils
@@ -19,8 +9,8 @@ namespace DBUtils
     public class DBUtils
     {
         #region Private Variables
-        private string _stringSQLOLEDB = "SERVER=51.255.58.1;PORT=3306;DATABASE=g1s2am_FarmaDAM;Uid=g1s2am_SigmaCode;PASSWORD=12345aA";
-        private MySqlConnection con;
+            private string _stringMySQL = "SERVER=51.255.58.1;PORT=3306;DATABASE=g1s2am_FarmaDAM;Uid=g1s2am_SigmaCode;PASSWORD=12345aA";
+            private MySqlConnection con;
         #endregion
 
         #region Public Variables
@@ -34,7 +24,6 @@ namespace DBUtils
         #region OleDBMethods
         public void Conexion()
         {
-<<<<<<< HEAD
             try
             {
                 con = new MySqlConnection(_stringMySQL);
@@ -49,11 +38,6 @@ namespace DBUtils
             
 
             }
-=======
-            con = new MySqlConnection(_stringSQLOLEDB);
-            con.Open();
-            con.InitializeLifetimeService();
->>>>>>> master
         }
 
         public DataSet PortarPerConsulta(string query)
