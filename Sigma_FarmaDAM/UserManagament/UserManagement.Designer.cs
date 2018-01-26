@@ -118,7 +118,7 @@
             this.cbxNTS_Type.Location = new System.Drawing.Point(131, 168);
             this.cbxNTS_Type.Name = "cbxNTS_Type";
             this.cbxNTS_Type.Size = new System.Drawing.Size(142, 21);
-            this.cbxNTS_Type.TabIndex = 14;
+            this.cbxNTS_Type.TabIndex = 2;
             // 
             // btnUserManagement
             // 
@@ -148,7 +148,7 @@
             this.tbxNTS.Name = "tbxNTS";
             this.tbxNTS.Placeholder = "NTS";
             this.tbxNTS.Size = new System.Drawing.Size(142, 20);
-            this.tbxNTS.TabIndex = 10;
+            this.tbxNTS.TabIndex = 1;
             // 
             // tbxEmail
             // 
@@ -168,7 +168,7 @@
             this.tbxDNI.Name = "tbxDNI";
             this.tbxDNI.Placeholder = "DNI";
             this.tbxDNI.Size = new System.Drawing.Size(142, 20);
-            this.tbxDNI.TabIndex = 6;
+            this.tbxDNI.TabIndex = 0;
             this.tbxDNI.Tag = "";
             // 
             // tbxLastName2
