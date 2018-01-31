@@ -53,7 +53,6 @@
             this.btnBrowseProspect = new System.Windows.Forms.Button();
             this.btnEditAdd = new System.Windows.Forms.Button();
             this.pnlAddEditDrugs = new System.Windows.Forms.Panel();
-            this.cbxIVA = new System.Windows.Forms.ComboBox();
             this.pnlAddEditDrugs.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +63,7 @@
             this.txtNRN.Location = new System.Drawing.Point(165, 24);
             this.txtNRN.Margin = new System.Windows.Forms.Padding(2);
             this.txtNRN.Name = "txtNRN";
-            this.txtNRN.Placeholder = "Núm. reg. Nacional";
+            this.txtNRN.Placeholder = "";
             this.txtNRN.Size = new System.Drawing.Size(179, 20);
             this.txtNRN.TabIndex = 0;
             this.txtNRN.Table = null;
@@ -225,11 +224,11 @@
             // 
             this.txtIVA.DBReference = null;
             this.txtIVA.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtIVA.Location = new System.Drawing.Point(355, 261);
+            this.txtIVA.Location = new System.Drawing.Point(166, 261);
             this.txtIVA.Margin = new System.Windows.Forms.Padding(2);
             this.txtIVA.Name = "txtIVA";
             this.txtIVA.Placeholder = null;
-            this.txtIVA.Size = new System.Drawing.Size(20, 20);
+            this.txtIVA.Size = new System.Drawing.Size(178, 20);
             this.txtIVA.TabIndex = 14;
             this.txtIVA.Table = null;
             // 
@@ -318,7 +317,6 @@
             // 
             // pnlAddEditDrugs
             // 
-            this.pnlAddEditDrugs.Controls.Add(this.cbxIVA);
             this.pnlAddEditDrugs.Controls.Add(this.lblNRN);
             this.pnlAddEditDrugs.Controls.Add(this.btnEditAdd);
             this.pnlAddEditDrugs.Controls.Add(this.txtNRN);
@@ -349,14 +347,6 @@
             this.pnlAddEditDrugs.Name = "pnlAddEditDrugs";
             this.pnlAddEditDrugs.Size = new System.Drawing.Size(400, 517);
             this.pnlAddEditDrugs.TabIndex = 24;
-            // 
-            // cbxIVA
-            // 
-            this.cbxIVA.FormattingEnabled = true;
-            this.cbxIVA.Location = new System.Drawing.Point(167, 261);
-            this.cbxIVA.Name = "cbxIVA";
-            this.cbxIVA.Size = new System.Drawing.Size(177, 21);
-            this.cbxIVA.TabIndex = 24;
             // 
             // frmAddEditDrugs
             // 
@@ -401,6 +391,5 @@
         private System.Windows.Forms.Button btnBrowseProspect;
         private System.Windows.Forms.Button btnEditAdd;
         private System.Windows.Forms.Panel pnlAddEditDrugs;
-        private System.Windows.Forms.ComboBox cbxIVA;
     }
 }

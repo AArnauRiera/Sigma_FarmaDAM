@@ -60,7 +60,88 @@ namespace RegisterEditDrugs
 
         }
 
-        private void SetDrugData (/*DBUtils.DBUtilities db*/)
+        private void AddReg() {
+
+            //Num. registre nacional (Clau) 
+            //Num de registre sanitari      
+            //Denominació comercial         
+            //Principi actiu                
+            //Contingut                     
+            //Laboratori farmacèutic        
+            //Preu de venda(sense IVA)      
+            //Iva(Tipus aplicable)          
+            //Si es substituïble o no       
+            //Si és genèric o no            
+            //Si és obligatòria la recepta  
+
+            DBUtils.DBUtilities db = new DBUtils.DBUtilities();
+            db.Conexion();
+
+            string query = "SELECT * FROM Drugs";
+            dts = db.PortarPerConsulta(query);
+
+            DataTable dt = dts.Tables[0];
+
+            DataRow dr = dts.Tables[0].NewRow();
+
+            try
+            {
+                dr["Register_Number"] = int.Parse(txtNRN.Text);
+                dr["Sanitary_Register_Num"] = int.Parse(txtNRS.Text);
+                dr["CommercialName"] = txtName.Text;
+                dr["ActivePrincipleID"] = txtActivePrinciple.Text;
+                dr["Content"] = txtContent.Text;
+                dr["LabId"] = int.Parse(txtPharmaceuticLab.Text);
+                dr["Price"] = double.Parse(txtBasePrice.Text);
+                dr["IVAId"] = int.Parse(txtIVA.Text);
+
+                //Documentation
+                //   Prospectus
+
+                if (chkReplaceable.Checked)
+                    dr["Replaceable"] = 1;
+                else
+                    dr["Replaceable"] = 0;
+
+                if (chkGeneric.Checked)
+                    dr["IsGeneric"] = 1;
+                else
+                    dr["IsGeneric"] = 0;
+
+                if (chkRecipe.Checked)
+                    dr["NeedsRecipe"] = 1;
+                else
+                    dr["NeedsRecipe"] = 0;
+
+
+                dts.Tables[0].Rows.Add(dr);
+                db.Actualizar(query, "Taula", dts);
+
+                MessageBox.Show("Medicine Added");
+            }
+            catch (Exception x) {
+                MessageBox.Show("ERROR");
+            }
+
+        }
+
+        private void clearControls() {
+
+            txtNRN.Text = "";
+            txtNRS.Text = "";
+            txtName.Text = "";
+            txtActivePrinciple.Text = "";
+            txtContent.Text = "";
+            txtPharmaceuticLab.Text = "";
+            txtBasePrice.Text = "";
+            txtIVA.Text = "";
+
+            chkReplaceable.Checked = false;
+            chkGeneric.Checked = false;
+            chkRecipe.Checked = false;
+        }
+
+        private void SetDrugData ()
         {
 
             DBUtils.DBUtilities db = new DBUtils.DBUtilities();
@@ -109,8 +190,6 @@ namespace RegisterEditDrugs
             //   12  Documentation
             //   13  Prospectus
 
-            BindingTextBox();
-
             //dr["Register_Number"] = int.Parse(txtNRN.Text);
             //dr["Sanitary_Register_Num"] = int.Parse(txtNRS.Text);
             //dr["Denomination"] = txtName.Text;
@@ -139,7 +218,10 @@ namespace RegisterEditDrugs
 
         private void btnEditAdd_Click(object sender, EventArgs e)
         {
-            SetDrugData();
+            if (_edit)
+                SetDrugData();
+            else
+                AddReg();
         }
     }
 }
