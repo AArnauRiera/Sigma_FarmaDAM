@@ -15,7 +15,7 @@ namespace Helpers
 
         public static DataSet GetQuery(string table, ControlCollection controls, string delimeter = "and", string condition = "=")
         {
-            DBUtils db = new DBUtils();
+            DBUtilities db = new DBUtilities();
 
             string conditions = Conditions(condition, delimeter, controls);
 
@@ -31,7 +31,7 @@ namespace Helpers
 
         public static DataSet GetQuery(string table, TxtSigma[] controls, string delimeter = "and", string condition = "=")
         {
-            DBUtils db = new DBUtils();
+            DBUtilities db = new DBUtilities();
 
             string conditions = Conditions(condition, delimeter, controls);
 
