@@ -14,8 +14,8 @@ namespace Sigma_Controls
 
         public TxtSigma()
         {
-            GotFocus += SetPlaceHolder;
-            LostFocus += RemovePlaceHolder;
+            GotFocus += RemovePlaceHolder;
+            LostFocus += SetPlaceHolder;
         }
 
         #region public variables
@@ -25,13 +25,8 @@ namespace Sigma_Controls
         {
             NSS,
             DNI,
-
-            /// //////////
-            ////IS NECESSARY TO MAKE A DIFFERENCE BETWEEN NAME AND LAST NAME ?
             Name,
-            LastName,
-            /// ///////
-            /// //        
+            LastName,      
             Email,
             Phone,
             Password,
@@ -154,7 +149,7 @@ namespace Sigma_Controls
 
         private void SetPlaceHolder()
         {
-            if (String.IsNullOrWhiteSpace(Text) && !String.IsNullOrWhiteSpace(Placeholder))
+            if (!String.IsNullOrWhiteSpace(Text))
             {
                 Text = Placeholder;
                 ForeColor = Color.Gray;
@@ -178,6 +173,7 @@ namespace Sigma_Controls
                 _isPlaceholder = false;
             }
         }
+
         private void SetPlaceHolder(object sender, EventArgs e)
         {
             SetPlaceHolder();
@@ -187,6 +183,7 @@ namespace Sigma_Controls
         {
             RemovePlaceHolder();
         }
+
         protected override void OnGotFocus(EventArgs e)
         {
 
@@ -204,13 +201,16 @@ namespace Sigma_Controls
 
         private bool IsPassword()
         {
+
             bool ispassword = false;
+
             if (_fieldType == FieldTypes.Password)
             {
                 ispassword = true;
             }
 
             return ispassword;
+
         }
 
         private Color GetFocusColor()

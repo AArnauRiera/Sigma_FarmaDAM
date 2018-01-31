@@ -43,6 +43,7 @@
             this.printSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarPestañaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.redoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,14 +86,16 @@
             this.Main = new System.Windows.Forms.TabPage();
             this.tbMain = new System.Windows.Forms.TabControl();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.cerrarPestañaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGestioComandes = new System.Windows.Forms.Button();
+            this.btnVendadeMedicaments = new System.Windows.Forms.Button();
+            this.btnLaboratorisFarmaceutiques = new System.Windows.Forms.Button();
+            this.btnMantenimentProductes = new System.Windows.Forms.Button();
+            this.btnMantenimenPrincipiActius = new System.Windows.Forms.Button();
+            this.btnEditClient = new System.Windows.Forms.Button();
+            this.btnUser = new System.Windows.Forms.Button();
+            this.btnVentas = new System.Windows.Forms.Button();
+            this.btnProgramaFidelitzacioClients = new System.Windows.Forms.Button();
+            this.btnActualizacioMedicaments = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -216,6 +219,13 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.exitToolStripMenuItem.Text = "&Salir";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
+            // 
+            // cerrarPestañaToolStripMenuItem
+            // 
+            this.cerrarPestañaToolStripMenuItem.Name = "cerrarPestañaToolStripMenuItem";
+            this.cerrarPestañaToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.cerrarPestañaToolStripMenuItem.Text = "Cerrar Pestaña";
+            this.cerrarPestañaToolStripMenuItem.Click += new System.EventHandler(this.cerrarPestañaToolStripMenuItem_Click);
             // 
             // editMenu
             // 
@@ -528,7 +538,7 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 659);
+            this.statusStrip.Location = new System.Drawing.Point(0, 778);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1008, 22);
             this.statusStrip.TabIndex = 2;
@@ -545,7 +555,7 @@
             this.Main.Location = new System.Drawing.Point(4, 22);
             this.Main.Name = "Main";
             this.Main.Padding = new System.Windows.Forms.Padding(3);
-            this.Main.Size = new System.Drawing.Size(773, 584);
+            this.Main.Size = new System.Drawing.Size(773, 703);
             this.Main.TabIndex = 0;
             this.Main.Text = "Main";
             this.Main.UseVisualStyleBackColor = true;
@@ -557,100 +567,125 @@
             this.tbMain.Location = new System.Drawing.Point(227, 49);
             this.tbMain.Name = "tbMain";
             this.tbMain.SelectedIndex = 0;
-            this.tbMain.Size = new System.Drawing.Size(781, 610);
+            this.tbMain.Size = new System.Drawing.Size(781, 729);
             this.tbMain.TabIndex = 4;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnActualizacioMedicaments);
+            this.panel1.Controls.Add(this.btnProgramaFidelitzacioClients);
+            this.panel1.Controls.Add(this.btnGestioComandes);
+            this.panel1.Controls.Add(this.btnVendadeMedicaments);
+            this.panel1.Controls.Add(this.btnLaboratorisFarmaceutiques);
+            this.panel1.Controls.Add(this.btnMantenimentProductes);
+            this.panel1.Controls.Add(this.btnMantenimenPrincipiActius);
+            this.panel1.Controls.Add(this.btnEditClient);
+            this.panel1.Controls.Add(this.btnUser);
+            this.panel1.Controls.Add(this.btnVentas);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(221, 610);
+            this.panel1.Size = new System.Drawing.Size(221, 729);
             this.panel1.TabIndex = 6;
             // 
-            // button7
+            // btnGestioComandes
             // 
-            this.button7.Location = new System.Drawing.Point(3, 435);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(218, 66);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnGestioComandes.Location = new System.Drawing.Point(3, 507);
+            this.btnGestioComandes.Name = "btnGestioComandes";
+            this.btnGestioComandes.Size = new System.Drawing.Size(218, 66);
+            this.btnGestioComandes.TabIndex = 7;
+            this.btnGestioComandes.Text = "Gestió de comandes ";
+            this.btnGestioComandes.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnVendadeMedicaments
             // 
-            this.button6.Location = new System.Drawing.Point(0, 363);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(218, 66);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnVendadeMedicaments.Location = new System.Drawing.Point(3, 435);
+            this.btnVendadeMedicaments.Name = "btnVendadeMedicaments";
+            this.btnVendadeMedicaments.Size = new System.Drawing.Size(218, 66);
+            this.btnVendadeMedicaments.TabIndex = 6;
+            this.btnVendadeMedicaments.Text = "Venda Medicaments";
+            this.btnVendadeMedicaments.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnLaboratorisFarmaceutiques
             // 
-            this.button5.Location = new System.Drawing.Point(0, 291);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(218, 66);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnLaboratorisFarmaceutiques.Location = new System.Drawing.Point(0, 363);
+            this.btnLaboratorisFarmaceutiques.Name = "btnLaboratorisFarmaceutiques";
+            this.btnLaboratorisFarmaceutiques.Size = new System.Drawing.Size(218, 66);
+            this.btnLaboratorisFarmaceutiques.TabIndex = 5;
+            this.btnLaboratorisFarmaceutiques.Text = "Laboratoris Farmacèutiques";
+            this.btnLaboratorisFarmaceutiques.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnMantenimentProductes
             // 
-            this.button4.Location = new System.Drawing.Point(3, 219);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(218, 66);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnMantenimentProductes.Location = new System.Drawing.Point(0, 291);
+            this.btnMantenimentProductes.Name = "btnMantenimentProductes";
+            this.btnMantenimentProductes.Size = new System.Drawing.Size(218, 66);
+            this.btnMantenimentProductes.TabIndex = 4;
+            this.btnMantenimentProductes.Text = "Manteniment productes";
+            this.btnMantenimentProductes.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnMantenimenPrincipiActius
             // 
-            this.button3.Location = new System.Drawing.Point(0, 147);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(218, 66);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnMantenimenPrincipiActius.Location = new System.Drawing.Point(3, 219);
+            this.btnMantenimenPrincipiActius.Name = "btnMantenimenPrincipiActius";
+            this.btnMantenimenPrincipiActius.Size = new System.Drawing.Size(218, 66);
+            this.btnMantenimenPrincipiActius.TabIndex = 3;
+            this.btnMantenimenPrincipiActius.Text = "Manteniment principis actius ";
+            this.btnMantenimenPrincipiActius.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnEditClient
             // 
-            this.button2.Location = new System.Drawing.Point(0, 75);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(218, 66);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEditClient.Location = new System.Drawing.Point(0, 147);
+            this.btnEditClient.Name = "btnEditClient";
+            this.btnEditClient.Size = new System.Drawing.Size(218, 66);
+            this.btnEditClient.TabIndex = 2;
+            this.btnEditClient.Text = "Editar Cliente";
+            this.btnEditClient.UseVisualStyleBackColor = true;
+            this.btnEditClient.Click += new System.EventHandler(this.btnEditClient_Click);
             // 
-            // button1
+            // btnUser
             // 
-            this.button1.Location = new System.Drawing.Point(0, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(218, 66);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnUser.Location = new System.Drawing.Point(0, 75);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(218, 66);
+            this.btnUser.TabIndex = 1;
+            this.btnUser.Text = "Registro Cliente";
+            this.btnUser.UseVisualStyleBackColor = true;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
-            // cerrarPestañaToolStripMenuItem
+            // btnVentas
             // 
-            this.cerrarPestañaToolStripMenuItem.Name = "cerrarPestañaToolStripMenuItem";
-            this.cerrarPestañaToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.cerrarPestañaToolStripMenuItem.Text = "Cerrar Pestaña";
-            this.cerrarPestañaToolStripMenuItem.Click += new System.EventHandler(this.cerrarPestañaToolStripMenuItem_Click);
+            this.btnVentas.Location = new System.Drawing.Point(0, 3);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Size = new System.Drawing.Size(218, 66);
+            this.btnVentas.TabIndex = 0;
+            this.btnVentas.Text = "Ventas";
+            this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
+            // 
+            // btnProgramaFidelitzacioClients
+            // 
+            this.btnProgramaFidelitzacioClients.Location = new System.Drawing.Point(3, 579);
+            this.btnProgramaFidelitzacioClients.Name = "btnProgramaFidelitzacioClients";
+            this.btnProgramaFidelitzacioClients.Size = new System.Drawing.Size(218, 66);
+            this.btnProgramaFidelitzacioClients.TabIndex = 8;
+            this.btnProgramaFidelitzacioClients.Text = "Programa fidelització clients ";
+            this.btnProgramaFidelitzacioClients.UseVisualStyleBackColor = true;
+            // 
+            // btnActualizacioMedicaments
+            // 
+            this.btnActualizacioMedicaments.Location = new System.Drawing.Point(3, 651);
+            this.btnActualizacioMedicaments.Name = "btnActualizacioMedicaments";
+            this.btnActualizacioMedicaments.Size = new System.Drawing.Size(218, 66);
+            this.btnActualizacioMedicaments.TabIndex = 9;
+            this.btnActualizacioMedicaments.Text = "Actualització medicaments";
+            this.btnActualizacioMedicaments.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 681);
+            this.ClientSize = new System.Drawing.Size(1008, 800);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tbMain);
             this.Controls.Add(this.statusStrip);
@@ -730,14 +765,17 @@
         private System.Windows.Forms.TabPage Main;
         private System.Windows.Forms.TabControl tbMain;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVendadeMedicaments;
+        private System.Windows.Forms.Button btnLaboratorisFarmaceutiques;
+        private System.Windows.Forms.Button btnMantenimentProductes;
+        private System.Windows.Forms.Button btnMantenimenPrincipiActius;
+        private System.Windows.Forms.Button btnEditClient;
+        private System.Windows.Forms.Button btnUser;
+        private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.ToolStripMenuItem cerrarPestañaToolStripMenuItem;
+        private System.Windows.Forms.Button btnGestioComandes;
+        private System.Windows.Forms.Button btnActualizacioMedicaments;
+        private System.Windows.Forms.Button btnProgramaFidelitzacioClients;
     }
 }
 
