@@ -43,7 +43,6 @@
             this.tbxLastName2 = new Sigma_Controls.TxtSigma();
             this.tbxLastName1 = new Sigma_Controls.TxtSigma();
             this.tbxFirstName = new Sigma_Controls.TxtSigma();
-            this.cbxNTS_Type = new Sigma_Controls.cbxSigma();
             this.SuspendLayout();
             // 
             // label1
@@ -210,22 +209,11 @@
             this.tbxFirstName.Table = null;
             this.tbxFirstName.Text = "First Name";
             // 
-            // cbxNTS_Type
-            // 
-            this.cbxNTS_Type.DBReference = "NTS_Type";
-            this.cbxNTS_Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxNTS_Type.FormattingEnabled = true;
-            this.cbxNTS_Type.Location = new System.Drawing.Point(132, 168);
-            this.cbxNTS_Type.Name = "cbxNTS_Type";
-            this.cbxNTS_Type.Size = new System.Drawing.Size(141, 21);
-            this.cbxNTS_Type.TabIndex = 19;
-            // 
             // UserManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(354, 404);
-            this.Controls.Add(this.cbxNTS_Type);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblTitle);
@@ -265,7 +253,6 @@
         public Sigma_Controls.TxtSigma tbxLastName2;
         public Sigma_Controls.TxtSigma tbxDNI;
         public Sigma_Controls.TxtSigma tbxNTS;
-        private Sigma_Controls.cbxSigma cbxNTS_Type;
     }
 }
 

@@ -96,6 +96,10 @@
       <Project>{85524316-B54F-4D24-A693-858DA712E979}</Project>
       <Name>SellSystem</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UserManagament\UserManagament.csproj">
+      <Project>{FA9EB4D2-FE3B-4B28-9D36-A8CE141CA5D3}</Project>
+      <Name>UserManagament</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\img\close_icon.png" />

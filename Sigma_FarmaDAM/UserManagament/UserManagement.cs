@@ -70,6 +70,7 @@ namespace UserManagament
          
         private void AddComboBoxData(DataTable t)
         {
+            /*
             cbxNTS_Type.Items.Add("Selecciona...");
             cbxNTS_Type.SelectedIndex = 0;
             for(var i = 0; i < t.Rows.Count; i++)
@@ -80,6 +81,7 @@ namespace UserManagament
                     cbxNTS_Type.Items.Add(r.ItemArray[0].ToString());
                 }
             }
+            */
         }
     }
 }

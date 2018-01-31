@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBUtils;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace UserManagament
 
         public DataRow SearchFromQuery (string query)
         {
-            DBUtils.DBUtils db = new DBUtils.DBUtils();
+            DBUtilities db = new DBUtilities();
             try
             {
                 db.Conexion();
@@ -47,7 +48,7 @@ namespace UserManagament
         }
         public DataTable SearchTableFromQuery (string query)
         {
-            DBUtils.DBUtils db = new DBUtils.DBUtils();
+            DBUtilities db = new DBUtilities();
             try
             {
                 db.Conexion();
@@ -67,7 +68,7 @@ namespace UserManagament
         }
         public bool SaveChanges (DataSet newDts, string query)
         {
-            DBUtils.DBUtils db = new DBUtils.DBUtils();
+            DBUtilities db = new DBUtilities();
             bool OK;
 
             try

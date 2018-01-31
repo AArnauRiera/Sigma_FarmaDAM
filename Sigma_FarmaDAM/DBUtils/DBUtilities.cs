@@ -21,8 +21,8 @@ namespace DBUtils
         #region Public Variables
         public string StringMySQL
         {
-            get { return _stringSQLOLEDB; }
-            set { _stringSQLOLEDB = value; }
+            get { return _stringMySQL; }
+            set { _stringMySQL = value; }
         }
         #endregion
 

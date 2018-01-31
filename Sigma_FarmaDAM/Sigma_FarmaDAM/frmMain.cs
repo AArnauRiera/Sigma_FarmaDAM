@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UserManagament;
 
 namespace Sigma_FarmaDAM
 {
@@ -130,12 +131,12 @@ namespace Sigma_FarmaDAM
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            //AddNewTab("Nuevo Cliente", new frmUserManagement());
+            AddNewTab("Nuevo Cliente", new UserManagement());
         }
 
         private void btnEditClient_Click(object sender, EventArgs e)
         {
-            //AddNewTab("Editar Cliente", new frmUserManagement());
+            AddNewTab("Editar Cliente", new UserManagement());
         }
 
         private void TabControlMainMouseDown(object sender, MouseEventArgs e)
