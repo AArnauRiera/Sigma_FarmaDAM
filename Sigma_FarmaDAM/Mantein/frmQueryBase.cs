@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBUtils;
 using Sigma_Controls;
 
 namespace Mantein
@@ -41,7 +42,7 @@ namespace Mantein
 
         protected void GetQuery()
         {
-            DBUtils.DBUtils db = new DBUtils.DBUtils();
+            DBUtilities db = new DBUtilities();
 
             string conditions = Conditions();
             query = "select * from " + Table;

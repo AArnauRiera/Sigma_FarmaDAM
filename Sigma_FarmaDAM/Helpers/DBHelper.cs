@@ -15,7 +15,7 @@ namespace Helpers
 
         public static DataSet GetQuery(string table, ControlCollection controls, string delimeter = "and", string condition = "=")
         {
-            DBUtils.DBUtils db = new DBUtils.DBUtils();
+            DBUtilities db = new DBUtilities();
 
             string conditions = Conditions(condition, delimeter, controls);
 
@@ -31,7 +31,7 @@ namespace Helpers
 
         public static DataSet GetQuery(string table, TxtSigma[] controls, string delimeter = "and", string condition = "=")
         {
-            DBUtils.DBUtils db = new DBUtils.DBUtils();
+            DBUtilities db = new DBUtilities();
 
             string conditions = Conditions(condition, delimeter, controls);
 
@@ -104,7 +104,6 @@ namespace Helpers
                     TxtSigma text = (TxtSigma)txt;
                     text.DataBindings.Clear();
                     text.DataBindings.Add("Text", dataSet.Tables["Taula"], text.DBReference);
-                    text.SetText();
                 }
             }
         }
@@ -117,7 +116,6 @@ namespace Helpers
                     TxtSigma text = (TxtSigma)txt;
                     text.DataBindings.Clear();
                     text.DataBindings.Add("Text", dataSet.Tables["Taula"], text.DBReference);
-                    text.SetText();
                 }
             }
         }

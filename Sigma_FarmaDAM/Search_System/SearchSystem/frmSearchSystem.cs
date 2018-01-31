@@ -71,7 +71,7 @@ namespace SearchSystem
         ///*** FUNCTION SEARCH DATA IN BBDD***///
         private void portardadesSQL()
         {
-            DBUtils.DBUtils DBUTILS = new DBUtils.DBUtils();
+            DBUtils.DBUtilities DBUTILS = new DBUtils.DBUtilities();
             ///***Search in BBDD***///
             if (Value.Equals("Drugs"))
 

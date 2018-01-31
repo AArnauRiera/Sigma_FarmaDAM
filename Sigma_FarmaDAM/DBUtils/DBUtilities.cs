@@ -11,15 +11,15 @@ using MySql.Data.MySqlClient;
 
 namespace DBUtils
 {
-    public class DBUtils
+    public class DBUtilities
     {
         #region Private Variables
-        private string _stringSQLOLEDB = "SERVER=51.255.58.1;PORT=3306;DATABASE=g1s2am_FarmaDAM;Uid=g1s2am_SigmaCode;PASSWORD=12345aA";
+        private string _stringMySQL = "SERVER=51.255.58.1;PORT=3306;DATABASE=g1s2am_FarmaDAM;Uid=g1s2am_SigmaCode;PASSWORD=12345aA";
         private MySqlConnection con;
         #endregion
 
         #region Public Variables
-        public string StringSQLOLEDB
+        public string StringMySQL
         {
             get { return _stringSQLOLEDB; }
             set { _stringSQLOLEDB = value; }
@@ -29,7 +29,7 @@ namespace DBUtils
         #region OleDBMethods
         public void Conexion()
         {
-            con = new MySqlConnection(_stringSQLOLEDB);
+            con = new MySqlConnection(_stringMySQL);
             con.Open();
             con.InitializeLifetimeService();
         }

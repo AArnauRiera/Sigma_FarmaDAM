@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2D91CBE1-6B63-43A1-BB94-82B5CDA7D42B}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>SearchSystem</RootNamespace>
-    <AssemblyName>SearchSystem</AssemblyName>
+    <ProjectGuid>{838D017A-04A8-4497-B146-A21ECF79C3F9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>frmMantenimentPrincipisActius</RootNamespace>
+    <AssemblyName>frmMantenimentPrincipisActius</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Sigma_FarmaDAM\dll\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -31,11 +31,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,21 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmSearchSystem.cs" />
-    <Compile Include="frmSearchSystem.Designer.cs">
-      <DependentUpon>frmSearchSystem.cs</DependentUpon>
+    <Compile Include="frmMantenimentPrincipisActius.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTest.cs" />
-    <Compile Include="frmTest.Designer.cs">
-      <DependentUpon>frmTest.cs</DependentUpon>
+    <Compile Include="frmMantenimentPrincipisActius.Designer.cs">
+      <DependentUpon>frmMantenimentPrincipisActius.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmSearchSystem.resx">
-      <DependentUpon>frmSearchSystem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTest.resx">
-      <DependentUpon>frmTest.cs</DependentUpon>
+    <EmbeddedResource Include="frmMantenimentPrincipisActius.resx">
+      <DependentUpon>frmMantenimentPrincipisActius.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,14 +76,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DBUtils\DBUtils.csproj">
-      <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
-      <Name>DBUtils</Name>
+    <ProjectReference Include="..\Sigma_Controls\Sigma_Controls.csproj">
+      <Project>{BAFEA927-64A5-4FC5-BCD7-16DF3E7C71E4}</Project>
+      <Name>Sigma_Controls</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
