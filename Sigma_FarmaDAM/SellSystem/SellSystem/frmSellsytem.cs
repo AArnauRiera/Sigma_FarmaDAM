@@ -13,7 +13,7 @@ namespace SellSystem
 {
     public partial class frmSellsytem : Form
     {
-        DBUtils.DBUtils DBUTILS = new DBUtils.DBUtils();
+        DBUtilities DBUTILS = new DBUtilities();
         frmActive f = new frmActive();
         public DataSet dts;
         public DataTable dt;

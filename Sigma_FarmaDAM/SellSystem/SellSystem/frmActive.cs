@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBUtils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace SellSystem
 {
     public partial class frmActive : Form
     {
-        DBUtils.DBUtils DBUTILS = new DBUtils.DBUtils();
+        DBUtilities DBUTILS = new DBUtilities();
         public DataSet dts;
         public DataTable dt;
 

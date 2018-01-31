@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SellSystem;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -124,7 +125,7 @@ namespace Sigma_FarmaDAM
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            //AddNewTab("Nueva Venta", new frmSellSystem());
+            AddNewTab("Nueva Venta", new frmSellsytem());
         }
 
         private void btnUser_Click(object sender, EventArgs e)
@@ -135,6 +136,24 @@ namespace Sigma_FarmaDAM
         private void btnEditClient_Click(object sender, EventArgs e)
         {
             //AddNewTab("Editar Cliente", new frmUserManagement());
+        }
+
+        private void TabControlMainMouseDown(object sender, MouseEventArgs e)
+        {
+            var tabControl = sender as TabControl;
+            TabPage tabPageCurrent = null;
+            if (e.Button == MouseButtons.Middle)
+            {
+                for (var i = 0; i < tabControl.TabCount; i++)
+                {
+                    if (!tabControl.GetTabRect(i).Contains(e.Location))
+                        continue;
+                    tabPageCurrent = tabControl.TabPages[i];
+                    break;
+                }
+                if (tabPageCurrent != null)
+                    tabControl.TabPages.Remove(tabPageCurrent);
+            }
         }
     }
 }

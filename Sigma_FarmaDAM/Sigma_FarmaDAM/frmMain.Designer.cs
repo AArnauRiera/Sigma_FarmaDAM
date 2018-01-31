@@ -73,19 +73,14 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.printToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.printPreviewToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.Main = new System.Windows.Forms.TabPage();
-            this.tbMain = new System.Windows.Forms.TabControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnActualizacioMedicaments = new System.Windows.Forms.Button();
+            this.btnProgramaFidelitzacioClients = new System.Windows.Forms.Button();
             this.btnGestioComandes = new System.Windows.Forms.Button();
             this.btnVendadeMedicaments = new System.Windows.Forms.Button();
             this.btnLaboratorisFarmaceutiques = new System.Windows.Forms.Button();
@@ -94,13 +89,15 @@
             this.btnEditClient = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
-            this.btnProgramaFidelitzacioClients = new System.Windows.Forms.Button();
-            this.btnActualizacioMedicaments = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tbMain = new System.Windows.Forms.TabControl();
+            this.Main = new System.Windows.Forms.TabPage();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
-            this.tbMain.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tbMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -115,7 +112,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1008, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1116, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -434,6 +431,7 @@
             // 
             // searchToolStripMenuItem
             // 
+            this.searchToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.searchToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("searchToolStripMenuItem.Image")));
             this.searchToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
@@ -455,16 +453,11 @@
             // 
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripButton,
-            this.openToolStripButton,
-            this.saveToolStripButton,
             this.toolStripSeparator1,
-            this.printToolStripButton,
-            this.printPreviewToolStripButton,
-            this.toolStripSeparator2,
-            this.helpToolStripButton});
+            this.toolStripSeparator2});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(1008, 25);
+            this.toolStrip.Size = new System.Drawing.Size(1116, 25);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "ToolStrip";
             // 
@@ -478,61 +471,15 @@
             this.newToolStripButton.Text = "Nuevo";
             this.newToolStripButton.Click += new System.EventHandler(this.ShowNewForm);
             // 
-            // openToolStripButton
-            // 
-            this.openToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.openToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton.Image")));
-            this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Black;
-            this.openToolStripButton.Name = "openToolStripButton";
-            this.openToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.openToolStripButton.Text = "Abrir";
-            this.openToolStripButton.Click += new System.EventHandler(this.OpenFile);
-            // 
-            // saveToolStripButton
-            // 
-            this.saveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
-            this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Black;
-            this.saveToolStripButton.Name = "saveToolStripButton";
-            this.saveToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.saveToolStripButton.Text = "Guardar";
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // printToolStripButton
-            // 
-            this.printToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.printToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripButton.Image")));
-            this.printToolStripButton.ImageTransparentColor = System.Drawing.Color.Black;
-            this.printToolStripButton.Name = "printToolStripButton";
-            this.printToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.printToolStripButton.Text = "Imprimir";
-            // 
-            // printPreviewToolStripButton
-            // 
-            this.printPreviewToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.printPreviewToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("printPreviewToolStripButton.Image")));
-            this.printPreviewToolStripButton.ImageTransparentColor = System.Drawing.Color.Black;
-            this.printPreviewToolStripButton.Name = "printPreviewToolStripButton";
-            this.printPreviewToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.printPreviewToolStripButton.Text = "Vista previa de impresión";
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // helpToolStripButton
-            // 
-            this.helpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.helpToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("helpToolStripButton.Image")));
-            this.helpToolStripButton.ImageTransparentColor = System.Drawing.Color.Black;
-            this.helpToolStripButton.Name = "helpToolStripButton";
-            this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.helpToolStripButton.Text = "Ayuda";
             // 
             // statusStrip
             // 
@@ -540,7 +487,7 @@
             this.toolStripStatusLabel});
             this.statusStrip.Location = new System.Drawing.Point(0, 778);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1008, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1116, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -549,26 +496,6 @@
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
-            // 
-            // Main
-            // 
-            this.Main.Location = new System.Drawing.Point(4, 22);
-            this.Main.Name = "Main";
-            this.Main.Padding = new System.Windows.Forms.Padding(3);
-            this.Main.Size = new System.Drawing.Size(773, 703);
-            this.Main.TabIndex = 0;
-            this.Main.Text = "Main";
-            this.Main.UseVisualStyleBackColor = true;
-            // 
-            // tbMain
-            // 
-            this.tbMain.Controls.Add(this.Main);
-            this.tbMain.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tbMain.Location = new System.Drawing.Point(227, 49);
-            this.tbMain.Name = "tbMain";
-            this.tbMain.SelectedIndex = 0;
-            this.tbMain.Size = new System.Drawing.Size(781, 729);
-            this.tbMain.TabIndex = 4;
             // 
             // panel1
             // 
@@ -587,6 +514,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(221, 729);
             this.panel1.TabIndex = 6;
+            // 
+            // btnActualizacioMedicaments
+            // 
+            this.btnActualizacioMedicaments.Location = new System.Drawing.Point(3, 651);
+            this.btnActualizacioMedicaments.Name = "btnActualizacioMedicaments";
+            this.btnActualizacioMedicaments.Size = new System.Drawing.Size(218, 66);
+            this.btnActualizacioMedicaments.TabIndex = 9;
+            this.btnActualizacioMedicaments.Text = "Actualització medicaments";
+            this.btnActualizacioMedicaments.UseVisualStyleBackColor = true;
+            // 
+            // btnProgramaFidelitzacioClients
+            // 
+            this.btnProgramaFidelitzacioClients.Location = new System.Drawing.Point(3, 579);
+            this.btnProgramaFidelitzacioClients.Name = "btnProgramaFidelitzacioClients";
+            this.btnProgramaFidelitzacioClients.Size = new System.Drawing.Size(218, 66);
+            this.btnProgramaFidelitzacioClients.TabIndex = 8;
+            this.btnProgramaFidelitzacioClients.Text = "Programa fidelització clients ";
+            this.btnProgramaFidelitzacioClients.UseVisualStyleBackColor = true;
             // 
             // btnGestioComandes
             // 
@@ -663,31 +608,43 @@
             this.btnVentas.UseVisualStyleBackColor = true;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
-            // btnProgramaFidelitzacioClients
+            // panel2
             // 
-            this.btnProgramaFidelitzacioClients.Location = new System.Drawing.Point(3, 579);
-            this.btnProgramaFidelitzacioClients.Name = "btnProgramaFidelitzacioClients";
-            this.btnProgramaFidelitzacioClients.Size = new System.Drawing.Size(218, 66);
-            this.btnProgramaFidelitzacioClients.TabIndex = 8;
-            this.btnProgramaFidelitzacioClients.Text = "Programa fidelització clients ";
-            this.btnProgramaFidelitzacioClients.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.tbMain);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(221, 49);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(895, 729);
+            this.panel2.TabIndex = 8;
             // 
-            // btnActualizacioMedicaments
+            // tbMain
             // 
-            this.btnActualizacioMedicaments.Location = new System.Drawing.Point(3, 651);
-            this.btnActualizacioMedicaments.Name = "btnActualizacioMedicaments";
-            this.btnActualizacioMedicaments.Size = new System.Drawing.Size(218, 66);
-            this.btnActualizacioMedicaments.TabIndex = 9;
-            this.btnActualizacioMedicaments.Text = "Actualització medicaments";
-            this.btnActualizacioMedicaments.UseVisualStyleBackColor = true;
+            this.tbMain.Controls.Add(this.Main);
+            this.tbMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbMain.Location = new System.Drawing.Point(0, 0);
+            this.tbMain.Name = "tbMain";
+            this.tbMain.SelectedIndex = 0;
+            this.tbMain.Size = new System.Drawing.Size(895, 729);
+            this.tbMain.TabIndex = 5;
+            this.tbMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TabControlMainMouseDown);
+            // 
+            // Main
+            // 
+            this.Main.Location = new System.Drawing.Point(4, 22);
+            this.Main.Name = "Main";
+            this.Main.Padding = new System.Windows.Forms.Padding(3);
+            this.Main.Size = new System.Drawing.Size(887, 703);
+            this.Main.TabIndex = 0;
+            this.Main.Text = "Main";
+            this.Main.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 800);
+            this.ClientSize = new System.Drawing.Size(1116, 800);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.tbMain);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.menuStrip);
@@ -701,8 +658,9 @@
             this.toolStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
-            this.tbMain.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.tbMain.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -756,14 +714,7 @@
         private System.Windows.Forms.ToolStripMenuItem indexToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton newToolStripButton;
-        private System.Windows.Forms.ToolStripButton openToolStripButton;
-        private System.Windows.Forms.ToolStripButton saveToolStripButton;
-        private System.Windows.Forms.ToolStripButton printToolStripButton;
-        private System.Windows.Forms.ToolStripButton printPreviewToolStripButton;
-        private System.Windows.Forms.ToolStripButton helpToolStripButton;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.TabPage Main;
-        private System.Windows.Forms.TabControl tbMain;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnVendadeMedicaments;
         private System.Windows.Forms.Button btnLaboratorisFarmaceutiques;
@@ -776,6 +727,9 @@
         private System.Windows.Forms.Button btnGestioComandes;
         private System.Windows.Forms.Button btnActualizacioMedicaments;
         private System.Windows.Forms.Button btnProgramaFidelitzacioClients;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TabControl tbMain;
+        private System.Windows.Forms.TabPage Main;
     }
 }
 
