@@ -104,24 +104,37 @@ namespace Sigma_FarmaDAM
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AddNewTab(string title, Form form)
         {
-            string title = "Content";
             TabPage myTabPage = new TabPage(title);
-            frmContent content = new frmContent();
-            content.TopLevel = false;
-            content.TopMost = true;     
-            myTabPage.Controls.Add(content);
-            content.Show();            
+            form.TopLevel = false;
+            form.TopMost = true;
+            myTabPage.Controls.Add(form);
+            form.Show();
             tbMain.TabPages.Add(myTabPage);
             tbMain.SelectedTab = myTabPage;
-            content.WindowState = FormWindowState.Maximized;
-            content.FormBorderStyle = FormBorderStyle.None;
+            form.WindowState = FormWindowState.Maximized;
+            form.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void cerrarPestañaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tbMain.TabPages.Remove(tbMain.SelectedTab);
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            //AddNewTab("Nueva Venta", new frmSellSystem());
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            //AddNewTab("Nuevo Cliente", new frmUserManagement());
+        }
+
+        private void btnEditClient_Click(object sender, EventArgs e)
+        {
+            //AddNewTab("Editar Cliente", new frmUserManagement());
         }
     }
 }
