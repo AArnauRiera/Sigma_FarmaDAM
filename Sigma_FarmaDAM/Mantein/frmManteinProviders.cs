@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace Mantein
 {
-    public partial class frmManteinUsers : Mantein.frmManteinBase
+    public partial class frmManteinProviders : Mantein.frmManteinBase
     {
-        public frmManteinUsers()
+        public frmManteinProviders()
         {
             InitializeComponent();
         }

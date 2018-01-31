@@ -42,17 +42,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmManteinActivePrinciple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinActivePrinciple.Designer.cs">
+      <DependentUpon>frmManteinActivePrinciple.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmManteinBase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmManteinBase.Designer.cs">
       <DependentUpon>frmManteinBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManteinUsers.cs" />
-    <Compile Include="frmManteinUsers.Designer.cs">
-      <DependentUpon>frmManteinUsers.cs</DependentUpon>
+    <Compile Include="frmManteinClients.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQueryActivePrinciple.cs" />
+    <Compile Include="frmManteinClients.Designer.cs">
+      <DependentUpon>frmManteinClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManteinDrugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinDrugs.Designer.cs">
+      <DependentUpon>frmManteinDrugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManteinIVA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinIVA.Designer.cs">
+      <DependentUpon>frmManteinIVA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManteinLaboratories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinLaboratories.Designer.cs">
+      <DependentUpon>frmManteinLaboratories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManteinProviders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinProviders.Designer.cs">
+      <DependentUpon>frmManteinProviders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManteinSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinSeller.Designer.cs">
+      <DependentUpon>frmManteinSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManteinStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinStock.Designer.cs">
+      <DependentUpon>frmManteinStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQueryActivePrinciple.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQueryActivePrinciple.Designer.cs">
       <DependentUpon>frmQueryActivePrinciple.cs</DependentUpon>
     </Compile>
@@ -62,39 +108,74 @@
     <Compile Include="frmQueryBase.Designer.cs">
       <DependentUpon>frmQueryBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQueryClients.cs" />
-    <Compile Include="frmQueryDrugs.cs" />
+    <Compile Include="frmQueryClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQueryDrugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQueryDrugs.Designer.cs">
       <DependentUpon>frmQueryDrugs.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQueryIVA.cs" />
+    <Compile Include="frmQueryIVA.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQueryIVA.Designer.cs">
       <DependentUpon>frmQueryIVA.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQueryLaboratories.cs" />
+    <Compile Include="frmQueryLaboratories.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQueryLaboratories.Designer.cs">
       <DependentUpon>frmQueryLaboratories.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQueryProviders.cs" />
+    <Compile Include="frmQueryProviders.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQueryProviders.Designer.cs">
       <DependentUpon>frmQueryProviders.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuerySeller.cs" />
+    <Compile Include="frmQuerySeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQuerySeller.Designer.cs">
       <DependentUpon>frmQuerySeller.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQueryStock.cs" />
+    <Compile Include="frmQueryStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQueryStock.Designer.cs">
       <DependentUpon>frmQueryStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmManteinActivePrinciple.resx">
+      <DependentUpon>frmManteinActivePrinciple.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmManteinBase.resx">
       <DependentUpon>frmManteinBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManteinUsers.resx">
-      <DependentUpon>frmManteinUsers.cs</DependentUpon>
+    <EmbeddedResource Include="frmManteinClients.resx">
+      <DependentUpon>frmManteinClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManteinDrugs.resx">
+      <DependentUpon>frmManteinDrugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManteinIVA.resx">
+      <DependentUpon>frmManteinIVA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManteinLaboratories.resx">
+      <DependentUpon>frmManteinLaboratories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManteinProviders.resx">
+      <DependentUpon>frmManteinProviders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManteinSeller.resx">
+      <DependentUpon>frmManteinSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManteinStock.resx">
+      <DependentUpon>frmManteinStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQueryActivePrinciple.resx">
       <DependentUpon>frmQueryActivePrinciple.cs</DependentUpon>
@@ -125,6 +206,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CustomControls\CustomControls.csproj">
+      <Project>{9932DF33-7AC1-4E6B-9D19-58BED7D00234}</Project>
+      <Name>CustomControls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DBUtils\DBUtils.csproj">
       <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
       <Name>DBUtils</Name>

@@ -1,13 +1,6 @@
 ﻿using System;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.OleDb;
-using System.Reflection;
-using System.Runtime.CompilerServices;
 using MySql.Data.MySqlClient;
-
 
 namespace DBUtils
 {
@@ -19,7 +12,7 @@ namespace DBUtils
         #endregion
 
         #region Public Variables
-        public string StringMySQL
+        public string StringSQLOLEDB
         {
             get { return _stringMySQL; }
             set { _stringMySQL = value; }
