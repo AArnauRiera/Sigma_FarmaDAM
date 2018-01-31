@@ -13,7 +13,7 @@ namespace SellSystem
 {
     public partial class frmSellsytem : Form
     {
-        DBUtilities DBUTILS = new DBUtilities();
+        DBUtils.DBUtilities DBUTILS = new DBUtils.DBUtilities();
         frmActive f = new frmActive();
         public DataSet dts;
         public DataTable dt;
@@ -28,7 +28,6 @@ namespace SellSystem
         {
             Querry = "select* from Clients  where DNI ='" + txtClient.Text + "'";
             dts = DBUTILS.PortarPerConsulta(Querry);
-
             if (dts.Tables[0].Rows.Count > 0){ validate = true;}
             else
             {
@@ -53,13 +52,13 @@ namespace SellSystem
             else {validate = false;}
             return validate;
         }
+       
        #endregion
         ///***MAIN***///
         #region
         public frmSellsytem()
         {
             InitializeComponent();
-
         }
         private void lswDrugs_Layout(object sender, LayoutEventArgs e)
         {
@@ -73,8 +72,7 @@ namespace SellSystem
         {
             Client = Client_exist();
             if (Client)
-            {
-                
+            {     
                 String Drug = txtProduct.Text.ToString();
                 ListViewItem item = new ListViewItem(Drug);
                 lswDrugs.Items.AddRange(new ListViewItem[] { item });
@@ -84,7 +82,6 @@ namespace SellSystem
         {
             Boolean drug = false;
             int contadors = 0;
-
             foreach (ListViewItem itemRow in this.lswDrugs.Items)
             {
                 for (int i = 0; i < itemRow.SubItems.Count; i++)
