@@ -181,6 +181,7 @@ namespace Sigma_Controls
                 Font = new Font(Font, FontStyle.Regular);
             }
         }
+
         private void SetPlaceHolder(object sender, EventArgs e)
         {
             SetPlaceHolder();
@@ -190,6 +191,7 @@ namespace Sigma_Controls
         {
             RemovePlaceHolder();
         }
+
         protected override void OnGotFocus(EventArgs e)
         {
 
@@ -206,6 +208,7 @@ namespace Sigma_Controls
 
         private bool IsPassword()
         {
+
             bool ispassword = false;
 
             if (_fieldType == FieldTypes.Password)
@@ -214,6 +217,7 @@ namespace Sigma_Controls
             }
 
             return ispassword;
+
         }
 
         private Color GetFocusColor()
