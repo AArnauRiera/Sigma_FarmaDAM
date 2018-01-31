@@ -53,49 +53,53 @@
             this.btnBrowseProspect = new System.Windows.Forms.Button();
             this.btnEditAdd = new System.Windows.Forms.Button();
             this.pnlAddEditDrugs = new System.Windows.Forms.Panel();
+            this.cbxIVA = new System.Windows.Forms.ComboBox();
             this.pnlAddEditDrugs.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNRN
             // 
-            this.txtNRN.DBReference = null;
+            this.txtNRN.DBReference = "Register_Number";
             this.txtNRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtNRN.Location = new System.Drawing.Point(165, 24);
-            this.txtNRN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNRN.Margin = new System.Windows.Forms.Padding(2);
             this.txtNRN.Name = "txtNRN";
+            this.txtNRN.Placeholder = "Núm. reg. Nacional";
             this.txtNRN.Size = new System.Drawing.Size(179, 20);
             this.txtNRN.TabIndex = 0;
-            this.txtNRN.TextChanged += new System.EventHandler(this.txtNRN_TextChanged);
+            this.txtNRN.Table = null;
             // 
             // lblNRN
             // 
             this.lblNRN.AutoSize = true;
-            this.lblNRN.Location = new System.Drawing.Point(132, 26);
+            this.lblNRN.Location = new System.Drawing.Point(20, 27);
             this.lblNRN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNRN.Name = "lblNRN";
-            this.lblNRN.Size = new System.Drawing.Size(31, 13);
+            this.lblNRN.Size = new System.Drawing.Size(141, 13);
             this.lblNRN.TabIndex = 1;
-            this.lblNRN.Text = "NRN";
+            this.lblNRN.Text = "Número de registre Nacional";
             // 
             // lblNRS
             // 
             this.lblNRS.AutoSize = true;
-            this.lblNRS.Location = new System.Drawing.Point(132, 61);
+            this.lblNRS.Location = new System.Drawing.Point(24, 60);
             this.lblNRS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNRS.Name = "lblNRS";
-            this.lblNRS.Size = new System.Drawing.Size(30, 13);
+            this.lblNRS.Size = new System.Drawing.Size(137, 13);
             this.lblNRS.TabIndex = 3;
-            this.lblNRS.Text = "NRS";
+            this.lblNRS.Text = "Número de registre Sanitari ";
             // 
             // txtNRS
             // 
-            this.txtNRS.DBReference = null;
+            this.txtNRS.DBReference = "Sanitary_Register_Num";
             this.txtNRS.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtNRS.Location = new System.Drawing.Point(165, 57);
-            this.txtNRS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNRS.Margin = new System.Windows.Forms.Padding(2);
             this.txtNRS.Name = "txtNRS";
+            this.txtNRS.Placeholder = null;
             this.txtNRS.Size = new System.Drawing.Size(179, 20);
             this.txtNRS.TabIndex = 2;
+            this.txtNRS.Table = null;
             // 
             // lblActivePrinciple
             // 
@@ -109,13 +113,15 @@
             // 
             // txtActivePrinciple
             // 
-            this.txtActivePrinciple.DBReference = null;
+            this.txtActivePrinciple.DBReference = "ActivePrincipleID";
             this.txtActivePrinciple.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtActivePrinciple.Location = new System.Drawing.Point(165, 125);
-            this.txtActivePrinciple.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtActivePrinciple.Margin = new System.Windows.Forms.Padding(2);
             this.txtActivePrinciple.Name = "txtActivePrinciple";
+            this.txtActivePrinciple.Placeholder = null;
             this.txtActivePrinciple.Size = new System.Drawing.Size(179, 20);
             this.txtActivePrinciple.TabIndex = 6;
+            this.txtActivePrinciple.Table = null;
             // 
             // lblName
             // 
@@ -129,13 +135,15 @@
             // 
             // txtName
             // 
-            this.txtName.DBReference = null;
+            this.txtName.DBReference = "CommercialName";
             this.txtName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtName.Location = new System.Drawing.Point(165, 92);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
+            this.txtName.Placeholder = null;
             this.txtName.Size = new System.Drawing.Size(179, 20);
             this.txtName.TabIndex = 4;
+            this.txtName.Table = null;
             // 
             // lblBasePrice
             // 
@@ -152,30 +160,34 @@
             this.txtBasePrice.DBReference = null;
             this.txtBasePrice.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtBasePrice.Location = new System.Drawing.Point(165, 229);
-            this.txtBasePrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBasePrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtBasePrice.Name = "txtBasePrice";
+            this.txtBasePrice.Placeholder = null;
             this.txtBasePrice.Size = new System.Drawing.Size(179, 20);
             this.txtBasePrice.TabIndex = 12;
+            this.txtBasePrice.Table = null;
             // 
             // lblPharmaceuticLab
             // 
             this.lblPharmaceuticLab.AutoSize = true;
-            this.lblPharmaceuticLab.Location = new System.Drawing.Point(68, 198);
+            this.lblPharmaceuticLab.Location = new System.Drawing.Point(37, 197);
             this.lblPharmaceuticLab.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPharmaceuticLab.Name = "lblPharmaceuticLab";
-            this.lblPharmaceuticLab.Size = new System.Drawing.Size(93, 13);
+            this.lblPharmaceuticLab.Size = new System.Drawing.Size(125, 13);
             this.lblPharmaceuticLab.TabIndex = 11;
-            this.lblPharmaceuticLab.Text = "Pharmaceutic Lab";
+            this.lblPharmaceuticLab.Text = "Pharmaceutic Laboratory";
             // 
             // txtPharmaceuticLab
             // 
             this.txtPharmaceuticLab.DBReference = null;
             this.txtPharmaceuticLab.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtPharmaceuticLab.Location = new System.Drawing.Point(165, 194);
-            this.txtPharmaceuticLab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPharmaceuticLab.Margin = new System.Windows.Forms.Padding(2);
             this.txtPharmaceuticLab.Name = "txtPharmaceuticLab";
+            this.txtPharmaceuticLab.Placeholder = null;
             this.txtPharmaceuticLab.Size = new System.Drawing.Size(179, 20);
             this.txtPharmaceuticLab.TabIndex = 10;
+            this.txtPharmaceuticLab.Table = null;
             // 
             // lblContent
             // 
@@ -192,10 +204,12 @@
             this.txtContent.DBReference = null;
             this.txtContent.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtContent.Location = new System.Drawing.Point(165, 161);
-            this.txtContent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContent.Margin = new System.Windows.Forms.Padding(2);
             this.txtContent.Name = "txtContent";
+            this.txtContent.Placeholder = null;
             this.txtContent.Size = new System.Drawing.Size(179, 20);
             this.txtContent.TabIndex = 8;
+            this.txtContent.Table = null;
             // 
             // lblIVA
             // 
@@ -211,17 +225,19 @@
             // 
             this.txtIVA.DBReference = null;
             this.txtIVA.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtIVA.Location = new System.Drawing.Point(165, 262);
-            this.txtIVA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIVA.Location = new System.Drawing.Point(355, 261);
+            this.txtIVA.Margin = new System.Windows.Forms.Padding(2);
             this.txtIVA.Name = "txtIVA";
-            this.txtIVA.Size = new System.Drawing.Size(179, 20);
+            this.txtIVA.Placeholder = null;
+            this.txtIVA.Size = new System.Drawing.Size(20, 20);
             this.txtIVA.TabIndex = 14;
+            this.txtIVA.Table = null;
             // 
             // chkReplaceable
             // 
             this.chkReplaceable.AutoSize = true;
             this.chkReplaceable.Location = new System.Drawing.Point(170, 297);
-            this.chkReplaceable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkReplaceable.Margin = new System.Windows.Forms.Padding(2);
             this.chkReplaceable.Name = "chkReplaceable";
             this.chkReplaceable.Size = new System.Drawing.Size(86, 17);
             this.chkReplaceable.TabIndex = 16;
@@ -232,7 +248,7 @@
             // 
             this.chkGeneric.AutoSize = true;
             this.chkGeneric.Location = new System.Drawing.Point(170, 319);
-            this.chkGeneric.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkGeneric.Margin = new System.Windows.Forms.Padding(2);
             this.chkGeneric.Name = "chkGeneric";
             this.chkGeneric.Size = new System.Drawing.Size(63, 17);
             this.chkGeneric.TabIndex = 17;
@@ -243,7 +259,7 @@
             // 
             this.chkRecipe.AutoSize = true;
             this.chkRecipe.Location = new System.Drawing.Point(170, 341);
-            this.chkRecipe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.chkRecipe.Name = "chkRecipe";
             this.chkRecipe.Size = new System.Drawing.Size(60, 17);
             this.chkRecipe.TabIndex = 18;
@@ -273,7 +289,7 @@
             // btnBrowseTechSheetDoc
             // 
             this.btnBrowseTechSheetDoc.Location = new System.Drawing.Point(170, 384);
-            this.btnBrowseTechSheetDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBrowseTechSheetDoc.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowseTechSheetDoc.Name = "btnBrowseTechSheetDoc";
             this.btnBrowseTechSheetDoc.Size = new System.Drawing.Size(56, 19);
             this.btnBrowseTechSheetDoc.TabIndex = 21;
@@ -283,7 +299,7 @@
             // btnBrowseProspect
             // 
             this.btnBrowseProspect.Location = new System.Drawing.Point(170, 408);
-            this.btnBrowseProspect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBrowseProspect.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowseProspect.Name = "btnBrowseProspect";
             this.btnBrowseProspect.Size = new System.Drawing.Size(56, 19);
             this.btnBrowseProspect.TabIndex = 22;
@@ -293,7 +309,7 @@
             // btnEditAdd
             // 
             this.btnEditAdd.Location = new System.Drawing.Point(174, 466);
-            this.btnEditAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditAdd.Name = "btnEditAdd";
             this.btnEditAdd.Size = new System.Drawing.Size(56, 19);
             this.btnEditAdd.TabIndex = 23;
@@ -302,6 +318,7 @@
             // 
             // pnlAddEditDrugs
             // 
+            this.pnlAddEditDrugs.Controls.Add(this.cbxIVA);
             this.pnlAddEditDrugs.Controls.Add(this.lblNRN);
             this.pnlAddEditDrugs.Controls.Add(this.btnEditAdd);
             this.pnlAddEditDrugs.Controls.Add(this.txtNRN);
@@ -328,10 +345,18 @@
             this.pnlAddEditDrugs.Controls.Add(this.txtBasePrice);
             this.pnlAddEditDrugs.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlAddEditDrugs.Location = new System.Drawing.Point(35, 10);
-            this.pnlAddEditDrugs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAddEditDrugs.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAddEditDrugs.Name = "pnlAddEditDrugs";
             this.pnlAddEditDrugs.Size = new System.Drawing.Size(400, 517);
             this.pnlAddEditDrugs.TabIndex = 24;
+            // 
+            // cbxIVA
+            // 
+            this.cbxIVA.FormattingEnabled = true;
+            this.cbxIVA.Location = new System.Drawing.Point(167, 261);
+            this.cbxIVA.Name = "cbxIVA";
+            this.cbxIVA.Size = new System.Drawing.Size(177, 21);
+            this.cbxIVA.TabIndex = 24;
             // 
             // frmAddEditDrugs
             // 
@@ -339,7 +364,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 559);
             this.Controls.Add(this.pnlAddEditDrugs);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAddEditDrugs";
             this.Text = "frmRegisterEditDrugs";
             this.Load += new System.EventHandler(this.frmAddEditDrugs_Load);
@@ -376,5 +401,6 @@
         private System.Windows.Forms.Button btnBrowseProspect;
         private System.Windows.Forms.Button btnEditAdd;
         private System.Windows.Forms.Panel pnlAddEditDrugs;
+        private System.Windows.Forms.ComboBox cbxIVA;
     }
 }
