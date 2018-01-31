@@ -83,7 +83,6 @@ namespace Sigma_Controls
             }
         }
 
-
         #endregion
 
 
@@ -170,6 +169,13 @@ namespace Sigma_Controls
             }
         }
 
+
+        public void SetText()
+        {
+            _isPlaceholder = false;
+            ForeColor = SystemColors.WindowText;
+            Font = new Font(Font, FontStyle.Regular);
+        }
 
         private void RemovePlaceHolder()
         {

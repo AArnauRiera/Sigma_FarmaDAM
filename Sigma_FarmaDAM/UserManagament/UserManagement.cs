@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Helpers;
 using System.Windows.Forms;
+using Sigma_Controls;
 
 namespace UserManagament
 {
@@ -29,7 +30,8 @@ namespace UserManagament
                 UserManagementControl umc = new UserManagementControl();
                 string query = "SELECT * FROM Clients where NTS = '" + tbxNTS.Text + "'";
                 DataRow r = umc.SearchFromQuery(query);
-                DataSet dts = DBHelper.GetQuery("Clients", Controls, null, "=");
+                TxtSigma[] control = new TxtSigma[] { tbxNTS };
+                DataSet dts = DBHelper.GetQuery("Clients", control);
                 if (r != null)
                 {
                     lblError.Text = "";
@@ -47,16 +49,15 @@ namespace UserManagament
             }
         }
 
+        private void SetComboBoxValue(DataSet dts, string DBReference)
+        {
+
+        }
+
         private void ShowSelectData (DataSet dts)
         {
             DBHelper.BindingTextBox(Controls, dts);
-            /*
-            tbxDNI.Text = r.ItemArray[4].ToString();
-            tbxFirstName.Text = r.ItemArray[1].ToString();
-            tbxLastName1.Text = r.ItemArray[2].ToString();
-            tbxLastName2.Text = r.ItemArray[3].ToString();
-            cbxNTS_Type.SelectedIndex = Int32.Parse(r.ItemArray[6].ToString());
-            */
+
         }
 
         private void UserManagement_Load(object sender, EventArgs e)
