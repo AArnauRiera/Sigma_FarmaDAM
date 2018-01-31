@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{63BBEC2A-B19A-4B1C-9CFF-A9B0A26D14C5}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>Sigma_FarmaDAM</RootNamespace>
-    <AssemblyName>Sigma_FarmaDAM</AssemblyName>
+    <ProjectGuid>{FA9EB4D2-FE3B-4B28-9D36-A8CE141CA5D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UserManagament</RootNamespace>
+    <AssemblyName>UserManagament</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,7 +31,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,26 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmContent.cs">
+    <Compile Include="UserManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmContent.Designer.cs">
-      <DependentUpon>frmContent.cs</DependentUpon>
+    <Compile Include="UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmContent.resx">
-      <DependentUpon>frmContent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="UserManagementControl.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -74,6 +66,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,21 +83,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mantein\Mantein.csproj">
-      <Project>{951a95b0-6b1f-40d7-a091-29ca118d6756}</Project>
-      <Name>Mantein</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DBUtils\DBUtils.csproj">
       <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
       <Name>DBUtils</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UserManagament\UserManagament.csproj">
-      <Project>{fa9eb4d2-fe3b-4b28-9d36-a8ce141ca5d3}</Project>
-      <Name>UserManagament</Name>
+    <ProjectReference Include="..\Helpers\Helpers.csproj">
+      <Project>{e1addef3-7ed3-4c2b-b454-e637e10a6a35}</Project>
+      <Name>Helpers</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\img\close_icon.png" />
+    <ProjectReference Include="..\Sigma_Controls\Sigma_Controls.csproj">
+      <Project>{BAFEA927-64A5-4FC5-BCD7-16DF3E7C71E4}</Project>
+      <Name>Sigma_Controls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

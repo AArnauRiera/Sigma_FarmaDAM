@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{63BBEC2A-B19A-4B1C-9CFF-A9B0A26D14C5}</ProjectGuid>
+    <ProjectGuid>{F849072A-DDA1-4991-AE94-455330D012B1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Sigma_FarmaDAM</RootNamespace>
-    <AssemblyName>Sigma_FarmaDAM</AssemblyName>
+    <RootNamespace>UserManagement</RootNamespace>
+    <AssemblyName>UserManagement</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\dll\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -45,25 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmContent.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmContent.Designer.cs">
-      <DependentUpon>frmContent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmContent.resx">
-      <DependentUpon>frmContent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,21 +79,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mantein\Mantein.csproj">
-      <Project>{951a95b0-6b1f-40d7-a091-29ca118d6756}</Project>
-      <Name>Mantein</Name>
+    <ProjectReference Include="..\CustomControls\CustomControls.csproj">
+      <Project>{9932DF33-7AC1-4E6B-9D19-58BED7D00234}</Project>
+      <Name>CustomControls</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DBUtils\DBUtils.csproj">
-      <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
-      <Name>DBUtils</Name>
+    <ProjectReference Include="..\Sigma_Controls\Sigma_Controls.csproj">
+      <Project>{bafea927-64a5-4fc5-bcd7-16df3e7c71e4}</Project>
+      <Name>Sigma_Controls</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UserManagament\UserManagament.csproj">
-      <Project>{fa9eb4d2-fe3b-4b28-9d36-a8ce141ca5d3}</Project>
-      <Name>UserManagament</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\img\close_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

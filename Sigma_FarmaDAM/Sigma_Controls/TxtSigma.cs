@@ -12,12 +12,12 @@ namespace Sigma_Controls
     public class TxtSigma : TextBox
     {
 
-        public TxtSigma() : base()
-        {
+        public TxtSigma() : base ()
+        {            
 
             _isPlaceholder = true;
             LostFocus += SetPlaceHolder;
-            GotFocus += RemovePlaceHolder;
+            GotFocus += RemovePlaceHolder; 
         }
 
         #region public variables
@@ -28,7 +28,7 @@ namespace Sigma_Controls
             NSS,
             DNI,
             Name,
-            LastName,
+            LastName,   
             Email,
             Phone,
             Password,
@@ -83,7 +83,6 @@ namespace Sigma_Controls
                 Font = new Font(Font, FontStyle.Italic);
             }
         }
-
 
         #endregion
 
@@ -171,6 +170,13 @@ namespace Sigma_Controls
             }
         }
 
+
+        public void SetText()
+        {
+            _isPlaceholder = false;
+            ForeColor = SystemColors.WindowText;
+            Font = new Font(Font, FontStyle.Regular);
+        }
 
         private void RemovePlaceHolder()
         {
