@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Login;
+using MDI_basic;
 using RegisterEditDrugs;
 
 namespace Sigma_FarmaDAM
@@ -17,7 +19,21 @@ namespace Sigma_FarmaDAM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            frmLogin Login = new frmLogin();
+            if (Login.ShowDialog() == DialogResult.OK)
+            {
+                SplashScreen splash = new SplashScreen();
+                
+                if(splash.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new frmMain());
+                }
+            }
+            else
+            {
+                Application.Exit();
+            }
+            
         }
     }
 }
