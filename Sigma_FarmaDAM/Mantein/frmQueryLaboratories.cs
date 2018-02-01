@@ -14,5 +14,13 @@ namespace Mantein
         {
             InitializeComponent();
         }
+
+        public frmQueryLaboratories(DataGridView dgw, string table)
+        {
+            InitializeComponent();
+            _dgw = dgw;
+            Table = table;
+        }
+
     }
 }

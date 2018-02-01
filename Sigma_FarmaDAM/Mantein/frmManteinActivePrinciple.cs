@@ -14,5 +14,11 @@ namespace Mantein
         {
             InitializeComponent();
         }
+
+        protected override void OpenQuery()
+        {
+            frmQueryActivePrinciple query = new frmQueryActivePrinciple(dgwBase, "Active_Principles");
+            query.Show();
+        }
     }
 }

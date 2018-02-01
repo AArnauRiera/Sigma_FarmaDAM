@@ -14,5 +14,11 @@ namespace Mantein
         {
             InitializeComponent();
         }
+
+        protected override void OpenQuery()
+        {
+            frmQueryDrugs query = new frmQueryDrugs(dgwBase, "Drugs");
+            query.Show();
+        }
     }
 }

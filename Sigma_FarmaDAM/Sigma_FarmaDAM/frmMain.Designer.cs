@@ -40,7 +40,6 @@
             this.btnActualizacioMedicaments = new System.Windows.Forms.Button();
             this.btnProgramaFidelitzacioClients = new System.Windows.Forms.Button();
             this.btnGestioComandes = new System.Windows.Forms.Button();
-            this.btnVendadeMedicaments = new System.Windows.Forms.Button();
             this.btnLaboratorisFarmaceutiques = new System.Windows.Forms.Button();
             this.btnMantenimentProductes = new System.Windows.Forms.Button();
             this.btnMantenimenPrincipiActius = new System.Windows.Forms.Button();
@@ -90,7 +89,7 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 778);
+            this.statusStrip.Location = new System.Drawing.Point(0, 558);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1116, 22);
             this.statusStrip.TabIndex = 2;
@@ -107,7 +106,6 @@
             this.panel1.Controls.Add(this.btnActualizacioMedicaments);
             this.panel1.Controls.Add(this.btnProgramaFidelitzacioClients);
             this.panel1.Controls.Add(this.btnGestioComandes);
-            this.panel1.Controls.Add(this.btnVendadeMedicaments);
             this.panel1.Controls.Add(this.btnLaboratorisFarmaceutiques);
             this.panel1.Controls.Add(this.btnMantenimentProductes);
             this.panel1.Controls.Add(this.btnMantenimenPrincipiActius);
@@ -117,12 +115,12 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(221, 729);
+            this.panel1.Size = new System.Drawing.Size(221, 509);
             this.panel1.TabIndex = 6;
             // 
             // btnActualizacioMedicaments
             // 
-            this.btnActualizacioMedicaments.Location = new System.Drawing.Point(3, 651);
+            this.btnActualizacioMedicaments.Location = new System.Drawing.Point(3, 579);
             this.btnActualizacioMedicaments.Name = "btnActualizacioMedicaments";
             this.btnActualizacioMedicaments.Size = new System.Drawing.Size(218, 66);
             this.btnActualizacioMedicaments.TabIndex = 9;
@@ -132,7 +130,7 @@
             // 
             // btnProgramaFidelitzacioClients
             // 
-            this.btnProgramaFidelitzacioClients.Location = new System.Drawing.Point(3, 579);
+            this.btnProgramaFidelitzacioClients.Location = new System.Drawing.Point(3, 507);
             this.btnProgramaFidelitzacioClients.Name = "btnProgramaFidelitzacioClients";
             this.btnProgramaFidelitzacioClients.Size = new System.Drawing.Size(218, 66);
             this.btnProgramaFidelitzacioClients.TabIndex = 8;
@@ -141,21 +139,12 @@
             // 
             // btnGestioComandes
             // 
-            this.btnGestioComandes.Location = new System.Drawing.Point(3, 507);
+            this.btnGestioComandes.Location = new System.Drawing.Point(3, 435);
             this.btnGestioComandes.Name = "btnGestioComandes";
             this.btnGestioComandes.Size = new System.Drawing.Size(218, 66);
             this.btnGestioComandes.TabIndex = 7;
             this.btnGestioComandes.Text = "Gestió de comandes ";
             this.btnGestioComandes.UseVisualStyleBackColor = true;
-            // 
-            // btnVendadeMedicaments
-            // 
-            this.btnVendadeMedicaments.Location = new System.Drawing.Point(3, 435);
-            this.btnVendadeMedicaments.Name = "btnVendadeMedicaments";
-            this.btnVendadeMedicaments.Size = new System.Drawing.Size(218, 66);
-            this.btnVendadeMedicaments.TabIndex = 6;
-            this.btnVendadeMedicaments.Text = "Venda Medicaments";
-            this.btnVendadeMedicaments.UseVisualStyleBackColor = true;
             // 
             // btnLaboratorisFarmaceutiques
             // 
@@ -165,6 +154,7 @@
             this.btnLaboratorisFarmaceutiques.TabIndex = 5;
             this.btnLaboratorisFarmaceutiques.Text = "Laboratoris Farmacèutiques";
             this.btnLaboratorisFarmaceutiques.UseVisualStyleBackColor = true;
+            this.btnLaboratorisFarmaceutiques.Click += new System.EventHandler(this.btnLaboratorisFarmaceutiques_Click);
             // 
             // btnMantenimentProductes
             // 
@@ -174,6 +164,7 @@
             this.btnMantenimentProductes.TabIndex = 4;
             this.btnMantenimentProductes.Text = "Manteniment productes";
             this.btnMantenimentProductes.UseVisualStyleBackColor = true;
+            this.btnMantenimentProductes.Click += new System.EventHandler(this.btnMantenimentProductes_Click);
             // 
             // btnMantenimenPrincipiActius
             // 
@@ -183,6 +174,7 @@
             this.btnMantenimenPrincipiActius.TabIndex = 3;
             this.btnMantenimenPrincipiActius.Text = "Manteniment principis actius ";
             this.btnMantenimenPrincipiActius.UseVisualStyleBackColor = true;
+            this.btnMantenimenPrincipiActius.Click += new System.EventHandler(this.btnMantenimenPrincipiActius_Click);
             // 
             // btnEditClient
             // 
@@ -220,7 +212,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(221, 49);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(895, 729);
+            this.panel2.Size = new System.Drawing.Size(895, 509);
             this.panel2.TabIndex = 8;
             // 
             // tbMain
@@ -230,7 +222,7 @@
             this.tbMain.Location = new System.Drawing.Point(0, 0);
             this.tbMain.Name = "tbMain";
             this.tbMain.SelectedIndex = 0;
-            this.tbMain.Size = new System.Drawing.Size(895, 729);
+            this.tbMain.Size = new System.Drawing.Size(895, 509);
             this.tbMain.TabIndex = 5;
             this.tbMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TabControlMainMouseDown);
             // 
@@ -239,7 +231,7 @@
             this.Main.Location = new System.Drawing.Point(4, 22);
             this.Main.Name = "Main";
             this.Main.Padding = new System.Windows.Forms.Padding(3);
-            this.Main.Size = new System.Drawing.Size(887, 703);
+            this.Main.Size = new System.Drawing.Size(887, 483);
             this.Main.TabIndex = 0;
             this.Main.Text = "Main";
             this.Main.UseVisualStyleBackColor = true;
@@ -248,7 +240,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1116, 800);
+            this.ClientSize = new System.Drawing.Size(1116, 580);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip);
@@ -280,7 +272,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnVendadeMedicaments;
         private System.Windows.Forms.Button btnLaboratorisFarmaceutiques;
         private System.Windows.Forms.Button btnMantenimentProductes;
         private System.Windows.Forms.Button btnMantenimenPrincipiActius;

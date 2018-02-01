@@ -10,9 +10,18 @@ namespace Mantein
 {
     public partial class frmQueryActivePrinciple : Mantein.frmQueryBase
     {
+
         public frmQueryActivePrinciple()
         {
             InitializeComponent();
         }
+
+        public frmQueryActivePrinciple(DataGridView dgw, string table){
+            InitializeComponent();
+            _dgw = dgw;
+            Table = table;
+        }
+
+
     }
 }

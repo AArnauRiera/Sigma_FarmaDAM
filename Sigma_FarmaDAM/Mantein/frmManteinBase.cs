@@ -64,9 +64,14 @@ namespace Mantein
             BindingDate();
         }
 
-        private void btnQuery_Click(object sender, EventArgs e)
+        protected void btnQuery_Click(object sender, EventArgs e)
         {
             //Open new queryTab
+            OpenQuery();
+        }
+
+        protected virtual void OpenQuery()
+        {
 
         }
 

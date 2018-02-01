@@ -14,5 +14,12 @@ namespace Mantein
         {
             InitializeComponent();
         }
+
+        public frmQueryDrugs(DataGridView dgw, string table)
+        {
+            InitializeComponent();
+            _dgw = dgw;
+            Table = table;
+        }
     }
 }

@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigma_FarmaDAM", "Sigma_Far
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagament", "UserManagament\UserManagament.csproj", "{FA9EB4D2-FE3B-4B28-9D36-A8CE141CA5D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mantein", "Mantein\Mantein.csproj", "{951A95B0-6B1F-40D7-A091-29CA118D6756}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{FA9EB4D2-FE3B-4B28-9D36-A8CE141CA5D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA9EB4D2-FE3B-4B28-9D36-A8CE141CA5D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA9EB4D2-FE3B-4B28-9D36-A8CE141CA5D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{951A95B0-6B1F-40D7-A091-29CA118D6756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{951A95B0-6B1F-40D7-A091-29CA118D6756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{951A95B0-6B1F-40D7-A091-29CA118D6756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{951A95B0-6B1F-40D7-A091-29CA118D6756}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

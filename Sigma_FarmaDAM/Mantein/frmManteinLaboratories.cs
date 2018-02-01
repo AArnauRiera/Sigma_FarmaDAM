@@ -14,5 +14,11 @@ namespace Mantein
         {
             InitializeComponent();
         }
+
+        protected override void OpenQuery()
+        {
+            frmQueryLaboratories query = new frmQueryLaboratories(dgwBase, "Laboratories");
+            query.Show();
+        }
     }
 }

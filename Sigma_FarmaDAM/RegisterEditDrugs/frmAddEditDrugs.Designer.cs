@@ -60,6 +60,8 @@
             // 
             this.txtNRN.DBReference = "Register_Number";
             this.txtNRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtNRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.txtNRN.ForeColor = System.Drawing.Color.Gray;
             this.txtNRN.Location = new System.Drawing.Point(165, 24);
             this.txtNRN.Margin = new System.Windows.Forms.Padding(2);
             this.txtNRN.Name = "txtNRN";
@@ -92,6 +94,8 @@
             // 
             this.txtNRS.DBReference = "Sanitary_Register_Num";
             this.txtNRS.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtNRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.txtNRS.ForeColor = System.Drawing.Color.Gray;
             this.txtNRS.Location = new System.Drawing.Point(165, 57);
             this.txtNRS.Margin = new System.Windows.Forms.Padding(2);
             this.txtNRS.Name = "txtNRS";
@@ -103,17 +107,19 @@
             // lblActivePrinciple
             // 
             this.lblActivePrinciple.AutoSize = true;
-            this.lblActivePrinciple.Location = new System.Drawing.Point(82, 129);
+            this.lblActivePrinciple.Location = new System.Drawing.Point(92, 125);
             this.lblActivePrinciple.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblActivePrinciple.Name = "lblActivePrinciple";
-            this.lblActivePrinciple.Size = new System.Drawing.Size(80, 13);
+            this.lblActivePrinciple.Size = new System.Drawing.Size(67, 13);
             this.lblActivePrinciple.TabIndex = 7;
-            this.lblActivePrinciple.Text = "Active Principle";
+            this.lblActivePrinciple.Text = "Principi actiu";
             // 
             // txtActivePrinciple
             // 
             this.txtActivePrinciple.DBReference = "ActivePrincipleID";
             this.txtActivePrinciple.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtActivePrinciple.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.txtActivePrinciple.ForeColor = System.Drawing.Color.Gray;
             this.txtActivePrinciple.Location = new System.Drawing.Point(165, 125);
             this.txtActivePrinciple.Margin = new System.Windows.Forms.Padding(2);
             this.txtActivePrinciple.Name = "txtActivePrinciple";
@@ -125,17 +131,19 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(126, 94);
+            this.lblName.Location = new System.Drawing.Point(82, 92);
             this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.Size = new System.Drawing.Size(77, 13);
             this.lblName.TabIndex = 5;
-            this.lblName.Text = "Name";
+            this.lblName.Text = "Nom comercial";
             // 
             // txtName
             // 
             this.txtName.DBReference = "CommercialName";
             this.txtName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.txtName.ForeColor = System.Drawing.Color.Gray;
             this.txtName.Location = new System.Drawing.Point(165, 92);
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
@@ -158,6 +166,8 @@
             // 
             this.txtBasePrice.DBReference = null;
             this.txtBasePrice.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtBasePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.txtBasePrice.ForeColor = System.Drawing.Color.Gray;
             this.txtBasePrice.Location = new System.Drawing.Point(165, 229);
             this.txtBasePrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtBasePrice.Name = "txtBasePrice";
@@ -180,6 +190,8 @@
             // 
             this.txtPharmaceuticLab.DBReference = null;
             this.txtPharmaceuticLab.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtPharmaceuticLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.txtPharmaceuticLab.ForeColor = System.Drawing.Color.Gray;
             this.txtPharmaceuticLab.Location = new System.Drawing.Point(165, 194);
             this.txtPharmaceuticLab.Margin = new System.Windows.Forms.Padding(2);
             this.txtPharmaceuticLab.Name = "txtPharmaceuticLab";
@@ -191,17 +203,19 @@
             // lblContent
             // 
             this.lblContent.AutoSize = true;
-            this.lblContent.Location = new System.Drawing.Point(117, 163);
+            this.lblContent.Location = new System.Drawing.Point(104, 164);
             this.lblContent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblContent.Name = "lblContent";
-            this.lblContent.Size = new System.Drawing.Size(44, 13);
+            this.lblContent.Size = new System.Drawing.Size(52, 13);
             this.lblContent.TabIndex = 9;
-            this.lblContent.Text = "Content";
+            this.lblContent.Text = "Contingut";
             // 
             // txtContent
             // 
             this.txtContent.DBReference = null;
             this.txtContent.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.txtContent.ForeColor = System.Drawing.Color.Gray;
             this.txtContent.Location = new System.Drawing.Point(165, 161);
             this.txtContent.Margin = new System.Windows.Forms.Padding(2);
             this.txtContent.Name = "txtContent";
@@ -224,6 +238,8 @@
             // 
             this.txtIVA.DBReference = null;
             this.txtIVA.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtIVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.txtIVA.ForeColor = System.Drawing.Color.Gray;
             this.txtIVA.Location = new System.Drawing.Point(166, 261);
             this.txtIVA.Margin = new System.Windows.Forms.Padding(2);
             this.txtIVA.Name = "txtIVA";
