@@ -1,4 +1,5 @@
-﻿using SellSystem;
+﻿using RegisterEditDrugs;
+using SellSystem;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -155,6 +156,11 @@ namespace Sigma_FarmaDAM
                 if (tabPageCurrent != null)
                     tabControl.TabPages.Remove(tabPageCurrent);
             }
+        }
+
+        private void btnActualizacioMedicaments_Click(object sender, EventArgs e)
+        {
+            AddNewTab("Editar Cliente", new frmAddEditDrugs());
         }
     }
 }

@@ -523,6 +523,7 @@
             this.btnActualizacioMedicaments.TabIndex = 9;
             this.btnActualizacioMedicaments.Text = "Actualització medicaments";
             this.btnActualizacioMedicaments.UseVisualStyleBackColor = true;
+            this.btnActualizacioMedicaments.Click += new System.EventHandler(this.btnActualizacioMedicaments_Click);
             // 
             // btnProgramaFidelitzacioClients
             // 
