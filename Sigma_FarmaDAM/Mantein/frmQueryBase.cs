@@ -45,6 +45,7 @@ namespace Mantein
             DBUtilities db = new DBUtilities();
 
             string conditions = Conditions();
+
             query = "select * from " + Table;
 
             if (!String.IsNullOrWhiteSpace(conditions))
@@ -89,8 +90,30 @@ namespace Mantein
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            _dgw.DataSource = dgwDB.SelectedColumns;
+            DataSet ds = null;
+            string selected = "";
+
+            List<string> conditions = new List<string>();
+
+            for (int i = 0; i < dgwDB.SelectedRows.Count; i++)
+            {
+
+                conditions.Add(dgwDB.SelectedRows[i].Cells[0].OwningColumn.Name + " = " + "'" + dgwDB.SelectedRows[i].Cells[0].FormattedValue.ToString() + "'");
+
+            }
+
+            DBUtilities db = new DBUtilities();
+            
+            selected = "select * from " + Table + " where " + string.Join(" or ", conditions); ;
+
+            ds = db.PortarPerConsulta(selected);
+
+            _dgw.DataSource = ds.Tables["Taula"];
+            
+            
+
             this.Close();
+
         }
     }
 }
