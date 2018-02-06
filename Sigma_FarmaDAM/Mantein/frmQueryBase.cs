@@ -97,9 +97,7 @@ namespace Mantein
 
             for (int i = 0; i < dgwDB.SelectedRows.Count; i++)
             {
-
                 conditions.Add(dgwDB.SelectedRows[i].Cells[0].OwningColumn.Name + " = " + "'" + dgwDB.SelectedRows[i].Cells[0].FormattedValue.ToString() + "'");
-
             }
 
             DBUtilities db = new DBUtilities();
@@ -108,9 +106,7 @@ namespace Mantein
 
             ds = db.PortarPerConsulta(selected);
 
-            _dgw.DataSource = ds.Tables["Taula"];
-            
-            
+            _dgw.DataSource = ds.Tables["Taula"];         
 
             this.Close();
 
