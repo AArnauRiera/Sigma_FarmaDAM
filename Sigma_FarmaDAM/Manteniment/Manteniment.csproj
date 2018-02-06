@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7D57B26-7E67-4FCB-870E-B36862549A7E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Manteniment</RootNamespace>
+    <AssemblyName>Manteniment</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmManteinActivePrinciple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinActivePrinciple.Designer.cs">
+      <DependentUpon>frmManteinActivePrinciple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManteinClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinClients.Designer.cs">
+      <DependentUpon>frmManteinClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManteinDrugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinDrugs.Designer.cs">
+      <DependentUpon>frmManteinDrugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManteinIVA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinIVA.Designer.cs">
+      <DependentUpon>frmManteinIVA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManteinLaboratories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinLaboratories.Designer.cs">
+      <DependentUpon>frmManteinLaboratories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManteinProviders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinProviders.Designer.cs">
+      <DependentUpon>frmManteinProviders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManteinSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinSeller.Designer.cs">
+      <DependentUpon>frmManteinSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManteinStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinStock.Designer.cs">
+      <DependentUpon>frmManteinStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmManteinActivePrinciple.resx">
+      <DependentUpon>frmManteinActivePrinciple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManteinClients.resx">
+      <DependentUpon>frmManteinClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManteinDrugs.resx">
+      <DependentUpon>frmManteinDrugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManteinIVA.resx">
+      <DependentUpon>frmManteinIVA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManteinLaboratories.resx">
+      <DependentUpon>frmManteinLaboratories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManteinProviders.resx">
+      <DependentUpon>frmManteinProviders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManteinSeller.resx">
+      <DependentUpon>frmManteinSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManteinStock.resx">
+      <DependentUpon>frmManteinStock.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mantein\Mantein.csproj">
+      <Project>{951a95b0-6b1f-40d7-a091-29ca118d6756}</Project>
+      <Name>Mantein</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma_Controls\Sigma_Controls.csproj">
+      <Project>{bafea927-64a5-4fc5-bcd7-16df3e7c71e4}</Project>
+      <Name>Sigma_Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

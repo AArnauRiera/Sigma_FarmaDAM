@@ -42,65 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmManteinActivePrinciple.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManteinActivePrinciple.Designer.cs">
-      <DependentUpon>frmManteinActivePrinciple.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmManteinBase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmManteinBase.Designer.cs">
       <DependentUpon>frmManteinBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmManteinClients.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManteinClients.Designer.cs">
-      <DependentUpon>frmManteinClients.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmManteinDrugs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManteinDrugs.Designer.cs">
-      <DependentUpon>frmManteinDrugs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmManteinIVA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManteinIVA.Designer.cs">
-      <DependentUpon>frmManteinIVA.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmManteinLaboratories.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManteinLaboratories.Designer.cs">
-      <DependentUpon>frmManteinLaboratories.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmManteinProviders.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManteinProviders.Designer.cs">
-      <DependentUpon>frmManteinProviders.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmManteinSeller.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManteinSeller.Designer.cs">
-      <DependentUpon>frmManteinSeller.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmManteinStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManteinStock.Designer.cs">
-      <DependentUpon>frmManteinStock.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmQueryActivePrinciple.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQueryActivePrinciple.Designer.cs">
-      <DependentUpon>frmQueryActivePrinciple.cs</DependentUpon>
     </Compile>
     <Compile Include="frmQueryBase.cs">
       <SubType>Form</SubType>
@@ -108,101 +54,14 @@
     <Compile Include="frmQueryBase.Designer.cs">
       <DependentUpon>frmQueryBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQueryClients.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQueryDrugs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQueryDrugs.Designer.cs">
-      <DependentUpon>frmQueryDrugs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmQueryIVA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQueryIVA.Designer.cs">
-      <DependentUpon>frmQueryIVA.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmQueryLaboratories.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQueryLaboratories.Designer.cs">
-      <DependentUpon>frmQueryLaboratories.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmQueryProviders.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQueryProviders.Designer.cs">
-      <DependentUpon>frmQueryProviders.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmQuerySeller.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQuerySeller.Designer.cs">
-      <DependentUpon>frmQuerySeller.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmQueryStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQueryStock.Designer.cs">
-      <DependentUpon>frmQueryStock.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmManteinActivePrinciple.resx">
-      <DependentUpon>frmManteinActivePrinciple.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmManteinBase.resx">
       <DependentUpon>frmManteinBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManteinClients.resx">
-      <DependentUpon>frmManteinClients.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmManteinDrugs.resx">
-      <DependentUpon>frmManteinDrugs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmManteinIVA.resx">
-      <DependentUpon>frmManteinIVA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmManteinLaboratories.resx">
-      <DependentUpon>frmManteinLaboratories.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmManteinProviders.resx">
-      <DependentUpon>frmManteinProviders.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmManteinSeller.resx">
-      <DependentUpon>frmManteinSeller.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmManteinStock.resx">
-      <DependentUpon>frmManteinStock.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmQueryActivePrinciple.resx">
-      <DependentUpon>frmQueryActivePrinciple.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmQueryBase.resx">
       <DependentUpon>frmQueryBase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmQueryClients.resx">
-      <DependentUpon>frmQueryClients.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmQueryDrugs.resx">
-      <DependentUpon>frmQueryDrugs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmQueryIVA.resx">
-      <DependentUpon>frmQueryIVA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmQueryLaboratories.resx">
-      <DependentUpon>frmQueryLaboratories.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmQueryProviders.resx">
-      <DependentUpon>frmQueryProviders.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmQuerySeller.resx">
-      <DependentUpon>frmQuerySeller.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmQueryStock.resx">
-      <DependentUpon>frmQueryStock.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
