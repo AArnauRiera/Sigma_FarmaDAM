@@ -9,11 +9,12 @@ using System.Windows.Forms;
 
 namespace Sigma_Controls
 {
-    public class cbxSigma : ComboBox
+    public class CbxSigma : ComboBox
     {
         private string _DBReference;
 
-        public string DBReference {
+        public string DBReference
+        {
             get { return _DBReference; }
             set { _DBReference = value; }
         }

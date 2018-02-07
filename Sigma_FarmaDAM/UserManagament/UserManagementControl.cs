@@ -1,5 +1,5 @@
-﻿using DBUtils;
-using System;
+﻿using System;
+using DBUtils;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -24,28 +24,6 @@ namespace UserManagament
 
         }
 
-        public DataRow SearchFromQuery (string query)
-        {
-            DBUtilities db = new DBUtilities();
-            try
-            {
-                db.Conexion();
-                dts = db.PortarPerConsulta(query);
-                DataTable t = dts.Tables[0];
-                if (t.Rows.Count == 0)
-                {
-                    return null;
-                }
-                DataRow r = t.Rows[0];
-
-                return r;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.ToString());
-                return null;
-            }
-        }
         public DataTable SearchTableFromQuery (string query)
         {
             DBUtilities db = new DBUtilities();
@@ -53,7 +31,7 @@ namespace UserManagament
             {
                 db.Conexion();
                 dts = db.PortarPerConsulta(query);
-                DataTable t = dts.Tables[0];
+                DataTable t = dts.Tables["Taula"];
                 if (t.Rows.Count == 0)
                 {
                     return null;
