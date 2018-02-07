@@ -35,7 +35,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,21 +48,75 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmSearchSystem.cs" />
-    <Compile Include="frmSearchSystem.Designer.cs">
-      <DependentUpon>frmSearchSystem.cs</DependentUpon>
+    <Compile Include="frmQueryActivePrinciple.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTest.cs" />
-    <Compile Include="frmTest.Designer.cs">
-      <DependentUpon>frmTest.cs</DependentUpon>
+    <Compile Include="frmQueryActivePrinciple.Designer.cs">
+      <DependentUpon>frmQueryActivePrinciple.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="frmQueryClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQueryDrugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQueryDrugs.Designer.cs">
+      <DependentUpon>frmQueryDrugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQueryIVA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQueryIVA.Designer.cs">
+      <DependentUpon>frmQueryIVA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQueryLaboratories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQueryLaboratories.Designer.cs">
+      <DependentUpon>frmQueryLaboratories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQueryProviders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQueryProviders.Designer.cs">
+      <DependentUpon>frmQueryProviders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuerySeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuerySeller.Designer.cs">
+      <DependentUpon>frmQuerySeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQueryStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQueryStock.Designer.cs">
+      <DependentUpon>frmQueryStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmSearchSystem.resx">
-      <DependentUpon>frmSearchSystem.cs</DependentUpon>
+    <EmbeddedResource Include="frmQueryActivePrinciple.resx">
+      <DependentUpon>frmQueryActivePrinciple.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTest.resx">
-      <DependentUpon>frmTest.cs</DependentUpon>
+    <EmbeddedResource Include="frmQueryClients.resx">
+      <DependentUpon>frmQueryClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQueryDrugs.resx">
+      <DependentUpon>frmQueryDrugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQueryIVA.resx">
+      <DependentUpon>frmQueryIVA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQueryLaboratories.resx">
+      <DependentUpon>frmQueryLaboratories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQueryProviders.resx">
+      <DependentUpon>frmQueryProviders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuerySeller.resx">
+      <DependentUpon>frmQuerySeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQueryStock.resx">
+      <DependentUpon>frmQueryStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,6 +146,18 @@
     <ProjectReference Include="..\..\DBUtils\DBUtils.csproj">
       <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
       <Name>DBUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Helpers\Helpers.csproj">
+      <Project>{e1addef3-7ed3-4c2b-b454-e637e10a6a35}</Project>
+      <Name>Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Mantein\Mantein.csproj">
+      <Project>{951a95b0-6b1f-40d7-a091-29ca118d6756}</Project>
+      <Name>Mantein</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sigma_Controls\Sigma_Controls.csproj">
+      <Project>{bafea927-64a5-4fc5-bcd7-16df3e7c71e4}</Project>
+      <Name>Sigma_Controls</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

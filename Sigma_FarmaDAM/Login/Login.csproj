@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{951A95B0-6B1F-40D7-A091-29CA118D6756}</ProjectGuid>
+    <ProjectGuid>{7F09206E-C150-41E1-8920-A4A10D48516E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mantein</RootNamespace>
-    <AssemblyName>Mantein</AssemblyName>
+    <RootNamespace>Login</RootNamespace>
+    <AssemblyName>Login</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\dll\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -42,40 +42,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmManteinBase.cs">
+    <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManteinBase.Designer.cs">
-      <DependentUpon>frmManteinBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmQueryBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQueryBase.Designer.cs">
-      <DependentUpon>frmQueryBase.cs</DependentUpon>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmManteinBase.resx">
-      <DependentUpon>frmManteinBase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmQueryBase.resx">
-      <DependentUpon>frmQueryBase.cs</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CustomControls\CustomControls.csproj">
-      <Project>{9932DF33-7AC1-4E6B-9D19-58BED7D00234}</Project>
-      <Name>CustomControls</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DBUtils\DBUtils.csproj">
-      <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
-      <Name>DBUtils</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Sigma_Controls\Sigma_Controls.csproj">
-      <Project>{bafea927-64a5-4fc5-bcd7-16df3e7c71e4}</Project>
+      <Project>{BAFEA927-64A5-4FC5-BCD7-16DF3E7C71E4}</Project>
       <Name>Sigma_Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SplashScreen\MDI_basic\SplashScreen.csproj">
+      <Project>{5E37C872-2384-439B-A66B-2130DC846445}</Project>
+      <Name>SplashScreen</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

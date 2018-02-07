@@ -1,4 +1,6 @@
-﻿using RegisterEditDrugs;
+﻿using Mantein;
+using Manteniment;
+using RegisterEditDrugs;
 using SellSystem;
 using System;
 using System.Collections.Generic;
@@ -71,12 +73,10 @@ namespace Sigma_FarmaDAM
 
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
         }
 
         private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
         }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -161,6 +161,21 @@ namespace Sigma_FarmaDAM
         private void btnActualizacioMedicaments_Click(object sender, EventArgs e)
         {
             AddNewTab("Editar Cliente", new frmAddEditDrugs());
+        }
+
+        private void btnMantenimenPrincipiActius_Click(object sender, EventArgs e)
+        {
+            AddNewTab("Principios Activos", new frmManteinActivePrinciple());
+        }
+
+        private void btnMantenimentProductes_Click(object sender, EventArgs e)
+        {
+            AddNewTab("Productos", new frmManteinDrugs());
+        }
+
+        private void btnLaboratorisFarmaceutiques_Click(object sender, EventArgs e)
+        {
+            AddNewTab("Laboratorios", new frmManteinLaboratories());
         }
     }
 }
