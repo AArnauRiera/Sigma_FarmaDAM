@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Sigma_Controls
 {
-    public class CbxSigma : ComboBox
+    public class cbxSigma : ComboBox
     {
         private string _DBReference;
 
