@@ -145,7 +145,7 @@
             this.cbxNTS_Type.Location = new System.Drawing.Point(131, 168);
             this.cbxNTS_Type.Name = "cbxNTS_Type";
             this.cbxNTS_Type.Size = new System.Drawing.Size(142, 21);
-            this.cbxNTS_Type.TabIndex = 19;
+            this.cbxNTS_Type.TabIndex = 21;
             // 
             // tbxNTS
             // 
@@ -221,8 +221,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(354, 404);
-            this.Controls.Add(this.lblErrorText);
             this.Controls.Add(this.cbxNTS_Type);
+            this.Controls.Add(this.lblErrorText);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnGuardar);
@@ -260,8 +260,8 @@
         public Sigma_Controls.TxtSigma tbxLastName2;
         public Sigma_Controls.TxtSigma tbxDNI;
         public Sigma_Controls.TxtSigma tbxNTS;
-        private Sigma_Controls.cbxSigma cbxNTS_Type;
         private System.Windows.Forms.Label lblErrorText;
+        private Sigma_Controls.cbxSigma cbxNTS_Type;
     }
 }
 

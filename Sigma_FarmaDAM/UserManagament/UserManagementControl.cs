@@ -107,7 +107,6 @@ namespace UserManagament
         }
         public void SaveChanges(Control.ControlCollection Controls)
         {
-            UserManagementControl umc = new UserManagementControl();
             string query = "SELECT * FROM Clients";
             bool correct = false;
             bool saveError = false;
