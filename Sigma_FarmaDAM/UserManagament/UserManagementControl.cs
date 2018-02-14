@@ -66,17 +66,21 @@ namespace UserManagament
         public void getDataFromNtsSeach (Control.ControlCollection Controls)
         {
             TxtSigma tbxNTS = (TxtSigma)Controls.Find("tbxNTS", false)[0];
+            TxtSigma tbxDNI = (TxtSigma)Controls.Find("tbxDNI", false)[0];
             Label lblError = (Label)Controls.Find("lblError", false)[0];
+            TxtSigma[] control = new TxtSigma[] { tbxNTS };
 
-            if (tbxNTS.Text.Length > 0 && tbxNTS.Text != "NTS")
+            if (!CheckControlsFormat(control) && tbxNTS.Text != "NTS")
             {
-                TxtSigma[] control = new TxtSigma[] { tbxNTS };
                 DataSet dts = DBHelper.GetQuery("Clients", control);
-                if (dts.Tables["Taula"].Rows != null)
+                if (dts.Tables["Taula"].Rows.Count != 0)
                 {
                     lblError.Text = "";
                     ShowSelectData(dts, Controls);
                     DataBindingComboBox(dts, Controls);
+
+                    // tbxNTS.Enabled = false;
+                    // tbxDNI.Enabled = false;
                 }
                 else
                 {
@@ -90,6 +94,7 @@ namespace UserManagament
                 tbxNTS.Focus(); // AIXO TAMPOC
             }
         }
+
         public void AddComboBoxData(DataTable t, cbxSigma comboBox)
         {
 
@@ -105,59 +110,112 @@ namespace UserManagament
             }
 
         }
-        public void SaveChanges(Control.ControlCollection Controls)
+
+        public bool CheckControlsFormat(Control.ControlCollection Controls)
         {
-            string query = "SELECT * FROM Clients";
+            bool error = false;
+
+            foreach (var control in Controls)
+            {
+                if (control is TxtSigma)
+                {
+                    TxtSigma cntrl = (TxtSigma)control;
+                    if (!cntrl.IsFieldCorrect() || String.IsNullOrWhiteSpace(cntrl.Text))
+                    {
+                        error = true;
+                        cntrl.Text = "";
+                    }
+                }
+                else if (control is cbxSigma)
+                {
+                    cbxSigma cntrl = (cbxSigma)control;
+                    if (cntrl.SelectedIndex == 0)
+                    {
+                        error = true;
+                    }
+                }
+            }
+
+            return error;
+        }
+        public bool CheckControlsFormat(TxtSigma[] Controls)
+        {
+            bool error = false;
+
+            foreach (var control in Controls)
+            {
+                if (!control.IsFieldCorrect() || String.IsNullOrWhiteSpace(control.Text))
+                {
+                    error = true;
+                    control.Text = "";
+                }
+                
+            }
+
+            return error;
+        }
+
+        public DataRow CreateDataRowFromControls(DataRow r, Control.ControlCollection controls)
+        {
+            foreach (var control in controls)
+            {
+                if (control is TxtSigma)
+                {
+                    TxtSigma cntrl = (TxtSigma)control;
+                    r[cntrl.DBReference] = cntrl.Text;
+
+                }
+                else if (control is cbxSigma)
+                {
+                    cbxSigma cntrl = (cbxSigma)control;
+                    r[cntrl.DBReference] = cntrl.SelectedIndex;
+                }
+            }
+            return r;
+        }
+
+        public void SaveChanges(Control.ControlCollection Controls, bool edit)
+        {
+            DBUtilities db = new DBUtilities();
+            string query;
+            DataSet dts;
+            DataRow r;
             bool correct = false;
-            bool saveError = false;
+            Label lblErrorText = (Label)Controls.Find("lblErrorText", false)[0];
 
             try
             {
-                DBUtilities db = new DBUtilities();
-                DataSet dts = db.PortarPerConsulta(query);
-                DataRow r = dts.Tables["Taula"].NewRow();
-                Label lblErrorText = (Label)Controls.Find("lblErrorText", false)[0];
-
-                foreach (var control in Controls)
+                if (!CheckControlsFormat(Controls))
                 {
-                    if (control is TxtSigma)
+                    if (edit)
                     {
-                        TxtSigma cntrl = (TxtSigma)control;
-                        if (cntrl.IsFieldCorrect())
-                        {
-                            r[cntrl.DBReference] = cntrl.Text;
-                        } else
-                        {
-                            cntrl.Text = "";
-                            cntrl.Focus();
-                            saveError = true;
-                            break;
-                        }
+                        TxtSigma NTS = (TxtSigma)Controls.Find("tbxNTS", false)[0];
+                        query = "SELECT * FROM Clients WHERE NTS='" + NTS.Text + "'";
+                        dts = db.PortarPerConsulta(query);
+                        r = dts.Tables["Taula"].Rows[0];
 
-                    } else if (control is cbxSigma)
-                    {
-                        cbxSigma cntrl = (cbxSigma)control;
-                        if (cntrl.SelectedIndex != 0)
-                        {
-                            r[cntrl.DBReference] = cntrl.SelectedIndex;
-                        } else
-                        {
-                            cntrl.Focus();
-                            saveError = true;
-                            break;
-                        }
                     }
-                }
+                    else
+                    {
+                        query = "SELECT * FROM Clients";
+                        dts = db.PortarPerConsulta(query);
+                        r = dts.Tables["Taula"].NewRow();
+                    }
 
-                dts.Tables["Taula"].Rows.Add(r);
+                    r = CreateDataRowFromControls(r, Controls);
 
-                if (!saveError)
-                {
+                    if (!edit)
+                    {
+                        dts.Tables["Taula"].Rows.Add(r);
+                    }
+
                     correct = db.Actualizar(query, "Taula", dts);
                     lblErrorText.Text = "";
-                } else
+                }
+                else
                 {
                     lblErrorText.Text = "Algun campo es incorrecto";
+
                 }
 
                 if (correct)

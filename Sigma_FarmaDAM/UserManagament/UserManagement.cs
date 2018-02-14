@@ -52,7 +52,7 @@ namespace UserManagament
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            control.SaveChanges(Controls);
+            control.SaveChanges(Controls, _edit);
         }
 
         private void tbxDNI_TextChanged(object sender, EventArgs e)
