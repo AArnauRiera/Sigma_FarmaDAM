@@ -58,11 +58,22 @@ namespace UserManagament
             }
         }
 
-        private void ShowSelectData(DataSet dts, Control.ControlCollection Controls)
+        public bool CheckIfUserIsRegistered(TxtSigma NTS, TxtSigma DNI, DataSet dts)
         {
-            DBHelper.BindingTextBox(Controls, dts);
+            bool isRegistered = false;
 
+            foreach (DataRow row in dts.Tables["Taula"].Rows)
+            {
+                if (row[NTS.DBReference].ToString() == NTS.Text || row[DNI.DBReference].ToString() == DNI.Text)
+                {
+                    isRegistered = true;
+                    break;
+                }
+            }
+
+            return isRegistered;
         }
+
         public void getDataFromNtsSeach (Control.ControlCollection Controls)
         {
             TxtSigma tbxNTS = (TxtSigma)Controls.Find("tbxNTS", false)[0];
@@ -76,7 +87,7 @@ namespace UserManagament
                 if (dts.Tables["Taula"].Rows.Count != 0)
                 {
                     lblError.Text = "";
-                    ShowSelectData(dts, Controls);
+                    DBHelper.BindingTextBox(Controls, dts);
                     DataBindingComboBox(dts, Controls);
 
                     // tbxNTS.Enabled = false;
@@ -181,7 +192,11 @@ namespace UserManagament
             DataSet dts;
             DataRow r;
             bool correct = false;
+            bool errorMessage = false;
+            TxtSigma NTS = (TxtSigma)Controls.Find("tbxNTS", false)[0];
+            TxtSigma DNI = (TxtSigma)Controls.Find("tbxDNI", false)[0];
             Label lblErrorText = (Label)Controls.Find("lblErrorText", false)[0];
+            lblErrorText.Text = "";
 
             try
             {
@@ -189,7 +204,6 @@ namespace UserManagament
                 {
                     if (edit)
                     {
-                        TxtSigma NTS = (TxtSigma)Controls.Find("tbxNTS", false)[0];
                         query = "SELECT * FROM Clients WHERE NTS='" + NTS.Text + "'";
                         dts = db.PortarPerConsulta(query);
                         r = dts.Tables["Taula"].Rows[0];
@@ -199,23 +213,38 @@ namespace UserManagament
                     {
                         query = "SELECT * FROM Clients";
                         dts = db.PortarPerConsulta(query);
+
+                        if (CheckIfUserIsRegistered(NTS, DNI, dts))
+                        {
+                            lblErrorText.Text = "Este cliente ya esta registrado";
+                        }
+                        
                         r = dts.Tables["Taula"].NewRow();
+
                     }
 
-                    r = CreateDataRowFromControls(r, Controls);
-
-                    if (!edit)
+                    if (!errorMessage && !String.IsNullOrWhiteSpace(lblErrorText.Text))
                     {
-                        dts.Tables["Taula"].Rows.Add(r);
-                    }
+                        r = CreateDataRowFromControls(r, Controls);
 
-                    correct = db.Actualizar(query, "Taula", dts);
-                    lblErrorText.Text = "";
+                        if (!edit)
+                        {
+                            dts.Tables["Taula"].Rows.Add(r);
+                        }
+
+                        correct = db.Actualizar(query, "Taula", dts);
+                        lblErrorText.Text = "";
+                    }
+                    
                 }
                 else
                 {
-                    lblErrorText.Text = "Algun campo es incorrecto";
+                    errorMessage = true;
+                }
 
+                if (errorMessage)
+                {
+                    lblErrorText.Text = "Algun campo es incorrecto";
                 }
 
                 if (correct)

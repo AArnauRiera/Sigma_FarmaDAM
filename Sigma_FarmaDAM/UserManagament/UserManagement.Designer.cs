@@ -260,8 +260,8 @@
         public Sigma_Controls.TxtSigma tbxLastName2;
         public Sigma_Controls.TxtSigma tbxDNI;
         public Sigma_Controls.TxtSigma tbxNTS;
-        private System.Windows.Forms.Label lblErrorText;
         private Sigma_Controls.cbxSigma cbxNTS_Type;
+        private System.Windows.Forms.Label lblErrorText;
     }
 }
 
