@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aemps_prescripcion xmlns="http://schemas.aemps.es/prescripcion/aemps_prescripcion" xsi:schemaLocation="http://schemas.aemps.es/prescripcion/aemps_prescripcion http://schemas.aemps.es/prescripcion/aemps_prescripcion.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <header>
+    <listprescriptiondate>2017-03-21</listprescriptiondate>
+  </header>
+	<prescription>
+		<cod_nacion>600000</cod_nacion>
+		<nro_definitivo>66337</nro_definitivo>
+		<des_nomco>AMOXICILINA /ACIDO CLAVULANICO SALA 500/50 mg </des_nomco>
+		<nro_conte>100 viales</nro_conte>
+		<url_fictec>http://www.aemps.gob.es/cima/pdfs/es/ft/66337/66337_ft.pdf</url_fictec>
+		<url_prosp>http://www.aemps.gob.es/cima/pdfs/es/p/66337/66337_p.pdf</url_prosp>
+		<sw_receta>1</sw_receta>
+		<sw_generico>1</sw_generico>
+		<sw_sustituible>1</sw_sustituible>
+		<laboratorio_titular>2335</laboratorio_titular>
+		<composicion_pa>
+			<cod_principio_activo>160</cod_principio_activo>
+		</composicion_pa>
+	</prescription>
+</aemps_prescripcion>
