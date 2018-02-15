@@ -119,6 +119,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Users\admin\Desktop\Sigma_FarmaDAMa\Sigma_FarmaDAM\Sigma_Controls\Sigma_Controls.csproj">
+      <Project>{bafea927-64a5-4fc5-bcd7-16df3e7c71e4}</Project>
+      <Name>Sigma_Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Mantein\Mantein.csproj">
       <Project>{951a95b0-6b1f-40d7-a091-29ca118d6756}</Project>
       <Name>Mantein</Name>
@@ -126,10 +130,6 @@
     <ProjectReference Include="..\Search_System\SearchSystem\SearchSystem.csproj">
       <Project>{2d91cbe1-6b63-43a1-bb94-82b5cda7d42b}</Project>
       <Name>SearchSystem</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sigma_Controls\Sigma_Controls.csproj">
-      <Project>{bafea927-64a5-4fc5-bcd7-16df3e7c71e4}</Project>
-      <Name>Sigma_Controls</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by aemps (AEMPS) -->
+
+-<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.aemps.es/prescripcion/aemps_prescripcion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.aemps.es/prescripcion/aemps_prescripcion">
+
+<!--Types-->
+
+
+
+-<xs:complexType name="prescriptionheaderType">
+
+
+-<xs:sequence>
+
+<xs:element name="listprescriptiondate" type="xs:date"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+-<xs:complexType name="viasadminType">
+
+
+-<xs:sequence>
+
+<xs:element name="cod_via_admin" type="xs:int"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+-<xs:complexType name="excipientesType">
+
+
+-<xs:sequence>
+
+<xs:element name="cod_excipiente" type="xs:int"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+-<xs:complexType name="principiosActivosType">
+
+
+-<xs:sequence>
+
+<xs:element name="cod_principio_activo" type="xs:int" minOccurs="0"/>
+
+<xs:element name="orden_colacion" type="xs:string" minOccurs="0"/>
+
+<xs:element name="dosis_pa" type="xs:string" minOccurs="0"/>
+
+
+-<xs:element name="unidad_dosis_pa" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="50"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="dosis_composicion" type="xs:string" minOccurs="0"/>
+
+
+-<xs:element name="unidad_composicion" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="50"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="cantidad_volumen_unidad_composicion" type="xs:string" minOccurs="0"/>
+
+
+-<xs:element name="unidad_volumen_unidad_composicion" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="50"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="dosis_administracion" type="xs:string" minOccurs="0"/>
+
+
+-<xs:element name="unidad_administracion" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="50"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+
+-<xs:element name="dosis_prescripcion" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="50"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+
+-<xs:element name="unidad_prescripcion" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="50"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="cantidad_volumen_unidad_administracion" type="xs:string" minOccurs="0"/>
+
+
+-<xs:element name="unidad_volumen_unidad_administracion" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="50"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+-<xs:complexType name="formafarmaceuticaType">
+
+
+-<xs:sequence>
+
+<xs:element name="cod_forfar" type="xs:int" minOccurs="0"/>
+
+<xs:element name="cod_forfar_simplificada" type="xs:double" minOccurs="0"/>
+
+<xs:element name="nro_pactiv" type="xs:int" minOccurs="0"/>
+
+<xs:element name="composicion_pa" type="principiosActivosType" minOccurs="0" maxOccurs="unbounded"/>
+
+<xs:element name="excipientes" type="excipientesType" minOccurs="0" maxOccurs="unbounded"/>
+
+<xs:element name="viasadministracion" type="viasadminType" minOccurs="1" maxOccurs="unbounded"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+-<xs:complexType name="NotasType">
+
+
+-<xs:sequence>
+
+<xs:element name="numero_nota_seguridad" type="xs:string"/>
+
+<xs:element name="referencia_nota_seguridad" type="xs:string"/>
+
+<xs:element name="asunto_nota_seguridad" type="xs:string"/>
+
+<xs:element name="fecha_nota_seguridad" type="xs:string"/>
+
+<xs:element name="url_nota_seguridad" type="xs:string"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+-<xs:complexType name="interaccionesType">
+
+
+-<xs:sequence>
+
+
+-<xs:element name="atc_interaccion">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="20"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+
+-<xs:element name="descripcion_atc_interaccion">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="250"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+
+-<xs:element name="efecto_interaccion">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="300"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+
+-<xs:element name="recomendacion_interaccion">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="400"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+-<xs:complexType name="DesaconsejadosGeriatriaType">
+
+
+-<xs:sequence>
+
+
+-<xs:element name="alerta_geriatria" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="300"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+
+-<xs:element name="riesgo_pacience_geriatria" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="300"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+
+-<xs:element name="recomendacion_geriatria" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="300"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+-<xs:complexType name="duplicidadesType">
+
+
+-<xs:sequence>
+
+
+-<xs:element name="atc_duplicidad">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="20"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+
+-<xs:element name="descripcion_atc_duplicidad">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="150"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+
+-<xs:element name="efecto_duplicidad">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="200"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+
+-<xs:element name="recomendacion_duplicidad">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="300"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+-<xs:complexType name="atcType">
+
+
+-<xs:sequence>
+
+
+-<xs:element name="cod_atc">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="20"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+
+-<xs:element name="teratogenia" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="180"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="interacciones_atc" type="interaccionesType" minOccurs="0" maxOccurs="unbounded"/>
+
+<xs:element name="desaconsejados_geriatria" type="DesaconsejadosGeriatriaType" minOccurs="0" maxOccurs="unbounded"/>
+
+<xs:element name="duplicidades" type="duplicidadesType" minOccurs="0" maxOccurs="unbounded"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+-<xs:complexType name="prescriptionType">
+
+
+-<xs:sequence>
+
+
+-<xs:element name="cod_nacion">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="6"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+
+-<xs:element name="nro_definitivo" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="50"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+
+-<xs:element name="des_nomco">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="200"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+
+-<xs:element name="des_prese">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="350"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="cod_dcsa" type="xs:double" minOccurs="0"/>
+
+<xs:element name="cod_dcp" type="xs:double" minOccurs="0"/>
+
+<xs:element name="cod_dcpf" type="xs:double" minOccurs="0"/>
+
+
+-<xs:element name="des_dosific" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="255"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="cod_envase" type="xs:int" minOccurs="0"/>
+
+
+-<xs:element name="contenido" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="100"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="unid_contenido" type="xs:double" minOccurs="0"/>
+
+
+-<xs:element name="nro_conte" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="75"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="sw_psicotropo" type="xs:boolean" minOccurs="0"/>
+
+
+-<xs:element name="lista_psicotropo" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="50"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="sw_estupefaciente" type="xs:boolean" minOccurs="0"/>
+
+
+-<xs:element name="lista_estupefaciente" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="50"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="sw_afecta_conduccion" type="xs:boolean" minOccurs="0"/>
+
+<xs:element name="sw_triangulo_negro" type="xs:boolean" minOccurs="0"/>
+
+
+-<xs:element name="url_fictec" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="250"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+
+-<xs:element name="url_prosp" minOccurs="0">
+
+
+-<xs:simpleType>
+
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="250"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="sw_receta" type="xs:boolean" minOccurs="0"/>
+
+<xs:element name="sw_generico" type="xs:boolean" minOccurs="0"/>
+
+<xs:element name="sw_sustituible" type="xs:boolean" minOccurs="0"/>
+
+<xs:element name="sw_envase_clinico" type="xs:boolean" minOccurs="0"/>
+
+<xs:element name="sw_uso_hospitalario" type="xs:boolean" minOccurs="0"/>
+
+<xs:element name="sw_diagnostico_hospitalario" type="xs:boolean" minOccurs="0"/>
+
+<xs:element name="sw_tld" type="xs:boolean" minOccurs="0"/>
+
+<xs:element name="sw_especial_control_medico" type="xs:boolean" minOccurs="0"/>
+
+<xs:element name="sw_huerfano" type="xs:boolean" minOccurs="0"/>
+
+<xs:element name="sw_base_a_plantas" type="xs:boolean" minOccurs="0"/>
+
+<xs:element name="laboratorio_titular" type="xs:double" minOccurs="0"/>
+
+<xs:element name="laboratorio_comercializador" type="xs:double" minOccurs="0"/>
+
+<xs:element name="fecha_autorizacion" type="xs:date" minOccurs="0"/>
+
+<xs:element name="sw_comercializado" type="xs:boolean" minOccurs="0"/>
+
+<xs:element name="fec_comer" type="xs:date" minOccurs="0"/>
+
+<xs:element name="cod_sitreg" type="xs:int" minOccurs="0"/>
+
+<xs:element name="cod_sitreg_presen" type="xs:int" minOccurs="0"/>
+
+<xs:element name="fecha_situacion_registro" type="xs:date" minOccurs="0"/>
+
+<xs:element name="fec_sitreg_presen" type="xs:date" minOccurs="0"/>
+
+
+-<xs:element name="cod_nacionales_inactivos" minOccurs="0">
+
+-<xs:simpleType>
+
+-<xs:restriction base="xs:string">
+
+<xs:maxLength value="500"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="sw_tiene_excipientes_decl_obligatoria" type="xs:boolean" minOccurs="0"/>
+
+<xs:element name="biosimilar" type="xs:boolean" minOccurs="0"/>
+
+<xs:element name="importacion_paralela" type="xs:boolean" minOccurs="0"/>
+
+<xs:element name="formasfarmaceuticas" type="formafarmaceuticaType" maxOccurs="unbounded"/>
+
+<xs:element name="notaseguridad" type="NotasType" minOccurs="0" maxOccurs="unbounded"/>
+
+<xs:element name="atc" type="atcType" minOccurs="0" maxOccurs="unbounded"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+-<xs:element name="aemps_prescripcion">
+
+
+-<xs:complexType>
+
+
+-<xs:sequence>
+
+<xs:element name="header" type="prescriptionheaderType"/>
+
+<xs:element name="prescription" type="prescriptionType" maxOccurs="unbounded"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+</xs:element>
+
+</xs:schema>

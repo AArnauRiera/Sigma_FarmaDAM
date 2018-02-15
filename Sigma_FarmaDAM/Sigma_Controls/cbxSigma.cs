@@ -13,7 +13,8 @@ namespace Sigma_Controls
     {
         private string _DBReference;
 
-        public string DBReference {
+        public string DBReference
+        {
             get { return _DBReference; }
             set { _DBReference = value; }
         }
