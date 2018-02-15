@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSigma1 = new Sigma_Controls.TxtSigma();
-            this.txtSigma2 = new Sigma_Controls.TxtSigma();
+            this.tbxUsername = new Sigma_Controls.TxtSigma();
+            this.tbxPassword = new Sigma_Controls.TxtSigma();
             this.label2 = new System.Windows.Forms.Label();
             this.pnltxt = new System.Windows.Forms.Panel();
+            this.lblError = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.pnltxt.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -43,40 +44,42 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(123, 90);
+            this.label1.Location = new System.Drawing.Point(123, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "User";
             // 
-            // txtSigma1
+            // tbxUsername
             // 
-            this.txtSigma1.DBReference = null;
-            this.txtSigma1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtSigma1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.txtSigma1.ForeColor = System.Drawing.Color.Gray;
-            this.txtSigma1.Location = new System.Drawing.Point(158, 83);
-            this.txtSigma1.Name = "txtSigma1";
-            this.txtSigma1.Placeholder = null;
-            this.txtSigma1.Size = new System.Drawing.Size(100, 20);
-            this.txtSigma1.TabIndex = 1;
-            this.txtSigma1.Table = null;
+            this.tbxUsername.DBReference = "username";
+            this.tbxUsername.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.tbxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.tbxUsername.ForeColor = System.Drawing.Color.Gray;
+            this.tbxUsername.Location = new System.Drawing.Point(158, 75);
+            this.tbxUsername.Name = "tbxUsername";
+            this.tbxUsername.Placeholder = null;
+            this.tbxUsername.Size = new System.Drawing.Size(100, 20);
+            this.tbxUsername.TabIndex = 1;
+            this.tbxUsername.Table = null;
             // 
-            // txtSigma2
+            // tbxPassword
             // 
-            this.txtSigma2.DBReference = null;
-            this.txtSigma2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtSigma2.Location = new System.Drawing.Point(158, 121);
-            this.txtSigma2.Name = "txtSigma2";
-            this.txtSigma2.Placeholder = null;
-            this.txtSigma2.Size = new System.Drawing.Size(100, 20);
-            this.txtSigma2.TabIndex = 2;
-            this.txtSigma2.Table = null;
+            this.tbxPassword.DBReference = "password";
+            this.tbxPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Password;
+            this.tbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.tbxPassword.ForeColor = System.Drawing.Color.Gray;
+            this.tbxPassword.Location = new System.Drawing.Point(158, 113);
+            this.tbxPassword.Name = "tbxPassword";
+            this.tbxPassword.Placeholder = null;
+            this.tbxPassword.Size = new System.Drawing.Size(100, 20);
+            this.tbxPassword.TabIndex = 2;
+            this.tbxPassword.Table = null;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(100, 127);
+            this.label2.Location = new System.Drawing.Point(100, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 3;
@@ -84,15 +87,26 @@
             // 
             // pnltxt
             // 
-            this.pnltxt.Controls.Add(this.txtSigma1);
+            this.pnltxt.Controls.Add(this.lblError);
+            this.pnltxt.Controls.Add(this.tbxUsername);
             this.pnltxt.Controls.Add(this.label2);
             this.pnltxt.Controls.Add(this.label1);
-            this.pnltxt.Controls.Add(this.txtSigma2);
+            this.pnltxt.Controls.Add(this.tbxPassword);
             this.pnltxt.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnltxt.Location = new System.Drawing.Point(0, 0);
             this.pnltxt.Name = "pnltxt";
             this.pnltxt.Size = new System.Drawing.Size(388, 178);
             this.pnltxt.TabIndex = 4;
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.BackColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(158, 148);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.TabIndex = 4;
+            this.lblError.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel1
             // 
@@ -104,6 +118,15 @@
             this.panel1.Size = new System.Drawing.Size(388, 109);
             this.panel1.TabIndex = 5;
             // 
+            // btnRegister
+            // 
+            this.btnRegister.Location = new System.Drawing.Point(158, 35);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(75, 23);
+            this.btnRegister.TabIndex = 1;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            // 
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(158, 6);
@@ -113,16 +136,6 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.Location = new System.Drawing.Point(158, 35);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(75, 23);
-            this.btnRegister.TabIndex = 1;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
-
             // 
             // frmLogin
             // 
@@ -143,12 +156,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private Sigma_Controls.TxtSigma txtSigma1;
-        private Sigma_Controls.TxtSigma txtSigma2;
+        private Sigma_Controls.TxtSigma tbxUsername;
+        private Sigma_Controls.TxtSigma tbxPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnltxt;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label lblError;
     }
 }
