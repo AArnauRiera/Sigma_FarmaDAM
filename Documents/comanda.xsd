@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="comanda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="client"/>
+        <xs:element ref="dataComanda"/>
+        <xs:element ref="num"/>
+        <xs:element ref="articles"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="client" type="xs:integer"/>
+  <xs:element name="dataComanda" type="xs:string"/>
+  <xs:element name="num" type="xs:integer"/>
+  <xs:element name="articles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="article"/>
+        <xs:element ref="resum"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="article">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="referencia"/>
+        <xs:element ref="quantitat"/>
+        <xs:element minOccurs="0" ref="recepta"/>
+      </xs:sequence>
+      <xs:attribute name="lin" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="referencia" type="xs:integer"/>
+  <xs:element name="quantitat" type="xs:integer"/>
+  <xs:element name="recepta">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="resum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="totallin"/>
+        <xs:element ref="receptalin"/>
+        <xs:element ref="noreceptalin"/>
+        <xs:element ref="totalrecepta"/>
+        <xs:element ref="totalnorecepta"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="totallin" type="xs:integer"/>
+  <xs:element name="receptalin" type="xs:integer"/>
+  <xs:element name="noreceptalin" type="xs:integer"/>
+  <xs:element name="totalrecepta" type="xs:integer"/>
+  <xs:element name="totalnorecepta" type="xs:integer"/>
+</xs:schema>
