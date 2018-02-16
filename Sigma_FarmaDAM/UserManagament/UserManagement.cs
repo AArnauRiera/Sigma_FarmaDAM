@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Helpers;
+using DBUtils;
 using System.Windows.Forms;
 using Sigma_Controls;
 
@@ -14,74 +9,55 @@ namespace UserManagament
 {
     public partial class UserManagement : Form
     {
+        UserManagementControl control = new UserManagementControl();
+
+        private bool _NTSHasChanged = true;
+        private bool _edit = false;
+
+        // Para añadir
         public UserManagement()
         {
             InitializeComponent();
+            lblTitle.Text = "Añadir Cliente";
         }
 
-        private void btnUserManagement_Click(object sender, EventArgs e)
+        // Para editar
+        public UserManagement(bool value)
         {
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (tbxNTS.Text.Length > 0 && tbxNTS.Text != "NTS")
-            {
-                UserManagementControl umc = new UserManagementControl();
-                string query = "SELECT * FROM Clients where NTS = '" + tbxNTS.Text + "'";
-                DataRow r = umc.SearchFromQuery(query);
-                TxtSigma[] control = new TxtSigma[] { tbxNTS };
-                DataSet dts = DBHelper.GetQuery("Clients", control);
-                if (r != null)
-                {
-                    lblError.Text = "";
-                    ShowSelectData(dts);
-                } else
-                {
-                    lblError.Text = "Entry not valid for search";
-                    tbxNTS.Focus();
-                }
-            }
-            else
-            {
-                lblError.Text = "Entry not valid for search";
-                tbxNTS.Focus();
-            }
-        }
-
-        private void SetComboBoxValue(DataSet dts, string DBReference)
-        {
-
-        }
-
-        private void ShowSelectData (DataSet dts)
-        {
-            DBHelper.BindingTextBox(Controls, dts);
-
+            InitializeComponent();
+            _edit = value;
+            lblTitle.Text = "Editar Cliente";
         }
 
         private void UserManagement_Load(object sender, EventArgs e)
         {
-            UserManagementControl umc = new UserManagementControl();
-            string query = "SELECT name FROM Type_NTS";
-            DataTable t = umc.SearchTableFromQuery(query);
-            AddComboBoxData(t);
+            string query = "SELECT name FROM " + cbxNTS_Type.DBReference;
+            DataTable t = control.SearchTableFromQuery(query);
+            control.AddComboBoxData(t, cbxNTS_Type);
         }
-         
-        private void AddComboBoxData(DataTable t)
+
+        private void tbxNTS_Leave(object sender, EventArgs e)
         {
-            /*
-            cbxNTS_Type.Items.Add("Selecciona...");
-            cbxNTS_Type.SelectedIndex = 0;
-            for(var i = 0; i < t.Rows.Count; i++)
+            if (_NTSHasChanged && _edit)
             {
-                DataRow r = t.Rows[i];
-                if (r.ItemArray[0] != null)
-                {
-                    cbxNTS_Type.Items.Add(r.ItemArray[0].ToString());
-                }
+                control.getDataFromNtsSeach(Controls);
+                _NTSHasChanged = false;
             }
-            */
+        }
+
+        private void tbxNTS_TextChanged(object sender, EventArgs e)
+        {
+            _NTSHasChanged = true;
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            control.SaveChanges(Controls, _edit);
+        }
+
+        private void tbxDNI_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

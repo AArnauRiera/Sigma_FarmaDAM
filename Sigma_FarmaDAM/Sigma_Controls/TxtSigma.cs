@@ -102,7 +102,7 @@ namespace Sigma_Controls
                     regularExpresion = @"^[0-9]{8,8}[A-Z]$";
                     break;
                 case FieldTypes.NSS:
-                    regularExpresion = @"^(\d{2})(\d{2})(\d{2})\d{5}$";
+                    regularExpresion = @"[A-Z]{4}\d{10}";
                     break;
                 case FieldTypes.Name:
                     regularExpresion = @"[a-zA-Z]{1,15}$";
