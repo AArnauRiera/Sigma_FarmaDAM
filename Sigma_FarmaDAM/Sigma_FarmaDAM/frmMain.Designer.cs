@@ -89,7 +89,7 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 558);
+            this.statusStrip.Location = new System.Drawing.Point(0, 727);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1116, 22);
             this.statusStrip.TabIndex = 2;
@@ -115,7 +115,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(221, 509);
+            this.panel1.Size = new System.Drawing.Size(221, 678);
             this.panel1.TabIndex = 6;
             // 
             // btnActualizacioMedicaments
@@ -212,7 +212,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(221, 49);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(895, 509);
+            this.panel2.Size = new System.Drawing.Size(895, 678);
             this.panel2.TabIndex = 8;
             // 
             // tbMain
@@ -222,7 +222,7 @@
             this.tbMain.Location = new System.Drawing.Point(0, 0);
             this.tbMain.Name = "tbMain";
             this.tbMain.SelectedIndex = 0;
-            this.tbMain.Size = new System.Drawing.Size(895, 509);
+            this.tbMain.Size = new System.Drawing.Size(895, 678);
             this.tbMain.TabIndex = 5;
             this.tbMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TabControlMainMouseDown);
             // 
@@ -231,7 +231,7 @@
             this.Main.Location = new System.Drawing.Point(4, 22);
             this.Main.Name = "Main";
             this.Main.Padding = new System.Windows.Forms.Padding(3);
-            this.Main.Size = new System.Drawing.Size(887, 483);
+            this.Main.Size = new System.Drawing.Size(887, 652);
             this.Main.TabIndex = 0;
             this.Main.Text = "Main";
             this.Main.UseVisualStyleBackColor = true;
@@ -240,7 +240,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1116, 580);
+            this.ClientSize = new System.Drawing.Size(1116, 749);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip);

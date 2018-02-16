@@ -39,11 +39,9 @@
             this.lblBasePrice = new System.Windows.Forms.Label();
             this.txtBasePrice = new Sigma_Controls.TxtSigma();
             this.lblPharmaceuticLab = new System.Windows.Forms.Label();
-            this.txtPharmaceuticLab = new Sigma_Controls.TxtSigma();
             this.lblContent = new System.Windows.Forms.Label();
             this.txtContent = new Sigma_Controls.TxtSigma();
             this.lblIVA = new System.Windows.Forms.Label();
-            this.txtIVA = new Sigma_Controls.TxtSigma();
             this.chkReplaceable = new System.Windows.Forms.CheckBox();
             this.chkGeneric = new System.Windows.Forms.CheckBox();
             this.chkRecipe = new System.Windows.Forms.CheckBox();
@@ -53,6 +51,11 @@
             this.btnBrowseProspect = new System.Windows.Forms.Button();
             this.btnEditAdd = new System.Windows.Forms.Button();
             this.pnlAddEditDrugs = new System.Windows.Forms.Panel();
+            this.lblError = new System.Windows.Forms.Label();
+            this.cmbIVA = new Sigma_Controls.cmbSigma();
+            this.cmbPharmaceuticLab = new Sigma_Controls.cmbSigma();
+            this.cmbIVAId = new System.Windows.Forms.ComboBox();
+            this.cmbLabId = new System.Windows.Forms.ComboBox();
             this.pnlAddEditDrugs.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,7 +158,7 @@
             // lblBasePrice
             // 
             this.lblBasePrice.AutoSize = true;
-            this.lblBasePrice.Location = new System.Drawing.Point(104, 232);
+            this.lblBasePrice.Location = new System.Drawing.Point(98, 232);
             this.lblBasePrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBasePrice.Name = "lblBasePrice";
             this.lblBasePrice.Size = new System.Drawing.Size(58, 13);
@@ -164,7 +167,7 @@
             // 
             // txtBasePrice
             // 
-            this.txtBasePrice.DBReference = null;
+            this.txtBasePrice.DBReference = "Price";
             this.txtBasePrice.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtBasePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtBasePrice.ForeColor = System.Drawing.Color.Gray;
@@ -179,26 +182,12 @@
             // lblPharmaceuticLab
             // 
             this.lblPharmaceuticLab.AutoSize = true;
-            this.lblPharmaceuticLab.Location = new System.Drawing.Point(37, 197);
+            this.lblPharmaceuticLab.Location = new System.Drawing.Point(31, 197);
             this.lblPharmaceuticLab.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPharmaceuticLab.Name = "lblPharmaceuticLab";
             this.lblPharmaceuticLab.Size = new System.Drawing.Size(125, 13);
             this.lblPharmaceuticLab.TabIndex = 11;
             this.lblPharmaceuticLab.Text = "Pharmaceutic Laboratory";
-            // 
-            // txtPharmaceuticLab
-            // 
-            this.txtPharmaceuticLab.DBReference = null;
-            this.txtPharmaceuticLab.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtPharmaceuticLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.txtPharmaceuticLab.ForeColor = System.Drawing.Color.Gray;
-            this.txtPharmaceuticLab.Location = new System.Drawing.Point(165, 194);
-            this.txtPharmaceuticLab.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPharmaceuticLab.Name = "txtPharmaceuticLab";
-            this.txtPharmaceuticLab.Placeholder = null;
-            this.txtPharmaceuticLab.Size = new System.Drawing.Size(179, 20);
-            this.txtPharmaceuticLab.TabIndex = 10;
-            this.txtPharmaceuticLab.Table = null;
             // 
             // lblContent
             // 
@@ -212,7 +201,7 @@
             // 
             // txtContent
             // 
-            this.txtContent.DBReference = null;
+            this.txtContent.DBReference = "Content";
             this.txtContent.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtContent.ForeColor = System.Drawing.Color.Gray;
@@ -227,26 +216,12 @@
             // lblIVA
             // 
             this.lblIVA.AutoSize = true;
-            this.lblIVA.Location = new System.Drawing.Point(138, 264);
+            this.lblIVA.Location = new System.Drawing.Point(132, 257);
             this.lblIVA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIVA.Name = "lblIVA";
             this.lblIVA.Size = new System.Drawing.Size(24, 13);
             this.lblIVA.TabIndex = 15;
             this.lblIVA.Text = "IVA";
-            // 
-            // txtIVA
-            // 
-            this.txtIVA.DBReference = null;
-            this.txtIVA.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtIVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.txtIVA.ForeColor = System.Drawing.Color.Gray;
-            this.txtIVA.Location = new System.Drawing.Point(166, 261);
-            this.txtIVA.Margin = new System.Windows.Forms.Padding(2);
-            this.txtIVA.Name = "txtIVA";
-            this.txtIVA.Placeholder = null;
-            this.txtIVA.Size = new System.Drawing.Size(178, 20);
-            this.txtIVA.TabIndex = 14;
-            this.txtIVA.Table = null;
             // 
             // chkReplaceable
             // 
@@ -333,6 +308,11 @@
             // 
             // pnlAddEditDrugs
             // 
+            this.pnlAddEditDrugs.Controls.Add(this.cmbLabId);
+            this.pnlAddEditDrugs.Controls.Add(this.cmbIVAId);
+            this.pnlAddEditDrugs.Controls.Add(this.lblError);
+            this.pnlAddEditDrugs.Controls.Add(this.cmbIVA);
+            this.pnlAddEditDrugs.Controls.Add(this.cmbPharmaceuticLab);
             this.pnlAddEditDrugs.Controls.Add(this.lblNRN);
             this.pnlAddEditDrugs.Controls.Add(this.btnEditAdd);
             this.pnlAddEditDrugs.Controls.Add(this.txtNRN);
@@ -352,8 +332,6 @@
             this.pnlAddEditDrugs.Controls.Add(this.txtContent);
             this.pnlAddEditDrugs.Controls.Add(this.lblIVA);
             this.pnlAddEditDrugs.Controls.Add(this.lblContent);
-            this.pnlAddEditDrugs.Controls.Add(this.txtIVA);
-            this.pnlAddEditDrugs.Controls.Add(this.txtPharmaceuticLab);
             this.pnlAddEditDrugs.Controls.Add(this.lblBasePrice);
             this.pnlAddEditDrugs.Controls.Add(this.lblPharmaceuticLab);
             this.pnlAddEditDrugs.Controls.Add(this.txtBasePrice);
@@ -363,6 +341,52 @@
             this.pnlAddEditDrugs.Name = "pnlAddEditDrugs";
             this.pnlAddEditDrugs.Size = new System.Drawing.Size(400, 517);
             this.pnlAddEditDrugs.TabIndex = 24;
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(171, 441);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.TabIndex = 18;
+            // 
+            // cmbIVA
+            // 
+            this.cmbIVA.DBReference = "IVA";
+            this.cmbIVA.FormattingEnabled = true;
+            this.cmbIVA.Location = new System.Drawing.Point(165, 254);
+            this.cmbIVA.Name = "cmbIVA";
+            this.cmbIVA.Size = new System.Drawing.Size(179, 21);
+            this.cmbIVA.TabIndex = 24;
+            // 
+            // cmbPharmaceuticLab
+            // 
+            this.cmbPharmaceuticLab.DBReference = "Laboratories";
+            this.cmbPharmaceuticLab.FormattingEnabled = true;
+            this.cmbPharmaceuticLab.Location = new System.Drawing.Point(165, 194);
+            this.cmbPharmaceuticLab.Name = "cmbPharmaceuticLab";
+            this.cmbPharmaceuticLab.Size = new System.Drawing.Size(179, 21);
+            this.cmbPharmaceuticLab.TabIndex = 24;
+            // 
+            // cmbIVAId
+            // 
+            this.cmbIVAId.FormattingEnabled = true;
+            this.cmbIVAId.Location = new System.Drawing.Point(387, 254);
+            this.cmbIVAId.Name = "cmbIVAId";
+            this.cmbIVAId.Size = new System.Drawing.Size(10, 21);
+            this.cmbIVAId.TabIndex = 25;
+            this.cmbIVAId.Visible = false;
+            // 
+            // cmbLabId
+            // 
+            this.cmbLabId.FormattingEnabled = true;
+            this.cmbLabId.Location = new System.Drawing.Point(387, 194);
+            this.cmbLabId.Name = "cmbLabId";
+            this.cmbLabId.Size = new System.Drawing.Size(10, 21);
+            this.cmbLabId.TabIndex = 25;
+            this.cmbLabId.UseWaitCursor = true;
+            this.cmbLabId.Visible = false;
             // 
             // frmAddEditDrugs
             // 
@@ -393,11 +417,9 @@
         private System.Windows.Forms.Label lblBasePrice;
         private Sigma_Controls.TxtSigma txtBasePrice;
         private System.Windows.Forms.Label lblPharmaceuticLab;
-        private Sigma_Controls.TxtSigma txtPharmaceuticLab;
         private System.Windows.Forms.Label lblContent;
         private Sigma_Controls.TxtSigma txtContent;
         private System.Windows.Forms.Label lblIVA;
-        private Sigma_Controls.TxtSigma txtIVA;
         private System.Windows.Forms.CheckBox chkReplaceable;
         private System.Windows.Forms.CheckBox chkGeneric;
         private System.Windows.Forms.CheckBox chkRecipe;
@@ -407,5 +429,10 @@
         private System.Windows.Forms.Button btnBrowseProspect;
         private System.Windows.Forms.Button btnEditAdd;
         private System.Windows.Forms.Panel pnlAddEditDrugs;
+        private Sigma_Controls.cmbSigma cmbIVA;
+        private Sigma_Controls.cmbSigma cmbPharmaceuticLab;
+        private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.ComboBox cmbIVAId;
+        private System.Windows.Forms.ComboBox cmbLabId;
     }
 }

@@ -159,7 +159,7 @@ namespace Sigma_FarmaDAM
 
         private void btnActualizacioMedicaments_Click(object sender, EventArgs e)
         {
-            AddNewTab("Editar Cliente", new frmAddEditDrugs());
+            AddNewTab("Añadir Medicamentos", new frmAddEditDrugs());
         }
 
         private void btnMantenimenPrincipiActius_Click(object sender, EventArgs e)
