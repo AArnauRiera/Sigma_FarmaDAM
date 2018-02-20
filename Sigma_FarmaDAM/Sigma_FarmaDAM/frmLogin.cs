@@ -1,12 +1,13 @@
 ﻿using MDI_basic;
 using System;
 using System.Windows.Forms;
+using UserRegister;
 
 namespace Login
 {
     public partial class frmLogin : Form
     {
-        LoginControl.LoginControl control = new LoginControl.LoginControl();
+        LoginControl.LoginControl control;
         public frmLogin()
         {
             InitializeComponent();
@@ -14,8 +15,9 @@ namespace Login
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            control = new LoginControl.LoginControl(tbxUsername.Text);
 
-            if (control.CheckUserIsReal(tbxUsername, lblError))
+            if(control.CheckUserIsReal(tbxUsername, lblError))
             {
                 if (control.CheckCredentials(tbxUsername, tbxPassword, lblError))
                 {
@@ -26,9 +28,18 @@ namespace Login
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btnRegister_Click(object sender, EventArgs e)
         {
+            control = new LoginControl.LoginControl(tbxUsername.Text);
 
+            if(control.CheckUserIsReal(tbxUsername, lblError) && control.CheckIfUserIsAdmin(tbxUsername, lblError))
+            {
+                if (control.CheckCredentials(tbxUsername, tbxPassword, lblError))
+                {
+                    frmUserRegister frmUR = new frmUserRegister();
+                    frmUR.Show();
+                }
+            }
         }
     }
 }

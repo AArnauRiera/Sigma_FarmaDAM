@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Cryptography;
 using DBUtils;
 using System.Data;
 using Sigma_Controls;
@@ -15,10 +10,12 @@ namespace LoginControl
     {
         DBUtilities db = new DBUtilities();
         DataSet dts = new DataSet();
-        string query = "SELECT * FROM Seller";
+        string query;
 
-        public LoginControl()
+        public LoginControl(string userName)
         {
+            query = "SELECT * FROM Seller WHERE username = '" + userName + "'";
+
             try
             {
                 db.Conexion();
@@ -34,14 +31,11 @@ namespace LoginControl
         {
             bool isReal = false;
 
-            foreach (DataRow r in dts.Tables["Taula"].Rows)
+            if (dts.Tables[0].Rows.Count > 0 && userName.Text == dts.Tables[0].Rows[0][userName.DBReference].ToString())
             {
-                if (userName.Text == r[userName.DBReference].ToString())
-                {
-                    isReal = true;
-                    break;
-                }
+                isReal = true;
             }
+            
             if (!isReal)
             {
                 lblError.Text = "Usuario incorrecto";
@@ -54,13 +48,11 @@ namespace LoginControl
         {
             bool isCorrect = false;
 
-            foreach (DataRow r in dts.Tables["Taula"].Rows)
+            if (dts.Tables[0].Rows.Count > 0 && 
+                userName.Text == dts.Tables[0].Rows[0][userName.DBReference].ToString() && 
+                Cryptography.Cryptography.Encrypt(password.Text, userName.Text) == dts.Tables[0].Rows[0][password.DBReference].ToString())
             {
-                if (userName.Text == r[userName.DBReference].ToString() && Cryptography.Cryptography.Encrypt(password.Text, userName.Text) == r[password.DBReference].ToString())
-                {
-                    isCorrect = true;
-                    break;
-                }
+                isCorrect = true;
             }
 
             if (!isCorrect)
@@ -69,6 +61,21 @@ namespace LoginControl
             }
 
             return isCorrect;
+        }
+        public bool CheckIfUserIsAdmin (TxtSigma userName, Label lblError)
+        {
+            bool isAdmin = false;
+
+            if (dts.Tables[0].Rows[0]["rol"].Equals(true))
+            {
+                isAdmin = true;
+            }
+            if (!isAdmin)
+            {
+                lblError.Text = "El usuario debe ser administrador";
+            }
+
+            return isAdmin;
         }
         
     }
