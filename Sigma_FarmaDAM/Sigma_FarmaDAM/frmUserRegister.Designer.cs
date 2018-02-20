@@ -30,7 +30,7 @@
         {
             this.tbxName = new Sigma_Controls.TxtSigma();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.Name = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbxLastName1 = new Sigma_Controls.TxtSigma();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,12 +44,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbxPassword = new Sigma_Controls.TxtSigma();
             this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbxRepeatPassword = new Sigma_Controls.TxtSigma();
             this.SuspendLayout();
             // 
             // tbxName
             // 
             this.tbxName.DBReference = "firstName";
-            this.tbxName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.tbxName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.tbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.tbxName.ForeColor = System.Drawing.Color.Gray;
             this.tbxName.Location = new System.Drawing.Point(201, 95);
             this.tbxName.Name = "tbxName";
             this.tbxName.Placeholder = null;
@@ -66,14 +70,14 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             // 
-            // Name
+            // lblName
             // 
-            this.Name.AutoSize = true;
-            this.Name.Location = new System.Drawing.Point(64, 98);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(44, 13);
-            this.Name.TabIndex = 2;
-            this.Name.Text = "Nombre";
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(64, 98);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(44, 13);
+            this.lblName.TabIndex = 2;
+            this.lblName.Text = "Nombre";
             // 
             // label2
             // 
@@ -87,7 +91,9 @@
             // tbxLastName1
             // 
             this.tbxLastName1.DBReference = "lastName1";
-            this.tbxLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.tbxLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.tbxLastName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.tbxLastName1.ForeColor = System.Drawing.Color.Gray;
             this.tbxLastName1.Location = new System.Drawing.Point(201, 135);
             this.tbxLastName1.Name = "tbxLastName1";
             this.tbxLastName1.Placeholder = null;
@@ -108,7 +114,9 @@
             // tbxLastName2
             // 
             this.tbxLastName2.DBReference = "lastName2";
-            this.tbxLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.tbxLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.tbxLastName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.tbxLastName2.ForeColor = System.Drawing.Color.Gray;
             this.tbxLastName2.Location = new System.Drawing.Point(201, 178);
             this.tbxLastName2.Name = "tbxLastName2";
             this.tbxLastName2.Placeholder = null;
@@ -128,7 +136,9 @@
             // tbxDNI
             // 
             this.tbxDNI.DBReference = "dni";
-            this.tbxDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.tbxDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.DNI;
+            this.tbxDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.tbxDNI.ForeColor = System.Drawing.Color.Gray;
             this.tbxDNI.Location = new System.Drawing.Point(201, 223);
             this.tbxDNI.Name = "tbxDNI";
             this.tbxDNI.Placeholder = null;
@@ -148,7 +158,9 @@
             // tbxEmail
             // 
             this.tbxEmail.DBReference = "email";
-            this.tbxEmail.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.tbxEmail.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Email;
+            this.tbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.tbxEmail.ForeColor = System.Drawing.Color.Gray;
             this.tbxEmail.Location = new System.Drawing.Point(201, 266);
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Placeholder = null;
@@ -168,7 +180,9 @@
             // tbxUsername
             // 
             this.tbxUsername.DBReference = "username";
-            this.tbxUsername.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.tbxUsername.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.tbxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.tbxUsername.ForeColor = System.Drawing.Color.Gray;
             this.tbxUsername.Location = new System.Drawing.Point(201, 311);
             this.tbxUsername.Name = "tbxUsername";
             this.tbxUsername.Placeholder = null;
@@ -188,7 +202,9 @@
             // tbxPassword
             // 
             this.tbxPassword.DBReference = "password";
-            this.tbxPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.tbxPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Password;
+            this.tbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.tbxPassword.ForeColor = System.Drawing.Color.Gray;
             this.tbxPassword.Location = new System.Drawing.Point(201, 352);
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.Placeholder = null;
@@ -206,11 +222,35 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Añadir usuario";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(64, 397);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Repite Contraseña";
+            // 
+            // tbxRepeatPassword
+            // 
+            this.tbxRepeatPassword.DBReference = "";
+            this.tbxRepeatPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Password;
+            this.tbxRepeatPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.tbxRepeatPassword.ForeColor = System.Drawing.Color.Gray;
+            this.tbxRepeatPassword.Location = new System.Drawing.Point(201, 394);
+            this.tbxRepeatPassword.Name = "tbxRepeatPassword";
+            this.tbxRepeatPassword.Placeholder = null;
+            this.tbxRepeatPassword.Size = new System.Drawing.Size(182, 20);
+            this.tbxRepeatPassword.TabIndex = 18;
+            this.tbxRepeatPassword.Table = null;
+            // 
             // frmUserRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 503);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tbxRepeatPassword);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbxPassword);
@@ -224,7 +264,7 @@
             this.Controls.Add(this.tbxLastName2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbxLastName1);
-            this.Controls.Add(this.Name);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.tbxName);
             this.Name = "frmUserRegister";
@@ -238,7 +278,7 @@
 
         private Sigma_Controls.TxtSigma tbxName;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Label Name;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label2;
         private Sigma_Controls.TxtSigma tbxLastName1;
         private System.Windows.Forms.Label label3;
@@ -252,5 +292,7 @@
         private System.Windows.Forms.Label label7;
         private Sigma_Controls.TxtSigma tbxPassword;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label1;
+        private Sigma_Controls.TxtSigma tbxRepeatPassword;
     }
 }
