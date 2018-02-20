@@ -66,15 +66,21 @@ Public Class frmXMLReader
             writer.WriteStartElement("articles")
             For i = 1 To comanda.articles.Length - 1
                 writer.WriteStartElement("article")
+                writer.WriteAttributes("lin", i)
                 writer.WriteElementString("referencia", comanda.articles(i).referencia)
                 writer.WriteElementString("quantitat", comanda.articles(i).quantitat)
                 If comanda.articles(i).recepta Then
-                    writer.WriteElementString("referencia", " ")
+                    writer.WriteElementString("recepta", " ")
                 End If
                 writer.WriteEndElement()
             Next
-            'writer.WriteEndElement()
-            'writer.WriteEndElement()
+            writer.WriteStartElement("resum")
+            writer.WriteElementString("totallin", comanda.resum.totallin)
+            writer.WriteElementString("receptalin", comanda.resum.totallin)
+            writer.WriteElementString("noreceptalin", comanda.resum.noreceptalin)
+            writer.WriteElementString("totalrecepta", comanda.resum.totalrecepta)
+            writer.WriteElementString("totalnorecepta", comanda.resum.totalnorecepta)
+
             writer.Flush()
         End Using
     End Sub
