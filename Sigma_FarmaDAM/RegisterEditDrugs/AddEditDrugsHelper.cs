@@ -23,48 +23,13 @@ namespace RegisterEditDrugs
                 DataRow r = t.Rows[i];
                 if (r.ItemArray[0] != null && r.ItemArray[1] != null)
                 {
-                    //comboBox.Items.Add(r.ItemArray[0].ToString());
-
-                    ////////////////////////////////////////////////////////
-                    System.Windows.Controls.ComboBoxItem item = new System.Windows.Controls.ComboBoxItem();
-
-                    int item_index = int.Parse(r.ItemArray[0].ToString());
-                    String content = r.ItemArray[1].ToString();
-
-                    item.Tag = r.ItemArray[0];
-                    item.Content = r.ItemArray[1];
-
                     cmbId.Items.Add(r.ItemArray[0].ToString());
 
                     comboBox.Items.Add(r.ItemArray[1].ToString());
 
-                    //MessageBox.Show(content);
-                    //MessageBox.Show(item_index.ToString());
-
-                    //int index = comboBox.FindString(textBox2.Text);
-                    //comboBox.SelectedIndex = index;
-                    //comboBox.Items.Insert(item_index, r.ItemArray[0]);
-                    //comboBox.Items.Add(item);
-                    ////////////////////////////////////////////////////////
-
                 }
             }
 
-        }
-
-        private class Item
-        {
-            public string Name;
-            public int Value;
-            public Item(string name, int value)
-            {
-                Name = name; Value = value;
-            }
-            public override string ToString()
-            {
-                // Generates the text shown in the combo box
-                return Name;
-            }
         }
 
         public void DataBindingComboBox(DataSet dts, Control.ControlCollection Controls)

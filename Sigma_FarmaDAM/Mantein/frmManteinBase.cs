@@ -28,7 +28,7 @@ namespace Mantein
 
         protected void BindingDate()
         {
-            foreach (var txt in pnlTextBox.Controls)
+           /* foreach (var txt in pnlTextBox.Controls)
             {
                 if (txt is TxtSigma)
                 {
@@ -37,7 +37,8 @@ namespace Mantein
                     text.DataBindings.Add("Text", dts.Tables["Taula"], text.DBReference);
                 }
             }
-            dgwBase.DataSource = dts.Tables[Table];
+            */
+            dgwBase.DataSource = dts.Tables["Taula"];
         }
 
         protected void GetQuery()
@@ -77,7 +78,8 @@ namespace Mantein
 
         private void btnGet_Click(object sender, EventArgs e)
         {
-
+            GetQuery();
+            BindingDate();
         }
     }
 }

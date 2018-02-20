@@ -42,27 +42,27 @@
             this.lblContent = new System.Windows.Forms.Label();
             this.txtContent = new Sigma_Controls.TxtSigma();
             this.lblIVA = new System.Windows.Forms.Label();
-            this.chkReplaceable = new System.Windows.Forms.CheckBox();
-            this.chkGeneric = new System.Windows.Forms.CheckBox();
-            this.chkRecipe = new System.Windows.Forms.CheckBox();
             this.lblTechSheetDoc = new System.Windows.Forms.Label();
             this.lblProspect = new System.Windows.Forms.Label();
             this.btnBrowseTechSheetDoc = new System.Windows.Forms.Button();
             this.btnBrowseProspect = new System.Windows.Forms.Button();
             this.btnEditAdd = new System.Windows.Forms.Button();
             this.pnlAddEditDrugs = new System.Windows.Forms.Panel();
+            this.chkRecipe = new Sigma_Controls.CheckBoxSigma();
+            this.chkGeneric = new Sigma_Controls.CheckBoxSigma();
+            this.chkReplaceable = new Sigma_Controls.CheckBoxSigma();
+            this.cmbLabId = new System.Windows.Forms.ComboBox();
+            this.cmbIVAId = new System.Windows.Forms.ComboBox();
             this.lblError = new System.Windows.Forms.Label();
             this.cmbIVA = new Sigma_Controls.cmbSigma();
             this.cmbPharmaceuticLab = new Sigma_Controls.cmbSigma();
-            this.cmbIVAId = new System.Windows.Forms.ComboBox();
-            this.cmbLabId = new System.Windows.Forms.ComboBox();
             this.pnlAddEditDrugs.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNRN
             // 
             this.txtNRN.DBReference = "Register_Number";
-            this.txtNRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtNRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.MedRegNum;
             this.txtNRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtNRN.ForeColor = System.Drawing.Color.Gray;
             this.txtNRN.Location = new System.Drawing.Point(165, 24);
@@ -96,7 +96,7 @@
             // txtNRS
             // 
             this.txtNRS.DBReference = "Sanitary_Register_Num";
-            this.txtNRS.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtNRS.FieldType = Sigma_Controls.TxtSigma.FieldTypes.MedRegNum;
             this.txtNRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtNRS.ForeColor = System.Drawing.Color.Gray;
             this.txtNRS.Location = new System.Drawing.Point(165, 57);
@@ -120,7 +120,7 @@
             // txtActivePrinciple
             // 
             this.txtActivePrinciple.DBReference = "ActivePrincipleID";
-            this.txtActivePrinciple.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtActivePrinciple.FieldType = Sigma_Controls.TxtSigma.FieldTypes.MedRegNum;
             this.txtActivePrinciple.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtActivePrinciple.ForeColor = System.Drawing.Color.Gray;
             this.txtActivePrinciple.Location = new System.Drawing.Point(165, 125);
@@ -223,39 +223,6 @@
             this.lblIVA.TabIndex = 15;
             this.lblIVA.Text = "IVA";
             // 
-            // chkReplaceable
-            // 
-            this.chkReplaceable.AutoSize = true;
-            this.chkReplaceable.Location = new System.Drawing.Point(170, 297);
-            this.chkReplaceable.Margin = new System.Windows.Forms.Padding(2);
-            this.chkReplaceable.Name = "chkReplaceable";
-            this.chkReplaceable.Size = new System.Drawing.Size(86, 17);
-            this.chkReplaceable.TabIndex = 16;
-            this.chkReplaceable.Text = "Replaceable";
-            this.chkReplaceable.UseVisualStyleBackColor = true;
-            // 
-            // chkGeneric
-            // 
-            this.chkGeneric.AutoSize = true;
-            this.chkGeneric.Location = new System.Drawing.Point(170, 319);
-            this.chkGeneric.Margin = new System.Windows.Forms.Padding(2);
-            this.chkGeneric.Name = "chkGeneric";
-            this.chkGeneric.Size = new System.Drawing.Size(63, 17);
-            this.chkGeneric.TabIndex = 17;
-            this.chkGeneric.Text = "Generic";
-            this.chkGeneric.UseVisualStyleBackColor = true;
-            // 
-            // chkRecipe
-            // 
-            this.chkRecipe.AutoSize = true;
-            this.chkRecipe.Location = new System.Drawing.Point(170, 341);
-            this.chkRecipe.Margin = new System.Windows.Forms.Padding(2);
-            this.chkRecipe.Name = "chkRecipe";
-            this.chkRecipe.Size = new System.Drawing.Size(60, 17);
-            this.chkRecipe.TabIndex = 18;
-            this.chkRecipe.Text = "Recipe";
-            this.chkRecipe.UseVisualStyleBackColor = true;
-            // 
             // lblTechSheetDoc
             // 
             this.lblTechSheetDoc.AutoSize = true;
@@ -308,6 +275,9 @@
             // 
             // pnlAddEditDrugs
             // 
+            this.pnlAddEditDrugs.Controls.Add(this.chkRecipe);
+            this.pnlAddEditDrugs.Controls.Add(this.chkGeneric);
+            this.pnlAddEditDrugs.Controls.Add(this.chkReplaceable);
             this.pnlAddEditDrugs.Controls.Add(this.cmbLabId);
             this.pnlAddEditDrugs.Controls.Add(this.cmbIVAId);
             this.pnlAddEditDrugs.Controls.Add(this.lblError);
@@ -324,11 +294,8 @@
             this.pnlAddEditDrugs.Controls.Add(this.txtName);
             this.pnlAddEditDrugs.Controls.Add(this.lblTechSheetDoc);
             this.pnlAddEditDrugs.Controls.Add(this.lblName);
-            this.pnlAddEditDrugs.Controls.Add(this.chkRecipe);
             this.pnlAddEditDrugs.Controls.Add(this.txtActivePrinciple);
-            this.pnlAddEditDrugs.Controls.Add(this.chkGeneric);
             this.pnlAddEditDrugs.Controls.Add(this.lblActivePrinciple);
-            this.pnlAddEditDrugs.Controls.Add(this.chkReplaceable);
             this.pnlAddEditDrugs.Controls.Add(this.txtContent);
             this.pnlAddEditDrugs.Controls.Add(this.lblIVA);
             this.pnlAddEditDrugs.Controls.Add(this.lblContent);
@@ -341,6 +308,58 @@
             this.pnlAddEditDrugs.Name = "pnlAddEditDrugs";
             this.pnlAddEditDrugs.Size = new System.Drawing.Size(400, 517);
             this.pnlAddEditDrugs.TabIndex = 24;
+            // 
+            // chkRecipe
+            // 
+            this.chkRecipe.AutoSize = true;
+            this.chkRecipe.DBReference = "NeedsRecipe";
+            this.chkRecipe.Location = new System.Drawing.Point(165, 336);
+            this.chkRecipe.Name = "chkRecipe";
+            this.chkRecipe.Size = new System.Drawing.Size(60, 17);
+            this.chkRecipe.TabIndex = 26;
+            this.chkRecipe.Text = "Recipe";
+            this.chkRecipe.UseVisualStyleBackColor = true;
+            // 
+            // chkGeneric
+            // 
+            this.chkGeneric.AutoSize = true;
+            this.chkGeneric.DBReference = "IsGeneric";
+            this.chkGeneric.Location = new System.Drawing.Point(165, 314);
+            this.chkGeneric.Name = "chkGeneric";
+            this.chkGeneric.Size = new System.Drawing.Size(63, 17);
+            this.chkGeneric.TabIndex = 26;
+            this.chkGeneric.Text = "Generic";
+            this.chkGeneric.UseVisualStyleBackColor = true;
+            // 
+            // chkReplaceable
+            // 
+            this.chkReplaceable.AutoSize = true;
+            this.chkReplaceable.DBReference = "Replaceable";
+            this.chkReplaceable.Location = new System.Drawing.Point(165, 292);
+            this.chkReplaceable.Name = "chkReplaceable";
+            this.chkReplaceable.Size = new System.Drawing.Size(86, 17);
+            this.chkReplaceable.TabIndex = 26;
+            this.chkReplaceable.Text = "Replaceable";
+            this.chkReplaceable.UseVisualStyleBackColor = true;
+            // 
+            // cmbLabId
+            // 
+            this.cmbLabId.FormattingEnabled = true;
+            this.cmbLabId.Location = new System.Drawing.Point(387, 194);
+            this.cmbLabId.Name = "cmbLabId";
+            this.cmbLabId.Size = new System.Drawing.Size(10, 21);
+            this.cmbLabId.TabIndex = 25;
+            this.cmbLabId.UseWaitCursor = true;
+            this.cmbLabId.Visible = false;
+            // 
+            // cmbIVAId
+            // 
+            this.cmbIVAId.FormattingEnabled = true;
+            this.cmbIVAId.Location = new System.Drawing.Point(387, 254);
+            this.cmbIVAId.Name = "cmbIVAId";
+            this.cmbIVAId.Size = new System.Drawing.Size(10, 21);
+            this.cmbIVAId.TabIndex = 25;
+            this.cmbIVAId.Visible = false;
             // 
             // lblError
             // 
@@ -368,25 +387,6 @@
             this.cmbPharmaceuticLab.Name = "cmbPharmaceuticLab";
             this.cmbPharmaceuticLab.Size = new System.Drawing.Size(179, 21);
             this.cmbPharmaceuticLab.TabIndex = 24;
-            // 
-            // cmbIVAId
-            // 
-            this.cmbIVAId.FormattingEnabled = true;
-            this.cmbIVAId.Location = new System.Drawing.Point(387, 254);
-            this.cmbIVAId.Name = "cmbIVAId";
-            this.cmbIVAId.Size = new System.Drawing.Size(10, 21);
-            this.cmbIVAId.TabIndex = 25;
-            this.cmbIVAId.Visible = false;
-            // 
-            // cmbLabId
-            // 
-            this.cmbLabId.FormattingEnabled = true;
-            this.cmbLabId.Location = new System.Drawing.Point(387, 194);
-            this.cmbLabId.Name = "cmbLabId";
-            this.cmbLabId.Size = new System.Drawing.Size(10, 21);
-            this.cmbLabId.TabIndex = 25;
-            this.cmbLabId.UseWaitCursor = true;
-            this.cmbLabId.Visible = false;
             // 
             // frmAddEditDrugs
             // 
@@ -420,9 +420,6 @@
         private System.Windows.Forms.Label lblContent;
         private Sigma_Controls.TxtSigma txtContent;
         private System.Windows.Forms.Label lblIVA;
-        private System.Windows.Forms.CheckBox chkReplaceable;
-        private System.Windows.Forms.CheckBox chkGeneric;
-        private System.Windows.Forms.CheckBox chkRecipe;
         private System.Windows.Forms.Label lblTechSheetDoc;
         private System.Windows.Forms.Label lblProspect;
         private System.Windows.Forms.Button btnBrowseTechSheetDoc;
@@ -434,5 +431,8 @@
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.ComboBox cmbIVAId;
         private System.Windows.Forms.ComboBox cmbLabId;
+        private Sigma_Controls.CheckBoxSigma chkRecipe;
+        private Sigma_Controls.CheckBoxSigma chkGeneric;
+        private Sigma_Controls.CheckBoxSigma chkReplaceable;
     }
 }

@@ -33,7 +33,7 @@ namespace RegisterEditDrugs
 
         private DataSet dts = new DataSet();
 
-        public frmAddEditDrugs()//(string drug)
+        public frmAddEditDrugs()
         {
             InitializeComponent();
             _edit = false;
@@ -41,7 +41,7 @@ namespace RegisterEditDrugs
             CenterPanel(pnlAddEditDrugs);
         }
 
-        public frmAddEditDrugs/*()*/(string drug)
+        public frmAddEditDrugs(string drug)
         {
             InitializeComponent();
             _edit = true;
@@ -61,14 +61,11 @@ namespace RegisterEditDrugs
             fillCombo(cmbPharmaceuticLab.DBReference, cmbPharmaceuticLab, "Denomination", cmbLabId);
             fillCombo(cmbIVA.DBReference, cmbIVA, "value", cmbIVAId);
 
-            //txtNRN.Leave += new EventHandler(NRN_Leave);
-
         }
 
         private void btnEditAdd_Click(object sender, EventArgs e)
         {
             if (_edit)
-                //SearchAndFillData();
                 editReg(pnlAddEditDrugs.Controls);
             else
                 AddReg();
@@ -85,17 +82,6 @@ namespace RegisterEditDrugs
             DataSet ds = db.PortarPerConsulta(query);
             DataTable dt = ds.Tables[0];
 
-            //foreach (DataColumn c in dts.Tables["Taula"].Columns)
-            //{
-
-            //}
-
-            ////////////////////////////////////////////////////////
-            //System.Windows.Controls.ComboBoxItem item = new System.Windows.Controls.ComboBoxItem();
-            //item.Tag = 1;
-            //item.Content = "item 1";
-            //cmbPharmaceuticLab.Items.Add(item);
-            ////////////////////////////////////////////////////////
             addEdDrugs.AddComboBoxData(dt, cmb, cmbId);
 
 
@@ -115,6 +101,7 @@ namespace RegisterEditDrugs
                 DataRow r = dts.Tables["Taula"].NewRow();
                 Label lblErrorText = (Label)pnlAddEditDrugs.Controls.Find("lblError", false)[0];
 
+                r["id"] = 1;
                 foreach (var control in pnlAddEditDrugs.Controls)
                 {
                     if (control is TxtSigma)
@@ -122,7 +109,10 @@ namespace RegisterEditDrugs
                         TxtSigma cntrl = (TxtSigma)control;
                         if (cntrl.IsFieldCorrect())
                         {
-                            r[cntrl.DBReference] = cntrl.Text;
+                            if (cntrl.DBReference.Equals("Register_Number") || cntrl.DBReference.Equals("Sanitary_Register_Num") || cntrl.DBReference.Equals("ActivePrincipleID"))
+                                r[cntrl.DBReference] = int.Parse(cntrl.Text);
+                            else
+                                r[cntrl.DBReference] = cntrl.Text;
                         }
                         else
                         {
@@ -224,109 +214,80 @@ namespace RegisterEditDrugs
 
         private void AddReg()
         {
-
-            //Num. registre nacional (Clau) 
-            //Num de registre sanitari      
-            //Denominació comercial         
-            //Principi actiu                
-            //Contingut                     
-            //Laboratori farmacèutic        
-            //Preu de venda(sense IVA)      
-            //Iva(Tipus aplicable)          
-            //Si es substituïble o no       
-            //Si és genèric o no            
-            //Si és obligatòria la recepta  
-
             DBUtils.DBUtilities db = new DBUtils.DBUtilities();
             db.Conexion();
 
             string query = "SELECT * FROM Drugs";
             dts = db.PortarPerConsulta(query);
+            Boolean error = false;
 
             DataRow dr = dts.Tables[0].NewRow();
 
-
-            //foreach (var control in pnlAddEditDrugs.Controls)
-            //{
-            //    if (control is TxtSigma)
-            //    {
-            //        TxtSigma cntrl = (TxtSigma)control;
-            //        if (cntrl.IsFieldCorrect())
-            //        {
-            //            dr[cntrl.DBReference] = cntrl.Text;
-            //        }
-            //        else
-            //        {
-            //            cntrl.Text = "";
-            //            cntrl.Focus();
-
-            //            break;
-            //        }
-
-            //    }
-            //    else if (control is cmbSigma)
-            //    {
-            //        cmbSigma cntrl = (cmbSigma)control;
-            //        if (cntrl.SelectedIndex != 0)
-            //        {
-            //            dr[cntrl.DBReference] = cntrl.SelectedIndex;
-            //        }
-            //        else
-            //        {
-            //            cntrl.Focus();
-
-            //            break;
-            //        }
-            //    }
-            //}
-
             try
             {
-                dr["Register_Number"] = int.Parse(txtNRN.Text);
-                dr["Sanitary_Register_Num"] = int.Parse(txtNRS.Text);
-                dr["CommercialName"] = txtName.Text;
-                dr["ActivePrincipleID"] = txtActivePrinciple.Text;
-                dr["Content"] = txtContent.Text;
+                dr["id"] = 1;
+                foreach (var control in pnlAddEditDrugs.Controls)
+                {
+                    if (control is TxtSigma) 
+                    {
+                        TxtSigma ctrl = (TxtSigma)control;
+                        if (ctrl.IsFieldCorrect())
+                        {
+                            if (ctrl.DBReference.Equals("Register_Number") || ctrl.DBReference.Equals("Sanitary_Register_Num") || ctrl.DBReference.Equals("ActivePrincipleID"))
+                                dr[ctrl.DBReference] = int.Parse(ctrl.Text);
+                            else
+                                dr[ctrl.DBReference] = ctrl.Text;
+                    }
+                    else
+                    {
+                            ctrl.Text = "";
+                            ctrl.Focus();
+                            error = true;
 
-                //MessageBox.Show(cmbLabId.Items[int.Parse(cmbPharmaceuticLab.SelectedIndex.ToString())].ToString());
-                //dr["LabId"] = int.Parse(cmbPharmaceuticLab.SelectedIndex.ToString());
-                //int mansana = cmbPharmaceuticLab.SelectedIndex-1;
-                //int painapel = cmbIVA.SelectedIndex-1;
-                dr["LabId"] = int.Parse(cmbLabId.Items[cmbPharmaceuticLab.SelectedIndex - 1].ToString());
+                            break;
+                    }
 
-                //MessageBox.Show(cmbLabId.Items[3].ToString());
+                }
+                    else if (control is cmbSigma)
+                    {
+                        cmbSigma ctrl = (cmbSigma)control;
+                        if (ctrl.SelectedIndex != 0)
+                        {
+                            if (ctrl.DBReference.Equals("Laboratories"))
+                                dr["LabId"] = int.Parse(cmbLabId.Items[cmbPharmaceuticLab.SelectedIndex - 1].ToString());
+                            else if (ctrl.DBReference.Equals("IVA"))
+                                dr["IVAId"] = int.Parse(cmbIVAId.Items[cmbIVA.SelectedIndex - 1].ToString());
+                        }
+                        else
+                        {
+                            ctrl.Focus();
+                            error = true;
+                            break;
+                        }
+                    }
+                    else if (control is CheckBoxSigma)
+                    {
+                        CheckBoxSigma cntrl = (CheckBoxSigma)control;
 
-                dr["Price"] = double.Parse(txtBasePrice.Text);
-                //dr["IVAId"] = int.Parse(cmbIVA.SelectedIndex.ToString());
-                dr["IVAId"] = int.Parse(cmbIVAId.Items[cmbIVA.SelectedIndex - 1].ToString());
-
-                //Documentation
-                //   Prospectus
-
-                if (chkReplaceable.Checked)
-                    dr["Replaceable"] = 1;
-                else
-                    dr["Replaceable"] = 0;
-
-                if (chkGeneric.Checked)
-                    dr["IsGeneric"] = 1;
-                else
-                    dr["IsGeneric"] = 0;
-
-                if (chkRecipe.Checked)
-                    dr["NeedsRecipe"] = 1;
-                else
-                    dr["NeedsRecipe"] = 0;
-
+                        if (cntrl.Checked)
+                            dr[cntrl.DBReference] = 1;
+                        else
+                            dr[cntrl.DBReference] = 0;
+                    }
+                }
 
                 dts.Tables[0].Rows.Add(dr);
                 db.Actualizar(query, "Taula", dts);
+                if (error)
+                    MessageBox.Show("Operation Failed");
+                else
+                    MessageBox.Show("Medicine Added");
 
-                MessageBox.Show("Medicine Added");
+                clearControls();
             }
             catch (Exception e)
             {
-                MessageBox.Show("ERROR");
+                //MessageBox.Show("ERROR");
                 MessageBox.Show(e.ToString());
             }
 
@@ -336,18 +297,25 @@ namespace RegisterEditDrugs
         {
 
 
-            foreach (var txt in Controls)
+            foreach (var txt in pnlAddEditDrugs.Controls)
             {
-                if (txt is TextBox)
+                if (txt is TxtSigma)
                 {
-                    TextBox t = (TextBox)txt;
+                    TxtSigma t = (TxtSigma)txt;
                     t.Text = "";
                 }
-                else if (txt is CheckBox)
+                else if (txt is CheckBoxSigma)
                 {
 
-                    CheckBox t = (CheckBox)txt;
+                    CheckBoxSigma t = (CheckBoxSigma)txt;
                     t.Checked = false;
+                }
+
+                else if (txt is ComboBox)
+                {
+
+                    ComboBox t = (ComboBox)txt;
+                    t.Text = "Selecciona...";
                 }
 
             }
