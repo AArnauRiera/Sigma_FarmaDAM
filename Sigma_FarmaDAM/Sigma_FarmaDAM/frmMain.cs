@@ -1,4 +1,5 @@
 ﻿using Mantein;
+using Manteniment;
 using RegisterEditDrugs;
 using SellSystem;
 using System;
@@ -140,7 +141,7 @@ namespace Sigma_FarmaDAM
 
         private void btnEditClient_Click(object sender, EventArgs e)
         {
-            AddNewTab("Editar Cliente", new UserManagement());
+            AddNewTab("Editar Cliente", new UserManagement(true));
         }
 
         private void TabControlMainMouseDown(object sender, MouseEventArgs e)
