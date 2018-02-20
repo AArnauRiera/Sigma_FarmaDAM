@@ -16,11 +16,15 @@ namespace Sigma_FarmaDAM
 {
     public partial class frmMain : Form
     {
+
+
         private int childFormNumber = 0;
 
         public frmMain()
         {
+
             InitializeComponent();
+
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -176,5 +180,6 @@ namespace Sigma_FarmaDAM
         {
             AddNewTab("Laboratorios", new frmManteinLaboratories());
         }
+
     }
 }
