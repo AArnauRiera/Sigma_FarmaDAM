@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LoginControl;
 
 namespace UserRegister
 {
@@ -17,9 +18,17 @@ namespace UserRegister
             InitializeComponent();
         }
 
-        private void txtSigma2_TextChanged(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
+            LoginControl.LoginControl control = new LoginControl.LoginControl();
 
+            if(control.CheckUserIsReal(tbxUsername, lblError, "Usuario") && control.CheckUserIsReal(tbxEmail, lblError, "Email"))
+            {
+                if (control.CheckIfPasswordRepeatIsEqual(tbxPassword, tbxRepeatPassword, tbxUsername, lblError))
+                {
+
+                }
+            }
         }
     }
 }

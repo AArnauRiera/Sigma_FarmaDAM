@@ -26,8 +26,12 @@ namespace LoginControl
                 MessageBox.Show(e.ToString());
             }
         }
+        public LoginControl()
+        {
 
-        public bool CheckUserIsReal (TxtSigma userName, Label lblError)
+        }
+
+        public bool CheckUserIsReal (TxtSigma userName, Label lblError, string errorMessage)
         {
             bool isReal = false;
 
@@ -38,7 +42,7 @@ namespace LoginControl
             
             if (!isReal)
             {
-                lblError.Text = "Usuario incorrecto";
+                lblError.Text = errorMessage + " ya existe";
             }
 
             return isReal;
@@ -77,6 +81,29 @@ namespace LoginControl
 
             return isAdmin;
         }
-        
+        public bool CheckIfPasswordRepeatIsEqual (TxtSigma password, TxtSigma repeatPassword, TxtSigma username, Label lblError)
+        {
+            bool isEqual = false;
+            string encryptedPassword = Cryptography.Cryptography.Encrypt(password.Text, username.Text);
+            string encryptedRepeatPassword = Cryptography.Cryptography.Encrypt(repeatPassword.Text, username.Text);
+
+            if (password.IsFieldCorrect())
+            {
+                if(encryptedPassword.Equals(encryptedRepeatPassword))
+                {
+                    isEqual = true;
+                }
+                else
+                {
+                    lblError.Text = "Las contraseñas deben ser iguales";
+                }
+            }
+            else
+            {
+                lblError.Text = "La contraseña no es correcta";
+            }
+
+            return isEqual;
+        }
     }
 }

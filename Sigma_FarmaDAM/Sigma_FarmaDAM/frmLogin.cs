@@ -17,7 +17,7 @@ namespace Login
         {
             control = new LoginControl.LoginControl(tbxUsername.Text);
 
-            if(control.CheckUserIsReal(tbxUsername, lblError))
+            if(control.CheckUserIsReal(tbxUsername, lblError, "Usuario"))
             {
                 if (control.CheckCredentials(tbxUsername, tbxPassword, lblError))
                 {
@@ -32,7 +32,7 @@ namespace Login
         {
             control = new LoginControl.LoginControl(tbxUsername.Text);
 
-            if(control.CheckUserIsReal(tbxUsername, lblError) && control.CheckIfUserIsAdmin(tbxUsername, lblError))
+            if(control.CheckUserIsReal(tbxUsername, lblError, "Usuario") && control.CheckIfUserIsAdmin(tbxUsername, lblError))
             {
                 if (control.CheckCredentials(tbxUsername, tbxPassword, lblError))
                 {

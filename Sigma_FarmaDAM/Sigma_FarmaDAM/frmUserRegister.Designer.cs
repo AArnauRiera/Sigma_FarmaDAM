@@ -46,6 +46,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxRepeatPassword = new Sigma_Controls.TxtSigma();
+            this.chbAdmin = new Sigma_Controls.checkBoxSigma();
+            this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbxName
@@ -63,12 +65,13 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(159, 446);
+            this.btnGuardar.Location = new System.Drawing.Point(160, 517);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(105, 23);
             this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblName
             // 
@@ -100,7 +103,6 @@
             this.tbxLastName1.Size = new System.Drawing.Size(182, 20);
             this.tbxLastName1.TabIndex = 3;
             this.tbxLastName1.Table = null;
-            this.tbxLastName1.TextChanged += new System.EventHandler(this.txtSigma2_TextChanged);
             // 
             // label3
             // 
@@ -227,9 +229,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(64, 397);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Repite Contraseña";
+            this.label1.Text = "Repetir Contraseña";
             // 
             // tbxRepeatPassword
             // 
@@ -244,11 +246,33 @@
             this.tbxRepeatPassword.TabIndex = 18;
             this.tbxRepeatPassword.Table = null;
             // 
+            // chbAdmin
+            // 
+            this.chbAdmin.AutoSize = true;
+            this.chbAdmin.DBReference = "rol";
+            this.chbAdmin.Location = new System.Drawing.Point(201, 435);
+            this.chbAdmin.Name = "chbAdmin";
+            this.chbAdmin.Size = new System.Drawing.Size(89, 17);
+            this.chbAdmin.TabIndex = 20;
+            this.chbAdmin.Text = "Administrador";
+            this.chbAdmin.UseVisualStyleBackColor = true;
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(198, 468);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.TabIndex = 21;
+            // 
             // frmUserRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 503);
+            this.ClientSize = new System.Drawing.Size(437, 565);
+            this.Controls.Add(this.lblError);
+            this.Controls.Add(this.chbAdmin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbxRepeatPassword);
             this.Controls.Add(this.label9);
@@ -294,5 +318,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
         private Sigma_Controls.TxtSigma tbxRepeatPassword;
+        private Sigma_Controls.checkBoxSigma chbAdmin;
+        private System.Windows.Forms.Label lblError;
     }
 }
