@@ -57,7 +57,6 @@ namespace RegisterEditDrugs
 
         private void frmAddEditDrugs_Load(object sender, EventArgs e)
         {
-            AddEditDrugsHelper addEdDrugs = new AddEditDrugsHelper();
             DBUtils.DBUtilities db = new DBUtils.DBUtilities();
 
             fillCombo(cmbPharmaceuticLab.DBReference, cmbPharmaceuticLab, "Denomination", cmbLabId);
