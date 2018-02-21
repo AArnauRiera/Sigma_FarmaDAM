@@ -33,7 +33,9 @@ namespace Sigma_Controls
             Phone,
             Password,
             Date,
-            MedRegNum
+            MedRegNum,
+            MedRegName,
+            MedRegContent
 
         }
 
@@ -127,6 +129,12 @@ namespace Sigma_Controls
                     break;
                 case FieldTypes.MedRegNum:
                     regularExpresion = @"^[0-9]{1,5}$";
+                    break;
+                case FieldTypes.MedRegName:
+                    regularExpresion = @"^[a-zA-Z0-9]{1,100}$";
+                    break;
+                case FieldTypes.MedRegContent:
+                    regularExpresion = @"^[a-zA-Z0-9]{0,100}$";
                     break;
                 default:
                     regularExpresion = "";

@@ -38,6 +38,7 @@ namespace RegisterEditDrugs
             InitializeComponent();
             _edit = false;
             btnEditAdd.Text = "Add";
+            lblTitol.Text = "Añadir medicamentos";
             CenterPanel(pnlAddEditDrugs);
         }
 
@@ -46,6 +47,7 @@ namespace RegisterEditDrugs
             InitializeComponent();
             _edit = true;
             btnEditAdd.Text = "Edit";
+            lblTitol.Text = "Editar medicamentos";
             CenterPanel(pnlAddEditDrugs);
             DBUtils.DBUtilities db = new DBUtils.DBUtilities();
             db.Conexion();
@@ -72,7 +74,7 @@ namespace RegisterEditDrugs
 
         }
 
-        private void fillCombo(String DBReference, cmbSigma cmb, String tableName, ComboBox cmbId)
+        private void fillCombo(String DBReference, cbxSigma cmb, String tableName, ComboBox cmbId)
         {
 
             AddEditDrugsHelper addEdDrugs = new AddEditDrugsHelper();
@@ -123,9 +125,9 @@ namespace RegisterEditDrugs
                         }
 
                     }
-                    else if (control is cmbSigma)
+                    else if (control is cbxSigma)
                     {
-                        cmbSigma cntrl = (cmbSigma)control;
+                        cbxSigma cntrl = (cbxSigma)control;
                         if (cntrl.SelectedIndex != 0)
                         {
                             r[cntrl.DBReference] = cntrl.SelectedIndex;
@@ -195,9 +197,9 @@ namespace RegisterEditDrugs
         //            }
 
         //        }
-        //        else if (control is cmbSigma)
+        //        else if (control is cbxSigma)
         //        {
-        //            cmbSigma cntrl = (cmbSigma)control;
+        //            cbxSigma cntrl = (cbxSigma)control;
         //            if (cntrl.SelectedIndex != 0)
         //            {
         //                r[cntrl.DBReference] = cntrl.SelectedIndex;
@@ -231,10 +233,12 @@ namespace RegisterEditDrugs
                     if (control is TxtSigma) 
                     {
                         TxtSigma ctrl = (TxtSigma)control;
-                        if (ctrl.IsFieldCorrect())
+                        if (ctrl.IsFieldCorrect() || ctrl.DBReference.Equals("Price"))
                         {
                             if (ctrl.DBReference.Equals("Register_Number") || ctrl.DBReference.Equals("Sanitary_Register_Num") || ctrl.DBReference.Equals("ActivePrincipleID"))
                                 dr[ctrl.DBReference] = int.Parse(ctrl.Text);
+                            else if (ctrl.DBReference.Equals("Price"))
+                                dr[ctrl.DBReference] = double.Parse(ctrl.Text);
                             else
                                 dr[ctrl.DBReference] = ctrl.Text;
                     }
@@ -248,9 +252,9 @@ namespace RegisterEditDrugs
                     }
 
                 }
-                    else if (control is cmbSigma)
+                    else if (control is cbxSigma)
                     {
-                        cmbSigma ctrl = (cmbSigma)control;
+                        cbxSigma ctrl = (cbxSigma)control;
                         if (ctrl.SelectedIndex != 0)
                         {
                             if (ctrl.DBReference.Equals("Laboratories"))
@@ -276,14 +280,24 @@ namespace RegisterEditDrugs
                     }
                 }
 
-                dts.Tables[0].Rows.Add(dr);
-                db.Actualizar(query, "Taula", dts);
-                if (error)
-                    MessageBox.Show("Operation Failed");
-                else
+                if (!error)
+                {
+                    lblError.Text = "";
+                    dts.Tables[0].Rows.Add(dr);
+                    db.Actualizar(query, "Taula", dts);
                     MessageBox.Show("Medicine Added");
+                    clearControls();
+                }
+                else
+                {
+                    lblError.Text = "Algun campo es incorrecto";
+                }
 
-                clearControls();
+                //if (error)
+                //    MessageBox.Show("Operation Failed");
+                //else
+
+                
             }
             catch (Exception e)
             {
@@ -363,6 +377,21 @@ namespace RegisterEditDrugs
             //    editReg(pnlAddEditDrugs.Controls);
             //else
             //    AddReg();
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TxtSigma).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ namespace RegisterEditDrugs
 {
     class AddEditDrugsHelper
     {
-        public void AddComboBoxData(DataTable t, cmbSigma comboBox, ComboBox cmbId)
+        public void AddComboBoxData(DataTable t, cbxSigma comboBox, ComboBox cmbId)
         {
 
             comboBox.Items.Add("Selecciona...");
@@ -36,9 +36,9 @@ namespace RegisterEditDrugs
         {
             foreach (Control control in Controls)
             {
-                if (control is cmbSigma)
+                if (control is cbxSigma)
                 {
-                    cmbSigma text = (cmbSigma)control;
+                    cbxSigma text = (cbxSigma)control;
                     text.DataBindings.Clear();
                     foreach (DataColumn c in dts.Tables["Taula"].Columns)
                     {
