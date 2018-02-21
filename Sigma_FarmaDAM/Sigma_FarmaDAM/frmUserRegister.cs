@@ -13,6 +13,7 @@ namespace UserRegister
 {
     public partial class frmUserRegister : Form
     {
+        private bool exit = false;
         public frmUserRegister()
         {
             InitializeComponent();
@@ -20,14 +21,44 @@ namespace UserRegister
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            Save();
+        }
+
+        private void Save()
+        {
             LoginControl.LoginControl control = new LoginControl.LoginControl();
 
-            if(control.CheckUserIsReal(tbxUsername, lblError, "Usuario") && control.CheckUserIsReal(tbxEmail, lblError, "Email"))
+            if (!control.CheckUserIsReal(tbxUsername, lblError, "Usuario") && !control.CheckUserIsReal(tbxEmail, lblError, "Email") && !control.CheckUserIsReal(tbxDNI, lblError, "DNI"))
             {
                 if (control.CheckIfPasswordRepeatIsEqual(tbxPassword, tbxRepeatPassword, tbxUsername, lblError))
                 {
-
+                    exit = control.SaveChanges(Controls);
                 }
+            }
+        }
+
+        private void closeFrm ()
+        {
+            if (exit)
+            {
+                Close();
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            exit = true;
+            closeFrm();
+        }
+
+        private void frmUserRegister_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Enter: Save();
+                    break;
+                case Keys.Escape: closeFrm();
+                    break;
             }
         }
     }

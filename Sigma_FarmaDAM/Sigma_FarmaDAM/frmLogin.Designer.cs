@@ -147,6 +147,7 @@
             this.Controls.Add(this.pnltxt);
             this.Name = "frmLogin";
             this.Text = "frmLogin";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
             this.pnltxt.ResumeLayout(false);
             this.pnltxt.PerformLayout();
             this.panel1.ResumeLayout(false);

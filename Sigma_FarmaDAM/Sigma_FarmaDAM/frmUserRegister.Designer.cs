@@ -48,6 +48,7 @@
             this.tbxRepeatPassword = new Sigma_Controls.TxtSigma();
             this.chbAdmin = new Sigma_Controls.checkBoxSigma();
             this.lblError = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbxName
@@ -65,7 +66,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(160, 517);
+            this.btnGuardar.Location = new System.Drawing.Point(93, 518);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(105, 23);
             this.btnGuardar.TabIndex = 1;
@@ -266,11 +267,22 @@
             this.lblError.Size = new System.Drawing.Size(0, 13);
             this.lblError.TabIndex = 21;
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(239, 518);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(105, 23);
+            this.btnClose.TabIndex = 22;
+            this.btnClose.Text = "Cancelar";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmUserRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 565);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.chbAdmin);
             this.Controls.Add(this.label1);
@@ -293,6 +305,7 @@
             this.Controls.Add(this.tbxName);
             this.Name = "frmUserRegister";
             this.Text = "frmUserRegister";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUserRegister_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,5 +333,6 @@
         private Sigma_Controls.TxtSigma tbxRepeatPassword;
         private Sigma_Controls.checkBoxSigma chbAdmin;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Button btnClose;
     }
 }

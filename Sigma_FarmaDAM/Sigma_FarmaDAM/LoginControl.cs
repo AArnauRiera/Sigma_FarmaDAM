@@ -35,15 +35,20 @@ namespace LoginControl
         {
             bool isReal = false;
 
-            if (dts.Tables[0].Rows.Count > 0 && userName.Text == dts.Tables[0].Rows[0][userName.DBReference].ToString())
+            if (!String.IsNullOrEmpty(userName.Text))
             {
-                isReal = true;
-            }
-            
-            if (!isReal)
+                if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0 && userName.Text == dts.Tables[0].Rows[0][userName.DBReference].ToString())
+                {
+                    isReal = true;
+                }
+                else
+                {
+                    lblError.Text = errorMessage + " ya existe";
+                }
+            } else
             {
-                lblError.Text = errorMessage + " ya existe";
-            }
+                lblError.Text = errorMessage + " no puede dejarse vacío";
+            }            
 
             return isReal;
         }
@@ -104,6 +109,106 @@ namespace LoginControl
             }
 
             return isEqual;
+        }
+
+        public bool CheckControlsFormat(Control.ControlCollection Controls)
+        {
+            bool error = false;
+
+            foreach (var control in Controls)
+            {
+                if (control is TxtSigma)
+                {
+                    TxtSigma cntrl = (TxtSigma)control;
+                    if (!cntrl.IsFieldCorrect() || String.IsNullOrWhiteSpace(cntrl.Text))
+                    {
+                        error = true;
+                        cntrl.Text = "";
+                    }
+                }
+                else if (control is cbxSigma)
+                {
+                    cbxSigma cntrl = (cbxSigma)control;
+                    if (cntrl.SelectedIndex == 0)
+                    {
+                        error = true;
+                    }
+                }
+            }
+
+            return error;
+        }
+
+        public DataRow CreateDataRowFromControls(DataRow r, Control.ControlCollection controls)
+        {
+            foreach (var control in controls)
+            {
+                if (control is TxtSigma)
+                {
+                    TxtSigma cntrl = (TxtSigma)control;
+                    if (!String.IsNullOrWhiteSpace(cntrl.DBReference))
+                    {
+                        if (cntrl.DBReference == "password")
+                        {
+                            r[cntrl.DBReference] = Cryptography.Cryptography.Encrypt(cntrl.Text, controls.Find("tbxUsername", false)[0].Text);
+
+                        }
+                        else
+                        {
+                            r[cntrl.DBReference] = cntrl.Text;
+                        }
+                    }
+                }
+                else if (control is checkBoxSigma)
+                {
+                    checkBoxSigma cntrl = (checkBoxSigma)control;
+                    r[cntrl.DBReference] = cntrl.Enabled;
+                }
+            }
+            return r;
+        }
+
+        public bool SaveChanges(Control.ControlCollection Controls)
+        {
+            DBUtilities db = new DBUtilities();
+            DataSet dts;
+            DataRow r;
+            TxtSigma userName = (TxtSigma)Controls.Find("tbxUsername", false)[0];
+
+            Label lblErrorText = (Label)Controls.Find("lblError", false)[0];
+
+            bool errorMessage = false;
+            bool correct = false;
+            string query = "SELECT * FROM Seller WHERE username='" + userName.Text + "'";
+            lblErrorText.Text = "";
+
+            try
+            {
+                if (!CheckControlsFormat(Controls))
+                {
+                    dts = db.PortarPerConsulta(query);
+                    r = dts.Tables[0].NewRow();
+                    r = CreateDataRowFromControls(r, Controls);
+                    dts.Tables["Taula"].Rows.Add(r);
+                    correct = db.Actualizar(query, "Taula", dts);
+                    lblErrorText.Text = "";
+                }
+                else
+                {
+                    errorMessage = true;
+                }
+
+                if (errorMessage)
+                {
+                    lblErrorText.Text = "Algun campo es incorrecto";
+                }
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.ToString());
+            }
+            return correct;
         }
     }
 }

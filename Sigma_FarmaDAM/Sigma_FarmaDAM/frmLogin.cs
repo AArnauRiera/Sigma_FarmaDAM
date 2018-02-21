@@ -15,9 +15,13 @@ namespace Login
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Login();
+        }
+        private void Login()
+        {
             control = new LoginControl.LoginControl(tbxUsername.Text);
 
-            if(control.CheckUserIsReal(tbxUsername, lblError, "Usuario"))
+            if (control.CheckUserIsReal(tbxUsername, lblError, "Usuario"))
             {
                 if (control.CheckCredentials(tbxUsername, tbxPassword, lblError))
                 {
@@ -25,9 +29,7 @@ namespace Login
                     DialogResult = DialogResult.OK;
                 }
             }
-
         }
-
         private void btnRegister_Click(object sender, EventArgs e)
         {
             control = new LoginControl.LoginControl(tbxUsername.Text);
@@ -39,6 +41,16 @@ namespace Login
                     frmUserRegister frmUR = new frmUserRegister();
                     frmUR.Show();
                 }
+            }
+        }
+
+        private void frmLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Enter:
+                    Login();
+                    break;
             }
         }
     }
