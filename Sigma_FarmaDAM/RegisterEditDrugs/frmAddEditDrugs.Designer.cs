@@ -188,20 +188,6 @@
             this.lblPharmaceuticLab.TabIndex = 11;
             this.lblPharmaceuticLab.Text = "Laboratorio farmacéutico";
             // 
-            // txtPharmaceuticLab
-            // 
-            this.txtPharmaceuticLab.DBReference = null;
-            this.txtPharmaceuticLab.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtPharmaceuticLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.txtPharmaceuticLab.ForeColor = System.Drawing.Color.Gray;
-            this.txtPharmaceuticLab.Location = new System.Drawing.Point(277, 243);
-            this.txtPharmaceuticLab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPharmaceuticLab.Name = "txtPharmaceuticLab";
-            this.txtPharmaceuticLab.Placeholder = null;
-            this.txtPharmaceuticLab.Size = new System.Drawing.Size(295, 23);
-            this.txtPharmaceuticLab.TabIndex = 10;
-            this.txtPharmaceuticLab.Table = null;
-            // 
             // lblContent
             // 
             this.lblContent.AutoSize = true;
@@ -233,20 +219,6 @@
             this.lblIVA.Size = new System.Drawing.Size(36, 23);
             this.lblIVA.TabIndex = 15;
             this.lblIVA.Text = "IVA";
-            // 
-            // txtIVA
-            // 
-            this.txtIVA.DBReference = null;
-            this.txtIVA.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtIVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.txtIVA.ForeColor = System.Drawing.Color.Gray;
-            this.txtIVA.Location = new System.Drawing.Point(278, 325);
-            this.txtIVA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtIVA.Name = "txtIVA";
-            this.txtIVA.Placeholder = null;
-            this.txtIVA.Size = new System.Drawing.Size(294, 23);
-            this.txtIVA.TabIndex = 14;
-            this.txtIVA.Table = null;
             // 
             // chkReplaceable
             // 

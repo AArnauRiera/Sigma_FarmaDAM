@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using DBUtils;
 using System.Data;
 using Sigma_Controls;
+using System.Threading.Tasks;
 
 namespace LoginControl
 {
@@ -51,6 +52,41 @@ namespace LoginControl
             }            
 
             return isReal;
+        }
+
+        public bool CheckControlsErrors (ErrorProvider error, Control.ControlCollection Controls)
+        {
+            var isCorrect = false;
+
+            foreach (var control in Controls)
+            {
+                if (control is TxtSigma)
+                {
+                    TxtSigma cntrl = (TxtSigma)control;
+                    if (String.IsNullOrWhiteSpace(cntrl.Text))
+                    {
+                        error.SetError(cntrl, "Este campo no puede estar vacío");
+                        isCorrect = false;
+                    }
+                    else if (cntrl.IsFieldCorrect())
+                    {
+                        error.SetError(cntrl, "Formato Incorrecto");
+                        isCorrect = false;
+                    }
+                }
+                else if (control is cbxSigma)
+                {
+                    cbxSigma cntrl = (cbxSigma)control;
+                    if (cntrl.SelectedIndex == 0)
+                    {
+                        error.SetError(cntrl, "No se ha seleccionado un campo valido");
+                        isCorrect = false;
+                    }
+                }
+            }
+            
+
+            return isCorrect;
         }
 
         public bool CheckCredentials (TxtSigma userName, TxtSigma password, Label lblError)

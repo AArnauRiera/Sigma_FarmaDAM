@@ -12,6 +12,7 @@ namespace Login
         {
             InitializeComponent();
             lblError.Text = "";
+            control = new LoginControl.LoginControl(tbxUsername.Text);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -20,9 +21,7 @@ namespace Login
         }
         private void Login()
         {
-            control = new LoginControl.LoginControl(tbxUsername.Text);
-
-            if (control.CheckUserIsReal(tbxUsername, lblError, "Usuario"))
+            if (control.CheckControlsErrors(errorUsername, pnltxt.Controls) && control.CheckUserIsReal(tbxUsername, lblError, "Usuario"))
             {
                 if (control.CheckCredentials(tbxUsername, tbxPassword, lblError))
                 {
@@ -33,9 +32,7 @@ namespace Login
         }
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            control = new LoginControl.LoginControl(tbxUsername.Text);
-
-            if(control.CheckUserIsReal(tbxUsername, lblError, "Usuario") && control.CheckIfUserIsAdmin(tbxUsername, lblError))
+            if(control.CheckControlsErrors(errorUsername, pnltxt.Controls) && control.CheckUserIsReal(tbxUsername, lblError, "Usuario") && control.CheckIfUserIsAdmin(tbxUsername, lblError))
             {
                 if (control.CheckCredentials(tbxUsername, tbxPassword, lblError))
                 {
