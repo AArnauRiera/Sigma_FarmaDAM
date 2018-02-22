@@ -32,7 +32,11 @@ namespace Sigma_Controls
             Email,
             Phone,
             Password,
-            Date
+            Date,
+            MedRegNum,
+            MedRegName,
+            MedRegContent
+
         }
 
         #endregion
@@ -122,6 +126,15 @@ namespace Sigma_Controls
                     break;
                 case FieldTypes.Date:
                     regularExpresion = @"([0][1-9]|[1][0-9|][2][0-9]|[3][0-1])\/([0][1-9]|[1][0-2])\/[1-2][0-9][0-9][0-9]";
+                    break;
+                case FieldTypes.MedRegNum:
+                    regularExpresion = @"^[0-9]{1,5}$";
+                    break;
+                case FieldTypes.MedRegName:
+                    regularExpresion = @"^[a-zA-Z0-9]{1,100}$";
+                    break;
+                case FieldTypes.MedRegContent:
+                    regularExpresion = @"^[a-zA-Z0-9]{0,100}$";
                     break;
                 default:
                     regularExpresion = "";
