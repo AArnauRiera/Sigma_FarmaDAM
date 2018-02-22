@@ -7,7 +7,7 @@ using Sigma_Controls;
 
 namespace UserManagament
 {
-    public partial class UserManagement : Form
+    public partial class UserManagement : CentredForm
     {
         UserManagementControl control = new UserManagementControl();
 
@@ -19,6 +19,7 @@ namespace UserManagament
         {
             InitializeComponent();
             lblTitle.Text = "Añadir Cliente";
+            CenterPanel(pnlUserManagmnet);
         }
 
         // Para editar
@@ -27,6 +28,7 @@ namespace UserManagament
             InitializeComponent();
             _edit = value;
             lblTitle.Text = "Editar Cliente";
+            CenterPanel(pnlUserManagmnet);
         }
 
         private void UserManagement_Load(object sender, EventArgs e)
