@@ -113,10 +113,6 @@
       <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
       <Name>DBUtils</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Sigma_Controls\Sigma_Controls.csproj">
-      <Project>{bafea927-64a5-4fc5-bcd7-16df3e7c71e4}</Project>
-      <Name>Sigma_Controls</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Mantein\Mantein.csproj">
       <Project>{951a95b0-6b1f-40d7-a091-29ca118d6756}</Project>
       <Name>Mantein</Name>
@@ -128,6 +124,10 @@
     <ProjectReference Include="..\SellSystem\SellSystem\SellSystem.csproj">
       <Project>{85524316-B54F-4D24-A693-858DA712E979}</Project>
       <Name>SellSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma_Controls\Sigma_Controls.csproj">
+      <Project>{bafea927-64a5-4fc5-bcd7-16df3e7c71e4}</Project>
+      <Name>Sigma_Controls</Name>
     </ProjectReference>
     <ProjectReference Include="..\UserManagament\UserManagament.csproj">
       <Project>{FA9EB4D2-FE3B-4B28-9D36-A8CE141CA5D3}</Project>

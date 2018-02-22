@@ -66,11 +66,11 @@
             this.txtNRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.MedRegNum;
             this.txtNRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtNRN.ForeColor = System.Drawing.Color.Gray;
-            this.txtNRN.Location = new System.Drawing.Point(235, 103);
-            this.txtNRN.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNRN.Location = new System.Drawing.Point(277, 34);
+            this.txtNRN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNRN.Name = "txtNRN";
             this.txtNRN.Placeholder = "";
-            this.txtNRN.Size = new System.Drawing.Size(179, 20);
+            this.txtNRN.Size = new System.Drawing.Size(295, 23);
             this.txtNRN.TabIndex = 0;
             this.txtNRN.Table = null;
             this.txtNRN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -78,20 +78,18 @@
             // lblNRN
             // 
             this.lblNRN.AutoSize = true;
-            this.lblNRN.Location = new System.Drawing.Point(90, 106);
-            this.lblNRN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNRN.Location = new System.Drawing.Point(32, 34);
             this.lblNRN.Name = "lblNRN";
-            this.lblNRN.Size = new System.Drawing.Size(141, 13);
+            this.lblNRN.Size = new System.Drawing.Size(231, 23);
             this.lblNRN.TabIndex = 1;
             this.lblNRN.Text = "Número de registro Nacional";
             // 
             // lblNRS
             // 
             this.lblNRS.AutoSize = true;
-            this.lblNRS.Location = new System.Drawing.Point(91, 139);
-            this.lblNRS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNRS.Location = new System.Drawing.Point(45, 74);
             this.lblNRS.Name = "lblNRS";
-            this.lblNRS.Size = new System.Drawing.Size(140, 13);
+            this.lblNRS.Size = new System.Drawing.Size(226, 23);
             this.lblNRS.TabIndex = 3;
             this.lblNRS.Text = "Número de registro Sanitario";
             // 
@@ -101,11 +99,11 @@
             this.txtNRS.FieldType = Sigma_Controls.TxtSigma.FieldTypes.MedRegNum;
             this.txtNRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtNRS.ForeColor = System.Drawing.Color.Gray;
-            this.txtNRS.Location = new System.Drawing.Point(235, 136);
-            this.txtNRS.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNRS.Location = new System.Drawing.Point(277, 74);
+            this.txtNRS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNRS.Name = "txtNRS";
             this.txtNRS.Placeholder = null;
-            this.txtNRS.Size = new System.Drawing.Size(179, 20);
+            this.txtNRS.Size = new System.Drawing.Size(295, 23);
             this.txtNRS.TabIndex = 2;
             this.txtNRS.Table = null;
             this.txtNRS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -113,10 +111,9 @@
             // lblActivePrinciple
             // 
             this.lblActivePrinciple.AutoSize = true;
-            this.lblActivePrinciple.Location = new System.Drawing.Point(158, 205);
-            this.lblActivePrinciple.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblActivePrinciple.Location = new System.Drawing.Point(155, 157);
             this.lblActivePrinciple.Name = "lblActivePrinciple";
-            this.lblActivePrinciple.Size = new System.Drawing.Size(73, 13);
+            this.lblActivePrinciple.Size = new System.Drawing.Size(108, 23);
             this.lblActivePrinciple.TabIndex = 7;
             this.lblActivePrinciple.Text = "Pricipio activo";
             // 
@@ -126,11 +123,11 @@
             this.txtActivePrinciple.FieldType = Sigma_Controls.TxtSigma.FieldTypes.MedRegNum;
             this.txtActivePrinciple.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtActivePrinciple.ForeColor = System.Drawing.Color.Gray;
-            this.txtActivePrinciple.Location = new System.Drawing.Point(235, 202);
-            this.txtActivePrinciple.Margin = new System.Windows.Forms.Padding(2);
+            this.txtActivePrinciple.Location = new System.Drawing.Point(277, 158);
+            this.txtActivePrinciple.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtActivePrinciple.Name = "txtActivePrinciple";
             this.txtActivePrinciple.Placeholder = null;
-            this.txtActivePrinciple.Size = new System.Drawing.Size(179, 20);
+            this.txtActivePrinciple.Size = new System.Drawing.Size(295, 23);
             this.txtActivePrinciple.TabIndex = 6;
             this.txtActivePrinciple.Table = null;
             this.txtActivePrinciple.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -138,10 +135,9 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(139, 172);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Location = new System.Drawing.Point(137, 117);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(92, 13);
+            this.lblName.Size = new System.Drawing.Size(126, 23);
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Nombre comercial";
             // 
@@ -151,21 +147,20 @@
             this.txtName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.MedRegName;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtName.ForeColor = System.Drawing.Color.Gray;
-            this.txtName.Location = new System.Drawing.Point(235, 169);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtName.Location = new System.Drawing.Point(277, 117);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
             this.txtName.Placeholder = null;
-            this.txtName.Size = new System.Drawing.Size(179, 20);
+            this.txtName.Size = new System.Drawing.Size(295, 23);
             this.txtName.TabIndex = 4;
             this.txtName.Table = null;
             // 
             // lblBasePrice
             // 
             this.lblBasePrice.AutoSize = true;
-            this.lblBasePrice.Location = new System.Drawing.Point(168, 298);
-            this.lblBasePrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBasePrice.Location = new System.Drawing.Point(176, 286);
             this.lblBasePrice.Name = "lblBasePrice";
-            this.lblBasePrice.Size = new System.Drawing.Size(63, 13);
+            this.lblBasePrice.Size = new System.Drawing.Size(87, 23);
             this.lblBasePrice.TabIndex = 13;
             this.lblBasePrice.Text = "Precio base";
             // 
@@ -175,11 +170,11 @@
             this.txtBasePrice.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtBasePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtBasePrice.ForeColor = System.Drawing.Color.Gray;
-            this.txtBasePrice.Location = new System.Drawing.Point(235, 295);
-            this.txtBasePrice.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBasePrice.Location = new System.Drawing.Point(277, 286);
+            this.txtBasePrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBasePrice.Name = "txtBasePrice";
             this.txtBasePrice.Placeholder = null;
-            this.txtBasePrice.Size = new System.Drawing.Size(179, 20);
+            this.txtBasePrice.Size = new System.Drawing.Size(295, 23);
             this.txtBasePrice.TabIndex = 12;
             this.txtBasePrice.Table = null;
             this.txtBasePrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -187,20 +182,32 @@
             // lblPharmaceuticLab
             // 
             this.lblPharmaceuticLab.AutoSize = true;
-            this.lblPharmaceuticLab.Location = new System.Drawing.Point(107, 267);
-            this.lblPharmaceuticLab.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPharmaceuticLab.Location = new System.Drawing.Point(62, 242);
             this.lblPharmaceuticLab.Name = "lblPharmaceuticLab";
-            this.lblPharmaceuticLab.Size = new System.Drawing.Size(124, 13);
+            this.lblPharmaceuticLab.Size = new System.Drawing.Size(201, 23);
             this.lblPharmaceuticLab.TabIndex = 11;
             this.lblPharmaceuticLab.Text = "Laboratorio farmacéutico";
+            // 
+            // txtPharmaceuticLab
+            // 
+            this.txtPharmaceuticLab.DBReference = null;
+            this.txtPharmaceuticLab.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtPharmaceuticLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.txtPharmaceuticLab.ForeColor = System.Drawing.Color.Gray;
+            this.txtPharmaceuticLab.Location = new System.Drawing.Point(277, 243);
+            this.txtPharmaceuticLab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPharmaceuticLab.Name = "txtPharmaceuticLab";
+            this.txtPharmaceuticLab.Placeholder = null;
+            this.txtPharmaceuticLab.Size = new System.Drawing.Size(295, 23);
+            this.txtPharmaceuticLab.TabIndex = 10;
+            this.txtPharmaceuticLab.Table = null;
             // 
             // lblContent
             // 
             this.lblContent.AutoSize = true;
-            this.lblContent.Location = new System.Drawing.Point(176, 237);
-            this.lblContent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblContent.Location = new System.Drawing.Point(176, 202);
             this.lblContent.Name = "lblContent";
-            this.lblContent.Size = new System.Drawing.Size(55, 13);
+            this.lblContent.Size = new System.Drawing.Size(87, 23);
             this.lblContent.TabIndex = 9;
             this.lblContent.Text = "Contenido";
             // 
@@ -210,72 +217,119 @@
             this.txtContent.FieldType = Sigma_Controls.TxtSigma.FieldTypes.MedRegContent;
             this.txtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtContent.ForeColor = System.Drawing.Color.Gray;
-            this.txtContent.Location = new System.Drawing.Point(235, 234);
-            this.txtContent.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContent.Location = new System.Drawing.Point(277, 202);
+            this.txtContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContent.Name = "txtContent";
             this.txtContent.Placeholder = null;
-            this.txtContent.Size = new System.Drawing.Size(179, 20);
+            this.txtContent.Size = new System.Drawing.Size(295, 23);
             this.txtContent.TabIndex = 8;
             this.txtContent.Table = null;
             // 
             // lblIVA
             // 
             this.lblIVA.AutoSize = true;
-            this.lblIVA.Location = new System.Drawing.Point(207, 327);
-            this.lblIVA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIVA.Location = new System.Drawing.Point(227, 325);
             this.lblIVA.Name = "lblIVA";
-            this.lblIVA.Size = new System.Drawing.Size(24, 13);
+            this.lblIVA.Size = new System.Drawing.Size(36, 23);
             this.lblIVA.TabIndex = 15;
             this.lblIVA.Text = "IVA";
+            // 
+            // txtIVA
+            // 
+            this.txtIVA.DBReference = null;
+            this.txtIVA.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtIVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.txtIVA.ForeColor = System.Drawing.Color.Gray;
+            this.txtIVA.Location = new System.Drawing.Point(278, 325);
+            this.txtIVA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIVA.Name = "txtIVA";
+            this.txtIVA.Placeholder = null;
+            this.txtIVA.Size = new System.Drawing.Size(294, 23);
+            this.txtIVA.TabIndex = 14;
+            this.txtIVA.Table = null;
+            // 
+            // chkReplaceable
+            // 
+            this.chkReplaceable.AutoSize = true;
+            this.chkReplaceable.Location = new System.Drawing.Point(277, 367);
+            this.chkReplaceable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkReplaceable.Name = "chkReplaceable";
+            this.chkReplaceable.Size = new System.Drawing.Size(123, 27);
+            this.chkReplaceable.TabIndex = 16;
+            this.chkReplaceable.Text = "Replaceable";
+            this.chkReplaceable.UseVisualStyleBackColor = true;
+            // 
+            // chkGeneric
+            // 
+            this.chkGeneric.AutoSize = true;
+            this.chkGeneric.Location = new System.Drawing.Point(277, 394);
+            this.chkGeneric.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkGeneric.Name = "chkGeneric";
+            this.chkGeneric.Size = new System.Drawing.Size(90, 27);
+            this.chkGeneric.TabIndex = 17;
+            this.chkGeneric.Text = "Generic";
+            this.chkGeneric.UseVisualStyleBackColor = true;
+            // 
+            // chkRecipe
+            // 
+            this.chkRecipe.AutoSize = true;
+            this.chkRecipe.Location = new System.Drawing.Point(277, 421);
+            this.chkRecipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkRecipe.Name = "chkRecipe";
+            this.chkRecipe.Size = new System.Drawing.Size(82, 27);
+            this.chkRecipe.TabIndex = 18;
+            this.chkRecipe.Text = "Recipe";
+            this.chkRecipe.UseVisualStyleBackColor = true;
             // 
             // lblTechSheetDoc
             // 
             this.lblTechSheetDoc.AutoSize = true;
-            this.lblTechSheetDoc.Location = new System.Drawing.Point(84, 466);
-            this.lblTechSheetDoc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTechSheetDoc.Location = new System.Drawing.Point(16, 482);
             this.lblTechSheetDoc.Name = "lblTechSheetDoc";
-            this.lblTechSheetDoc.Size = new System.Drawing.Size(152, 13);
+            this.lblTechSheetDoc.Size = new System.Drawing.Size(247, 23);
             this.lblTechSheetDoc.TabIndex = 19;
             this.lblTechSheetDoc.Text = "Documento de la ficha técnica";
             // 
             // lblProspect
             // 
             this.lblProspect.AutoSize = true;
-            this.lblProspect.Location = new System.Drawing.Point(181, 490);
-            this.lblProspect.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProspect.Location = new System.Drawing.Point(176, 536);
             this.lblProspect.Name = "lblProspect";
-            this.lblProspect.Size = new System.Drawing.Size(55, 13);
+            this.lblProspect.Size = new System.Drawing.Size(76, 23);
             this.lblProspect.TabIndex = 20;
             this.lblProspect.Text = "Prospecto";
             // 
             // btnBrowseTechSheetDoc
             // 
-            this.btnBrowseTechSheetDoc.Location = new System.Drawing.Point(242, 463);
-            this.btnBrowseTechSheetDoc.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBrowseTechSheetDoc.BackColor = System.Drawing.Color.LightBlue;
+            this.btnBrowseTechSheetDoc.Location = new System.Drawing.Point(278, 473);
+            this.btnBrowseTechSheetDoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBrowseTechSheetDoc.Name = "btnBrowseTechSheetDoc";
-            this.btnBrowseTechSheetDoc.Size = new System.Drawing.Size(56, 19);
-            this.btnBrowseTechSheetDoc.TabIndex = 18;
+            this.btnBrowseTechSheetDoc.Size = new System.Drawing.Size(133, 40);
+            this.btnBrowseTechSheetDoc.TabIndex = 21;
             this.btnBrowseTechSheetDoc.Text = "Browse...";
-            this.btnBrowseTechSheetDoc.UseVisualStyleBackColor = true;
+            this.btnBrowseTechSheetDoc.UseVisualStyleBackColor = false;
             // 
             // btnBrowseProspect
             // 
-            this.btnBrowseProspect.Location = new System.Drawing.Point(242, 487);
-            this.btnBrowseProspect.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBrowseProspect.BackColor = System.Drawing.Color.LightBlue;
+            this.btnBrowseProspect.Location = new System.Drawing.Point(277, 527);
+            this.btnBrowseProspect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBrowseProspect.Name = "btnBrowseProspect";
-            this.btnBrowseProspect.Size = new System.Drawing.Size(56, 19);
-            this.btnBrowseProspect.TabIndex = 19;
+            this.btnBrowseProspect.Size = new System.Drawing.Size(133, 40);
+            this.btnBrowseProspect.TabIndex = 22;
             this.btnBrowseProspect.Text = "Browse...";
-            this.btnBrowseProspect.UseVisualStyleBackColor = true;
+            this.btnBrowseProspect.UseVisualStyleBackColor = false;
             // 
             // btnEditAdd
             // 
-            this.btnEditAdd.Location = new System.Drawing.Point(244, 558);
-            this.btnEditAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditAdd.BackColor = System.Drawing.Color.LightBlue;
+            this.btnEditAdd.Location = new System.Drawing.Point(277, 594);
+            this.btnEditAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditAdd.Name = "btnEditAdd";
-            this.btnEditAdd.Size = new System.Drawing.Size(56, 19);
-            this.btnEditAdd.TabIndex = 20;
-            this.btnEditAdd.UseVisualStyleBackColor = true;
+            this.btnEditAdd.Size = new System.Drawing.Size(133, 40);
+            this.btnEditAdd.TabIndex = 23;
+            this.btnEditAdd.UseVisualStyleBackColor = false;
             this.btnEditAdd.Click += new System.EventHandler(this.btnEditAdd_Click);
             // 
             // pnlAddEditDrugs
@@ -309,10 +363,11 @@
             this.pnlAddEditDrugs.Controls.Add(this.lblPharmaceuticLab);
             this.pnlAddEditDrugs.Controls.Add(this.txtBasePrice);
             this.pnlAddEditDrugs.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnlAddEditDrugs.Location = new System.Drawing.Point(35, 10);
-            this.pnlAddEditDrugs.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlAddEditDrugs.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlAddEditDrugs.Location = new System.Drawing.Point(47, 12);
+            this.pnlAddEditDrugs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlAddEditDrugs.Name = "pnlAddEditDrugs";
-            this.pnlAddEditDrugs.Size = new System.Drawing.Size(627, 602);
+            this.pnlAddEditDrugs.Size = new System.Drawing.Size(603, 636);
             this.pnlAddEditDrugs.TabIndex = 24;
             // 
             // lblTitol
@@ -408,11 +463,13 @@
             // 
             // frmAddEditDrugs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 674);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1287, 688);
             this.Controls.Add(this.pnlAddEditDrugs);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmAddEditDrugs";
             this.Text = "frmRegisterEditDrugs";
             this.Load += new System.EventHandler(this.frmAddEditDrugs_Load);
