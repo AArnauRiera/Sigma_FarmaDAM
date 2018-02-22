@@ -62,6 +62,7 @@
             this.tbxUsername.Size = new System.Drawing.Size(100, 20);
             this.tbxUsername.TabIndex = 1;
             this.tbxUsername.Table = null;
+            this.tbxUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
             // 
             // tbxPassword
             // 
@@ -75,6 +76,7 @@
             this.tbxPassword.Size = new System.Drawing.Size(100, 20);
             this.tbxPassword.TabIndex = 2;
             this.tbxPassword.Table = null;
+            this.tbxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
             // 
             // label2
             // 

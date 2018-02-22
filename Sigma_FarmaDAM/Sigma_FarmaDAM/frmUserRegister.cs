@@ -33,22 +33,17 @@ namespace UserRegister
                 if (control.CheckIfPasswordRepeatIsEqual(tbxPassword, tbxRepeatPassword, tbxUsername, lblError))
                 {
                     exit = control.SaveChanges(Controls);
+                    if (exit)
+                    {
+                        Close();
+                    }
                 }
-            }
-        }
-
-        private void closeFrm ()
-        {
-            if (exit)
-            {
-                Close();
             }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            exit = true;
-            closeFrm();
+            Close();
         }
 
         private void frmUserRegister_KeyDown(object sender, KeyEventArgs e)
@@ -57,9 +52,12 @@ namespace UserRegister
             {
                 case Keys.Enter: Save();
                     break;
-                case Keys.Escape: closeFrm();
-                    break;
             }
+        }
+
+        private void tbxName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

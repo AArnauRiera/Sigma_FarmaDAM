@@ -63,6 +63,7 @@
             this.tbxName.Size = new System.Drawing.Size(182, 20);
             this.tbxName.TabIndex = 0;
             this.tbxName.Table = null;
+            this.tbxName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUserRegister_KeyDown);
             // 
             // btnGuardar
             // 
@@ -104,6 +105,7 @@
             this.tbxLastName1.Size = new System.Drawing.Size(182, 20);
             this.tbxLastName1.TabIndex = 3;
             this.tbxLastName1.Table = null;
+            this.tbxLastName1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUserRegister_KeyDown);
             // 
             // label3
             // 
@@ -126,6 +128,7 @@
             this.tbxLastName2.Size = new System.Drawing.Size(182, 20);
             this.tbxLastName2.TabIndex = 5;
             this.tbxLastName2.Table = null;
+            this.tbxLastName2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUserRegister_KeyDown);
             // 
             // label4
             // 
@@ -148,6 +151,7 @@
             this.tbxDNI.Size = new System.Drawing.Size(182, 20);
             this.tbxDNI.TabIndex = 7;
             this.tbxDNI.Table = null;
+            this.tbxDNI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUserRegister_KeyDown);
             // 
             // label5
             // 
@@ -170,6 +174,7 @@
             this.tbxEmail.Size = new System.Drawing.Size(182, 20);
             this.tbxEmail.TabIndex = 9;
             this.tbxEmail.Table = null;
+            this.tbxEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUserRegister_KeyDown);
             // 
             // label6
             // 
@@ -192,6 +197,7 @@
             this.tbxUsername.Size = new System.Drawing.Size(182, 20);
             this.tbxUsername.TabIndex = 11;
             this.tbxUsername.Table = null;
+            this.tbxUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUserRegister_KeyDown);
             // 
             // label7
             // 
@@ -214,6 +220,7 @@
             this.tbxPassword.Size = new System.Drawing.Size(182, 20);
             this.tbxPassword.TabIndex = 13;
             this.tbxPassword.Table = null;
+            this.tbxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUserRegister_KeyDown);
             // 
             // label9
             // 
@@ -246,6 +253,7 @@
             this.tbxRepeatPassword.Size = new System.Drawing.Size(182, 20);
             this.tbxRepeatPassword.TabIndex = 18;
             this.tbxRepeatPassword.Table = null;
+            this.tbxRepeatPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUserRegister_KeyDown);
             // 
             // chbAdmin
             // 
@@ -257,6 +265,7 @@
             this.chbAdmin.TabIndex = 20;
             this.chbAdmin.Text = "Administrador";
             this.chbAdmin.UseVisualStyleBackColor = true;
+            this.chbAdmin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUserRegister_KeyDown);
             // 
             // lblError
             // 
@@ -264,8 +273,9 @@
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(198, 468);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.Size = new System.Drawing.Size(29, 13);
             this.lblError.TabIndex = 21;
+            this.lblError.Text = "Error";
             // 
             // btnClose
             // 
