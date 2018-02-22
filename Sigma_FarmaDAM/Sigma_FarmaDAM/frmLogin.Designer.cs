@@ -62,6 +62,7 @@
             this.tbxUsername.Size = new System.Drawing.Size(100, 20);
             this.tbxUsername.TabIndex = 1;
             this.tbxUsername.Table = null;
+            this.tbxUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
             // 
             // tbxPassword
             // 
@@ -75,6 +76,7 @@
             this.tbxPassword.Size = new System.Drawing.Size(100, 20);
             this.tbxPassword.TabIndex = 2;
             this.tbxPassword.Table = null;
+            this.tbxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
             // 
             // label2
             // 
@@ -101,12 +103,13 @@
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.BackColor = System.Drawing.Color.Red;
+            this.lblError.BackColor = System.Drawing.SystemColors.Control;
+            this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(158, 148);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.Size = new System.Drawing.Size(29, 13);
             this.lblError.TabIndex = 4;
-            this.lblError.Click += new System.EventHandler(this.label3_Click);
+            this.lblError.Text = "Error";
             // 
             // panel1
             // 
@@ -126,6 +129,7 @@
             this.btnRegister.TabIndex = 1;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnLogin
             // 
@@ -145,7 +149,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnltxt);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
             this.pnltxt.ResumeLayout(false);
             this.pnltxt.PerformLayout();
             this.panel1.ResumeLayout(false);
