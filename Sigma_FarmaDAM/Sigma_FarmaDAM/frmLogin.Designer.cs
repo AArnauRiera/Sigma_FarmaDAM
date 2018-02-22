@@ -103,12 +103,13 @@
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.BackColor = System.Drawing.Color.White;
+            this.lblError.BackColor = System.Drawing.SystemColors.Control;
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(158, 148);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.Size = new System.Drawing.Size(29, 13);
             this.lblError.TabIndex = 4;
+            this.lblError.Text = "Error";
             // 
             // panel1
             // 
@@ -148,6 +149,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnltxt);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
             this.pnltxt.ResumeLayout(false);

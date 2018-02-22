@@ -17,6 +17,7 @@ namespace UserRegister
         public frmUserRegister()
         {
             InitializeComponent();
+            lblError.Text = "";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

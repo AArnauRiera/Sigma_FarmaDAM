@@ -11,6 +11,7 @@ namespace Login
         public frmLogin()
         {
             InitializeComponent();
+            lblError.Text = "";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

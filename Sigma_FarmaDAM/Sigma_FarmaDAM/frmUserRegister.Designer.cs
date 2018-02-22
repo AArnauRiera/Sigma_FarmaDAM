@@ -46,7 +46,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxRepeatPassword = new Sigma_Controls.TxtSigma();
-            this.chbAdmin = new Sigma_Controls.checkBoxSigma();
+            this.chbAdmin = new Sigma_Controls.CheckBoxSigma();
             this.lblError = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -341,7 +341,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
         private Sigma_Controls.TxtSigma tbxRepeatPassword;
-        private Sigma_Controls.checkBoxSigma chbAdmin;
+        private Sigma_Controls.CheckBoxSigma chbAdmin;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Button btnClose;
     }
