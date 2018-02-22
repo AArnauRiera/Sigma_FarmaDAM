@@ -159,9 +159,9 @@ namespace LoginControl
                         }
                     }
                 }
-                else if (control is checkBoxSigma)
+                else if (control is CheckBoxSigma)
                 {
-                    checkBoxSigma cntrl = (checkBoxSigma)control;
+                    CheckBoxSigma cntrl = (CheckBoxSigma)control;
                     r[cntrl.DBReference] = cntrl.Enabled;
                 }
             }
