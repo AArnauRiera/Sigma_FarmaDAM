@@ -32,7 +32,11 @@ namespace Sigma_Controls
             Email,
             Phone,
             Password,
-            Date
+            Date,
+            MedRegNum,
+            MedRegName,
+            MedRegContent
+
         }
 
         #endregion
@@ -118,10 +122,19 @@ namespace Sigma_Controls
                     regularExpresion = @"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}";
                     break;
                 case FieldTypes.Password:
-                    regularExpresion = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$"; // The conditions are string must be between 8 and 15 characters long. string must contain at least one number. string must contain at least one uppercase letter. string must contain at least one lowercase letter.
+                    regularExpresion = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,15}$"; // The conditions are string must be between 8 and 15 characters long. string must contain at least one number. string must contain at least one uppercase letter. string must contain at least one lowercase letter.
                     break;
                 case FieldTypes.Date:
                     regularExpresion = @"([0][1-9]|[1][0-9|][2][0-9]|[3][0-1])\/([0][1-9]|[1][0-2])\/[1-2][0-9][0-9][0-9]";
+                    break;
+                case FieldTypes.MedRegNum:
+                    regularExpresion = @"^[0-9]{1,5}$";
+                    break;
+                case FieldTypes.MedRegName:
+                    regularExpresion = @"^[a-zA-Z0-9]{1,100}$";
+                    break;
+                case FieldTypes.MedRegContent:
+                    regularExpresion = @"^[a-zA-Z0-9]{0,100}$";
                     break;
                 default:
                     regularExpresion = "";

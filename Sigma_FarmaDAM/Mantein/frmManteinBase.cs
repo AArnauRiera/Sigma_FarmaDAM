@@ -12,7 +12,7 @@ using Sigma_Controls;
 
 namespace Mantein
 {
-    public partial class frmManteinBase : Form
+    public partial class frmManteinBase : CentredForm
     {
         protected DataSet dts;
 
@@ -24,6 +24,7 @@ namespace Mantein
         {
             InitializeComponent();
             dts = new DataSet();
+            CenterPanel(pnlMantein);
         }
 
         protected void BindingDate()

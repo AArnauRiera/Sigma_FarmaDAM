@@ -83,10 +83,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Users\admin\Desktop\Sigma_FarmaDAMa\Sigma_FarmaDAM\Sigma_Controls\Sigma_Controls.csproj">
-      <Project>{bafea927-64a5-4fc5-bcd7-16df3e7c71e4}</Project>
-      <Name>Sigma_Controls</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DBUtils\DBUtils.csproj">
       <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
       <Name>DBUtils</Name>
@@ -94,6 +90,10 @@
     <ProjectReference Include="..\Helpers\Helpers.csproj">
       <Project>{e1addef3-7ed3-4c2b-b454-e637e10a6a35}</Project>
       <Name>Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sigma_Controls\Sigma_Controls.csproj">
+      <Project>{bafea927-64a5-4fc5-bcd7-16df3e7c71e4}</Project>
+      <Name>Sigma_Controls</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
