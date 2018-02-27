@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2026
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControls", "CustomControls\CustomControls.csproj", "{9932DF33-7AC1-4E6B-9D19-58BED7D00234}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigma_FarmaDAM", "Sigma_FarmaDAM\Sigma_FarmaDAM.csproj", "{63BBEC2A-B19A-4B1C-9CFF-A9B0A26D14C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigma_Controls", "Sigma_Controls\Sigma_Controls.csproj", "{BAFEA927-64A5-4FC5-BCD7-16DF3E7C71E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLTools", "XMLTools\XMLTools.csproj", "{29FD7D7F-950A-4634-9BB3-401BDD7A6D17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{BAFEA927-64A5-4FC5-BCD7-16DF3E7C71E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAFEA927-64A5-4FC5-BCD7-16DF3E7C71E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAFEA927-64A5-4FC5-BCD7-16DF3E7C71E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29FD7D7F-950A-4634-9BB3-401BDD7A6D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29FD7D7F-950A-4634-9BB3-401BDD7A6D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29FD7D7F-950A-4634-9BB3-401BDD7A6D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29FD7D7F-950A-4634-9BB3-401BDD7A6D17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

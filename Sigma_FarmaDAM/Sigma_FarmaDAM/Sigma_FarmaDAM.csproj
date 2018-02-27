@@ -64,6 +64,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUserRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserRegister.Designer.cs">
+      <DependentUpon>frmUserRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginControl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserRegister.resx">
+      <DependentUpon>frmUserRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -132,6 +141,10 @@
     <ProjectReference Include="..\UserManagament\UserManagament.csproj">
       <Project>{FA9EB4D2-FE3B-4B28-9D36-A8CE141CA5D3}</Project>
       <Name>UserManagament</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XMLTools\XMLTools.csproj">
+      <Project>{29FD7D7F-950A-4634-9BB3-401BDD7A6D17}</Project>
+      <Name>XMLTools</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
