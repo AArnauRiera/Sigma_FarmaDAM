@@ -9,27 +9,29 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBUtils;
 using MySql.Data.MySqlClient;
+using SearchSystem;
+using Sigma_Controls;
 
 namespace SellSystem
 {
     public partial class frmSellsytem : Form
     {
-        DBUtils.DBUtilities DBUTILS = new DBUtils.DBUtilities();
-        frmActive f = new frmActive();
+        DBUtilities DBUTILS = new DBUtils.DBUtilities();
         public DataSet dts;
         DataTable dt = new DataTable();
         public DataRow dr;
-
-        String Querry;
-        Boolean validate = false;
-        Boolean Client = false;
+ 
+        string Querry;
+        bool validate = false;
+        bool Client = false;
         int contador = 1;
+        bool insert = false;
 
         public string[] values = new string[4];
 
         ///***FUNCTIONS***///
         #region    
-        private Boolean Client_exist()
+        private bool Client_exist()
         {
             Querry = "select* from Clients  where NTS ='" + txtClient.Text + "'";
             dts = DBUTILS.PortarPerConsulta(Querry);
@@ -37,26 +39,27 @@ namespace SellSystem
             else { validate = false; }
             return validate;
         }
-        private String Client_ID(String id)
+        private string Client_ID(String id)
         {
             Querry = "select NTS  from Clients  where NTS ='" + txtClient.Text + "'";
             dts = DBUTILS.PortarPerConsulta(Querry);
             String ID = dts.Tables[0].Rows[0]["NTS"].ToString();
             return ID;
         }
-        private Boolean drug_exist(String drug)
+        private bool drug_exist(String drug)
         {
-            Querry = "select* from Drugs  where Register_Number='" + drug + "'";
+            Querry = "select* from Drugs  where Register_Number = '" + drug + "'";
             dts = DBUTILS.PortarPerConsulta(Querry);
             if (dts.Tables[0].Rows.Count > 0) { validate = true; }
             else { validate = false; }
             return validate;
         }
-        private Boolean stock(String drug)
+        private bool stock(String drug)
         {
-            Querry = "select * from Stock where id='" + drug + "'and stock >0'";
+            int stock = 0;
+            Querry = "select * from Stock where id='" + drug + "'and Quantity >'"+stock+"'";
             dts = DBUTILS.PortarPerConsulta(Querry);
-            if (dts.Tables[0].Rows.Count > 0) { validate = true; }
+            if (dts.Tables[0].Rows.Count >0) { validate = true; }
             else { validate = false; }
             return validate;
         }
@@ -70,7 +73,7 @@ namespace SellSystem
         private string name_product()
         {
             DataSet dts;
-            Querry = "select CommercialName from Drugs where Register_Number = '" + txtCod.Text + "'";
+            Querry = "select CommercialName from Drugs where Register_Number= '" + txtCod.Text + "'";
             dts = DBUTILS.PortarPerConsulta(Querry);
             string Name;
             try
@@ -81,9 +84,23 @@ namespace SellSystem
             {
                 Name = "";
             }
-                
-
             return Name;
+        }
+        private string id_active()
+        {
+            DataSet dts;
+            Querry = "select ActivePrincipleID from Drugs where Register_Number ='" + txtCod.Text + "'";
+            dts = DBUTILS.PortarPerConsulta(Querry);
+            string active;
+            try
+            {
+                active = dts.Tables[0].Rows[0][0].ToString();
+            }
+            catch
+            {
+                active="";
+            }
+            return active;
         }
 
         #endregion
@@ -95,7 +112,6 @@ namespace SellSystem
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
             bool exist = false;
             String Drug = txtCod.Text.ToString();
 
@@ -112,7 +128,7 @@ namespace SellSystem
                 dgView_Sell.DataSource = dt;
             }
             else { MessageBox.Show("There are no values "); }
-            if (!(exist)&&string.IsNullOrWhiteSpace(txtProd.Text)) ;
+            if ((!exist)&&insert);
             {
                 contador = 1;
                 dr = dt.NewRow();
@@ -126,21 +142,7 @@ namespace SellSystem
                 txtProd.Text = "";
                 txtCantidad.Text = "1";
             }
-
         }
-        private void btnBuy_Click(object sender, EventArgs e)
-        {
-            for (int row = 0; row < dgView_Sell.Rows.Count - 1; row++)
-            {
-
-                if (!drug_exist(dgView_Sell.Rows[row].Cells[0].Value.ToString()))
-                {
-                    MessageBox.Show("the drug " + dgView_Sell.Rows[row].Cells[0].Value.ToString() + " doesn't exist");
-                }
-            }
-
-        }
-
         private void frmSellsytem_Load(object sender, EventArgs e)
         {
             dt.Columns.Add("ID_Stock ");
@@ -150,26 +152,48 @@ namespace SellSystem
             dt.Columns.Add("quantity");
             txtCantidad.Text = "1";
         }
-
         private void txtCod_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter&&string.IsNullOrEmpty(txtCod.Text))
             {
+                insert = true;
                 string productName = name_product();
                 if (!String.IsNullOrEmpty(productName))
                 {
                     txtProd.Text = productName;
- 
-                }
-                else
-                {
+                    if (!(drug_exist(txtCod.Text)&&stock(txtCod.Text)))
+                    {
+                        if (MessageBox.Show("¿Quieres buscar medicamentos similares?", "Buscar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            string condition2 = txtCod.Text;
+                            frmQueryDrugs r = new frmQueryDrugs(GetTxtSigma(),"Drugs", id_active(),txtCod.Text);
+                            r.Show();
+                        }
+                        else
+                        {
+                            txtCod.Text = "";
+                            txtProd.Text = "";
+                        }
+                    }
+                }else{
                     txtCod.Text = "";
                     txtProd.Text = "";
-
                 }
             }
         }
 
+        private TxtSigma[] GetTxtSigma()
+        {
+            List<TxtSigma> txts = new List<TxtSigma>();
+            for (int i = 0; i < pnltxt.Controls.Count; i++)
+            {
+                if (pnltxt.Controls[i] is TxtSigma)
+                {
+                    txts.Add(pnltxt.Controls[i] as TxtSigma);
+                }
+            }
+            return txts.ToArray();
+        }
         private void txtClient_KeyDown(object sender, KeyEventArgs e)
         {
 
@@ -186,9 +210,17 @@ namespace SellSystem
                 }
                 else
                 {
-                    MessageBox.Show("There Client doesn't exist");
+                    MessageBox.Show("No hay valores");
                 }
-            }   
+            }
+        }
+
+        private void dgView_Sell_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            foreach (DataGridViewBand band in dgView_Sell.Columns)
+            {
+                band.ReadOnly = true;
+            }
         }
     }
 }

@@ -142,6 +142,10 @@
       <Project>{FA9EB4D2-FE3B-4B28-9D36-A8CE141CA5D3}</Project>
       <Name>UserManagament</Name>
     </ProjectReference>
+    <ProjectReference Include="..\XMLTools\XMLTools.csproj">
+      <Project>{29FD7D7F-950A-4634-9BB3-401BDD7A6D17}</Project>
+      <Name>XMLTools</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RegisterEditDrugs\AddEditDrugs.csproj">

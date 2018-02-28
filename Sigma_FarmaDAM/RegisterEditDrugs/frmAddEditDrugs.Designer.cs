@@ -191,6 +191,10 @@
             this.lblPharmaceuticLab.TabIndex = 11;
             this.lblPharmaceuticLab.Text = "Laboratorio farmacéutico";
             // 
+<<<<<<< Updated upstream
+=======
+            // 
+>>>>>>> Stashed changes
             // lblContent
             // 
             this.lblContent.AutoSize = true;
@@ -223,6 +227,42 @@
             this.lblIVA.TabIndex = 15;
             this.lblIVA.Text = "IVA";
             // 
+<<<<<<< Updated upstream
+=======
+            // chkReplaceable
+            // 
+            this.chkReplaceable.AutoSize = true;
+            this.chkReplaceable.Location = new System.Drawing.Point(277, 367);
+            this.chkReplaceable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkReplaceable.Name = "chkReplaceable";
+            this.chkReplaceable.Size = new System.Drawing.Size(123, 27);
+            this.chkReplaceable.TabIndex = 16;
+            this.chkReplaceable.Text = "Replaceable";
+            this.chkReplaceable.UseVisualStyleBackColor = true;
+            // 
+            // chkGeneric
+            // 
+            this.chkGeneric.AutoSize = true;
+            this.chkGeneric.Location = new System.Drawing.Point(277, 394);
+            this.chkGeneric.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkGeneric.Name = "chkGeneric";
+            this.chkGeneric.Size = new System.Drawing.Size(90, 27);
+            this.chkGeneric.TabIndex = 17;
+            this.chkGeneric.Text = "Generic";
+            this.chkGeneric.UseVisualStyleBackColor = true;
+            // 
+            // chkRecipe
+            // 
+            this.chkRecipe.AutoSize = true;
+            this.chkRecipe.Location = new System.Drawing.Point(277, 421);
+            this.chkRecipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkRecipe.Name = "chkRecipe";
+            this.chkRecipe.Size = new System.Drawing.Size(82, 27);
+            this.chkRecipe.TabIndex = 18;
+            this.chkRecipe.Text = "Recipe";
+            this.chkRecipe.UseVisualStyleBackColor = true;
+            // 
+>>>>>>> Stashed changes
             // lblTechSheetDoc
             // 
             this.lblTechSheetDoc.AutoSize = true;
