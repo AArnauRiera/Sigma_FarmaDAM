@@ -2,6 +2,8 @@
 using System;
 using System.Windows.Forms;
 using UserRegister;
+using LoginControl;
+using Helpers;
 
 namespace Login
 {
@@ -21,7 +23,8 @@ namespace Login
         }
         private void Login()
         {
-            if (control.CheckControlsErrors(errorUsername, pnltxt.Controls) && control.CheckUserIsReal(tbxUsername, lblError, "Usuario"))
+            if (control.CheckControls(errorProvider, pnltxt.Controls) && 
+                !control.CheckIsReal(tbxUsername, errorProvider))
             {
                 if (control.CheckCredentials(tbxUsername, tbxPassword, lblError))
                 {
@@ -32,7 +35,9 @@ namespace Login
         }
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if(control.CheckControlsErrors(errorUsername, pnltxt.Controls) && control.CheckUserIsReal(tbxUsername, lblError, "Usuario") && control.CheckIfUserIsAdmin(tbxUsername, lblError))
+            if(control.CheckControls(errorProvider, Controls) && 
+               !control.CheckIsReal(tbxUsername, errorProvider) &&  
+               control.CheckIfUserIsAdmin(tbxUsername, lblError))
             {
                 if (control.CheckCredentials(tbxUsername, tbxPassword, lblError))
                 {

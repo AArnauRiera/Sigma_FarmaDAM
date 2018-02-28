@@ -4,6 +4,7 @@ using DBUtils;
 using System.Data;
 using Sigma_Controls;
 using System.Threading.Tasks;
+using Helpers;
 
 namespace LoginControl
 {
@@ -32,61 +33,21 @@ namespace LoginControl
 
         }
 
-        public bool CheckUserIsReal (TxtSigma userName, Label lblError, string errorMessage)
+        public bool CheckIsReal (TxtSigma control, ErrorProvider error)
         {
             bool isReal = false;
 
-            if (!String.IsNullOrEmpty(userName.Text))
+            if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0 && control.Text == dts.Tables[0].Rows[0][control.DBReference].ToString())
             {
-                if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0 && userName.Text == dts.Tables[0].Rows[0][userName.DBReference].ToString())
-                {
-                    isReal = true;
-                }
-                else
-                {
-                    lblError.Text = errorMessage + " ya existe";
-                }
-            } else
+                isReal = true;
+            }
+               
+            if (isReal)
             {
-                lblError.Text = errorMessage + " no puede dejarse vacío";
-            }            
+                error.SetError(control, "Ya existe");
+            }
 
             return isReal;
-        }
-
-        public bool CheckControlsErrors (ErrorProvider error, Control.ControlCollection Controls)
-        {
-            var isCorrect = false;
-
-            foreach (var control in Controls)
-            {
-                if (control is TxtSigma)
-                {
-                    TxtSigma cntrl = (TxtSigma)control;
-                    if (String.IsNullOrWhiteSpace(cntrl.Text))
-                    {
-                        error.SetError(cntrl, "Este campo no puede estar vacío");
-                        isCorrect = false;
-                    }
-                    else if (cntrl.IsFieldCorrect())
-                    {
-                        error.SetError(cntrl, "Formato Incorrecto");
-                        isCorrect = false;
-                    }
-                }
-                else if (control is cbxSigma)
-                {
-                    cbxSigma cntrl = (cbxSigma)control;
-                    if (cntrl.SelectedIndex == 0)
-                    {
-                        error.SetError(cntrl, "No se ha seleccionado un campo valido");
-                        isCorrect = false;
-                    }
-                }
-            }
-            
-
-            return isCorrect;
         }
 
         public bool CheckCredentials (TxtSigma userName, TxtSigma password, Label lblError)
@@ -122,7 +83,7 @@ namespace LoginControl
 
             return isAdmin;
         }
-        public bool CheckIfPasswordRepeatIsEqual (TxtSigma password, TxtSigma repeatPassword, TxtSigma username, Label lblError)
+        public bool CheckIfPasswordRepeatIsEqual (TxtSigma password, TxtSigma repeatPassword, TxtSigma username)
         {
             bool isEqual = false;
             string encryptedPassword = Cryptography.Cryptography.Encrypt(password.Text, username.Text);
@@ -130,21 +91,57 @@ namespace LoginControl
 
             if (password.IsFieldCorrect())
             {
-                if(encryptedPassword.Equals(encryptedRepeatPassword))
+                if (encryptedPassword.Equals(encryptedRepeatPassword))
                 {
                     isEqual = true;
                 }
-                else
-                {
-                    lblError.Text = "Las contraseñas deben ser iguales";
-                }
             }
-            else
+            return isEqual;
+        }
+
+        public bool CheckControls (ErrorProvider error, Control.ControlCollection Controls)
+        {
+            bool isCorrect = false;
+
+            foreach (Control control in Controls)
             {
-                lblError.Text = "La contraseña no es correcta";
+                if (control is TxtSigma || control is cbxSigma)
+                {
+                    isCorrect = ControlsErrorsHelper.CheckControlsErrors(error, control);
+
+                    if (!isCorrect)
+                    {
+                        break;
+                    }
+                }
+
             }
 
-            return isEqual;
+            return isCorrect;
+        }
+
+        public bool CheckControls(ErrorProvider error, Control.ControlCollection Controls, TxtSigma username, TxtSigma password)
+        {
+            bool isCorrect = false;
+
+            foreach (Control control in Controls)
+            {
+                if (control.Name == "txbRepeatPassword")
+                {
+                    isCorrect = ControlsErrorsHelper.CheckControlsErrors(error, control, password, username);
+                }
+                else
+                {
+                    isCorrect = ControlsErrorsHelper.CheckControlsErrors(error, control);
+                }
+
+                if (!isCorrect)
+                {
+                    break;
+                }
+            }
+
+            return isCorrect;
         }
 
         public bool CheckControlsFormat(Control.ControlCollection Controls)

@@ -29,9 +29,12 @@ namespace UserRegister
         {
             LoginControl.LoginControl control = new LoginControl.LoginControl();
 
-            if (!control.CheckUserIsReal(tbxUsername, lblError, "Usuario") && !control.CheckUserIsReal(tbxEmail, lblError, "Email") && !control.CheckUserIsReal(tbxDNI, lblError, "DNI"))
+            if (control.CheckControls(errorProvider, Controls, tbxUsername, tbxPassword) &&
+                !control.CheckIsReal(tbxUsername, errorProvider) &&
+                !control.CheckIsReal(tbxEmail, errorProvider) && 
+                !control.CheckIsReal(tbxDNI, errorProvider))
             {
-                if (control.CheckIfPasswordRepeatIsEqual(tbxPassword, tbxRepeatPassword, tbxUsername, lblError))
+                if (control.CheckIfPasswordRepeatIsEqual(tbxPassword, tbxRepeatPassword, tbxUsername))
                 {
                     exit = control.SaveChanges(Controls);
                     if (exit)

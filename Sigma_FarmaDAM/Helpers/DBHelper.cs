@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Sigma_Controls;
 using DBUtils;
 using static System.Windows.Forms.Control;
+using System.Windows.Forms;
+using Cryptography;
 
 namespace Helpers
 {

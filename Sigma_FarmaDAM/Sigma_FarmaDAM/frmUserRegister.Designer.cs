@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tbxName = new Sigma_Controls.TxtSigma();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
@@ -49,6 +50,8 @@
             this.chbAdmin = new Sigma_Controls.CheckBoxSigma();
             this.lblError = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // tbxName
@@ -287,6 +290,10 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmUserRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,6 +323,7 @@
             this.Name = "frmUserRegister";
             this.Text = "frmUserRegister";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUserRegister_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,5 +352,6 @@
         private Sigma_Controls.CheckBoxSigma chbAdmin;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

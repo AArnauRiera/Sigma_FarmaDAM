@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Cryptography
 {
-    class Cryptography
+    public class Cryptography
     {
         public static string Encrypt(string strToEncrypt, string strKey)
         {
