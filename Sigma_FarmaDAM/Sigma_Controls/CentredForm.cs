@@ -30,6 +30,19 @@ namespace Sigma_Controls
             form.Anchor = AnchorStyles.None;
         }
 
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // CentredForm
+            // 
+            this.ClientSize = new System.Drawing.Size(282, 253);
+            this.Name = "CentredForm";
+            this.ResumeLayout(false);
+
+            this.BackgroundImage = Image.FromFile("logoSigma2.png");
+
+        }
     }
 
 }
