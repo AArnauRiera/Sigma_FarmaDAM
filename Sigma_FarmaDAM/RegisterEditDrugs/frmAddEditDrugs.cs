@@ -167,52 +167,6 @@ namespace RegisterEditDrugs
             }
         }
 
-        //private void addReg2() {
-
-        //    string query = "SELECT * FROM Drugs";
-        //    //bool correct = false;
-        //    //bool saveError = false;
-
-        //    DBUtils.DBUtilities db = new DBUtils.DBUtilities();
-        //    DataSet dts = db.PortarPerConsulta(query);
-        //    DataRow r = dts.Tables["Taula"].NewRow();
-        //    Label lblErrorText = (Label)pnlAddEditDrugs.Controls.Find("lblError", false)[0];
-
-        //    foreach (var control in pnlAddEditDrugs.Controls)
-        //    {
-        //        if (control is TxtSigma)
-        //        {
-        //            TxtSigma cntrl = (TxtSigma)control;
-        //            if (cntrl.IsFieldCorrect())
-        //            {
-        //                r[cntrl.DBReference] = cntrl.Text;
-        //            }
-        //            else
-        //            {
-        //                cntrl.Text = "";
-        //                cntrl.Focus();
-        //                //saveError = true;
-        //                break;
-        //            }
-
-        //        }
-        //        else if (control is cbxSigma)
-        //        {
-        //            cbxSigma cntrl = (cbxSigma)control;
-        //            if (cntrl.SelectedIndex != 0)
-        //            {
-        //                r[cntrl.DBReference] = cntrl.SelectedIndex;
-        //            }
-        //            else
-        //            {
-        //                cntrl.Focus();
-        //                //saveError = true;
-        //                break;
-        //            }
-        //        }
-        //    }
-        //}
-
         private void AddReg()
         {
             DBUtils.DBUtilities db = new DBUtils.DBUtilities();
@@ -386,8 +340,8 @@ namespace RegisterEditDrugs
                 e.Handled = true;
             }
 
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TxtSigma).Text.IndexOf('.') > -1))
+            // permitir coma decimal
+            if ((e.KeyChar == ',') && ((sender as TxtSigma).Text.IndexOf(',') > -1))
             {
                 e.Handled = true;
             }
