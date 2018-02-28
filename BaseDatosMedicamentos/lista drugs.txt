@@ -1,0 +1,14 @@
+Num. registre nacional (Clau) 			--> cod_nacion
+Num de registre sanitari      			--> nro_definitivo
+Denominació comercial         			--> des_nomco
+Principi actiu                			--> composicion_pa, cod_principio_activo
+Contingut                     			--> nro_conte
+Laboratori farmacèutic        			--> laboratorio_titular
+Preu de venda(sense IVA)      			--> -NO DISPONIBLE-
+Iva(Tipus aplicable)          			--> -NO DISPONIBLE-
+Si es substituïble o no       			--> -NO DISPONIBLE-
+Si és genèric o no            			--> sw_generico
+Si és obligatòria la recepta  			--> sw_receta
+
+Documentació de la fitxa tècnica(PDF)	--> url_fictec
+Prospecte(PDF)                        	--> url_prosp
