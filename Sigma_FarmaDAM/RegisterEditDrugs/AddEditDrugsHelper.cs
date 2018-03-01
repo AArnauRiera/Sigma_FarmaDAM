@@ -11,8 +11,18 @@ using Helpers;
 
 namespace RegisterEditDrugs
 {
+    /// <summary>
+    /// Contiene funciones para el formulario frmAddEditDrugs.
+    /// </summary>
     class AddEditDrugsHelper
     {
+
+        /// <summary>
+        /// Llena una comboBox de información de una base de datos.
+        /// </summary>
+        /// <param name="t">Base de datos de la que recogemos la información</param>
+        /// <param name="comboBox">Almacena los registros del campo "Nombre" de la tabla</param>
+        /// <param name="cmbId">Almacena IDs de la tabla</param>
         public void AddComboBoxData(DataTable t, cbxSigma comboBox, ComboBox cmbId)
         {
 
@@ -32,6 +42,11 @@ namespace RegisterEditDrugs
 
         }
 
+        /// <summary>
+        /// Coge los datos del DataSet y los enlaza a los comoBox del formulario.
+        /// </summary>
+        /// <param name="dts">DataSet para los datos</param>
+        /// <param name="Controls">Lista de controles</param>
         public void DataBindingComboBox(DataSet dts, Control.ControlCollection Controls)
         {
             foreach (Control control in Controls)

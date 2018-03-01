@@ -45,7 +45,7 @@
     <Compile Include="cbxSigma.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CheckBoxSigma.cs">
+    <Compile Include="checkBoxSigma.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

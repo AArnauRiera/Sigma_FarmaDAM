@@ -191,10 +191,6 @@
             this.lblPharmaceuticLab.TabIndex = 11;
             this.lblPharmaceuticLab.Text = "Laboratorio farmacéutico";
             // 
-<<<<<<< Updated upstream
-=======
-            // 
->>>>>>> Stashed changes
             // lblContent
             // 
             this.lblContent.AutoSize = true;
@@ -227,8 +223,6 @@
             this.lblIVA.TabIndex = 15;
             this.lblIVA.Text = "IVA";
             // 
-<<<<<<< Updated upstream
-=======
             // chkReplaceable
             // 
             this.chkReplaceable.AutoSize = true;
@@ -262,7 +256,6 @@
             this.chkRecipe.Text = "Recipe";
             this.chkRecipe.UseVisualStyleBackColor = true;
             // 
->>>>>>> Stashed changes
             // lblTechSheetDoc
             // 
             this.lblTechSheetDoc.AutoSize = true;
