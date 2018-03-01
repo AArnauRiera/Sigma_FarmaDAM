@@ -25,12 +25,12 @@ namespace SellSystem
         bool validate = false;
         bool Client = false;
         int contador = 1;
-        bool insert = false;
 
         public string[] values = new string[4];
 
         ///***FUNCTIONS***///
         #region    
+            ///Busca si el cliente existe///
         private bool Client_exist()
         {
             Querry = "select* from Clients  where NTS ='" + txtClient.Text + "'";
@@ -39,13 +39,23 @@ namespace SellSystem
             else { validate = false; }
             return validate;
         }
+        ///Devuelve la ID del cliente///
         private string Client_ID(String id)
         {
             Querry = "select NTS  from Clients  where NTS ='" + txtClient.Text + "'";
             dts = DBUTILS.PortarPerConsulta(Querry);
-            String ID = dts.Tables[0].Rows[0]["NTS"].ToString();
+            String ID;
+            try
+            {
+                ID = dts.Tables[0].Rows[0][0].ToString();
+            }
+            catch
+            {
+                ID = "";
+            }   
             return ID;
         }
+        ///Busca si el medicamento existe///
         private bool drug_exist(String drug)
         {
             Querry = "select* from Drugs  where Register_Number = '" + drug + "'";
@@ -54,15 +64,20 @@ namespace SellSystem
             else { validate = false; }
             return validate;
         }
+        ///Busca si el medicamento tiene stock///
         private bool stock(String drug)
         {
             int stock = 0;
-            Querry = "select * from Stock where id='" + drug + "'and Quantity >'"+stock+"'";
+            String ID_Drug = "select id from Drugs where where Register_Number = '" + drug + "";
+            String Drug = dts.Tables[0].Rows[0][0].ToString();
+            Querry = "select * from Stock where ID_Drug='" +Drug + "'and Quantity >'"+stock+"'";
             dts = DBUTILS.PortarPerConsulta(Querry);
             if (dts.Tables[0].Rows.Count >0) { validate = true; }
             else { validate = false; }
             return validate;
         }
+
+        ///Devuelve un DataSet con los valores de la taula Clients donde NTS sea igual al valor introduido///
         private DataSet client()
         {
             DataSet dts;
@@ -70,6 +85,7 @@ namespace SellSystem
             dts = DBUTILS.PortarPerConsulta(Querry);
             return dts;
         }
+        ///Devuelve el nombre del producto///
         private string name_product()
         {
             DataSet dts;
@@ -86,6 +102,7 @@ namespace SellSystem
             }
             return Name;
         }
+        ///Devuelve la ID  del principio activo de la tabla drugs///
         private string id_active()
         {
             DataSet dts;
@@ -115,6 +132,7 @@ namespace SellSystem
             bool exist = false;
             String Drug = txtCod.Text.ToString();
 
+            ///comprueba si un medicamento esta introduido en la tabla y si esta introduido le añade suma la cantidad introduida///
             for (int row = 0; row < dgView_Sell.Rows.Count - 1; row++)
             {
                 if (dgView_Sell.Rows[row].Cells[0].Value.ToString().Equals(Drug))
@@ -128,7 +146,8 @@ namespace SellSystem
                 dgView_Sell.DataSource = dt;
             }
             else { MessageBox.Show("There are no values "); }
-            if ((!exist)&&insert);
+            ///Si no existe lo introduce a la Tabla///
+            if ((!exist));
             {
                 contador = 1;
                 dr = dt.NewRow();
@@ -154,9 +173,9 @@ namespace SellSystem
         }
         private void txtCod_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter&&string.IsNullOrEmpty(txtCod.Text))
+            ///Comprueba si se pulsa la key enter y que no este null el campo del codigo del medicamento///
+            if (e.KeyCode == Keys.Enter &&!string.IsNullOrEmpty(txtCod.Text))
             {
-                insert = true;
                 string productName = name_product();
                 if (!String.IsNullOrEmpty(productName))
                 {
@@ -181,7 +200,7 @@ namespace SellSystem
                 }
             }
         }
-
+        ///Genera un Array a partir del custom control donde los valores son todos los de el panel///
         private TxtSigma[] GetTxtSigma()
         {
             List<TxtSigma> txts = new List<TxtSigma>();
@@ -194,9 +213,10 @@ namespace SellSystem
             }
             return txts.ToArray();
         }
+     
         private void txtClient_KeyDown(object sender, KeyEventArgs e)
         {
-
+            ///Comprueba si es pulsada la key enter y si el cliente existe añade el nombre y apellidos a los  textbox de nombre y apellido///
             if (e.KeyCode == Keys.Enter)
             {
                 Client = Client_exist();
@@ -210,7 +230,7 @@ namespace SellSystem
                 }
                 else
                 {
-                    MessageBox.Show("No hay valores");
+                    MessageBox.Show("No existe el cliente");
                 }
             }
         }
