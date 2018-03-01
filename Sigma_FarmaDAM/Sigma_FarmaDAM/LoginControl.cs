@@ -3,6 +3,8 @@ using System.Windows.Forms;
 using DBUtils;
 using System.Data;
 using Sigma_Controls;
+using System.Threading.Tasks;
+using Helpers;
 
 namespace LoginControl
 {
@@ -18,7 +20,6 @@ namespace LoginControl
 
             try
             {
-                db.Conexion();
                 dts = db.PortarPerConsulta(query);
             }
             catch (Exception e)
@@ -31,31 +32,30 @@ namespace LoginControl
 
         }
 
-        public bool CheckUserIsReal (TxtSigma userName, Label lblError, string errorMessage)
+        public bool CheckIsReal (TxtSigma control, ErrorProvider error, string taula)
         {
             bool isReal = false;
 
-            if (!String.IsNullOrEmpty(userName.Text))
+            DataSet dts = db.PortarPerConsulta("SELECT * FROM " + taula + " WHERE " + control.DBReference + " = '" + control.Text + "'");
+
+            if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0) {
+                isReal = true;
+            }
+
+            if (!isReal)
             {
-                if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0 && userName.Text == dts.Tables[0].Rows[0][userName.DBReference].ToString())
-                {
-                    isReal = true;
-                }
-                else
-                {
-                    lblError.Text = errorMessage + " ya existe";
-                }
-            } else
-            {
-                lblError.Text = errorMessage + " no puede dejarse vacío";
-            }            
+                error.SetError(control, "El usuario no existe");
+            }
 
             return isReal;
         }
 
-        public bool CheckCredentials (TxtSigma userName, TxtSigma password, Label lblError)
+        public bool CheckCredentials (TxtSigma userName, TxtSigma password, ErrorProvider error)
         {
             bool isCorrect = false;
+
+            Console.WriteLine(Cryptography.Cryptography.Encrypt(password.Text, userName.Text));
+            Console.WriteLine(dts.Tables[0].Rows[0]["password"].ToString());
 
             if (dts.Tables[0].Rows.Count > 0 && 
                 userName.Text == dts.Tables[0].Rows[0][userName.DBReference].ToString() && 
@@ -66,11 +66,12 @@ namespace LoginControl
 
             if (!isCorrect)
             {
-                lblError.Text = "Contraseña incorrecta";
+                error.SetError(password, "Contraseña incorrecta");
             }
 
             return isCorrect;
         }
+
         public bool CheckIfUserIsAdmin (TxtSigma userName, Label lblError)
         {
             bool isAdmin = false;
@@ -86,7 +87,8 @@ namespace LoginControl
 
             return isAdmin;
         }
-        public bool CheckIfPasswordRepeatIsEqual (TxtSigma password, TxtSigma repeatPassword, TxtSigma username, Label lblError)
+
+        public bool CheckIfPasswordRepeatIsEqual (TxtSigma password, TxtSigma repeatPassword, TxtSigma username)
         {
             bool isEqual = false;
             string encryptedPassword = Cryptography.Cryptography.Encrypt(password.Text, username.Text);
@@ -94,21 +96,58 @@ namespace LoginControl
 
             if (password.IsFieldCorrect())
             {
-                if(encryptedPassword.Equals(encryptedRepeatPassword))
+                if (encryptedPassword.Equals(encryptedRepeatPassword))
                 {
                     isEqual = true;
                 }
-                else
+            }
+            return isEqual;
+        }
+
+        public bool CheckControlsFormat (ErrorProvider error, Control.ControlCollection Controls)
+        {
+            bool isCorrect = false;
+            bool pass = true;
+
+            foreach (Control control in Controls)
+            {
+                if (control is TxtSigma || control is cbxSigma)
                 {
-                    lblError.Text = "Las contraseñas deben ser iguales";
+                    isCorrect = ControlsErrorsHelper.CheckControlsErrors(error, control);
+
+                    if (!isCorrect)
+                    {
+                        pass = isCorrect;
+                    }
                 }
             }
-            else
+
+            return pass;
+        }
+
+        public bool CheckControlsFormat(ErrorProvider error, Control.ControlCollection Controls, TxtSigma username, TxtSigma password)
+        {
+            bool isCorrect = false;
+            bool pass = true;
+
+            foreach (Control control in Controls)
             {
-                lblError.Text = "La contraseña no es correcta";
+                if (control.Name == "txbRepeatPassword")
+                {
+                    isCorrect = ControlsErrorsHelper.CheckControlsErrors(error, control, password, username);
+                }
+                else
+                {
+                    isCorrect = ControlsErrorsHelper.CheckControlsErrors(error, control);
+                }
+
+                if (!isCorrect)
+                {
+                    pass = isCorrect;
+                }
             }
 
-            return isEqual;
+            return pass;
         }
 
         public bool CheckControlsFormat(Control.ControlCollection Controls)
@@ -151,7 +190,6 @@ namespace LoginControl
                         if (cntrl.DBReference == "password")
                         {
                             r[cntrl.DBReference] = Cryptography.Cryptography.Encrypt(cntrl.Text, controls.Find("tbxUsername", false)[0].Text);
-
                         }
                         else
                         {

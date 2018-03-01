@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbxUsername = new Sigma_Controls.TxtSigma();
-            this.tbxPassword = new Sigma_Controls.TxtSigma();
             this.label2 = new System.Windows.Forms.Label();
             this.pnltxt = new System.Windows.Forms.Panel();
             this.lblError = new System.Windows.Forms.Label();
+            this.tbxUsername = new Sigma_Controls.TxtSigma();
+            this.tbxPassword = new Sigma_Controls.TxtSigma();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnltxt.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -49,34 +52,6 @@
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "User";
-            // 
-            // tbxUsername
-            // 
-            this.tbxUsername.DBReference = "username";
-            this.tbxUsername.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
-            this.tbxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.tbxUsername.ForeColor = System.Drawing.Color.Gray;
-            this.tbxUsername.Location = new System.Drawing.Point(158, 75);
-            this.tbxUsername.Name = "tbxUsername";
-            this.tbxUsername.Placeholder = null;
-            this.tbxUsername.Size = new System.Drawing.Size(100, 20);
-            this.tbxUsername.TabIndex = 1;
-            this.tbxUsername.Table = null;
-            this.tbxUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
-            // 
-            // tbxPassword
-            // 
-            this.tbxPassword.DBReference = "password";
-            this.tbxPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Password;
-            this.tbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.tbxPassword.ForeColor = System.Drawing.Color.Gray;
-            this.tbxPassword.Location = new System.Drawing.Point(158, 113);
-            this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Placeholder = null;
-            this.tbxPassword.Size = new System.Drawing.Size(100, 20);
-            this.tbxPassword.TabIndex = 2;
-            this.tbxPassword.Table = null;
-            this.tbxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
             // 
             // label2
             // 
@@ -111,6 +86,34 @@
             this.lblError.TabIndex = 4;
             this.lblError.Text = "Error";
             // 
+            // tbxUsername
+            // 
+            this.tbxUsername.DBReference = "username";
+            this.tbxUsername.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.tbxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.tbxUsername.ForeColor = System.Drawing.Color.Gray;
+            this.tbxUsername.Location = new System.Drawing.Point(158, 75);
+            this.tbxUsername.Name = "tbxUsername";
+            this.tbxUsername.Placeholder = null;
+            this.tbxUsername.Size = new System.Drawing.Size(100, 20);
+            this.tbxUsername.TabIndex = 1;
+            this.tbxUsername.Table = null;
+            this.tbxUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
+            // 
+            // tbxPassword
+            // 
+            this.tbxPassword.DBReference = "password";
+            this.tbxPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Password;
+            this.tbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.tbxPassword.ForeColor = System.Drawing.Color.Gray;
+            this.tbxPassword.Location = new System.Drawing.Point(158, 113);
+            this.tbxPassword.Name = "tbxPassword";
+            this.tbxPassword.Placeholder = null;
+            this.tbxPassword.Size = new System.Drawing.Size(100, 20);
+            this.tbxPassword.TabIndex = 2;
+            this.tbxPassword.Table = null;
+            this.tbxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnRegister);
@@ -141,6 +144,12 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +164,7 @@
             this.pnltxt.ResumeLayout(false);
             this.pnltxt.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,5 +180,6 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

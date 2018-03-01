@@ -2,6 +2,8 @@
 using System;
 using System.Windows.Forms;
 using UserRegister;
+using LoginControl;
+using Helpers;
 
 namespace Login
 {
@@ -10,6 +12,7 @@ namespace Login
         LoginControl.LoginControl control;
         public frmLogin()
         {
+            // Console.WriteLine(Cryptography.Cryptography.Encrypt("12345aA", "admin"));
             InitializeComponent();
             lblError.Text = "";
         }
@@ -22,9 +25,10 @@ namespace Login
         {
             control = new LoginControl.LoginControl(tbxUsername.Text);
 
-            if (control.CheckUserIsReal(tbxUsername, lblError, "Usuario"))
+            if (control.CheckControlsFormat(errorProvider, pnltxt.Controls) && 
+                control.CheckIsReal(tbxUsername, errorProvider, "Seller"))
             {
-                if (control.CheckCredentials(tbxUsername, tbxPassword, lblError))
+                if (control.CheckCredentials(tbxUsername, tbxPassword, errorProvider))
                 {
                     this.Close();
                     DialogResult = DialogResult.OK;
@@ -35,9 +39,11 @@ namespace Login
         {
             control = new LoginControl.LoginControl(tbxUsername.Text);
 
-            if(control.CheckUserIsReal(tbxUsername, lblError, "Usuario") && control.CheckIfUserIsAdmin(tbxUsername, lblError))
+            if (control.CheckControlsFormat(errorProvider, pnltxt.Controls) && 
+               control.CheckIsReal(tbxUsername, errorProvider, "Seller") &&  
+               control.CheckIfUserIsAdmin(tbxUsername, lblError))
             {
-                if (control.CheckCredentials(tbxUsername, tbxPassword, lblError))
+                if (control.CheckCredentials(tbxUsername, tbxPassword, errorProvider))
                 {
                     frmUserRegister frmUR = new frmUserRegister();
                     frmUR.Show();

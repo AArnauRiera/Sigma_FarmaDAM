@@ -1,0 +1,14 @@
+Register_number 						--> cod_nacion
+Sanitary_Register_Num      				--> nro_definitivo
+CommercialName         					--> des_nomco
+ActivePrincipleID                		--> composicion_pa, cod_principio_activo
+Content                     			--> nro_conte
+LabId				        			--> laboratorio_titular
+Price      								--> -NO DISPONIBLE-
+IVAId          							--> -NO DISPONIBLE-
+Replaceable       						--> -NO DISPONIBLE-
+IsGeneric            					--> sw_generico
+NeedsRecipe  							--> sw_receta
+
+Documentation)							--> url_fictec
+Prospectus	                        	--> url_prosp
