@@ -57,7 +57,7 @@ namespace Mantein
         }
 
 
-        private string Conditions()
+        protected string Conditions()
         {
             string[] txts = GetAllTxtSigma();
             string delimeter = " and ";
@@ -65,7 +65,7 @@ namespace Mantein
             return con;
         }
 
-        private string[] GetAllTxtSigma()
+        protected string[] GetAllTxtSigma()
         {
             List<string> txtb = new List<string>();
             foreach (var txt in pnlTB.Controls)
@@ -82,15 +82,16 @@ namespace Mantein
             return txtb.ToArray();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        public void btnSearch_Click(object sender, EventArgs e)
         {
             GetQuery();
             BindingDate();
         }
 
-        private void btnSelect_Click(object sender, EventArgs e)
+        protected virtual void btnSelect_Click(object sender, EventArgs e)
         {
             DataSet ds = null;
+
             string selected = "";
 
             List<string> conditions = new List<string>();

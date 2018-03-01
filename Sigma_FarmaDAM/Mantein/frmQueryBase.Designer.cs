@@ -112,11 +112,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgwDB;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnSelect;
-        private System.Windows.Forms.Panel pnlButtons;
+        protected System.Windows.Forms.Panel panel1;
+        protected System.Windows.Forms.DataGridView dgwDB;
+        protected System.Windows.Forms.Button btnSearch;
+        protected System.Windows.Forms.Button btnSelect;
+        protected System.Windows.Forms.Panel pnlButtons;
         protected System.Windows.Forms.Panel pnlTB;
     }
 }

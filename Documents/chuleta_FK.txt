@@ -1,0 +1,2 @@
+ALTER TABLE Drugs add CONSTRAINT fk_principle FOREIGN KEY (`ActivePrincipleID`)
+REFERENCES Active_Principles(id)
