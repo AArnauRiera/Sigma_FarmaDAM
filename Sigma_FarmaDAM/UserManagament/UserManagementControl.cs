@@ -184,8 +184,28 @@ namespace UserManagament
             }
             return r;
         }
+        public bool CheckControlsFormat(ErrorProvider error, Control.ControlCollection Controls)
+        {
+            bool isCorrect = false;
+            bool pass = true;
 
-        public void SaveChanges(Control.ControlCollection Controls, bool edit)
+            foreach (Control control in Controls)
+            {
+                if (control is TxtSigma || control is cbxSigma)
+                {
+                    isCorrect = ControlsErrorsHelper.CheckControlsErrors(error, control);
+
+                    if (!isCorrect)
+                    {
+                        pass = isCorrect;
+                    }
+                }
+            }
+
+            return pass;
+        }
+
+        public void SaveChanges(Control.ControlCollection Controls, bool edit, ErrorProvider errorProvider)
         {
             DBUtilities db = new DBUtilities();
             string query;
@@ -195,12 +215,10 @@ namespace UserManagament
             bool errorMessage = false;
             TxtSigma NTS = (TxtSigma)Controls.Find("tbxNTS", false)[0];
             TxtSigma DNI = (TxtSigma)Controls.Find("tbxDNI", false)[0];
-            Label lblErrorText = (Label)Controls.Find("lblErrorText", false)[0];
-            lblErrorText.Text = "";
 
             try
             {
-                if (!CheckControlsFormat(Controls))
+                if (CheckControlsFormat(errorProvider, Controls))
                 {
                     if (edit)
                     {
@@ -216,14 +234,15 @@ namespace UserManagament
 
                         if (CheckIfUserIsRegistered(NTS, DNI, dts))
                         {
-                            lblErrorText.Text = "Este cliente ya esta registrado";
+                            errorProvider.SetError(NTS, "Este cliente ya esta registrado");
+                            errorMessage = true;
                         }
                         
                         r = dts.Tables["Taula"].NewRow();
 
                     }
 
-                    if (!errorMessage && !String.IsNullOrWhiteSpace(lblErrorText.Text))
+                    if (!errorMessage)
                     {
                         r = CreateDataRowFromControls(r, Controls);
 
@@ -233,9 +252,9 @@ namespace UserManagament
                         }
 
                         correct = db.Actualizar(query, "Taula", dts);
-                        lblErrorText.Text = "";
+                        errorProvider.SetError(NTS, "");
                     }
-                    
+
                 }
                 else
                 {
@@ -244,7 +263,8 @@ namespace UserManagament
 
                 if (errorMessage)
                 {
-                    lblErrorText.Text = "Algun campo es incorrecto";
+                    errorProvider.SetError(NTS, "Algun campo es incorrecto");
+
                 }
 
                 if (correct)
