@@ -74,6 +74,11 @@ namespace Helpers
                 }
             }
 
+            if (isCorrect)
+            {
+                error.SetError(control, "");
+            }
+
             return isCorrect;
         }
 

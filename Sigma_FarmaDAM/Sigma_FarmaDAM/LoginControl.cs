@@ -20,7 +20,6 @@ namespace LoginControl
 
             try
             {
-                db.Conexion();
                 dts = db.PortarPerConsulta(query);
             }
             catch (Exception e)
@@ -33,26 +32,30 @@ namespace LoginControl
 
         }
 
-        public bool CheckIsReal (TxtSigma control, ErrorProvider error)
+        public bool CheckIsReal (TxtSigma control, ErrorProvider error, string taula)
         {
             bool isReal = false;
 
-            if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0 && control.Text == dts.Tables[0].Rows[0][control.DBReference].ToString())
-            {
+            DataSet dts = db.PortarPerConsulta("SELECT * FROM " + taula + " WHERE " + control.DBReference + " = '" + control.Text + "'");
+
+            if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0) {
                 isReal = true;
             }
-               
-            if (isReal)
+
+            if (!isReal)
             {
-                error.SetError(control, "Ya existe");
+                error.SetError(control, "El usuario no existe");
             }
 
             return isReal;
         }
 
-        public bool CheckCredentials (TxtSigma userName, TxtSigma password, Label lblError)
+        public bool CheckCredentials (TxtSigma userName, TxtSigma password, ErrorProvider error)
         {
             bool isCorrect = false;
+
+            Console.WriteLine(Cryptography.Cryptography.Encrypt(password.Text, userName.Text));
+            Console.WriteLine(dts.Tables[0].Rows[0]["password"].ToString());
 
             if (dts.Tables[0].Rows.Count > 0 && 
                 userName.Text == dts.Tables[0].Rows[0][userName.DBReference].ToString() && 
@@ -63,11 +66,12 @@ namespace LoginControl
 
             if (!isCorrect)
             {
-                lblError.Text = "Contraseña incorrecta";
+                error.SetError(password, "Contraseña incorrecta");
             }
 
             return isCorrect;
         }
+
         public bool CheckIfUserIsAdmin (TxtSigma userName, Label lblError)
         {
             bool isAdmin = false;
@@ -83,6 +87,7 @@ namespace LoginControl
 
             return isAdmin;
         }
+
         public bool CheckIfPasswordRepeatIsEqual (TxtSigma password, TxtSigma repeatPassword, TxtSigma username)
         {
             bool isEqual = false;
@@ -99,9 +104,10 @@ namespace LoginControl
             return isEqual;
         }
 
-        public bool CheckControls (ErrorProvider error, Control.ControlCollection Controls)
+        public bool CheckControlsFormat (ErrorProvider error, Control.ControlCollection Controls)
         {
             bool isCorrect = false;
+            bool pass = true;
 
             foreach (Control control in Controls)
             {
@@ -111,18 +117,18 @@ namespace LoginControl
 
                     if (!isCorrect)
                     {
-                        break;
+                        pass = isCorrect;
                     }
                 }
-
             }
 
-            return isCorrect;
+            return pass;
         }
 
-        public bool CheckControls(ErrorProvider error, Control.ControlCollection Controls, TxtSigma username, TxtSigma password)
+        public bool CheckControlsFormat(ErrorProvider error, Control.ControlCollection Controls, TxtSigma username, TxtSigma password)
         {
             bool isCorrect = false;
+            bool pass = true;
 
             foreach (Control control in Controls)
             {
@@ -137,11 +143,11 @@ namespace LoginControl
 
                 if (!isCorrect)
                 {
-                    break;
+                    pass = isCorrect;
                 }
             }
 
-            return isCorrect;
+            return pass;
         }
 
         public bool CheckControlsFormat(Control.ControlCollection Controls)
@@ -184,7 +190,6 @@ namespace LoginControl
                         if (cntrl.DBReference == "password")
                         {
                             r[cntrl.DBReference] = Cryptography.Cryptography.Encrypt(cntrl.Text, controls.Find("tbxUsername", false)[0].Text);
-
                         }
                         else
                         {

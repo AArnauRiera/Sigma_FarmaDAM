@@ -12,9 +12,9 @@ namespace Login
         LoginControl.LoginControl control;
         public frmLogin()
         {
+            // Console.WriteLine(Cryptography.Cryptography.Encrypt("12345aA", "admin"));
             InitializeComponent();
             lblError.Text = "";
-            control = new LoginControl.LoginControl(tbxUsername.Text);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -23,10 +23,12 @@ namespace Login
         }
         private void Login()
         {
-            if (control.CheckControls(errorProvider, pnltxt.Controls) && 
-                !control.CheckIsReal(tbxUsername, errorProvider))
+            control = new LoginControl.LoginControl(tbxUsername.Text);
+
+            if (control.CheckControlsFormat(errorProvider, pnltxt.Controls) && 
+                control.CheckIsReal(tbxUsername, errorProvider, "Seller"))
             {
-                if (control.CheckCredentials(tbxUsername, tbxPassword, lblError))
+                if (control.CheckCredentials(tbxUsername, tbxPassword, errorProvider))
                 {
                     this.Close();
                     DialogResult = DialogResult.OK;
@@ -35,11 +37,13 @@ namespace Login
         }
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if(control.CheckControls(errorProvider, Controls) && 
-               !control.CheckIsReal(tbxUsername, errorProvider) &&  
+            control = new LoginControl.LoginControl(tbxUsername.Text);
+
+            if (control.CheckControlsFormat(errorProvider, pnltxt.Controls) && 
+               control.CheckIsReal(tbxUsername, errorProvider, "Seller") &&  
                control.CheckIfUserIsAdmin(tbxUsername, lblError))
             {
-                if (control.CheckCredentials(tbxUsername, tbxPassword, lblError))
+                if (control.CheckCredentials(tbxUsername, tbxPassword, errorProvider))
                 {
                     frmUserRegister frmUR = new frmUserRegister();
                     frmUR.Show();

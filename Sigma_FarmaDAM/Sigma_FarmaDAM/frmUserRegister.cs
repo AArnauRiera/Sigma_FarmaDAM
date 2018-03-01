@@ -27,12 +27,12 @@ namespace UserRegister
 
         private void Save()
         {
-            LoginControl.LoginControl control = new LoginControl.LoginControl();
+            LoginControl.LoginControl control = new LoginControl.LoginControl(tbxUsername.Text);
 
-            if (control.CheckControls(errorProvider, Controls, tbxUsername, tbxPassword) &&
-                !control.CheckIsReal(tbxUsername, errorProvider) &&
-                !control.CheckIsReal(tbxEmail, errorProvider) && 
-                !control.CheckIsReal(tbxDNI, errorProvider))
+            if (control.CheckControlsFormat(errorProvider, Controls, tbxUsername, tbxPassword) &&
+                !control.CheckIsReal(tbxUsername, errorProvider, "Seller") &&
+                !control.CheckIsReal(tbxEmail, errorProvider, "Seller") && 
+                !control.CheckIsReal(tbxDNI, errorProvider, "Seller"))
             {
                 if (control.CheckIfPasswordRepeatIsEqual(tbxPassword, tbxRepeatPassword, tbxUsername))
                 {
