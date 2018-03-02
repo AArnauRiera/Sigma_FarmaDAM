@@ -132,34 +132,37 @@ namespace SellSystem
             bool exist = false;
             String Drug = txtCod.Text.ToString();
 
-            ///comprueba si un medicamento esta introduido en la tabla y si esta introduido le añade suma la cantidad introduida///
-            for (int row = 0; row < dgView_Sell.Rows.Count - 1; row++)
-            {
-                if (dgView_Sell.Rows[row].Cells[0].Value.ToString().Equals(Drug))
+            if (!String.IsNullOrEmpty(txtProd.Text)) {
+
+                ///comprueba si un medicamento esta introduido en la tabla y si esta introduido le añade suma la cantidad introduida///
+                for (int row = 0; row < dgView_Sell.Rows.Count - 1; row++)
                 {
-                    exist = true;
-                    dgView_Sell.Rows[row].Cells[4].Value = txtCantidad.Text;
+                    if (dgView_Sell.Rows[row].Cells[0].Value.ToString().Equals(Drug))
+                    {
+                        exist = true;
+                        dgView_Sell.Rows[row].Cells[4].Value = txtCantidad.Text;
+                    }
                 }
-            }
-            if (dts.Tables[0].Rows.Count != 0)
-            {
-                dgView_Sell.DataSource = dt;
-            }
-            else { MessageBox.Show("There are no values "); }
-            ///Si no existe lo introduce a la Tabla///
-            if ((!exist));
-            {
-                contador = 1;
-                dr = dt.NewRow();
-                dr[0] = txtCod.Text;
-                dr[1] = txtProd.Text;
-                dr[2] = "1";
-                dr[3] = Client_ID(Drug);
-                dr[4] = txtCantidad.Text;
-                dt.Rows.Add(dr);
-                txtCod.Text = "";
-                txtProd.Text = "";
-                txtCantidad.Text = "1";
+                if (dts.Tables[0].Rows.Count != 0)
+                {
+                    dgView_Sell.DataSource = dt;
+                }
+                else { MessageBox.Show("There are no values "); }
+                ///Si no existe lo introduce a la Tabla///
+                if ((!exist)) 
+                {
+                    contador = 1;
+                    dr = dt.NewRow();
+                    dr[0] = txtCod.Text;
+                    dr[1] = txtProd.Text;
+                    dr[2] = "1";
+                    dr[3] = Client_ID(Drug);
+                    dr[4] = txtCantidad.Text;
+                    dt.Rows.Add(dr);
+                    txtCod.Text = "";
+                    txtProd.Text = "";
+                    txtCantidad.Text = "1";
+                }
             }
         }
         private void frmSellsytem_Load(object sender, EventArgs e)
@@ -231,6 +234,7 @@ namespace SellSystem
                 else
                 {
                     MessageBox.Show("No existe el cliente");
+                    txtClient.Text = "";
                 }
             }
         }
