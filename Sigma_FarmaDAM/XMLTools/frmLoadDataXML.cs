@@ -32,7 +32,7 @@ namespace XMLTools
             }
         }
 
-        private void btnUpload_Click(object sender, EventArgs e)
+        public virtual void btnUpload_Click(object sender, EventArgs e)
         {
             XmlDocument reader = new XmlDocument();
             reader.Load(txtbxXml.Text);
@@ -41,11 +41,11 @@ namespace XMLTools
 
             DataSet ds = db.PortarPerConsulta("select * from Drugs where 1 = 2");
 
-            XmlNodeList nodeList = reader.SelectNodes("//prescription");
+            XmlNodeList nodeList = reader.DocumentElement.GetElementsByTagName("prescription");
 
             foreach (XmlNode node in nodeList)
             {
-                DataRow dtr =  ds.Tables[0].NewRow();               
+                DataRow dtr =  ds.Tables["Taula"].NewRow();               
 
                 foreach (XmlNode child in node.ChildNodes)
                 {
@@ -53,50 +53,97 @@ namespace XMLTools
 
                     switch (child.Name)
                     {
-                        case "des_nomco":
-                            value = child.Value;
-                            dtr["des_nomco"] = value;
-                            break;
                         case "cod_nacion":
-                            value = child.Value;
-                            dtr["cod_nacion"] = value;
+                            value = child.InnerText;
+                            dtr["Register_number"] = value;
+                            break;
+                        case "nro_definitivo":
+                            value = child.InnerText;
+                            dtr["Sanitary_Register_Num"] = value;
+                            break;
+                        case "des_nomco":
+                            value = child.InnerText;
+                            dtr["CommercialName"] = value;
                             break;
                         case "nro_conte":
-                            value = child.Value;
-                            dtr["nro_conte"] = value;
+                            value = child.InnerText;
+                            dtr["Content"] = value;
                             break;
                         case "url_fictec":
-                            value = child.Value;
-                            dtr["url_fictec"] = value;
+                            value = child.InnerText;
+                            dtr["Documentation"] = value;
+                            break;
+                        case "url_prosp":
+                            value = child.InnerText;
+                            dtr["Prospectus"] = value;
                             break;
                         case "sw_receta":
-                            value = child.Value;
-                            dtr["sw_receta"] = value;
+                            value = child.InnerText;
+                            dtr["NeedsRecipe"] = ConvertTo(value);
                             break;
                         case "sw_generico":
-                            value = child.Value;
-                            dtr["sw_generico"] = value;
+                            value = child.InnerText;
+                            dtr["IsGeneric"] = ConvertTo(value);
                             break;
                         case "sw_sustituible":
-                            value = child.Value;
-                            dtr["sw_sustituible"] = value;
+                            value = child.InnerText;
+                            dtr["Replaceable"] = ConvertTo(value);
                             break;
                         case "laboratorio_titular":
-                            value = child.Value;
-                            dtr["laboratorio_titular"] = value;
+                            value = child.InnerText;
+                            dtr["LabId"] = value;
                             break;
-                        case "composicion_pa":
-                            XmlNodeList nodeListprin = child.SelectNodes("//cod_principio_activo");
-                            value = nodeListprin[0].Value;
-                            dtr["cod_principio_activo"] = value;
+                        case "formasfarmaceuticas":
+                            bool found = false;
+                            foreach (XmlNode item in child.ChildNodes)
+                            {
+                                switch (item.Name)
+                                {
+                                    case "composicion_pa":
+
+                                        foreach (XmlNode cod in item.ChildNodes)
+                                        {
+                                            switch (cod.Name)
+                                            {
+                                                case "cod_principio_activo":
+                                                    value = cod.InnerText;
+                                                    dtr["ActivePrincipleID"] = value;
+                                                    found = true;
+                                                    break;
+                                            }
+                                        }
+                                
+                                        break;
+                                }
+
+                                if (found)
+                                {
+                                    break;
+                                }
+                                
+                            }
+
                             break;
                     }
                 }
-
-                ds.Tables[0].Rows.Add(dtr);
+                dtr["IVAId"] = 2;
+                dtr["Price"] = 10;
+                ds.Tables["Taula"].Rows.Add(dtr);
             }
 
             db.Actualizar("select * from Drugs where 1 = 2", "Taula", ds);
+        }
+
+        private bool ConvertTo(string value)
+        {
+            if (value.Equals("1"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

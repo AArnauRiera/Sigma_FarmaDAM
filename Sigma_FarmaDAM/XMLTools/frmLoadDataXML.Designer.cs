@@ -83,7 +83,7 @@
         #endregion
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnSelectXml;
-        private System.Windows.Forms.TextBox txtbxXml;
-        private System.Windows.Forms.Button btnUpload;
+        protected System.Windows.Forms.TextBox txtbxXml;
+        protected System.Windows.Forms.Button btnUpload;
     }
 }
