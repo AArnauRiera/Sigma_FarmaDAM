@@ -29,7 +29,7 @@ namespace Mantein
 
         protected void BindingDate()
         {
-            dgwBase.DataSource = dts.Tables[Table];
+            dgwBase.DataSource = dts.Tables["Taula"];
         }
 
         protected void GetQuery()
@@ -73,5 +73,15 @@ namespace Mantein
             BindingDate();
         }
 
+        private void btnGet_Click_1(object sender, EventArgs e)
+        {
+            GetQuery();
+            BindingDate();
+        }
+
+        private void btnQuery_Click_1(object sender, EventArgs e)
+        {
+            OpenQuery();
+        }
     }
 }
