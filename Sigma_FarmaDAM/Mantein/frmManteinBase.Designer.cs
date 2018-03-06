@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.pnlMantein = new System.Windows.Forms.Panel();
-            this.pnlTextBox = new System.Windows.Forms.Panel();
-            this.btnQuery = new System.Windows.Forms.Button();
-            this.pnlButtons = new System.Windows.Forms.Panel();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnGet = new System.Windows.Forms.Button();
             this.pnlGW = new System.Windows.Forms.Panel();
             this.dgwBase = new System.Windows.Forms.DataGridView();
+            this.pnlTextBox = new System.Windows.Forms.Panel();
+            this.pnlButtons = new System.Windows.Forms.Panel();
+            this.btnQuery = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnGet = new System.Windows.Forms.Button();
             this.pnlMantein.SuspendLayout();
-            this.pnlButtons.SuspendLayout();
             this.pnlGW.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwBase)).BeginInit();
+            this.pnlButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMantein
@@ -49,8 +49,25 @@
             this.pnlMantein.Controls.Add(this.pnlButtons);
             this.pnlMantein.Location = new System.Drawing.Point(2, 0);
             this.pnlMantein.Name = "pnlMantein";
-            this.pnlMantein.Size = new System.Drawing.Size(1053, 748);
+            this.pnlMantein.Size = new System.Drawing.Size(1303, 748);
             this.pnlMantein.TabIndex = 0;
+            // 
+            // pnlGW
+            // 
+            this.pnlGW.Controls.Add(this.dgwBase);
+            this.pnlGW.Location = new System.Drawing.Point(397, 23);
+            this.pnlGW.Name = "pnlGW";
+            this.pnlGW.Size = new System.Drawing.Size(659, 647);
+            this.pnlGW.TabIndex = 6;
+            // 
+            // dgwBase
+            // 
+            this.dgwBase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwBase.Location = new System.Drawing.Point(7, 5);
+            this.dgwBase.Margin = new System.Windows.Forms.Padding(5);
+            this.dgwBase.Name = "dgwBase";
+            this.dgwBase.Size = new System.Drawing.Size(647, 622);
+            this.dgwBase.TabIndex = 4;
             // 
             // pnlTextBox
             // 
@@ -59,17 +76,6 @@
             this.pnlTextBox.Name = "pnlTextBox";
             this.pnlTextBox.Size = new System.Drawing.Size(371, 559);
             this.pnlTextBox.TabIndex = 5;
-            // 
-            // btnQuery
-            // 
-            this.btnQuery.Location = new System.Drawing.Point(251, 17);
-            this.btnQuery.Margin = new System.Windows.Forms.Padding(5);
-            this.btnQuery.Name = "btnQuery";
-            this.btnQuery.Size = new System.Drawing.Size(113, 41);
-            this.btnQuery.TabIndex = 0;
-            this.btnQuery.Text = "Search";
-            this.btnQuery.UseVisualStyleBackColor = true;
-            this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click_1);
             // 
             // pnlButtons
             // 
@@ -81,6 +87,17 @@
             this.pnlButtons.Name = "pnlButtons";
             this.pnlButtons.Size = new System.Drawing.Size(372, 78);
             this.pnlButtons.TabIndex = 4;
+            // 
+            // btnQuery
+            // 
+            this.btnQuery.Location = new System.Drawing.Point(251, 17);
+            this.btnQuery.Margin = new System.Windows.Forms.Padding(5);
+            this.btnQuery.Name = "btnQuery";
+            this.btnQuery.Size = new System.Drawing.Size(113, 41);
+            this.btnQuery.TabIndex = 0;
+            this.btnQuery.Text = "Search";
+            this.btnQuery.UseVisualStyleBackColor = true;
+            this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click_1);
             // 
             // btnUpdate
             // 
@@ -103,29 +120,12 @@
             this.btnGet.UseVisualStyleBackColor = true;
             this.btnGet.Click += new System.EventHandler(this.btnGet_Click_1);
             // 
-            // pnlGW
-            // 
-            this.pnlGW.Controls.Add(this.dgwBase);
-            this.pnlGW.Location = new System.Drawing.Point(397, 23);
-            this.pnlGW.Name = "pnlGW";
-            this.pnlGW.Size = new System.Drawing.Size(659, 647);
-            this.pnlGW.TabIndex = 6;
-            // 
-            // dgwBase
-            // 
-            this.dgwBase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwBase.Location = new System.Drawing.Point(7, 5);
-            this.dgwBase.Margin = new System.Windows.Forms.Padding(5);
-            this.dgwBase.Name = "dgwBase";
-            this.dgwBase.Size = new System.Drawing.Size(647, 622);
-            this.dgwBase.TabIndex = 4;
-            // 
             // frmManteinBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1067, 760);
+            this.ClientSize = new System.Drawing.Size(1367, 760);
             this.Controls.Add(this.pnlMantein);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -133,9 +133,9 @@
             this.Name = "frmManteinBase";
             this.Text = "frmManteinBase";
             this.pnlMantein.ResumeLayout(false);
-            this.pnlButtons.ResumeLayout(false);
             this.pnlGW.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgwBase)).EndInit();
+            this.pnlButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
