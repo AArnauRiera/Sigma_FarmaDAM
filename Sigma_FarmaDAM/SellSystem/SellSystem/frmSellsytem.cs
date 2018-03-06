@@ -149,7 +149,7 @@ namespace SellSystem
                 }
                 else { MessageBox.Show("There are no values "); }
                 ///Si no existe lo introduce a la Tabla///
-                if ((!exist )) 
+                if ((!exist)) 
                 {
                     contador = 1;
                     dr = dt.NewRow();
@@ -176,7 +176,32 @@ namespace SellSystem
         }
         private void txtCod_KeyDown(object sender, KeyEventArgs e)
         {
-
+            ///Comprueba si se pulsa la key enter y que no este null el campo del codigo del medicamento///
+            if (e.KeyCode == Keys.Enter &&!string.IsNullOrEmpty(txtCod.Text))
+            {
+                string productName = name_product();
+                if (!String.IsNullOrEmpty(productName))
+                {
+                    txtProd.Text = productName;
+                    if (!(drug_exist(txtCod.Text)&&stock(txtCod.Text)))
+                    {
+                        if (MessageBox.Show("¿Quieres buscar medicamentos similares?", "Buscar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            string condition2 = txtCod.Text;
+                            frmQueryDrugs r = new frmQueryDrugs(GetTxtSigma(),"Drugs", id_active(),txtCod.Text);
+                            r.Show();
+                        }
+                        else
+                        {
+                            txtCod.Text = "";
+                            txtProd.Text = "";
+                        }
+                    }
+                }else{
+                    txtCod.Text = "";
+                    txtProd.Text = "";
+                }
+            }
         }
         ///Genera un Array a partir del custom control donde los valores son todos los de el panel///
         private TxtSigma[] GetTxtSigma()
@@ -202,9 +227,9 @@ namespace SellSystem
                 {
                     txtClient.ReadOnly = true;
                     dts = client();
-                    lblNombre.Text = dts.Tables[0].Rows[0][0].ToString();
-                    lblApellido.Text = dts.Tables[0].Rows[0][1].ToString();
-                    lblSegundo.Text = dts.Tables[0].Rows[0][2].ToString();
+                    txtName.Text = dts.Tables[0].Rows[0][0].ToString();
+                    txtLastName.Text = dts.Tables[0].Rows[0][1].ToString();
+                    txtLastname2.Text = dts.Tables[0].Rows[0][2].ToString();
                 }
                 else
                 {
@@ -220,11 +245,6 @@ namespace SellSystem
             {
                 band.ReadOnly = true;
             }
-        }
-
-        private void btnBuy_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

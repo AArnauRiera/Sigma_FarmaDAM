@@ -47,8 +47,8 @@
             this.txtContent = new Sigma_Controls.TxtSigma();
             this.txtSRN = new Sigma_Controls.TxtSigma();
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
-            this.pnlTextBox.SuspendLayout();
             this.pnlButtons.SuspendLayout();
+            this.pnlTextBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTextBox
@@ -94,90 +94,81 @@
             // lblProspectus
             // 
             this.lblProspectus.AutoSize = true;
-            this.lblProspectus.Location = new System.Drawing.Point(483, 123);
-            this.lblProspectus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProspectus.Location = new System.Drawing.Point(362, 84);
             this.lblProspectus.Name = "lblProspectus";
-            this.lblProspectus.Size = new System.Drawing.Size(76, 19);
+            this.lblProspectus.Size = new System.Drawing.Size(60, 13);
             this.lblProspectus.TabIndex = 34;
             this.lblProspectus.Text = "Prospectus";
             // 
             // lblDocumentation
             // 
             this.lblDocumentation.AutoSize = true;
-            this.lblDocumentation.Location = new System.Drawing.Point(461, 85);
-            this.lblDocumentation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDocumentation.Location = new System.Drawing.Point(346, 58);
             this.lblDocumentation.Name = "lblDocumentation";
-            this.lblDocumentation.Size = new System.Drawing.Size(104, 19);
+            this.lblDocumentation.Size = new System.Drawing.Size(79, 13);
             this.lblDocumentation.TabIndex = 33;
             this.lblDocumentation.Text = "Documentation";
             // 
             // lblObligatory
             // 
             this.lblObligatory.AutoSize = true;
-            this.lblObligatory.Location = new System.Drawing.Point(471, 47);
-            this.lblObligatory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblObligatory.Location = new System.Drawing.Point(353, 32);
             this.lblObligatory.Name = "lblObligatory";
-            this.lblObligatory.Size = new System.Drawing.Size(86, 19);
+            this.lblObligatory.Size = new System.Drawing.Size(72, 13);
             this.lblObligatory.TabIndex = 32;
             this.lblObligatory.Text = "NeedsRecipe";
             // 
             // lblGeneric
             // 
             this.lblGeneric.AutoSize = true;
-            this.lblGeneric.Location = new System.Drawing.Point(504, 12);
-            this.lblGeneric.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGeneric.Location = new System.Drawing.Point(378, 8);
             this.lblGeneric.Name = "lblGeneric";
-            this.lblGeneric.Size = new System.Drawing.Size(55, 19);
+            this.lblGeneric.Size = new System.Drawing.Size(44, 13);
             this.lblGeneric.TabIndex = 31;
             this.lblGeneric.Text = "Generic";
             // 
             // lblReplaceable
             // 
             this.lblReplaceable.AutoSize = true;
-            this.lblReplaceable.Location = new System.Drawing.Point(221, 164);
-            this.lblReplaceable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReplaceable.Location = new System.Drawing.Point(166, 112);
             this.lblReplaceable.Name = "lblReplaceable";
-            this.lblReplaceable.Size = new System.Drawing.Size(80, 19);
+            this.lblReplaceable.Size = new System.Drawing.Size(67, 13);
             this.lblReplaceable.TabIndex = 30;
             this.lblReplaceable.Text = "Replaceable";
             // 
             // lblContent
             // 
             this.lblContent.AutoSize = true;
-            this.lblContent.Location = new System.Drawing.Point(252, 123);
-            this.lblContent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContent.Location = new System.Drawing.Point(189, 84);
             this.lblContent.Name = "lblContent";
-            this.lblContent.Size = new System.Drawing.Size(59, 19);
+            this.lblContent.Size = new System.Drawing.Size(44, 13);
             this.lblContent.TabIndex = 35;
             this.lblContent.Text = "Content";
             // 
             // lblIdActive
             // 
             this.lblIdActive.AutoSize = true;
-            this.lblIdActive.Location = new System.Drawing.Point(245, 85);
-            this.lblIdActive.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdActive.Location = new System.Drawing.Point(184, 58);
             this.lblIdActive.Name = "lblIdActive";
-            this.lblIdActive.Size = new System.Drawing.Size(62, 19);
+            this.lblIdActive.Size = new System.Drawing.Size(49, 13);
             this.lblIdActive.TabIndex = 36;
             this.lblIdActive.Text = "Id Active";
             // 
             // lblDenomination
             // 
             this.lblDenomination.AutoSize = true;
-            this.lblDenomination.Location = new System.Drawing.Point(213, 53);
-            this.lblDenomination.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDenomination.Location = new System.Drawing.Point(160, 36);
             this.lblDenomination.Name = "lblDenomination";
-            this.lblDenomination.Size = new System.Drawing.Size(96, 19);
+            this.lblDenomination.Size = new System.Drawing.Size(72, 13);
             this.lblDenomination.TabIndex = 29;
             this.lblDenomination.Text = "Denomination";
             // 
             // lblSRN
             // 
             this.lblSRN.AutoSize = true;
-            this.lblSRN.Location = new System.Drawing.Point(269, 9);
-            this.lblSRN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSRN.Location = new System.Drawing.Point(202, 6);
             this.lblSRN.Name = "lblSRN";
-            this.lblSRN.Size = new System.Drawing.Size(34, 19);
+            this.lblSRN.Size = new System.Drawing.Size(30, 13);
             this.lblSRN.TabIndex = 28;
             this.lblSRN.Text = "SRN";
             // 
@@ -187,11 +178,10 @@
             this.txtDocumentation.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtDocumentation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtDocumentation.ForeColor = System.Drawing.Color.Gray;
-            this.txtDocumentation.Location = new System.Drawing.Point(571, 85);
-            this.txtDocumentation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDocumentation.Location = new System.Drawing.Point(428, 58);
             this.txtDocumentation.Name = "txtDocumentation";
             this.txtDocumentation.Placeholder = null;
-            this.txtDocumentation.Size = new System.Drawing.Size(132, 20);
+            this.txtDocumentation.Size = new System.Drawing.Size(100, 20);
             this.txtDocumentation.TabIndex = 26;
             this.txtDocumentation.Table = "Drugs";
             // 
@@ -201,11 +191,10 @@
             this.txtReplaceable.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtReplaceable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtReplaceable.ForeColor = System.Drawing.Color.Gray;
-            this.txtReplaceable.Location = new System.Drawing.Point(321, 161);
-            this.txtReplaceable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtReplaceable.Location = new System.Drawing.Point(241, 110);
             this.txtReplaceable.Name = "txtReplaceable";
             this.txtReplaceable.Placeholder = null;
-            this.txtReplaceable.Size = new System.Drawing.Size(132, 20);
+            this.txtReplaceable.Size = new System.Drawing.Size(100, 20);
             this.txtReplaceable.TabIndex = 27;
             this.txtReplaceable.Table = "Drugs";
             // 
@@ -215,11 +204,10 @@
             this.txtObligatory.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtObligatory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtObligatory.ForeColor = System.Drawing.Color.Gray;
-            this.txtObligatory.Location = new System.Drawing.Point(571, 47);
-            this.txtObligatory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtObligatory.Location = new System.Drawing.Point(428, 32);
             this.txtObligatory.Name = "txtObligatory";
             this.txtObligatory.Placeholder = null;
-            this.txtObligatory.Size = new System.Drawing.Size(132, 20);
+            this.txtObligatory.Size = new System.Drawing.Size(100, 20);
             this.txtObligatory.TabIndex = 24;
             this.txtObligatory.Table = "Drugs";
             // 
@@ -229,11 +217,10 @@
             this.txtIdActive.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtIdActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtIdActive.ForeColor = System.Drawing.Color.Gray;
-            this.txtIdActive.Location = new System.Drawing.Point(321, 79);
-            this.txtIdActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdActive.Location = new System.Drawing.Point(241, 54);
             this.txtIdActive.Name = "txtIdActive";
             this.txtIdActive.Placeholder = null;
-            this.txtIdActive.Size = new System.Drawing.Size(132, 20);
+            this.txtIdActive.Size = new System.Drawing.Size(100, 20);
             this.txtIdActive.TabIndex = 25;
             this.txtIdActive.Table = "Drugs";
             // 
@@ -243,11 +230,10 @@
             this.txtProspectus.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtProspectus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtProspectus.ForeColor = System.Drawing.Color.Gray;
-            this.txtProspectus.Location = new System.Drawing.Point(571, 123);
-            this.txtProspectus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProspectus.Location = new System.Drawing.Point(428, 84);
             this.txtProspectus.Name = "txtProspectus";
             this.txtProspectus.Placeholder = null;
-            this.txtProspectus.Size = new System.Drawing.Size(132, 20);
+            this.txtProspectus.Size = new System.Drawing.Size(100, 20);
             this.txtProspectus.TabIndex = 21;
             this.txtProspectus.Table = "Drugs";
             // 
@@ -257,11 +243,10 @@
             this.txtDenomination.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtDenomination.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtDenomination.ForeColor = System.Drawing.Color.Gray;
-            this.txtDenomination.Location = new System.Drawing.Point(321, 41);
-            this.txtDenomination.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDenomination.Location = new System.Drawing.Point(241, 28);
             this.txtDenomination.Name = "txtDenomination";
             this.txtDenomination.Placeholder = null;
-            this.txtDenomination.Size = new System.Drawing.Size(132, 20);
+            this.txtDenomination.Size = new System.Drawing.Size(100, 20);
             this.txtDenomination.TabIndex = 23;
             this.txtDenomination.Table = "Drugs";
             // 
@@ -271,11 +256,10 @@
             this.txtGeneric.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtGeneric.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtGeneric.ForeColor = System.Drawing.Color.Gray;
-            this.txtGeneric.Location = new System.Drawing.Point(571, 9);
-            this.txtGeneric.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGeneric.Location = new System.Drawing.Point(428, 6);
             this.txtGeneric.Name = "txtGeneric";
             this.txtGeneric.Placeholder = null;
-            this.txtGeneric.Size = new System.Drawing.Size(132, 20);
+            this.txtGeneric.Size = new System.Drawing.Size(100, 20);
             this.txtGeneric.TabIndex = 20;
             this.txtGeneric.Table = "Drugs";
             // 
@@ -285,11 +269,10 @@
             this.txtContent.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtContent.ForeColor = System.Drawing.Color.Gray;
-            this.txtContent.Location = new System.Drawing.Point(321, 117);
-            this.txtContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContent.Location = new System.Drawing.Point(241, 80);
             this.txtContent.Name = "txtContent";
             this.txtContent.Placeholder = null;
-            this.txtContent.Size = new System.Drawing.Size(132, 20);
+            this.txtContent.Size = new System.Drawing.Size(100, 20);
             this.txtContent.TabIndex = 22;
             this.txtContent.Table = "Drugs";
             // 
@@ -299,24 +282,23 @@
             this.txtSRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtSRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtSRN.ForeColor = System.Drawing.Color.Gray;
-            this.txtSRN.Location = new System.Drawing.Point(321, 3);
-            this.txtSRN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSRN.Location = new System.Drawing.Point(241, 2);
             this.txtSRN.Name = "txtSRN";
             this.txtSRN.Placeholder = null;
-            this.txtSRN.Size = new System.Drawing.Size(132, 20);
+            this.txtSRN.Size = new System.Drawing.Size(100, 20);
             this.txtSRN.TabIndex = 19;
             this.txtSRN.Table = "Drugs";
             // 
             // frmManteinDrugs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.ClientSize = new System.Drawing.Size(949, 628);
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(712, 430);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmManteinDrugs";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
+            this.pnlButtons.ResumeLayout(false);
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();
-            this.pnlButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

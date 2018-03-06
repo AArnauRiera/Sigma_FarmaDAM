@@ -29,23 +29,26 @@
         private void InitializeComponent()
         {
             this.lblClient = new System.Windows.Forms.Label();
+            this.txtClient = new System.Windows.Forms.TextBox();
             this.pnltxt = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtProd = new Sigma_Controls.TxtSigma();
             this.txtCod = new Sigma_Controls.TxtSigma();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.lblCant = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblSegundo = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtLastname2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgView_Sell = new System.Windows.Forms.DataGridView();
             this.btnBuy = new System.Windows.Forms.Button();
-            this.txtClient = new Sigma_Controls.TxtSigma();
-            this.txtCantidad = new Sigma_Controls.TxtSigma();
             this.pnltxt.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgView_Sell)).BeginInit();
@@ -55,26 +58,38 @@
             // 
             this.lblClient.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblClient.AutoSize = true;
-            this.lblClient.Location = new System.Drawing.Point(63, 54);
+            this.lblClient.Location = new System.Drawing.Point(90, 54);
             this.lblClient.Name = "lblClient";
             this.lblClient.Size = new System.Drawing.Size(29, 13);
             this.lblClient.TabIndex = 0;
             this.lblClient.Text = "NTS";
             // 
+            // txtClient
+            // 
+            this.txtClient.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtClient.Location = new System.Drawing.Point(125, 51);
+            this.txtClient.Name = "txtClient";
+            this.txtClient.Size = new System.Drawing.Size(60, 20);
+            this.txtClient.TabIndex = 2;
+            this.txtClient.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClient_KeyDown);
+            // 
             // pnltxt
             // 
-            this.pnltxt.Controls.Add(this.txtCantidad);
-            this.pnltxt.Controls.Add(this.txtClient);
             this.pnltxt.Controls.Add(this.label6);
             this.pnltxt.Controls.Add(this.label5);
             this.pnltxt.Controls.Add(this.txtProd);
             this.pnltxt.Controls.Add(this.txtCod);
+            this.pnltxt.Controls.Add(this.txtCantidad);
             this.pnltxt.Controls.Add(this.lblCant);
             this.pnltxt.Controls.Add(this.label7);
-            this.pnltxt.Controls.Add(this.lblSegundo);
-            this.pnltxt.Controls.Add(this.lblApellido);
-            this.pnltxt.Controls.Add(this.lblNombre);
+            this.pnltxt.Controls.Add(this.txtLastname2);
+            this.pnltxt.Controls.Add(this.label4);
+            this.pnltxt.Controls.Add(this.txtLastName);
+            this.pnltxt.Controls.Add(this.label3);
+            this.pnltxt.Controls.Add(this.txtName);
+            this.pnltxt.Controls.Add(this.label2);
             this.pnltxt.Controls.Add(this.label1);
+            this.pnltxt.Controls.Add(this.txtClient);
             this.pnltxt.Controls.Add(this.btnAdd);
             this.pnltxt.Controls.Add(this.lblClient);
             this.pnltxt.Dock = System.Windows.Forms.DockStyle.Top;
@@ -119,12 +134,11 @@
             // 
             // txtCod
             // 
-            this.txtCod.BackColor = System.Drawing.Color.White;
             this.txtCod.DBReference = "Register_Number";
             this.txtCod.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.txtCod.ForeColor = System.Drawing.Color.White;
-            this.txtCod.Location = new System.Drawing.Point(104, 112);
+            this.txtCod.ForeColor = System.Drawing.Color.Gray;
+            this.txtCod.Location = new System.Drawing.Point(131, 112);
             this.txtCod.Name = "txtCod";
             this.txtCod.Placeholder = null;
             this.txtCod.Size = new System.Drawing.Size(100, 20);
@@ -132,11 +146,19 @@
             this.txtCod.Table = null;
             this.txtCod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCod_KeyDown);
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCantidad.Location = new System.Drawing.Point(663, 112);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(42, 20);
+            this.txtCantidad.TabIndex = 24;
+            // 
             // lblCant
             // 
             this.lblCant.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCant.AutoSize = true;
-            this.lblCant.Location = new System.Drawing.Point(571, 115);
+            this.lblCant.Location = new System.Drawing.Point(596, 115);
             this.lblCant.Name = "lblCant";
             this.lblCant.Size = new System.Drawing.Size(49, 13);
             this.lblCant.TabIndex = 23;
@@ -152,38 +174,65 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Product";
             // 
-            // lblSegundo
+            // txtLastname2
             // 
-            this.lblSegundo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSegundo.AutoSize = true;
-            this.lblSegundo.Enabled = false;
-            this.lblSegundo.Location = new System.Drawing.Point(335, 58);
-            this.lblSegundo.Name = "lblSegundo";
-            this.lblSegundo.Size = new System.Drawing.Size(90, 13);
-            this.lblSegundo.TabIndex = 16;
-            this.lblSegundo.Text = "Segundo Apellido";
+            this.txtLastname2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLastname2.Enabled = false;
+            this.txtLastname2.Location = new System.Drawing.Point(551, 51);
+            this.txtLastname2.Name = "txtLastname2";
+            this.txtLastname2.Size = new System.Drawing.Size(64, 20);
+            this.txtLastname2.TabIndex = 17;
             // 
-            // lblApellido
+            // label4
             // 
-            this.lblApellido.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Enabled = false;
-            this.lblApellido.Location = new System.Drawing.Point(274, 58);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(44, 13);
-            this.lblApellido.TabIndex = 14;
-            this.lblApellido.Text = "Apellido";
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Enabled = false;
+            this.label4.Location = new System.Drawing.Point(455, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Segundo Apellido";
             // 
-            // lblNombre
+            // txtLastName
             // 
-            this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Enabled = false;
-            this.lblNombre.Location = new System.Drawing.Point(215, 58);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
-            this.lblNombre.TabIndex = 12;
-            this.lblNombre.Text = "Nombre";
+            this.txtLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLastName.Enabled = false;
+            this.txtLastName.Location = new System.Drawing.Point(375, 51);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(65, 20);
+            this.txtLastName.TabIndex = 15;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Enabled = false;
+            this.label3.Location = new System.Drawing.Point(313, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Apellido";
+            // 
+            // txtName
+            // 
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtName.Enabled = false;
+            this.txtName.Location = new System.Drawing.Point(232, 51);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(68, 20);
+            this.txtName.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Enabled = false;
+            this.label2.Location = new System.Drawing.Point(191, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Nombre";
             // 
             // label1
             // 
@@ -234,33 +283,6 @@
             this.btnBuy.TabIndex = 12;
             this.btnBuy.Text = "Buy";
             this.btnBuy.UseVisualStyleBackColor = true;
-            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
-            // 
-            // txtClient
-            // 
-            this.txtClient.BackColor = System.Drawing.Color.White;
-            this.txtClient.DBReference = "NTS";
-            this.txtClient.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtClient.ForeColor = System.Drawing.Color.White;
-            this.txtClient.Location = new System.Drawing.Point(116, 51);
-            this.txtClient.Name = "txtClient";
-            this.txtClient.Placeholder = null;
-            this.txtClient.Size = new System.Drawing.Size(69, 20);
-            this.txtClient.TabIndex = 29;
-            this.txtClient.Table = null;
-            this.txtClient.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClient_KeyDown);
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.BackColor = System.Drawing.Color.White;
-            this.txtCantidad.DBReference = "Quantity";
-            this.txtCantidad.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtCantidad.Location = new System.Drawing.Point(651, 112);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Placeholder = null;
-            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
-            this.txtCantidad.TabIndex = 30;
-            this.txtCantidad.Table = null;
             // 
             // frmSellsytem
             // 
@@ -283,23 +305,26 @@
         #endregion
 
         private System.Windows.Forms.Label lblClient;
+        private System.Windows.Forms.TextBox txtClient;
         private System.Windows.Forms.Panel pnltxt;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnBuy;
         private System.Windows.Forms.DataGridView dgView_Sell;
-        private System.Windows.Forms.Label lblSegundo;
-        private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtLastname2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label lblCant;
         private Sigma_Controls.TxtSigma txtCod;
         private Sigma_Controls.TxtSigma txtProd;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private Sigma_Controls.TxtSigma txtCantidad;
-        private Sigma_Controls.TxtSigma txtClient;
     }
 }
 
