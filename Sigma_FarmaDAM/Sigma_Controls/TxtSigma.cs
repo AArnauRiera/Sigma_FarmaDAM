@@ -244,6 +244,8 @@ namespace Sigma_Controls
 
             Color color = new Color();
 
+            color = Color.LightBlue;
+            /*
             switch (_fieldType)
             {
                 case FieldTypes.Name:
@@ -267,7 +269,7 @@ namespace Sigma_Controls
                 default:
                     color = Color.Pink;
                     break;
-            }
+            }*/
 
             return color;
 
