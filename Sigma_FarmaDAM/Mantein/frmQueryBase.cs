@@ -21,6 +21,8 @@ namespace Mantein
 
 
         public string Table { get; set; }
+        public string Table2 { get; set; }
+
 
         public frmQueryBase(DataGridView dgw, string table)
         {

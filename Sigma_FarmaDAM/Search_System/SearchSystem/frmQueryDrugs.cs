@@ -21,29 +21,30 @@ namespace SearchSystem
             InitializeComponent();
         }
 
-        public frmQueryDrugs(DataGridView dgw, string table)
+        public frmQueryDrugs(DataGridView dgw, string table,string table2)
         {
             InitializeComponent();
             _dgw = dgw;
             Table = table;
+            Table2 = table2;
+
         }
 
-        public frmQueryDrugs(TxtSigma[] txts, string table, string conditon, string condition2)
+        public frmQueryDrugs(TxtSigma[] txts, string table, string conditon, string condition2,string table2)
         {
             InitializeComponent();
             _isSellSystem = true;
             _txts = txts;
             Table = table;
-            GetQuery(conditon,condition2);
+            Table2 = table2;
+            GetQuery(conditon,condition2,table2);
             BindingDate();
         }
 
-        protected void GetQuery(string condition, string condition2)
+        protected void GetQuery(string condition, string condition2,string table2)
         {
             DBUtilities db = new DBUtilities();
-
-            query = "select * from " + Table + " where " + "ActivePrincipleID = " + condition + " and Register_Number !="+ condition2;
-
+            query = "select * from Drugs,Stock where Drugs.id  =  Stock.ID_Drug  and Drugs.ActivePrincipleID ='" + condition+ "' and Stock.Quantity>0 and Drugs.Register_Number!='"+condition2+"'";
             dts = db.PortarPerConsulta(query);
         }
 
@@ -70,6 +71,5 @@ namespace SearchSystem
 
             
         }
-
     }
 }

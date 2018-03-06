@@ -19,8 +19,9 @@ namespace Manteniment
 
         protected override void OpenQuery()
         {
-            frmQueryDrugs query = new frmQueryDrugs(dgwBase, "Drugs");
+            frmQueryDrugs query = new frmQueryDrugs(dgwBase, "Drugs","Stock");
             query.Show();
         }
+
     }
 }
