@@ -164,7 +164,7 @@ namespace Sigma_Controls
         {
             base.OnLostFocus(e);
 
-            BackColor = DefaultBackColor;
+            BackColor = Color.White;
 
         }
 
