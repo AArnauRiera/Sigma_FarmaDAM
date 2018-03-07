@@ -74,14 +74,14 @@ namespace UserManagament
             return isRegistered;
         }
 
-        public void getDataFromNtsSeach (Control.ControlCollection Controls)
+        public void getDataFromNtsSeach (Control.ControlCollection Controls, ErrorProvider errorProvider)
         {
             TxtSigma tbxNTS = (TxtSigma)Controls.Find("tbxNTS", false)[0];
             TxtSigma tbxDNI = (TxtSigma)Controls.Find("tbxDNI", false)[0];
             Label lblError = (Label)Controls.Find("lblError", false)[0];
             TxtSigma[] control = new TxtSigma[] { tbxNTS };
 
-            if (!CheckControlsFormat(control) && tbxNTS.Text != "NTS")
+            if (ControlsErrorsHelper.CheckControlsErrors(errorProvider, (Control)control[0]) && tbxNTS.Text != "NTS")
             {
                 DataSet dts = DBHelper.GetQuery("Clients", control);
                 if (dts.Tables["Taula"].Rows.Count != 0)
@@ -95,13 +95,13 @@ namespace UserManagament
                 }
                 else
                 {
-                    lblError.Text = "Entry not valid for search";
+                    errorProvider.SetError((Control)control[0], "Entrada no valida para buscar");
                     tbxNTS.Focus(); // NOSE SI ESTA BE AIXO
                 }
             }
             else
             {
-                lblError.Text = "Entry not valid for search";
+                errorProvider.SetError((Control)control[0], "Entrada no valida para buscar");
                 tbxNTS.Focus(); // AIXO TAMPOC
             }
         }
@@ -122,48 +122,39 @@ namespace UserManagament
 
         }
 
-        public bool CheckControlsFormat(Control.ControlCollection Controls)
+        public bool CheckControlsFormat(Control.ControlCollection Controls, ErrorProvider errorProvider)
         {
             bool error = false;
+            bool pass = true;
 
-            foreach (var control in Controls)
+            foreach (Control control in Controls)
             {
-                if (control is TxtSigma)
-                {
-                    TxtSigma cntrl = (TxtSigma)control;
-                    if (!cntrl.IsFieldCorrect() || String.IsNullOrWhiteSpace(cntrl.Text))
-                    {
-                        error = true;
-                        cntrl.Text = "";
-                    }
-                }
-                else if (control is cbxSigma)
-                {
-                    cbxSigma cntrl = (cbxSigma)control;
-                    if (cntrl.SelectedIndex == 0)
-                    {
-                        error = true;
-                    }
-                }
-            }
-
-            return error;
-        }
-        public bool CheckControlsFormat(TxtSigma[] Controls)
-        {
-            bool error = false;
-
-            foreach (var control in Controls)
-            {
-                if (!control.IsFieldCorrect() || String.IsNullOrWhiteSpace(control.Text))
-                {
-                    error = true;
-                    control.Text = "";
-                }
+                error = ControlsErrorsHelper.CheckControlsErrors(errorProvider, control);
                 
+                if (!error)
+                {
+                    pass = false;
+                }
             }
 
-            return error;
+            return pass;
+        }
+        public bool CheckControlsFormat(TxtSigma[] Controls, ErrorProvider errorProvider)
+        {
+            bool error = false;
+            bool pass = true;
+
+            foreach (Control control in Controls)
+            {
+                error = ControlsErrorsHelper.CheckControlsErrors(errorProvider, control);
+
+                if (!error)
+                {
+                    pass = false;
+                }
+            }
+
+            return pass;
         }
 
         public DataRow CreateDataRowFromControls(DataRow r, Control.ControlCollection controls)
@@ -215,6 +206,7 @@ namespace UserManagament
             bool errorMessage = false;
             TxtSigma NTS = (TxtSigma)Controls.Find("tbxNTS", false)[0];
             TxtSigma DNI = (TxtSigma)Controls.Find("tbxDNI", false)[0];
+            Button button = (Button)Controls.Find("btnGuardar", false)[0];
 
             try
             {
@@ -234,7 +226,7 @@ namespace UserManagament
 
                         if (CheckIfUserIsRegistered(NTS, DNI, dts))
                         {
-                            errorProvider.SetError(NTS, "Este cliente ya esta registrado");
+                            errorProvider.SetError(button, "Este cliente ya esta registrado");
                             errorMessage = true;
                         }
                         
@@ -263,7 +255,7 @@ namespace UserManagament
 
                 if (errorMessage)
                 {
-                    errorProvider.SetError(NTS, "Algun campo es incorrecto");
+                    errorProvider.SetError(button, "Algun campo es incorrecto");
 
                 }
 
