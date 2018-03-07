@@ -42,7 +42,7 @@ namespace UserManagament
         {
             if (_NTSHasChanged && _edit)
             {
-                control.getDataFromNtsSeach(Controls);
+                control.getDataFromNtsSeach(pnlUserManagmnet.Controls, errorProvider);
                 _NTSHasChanged = false;
             }
         }
@@ -54,7 +54,7 @@ namespace UserManagament
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            control.SaveChanges(Controls, _edit);
+            control.SaveChanges(pnlUserManagmnet.Controls, _edit, errorProvider);
         }
 
         private void tbxDNI_TextChanged(object sender, EventArgs e)

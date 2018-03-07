@@ -25,11 +25,22 @@ namespace Mantein
             InitializeComponent();
             dts = new DataSet();
             CenterPanel(pnlMantein);
+            GetQuery();
+            BindingDate();
         }
-
+        
         protected void BindingDate()
         {
-            dgwBase.DataSource = dts.Tables[Table];
+            dgwBase.DataSource = dts.Tables["Taula"];
+
+            foreach (Control control in pnlTextBox.Controls)
+            {
+                if (control is TxtSigma)
+                {
+                    TxtSigma txt = control as TxtSigma;
+                    txt.DataBindings.Add(new Binding("Text", dgwBase.DataSource, txt.DBReference, true));
+                }
+            }                  
         }
 
         protected void GetQuery()
@@ -73,5 +84,22 @@ namespace Mantein
             BindingDate();
         }
 
+        private void btnGet_Click_1(object sender, EventArgs e)
+        {
+            GetQuery();
+            BindingDate();
+        }
+
+        private void btnQuery_Click_1(object sender, EventArgs e)
+        {
+            OpenQuery();
+        }
+
+        public void AddNewRow()
+        {
+            DataRow row = dts.Tables["Taula"].NewRow();
+            dts.Tables["Taula"].Rows.Add(row);
+            dgwBase.Rows[dgwBase.Rows.Count - 1].Selected = true;
+        }
     }
 }
