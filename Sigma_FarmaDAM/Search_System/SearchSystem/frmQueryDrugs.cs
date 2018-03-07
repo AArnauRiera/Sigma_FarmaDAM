@@ -42,7 +42,7 @@ namespace SearchSystem
         {
             DBUtilities db = new DBUtilities();
 
-            query = "select * from " + Table + " where " + "ActivePrincipleID = " + condition + " and Register_Number !="+ condition2;
+            query = "select * from Drugs,Stock where Drugs.id = Stock.ID_Drug and Drugs.ActivePrincipleID='"+condition+"' and Drugs.id!='"+condition2+"'and Stock.Quantity>0";
 
             dts = db.PortarPerConsulta(query);
         }
