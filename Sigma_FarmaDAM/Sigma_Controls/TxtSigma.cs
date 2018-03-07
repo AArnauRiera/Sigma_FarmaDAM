@@ -91,12 +91,14 @@ namespace Sigma_Controls
             set
             {
                 _placeholder = value;
+
                 if (!_disablePaceholder)
                 {
                     Text = Placeholder;
                     ForeColor = Color.Gray;
                     Font = new Font(Font, FontStyle.Italic);
                 }
+
             }
         }
 
