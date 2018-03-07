@@ -119,7 +119,11 @@ namespace SellSystem
             }
             return active;
         }
-
+        private void Stock_Update(string Register_Number)
+        {
+            Querry = "Select  Stock.Quantity from Drugs,Stock where Drugs.id = Stock.ID_Drug and Drugs.Register_Number ='" + Register_Number+"'";
+            
+        }
         #endregion
         ///***MAIN***///
         #region
@@ -158,6 +162,7 @@ namespace SellSystem
                     dr[2] = "1";
                     dr[3] = Client_ID(Drug);
                     dr[4] = txtCantidad.Text;
+
                     dt.Rows.Add(dr);
                     txtCod.Text = "";
                     txtProd.Text = "";
@@ -227,9 +232,8 @@ namespace SellSystem
                 {
                     txtClient.ReadOnly = true;
                     dts = client();
-                    txtName.Text = dts.Tables[0].Rows[0][0].ToString();
-                    txtLastName.Text = dts.Tables[0].Rows[0][1].ToString();
-                    txtLastname2.Text = dts.Tables[0].Rows[0][2].ToString();
+                    lblName.Text = dts.Tables[0].Rows[0][0].ToString()+" "+ dts.Tables[0].Rows[0][1].ToString()+" "+ dts.Tables[0].Rows[0][2].ToString();
+                    
                 }
                 else
                 {
