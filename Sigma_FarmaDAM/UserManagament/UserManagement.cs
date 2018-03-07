@@ -42,7 +42,7 @@ namespace UserManagament
         {
             if (_NTSHasChanged && _edit)
             {
-                control.getDataFromNtsSeach(pnlUserManagmnet.Controls);
+                control.getDataFromNtsSeach(pnlUserManagmnet.Controls, errorProvider);
                 _NTSHasChanged = false;
             }
         }

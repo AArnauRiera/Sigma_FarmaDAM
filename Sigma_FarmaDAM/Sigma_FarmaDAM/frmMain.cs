@@ -25,6 +25,7 @@ namespace Sigma_FarmaDAM
         {
 
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
 
         }
 
@@ -131,7 +132,11 @@ namespace Sigma_FarmaDAM
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            AddNewTab("Nueva Venta", new frmSellsytem());
+            frmLoginSellSystem loginSell = new frmLoginSellSystem();
+            if (loginSell.ShowDialog() == DialogResult.OK)
+            {
+                AddNewTab("Nueva Venta", new frmSellsytem());
+            }
         }
 
         private void btnUser_Click(object sender, EventArgs e)
@@ -169,7 +174,9 @@ namespace Sigma_FarmaDAM
 
         private void btnMantenimenPrincipiActius_Click(object sender, EventArgs e)
         {
-            AddNewTab("Principios Activos", new frmManteinActivePrinciple());
+            AddNewTab("Principios Activos", new frmManteinActivePrinciple() {
+            Table = "Active_Principles"
+            });
         }
 
         private void btnMantenimentProductes_Click(object sender, EventArgs e)
@@ -179,7 +186,10 @@ namespace Sigma_FarmaDAM
 
         private void btnLaboratorisFarmaceutiques_Click(object sender, EventArgs e)
         {
-            AddNewTab("Laboratorios", new frmManteinLaboratories());
+            AddNewTab("Laboratorios", new frmManteinLaboratories()
+            {
+                Table = "Laboratories"
+            });
         }
 
     }
