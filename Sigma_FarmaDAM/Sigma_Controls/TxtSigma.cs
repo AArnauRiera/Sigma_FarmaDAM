@@ -25,6 +25,7 @@ namespace Sigma_Controls
 
         public enum FieldTypes
         {
+            None,
             NSS,
             DNI,
             Name,
