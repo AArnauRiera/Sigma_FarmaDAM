@@ -40,8 +40,6 @@ namespace Sigma_Controls
             this.Name = "CentredForm";
             this.ResumeLayout(false);
 
-            this.BackgroundImage = Image.FromFile("logoSigma2.png");
-
         }
     }
 

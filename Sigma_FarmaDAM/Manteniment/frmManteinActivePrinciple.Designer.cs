@@ -34,6 +34,7 @@
             this.txtSRN = new Sigma_Controls.TxtSigma();
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
+            this.pnlButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTextBox
@@ -42,26 +43,24 @@
             this.pnlTextBox.Controls.Add(this.lblSRN);
             this.pnlTextBox.Controls.Add(this.txtName);
             this.pnlTextBox.Controls.Add(this.txtSRN);
-            this.pnlTextBox.Controls.SetChildIndex(this.txtSRN, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.txtName, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.lblSRN, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.lblName, 0);
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(274, 72);
+            this.lblName.Location = new System.Drawing.Point(4, 38);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.Size = new System.Drawing.Size(56, 23);
             this.lblName.TabIndex = 4;
             this.lblName.Text = "Name";
             // 
             // lblSRN
             // 
             this.lblSRN.AutoSize = true;
-            this.lblSRN.Location = new System.Drawing.Point(274, 46);
+            this.lblSRN.Location = new System.Drawing.Point(4, 5);
+            this.lblSRN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSRN.Name = "lblSRN";
-            this.lblSRN.Size = new System.Drawing.Size(30, 13);
+            this.lblSRN.Size = new System.Drawing.Size(42, 23);
             this.lblSRN.TabIndex = 5;
             this.lblSRN.Text = "SRN";
             // 
@@ -71,10 +70,11 @@
             this.txtName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtName.ForeColor = System.Drawing.Color.Gray;
-            this.txtName.Location = new System.Drawing.Point(315, 69);
+            this.txtName.Location = new System.Drawing.Point(219, 38);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtName.Name = "txtName";
             this.txtName.Placeholder = null;
-            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.Size = new System.Drawing.Size(148, 23);
             this.txtName.TabIndex = 2;
             this.txtName.Table = "Active_Principles";
             // 
@@ -84,22 +84,24 @@
             this.txtSRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtSRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtSRN.ForeColor = System.Drawing.Color.Gray;
-            this.txtSRN.Location = new System.Drawing.Point(315, 43);
+            this.txtSRN.Location = new System.Drawing.Point(219, 5);
+            this.txtSRN.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSRN.Name = "txtSRN";
             this.txtSRN.Placeholder = null;
-            this.txtSRN.Size = new System.Drawing.Size(100, 20);
+            this.txtSRN.Size = new System.Drawing.Size(148, 23);
             this.txtSRN.TabIndex = 3;
             this.txtSRN.Table = "Active_Principles";
             // 
             // frmManteinActivePrinciple
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(712, 430);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.ClientSize = new System.Drawing.Size(1137, 761);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmManteinActivePrinciple";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();
+            this.pnlButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

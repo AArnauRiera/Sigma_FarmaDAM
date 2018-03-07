@@ -25,6 +25,7 @@ namespace Sigma_Controls
 
         public enum FieldTypes
         {
+            None,
             NSS,
             DNI,
             Name,
@@ -51,8 +52,17 @@ namespace Sigma_Controls
 
         private bool _isPlaceholder;
 
-        #endregion
+        private bool _disablePaceholder = true;
 
+        public bool DisablePaceholder
+        {
+            get { return _disablePaceholder; }
+            set { _disablePaceholder = value; }
+        }
+
+
+        #endregion
+        
 
         #region Properties
 
@@ -82,9 +92,14 @@ namespace Sigma_Controls
             set
             {
                 _placeholder = value;
-                Text = Placeholder;
-                ForeColor = Color.Gray;
-                Font = new Font(Font, FontStyle.Italic);
+
+                if (!_disablePaceholder)
+                {
+                    Text = Placeholder;
+                    ForeColor = Color.Gray;
+                    Font = new Font(Font, FontStyle.Italic);
+                }
+
             }
         }
 
@@ -170,16 +185,19 @@ namespace Sigma_Controls
 
         private void SetPlaceHolder()
         {
-            if (String.IsNullOrWhiteSpace(Text))
+            if (!_disablePaceholder)
             {
-                Text = Placeholder;
-                ForeColor = Color.Gray;
-                Font = new Font(Font, FontStyle.Italic);
-                _isPlaceholder = true;
-            }
-            else
-            {
-                _isPlaceholder = false;
+                if (String.IsNullOrWhiteSpace(Text))
+                {
+                    Text = Placeholder;
+                    ForeColor = Color.Gray;
+                    Font = new Font(Font, FontStyle.Italic);
+                    _isPlaceholder = true;
+                }
+                else
+                {
+                    _isPlaceholder = false;
+                }
             }
         }
 
@@ -193,11 +211,14 @@ namespace Sigma_Controls
 
         private void RemovePlaceHolder()
         {
-            if (_isPlaceholder)
+            if (!_disablePaceholder)
             {
-                Text = "";
-                ForeColor = SystemColors.WindowText;
-                Font = new Font(Font, FontStyle.Regular);
+                if (_isPlaceholder)
+                {
+                    Text = "";
+                    ForeColor = SystemColors.WindowText;
+                    Font = new Font(Font, FontStyle.Regular);
+                }
             }
         }
 
