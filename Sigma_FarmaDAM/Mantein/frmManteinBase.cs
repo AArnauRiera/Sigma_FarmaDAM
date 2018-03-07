@@ -99,7 +99,18 @@ namespace Mantein
         {
             DataRow row = dts.Tables["Taula"].NewRow();
             dts.Tables["Taula"].Rows.Add(row);
+
+            foreach (DataGridViewRow item in dgwBase.Rows)
+            {
+                item.Selected = false;
+            }
+
             dgwBase.Rows[dgwBase.Rows.Count - 1].Selected = true;
+        }
+
+        private void bntNew_Click(object sender, EventArgs e)
+        {
+            AddNewRow();
         }
     }
 }
