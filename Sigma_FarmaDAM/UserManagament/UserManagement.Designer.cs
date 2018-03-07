@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblErrorText = new System.Windows.Forms.Label();
             this.pnlUserManagmnet = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -45,7 +46,9 @@
             this.tbxDNI = new Sigma_Controls.TxtSigma();
             this.tbxNTS = new Sigma_Controls.TxtSigma();
             this.label4 = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlUserManagmnet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // lblErrorText
@@ -55,7 +58,7 @@
             this.lblErrorText.Location = new System.Drawing.Point(192, 566);
             this.lblErrorText.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblErrorText.Name = "lblErrorText";
-            this.lblErrorText.Size = new System.Drawing.Size(0, 23);
+            this.lblErrorText.Size = new System.Drawing.Size(0, 19);
             this.lblErrorText.TabIndex = 20;
             // 
             // pnlUserManagmnet
@@ -89,6 +92,7 @@
             this.btnGuardar.TabIndex = 33;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // cbxNTS_Type
             // 
@@ -98,7 +102,7 @@
             this.cbxNTS_Type.Location = new System.Drawing.Point(159, 171);
             this.cbxNTS_Type.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.cbxNTS_Type.Name = "cbxNTS_Type";
-            this.cbxNTS_Type.Size = new System.Drawing.Size(211, 31);
+            this.cbxNTS_Type.Size = new System.Drawing.Size(211, 27);
             this.cbxNTS_Type.TabIndex = 36;
             // 
             // tbxFirstName
@@ -111,7 +115,7 @@
             this.tbxFirstName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbxFirstName.Name = "tbxFirstName";
             this.tbxFirstName.Placeholder = "";
-            this.tbxFirstName.Size = new System.Drawing.Size(211, 23);
+            this.tbxFirstName.Size = new System.Drawing.Size(211, 20);
             this.tbxFirstName.TabIndex = 25;
             this.tbxFirstName.Table = null;
             // 
@@ -121,7 +125,7 @@
             this.label1.Location = new System.Drawing.Point(81, 213);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 23);
+            this.label1.Size = new System.Drawing.Size(59, 19);
             this.label1.TabIndex = 23;
             this.label1.Text = "Nombre";
             // 
@@ -132,7 +136,7 @@
             this.lblError.Location = new System.Drawing.Point(154, 72);
             this.lblError.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 23);
+            this.lblError.Size = new System.Drawing.Size(0, 19);
             this.lblError.TabIndex = 35;
             // 
             // tbxLastName1
@@ -145,7 +149,7 @@
             this.tbxLastName1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbxLastName1.Name = "tbxLastName1";
             this.tbxLastName1.Placeholder = "";
-            this.tbxLastName1.Size = new System.Drawing.Size(211, 23);
+            this.tbxLastName1.Size = new System.Drawing.Size(211, 20);
             this.tbxLastName1.TabIndex = 27;
             this.tbxLastName1.Table = null;
             // 
@@ -156,7 +160,7 @@
             this.lblTitle.Location = new System.Drawing.Point(152, 1);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(66, 31);
+            this.lblTitle.Size = new System.Drawing.Size(52, 26);
             this.lblTitle.TabIndex = 34;
             this.lblTitle.Text = "Title";
             // 
@@ -166,7 +170,7 @@
             this.label2.Location = new System.Drawing.Point(62, 248);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 23);
+            this.label2.Size = new System.Drawing.Size(75, 19);
             this.label2.TabIndex = 26;
             this.label2.Text = "1r Apellido";
             // 
@@ -180,7 +184,7 @@
             this.tbxLastName2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbxLastName2.Name = "tbxLastName2";
             this.tbxLastName2.Placeholder = "";
-            this.tbxLastName2.Size = new System.Drawing.Size(211, 23);
+            this.tbxLastName2.Size = new System.Drawing.Size(211, 20);
             this.tbxLastName2.TabIndex = 28;
             this.tbxLastName2.Table = null;
             // 
@@ -190,7 +194,7 @@
             this.label7.Location = new System.Drawing.Point(75, 179);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 23);
+            this.label7.Size = new System.Drawing.Size(63, 19);
             this.label7.TabIndex = 32;
             this.label7.Text = "Tipo NSS";
             // 
@@ -200,7 +204,7 @@
             this.label3.Location = new System.Drawing.Point(38, 284);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 23);
+            this.label3.Size = new System.Drawing.Size(94, 19);
             this.label3.TabIndex = 29;
             this.label3.Text = "2ndo Apellido";
             // 
@@ -210,7 +214,7 @@
             this.label6.Location = new System.Drawing.Point(107, 100);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 23);
+            this.label6.Size = new System.Drawing.Size(33, 19);
             this.label6.TabIndex = 31;
             this.label6.Text = "NSS";
             // 
@@ -224,7 +228,7 @@
             this.tbxDNI.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbxDNI.Name = "tbxDNI";
             this.tbxDNI.Placeholder = "";
-            this.tbxDNI.Size = new System.Drawing.Size(211, 23);
+            this.tbxDNI.Size = new System.Drawing.Size(211, 20);
             this.tbxDNI.TabIndex = 24;
             this.tbxDNI.Table = null;
             this.tbxDNI.Tag = "";
@@ -239,9 +243,11 @@
             this.tbxNTS.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbxNTS.Name = "tbxNTS";
             this.tbxNTS.Placeholder = "";
-            this.tbxNTS.Size = new System.Drawing.Size(211, 23);
+            this.tbxNTS.Size = new System.Drawing.Size(211, 20);
             this.tbxNTS.TabIndex = 22;
             this.tbxNTS.Table = null;
+            this.tbxNTS.TextChanged += new System.EventHandler(this.tbxNTS_TextChanged);
+            this.tbxNTS.Leave += new System.EventHandler(this.tbxNTS_Leave);
             // 
             // label4
             // 
@@ -249,13 +255,19 @@
             this.label4.Location = new System.Drawing.Point(109, 136);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 23);
+            this.label4.Size = new System.Drawing.Size(33, 19);
             this.label4.TabIndex = 30;
             this.label4.Text = "DNI";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
+            // 
             // UserManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(531, 714);
@@ -269,6 +281,7 @@
             this.Load += new System.EventHandler(this.UserManagement_Load);
             this.pnlUserManagmnet.ResumeLayout(false);
             this.pnlUserManagmnet.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,6 +305,7 @@
         public Sigma_Controls.TxtSigma tbxDNI;
         public Sigma_Controls.TxtSigma tbxNTS;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
 

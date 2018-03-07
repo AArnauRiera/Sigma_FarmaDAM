@@ -34,6 +34,7 @@
             this.txtId = new Sigma_Controls.TxtSigma();
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
+            this.pnlButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTextBox
@@ -42,28 +43,24 @@
             this.pnlTextBox.Controls.Add(this.lblId);
             this.pnlTextBox.Controls.Add(this.txtValue);
             this.pnlTextBox.Controls.Add(this.txtId);
-            this.pnlTextBox.Controls.SetChildIndex(this.txtId, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.txtValue, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.lblId, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.lblValue, 0);
             // 
             // lblValue
             // 
             this.lblValue.AutoSize = true;
-            this.lblValue.Location = new System.Drawing.Point(365, 89);
+            this.lblValue.Location = new System.Drawing.Point(4, 40);
             this.lblValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValue.Name = "lblValue";
-            this.lblValue.Size = new System.Drawing.Size(44, 17);
+            this.lblValue.Size = new System.Drawing.Size(52, 23);
             this.lblValue.TabIndex = 4;
             this.lblValue.Text = "Value";
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(365, 61);
+            this.lblId.Location = new System.Drawing.Point(4, 6);
             this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(19, 17);
+            this.lblId.Size = new System.Drawing.Size(25, 23);
             this.lblId.TabIndex = 5;
             this.lblId.Text = "Id";
             // 
@@ -71,11 +68,13 @@
             // 
             this.txtValue.DBReference = "value";
             this.txtValue.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtValue.Location = new System.Drawing.Point(420, 85);
-            this.txtValue.Margin = new System.Windows.Forms.Padding(4);
+            this.txtValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
+            this.txtValue.ForeColor = System.Drawing.Color.Gray;
+            this.txtValue.Location = new System.Drawing.Point(219, 40);
+            this.txtValue.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtValue.Name = "txtValue";
             this.txtValue.Placeholder = null;
-            this.txtValue.Size = new System.Drawing.Size(132, 22);
+            this.txtValue.Size = new System.Drawing.Size(148, 22);
             this.txtValue.TabIndex = 2;
             this.txtValue.Table = "IVA";
             // 
@@ -83,22 +82,26 @@
             // 
             this.txtId.DBReference = "id";
             this.txtId.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtId.Location = new System.Drawing.Point(420, 53);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
+            this.txtId.ForeColor = System.Drawing.Color.Gray;
+            this.txtId.Location = new System.Drawing.Point(219, 6);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtId.Name = "txtId";
             this.txtId.Placeholder = null;
-            this.txtId.Size = new System.Drawing.Size(132, 22);
+            this.txtId.Size = new System.Drawing.Size(148, 22);
             this.txtId.TabIndex = 3;
             this.txtId.Table = "IVA";
             // 
             // frmManteinIVA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(949, 529);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.ClientSize = new System.Drawing.Size(1068, 760);
+            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "frmManteinIVA";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();
+            this.pnlButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -44,6 +44,7 @@
             this.txtFirstName = new Sigma_Controls.TxtSigma();
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
+            this.pnlButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTextBox
@@ -62,88 +63,74 @@
             this.pnlTextBox.Controls.Add(this.txtLastName2);
             this.pnlTextBox.Controls.Add(this.txtLastName1);
             this.pnlTextBox.Controls.Add(this.txtFirstName);
-            this.pnlTextBox.Controls.SetChildIndex(this.txtFirstName, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.txtLastName1, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.txtLastName2, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.txtDNI, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.txtUsername, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.txtPassword, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.txtEmail, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.lblFirstName, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.lblLastName1, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.lblLastName2, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.lblDNI, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.lblEmail, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.lblUsername, 0);
-            this.pnlTextBox.Controls.SetChildIndex(this.lblPassword, 0);
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(499, 89);
+            this.lblPassword.Location = new System.Drawing.Point(4, 208);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(69, 17);
+            this.lblPassword.Size = new System.Drawing.Size(80, 23);
             this.lblPassword.TabIndex = 9;
             this.lblPassword.Text = "Password";
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(497, 57);
+            this.lblUsername.Location = new System.Drawing.Point(4, 174);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(73, 17);
+            this.lblUsername.Size = new System.Drawing.Size(87, 23);
             this.lblUsername.TabIndex = 10;
             this.lblUsername.Text = "Username";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(527, 29);
+            this.lblEmail.Location = new System.Drawing.Point(4, 140);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(42, 17);
+            this.lblEmail.Size = new System.Drawing.Size(51, 23);
             this.lblEmail.TabIndex = 11;
             this.lblEmail.Text = "Email";
             // 
             // lblDNI
             // 
             this.lblDNI.AutoSize = true;
-            this.lblDNI.Location = new System.Drawing.Point(261, 117);
+            this.lblDNI.Location = new System.Drawing.Point(4, 106);
             this.lblDNI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(31, 17);
+            this.lblDNI.Size = new System.Drawing.Size(40, 23);
             this.lblDNI.TabIndex = 12;
             this.lblDNI.Text = "DNI";
             // 
             // lblLastName2
             // 
             this.lblLastName2.AutoSize = true;
-            this.lblLastName2.Location = new System.Drawing.Point(206, 85);
+            this.lblLastName2.Location = new System.Drawing.Point(4, 73);
             this.lblLastName2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastName2.Name = "lblLastName2";
-            this.lblLastName2.Size = new System.Drawing.Size(88, 17);
+            this.lblLastName2.Size = new System.Drawing.Size(105, 23);
             this.lblLastName2.TabIndex = 13;
             this.lblLastName2.Text = "Last Name 2";
             // 
             // lblLastName1
             // 
             this.lblLastName1.AutoSize = true;
-            this.lblLastName1.Location = new System.Drawing.Point(206, 53);
+            this.lblLastName1.Location = new System.Drawing.Point(4, 39);
             this.lblLastName1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastName1.Name = "lblLastName1";
-            this.lblLastName1.Size = new System.Drawing.Size(88, 17);
+            this.lblLastName1.Size = new System.Drawing.Size(105, 23);
             this.lblLastName1.TabIndex = 14;
             this.lblLastName1.Text = "Last Name 1";
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(219, 25);
+            this.lblFirstName.Location = new System.Drawing.Point(4, 6);
             this.lblFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(76, 17);
+            this.lblFirstName.Size = new System.Drawing.Size(92, 23);
             this.lblFirstName.TabIndex = 15;
             this.lblFirstName.Text = "First Name";
             // 
@@ -151,11 +138,13 @@
             // 
             this.txtEmail.DBReference = "email";
             this.txtEmail.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtEmail.Location = new System.Drawing.Point(578, 21);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
+            this.txtEmail.ForeColor = System.Drawing.Color.Gray;
+            this.txtEmail.Location = new System.Drawing.Point(219, 142);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Placeholder = null;
-            this.txtEmail.Size = new System.Drawing.Size(132, 22);
+            this.txtEmail.Size = new System.Drawing.Size(148, 22);
             this.txtEmail.TabIndex = 2;
             this.txtEmail.Table = "Seller";
             // 
@@ -163,11 +152,13 @@
             // 
             this.txtPassword.DBReference = "password";
             this.txtPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtPassword.Location = new System.Drawing.Point(578, 85);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
+            this.txtPassword.ForeColor = System.Drawing.Color.Gray;
+            this.txtPassword.Location = new System.Drawing.Point(219, 210);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Placeholder = null;
-            this.txtPassword.Size = new System.Drawing.Size(132, 22);
+            this.txtPassword.Size = new System.Drawing.Size(148, 22);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Table = "Seller";
             // 
@@ -175,11 +166,13 @@
             // 
             this.txtUsername.DBReference = "username";
             this.txtUsername.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtUsername.Location = new System.Drawing.Point(578, 53);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
+            this.txtUsername.ForeColor = System.Drawing.Color.Gray;
+            this.txtUsername.Location = new System.Drawing.Point(219, 176);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Placeholder = null;
-            this.txtUsername.Size = new System.Drawing.Size(132, 22);
+            this.txtUsername.Size = new System.Drawing.Size(148, 22);
             this.txtUsername.TabIndex = 4;
             this.txtUsername.Table = "Seller";
             // 
@@ -187,11 +180,13 @@
             // 
             this.txtDNI.DBReference = "dni";
             this.txtDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtDNI.Location = new System.Drawing.Point(303, 117);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
+            this.txtDNI.ForeColor = System.Drawing.Color.Gray;
+            this.txtDNI.Location = new System.Drawing.Point(219, 108);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Placeholder = null;
-            this.txtDNI.Size = new System.Drawing.Size(132, 22);
+            this.txtDNI.Size = new System.Drawing.Size(148, 22);
             this.txtDNI.TabIndex = 5;
             this.txtDNI.Table = "Seller";
             // 
@@ -199,11 +194,13 @@
             // 
             this.txtLastName2.DBReference = "lastName2";
             this.txtLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtLastName2.Location = new System.Drawing.Point(303, 85);
-            this.txtLastName2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLastName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
+            this.txtLastName2.ForeColor = System.Drawing.Color.Gray;
+            this.txtLastName2.Location = new System.Drawing.Point(219, 74);
+            this.txtLastName2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtLastName2.Name = "txtLastName2";
             this.txtLastName2.Placeholder = null;
-            this.txtLastName2.Size = new System.Drawing.Size(132, 22);
+            this.txtLastName2.Size = new System.Drawing.Size(148, 22);
             this.txtLastName2.TabIndex = 6;
             this.txtLastName2.Table = "Seller";
             // 
@@ -211,11 +208,13 @@
             // 
             this.txtLastName1.DBReference = "lastName1";
             this.txtLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtLastName1.Location = new System.Drawing.Point(303, 53);
-            this.txtLastName1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLastName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
+            this.txtLastName1.ForeColor = System.Drawing.Color.Gray;
+            this.txtLastName1.Location = new System.Drawing.Point(219, 40);
+            this.txtLastName1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtLastName1.Name = "txtLastName1";
             this.txtLastName1.Placeholder = null;
-            this.txtLastName1.Size = new System.Drawing.Size(132, 22);
+            this.txtLastName1.Size = new System.Drawing.Size(148, 22);
             this.txtLastName1.TabIndex = 7;
             this.txtLastName1.Table = "Seller";
             // 
@@ -223,22 +222,26 @@
             // 
             this.txtFirstName.DBReference = "firstName";
             this.txtFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtFirstName.Location = new System.Drawing.Point(303, 21);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
+            this.txtFirstName.ForeColor = System.Drawing.Color.Gray;
+            this.txtFirstName.Location = new System.Drawing.Point(219, 6);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Placeholder = null;
-            this.txtFirstName.Size = new System.Drawing.Size(132, 22);
+            this.txtFirstName.Size = new System.Drawing.Size(148, 22);
             this.txtFirstName.TabIndex = 8;
             this.txtFirstName.Table = "Seller";
             // 
             // frmManteinSeller
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(949, 529);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.ClientSize = new System.Drawing.Size(1068, 760);
+            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "frmManteinSeller";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();
+            this.pnlButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
