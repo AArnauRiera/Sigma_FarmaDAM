@@ -72,7 +72,7 @@ namespace LoginControl
             return isCorrect;
         }
 
-        public bool CheckIfUserIsAdmin (TxtSigma userName, Label lblError)
+        public bool CheckIfUserIsAdmin (TxtSigma userName, ErrorProvider errorProvider)
         {
             bool isAdmin = false;
 
@@ -82,7 +82,7 @@ namespace LoginControl
             }
             if (!isAdmin)
             {
-                lblError.Text = "El usuario debe ser administrador";
+                errorProvider.SetError(userName, "El usuario debe ser administrador");
             }
 
             return isAdmin;

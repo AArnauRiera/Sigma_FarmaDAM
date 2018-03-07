@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnltxt = new System.Windows.Forms.Panel();
-            this.lblError = new System.Windows.Forms.Label();
             this.tbxUsername = new Sigma_Controls.TxtSigma();
             this.tbxPassword = new Sigma_Controls.TxtSigma();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -64,7 +63,6 @@
             // 
             // pnltxt
             // 
-            this.pnltxt.Controls.Add(this.lblError);
             this.pnltxt.Controls.Add(this.tbxUsername);
             this.pnltxt.Controls.Add(this.label2);
             this.pnltxt.Controls.Add(this.label1);
@@ -74,17 +72,6 @@
             this.pnltxt.Name = "pnltxt";
             this.pnltxt.Size = new System.Drawing.Size(388, 178);
             this.pnltxt.TabIndex = 4;
-            // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.BackColor = System.Drawing.SystemColors.Control;
-            this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(158, 148);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(29, 13);
-            this.lblError.TabIndex = 4;
-            this.lblError.Text = "Error";
             // 
             // tbxUsername
             // 
@@ -179,7 +166,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

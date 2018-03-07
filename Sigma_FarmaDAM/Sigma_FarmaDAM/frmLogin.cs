@@ -14,7 +14,6 @@ namespace Login
         {
             // Console.WriteLine(Cryptography.Cryptography.Encrypt("12345aA", "admin"));
             InitializeComponent();
-            lblError.Text = "";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -41,7 +40,7 @@ namespace Login
 
             if (control.CheckControlsFormat(errorProvider, pnltxt.Controls) && 
                control.CheckIsReal(tbxUsername, errorProvider, "Seller") &&  
-               control.CheckIfUserIsAdmin(tbxUsername, lblError))
+               control.CheckIfUserIsAdmin(tbxUsername, errorProvider))
             {
                 if (control.CheckCredentials(tbxUsername, tbxPassword, errorProvider))
                 {

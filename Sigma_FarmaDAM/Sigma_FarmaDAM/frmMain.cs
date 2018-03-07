@@ -131,7 +131,11 @@ namespace Sigma_FarmaDAM
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            AddNewTab("Nueva Venta", new frmSellsytem());
+            frmLoginSellSystem loginSell = new frmLoginSellSystem();
+            if (loginSell.ShowDialog() == DialogResult.OK)
+            {
+                AddNewTab("Nueva Venta", new frmSellsytem());
+            }
         }
 
         private void btnUser_Click(object sender, EventArgs e)

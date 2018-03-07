@@ -20,9 +20,9 @@ namespace Sigma_FarmaDAM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //frmLogin Login = new frmLogin();
-            frmLoadDataXML xml = new frmLoadDataXML();
-            if (xml.ShowDialog() == DialogResult.OK)
+            frmLogin Login = new frmLogin();
+            //frmLoadDataXML xml = new frmLoadDataXML();
+            if (Login.ShowDialog() == DialogResult.OK)
             {
                 SplashScreen splash = new SplashScreen();
                 
