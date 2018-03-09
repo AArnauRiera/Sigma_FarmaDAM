@@ -44,23 +44,39 @@
             this.pnlTextBox.Controls.Add(this.txtName);
             this.pnlTextBox.Controls.Add(this.txtSRN);
             // 
+            // btnQuery
+            // 
+            this.btnQuery.TabIndex = 4;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.TabIndex = 3;
+            // 
+            // btnGet
+            // 
+            this.btnGet.TabIndex = 2;
+            // 
+            // bntNew
+            // 
+            this.bntNew.TabIndex = 5;
+            // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(4, 38);
+            this.lblName.Location = new System.Drawing.Point(4, 31);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(56, 23);
+            this.lblName.Size = new System.Drawing.Size(45, 19);
             this.lblName.TabIndex = 4;
             this.lblName.Text = "Name";
             // 
             // lblSRN
             // 
             this.lblSRN.AutoSize = true;
-            this.lblSRN.Location = new System.Drawing.Point(4, 5);
+            this.lblSRN.Location = new System.Drawing.Point(4, 4);
             this.lblSRN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSRN.Name = "lblSRN";
-            this.lblSRN.Size = new System.Drawing.Size(42, 23);
+            this.lblSRN.Size = new System.Drawing.Size(34, 19);
             this.lblSRN.TabIndex = 5;
             this.lblSRN.Text = "SRN";
             // 
@@ -70,11 +86,11 @@
             this.txtName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtName.ForeColor = System.Drawing.Color.Gray;
-            this.txtName.Location = new System.Drawing.Point(219, 38);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtName.Location = new System.Drawing.Point(195, 31);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(148, 23);
-            this.txtName.TabIndex = 2;
+            this.txtName.Size = new System.Drawing.Size(132, 20);
+            this.txtName.TabIndex = 1;
             this.txtName.Table = "Active_Principles";
             // 
             // txtSRN
@@ -83,18 +99,18 @@
             this.txtSRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtSRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtSRN.ForeColor = System.Drawing.Color.Gray;
-            this.txtSRN.Location = new System.Drawing.Point(219, 5);
-            this.txtSRN.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSRN.Location = new System.Drawing.Point(195, 4);
+            this.txtSRN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSRN.Name = "txtSRN";
-            this.txtSRN.Size = new System.Drawing.Size(148, 23);
-            this.txtSRN.TabIndex = 3;
+            this.txtSRN.Size = new System.Drawing.Size(132, 20);
+            this.txtSRN.TabIndex = 0;
             this.txtSRN.Table = "Active_Principles";
             // 
             // frmManteinActivePrinciple
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
-            this.ClientSize = new System.Drawing.Size(1137, 761);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.ClientSize = new System.Drawing.Size(1011, 629);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "frmManteinActivePrinciple";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
             this.pnlTextBox.ResumeLayout(false);
