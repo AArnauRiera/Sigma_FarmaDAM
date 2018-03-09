@@ -34,7 +34,6 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnActualizacioMedicaments = new System.Windows.Forms.Button();
             this.btnGestioComandes = new System.Windows.Forms.Button();
             this.btnLaboratorisFarmaceutiques = new System.Windows.Forms.Button();
             this.btnMantenimentProductes = new System.Windows.Forms.Button();
@@ -79,7 +78,6 @@
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.Azure;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnActualizacioMedicaments);
             this.panel1.Controls.Add(this.btnGestioComandes);
             this.panel1.Controls.Add(this.btnLaboratorisFarmaceutiques);
             this.panel1.Controls.Add(this.btnMantenimentProductes);
@@ -103,25 +101,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(229, 98);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnActualizacioMedicaments
-            // 
-            this.btnActualizacioMedicaments.BackColor = System.Drawing.Color.Azure;
-            this.btnActualizacioMedicaments.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnActualizacioMedicaments.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
-            this.btnActualizacioMedicaments.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnActualizacioMedicaments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizacioMedicaments.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnActualizacioMedicaments.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnActualizacioMedicaments.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnActualizacioMedicaments.Location = new System.Drawing.Point(0, 625);
-            this.btnActualizacioMedicaments.Name = "btnActualizacioMedicaments";
-            this.btnActualizacioMedicaments.Size = new System.Drawing.Size(271, 66);
-            this.btnActualizacioMedicaments.TabIndex = 9;
-            this.btnActualizacioMedicaments.Text = "Actualització medicaments";
-            this.btnActualizacioMedicaments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizacioMedicaments.UseVisualStyleBackColor = false;
-            this.btnActualizacioMedicaments.Click += new System.EventHandler(this.btnActualizacioMedicaments_Click);
             // 
             // btnGestioComandes
             // 
@@ -398,7 +377,6 @@
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnGestioComandes;
-        private System.Windows.Forms.Button btnActualizacioMedicaments;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
