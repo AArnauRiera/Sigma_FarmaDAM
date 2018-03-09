@@ -33,10 +33,10 @@
             this.dgwBase = new System.Windows.Forms.DataGridView();
             this.pnlTextBox = new System.Windows.Forms.Panel();
             this.pnlButtons = new System.Windows.Forms.Panel();
+            this.bntNew = new System.Windows.Forms.Button();
             this.btnQuery = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnGet = new System.Windows.Forms.Button();
-            this.bntNew = new System.Windows.Forms.Button();
             this.pnlMantein.SuspendLayout();
             this.pnlGW.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwBase)).BeginInit();
@@ -50,7 +50,7 @@
             this.pnlMantein.Controls.Add(this.pnlButtons);
             this.pnlMantein.Location = new System.Drawing.Point(2, 0);
             this.pnlMantein.Name = "pnlMantein";
-            this.pnlMantein.Size = new System.Drawing.Size(1303, 748);
+            this.pnlMantein.Size = new System.Drawing.Size(1065, 748);
             this.pnlMantein.TabIndex = 0;
             // 
             // pnlGW
@@ -93,6 +93,17 @@
             this.pnlButtons.Size = new System.Drawing.Size(372, 78);
             this.pnlButtons.TabIndex = 4;
             // 
+            // bntNew
+            // 
+            this.bntNew.Location = new System.Drawing.Point(282, 17);
+            this.bntNew.Margin = new System.Windows.Forms.Padding(5);
+            this.bntNew.Name = "bntNew";
+            this.bntNew.Size = new System.Drawing.Size(78, 41);
+            this.bntNew.TabIndex = 14;
+            this.bntNew.Text = "New";
+            this.bntNew.UseVisualStyleBackColor = true;
+            this.bntNew.Click += new System.EventHandler(this.bntNew_Click);
+            // 
             // btnQuery
             // 
             this.btnQuery.Location = new System.Drawing.Point(194, 17);
@@ -125,23 +136,12 @@
             this.btnGet.UseVisualStyleBackColor = true;
             this.btnGet.Click += new System.EventHandler(this.btnGet_Click_1);
             // 
-            // bntNew
-            // 
-            this.bntNew.Location = new System.Drawing.Point(282, 17);
-            this.bntNew.Margin = new System.Windows.Forms.Padding(5);
-            this.bntNew.Name = "bntNew";
-            this.bntNew.Size = new System.Drawing.Size(78, 41);
-            this.bntNew.TabIndex = 14;
-            this.bntNew.Text = "New";
-            this.bntNew.UseVisualStyleBackColor = true;
-            this.bntNew.Click += new System.EventHandler(this.bntNew_Click);
-            // 
             // frmManteinBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1367, 760);
+            this.ClientSize = new System.Drawing.Size(1069, 760);
             this.Controls.Add(this.pnlMantein);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.ForeColor = System.Drawing.SystemColors.Highlight;
