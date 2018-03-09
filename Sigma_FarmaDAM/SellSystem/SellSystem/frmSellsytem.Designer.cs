@@ -185,12 +185,10 @@
             // txtCantidad
             // 
             this.txtCantidad.DBReference = "Quantity";
-            this.txtCantidad.DisablePaceholder = true;
             this.txtCantidad.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtCantidad.ForeColor = System.Drawing.Color.White;
             this.txtCantidad.Location = new System.Drawing.Point(626, 112);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Placeholder = null;
             this.txtCantidad.Size = new System.Drawing.Size(100, 20);
             this.txtCantidad.TabIndex = 29;
             this.txtCantidad.Table = null;
@@ -198,14 +196,12 @@
             // txtProd
             // 
             this.txtProd.DBReference = "CommercialName";
-            this.txtProd.DisablePaceholder = true;
             this.txtProd.Enabled = false;
             this.txtProd.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtProd.ForeColor = System.Drawing.Color.Gray;
             this.txtProd.Location = new System.Drawing.Point(359, 112);
             this.txtProd.Name = "txtProd";
-            this.txtProd.Placeholder = null;
             this.txtProd.Size = new System.Drawing.Size(206, 20);
             this.txtProd.TabIndex = 26;
             this.txtProd.Table = null;
@@ -213,13 +209,11 @@
             // txtCod
             // 
             this.txtCod.DBReference = "Register_Number";
-            this.txtCod.DisablePaceholder = true;
             this.txtCod.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCod.ForeColor = System.Drawing.Color.White;
             this.txtCod.Location = new System.Drawing.Point(88, 115);
             this.txtCod.Name = "txtCod";
-            this.txtCod.Placeholder = null;
             this.txtCod.Size = new System.Drawing.Size(100, 20);
             this.txtCod.TabIndex = 25;
             this.txtCod.Table = null;
@@ -228,12 +222,10 @@
             // txtClient
             // 
             this.txtClient.DBReference = "NTS";
-            this.txtClient.DisablePaceholder = true;
             this.txtClient.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtClient.ForeColor = System.Drawing.Color.White;
             this.txtClient.Location = new System.Drawing.Point(124, 51);
             this.txtClient.Name = "txtClient";
-            this.txtClient.Placeholder = null;
             this.txtClient.Size = new System.Drawing.Size(106, 20);
             this.txtClient.TabIndex = 30;
             this.txtClient.Table = null;

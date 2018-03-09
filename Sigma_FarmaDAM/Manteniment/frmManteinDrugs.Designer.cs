@@ -165,14 +165,12 @@
             // txtDocumentation
             // 
             this.txtDocumentation.DBReference = "Documentation";
-            this.txtDocumentation.DisablePaceholder = true;
             this.txtDocumentation.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtDocumentation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocumentation.ForeColor = System.Drawing.Color.Black;
             this.txtDocumentation.Location = new System.Drawing.Point(195, 194);
             this.txtDocumentation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDocumentation.Name = "txtDocumentation";
-            this.txtDocumentation.Placeholder = null;
             this.txtDocumentation.Size = new System.Drawing.Size(132, 20);
             this.txtDocumentation.TabIndex = 26;
             this.txtDocumentation.Table = "Drugs";
@@ -180,14 +178,12 @@
             // txtReplaceable
             // 
             this.txtReplaceable.DBReference = "Replaceable";
-            this.txtReplaceable.DisablePaceholder = true;
             this.txtReplaceable.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtReplaceable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReplaceable.ForeColor = System.Drawing.Color.Black;
             this.txtReplaceable.Location = new System.Drawing.Point(195, 112);
             this.txtReplaceable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtReplaceable.Name = "txtReplaceable";
-            this.txtReplaceable.Placeholder = null;
             this.txtReplaceable.Size = new System.Drawing.Size(132, 20);
             this.txtReplaceable.TabIndex = 27;
             this.txtReplaceable.Table = "Drugs";
@@ -195,14 +191,12 @@
             // txtObligatory
             // 
             this.txtObligatory.DBReference = "NeedsRecipe";
-            this.txtObligatory.DisablePaceholder = true;
             this.txtObligatory.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtObligatory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObligatory.ForeColor = System.Drawing.Color.Black;
             this.txtObligatory.Location = new System.Drawing.Point(195, 167);
             this.txtObligatory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtObligatory.Name = "txtObligatory";
-            this.txtObligatory.Placeholder = null;
             this.txtObligatory.Size = new System.Drawing.Size(132, 20);
             this.txtObligatory.TabIndex = 24;
             this.txtObligatory.Table = "Drugs";
@@ -210,14 +204,12 @@
             // txtIdActive
             // 
             this.txtIdActive.DBReference = "ActivePrincipleID";
-            this.txtIdActive.DisablePaceholder = true;
             this.txtIdActive.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtIdActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdActive.ForeColor = System.Drawing.Color.Black;
             this.txtIdActive.Location = new System.Drawing.Point(195, 59);
             this.txtIdActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdActive.Name = "txtIdActive";
-            this.txtIdActive.Placeholder = null;
             this.txtIdActive.Size = new System.Drawing.Size(132, 20);
             this.txtIdActive.TabIndex = 25;
             this.txtIdActive.Table = "Drugs";
@@ -225,14 +217,12 @@
             // txtProspectus
             // 
             this.txtProspectus.DBReference = "Prospectus";
-            this.txtProspectus.DisablePaceholder = true;
             this.txtProspectus.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtProspectus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProspectus.ForeColor = System.Drawing.Color.Black;
             this.txtProspectus.Location = new System.Drawing.Point(195, 221);
             this.txtProspectus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtProspectus.Name = "txtProspectus";
-            this.txtProspectus.Placeholder = null;
             this.txtProspectus.Size = new System.Drawing.Size(132, 20);
             this.txtProspectus.TabIndex = 21;
             this.txtProspectus.Table = "Drugs";
@@ -240,14 +230,12 @@
             // txtDenomination
             // 
             this.txtDenomination.DBReference = "CommercialName";
-            this.txtDenomination.DisablePaceholder = true;
             this.txtDenomination.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtDenomination.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDenomination.ForeColor = System.Drawing.Color.Black;
             this.txtDenomination.Location = new System.Drawing.Point(195, 31);
             this.txtDenomination.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDenomination.Name = "txtDenomination";
-            this.txtDenomination.Placeholder = null;
             this.txtDenomination.Size = new System.Drawing.Size(132, 20);
             this.txtDenomination.TabIndex = 23;
             this.txtDenomination.Table = "Drugs";
@@ -255,14 +243,12 @@
             // txtGeneric
             // 
             this.txtGeneric.DBReference = "IsGeneric";
-            this.txtGeneric.DisablePaceholder = true;
             this.txtGeneric.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtGeneric.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGeneric.ForeColor = System.Drawing.Color.Black;
             this.txtGeneric.Location = new System.Drawing.Point(195, 140);
             this.txtGeneric.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGeneric.Name = "txtGeneric";
-            this.txtGeneric.Placeholder = null;
             this.txtGeneric.Size = new System.Drawing.Size(132, 20);
             this.txtGeneric.TabIndex = 20;
             this.txtGeneric.Table = "Drugs";
@@ -270,14 +256,12 @@
             // txtContent
             // 
             this.txtContent.DBReference = "Content";
-            this.txtContent.DisablePaceholder = true;
             this.txtContent.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContent.ForeColor = System.Drawing.Color.Black;
             this.txtContent.Location = new System.Drawing.Point(195, 85);
             this.txtContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContent.Name = "txtContent";
-            this.txtContent.Placeholder = null;
             this.txtContent.Size = new System.Drawing.Size(132, 20);
             this.txtContent.TabIndex = 22;
             this.txtContent.Table = "Drugs";
@@ -285,14 +269,12 @@
             // txtSRN
             // 
             this.txtSRN.DBReference = "Sanitary_Register_Num";
-            this.txtSRN.DisablePaceholder = true;
             this.txtSRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtSRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSRN.ForeColor = System.Drawing.Color.Black;
             this.txtSRN.Location = new System.Drawing.Point(195, 4);
             this.txtSRN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSRN.Name = "txtSRN";
-            this.txtSRN.Placeholder = null;
             this.txtSRN.Size = new System.Drawing.Size(132, 20);
             this.txtSRN.TabIndex = 19;
             this.txtSRN.Table = "Drugs";

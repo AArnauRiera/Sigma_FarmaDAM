@@ -72,7 +72,6 @@
             this.txtNRN.Location = new System.Drawing.Point(208, 37);
             this.txtNRN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNRN.Name = "txtNRN";
-            this.txtNRN.Placeholder = "";
             this.txtNRN.Size = new System.Drawing.Size(222, 20);
             this.txtNRN.TabIndex = 0;
             this.txtNRN.Table = null;
@@ -107,7 +106,6 @@
             this.txtNRS.Location = new System.Drawing.Point(208, 70);
             this.txtNRS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNRS.Name = "txtNRS";
-            this.txtNRS.Placeholder = null;
             this.txtNRS.Size = new System.Drawing.Size(222, 20);
             this.txtNRS.TabIndex = 2;
             this.txtNRS.Table = null;
@@ -132,7 +130,6 @@
             this.txtActivePrinciple.Location = new System.Drawing.Point(208, 138);
             this.txtActivePrinciple.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtActivePrinciple.Name = "txtActivePrinciple";
-            this.txtActivePrinciple.Placeholder = null;
             this.txtActivePrinciple.Size = new System.Drawing.Size(222, 20);
             this.txtActivePrinciple.TabIndex = 6;
             this.txtActivePrinciple.Table = null;
@@ -157,7 +154,6 @@
             this.txtName.Location = new System.Drawing.Point(208, 105);
             this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Placeholder = null;
             this.txtName.Size = new System.Drawing.Size(222, 20);
             this.txtName.TabIndex = 4;
             this.txtName.Table = null;
@@ -181,7 +177,6 @@
             this.txtBasePrice.Location = new System.Drawing.Point(208, 250);
             this.txtBasePrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBasePrice.Name = "txtBasePrice";
-            this.txtBasePrice.Placeholder = null;
             this.txtBasePrice.Size = new System.Drawing.Size(222, 20);
             this.txtBasePrice.TabIndex = 12;
             this.txtBasePrice.Table = null;
@@ -216,7 +211,6 @@
             this.txtContent.Location = new System.Drawing.Point(208, 174);
             this.txtContent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContent.Name = "txtContent";
-            this.txtContent.Placeholder = null;
             this.txtContent.Size = new System.Drawing.Size(222, 20);
             this.txtContent.TabIndex = 8;
             this.txtContent.Table = null;

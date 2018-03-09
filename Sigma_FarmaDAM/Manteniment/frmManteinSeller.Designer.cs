@@ -143,7 +143,6 @@
             this.txtEmail.Location = new System.Drawing.Point(219, 142);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Placeholder = null;
             this.txtEmail.Size = new System.Drawing.Size(148, 22);
             this.txtEmail.TabIndex = 2;
             this.txtEmail.Table = "Seller";
@@ -157,7 +156,6 @@
             this.txtPassword.Location = new System.Drawing.Point(219, 210);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Placeholder = null;
             this.txtPassword.Size = new System.Drawing.Size(148, 22);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Table = "Seller";
@@ -171,7 +169,6 @@
             this.txtUsername.Location = new System.Drawing.Point(219, 176);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Placeholder = null;
             this.txtUsername.Size = new System.Drawing.Size(148, 22);
             this.txtUsername.TabIndex = 4;
             this.txtUsername.Table = "Seller";
@@ -185,7 +182,6 @@
             this.txtDNI.Location = new System.Drawing.Point(219, 108);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Placeholder = null;
             this.txtDNI.Size = new System.Drawing.Size(148, 22);
             this.txtDNI.TabIndex = 5;
             this.txtDNI.Table = "Seller";
@@ -199,7 +195,6 @@
             this.txtLastName2.Location = new System.Drawing.Point(219, 74);
             this.txtLastName2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtLastName2.Name = "txtLastName2";
-            this.txtLastName2.Placeholder = null;
             this.txtLastName2.Size = new System.Drawing.Size(148, 22);
             this.txtLastName2.TabIndex = 6;
             this.txtLastName2.Table = "Seller";
@@ -213,7 +208,6 @@
             this.txtLastName1.Location = new System.Drawing.Point(219, 40);
             this.txtLastName1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtLastName1.Name = "txtLastName1";
-            this.txtLastName1.Placeholder = null;
             this.txtLastName1.Size = new System.Drawing.Size(148, 22);
             this.txtLastName1.TabIndex = 7;
             this.txtLastName1.Table = "Seller";
@@ -227,7 +221,6 @@
             this.txtFirstName.Location = new System.Drawing.Point(219, 6);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Placeholder = null;
             this.txtFirstName.Size = new System.Drawing.Size(148, 22);
             this.txtFirstName.TabIndex = 8;
             this.txtFirstName.Table = "Seller";

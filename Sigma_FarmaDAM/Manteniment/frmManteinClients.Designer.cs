@@ -115,7 +115,6 @@
             this.txtNTS.Location = new System.Drawing.Point(219, 146);
             this.txtNTS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtNTS.Name = "txtNTS";
-            this.txtNTS.Placeholder = null;
             this.txtNTS.Size = new System.Drawing.Size(148, 22);
             this.txtNTS.TabIndex = 13;
             this.txtNTS.Table = "Clients";
@@ -129,7 +128,6 @@
             this.txtLastName2.Location = new System.Drawing.Point(219, 74);
             this.txtLastName2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtLastName2.Name = "txtLastName2";
-            this.txtLastName2.Placeholder = null;
             this.txtLastName2.Size = new System.Drawing.Size(148, 22);
             this.txtLastName2.TabIndex = 12;
             this.txtLastName2.Table = "Clients";
@@ -143,7 +141,6 @@
             this.txtLastName1.Location = new System.Drawing.Point(219, 40);
             this.txtLastName1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtLastName1.Name = "txtLastName1";
-            this.txtLastName1.Placeholder = null;
             this.txtLastName1.Size = new System.Drawing.Size(148, 22);
             this.txtLastName1.TabIndex = 11;
             this.txtLastName1.Table = "Clients";
@@ -157,7 +154,6 @@
             this.txtDNI.Location = new System.Drawing.Point(219, 108);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Placeholder = null;
             this.txtDNI.Size = new System.Drawing.Size(148, 22);
             this.txtDNI.TabIndex = 10;
             this.txtDNI.Table = "Clients";
@@ -171,7 +167,6 @@
             this.txtName.Location = new System.Drawing.Point(219, 6);
             this.txtName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtName.Name = "txtName";
-            this.txtName.Placeholder = null;
             this.txtName.Size = new System.Drawing.Size(148, 22);
             this.txtName.TabIndex = 9;
             this.txtName.Table = "Clients";

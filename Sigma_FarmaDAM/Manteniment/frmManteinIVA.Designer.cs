@@ -73,7 +73,6 @@
             this.txtValue.Location = new System.Drawing.Point(219, 40);
             this.txtValue.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtValue.Name = "txtValue";
-            this.txtValue.Placeholder = null;
             this.txtValue.Size = new System.Drawing.Size(148, 22);
             this.txtValue.TabIndex = 2;
             this.txtValue.Table = "IVA";
@@ -87,7 +86,6 @@
             this.txtId.Location = new System.Drawing.Point(219, 6);
             this.txtId.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtId.Name = "txtId";
-            this.txtId.Placeholder = null;
             this.txtId.Size = new System.Drawing.Size(148, 22);
             this.txtId.TabIndex = 3;
             this.txtId.Table = "IVA";

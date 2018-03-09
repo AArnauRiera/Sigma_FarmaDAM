@@ -62,7 +62,6 @@
             this.tbxName.ForeColor = System.Drawing.Color.Gray;
             this.tbxName.Location = new System.Drawing.Point(201, 95);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Placeholder = null;
             this.tbxName.Size = new System.Drawing.Size(182, 20);
             this.tbxName.TabIndex = 0;
             this.tbxName.Table = null;
@@ -104,7 +103,6 @@
             this.tbxLastName1.ForeColor = System.Drawing.Color.Gray;
             this.tbxLastName1.Location = new System.Drawing.Point(201, 135);
             this.tbxLastName1.Name = "tbxLastName1";
-            this.tbxLastName1.Placeholder = null;
             this.tbxLastName1.Size = new System.Drawing.Size(182, 20);
             this.tbxLastName1.TabIndex = 3;
             this.tbxLastName1.Table = null;
@@ -127,7 +125,6 @@
             this.tbxLastName2.ForeColor = System.Drawing.Color.Gray;
             this.tbxLastName2.Location = new System.Drawing.Point(201, 178);
             this.tbxLastName2.Name = "tbxLastName2";
-            this.tbxLastName2.Placeholder = null;
             this.tbxLastName2.Size = new System.Drawing.Size(182, 20);
             this.tbxLastName2.TabIndex = 5;
             this.tbxLastName2.Table = null;
@@ -150,7 +147,6 @@
             this.tbxDNI.ForeColor = System.Drawing.Color.Gray;
             this.tbxDNI.Location = new System.Drawing.Point(201, 223);
             this.tbxDNI.Name = "tbxDNI";
-            this.tbxDNI.Placeholder = null;
             this.tbxDNI.Size = new System.Drawing.Size(182, 20);
             this.tbxDNI.TabIndex = 7;
             this.tbxDNI.Table = null;
@@ -173,7 +169,6 @@
             this.tbxEmail.ForeColor = System.Drawing.Color.Gray;
             this.tbxEmail.Location = new System.Drawing.Point(201, 266);
             this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Placeholder = null;
             this.tbxEmail.Size = new System.Drawing.Size(182, 20);
             this.tbxEmail.TabIndex = 9;
             this.tbxEmail.Table = null;
@@ -196,7 +191,6 @@
             this.tbxUsername.ForeColor = System.Drawing.Color.Gray;
             this.tbxUsername.Location = new System.Drawing.Point(201, 311);
             this.tbxUsername.Name = "tbxUsername";
-            this.tbxUsername.Placeholder = null;
             this.tbxUsername.Size = new System.Drawing.Size(182, 20);
             this.tbxUsername.TabIndex = 11;
             this.tbxUsername.Table = null;
@@ -219,7 +213,6 @@
             this.tbxPassword.ForeColor = System.Drawing.Color.Gray;
             this.tbxPassword.Location = new System.Drawing.Point(201, 352);
             this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Placeholder = null;
             this.tbxPassword.Size = new System.Drawing.Size(182, 20);
             this.tbxPassword.TabIndex = 13;
             this.tbxPassword.Table = null;
@@ -252,7 +245,6 @@
             this.tbxRepeatPassword.ForeColor = System.Drawing.Color.Gray;
             this.tbxRepeatPassword.Location = new System.Drawing.Point(201, 394);
             this.tbxRepeatPassword.Name = "tbxRepeatPassword";
-            this.tbxRepeatPassword.Placeholder = null;
             this.tbxRepeatPassword.Size = new System.Drawing.Size(182, 20);
             this.tbxRepeatPassword.TabIndex = 18;
             this.tbxRepeatPassword.Table = null;

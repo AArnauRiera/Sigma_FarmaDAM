@@ -73,7 +73,6 @@
             this.txtName.Location = new System.Drawing.Point(219, 38);
             this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtName.Name = "txtName";
-            this.txtName.Placeholder = null;
             this.txtName.Size = new System.Drawing.Size(148, 23);
             this.txtName.TabIndex = 2;
             this.txtName.Table = "Active_Principles";
@@ -87,7 +86,6 @@
             this.txtSRN.Location = new System.Drawing.Point(219, 5);
             this.txtSRN.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSRN.Name = "txtSRN";
-            this.txtSRN.Placeholder = null;
             this.txtSRN.Size = new System.Drawing.Size(148, 23);
             this.txtSRN.TabIndex = 3;
             this.txtSRN.Table = "Active_Principles";

@@ -52,7 +52,6 @@
             this.txtDenomination.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtDenomination.Location = new System.Drawing.Point(254, 37);
             this.txtDenomination.Name = "txtDenomination";
-            this.txtDenomination.Placeholder = null;
             this.txtDenomination.Size = new System.Drawing.Size(100, 20);
             this.txtDenomination.TabIndex = 0;
             this.txtDenomination.Table = "Laboratories";
@@ -63,7 +62,6 @@
             this.txtAddress.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtAddress.Location = new System.Drawing.Point(254, 63);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Placeholder = null;
             this.txtAddress.Size = new System.Drawing.Size(100, 20);
             this.txtAddress.TabIndex = 0;
             this.txtAddress.Table = "Laboratories";
@@ -74,7 +72,6 @@
             this.txtCIF.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtCIF.Location = new System.Drawing.Point(254, 89);
             this.txtCIF.Name = "txtCIF";
-            this.txtCIF.Placeholder = null;
             this.txtCIF.Size = new System.Drawing.Size(100, 20);
             this.txtCIF.TabIndex = 0;
             this.txtCIF.Table = "Laboratories";

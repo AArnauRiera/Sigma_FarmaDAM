@@ -68,7 +68,6 @@ namespace SearchSystem
             this.txtName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtName.Location = new System.Drawing.Point(280, 16);
             this.txtName.Name = "txtName";
-            this.txtName.Placeholder = null;
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 0;
             this.txtName.Table = "Clients";
@@ -79,7 +78,6 @@ namespace SearchSystem
             this.txtDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtDNI.Location = new System.Drawing.Point(280, 94);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Placeholder = null;
             this.txtDNI.Size = new System.Drawing.Size(100, 20);
             this.txtDNI.TabIndex = 1;
             this.txtDNI.Table = "Clients";
@@ -90,7 +88,6 @@ namespace SearchSystem
             this.txtLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtLastName1.Location = new System.Drawing.Point(280, 42);
             this.txtLastName1.Name = "txtLastName1";
-            this.txtLastName1.Placeholder = null;
             this.txtLastName1.Size = new System.Drawing.Size(100, 20);
             this.txtLastName1.TabIndex = 3;
             this.txtLastName1.Table = "Clients";
@@ -101,7 +98,6 @@ namespace SearchSystem
             this.txtLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtLastName2.Location = new System.Drawing.Point(280, 68);
             this.txtLastName2.Name = "txtLastName2";
-            this.txtLastName2.Placeholder = null;
             this.txtLastName2.Size = new System.Drawing.Size(100, 20);
             this.txtLastName2.TabIndex = 4;
             this.txtLastName2.Table = "Clients";
@@ -112,7 +108,6 @@ namespace SearchSystem
             this.txtNTS.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtNTS.Location = new System.Drawing.Point(280, 120);
             this.txtNTS.Name = "txtNTS";
-            this.txtNTS.Placeholder = null;
             this.txtNTS.Size = new System.Drawing.Size(100, 20);
             this.txtNTS.TabIndex = 5;
             this.txtNTS.Table = "Clients";

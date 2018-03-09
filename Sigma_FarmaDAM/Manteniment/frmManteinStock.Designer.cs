@@ -87,7 +87,6 @@
             this.txtSigma3.Location = new System.Drawing.Point(219, 74);
             this.txtSigma3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtSigma3.Name = "txtSigma3";
-            this.txtSigma3.Placeholder = null;
             this.txtSigma3.Size = new System.Drawing.Size(148, 22);
             this.txtSigma3.TabIndex = 6;
             this.txtSigma3.Table = "Stock";
@@ -101,7 +100,6 @@
             this.txtSigma2.Location = new System.Drawing.Point(219, 40);
             this.txtSigma2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtSigma2.Name = "txtSigma2";
-            this.txtSigma2.Placeholder = null;
             this.txtSigma2.Size = new System.Drawing.Size(148, 22);
             this.txtSigma2.TabIndex = 7;
             this.txtSigma2.Table = "Stock";
@@ -115,7 +113,6 @@
             this.txtQuantity.Location = new System.Drawing.Point(219, 6);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Placeholder = null;
             this.txtQuantity.Size = new System.Drawing.Size(148, 22);
             this.txtQuantity.TabIndex = 5;
             this.txtQuantity.Table = "Stock";

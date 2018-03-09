@@ -68,7 +68,6 @@
             this.txtFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtFirstName.Location = new System.Drawing.Point(139, 21);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Placeholder = null;
             this.txtFirstName.Size = new System.Drawing.Size(100, 20);
             this.txtFirstName.TabIndex = 0;
             this.txtFirstName.Table = "Seller";
@@ -79,7 +78,6 @@
             this.txtLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtLastName1.Location = new System.Drawing.Point(139, 47);
             this.txtLastName1.Name = "txtLastName1";
-            this.txtLastName1.Placeholder = null;
             this.txtLastName1.Size = new System.Drawing.Size(100, 20);
             this.txtLastName1.TabIndex = 0;
             this.txtLastName1.Table = "Seller";
@@ -90,7 +88,6 @@
             this.txtLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtLastName2.Location = new System.Drawing.Point(139, 73);
             this.txtLastName2.Name = "txtLastName2";
-            this.txtLastName2.Placeholder = null;
             this.txtLastName2.Size = new System.Drawing.Size(100, 20);
             this.txtLastName2.TabIndex = 0;
             this.txtLastName2.Table = "Seller";
@@ -101,7 +98,6 @@
             this.txtDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtDNI.Location = new System.Drawing.Point(139, 99);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Placeholder = null;
             this.txtDNI.Size = new System.Drawing.Size(100, 20);
             this.txtDNI.TabIndex = 0;
             this.txtDNI.Table = "Seller";
@@ -112,7 +108,6 @@
             this.txtUsername.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtUsername.Location = new System.Drawing.Point(345, 47);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Placeholder = null;
             this.txtUsername.Size = new System.Drawing.Size(100, 20);
             this.txtUsername.TabIndex = 0;
             this.txtUsername.Table = "Seller";
@@ -123,7 +118,6 @@
             this.txtPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtPassword.Location = new System.Drawing.Point(345, 73);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Placeholder = null;
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 0;
             this.txtPassword.Table = "Seller";
@@ -134,7 +128,6 @@
             this.txtEmail.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtEmail.Location = new System.Drawing.Point(345, 21);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Placeholder = null;
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 0;
             this.txtEmail.Table = "Seller";

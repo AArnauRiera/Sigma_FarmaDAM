@@ -52,7 +52,6 @@
             this.txtQuantity.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtQuantity.Location = new System.Drawing.Point(243, 36);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Placeholder = null;
             this.txtQuantity.Size = new System.Drawing.Size(100, 20);
             this.txtQuantity.TabIndex = 0;
             this.txtQuantity.Table = "Stock";
@@ -63,7 +62,6 @@
             this.txtSigma2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtSigma2.Location = new System.Drawing.Point(243, 62);
             this.txtSigma2.Name = "txtSigma2";
-            this.txtSigma2.Placeholder = null;
             this.txtSigma2.Size = new System.Drawing.Size(100, 20);
             this.txtSigma2.TabIndex = 1;
             this.txtSigma2.Table = "Stock";
@@ -74,7 +72,6 @@
             this.txtSigma3.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtSigma3.Location = new System.Drawing.Point(243, 88);
             this.txtSigma3.Name = "txtSigma3";
-            this.txtSigma3.Placeholder = null;
             this.txtSigma3.Size = new System.Drawing.Size(100, 20);
             this.txtSigma3.TabIndex = 1;
             this.txtSigma3.Table = "Stock";

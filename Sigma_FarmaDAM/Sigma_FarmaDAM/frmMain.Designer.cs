@@ -33,8 +33,15 @@
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnActualizacioMedicaments = new System.Windows.Forms.Button();
-            this.btnProgramaFidelitzacioClients = new System.Windows.Forms.Button();
+            this.btnGestioComandes = new System.Windows.Forms.Button();
+            this.btnLaboratorisFarmaceutiques = new System.Windows.Forms.Button();
+            this.btnMantenimentProductes = new System.Windows.Forms.Button();
+            this.btnMantenimenPrincipiActius = new System.Windows.Forms.Button();
+            this.btnEditClient = new System.Windows.Forms.Button();
+            this.btnUser = new System.Windows.Forms.Button();
+            this.btnVentas = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbMain = new VisualStudioTabControl.VisualStudioTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -44,18 +51,10 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnGestioComandes = new System.Windows.Forms.Button();
-            this.btnLaboratorisFarmaceutiques = new System.Windows.Forms.Button();
-            this.btnMantenimentProductes = new System.Windows.Forms.Button();
-            this.btnMantenimenPrincipiActius = new System.Windows.Forms.Button();
-            this.btnEditClient = new System.Windows.Forms.Button();
-            this.btnUser = new System.Windows.Forms.Button();
-            this.btnVentas = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip
@@ -63,17 +62,16 @@
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 941);
+            this.statusStrip.Location = new System.Drawing.Point(0, 694);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip.Size = new System.Drawing.Size(1488, 25);
+            this.statusStrip.Size = new System.Drawing.Size(1116, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(54, 20);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
             // panel1
@@ -82,7 +80,6 @@
             this.panel1.BackColor = System.Drawing.Color.Azure;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnActualizacioMedicaments);
-            this.panel1.Controls.Add(this.btnProgramaFidelitzacioClients);
             this.panel1.Controls.Add(this.btnGestioComandes);
             this.panel1.Controls.Add(this.btnLaboratorisFarmaceutiques);
             this.panel1.Controls.Add(this.btnMantenimentProductes);
@@ -92,10 +89,20 @@
             this.panel1.Controls.Add(this.btnVentas);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(361, 941);
+            this.panel1.Size = new System.Drawing.Size(271, 694);
             this.panel1.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Azure;
+            this.pictureBox1.Image = global::Sigma_FarmaDAM.Properties.Resources.logoSigma2;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(229, 98);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // btnActualizacioMedicaments
             // 
@@ -107,43 +114,162 @@
             this.btnActualizacioMedicaments.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnActualizacioMedicaments.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnActualizacioMedicaments.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnActualizacioMedicaments.Location = new System.Drawing.Point(0, 856);
-            this.btnActualizacioMedicaments.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizacioMedicaments.Location = new System.Drawing.Point(0, 625);
             this.btnActualizacioMedicaments.Name = "btnActualizacioMedicaments";
-            this.btnActualizacioMedicaments.Size = new System.Drawing.Size(361, 81);
+            this.btnActualizacioMedicaments.Size = new System.Drawing.Size(271, 66);
             this.btnActualizacioMedicaments.TabIndex = 9;
             this.btnActualizacioMedicaments.Text = "Actualització medicaments";
             this.btnActualizacioMedicaments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnActualizacioMedicaments.UseVisualStyleBackColor = false;
             this.btnActualizacioMedicaments.Click += new System.EventHandler(this.btnActualizacioMedicaments_Click);
             // 
-            // btnProgramaFidelitzacioClients
+            // btnGestioComandes
             // 
-            this.btnProgramaFidelitzacioClients.BackColor = System.Drawing.Color.Azure;
-            this.btnProgramaFidelitzacioClients.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnProgramaFidelitzacioClients.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
-            this.btnProgramaFidelitzacioClients.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnProgramaFidelitzacioClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProgramaFidelitzacioClients.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnProgramaFidelitzacioClients.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnProgramaFidelitzacioClients.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnProgramaFidelitzacioClients.Location = new System.Drawing.Point(0, 767);
-            this.btnProgramaFidelitzacioClients.Margin = new System.Windows.Forms.Padding(4);
-            this.btnProgramaFidelitzacioClients.Name = "btnProgramaFidelitzacioClients";
-            this.btnProgramaFidelitzacioClients.Size = new System.Drawing.Size(361, 81);
-            this.btnProgramaFidelitzacioClients.TabIndex = 8;
-            this.btnProgramaFidelitzacioClients.Text = "Programa fidelització clients ";
-            this.btnProgramaFidelitzacioClients.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProgramaFidelitzacioClients.UseVisualStyleBackColor = false;
+            this.btnGestioComandes.BackColor = System.Drawing.Color.Azure;
+            this.btnGestioComandes.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnGestioComandes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
+            this.btnGestioComandes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btnGestioComandes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestioComandes.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnGestioComandes.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnGestioComandes.Image = global::Sigma_FarmaDAM.Properties.Resources.worker_loading_boxes;
+            this.btnGestioComandes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGestioComandes.Location = new System.Drawing.Point(0, 551);
+            this.btnGestioComandes.Name = "btnGestioComandes";
+            this.btnGestioComandes.Size = new System.Drawing.Size(271, 66);
+            this.btnGestioComandes.TabIndex = 7;
+            this.btnGestioComandes.Text = "Gestió de comandes ";
+            this.btnGestioComandes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestioComandes.UseVisualStyleBackColor = false;
+            // 
+            // btnLaboratorisFarmaceutiques
+            // 
+            this.btnLaboratorisFarmaceutiques.BackColor = System.Drawing.Color.Azure;
+            this.btnLaboratorisFarmaceutiques.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnLaboratorisFarmaceutiques.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
+            this.btnLaboratorisFarmaceutiques.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btnLaboratorisFarmaceutiques.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLaboratorisFarmaceutiques.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnLaboratorisFarmaceutiques.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnLaboratorisFarmaceutiques.Image = global::Sigma_FarmaDAM.Properties.Resources.flask;
+            this.btnLaboratorisFarmaceutiques.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLaboratorisFarmaceutiques.Location = new System.Drawing.Point(0, 479);
+            this.btnLaboratorisFarmaceutiques.Name = "btnLaboratorisFarmaceutiques";
+            this.btnLaboratorisFarmaceutiques.Size = new System.Drawing.Size(271, 66);
+            this.btnLaboratorisFarmaceutiques.TabIndex = 5;
+            this.btnLaboratorisFarmaceutiques.Text = "Laboratoris Farmacèutiques";
+            this.btnLaboratorisFarmaceutiques.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLaboratorisFarmaceutiques.UseVisualStyleBackColor = false;
+            this.btnLaboratorisFarmaceutiques.Click += new System.EventHandler(this.btnLaboratorisFarmaceutiques_Click);
+            // 
+            // btnMantenimentProductes
+            // 
+            this.btnMantenimentProductes.BackColor = System.Drawing.Color.Azure;
+            this.btnMantenimentProductes.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnMantenimentProductes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
+            this.btnMantenimentProductes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btnMantenimentProductes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantenimentProductes.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnMantenimentProductes.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnMantenimentProductes.Image = global::Sigma_FarmaDAM.Properties.Resources._2_pills;
+            this.btnMantenimentProductes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMantenimentProductes.Location = new System.Drawing.Point(0, 406);
+            this.btnMantenimentProductes.Name = "btnMantenimentProductes";
+            this.btnMantenimentProductes.Size = new System.Drawing.Size(271, 66);
+            this.btnMantenimentProductes.TabIndex = 4;
+            this.btnMantenimentProductes.Text = "Manteniment productes";
+            this.btnMantenimentProductes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMantenimentProductes.UseVisualStyleBackColor = false;
+            this.btnMantenimentProductes.Click += new System.EventHandler(this.btnMantenimentProductes_Click);
+            // 
+            // btnMantenimenPrincipiActius
+            // 
+            this.btnMantenimenPrincipiActius.BackColor = System.Drawing.Color.Azure;
+            this.btnMantenimenPrincipiActius.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnMantenimenPrincipiActius.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
+            this.btnMantenimenPrincipiActius.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btnMantenimenPrincipiActius.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantenimenPrincipiActius.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnMantenimenPrincipiActius.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnMantenimenPrincipiActius.Image = global::Sigma_FarmaDAM.Properties.Resources.biological_cell;
+            this.btnMantenimenPrincipiActius.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMantenimenPrincipiActius.Location = new System.Drawing.Point(0, 334);
+            this.btnMantenimenPrincipiActius.Name = "btnMantenimenPrincipiActius";
+            this.btnMantenimenPrincipiActius.Size = new System.Drawing.Size(271, 66);
+            this.btnMantenimenPrincipiActius.TabIndex = 3;
+            this.btnMantenimenPrincipiActius.Text = "Manteniment principis actius ";
+            this.btnMantenimenPrincipiActius.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMantenimenPrincipiActius.UseVisualStyleBackColor = false;
+            this.btnMantenimenPrincipiActius.Click += new System.EventHandler(this.btnMantenimenPrincipiActius_Click);
+            // 
+            // btnEditClient
+            // 
+            this.btnEditClient.BackColor = System.Drawing.Color.Azure;
+            this.btnEditClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnEditClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
+            this.btnEditClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btnEditClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditClient.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnEditClient.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnEditClient.Image = global::Sigma_FarmaDAM.Properties.Resources.user;
+            this.btnEditClient.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditClient.Location = new System.Drawing.Point(0, 262);
+            this.btnEditClient.Name = "btnEditClient";
+            this.btnEditClient.Size = new System.Drawing.Size(271, 66);
+            this.btnEditClient.TabIndex = 2;
+            this.btnEditClient.Text = "Editar Cliente";
+            this.btnEditClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditClient.UseVisualStyleBackColor = false;
+            this.btnEditClient.Click += new System.EventHandler(this.btnEditClient_Click);
+            // 
+            // btnUser
+            // 
+            this.btnUser.BackColor = System.Drawing.Color.Azure;
+            this.btnUser.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
+            this.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnUser.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnUser.Image = global::Sigma_FarmaDAM.Properties.Resources.user__1_;
+            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUser.Location = new System.Drawing.Point(0, 189);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(271, 66);
+            this.btnUser.TabIndex = 1;
+            this.btnUser.Text = "Registro Cliente";
+            this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            // 
+            // btnVentas
+            // 
+            this.btnVentas.BackColor = System.Drawing.Color.Azure;
+            this.btnVentas.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnVentas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
+            this.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentas.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnVentas.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnVentas.Image = global::Sigma_FarmaDAM.Properties.Resources.shopping_cart__2_;
+            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVentas.Location = new System.Drawing.Point(0, 117);
+            this.btnVentas.Margin = new System.Windows.Forms.Padding(0);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Size = new System.Drawing.Size(271, 66);
+            this.btnVentas.TabIndex = 0;
+            this.btnVentas.Text = "Ventas";
+            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentas.UseVisualStyleBackColor = false;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.tbMain);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(361, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(271, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1127, 941);
+            this.panel2.Size = new System.Drawing.Size(845, 694);
             this.panel2.TabIndex = 8;
             // 
             // tbMain
@@ -159,12 +285,13 @@
             this.tbMain.HorizontalLineColor = System.Drawing.SystemColors.Highlight;
             this.tbMain.ItemSize = new System.Drawing.Size(240, 16);
             this.tbMain.Location = new System.Drawing.Point(0, 0);
+            this.tbMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbMain.Name = "tbMain";
             this.tbMain.SelectedIndex = 0;
             this.tbMain.SelectedTextColor = System.Drawing.SystemColors.Highlight;
             this.tbMain.ShowClosingButton = true;
             this.tbMain.ShowClosingMessage = false;
-            this.tbMain.Size = new System.Drawing.Size(1127, 941);
+            this.tbMain.Size = new System.Drawing.Size(845, 694);
             this.tbMain.TabIndex = 0;
             this.tbMain.TextColor = System.Drawing.Color.LightBlue;
             // 
@@ -238,180 +365,23 @@
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "tabPage7";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Azure;
-            this.pictureBox1.Image = global::Sigma_FarmaDAM.Properties.Resources.logoSigma2;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(305, 120);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnGestioComandes
-            // 
-            this.btnGestioComandes.BackColor = System.Drawing.Color.Azure;
-            this.btnGestioComandes.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnGestioComandes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
-            this.btnGestioComandes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnGestioComandes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGestioComandes.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnGestioComandes.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnGestioComandes.Image = global::Sigma_FarmaDAM.Properties.Resources.worker_loading_boxes;
-            this.btnGestioComandes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGestioComandes.Location = new System.Drawing.Point(0, 678);
-            this.btnGestioComandes.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGestioComandes.Name = "btnGestioComandes";
-            this.btnGestioComandes.Size = new System.Drawing.Size(361, 81);
-            this.btnGestioComandes.TabIndex = 7;
-            this.btnGestioComandes.Text = "Gestió de comandes ";
-            this.btnGestioComandes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestioComandes.UseVisualStyleBackColor = false;
-            // 
-            // btnLaboratorisFarmaceutiques
-            // 
-            this.btnLaboratorisFarmaceutiques.BackColor = System.Drawing.Color.Azure;
-            this.btnLaboratorisFarmaceutiques.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnLaboratorisFarmaceutiques.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
-            this.btnLaboratorisFarmaceutiques.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnLaboratorisFarmaceutiques.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLaboratorisFarmaceutiques.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnLaboratorisFarmaceutiques.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnLaboratorisFarmaceutiques.Image = global::Sigma_FarmaDAM.Properties.Resources.flask;
-            this.btnLaboratorisFarmaceutiques.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLaboratorisFarmaceutiques.Location = new System.Drawing.Point(0, 589);
-            this.btnLaboratorisFarmaceutiques.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLaboratorisFarmaceutiques.Name = "btnLaboratorisFarmaceutiques";
-            this.btnLaboratorisFarmaceutiques.Size = new System.Drawing.Size(361, 81);
-            this.btnLaboratorisFarmaceutiques.TabIndex = 5;
-            this.btnLaboratorisFarmaceutiques.Text = "Laboratoris Farmacèutiques";
-            this.btnLaboratorisFarmaceutiques.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLaboratorisFarmaceutiques.UseVisualStyleBackColor = false;
-            this.btnLaboratorisFarmaceutiques.Click += new System.EventHandler(this.btnLaboratorisFarmaceutiques_Click);
-            // 
-            // btnMantenimentProductes
-            // 
-            this.btnMantenimentProductes.BackColor = System.Drawing.Color.Azure;
-            this.btnMantenimentProductes.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnMantenimentProductes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
-            this.btnMantenimentProductes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnMantenimentProductes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMantenimentProductes.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnMantenimentProductes.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnMantenimentProductes.Image = global::Sigma_FarmaDAM.Properties.Resources._2_pills;
-            this.btnMantenimentProductes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMantenimentProductes.Location = new System.Drawing.Point(0, 500);
-            this.btnMantenimentProductes.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMantenimentProductes.Name = "btnMantenimentProductes";
-            this.btnMantenimentProductes.Size = new System.Drawing.Size(361, 81);
-            this.btnMantenimentProductes.TabIndex = 4;
-            this.btnMantenimentProductes.Text = "Manteniment productes";
-            this.btnMantenimentProductes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMantenimentProductes.UseVisualStyleBackColor = false;
-            this.btnMantenimentProductes.Click += new System.EventHandler(this.btnMantenimentProductes_Click);
-            // 
-            // btnMantenimenPrincipiActius
-            // 
-            this.btnMantenimenPrincipiActius.BackColor = System.Drawing.Color.Azure;
-            this.btnMantenimenPrincipiActius.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnMantenimenPrincipiActius.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
-            this.btnMantenimenPrincipiActius.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnMantenimenPrincipiActius.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMantenimenPrincipiActius.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnMantenimenPrincipiActius.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnMantenimenPrincipiActius.Image = global::Sigma_FarmaDAM.Properties.Resources.biological_cell;
-            this.btnMantenimenPrincipiActius.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMantenimenPrincipiActius.Location = new System.Drawing.Point(0, 411);
-            this.btnMantenimenPrincipiActius.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMantenimenPrincipiActius.Name = "btnMantenimenPrincipiActius";
-            this.btnMantenimenPrincipiActius.Size = new System.Drawing.Size(361, 81);
-            this.btnMantenimenPrincipiActius.TabIndex = 3;
-            this.btnMantenimenPrincipiActius.Text = "Manteniment principis actius ";
-            this.btnMantenimenPrincipiActius.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMantenimenPrincipiActius.UseVisualStyleBackColor = false;
-            this.btnMantenimenPrincipiActius.Click += new System.EventHandler(this.btnMantenimenPrincipiActius_Click);
-            // 
-            // btnEditClient
-            // 
-            this.btnEditClient.BackColor = System.Drawing.Color.Azure;
-            this.btnEditClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnEditClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
-            this.btnEditClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnEditClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditClient.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnEditClient.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnEditClient.Image = global::Sigma_FarmaDAM.Properties.Resources.user;
-            this.btnEditClient.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditClient.Location = new System.Drawing.Point(0, 322);
-            this.btnEditClient.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditClient.Name = "btnEditClient";
-            this.btnEditClient.Size = new System.Drawing.Size(361, 81);
-            this.btnEditClient.TabIndex = 2;
-            this.btnEditClient.Text = "Editar Cliente";
-            this.btnEditClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditClient.UseVisualStyleBackColor = false;
-            this.btnEditClient.Click += new System.EventHandler(this.btnEditClient_Click);
-            // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.Azure;
-            this.btnUser.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
-            this.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnUser.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnUser.Image = global::Sigma_FarmaDAM.Properties.Resources.user__1_;
-            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUser.Location = new System.Drawing.Point(0, 233);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(361, 81);
-            this.btnUser.TabIndex = 1;
-            this.btnUser.Text = "Registro Cliente";
-            this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUser.UseVisualStyleBackColor = false;
-            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
-            // 
-            // btnVentas
-            // 
-            this.btnVentas.BackColor = System.Drawing.Color.Azure;
-            this.btnVentas.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnVentas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
-            this.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentas.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnVentas.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnVentas.Image = global::Sigma_FarmaDAM.Properties.Resources.shopping_cart__2_;
-            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVentas.Location = new System.Drawing.Point(0, 144);
-            this.btnVentas.Margin = new System.Windows.Forms.Padding(0);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(361, 81);
-            this.btnVentas.TabIndex = 0;
-            this.btnVentas.Text = "Ventas";
-            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.UseVisualStyleBackColor = false;
-            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
-            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(1488, 966);
+            this.ClientSize = new System.Drawing.Size(1116, 716);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.Text = "frmMain";
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -429,7 +399,6 @@
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnGestioComandes;
         private System.Windows.Forms.Button btnActualizacioMedicaments;
-        private System.Windows.Forms.Button btnProgramaFidelitzacioClients;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;

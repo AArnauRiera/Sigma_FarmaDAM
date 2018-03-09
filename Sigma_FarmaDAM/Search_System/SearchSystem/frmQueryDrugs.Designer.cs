@@ -124,7 +124,6 @@
             this.txtReplaceable.ForeColor = System.Drawing.Color.Gray;
             this.txtReplaceable.Location = new System.Drawing.Point(204, 124);
             this.txtReplaceable.Name = "txtReplaceable";
-            this.txtReplaceable.Placeholder = null;
             this.txtReplaceable.Size = new System.Drawing.Size(100, 20);
             this.txtReplaceable.TabIndex = 13;
             this.txtReplaceable.Table = "Drugs";
@@ -137,7 +136,6 @@
             this.txtIdActive.ForeColor = System.Drawing.Color.Gray;
             this.txtIdActive.Location = new System.Drawing.Point(204, 69);
             this.txtIdActive.Name = "txtIdActive";
-            this.txtIdActive.Placeholder = null;
             this.txtIdActive.Size = new System.Drawing.Size(100, 20);
             this.txtIdActive.TabIndex = 12;
             this.txtIdActive.Table = "Drugs";
@@ -150,7 +148,6 @@
             this.txtDenomination.ForeColor = System.Drawing.Color.Gray;
             this.txtDenomination.Location = new System.Drawing.Point(204, 43);
             this.txtDenomination.Name = "txtDenomination";
-            this.txtDenomination.Placeholder = null;
             this.txtDenomination.Size = new System.Drawing.Size(100, 20);
             this.txtDenomination.TabIndex = 11;
             this.txtDenomination.Table = "Drugs";
@@ -163,7 +160,6 @@
             this.txtContent.ForeColor = System.Drawing.Color.Gray;
             this.txtContent.Location = new System.Drawing.Point(204, 95);
             this.txtContent.Name = "txtContent";
-            this.txtContent.Placeholder = null;
             this.txtContent.Size = new System.Drawing.Size(100, 20);
             this.txtContent.TabIndex = 10;
             this.txtContent.Table = "Drugs";
@@ -176,7 +172,6 @@
             this.txtSRN.ForeColor = System.Drawing.Color.Gray;
             this.txtSRN.Location = new System.Drawing.Point(204, 17);
             this.txtSRN.Name = "txtSRN";
-            this.txtSRN.Placeholder = null;
             this.txtSRN.Size = new System.Drawing.Size(100, 20);
             this.txtSRN.TabIndex = 9;
             this.txtSRN.Table = "Drugs";
@@ -225,7 +220,6 @@
             this.txtGeneric.ForeColor = System.Drawing.Color.Gray;
             this.txtGeneric.Location = new System.Drawing.Point(391, 20);
             this.txtGeneric.Name = "txtGeneric";
-            this.txtGeneric.Placeholder = null;
             this.txtGeneric.Size = new System.Drawing.Size(100, 20);
             this.txtGeneric.TabIndex = 9;
             this.txtGeneric.Table = "Drugs";
@@ -238,7 +232,6 @@
             this.txtProspectus.ForeColor = System.Drawing.Color.Gray;
             this.txtProspectus.Location = new System.Drawing.Point(391, 98);
             this.txtProspectus.Name = "txtProspectus";
-            this.txtProspectus.Placeholder = null;
             this.txtProspectus.Size = new System.Drawing.Size(100, 20);
             this.txtProspectus.TabIndex = 10;
             this.txtProspectus.Table = "Drugs";
@@ -251,7 +244,6 @@
             this.txtObligatory.ForeColor = System.Drawing.Color.Gray;
             this.txtObligatory.Location = new System.Drawing.Point(391, 46);
             this.txtObligatory.Name = "txtObligatory";
-            this.txtObligatory.Placeholder = null;
             this.txtObligatory.Size = new System.Drawing.Size(100, 20);
             this.txtObligatory.TabIndex = 11;
             this.txtObligatory.Table = "Drugs";
@@ -264,7 +256,6 @@
             this.txtDocumentation.ForeColor = System.Drawing.Color.Gray;
             this.txtDocumentation.Location = new System.Drawing.Point(391, 72);
             this.txtDocumentation.Name = "txtDocumentation";
-            this.txtDocumentation.Placeholder = null;
             this.txtDocumentation.Size = new System.Drawing.Size(100, 20);
             this.txtDocumentation.TabIndex = 12;
             this.txtDocumentation.Table = "Drugs";

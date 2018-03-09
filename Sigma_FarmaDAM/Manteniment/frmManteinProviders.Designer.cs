@@ -73,7 +73,6 @@
             this.txtId_Stock.Location = new System.Drawing.Point(219, 40);
             this.txtId_Stock.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtId_Stock.Name = "txtId_Stock";
-            this.txtId_Stock.Placeholder = null;
             this.txtId_Stock.Size = new System.Drawing.Size(148, 22);
             this.txtId_Stock.TabIndex = 2;
             this.txtId_Stock.Table = "Providers";
@@ -87,7 +86,6 @@
             this.txtIdLaboratories.Location = new System.Drawing.Point(219, 6);
             this.txtIdLaboratories.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtIdLaboratories.Name = "txtIdLaboratories";
-            this.txtIdLaboratories.Placeholder = null;
             this.txtIdLaboratories.Size = new System.Drawing.Size(148, 22);
             this.txtIdLaboratories.TabIndex = 3;
             this.txtIdLaboratories.Table = "Providers";

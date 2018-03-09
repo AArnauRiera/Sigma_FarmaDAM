@@ -106,7 +106,6 @@ namespace Helpers
                     TxtSigma text = (TxtSigma)txt;
                     text.DataBindings.Clear();
                     text.DataBindings.Add("Text", dataSet.Tables["Taula"], text.DBReference);
-                    text.SetText();
                 }
             }
         }
@@ -119,7 +118,7 @@ namespace Helpers
                     TxtSigma text = (TxtSigma)txt;
                     text.DataBindings.Clear();
                     text.DataBindings.Add("Text", dataSet.Tables["Taula"], text.DBReference);
-                    text.SetText();
+
                 }
             }
         }

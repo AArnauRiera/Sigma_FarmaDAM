@@ -87,7 +87,6 @@
             this.txtCIF.Location = new System.Drawing.Point(219, 74);
             this.txtCIF.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtCIF.Name = "txtCIF";
-            this.txtCIF.Placeholder = null;
             this.txtCIF.Size = new System.Drawing.Size(148, 22);
             this.txtCIF.TabIndex = 2;
             this.txtCIF.Table = "Laboratories";
@@ -101,7 +100,6 @@
             this.txtAddress.Location = new System.Drawing.Point(219, 40);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Placeholder = null;
             this.txtAddress.Size = new System.Drawing.Size(148, 22);
             this.txtAddress.TabIndex = 3;
             this.txtAddress.Table = "Laboratories";
@@ -115,7 +113,6 @@
             this.txtDenomination.Location = new System.Drawing.Point(219, 6);
             this.txtDenomination.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtDenomination.Name = "txtDenomination";
-            this.txtDenomination.Placeholder = null;
             this.txtDenomination.Size = new System.Drawing.Size(148, 22);
             this.txtDenomination.TabIndex = 4;
             this.txtDenomination.Table = "Laboratories";

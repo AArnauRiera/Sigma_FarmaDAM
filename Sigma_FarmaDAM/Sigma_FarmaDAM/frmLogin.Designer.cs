@@ -76,13 +76,11 @@
             // tbxUsername
             // 
             this.tbxUsername.DBReference = "username";
-            this.tbxUsername.DisablePaceholder = true;
             this.tbxUsername.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.tbxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxUsername.ForeColor = System.Drawing.Color.Black;
             this.tbxUsername.Location = new System.Drawing.Point(158, 75);
             this.tbxUsername.Name = "tbxUsername";
-            this.tbxUsername.Placeholder = null;
             this.tbxUsername.Size = new System.Drawing.Size(100, 20);
             this.tbxUsername.TabIndex = 1;
             this.tbxUsername.Table = null;
@@ -91,13 +89,11 @@
             // tbxPassword
             // 
             this.tbxPassword.DBReference = "password";
-            this.tbxPassword.DisablePaceholder = true;
             this.tbxPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Password;
             this.tbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxPassword.ForeColor = System.Drawing.Color.Black;
             this.tbxPassword.Location = new System.Drawing.Point(158, 113);
             this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Placeholder = null;
             this.tbxPassword.Size = new System.Drawing.Size(100, 20);
             this.tbxPassword.TabIndex = 2;
             this.tbxPassword.Table = null;

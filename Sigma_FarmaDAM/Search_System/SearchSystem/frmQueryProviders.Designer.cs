@@ -48,7 +48,6 @@
             this.txtIdLaboratories.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtIdLaboratories.Location = new System.Drawing.Point(257, 54);
             this.txtIdLaboratories.Name = "txtIdLaboratories";
-            this.txtIdLaboratories.Placeholder = null;
             this.txtIdLaboratories.Size = new System.Drawing.Size(100, 20);
             this.txtIdLaboratories.TabIndex = 0;
             this.txtIdLaboratories.Table = "Providers";
@@ -59,7 +58,6 @@
             this.txtId_Stock.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtId_Stock.Location = new System.Drawing.Point(257, 80);
             this.txtId_Stock.Name = "txtId_Stock";
-            this.txtId_Stock.Placeholder = null;
             this.txtId_Stock.Size = new System.Drawing.Size(100, 20);
             this.txtId_Stock.TabIndex = 0;
             this.txtId_Stock.Table = "Providers";

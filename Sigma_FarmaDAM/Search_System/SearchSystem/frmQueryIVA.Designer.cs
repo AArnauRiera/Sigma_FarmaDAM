@@ -48,7 +48,6 @@
             this.txtId.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtId.Location = new System.Drawing.Point(240, 53);
             this.txtId.Name = "txtId";
-            this.txtId.Placeholder = null;
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 0;
             this.txtId.Table = "IVA";
@@ -59,7 +58,6 @@
             this.txtValue.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtValue.Location = new System.Drawing.Point(240, 79);
             this.txtValue.Name = "txtValue";
-            this.txtValue.Placeholder = null;
             this.txtValue.Size = new System.Drawing.Size(100, 20);
             this.txtValue.TabIndex = 0;
             this.txtValue.Table = "IVA";
