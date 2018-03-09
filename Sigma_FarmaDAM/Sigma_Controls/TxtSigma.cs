@@ -15,9 +15,6 @@ namespace Sigma_Controls
         public TxtSigma() : base ()
         {            
 
-            _isPlaceholder = true;
-            LostFocus += SetPlaceHolder;
-            GotFocus += RemovePlaceHolder; 
         }
 
         #region public variables
@@ -50,16 +47,6 @@ namespace Sigma_Controls
 
         private string _dBReference;
 
-        private bool _isPlaceholder;
-
-        private bool _disablePaceholder = true;
-
-        public bool DisablePaceholder
-        {
-            get { return _disablePaceholder; }
-            set { _disablePaceholder = value; }
-        }
-
 
         #endregion
         
@@ -82,25 +69,6 @@ namespace Sigma_Controls
         {
             get { return _fieldType; }
             set { _fieldType = value; }
-        }
-
-        private string _placeholder;
-
-        public string Placeholder
-        {
-            get { return _placeholder; }
-            set
-            {
-                _placeholder = value;
-
-                if (!_disablePaceholder)
-                {
-                    Text = Placeholder;
-                    ForeColor = Color.Gray;
-                    Font = new Font(Font, FontStyle.Italic);
-                }
-
-            }
         }
 
         #endregion
@@ -181,55 +149,6 @@ namespace Sigma_Controls
 
             BackColor = DefaultBackColor;
 
-        }
-
-        private void SetPlaceHolder()
-        {
-            if (!_disablePaceholder)
-            {
-                if (String.IsNullOrWhiteSpace(Text))
-                {
-                    Text = Placeholder;
-                    ForeColor = Color.Gray;
-                    Font = new Font(Font, FontStyle.Italic);
-                    _isPlaceholder = true;
-                }
-                else
-                {
-                    _isPlaceholder = false;
-                }
-            }
-        }
-
-
-        public void SetText()
-        {
-            _isPlaceholder = false;
-            ForeColor = SystemColors.WindowText;
-            Font = new Font(Font, FontStyle.Regular);
-        }
-
-        private void RemovePlaceHolder()
-        {
-            if (!_disablePaceholder)
-            {
-                if (_isPlaceholder)
-                {
-                    Text = "";
-                    ForeColor = SystemColors.WindowText;
-                    Font = new Font(Font, FontStyle.Regular);
-                }
-            }
-        }
-
-        private void SetPlaceHolder(object sender, EventArgs e)
-        {
-            SetPlaceHolder();
-        }
-
-        private void RemovePlaceHolder(object sender, EventArgs e)
-        {
-            RemovePlaceHolder();
         }
 
         protected override void OnGotFocus(EventArgs e)
