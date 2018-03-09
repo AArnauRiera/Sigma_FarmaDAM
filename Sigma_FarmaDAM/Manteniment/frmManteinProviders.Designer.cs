@@ -47,20 +47,20 @@
             // lblIdStock
             // 
             this.lblIdStock.AutoSize = true;
-            this.lblIdStock.Location = new System.Drawing.Point(4, 38);
+            this.lblIdStock.Location = new System.Drawing.Point(4, 31);
             this.lblIdStock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdStock.Name = "lblIdStock";
-            this.lblIdStock.Size = new System.Drawing.Size(70, 23);
+            this.lblIdStock.Size = new System.Drawing.Size(58, 19);
             this.lblIdStock.TabIndex = 4;
             this.lblIdStock.Text = "Id Stock";
             // 
             // lblIdLaboratories
             // 
             this.lblIdLaboratories.AutoSize = true;
-            this.lblIdLaboratories.Location = new System.Drawing.Point(4, 4);
+            this.lblIdLaboratories.Location = new System.Drawing.Point(4, 3);
             this.lblIdLaboratories.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdLaboratories.Name = "lblIdLaboratories";
-            this.lblIdLaboratories.Size = new System.Drawing.Size(124, 23);
+            this.lblIdLaboratories.Size = new System.Drawing.Size(101, 19);
             this.lblIdLaboratories.TabIndex = 5;
             this.lblIdLaboratories.Text = "Id Laboratories";
             // 
@@ -70,10 +70,10 @@
             this.txtId_Stock.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtId_Stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtId_Stock.ForeColor = System.Drawing.Color.Gray;
-            this.txtId_Stock.Location = new System.Drawing.Point(219, 40);
-            this.txtId_Stock.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtId_Stock.Location = new System.Drawing.Point(195, 33);
+            this.txtId_Stock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtId_Stock.Name = "txtId_Stock";
-            this.txtId_Stock.Size = new System.Drawing.Size(148, 22);
+            this.txtId_Stock.Size = new System.Drawing.Size(132, 19);
             this.txtId_Stock.TabIndex = 2;
             this.txtId_Stock.Table = "Providers";
             // 
@@ -83,18 +83,18 @@
             this.txtIdLaboratories.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtIdLaboratories.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtIdLaboratories.ForeColor = System.Drawing.Color.Gray;
-            this.txtIdLaboratories.Location = new System.Drawing.Point(219, 6);
-            this.txtIdLaboratories.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtIdLaboratories.Location = new System.Drawing.Point(195, 5);
+            this.txtIdLaboratories.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdLaboratories.Name = "txtIdLaboratories";
-            this.txtIdLaboratories.Size = new System.Drawing.Size(148, 22);
+            this.txtIdLaboratories.Size = new System.Drawing.Size(132, 19);
             this.txtIdLaboratories.TabIndex = 3;
             this.txtIdLaboratories.Table = "Providers";
             // 
             // frmManteinProviders
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
-            this.ClientSize = new System.Drawing.Size(1068, 760);
-            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.ClientSize = new System.Drawing.Size(949, 628);
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmManteinProviders";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
             this.pnlTextBox.ResumeLayout(false);

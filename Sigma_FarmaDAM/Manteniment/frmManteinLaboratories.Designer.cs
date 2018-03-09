@@ -48,33 +48,45 @@
             this.pnlTextBox.Controls.Add(this.txtAddress);
             this.pnlTextBox.Controls.Add(this.txtDenomination);
             // 
+            // btnQuery
+            // 
+            this.btnQuery.TabIndex = 2;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.TabIndex = 1;
+            // 
+            // bntNew
+            // 
+            this.bntNew.TabIndex = 3;
+            // 
             // lblCIF
             // 
             this.lblCIF.AutoSize = true;
-            this.lblCIF.Location = new System.Drawing.Point(4, 72);
+            this.lblCIF.Location = new System.Drawing.Point(4, 59);
             this.lblCIF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCIF.Name = "lblCIF";
-            this.lblCIF.Size = new System.Drawing.Size(34, 23);
+            this.lblCIF.Size = new System.Drawing.Size(29, 19);
             this.lblCIF.TabIndex = 5;
             this.lblCIF.Text = "CIF";
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(4, 39);
+            this.lblAddress.Location = new System.Drawing.Point(4, 32);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(70, 23);
+            this.lblAddress.Size = new System.Drawing.Size(58, 19);
             this.lblAddress.TabIndex = 6;
             this.lblAddress.Text = "Address";
             // 
             // lblDenomination
             // 
             this.lblDenomination.AutoSize = true;
-            this.lblDenomination.Location = new System.Drawing.Point(4, 5);
+            this.lblDenomination.Location = new System.Drawing.Point(4, 4);
             this.lblDenomination.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDenomination.Name = "lblDenomination";
-            this.lblDenomination.Size = new System.Drawing.Size(119, 23);
+            this.lblDenomination.Size = new System.Drawing.Size(96, 19);
             this.lblDenomination.TabIndex = 7;
             this.lblDenomination.Text = "Denomination";
             // 
@@ -84,11 +96,11 @@
             this.txtCIF.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtCIF.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtCIF.ForeColor = System.Drawing.Color.Gray;
-            this.txtCIF.Location = new System.Drawing.Point(219, 74);
-            this.txtCIF.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtCIF.Location = new System.Drawing.Point(195, 61);
+            this.txtCIF.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCIF.Name = "txtCIF";
-            this.txtCIF.Size = new System.Drawing.Size(148, 22);
-            this.txtCIF.TabIndex = 2;
+            this.txtCIF.Size = new System.Drawing.Size(132, 19);
+            this.txtCIF.TabIndex = 6;
             this.txtCIF.Table = "Laboratories";
             // 
             // txtAddress
@@ -97,11 +109,11 @@
             this.txtAddress.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtAddress.ForeColor = System.Drawing.Color.Gray;
-            this.txtAddress.Location = new System.Drawing.Point(219, 40);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtAddress.Location = new System.Drawing.Point(195, 33);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(148, 22);
-            this.txtAddress.TabIndex = 3;
+            this.txtAddress.Size = new System.Drawing.Size(132, 19);
+            this.txtAddress.TabIndex = 5;
             this.txtAddress.Table = "Laboratories";
             // 
             // txtDenomination
@@ -110,18 +122,18 @@
             this.txtDenomination.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtDenomination.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtDenomination.ForeColor = System.Drawing.Color.Gray;
-            this.txtDenomination.Location = new System.Drawing.Point(219, 6);
-            this.txtDenomination.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtDenomination.Location = new System.Drawing.Point(195, 5);
+            this.txtDenomination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDenomination.Name = "txtDenomination";
-            this.txtDenomination.Size = new System.Drawing.Size(148, 22);
+            this.txtDenomination.Size = new System.Drawing.Size(132, 19);
             this.txtDenomination.TabIndex = 4;
             this.txtDenomination.Table = "Laboratories";
             // 
             // frmManteinLaboratories
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
-            this.ClientSize = new System.Drawing.Size(1068, 760);
-            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.ClientSize = new System.Drawing.Size(949, 628);
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmManteinLaboratories";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
             this.pnlTextBox.ResumeLayout(false);
