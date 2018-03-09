@@ -173,9 +173,10 @@
             this.txtDocumentation.Location = new System.Drawing.Point(219, 235);
             this.txtDocumentation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDocumentation.Name = "txtDocumentation";
-            this.txtDocumentation.Size = new System.Drawing.Size(132, 20);
+            this.txtDocumentation.Size = new System.Drawing.Size(132, 23);
             this.txtDocumentation.TabIndex = 26;
             this.txtDocumentation.Table = "Drugs";
+            this.txtDocumentation.TextChanged += new System.EventHandler(this.txtDocumentation_TextChanged);
             // 
             // txtReplaceable
             // 
@@ -186,7 +187,7 @@
             this.txtReplaceable.Location = new System.Drawing.Point(219, 136);
             this.txtReplaceable.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtReplaceable.Name = "txtReplaceable";
-            this.txtReplaceable.Size = new System.Drawing.Size(132, 20);
+            this.txtReplaceable.Size = new System.Drawing.Size(132, 23);
             this.txtReplaceable.TabIndex = 27;
             this.txtReplaceable.Table = "Drugs";
             // 
@@ -199,7 +200,7 @@
             this.txtObligatory.Location = new System.Drawing.Point(219, 202);
             this.txtObligatory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtObligatory.Name = "txtObligatory";
-            this.txtObligatory.Size = new System.Drawing.Size(132, 20);
+            this.txtObligatory.Size = new System.Drawing.Size(132, 23);
             this.txtObligatory.TabIndex = 24;
             this.txtObligatory.Table = "Drugs";
             // 
@@ -212,7 +213,7 @@
             this.txtIdActive.Location = new System.Drawing.Point(219, 71);
             this.txtIdActive.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdActive.Name = "txtIdActive";
-            this.txtIdActive.Size = new System.Drawing.Size(132, 20);
+            this.txtIdActive.Size = new System.Drawing.Size(132, 23);
             this.txtIdActive.TabIndex = 25;
             this.txtIdActive.Table = "Drugs";
             // 
@@ -225,7 +226,7 @@
             this.txtProspectus.Location = new System.Drawing.Point(219, 268);
             this.txtProspectus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtProspectus.Name = "txtProspectus";
-            this.txtProspectus.Size = new System.Drawing.Size(132, 20);
+            this.txtProspectus.Size = new System.Drawing.Size(132, 23);
             this.txtProspectus.TabIndex = 21;
             this.txtProspectus.Table = "Drugs";
             // 
@@ -238,7 +239,7 @@
             this.txtDenomination.Location = new System.Drawing.Point(219, 38);
             this.txtDenomination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDenomination.Name = "txtDenomination";
-            this.txtDenomination.Size = new System.Drawing.Size(132, 20);
+            this.txtDenomination.Size = new System.Drawing.Size(132, 23);
             this.txtDenomination.TabIndex = 23;
             this.txtDenomination.Table = "Drugs";
             // 
@@ -251,7 +252,7 @@
             this.txtGeneric.Location = new System.Drawing.Point(219, 169);
             this.txtGeneric.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGeneric.Name = "txtGeneric";
-            this.txtGeneric.Size = new System.Drawing.Size(132, 20);
+            this.txtGeneric.Size = new System.Drawing.Size(132, 23);
             this.txtGeneric.TabIndex = 20;
             this.txtGeneric.Table = "Drugs";
             // 
@@ -264,7 +265,7 @@
             this.txtContent.Location = new System.Drawing.Point(219, 103);
             this.txtContent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtContent.Name = "txtContent";
-            this.txtContent.Size = new System.Drawing.Size(132, 20);
+            this.txtContent.Size = new System.Drawing.Size(132, 23);
             this.txtContent.TabIndex = 22;
             this.txtContent.Table = "Drugs";
             // 
@@ -277,7 +278,7 @@
             this.txtSRN.Location = new System.Drawing.Point(219, 5);
             this.txtSRN.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSRN.Name = "txtSRN";
-            this.txtSRN.Size = new System.Drawing.Size(132, 20);
+            this.txtSRN.Size = new System.Drawing.Size(132, 23);
             this.txtSRN.TabIndex = 19;
             this.txtSRN.Table = "Drugs";
             // 
@@ -286,13 +287,13 @@
             this.webBrowser1.Location = new System.Drawing.Point(3, 306);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(364, 250);
+            this.webBrowser1.Size = new System.Drawing.Size(364, 321);
             this.webBrowser1.TabIndex = 37;
             // 
             // frmManteinDrugs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
-            this.ClientSize = new System.Drawing.Size(1188, 761);
+            this.ClientSize = new System.Drawing.Size(1068, 760);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmManteinDrugs";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();

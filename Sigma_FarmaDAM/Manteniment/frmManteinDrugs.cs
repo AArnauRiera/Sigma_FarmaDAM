@@ -22,5 +22,31 @@ namespace Manteniment
             frmQueryDrugs query = new frmQueryDrugs(dgwBase, "Drugs");
             query.Show();
         }
+
+        private void txtDocumentation_TextChanged(object sender, EventArgs e)
+        {
+            Navigate(txtDocumentation.Text);
+        }
+
+        private void Navigate(string address)
+        {
+
+            if (String.IsNullOrEmpty(address)) return;
+            if (address.Equals("about:blank")) return;
+            if (!address.StartsWith("http://") &&
+                !address.StartsWith("https://"))
+            {
+                address = "http://" + address;
+            }
+            try
+            {
+                webBrowser1.Navigate(new Uri(address));
+            }
+            catch (System.UriFormatException)
+            {
+                return;
+            }
+
+        }
     }
 }
