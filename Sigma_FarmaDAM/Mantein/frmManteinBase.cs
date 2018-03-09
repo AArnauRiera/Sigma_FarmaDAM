@@ -42,11 +42,33 @@ namespace Mantein
                 }
             }                  
         }
+        public string GetColumns()
+        {
+            string columns = "*";
+            List<string> col = new List<string>();
+
+            for (int i = pnlTextBox.Controls.Count - 1; i >= 0; i--)
+            {
+                if (pnlTextBox.Controls[i] is TxtSigma)
+                {
+                    TxtSigma t = pnlTextBox.Controls[i] as TxtSigma;
+                    if (!String.IsNullOrWhiteSpace(t.DBReference))
+                    {
+                        col.Add(t.DBReference);
+                    }
+                }
+            }
+
+            columns = string.Join(",", col);
+
+            return columns;
+        }
 
         protected void GetQuery()
         {
             DBUtilities db = new DBUtilities();
-            query = "select * from " + Table;
+            string cols = GetColumns();
+            query = "select "+ cols + " from " + Table;
             dts = db.PortarPerConsulta(query);
         }
 
@@ -97,14 +119,22 @@ namespace Mantein
 
         public void AddNewRow()
         {
+            if (dts == null)
+            {
+                GetQuery();
+
+                BindingDate();
+            }
+
             DataRow row = dts.Tables["Taula"].NewRow();
+
             dts.Tables["Taula"].Rows.Add(row);
 
-            foreach (DataGridViewRow item in dgwBase.Rows)
+            foreach (DataGridViewRow item in dgwBase.SelectedRows)
             {
                 item.Selected = false;
             }
-
+             
             dgwBase.Rows[dgwBase.Rows.Count - 1].Selected = true;
         }
 

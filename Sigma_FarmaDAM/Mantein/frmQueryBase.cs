@@ -82,6 +82,31 @@ namespace Mantein
             return txtb.ToArray();
         }
 
+        public string GetColumns()
+        {
+            string columns = "*";
+
+            List<string> col = new List<string>();
+
+            for (int i = pnlTB.Controls.Count - 1; i >= 0; i--)
+            {
+                if (pnlTB.Controls[i] is TxtSigma)
+                {
+                    TxtSigma t = pnlTB.Controls[i] as TxtSigma;
+
+                    if (!String.IsNullOrWhiteSpace(t.DBReference))
+                    {
+                        col.Add(t.DBReference);
+                    }
+                }
+            }
+
+            columns = string.Join(",", col);
+
+            return columns;
+        }
+
+
         public void btnSearch_Click(object sender, EventArgs e)
         {
             GetQuery();
