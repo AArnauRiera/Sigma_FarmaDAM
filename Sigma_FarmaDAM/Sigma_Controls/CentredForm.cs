@@ -26,7 +26,7 @@ namespace Sigma_Controls
 
         protected virtual void CenterPanel(Panel form)
         {
-            form.Location = new Point(this.ClientSize.Width / 2 - form.Size.Width / 2, this.ClientSize.Height / 2 - form.Size.Height / 2);
+            form.Location = new Point(0 - form.Size.Width/10, this.ClientSize.Height / 2 - form.Size.Height / 2);
             form.Anchor = AnchorStyles.None;
         }
 
