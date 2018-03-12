@@ -50,14 +50,6 @@
             this.pnlTB.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Text = "Buscar";
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.Text = "Seleccionar";
-            // 
             // pnlTB
             // 
             this.pnlTB.Controls.Add(this.lblProspectus);
@@ -91,7 +83,7 @@
             // lblContent
             // 
             this.lblContent.AutoSize = true;
-            this.lblContent.Location = new System.Drawing.Point(152, 98);
+            this.lblContent.Location = new System.Drawing.Point(144, 98);
             this.lblContent.Name = "lblContent";
             this.lblContent.Size = new System.Drawing.Size(55, 13);
             this.lblContent.TabIndex = 17;
@@ -205,7 +197,7 @@
             // lblDocumentation
             // 
             this.lblDocumentation.AutoSize = true;
-            this.lblDocumentation.Location = new System.Drawing.Point(310, 72);
+            this.lblDocumentation.Location = new System.Drawing.Point(306, 72);
             this.lblDocumentation.Name = "lblDocumentation";
             this.lblDocumentation.Size = new System.Drawing.Size(82, 13);
             this.lblDocumentation.TabIndex = 16;

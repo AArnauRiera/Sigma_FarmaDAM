@@ -46,14 +46,6 @@
             this.pnlTB.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Text = "Buscar";
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.Text = "Seleccionar";
-            // 
             // pnlTB
             // 
             this.pnlTB.Controls.Add(this.lblPassword);
@@ -180,7 +172,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(307, 28);
+            this.lblEmail.Location = new System.Drawing.Point(284, 28);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
             this.lblEmail.TabIndex = 1;
@@ -198,7 +190,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(286, 76);
+            this.lblPassword.Location = new System.Drawing.Point(278, 76);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(61, 13);
             this.lblPassword.TabIndex = 1;

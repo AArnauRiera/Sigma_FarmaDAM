@@ -36,10 +36,6 @@
             this.pnlTB.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Text = "Buscar";
-            // 
             // btnSelect
             // 
             this.btnSelect.Text = "Selccionar";
@@ -83,7 +79,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(202, 88);
+            this.lblName.Location = new System.Drawing.Point(195, 88);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(44, 13);
             this.lblName.TabIndex = 1;

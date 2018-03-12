@@ -50,14 +50,6 @@ namespace SearchSystem
             this.pnlTB.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Text = "Buscar";
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.Text = "Seleccionar";
-            // 
             // pnlTB
             // 
             this.pnlTB.Controls.Add(this.lblNTS);
@@ -124,7 +116,7 @@ namespace SearchSystem
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(210, 19);
+            this.lblName.Location = new System.Drawing.Point(195, 19);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(44, 13);
             this.lblName.TabIndex = 6;
