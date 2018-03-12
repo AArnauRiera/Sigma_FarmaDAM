@@ -88,6 +88,25 @@ namespace LoginControl
             return isAdmin;
         }
 
+        public bool CheckIfUserIsAdmin(int Id, ErrorProvider errorProvider, Button btn)
+        {
+            bool isAdmin = false;
+
+            string query = "SELECT * FROM Seller WHERE id = '" + Id + "'";
+            DataSet dts = db.PortarPerConsulta(query);
+
+            if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0 && dts.Tables["Taula"].Rows[0]["rol"].Equals(true))
+            {
+                isAdmin = true;
+            }
+            if (!isAdmin)
+            {
+                errorProvider.SetError(btn, "El usuario debe ser administrador");
+            }
+
+            return isAdmin;
+        }
+
         public bool CheckIfPasswordRepeatIsEqual (TxtSigma password, TxtSigma repeatPassword, TxtSigma username)
         {
             bool isEqual = false;
@@ -206,6 +225,19 @@ namespace LoginControl
             return r;
         }
 
+        public int getId(TxtSigma username)
+        {
+            DataSet dts = db.PortarPerConsulta("SELECT * FROM Seller WHERE " + username.DBReference + " = '" + username.Text + "'");
+
+            if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0)
+            {
+                return (Int32)dts.Tables[0].Rows[0]["id"];
+            } else
+            {
+                return -1;
+            }
+        }
+
         public bool SaveChanges(Control.ControlCollection Controls)
         {
             DBUtilities db = new DBUtilities();
@@ -213,33 +245,16 @@ namespace LoginControl
             DataRow r;
             TxtSigma userName = (TxtSigma)Controls.Find("tbxUsername", false)[0];
 
-            Label lblErrorText = (Label)Controls.Find("lblError", false)[0];
-
-            bool errorMessage = false;
             bool correct = false;
             string query = "SELECT * FROM Seller WHERE username='" + userName.Text + "'";
-            lblErrorText.Text = "";
 
             try
             {
-                if (!CheckControlsFormat(Controls))
-                {
-                    dts = db.PortarPerConsulta(query);
-                    r = dts.Tables[0].NewRow();
-                    r = CreateDataRowFromControls(r, Controls);
-                    dts.Tables["Taula"].Rows.Add(r);
-                    correct = db.Actualizar(query, "Taula", dts);
-                    lblErrorText.Text = "";
-                }
-                else
-                {
-                    errorMessage = true;
-                }
-
-                if (errorMessage)
-                {
-                    lblErrorText.Text = "Algun campo es incorrecto";
-                }
+                dts = db.PortarPerConsulta(query);
+                r = dts.Tables[0].NewRow();
+                r = CreateDataRowFromControls(r, Controls);
+                dts.Tables["Taula"].Rows.Add(r);
+                correct = db.Actualizar(query, "Taula", dts);
 
             }
             catch (Exception error)

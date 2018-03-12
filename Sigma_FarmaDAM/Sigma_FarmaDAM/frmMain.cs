@@ -12,14 +12,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UserManagament;
+using UserRegister;
 
 namespace Sigma_FarmaDAM
 {
     public partial class frmMain : Form
     {
-
-
         private int childFormNumber = 0;
+        private int userId;
 
         public frmMain()
         {
@@ -27,6 +27,13 @@ namespace Sigma_FarmaDAM
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
 
+        }
+        public frmMain(int value)
+        {
+
+            InitializeComponent();
+            WindowState = FormWindowState.Maximized;
+            userId = value;
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -192,5 +199,23 @@ namespace Sigma_FarmaDAM
             });
         }
 
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            AddNewTab("Añadir Usuario", new frmManteinUsers()
+            {
+                Table = "Seller"
+            });
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            LoginControl.LoginControl logControl = new LoginControl.LoginControl();
+
+            if (!logControl.CheckIfUserIsAdmin(userId, errorProvider, btnAddUser))
+            {
+                btnAddUser.Enabled = false;
+                btnAddUser.Hide();
+            }
+        }
     }
 }

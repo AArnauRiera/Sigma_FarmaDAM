@@ -17,7 +17,6 @@ namespace UserRegister
         public frmUserRegister()
         {
             InitializeComponent();
-            lblError.Text = "";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -39,15 +38,24 @@ namespace UserRegister
                     exit = control.SaveChanges(Controls);
                     if (exit)
                     {
-                        Close();
+                        Clear();
                     }
                 }
             }
         }
-
-        private void btnClose_Click(object sender, EventArgs e)
+        private void Clear()
         {
-            Close();
+            foreach (Control control in Controls)
+            {
+                if (control is CheckBox)
+                {
+                    CheckBox cntrl = (CheckBox)control;
+                    cntrl.Checked = false;
+                } else
+                {
+                    control.Text = "";
+                }
+            }
         }
 
         private void frmUserRegister_KeyDown(object sender, KeyEventArgs e)

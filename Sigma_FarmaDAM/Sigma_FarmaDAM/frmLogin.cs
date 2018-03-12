@@ -34,20 +34,10 @@ namespace Login
                 }
             }
         }
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            control = new LoginControl.LoginControl(tbxUsername.Text);
 
-            if (control.CheckControlsFormat(errorProvider, pnltxt.Controls) && 
-               control.CheckIsReal(tbxUsername, errorProvider, "Seller") &&  
-               control.CheckIfUserIsAdmin(tbxUsername, errorProvider))
-            {
-                if (control.CheckCredentials(tbxUsername, tbxPassword, errorProvider))
-                {
-                    frmUserRegister frmUR = new frmUserRegister();
-                    frmUR.Show();
-                }
-            }
+        public int getUserId()
+        {
+            return control.getId(tbxUsername);
         }
 
         private void frmLogin_KeyDown(object sender, KeyEventArgs e)

@@ -49,6 +49,7 @@ namespace Mantein
 
             for (int i = pnlTextBox.Controls.Count - 1; i >= 0; i--)
             {
+
                 if (pnlTextBox.Controls[i] is TxtSigma)
                 {
                     TxtSigma t = pnlTextBox.Controls[i] as TxtSigma;
@@ -57,6 +58,7 @@ namespace Mantein
                         col.Add(t.DBReference);
                     }
                 }
+
             }
 
             columns = string.Join(",", col);

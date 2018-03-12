@@ -35,7 +35,6 @@
             this.tbxUsername = new Sigma_Controls.TxtSigma();
             this.tbxPassword = new Sigma_Controls.TxtSigma();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnltxt.SuspendLayout();
@@ -101,23 +100,12 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnRegister);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 178);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(388, 109);
             this.panel1.TabIndex = 5;
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.Location = new System.Drawing.Point(158, 35);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(75, 23);
-            this.btnRegister.TabIndex = 1;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnLogin
             // 
@@ -162,7 +150,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnltxt;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.ErrorProvider errorProvider;
     }

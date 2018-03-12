@@ -40,7 +40,6 @@
             this.btnUser = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tbMain = new VisualStudioTabControl.VisualStudioTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -48,15 +47,20 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.btnAddUser = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tbMain = new VisualStudioTabControl.VisualStudioTabControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.Controls.Add(this.btnAddUser);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnGestioComandes);
             this.panel1.Controls.Add(this.btnLaboratorisFarmaceutiques);
@@ -76,7 +80,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Azure;
             this.pictureBox1.Image = global::Sigma_FarmaDAM.Properties.Resources.logoSigma2;
             this.pictureBox1.Location = new System.Drawing.Point(9, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(229, 98);
             this.pictureBox1.TabIndex = 10;
@@ -231,29 +235,6 @@
             this.panel2.Size = new System.Drawing.Size(845, 716);
             this.panel2.TabIndex = 8;
             // 
-            // tbMain
-            // 
-            this.tbMain.ActiveColor = System.Drawing.Color.LightBlue;
-            this.tbMain.AllowDrop = true;
-            this.tbMain.BackTabColor = System.Drawing.Color.Azure;
-            this.tbMain.BorderColor = System.Drawing.Color.Azure;
-            this.tbMain.ClosingButtonColor = System.Drawing.Color.Firebrick;
-            this.tbMain.ClosingMessage = null;
-            this.tbMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbMain.HeaderColor = System.Drawing.Color.Azure;
-            this.tbMain.HorizontalLineColor = System.Drawing.SystemColors.Highlight;
-            this.tbMain.ItemSize = new System.Drawing.Size(240, 16);
-            this.tbMain.Location = new System.Drawing.Point(0, 0);
-            this.tbMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbMain.Name = "tbMain";
-            this.tbMain.SelectedIndex = 0;
-            this.tbMain.SelectedTextColor = System.Drawing.SystemColors.Highlight;
-            this.tbMain.ShowClosingButton = true;
-            this.tbMain.ShowClosingMessage = false;
-            this.tbMain.Size = new System.Drawing.Size(845, 716);
-            this.tbMain.TabIndex = 0;
-            this.tbMain.TextColor = System.Drawing.Color.LightBlue;
-            // 
             // tabPage1
             // 
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -324,6 +305,53 @@
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "tabPage7";
             // 
+            // btnAddUser
+            // 
+            this.btnAddUser.BackColor = System.Drawing.Color.Azure;
+            this.btnAddUser.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnAddUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
+            this.btnAddUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddUser.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnAddUser.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnAddUser.Image = global::Sigma_FarmaDAM.Properties.Resources.user__1_;
+            this.btnAddUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddUser.Location = new System.Drawing.Point(0, 623);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(271, 66);
+            this.btnAddUser.TabIndex = 11;
+            this.btnAddUser.Text = "Añadir Usuario";
+            this.btnAddUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddUser.UseVisualStyleBackColor = false;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
+            // tbMain
+            // 
+            this.tbMain.ActiveColor = System.Drawing.Color.LightBlue;
+            this.tbMain.AllowDrop = true;
+            this.tbMain.BackTabColor = System.Drawing.Color.Azure;
+            this.tbMain.BorderColor = System.Drawing.Color.Azure;
+            this.tbMain.ClosingButtonColor = System.Drawing.Color.Firebrick;
+            this.tbMain.ClosingMessage = null;
+            this.tbMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbMain.HeaderColor = System.Drawing.Color.Azure;
+            this.tbMain.HorizontalLineColor = System.Drawing.SystemColors.Highlight;
+            this.tbMain.ItemSize = new System.Drawing.Size(240, 16);
+            this.tbMain.Location = new System.Drawing.Point(0, 0);
+            this.tbMain.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMain.Name = "tbMain";
+            this.tbMain.SelectedIndex = 0;
+            this.tbMain.SelectedTextColor = System.Drawing.SystemColors.Highlight;
+            this.tbMain.ShowClosingButton = true;
+            this.tbMain.ShowClosingMessage = false;
+            this.tbMain.Size = new System.Drawing.Size(845, 716);
+            this.tbMain.TabIndex = 0;
+            this.tbMain.TextColor = System.Drawing.Color.LightBlue;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,9 +363,11 @@
             this.IsMdiContainer = true;
             this.Name = "frmMain";
             this.Text = "frmMain";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,6 +391,8 @@
         private System.Windows.Forms.TabPage tabPage5;
         private VisualStudioTabControl.VisualStudioTabControl tbMain;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAddUser;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
 
