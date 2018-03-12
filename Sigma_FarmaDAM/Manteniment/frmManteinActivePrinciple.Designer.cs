@@ -35,6 +35,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
             this.pnlButtons.SuspendLayout();
+            this.pnlMantein.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTextBox
@@ -47,12 +48,10 @@
             // btnQuery
             // 
             this.btnQuery.TabIndex = 4;
-            this.btnQuery.Text = "Buscar";
             // 
             // btnUpdate
             // 
             this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "Actualizar";
             // 
             // btnGet
             // 
@@ -61,7 +60,6 @@
             // bntNew
             // 
             this.bntNew.TabIndex = 5;
-            this.bntNew.Text = "Nuevo";
             // 
             // lblName
             // 
@@ -69,9 +67,9 @@
             this.lblName.Location = new System.Drawing.Point(4, 31);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(45, 19);
+            this.lblName.Size = new System.Drawing.Size(59, 19);
             this.lblName.TabIndex = 4;
-            this.lblName.Text = "Name";
+            this.lblName.Text = "Nombre";
             // 
             // lblSRN
             // 
@@ -119,6 +117,7 @@
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();
             this.pnlButtons.ResumeLayout(false);
+            this.pnlMantein.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

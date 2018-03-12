@@ -37,9 +37,9 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Location = new System.Drawing.Point(72, 9);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(60, 13);
+            this.lblDescription.Size = new System.Drawing.Size(63, 13);
             this.lblDescription.TabIndex = 0;
-            this.lblDescription.Text = "Description";
+            this.lblDescription.Text = "Descripcion";
             // 
             // txtbxEntry
             // 

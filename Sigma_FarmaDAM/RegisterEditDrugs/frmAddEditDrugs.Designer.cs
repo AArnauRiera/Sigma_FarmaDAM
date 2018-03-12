@@ -80,7 +80,7 @@
             // lblNRN
             // 
             this.lblNRN.AutoSize = true;
-            this.lblNRN.Location = new System.Drawing.Point(24, 37);
+            this.lblNRN.Location = new System.Drawing.Point(15, 37);
             this.lblNRN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNRN.Name = "lblNRN";
             this.lblNRN.Size = new System.Drawing.Size(185, 19);
@@ -348,7 +348,7 @@
             this.chkReplaceable.Name = "chkReplaceable";
             this.chkReplaceable.Size = new System.Drawing.Size(104, 23);
             this.chkReplaceable.TabIndex = 15;
-            this.chkReplaceable.Text = "Remplacable";
+            this.chkReplaceable.Text = "Remplazable";
             this.chkReplaceable.UseVisualStyleBackColor = true;
             // 
             // cmbLabId
