@@ -48,35 +48,51 @@
             this.pnlTextBox.Controls.Add(this.txtSigma2);
             this.pnlTextBox.Controls.Add(this.txtQuantity);
             // 
+            // btnQuery
+            // 
+            this.btnQuery.Text = "Buscar";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Text = "Actualizar";
+            // 
+            // btnGet
+            // 
+            this.btnGet.Text = "Obtener";
+            // 
+            // bntNew
+            // 
+            this.bntNew.Text = "Nuevo";
+            // 
             // lblIvaType
             // 
             this.lblIvaType.AutoSize = true;
-            this.lblIvaType.Location = new System.Drawing.Point(4, 74);
+            this.lblIvaType.Location = new System.Drawing.Point(4, 61);
             this.lblIvaType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIvaType.Name = "lblIvaType";
-            this.lblIvaType.Size = new System.Drawing.Size(76, 23);
+            this.lblIvaType.Size = new System.Drawing.Size(60, 19);
             this.lblIvaType.TabIndex = 10;
-            this.lblIvaType.Text = "IVA Type";
+            this.lblIvaType.Text = "Tipo IVA";
             // 
             // lblBasePrice
             // 
             this.lblBasePrice.AutoSize = true;
-            this.lblBasePrice.Location = new System.Drawing.Point(4, 39);
+            this.lblBasePrice.Location = new System.Drawing.Point(4, 32);
             this.lblBasePrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBasePrice.Name = "lblBasePrice";
-            this.lblBasePrice.Size = new System.Drawing.Size(87, 23);
+            this.lblBasePrice.Size = new System.Drawing.Size(78, 19);
             this.lblBasePrice.TabIndex = 9;
-            this.lblBasePrice.Text = "Base Price";
+            this.lblBasePrice.Text = "Precio base";
             // 
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Location = new System.Drawing.Point(4, 6);
+            this.lblQuantity.Location = new System.Drawing.Point(4, 5);
             this.lblQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(76, 23);
+            this.lblQuantity.Size = new System.Drawing.Size(64, 19);
             this.lblQuantity.TabIndex = 8;
-            this.lblQuantity.Text = "Quantity";
+            this.lblQuantity.Text = "Cantidad";
             // 
             // txtSigma3
             // 
@@ -84,10 +100,10 @@
             this.txtSigma3.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtSigma3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtSigma3.ForeColor = System.Drawing.Color.Gray;
-            this.txtSigma3.Location = new System.Drawing.Point(219, 74);
-            this.txtSigma3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtSigma3.Location = new System.Drawing.Point(195, 61);
+            this.txtSigma3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSigma3.Name = "txtSigma3";
-            this.txtSigma3.Size = new System.Drawing.Size(148, 22);
+            this.txtSigma3.Size = new System.Drawing.Size(132, 19);
             this.txtSigma3.TabIndex = 6;
             this.txtSigma3.Table = "Stock";
             // 
@@ -97,10 +113,10 @@
             this.txtSigma2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtSigma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtSigma2.ForeColor = System.Drawing.Color.Gray;
-            this.txtSigma2.Location = new System.Drawing.Point(219, 40);
-            this.txtSigma2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtSigma2.Location = new System.Drawing.Point(195, 33);
+            this.txtSigma2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSigma2.Name = "txtSigma2";
-            this.txtSigma2.Size = new System.Drawing.Size(148, 22);
+            this.txtSigma2.Size = new System.Drawing.Size(132, 19);
             this.txtSigma2.TabIndex = 7;
             this.txtSigma2.Table = "Stock";
             // 
@@ -110,18 +126,18 @@
             this.txtQuantity.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtQuantity.ForeColor = System.Drawing.Color.Gray;
-            this.txtQuantity.Location = new System.Drawing.Point(219, 6);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtQuantity.Location = new System.Drawing.Point(195, 5);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(148, 22);
+            this.txtQuantity.Size = new System.Drawing.Size(132, 19);
             this.txtQuantity.TabIndex = 5;
             this.txtQuantity.Table = "Stock";
             // 
             // frmManteinStock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
-            this.ClientSize = new System.Drawing.Size(1068, 760);
-            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.ClientSize = new System.Drawing.Size(949, 628);
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmManteinStock";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
             this.pnlTextBox.ResumeLayout(false);
