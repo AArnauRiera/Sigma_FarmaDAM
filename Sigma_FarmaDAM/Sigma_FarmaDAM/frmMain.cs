@@ -148,7 +148,10 @@ namespace Sigma_FarmaDAM
 
         private void btnEditClient_Click(object sender, EventArgs e)
         {
-            AddNewTab("Editar Cliente", new UserManagement(true));
+            AddNewTab("Editar Cliente", new frmManteinClients()
+            {
+                Table = "Clients"
+            });
         }
 
         private void TabControlMainMouseDown(object sender, MouseEventArgs e)
