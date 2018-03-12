@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tbxName = new Sigma_Controls.TxtSigma();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
@@ -50,7 +49,7 @@
             this.chbAdmin = new Sigma_Controls.CheckBoxSigma();
             this.lblError = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider = new System.Windows.Forms.ErrorProvider();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,9 +90,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(64, 138);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "1r Apellido";
+            this.label2.Text = "Primer Apellido";
             // 
             // tbxLastName1
             // 
@@ -113,9 +112,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(64, 181);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "2do Apellido";
+            this.label3.Text = "Segundo Apellido";
             // 
             // tbxLastName2
             // 

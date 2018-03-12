@@ -200,9 +200,9 @@
             this.lblTitle.Location = new System.Drawing.Point(152, 1);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(52, 26);
+            this.lblTitle.Size = new System.Drawing.Size(64, 26);
             this.lblTitle.TabIndex = 34;
-            this.lblTitle.Text = "Title";
+            this.lblTitle.Text = "Titulo";
             // 
             // label2
             // 
@@ -210,9 +210,9 @@
             this.label2.Location = new System.Drawing.Point(63, 318);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 19);
+            this.label2.Size = new System.Drawing.Size(100, 19);
             this.label2.TabIndex = 26;
-            this.label2.Text = "1r Apellido";
+            this.label2.Text = "Primer apellido";
             // 
             // tbxLastName2
             // 
@@ -243,9 +243,9 @@
             this.label3.Location = new System.Drawing.Point(39, 354);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 19);
+            this.label3.Size = new System.Drawing.Size(114, 19);
             this.label3.TabIndex = 29;
-            this.label3.Text = "2ndo Apellido";
+            this.label3.Text = "Segundo apellido";
             // 
             // label6
             // 
