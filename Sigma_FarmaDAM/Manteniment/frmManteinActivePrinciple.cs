@@ -19,7 +19,8 @@ namespace Manteniment
 
         protected override void OpenQuery()
         {
-            frmQueryActivePrinciple query = new frmQueryActivePrinciple(dgwBase, "Active_Principles");
+            frmQueryActivePrinciple query = new frmQueryActivePrinciple(this, "Active_Principles");
+
             query.Show();
         }
     }

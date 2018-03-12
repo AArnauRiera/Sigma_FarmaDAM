@@ -16,10 +16,10 @@ namespace SearchSystem
             InitializeComponent();
         }
 
-        public frmQueryLaboratories(DataGridView dgw, string table)
+        public frmQueryLaboratories(frmManteinBase frm, string table)
         {
             InitializeComponent();
-            _dgw = dgw;
+            _frm = frm;
             Table = table;
         }
 

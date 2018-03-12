@@ -17,9 +17,9 @@ namespace SearchSystem
             InitializeComponent();
         }
 
-        public frmQueryActivePrinciple(DataGridView dgw, string table){
+        public frmQueryActivePrinciple(frmManteinBase frm, string table){
             InitializeComponent();
-            _dgw = dgw;
+            _frm = frm;
             Table = table;
         }
 
