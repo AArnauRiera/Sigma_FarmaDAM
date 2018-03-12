@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBUtils;
-using MySql.Data.MySqlClient;
 using SearchSystem;
 using Sigma_Controls;
 
@@ -45,7 +44,7 @@ namespace SellSystem
             return validate;
         }
         ///Devuelve la ID del cliente///
-        private string Client_ID(String id)
+        private string Client_ID(string  id)
         {
             Querry = "select ID from Clients  where NTS ='" + txtClient.Text + "'";
             dts = DBUTILS.PortarPerConsulta(Querry);
@@ -61,7 +60,7 @@ namespace SellSystem
             return ID;
         }
         ///Busca si el medicamento existe///
-        private bool drug_exist(String drug)
+        private bool drug_exist(string drug)
         {
             Querry = "select* from Drugs  where Register_Number = '" + drug + "'";
             dts = DBUTILS.PortarPerConsulta(Querry);
@@ -70,7 +69,7 @@ namespace SellSystem
             return validate;
         }
         ///Busca si el medicamento tiene stock///
-        private bool stock(String drug)
+        private bool stock(string drug)
         {
             int stock = 0;
             String ID_Drug = "select id from Drugs where where Register_Number = '" + drug + "";
@@ -121,11 +120,14 @@ namespace SellSystem
             }
             return active;
         }
-        private void Stock_Update(string Register_Number)
+        private int  Drug_ID(string drug)
         {
-            Querry = "Select  Stock.Quantity from Drugs,Stock where Drugs.id = Stock.ID_Drug and Drugs.Register_Number ='" + Register_Number+"'";
-            
-        }
+            Querry = "select id from Drugs where Register_Number='" + drug + "'";
+            dts = DBUTILS.PortarPerConsulta(Querry);
+            string Drug = dts.Tables[0].Rows[0][0].ToString();
+            int drug_id = Convert.ToInt32(Drug);
+            return drug_id;
+       }
         #endregion
         ///***MAIN***///
         #region
@@ -255,6 +257,7 @@ namespace SellSystem
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
+            int contador_Content = 0;
             Querry = "select * from Order_Header";
             dts = DBUTILS.PortarPerConsulta(Querry);
             dr = dts.Tables["taula"].NewRow();
@@ -264,22 +267,38 @@ namespace SellSystem
             bool correct = DBUTILS.Actualizar(Querry, "taula", dts);
             if (correct)
             {
-                Querry = "select Id_header from Order_Header where Id_Header =(SELECT MAX(Id_Header) FROM `Order_Header`)";
+
+
+                Querry = "select Id_header from Order_Header where Id_Header =(SELECT MAX(Id_Header) FROM Order_Header)";
                 dts = DBUTILS.PortarPerConsulta(Querry);
                 int Id_Header = Convert.ToInt32(dts.Tables[0].Rows[0][0].ToString());
                 for (int row = 0; row < dgView_Sell.Rows.Count - 1; row++)
-                {
+                { 
+                    contador_Content++;
                     Querry = "select * from Order_Content";
                     dts = DBUTILS.PortarPerConsulta(Querry);
                     dr = dts.Tables["Taula"].NewRow();
+
                     dr["Id_Header"] = Id_Header;
-                    dr["Id_Content"] = Convert.ToInt32(row.ToString());
-                    dr["Id_Drug"] = Convert.ToInt32(dgView_Sell.Rows[0].Cells[0].Value.ToString());
-                    dr["Quantity"] = Convert.ToInt32(dgView_Sell.Rows[0].Cells[4].Value.ToString());
-                    dts.Tables["taula"].Rows.Add(dr);
+                    dr["Id_Content"] = Convert.ToInt32(contador_Content.ToString());
+                    dr["Id_Drug"] = Drug_ID(dgView_Sell.Rows[row].Cells[0].Value.ToString());
+                    dr["Quantity"] = Convert.ToInt32(dgView_Sell.Rows[row].Cells[4].Value.ToString());
+
+                    dts.Tables["taula"].Rows.Add(dr.ItemArray);
                     bool correcte_FK = DBUTILS.Actualizar(Querry, "taula", dts);
+
                     if (correcte_FK) { MessageBox.Show("Order_Content Actualizado");
-                    }else {MessageBox.Show("Error al Actualizar FK ");}   
+
+                        Querry = "select Stock.Quantity from Stock , Drugs where Stock.ID_Drug = Drugs.id and Drug.id ='" + dgView_Sell.Rows[row].Cells[0]+"'";
+
+                        dts = DBUTILS.PortarPerConsulta(Querry);
+                        int Stock = Convert.ToInt32(dts.Tables[0].Rows[0][0]);
+
+                        dr = dts.Tables["Taula"].NewRow();
+                        dr["Quantity"] = Stock - Convert.ToInt32(txtCantidad.Text);
+
+                    }
+                    else {MessageBox.Show("Error al Actualizar FK ");}   
                 }
             }
             else{ MessageBox.Show("Error al Actualizar"); }
