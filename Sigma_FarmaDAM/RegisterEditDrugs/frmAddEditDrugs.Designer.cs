@@ -70,7 +70,7 @@
             this.txtNRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtNRN.ForeColor = System.Drawing.Color.Gray;
             this.txtNRN.Location = new System.Drawing.Point(208, 37);
-            this.txtNRN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNRN.Margin = new System.Windows.Forms.Padding(2);
             this.txtNRN.Name = "txtNRN";
             this.txtNRN.Size = new System.Drawing.Size(222, 20);
             this.txtNRN.TabIndex = 0;
@@ -104,7 +104,7 @@
             this.txtNRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtNRS.ForeColor = System.Drawing.Color.Gray;
             this.txtNRS.Location = new System.Drawing.Point(208, 70);
-            this.txtNRS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNRS.Margin = new System.Windows.Forms.Padding(2);
             this.txtNRS.Name = "txtNRS";
             this.txtNRS.Size = new System.Drawing.Size(222, 20);
             this.txtNRS.TabIndex = 2;
@@ -128,7 +128,7 @@
             this.txtActivePrinciple.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtActivePrinciple.ForeColor = System.Drawing.Color.Gray;
             this.txtActivePrinciple.Location = new System.Drawing.Point(208, 138);
-            this.txtActivePrinciple.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtActivePrinciple.Margin = new System.Windows.Forms.Padding(2);
             this.txtActivePrinciple.Name = "txtActivePrinciple";
             this.txtActivePrinciple.Size = new System.Drawing.Size(222, 20);
             this.txtActivePrinciple.TabIndex = 6;
@@ -152,7 +152,7 @@
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtName.ForeColor = System.Drawing.Color.Gray;
             this.txtName.Location = new System.Drawing.Point(208, 105);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(222, 20);
             this.txtName.TabIndex = 4;
@@ -175,7 +175,7 @@
             this.txtBasePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtBasePrice.ForeColor = System.Drawing.Color.Gray;
             this.txtBasePrice.Location = new System.Drawing.Point(208, 250);
-            this.txtBasePrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBasePrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtBasePrice.Name = "txtBasePrice";
             this.txtBasePrice.Size = new System.Drawing.Size(222, 20);
             this.txtBasePrice.TabIndex = 12;
@@ -209,7 +209,7 @@
             this.txtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtContent.ForeColor = System.Drawing.Color.Gray;
             this.txtContent.Location = new System.Drawing.Point(208, 174);
-            this.txtContent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContent.Margin = new System.Windows.Forms.Padding(2);
             this.txtContent.Name = "txtContent";
             this.txtContent.Size = new System.Drawing.Size(222, 20);
             this.txtContent.TabIndex = 8;
@@ -249,18 +249,18 @@
             // 
             this.btnBrowseTechSheetDoc.BackColor = System.Drawing.Color.LightBlue;
             this.btnBrowseTechSheetDoc.Location = new System.Drawing.Point(208, 394);
-            this.btnBrowseTechSheetDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBrowseTechSheetDoc.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowseTechSheetDoc.Name = "btnBrowseTechSheetDoc";
             this.btnBrowseTechSheetDoc.Size = new System.Drawing.Size(100, 32);
             this.btnBrowseTechSheetDoc.TabIndex = 21;
-            this.btnBrowseTechSheetDoc.Text = "Browse...";
+            this.btnBrowseTechSheetDoc.Text = "Buscar...";
             this.btnBrowseTechSheetDoc.UseVisualStyleBackColor = false;
             // 
             // btnBrowseProspect
             // 
             this.btnBrowseProspect.BackColor = System.Drawing.Color.LightBlue;
             this.btnBrowseProspect.Location = new System.Drawing.Point(208, 438);
-            this.btnBrowseProspect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBrowseProspect.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowseProspect.Name = "btnBrowseProspect";
             this.btnBrowseProspect.Size = new System.Drawing.Size(100, 32);
             this.btnBrowseProspect.TabIndex = 22;
@@ -271,7 +271,7 @@
             // 
             this.btnEditAdd.BackColor = System.Drawing.Color.LightBlue;
             this.btnEditAdd.Location = new System.Drawing.Point(208, 492);
-            this.btnEditAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditAdd.Name = "btnEditAdd";
             this.btnEditAdd.Size = new System.Drawing.Size(100, 32);
             this.btnEditAdd.TabIndex = 23;
@@ -310,7 +310,7 @@
             this.pnlAddEditDrugs.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlAddEditDrugs.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlAddEditDrugs.Location = new System.Drawing.Point(172, 137);
-            this.pnlAddEditDrugs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAddEditDrugs.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAddEditDrugs.Name = "pnlAddEditDrugs";
             this.pnlAddEditDrugs.Size = new System.Drawing.Size(452, 568);
             this.pnlAddEditDrugs.TabIndex = 24;
@@ -320,11 +320,11 @@
             this.chkRecipe.AutoSize = true;
             this.chkRecipe.DBReference = "NeedsRecipe";
             this.chkRecipe.Location = new System.Drawing.Point(208, 348);
-            this.chkRecipe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.chkRecipe.Name = "chkRecipe";
-            this.chkRecipe.Size = new System.Drawing.Size(67, 23);
+            this.chkRecipe.Size = new System.Drawing.Size(68, 23);
             this.chkRecipe.TabIndex = 17;
-            this.chkRecipe.Text = "Recipe";
+            this.chkRecipe.Text = "Receta";
             this.chkRecipe.UseVisualStyleBackColor = true;
             // 
             // chkGeneric
@@ -332,11 +332,11 @@
             this.chkGeneric.AutoSize = true;
             this.chkGeneric.DBReference = "IsGeneric";
             this.chkGeneric.Location = new System.Drawing.Point(208, 330);
-            this.chkGeneric.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkGeneric.Margin = new System.Windows.Forms.Padding(2);
             this.chkGeneric.Name = "chkGeneric";
-            this.chkGeneric.Size = new System.Drawing.Size(74, 23);
+            this.chkGeneric.Size = new System.Drawing.Size(82, 23);
             this.chkGeneric.TabIndex = 16;
-            this.chkGeneric.Text = "Generic";
+            this.chkGeneric.Text = "Generico";
             this.chkGeneric.UseVisualStyleBackColor = true;
             // 
             // chkReplaceable
@@ -344,18 +344,18 @@
             this.chkReplaceable.AutoSize = true;
             this.chkReplaceable.DBReference = "Replaceable";
             this.chkReplaceable.Location = new System.Drawing.Point(208, 312);
-            this.chkReplaceable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkReplaceable.Margin = new System.Windows.Forms.Padding(2);
             this.chkReplaceable.Name = "chkReplaceable";
-            this.chkReplaceable.Size = new System.Drawing.Size(99, 23);
+            this.chkReplaceable.Size = new System.Drawing.Size(104, 23);
             this.chkReplaceable.TabIndex = 15;
-            this.chkReplaceable.Text = "Replaceable";
+            this.chkReplaceable.Text = "Remplacable";
             this.chkReplaceable.UseVisualStyleBackColor = true;
             // 
             // cmbLabId
             // 
             this.cmbLabId.FormattingEnabled = true;
             this.cmbLabId.Location = new System.Drawing.Point(460, 217);
-            this.cmbLabId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbLabId.Margin = new System.Windows.Forms.Padding(2);
             this.cmbLabId.Name = "cmbLabId";
             this.cmbLabId.Size = new System.Drawing.Size(8, 27);
             this.cmbLabId.TabIndex = 25;
@@ -366,7 +366,7 @@
             // 
             this.cmbIVAId.FormattingEnabled = true;
             this.cmbIVAId.Location = new System.Drawing.Point(460, 266);
-            this.cmbIVAId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbIVAId.Margin = new System.Windows.Forms.Padding(2);
             this.cmbIVAId.Name = "cmbIVAId";
             this.cmbIVAId.Size = new System.Drawing.Size(8, 27);
             this.cmbIVAId.TabIndex = 25;
@@ -388,7 +388,7 @@
             this.cmbIVA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIVA.FormattingEnabled = true;
             this.cmbIVA.Location = new System.Drawing.Point(208, 275);
-            this.cmbIVA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbIVA.Margin = new System.Windows.Forms.Padding(2);
             this.cmbIVA.Name = "cmbIVA";
             this.cmbIVA.Size = new System.Drawing.Size(135, 27);
             this.cmbIVA.TabIndex = 14;
@@ -399,7 +399,7 @@
             this.cmbPharmaceuticLab.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPharmaceuticLab.FormattingEnabled = true;
             this.cmbPharmaceuticLab.Location = new System.Drawing.Point(208, 203);
-            this.cmbPharmaceuticLab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbPharmaceuticLab.Margin = new System.Windows.Forms.Padding(2);
             this.cmbPharmaceuticLab.Name = "cmbPharmaceuticLab";
             this.cmbPharmaceuticLab.Size = new System.Drawing.Size(135, 27);
             this.cmbPharmaceuticLab.TabIndex = 10;
@@ -428,7 +428,7 @@
             this.Controls.Add(this.lblTitol);
             this.Controls.Add(this.pnlAddEditDrugs);
             this.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAddEditDrugs";
             this.Text = "frmRegisterEditDrugs";
             this.Load += new System.EventHandler(this.frmAddEditDrugs_Load);

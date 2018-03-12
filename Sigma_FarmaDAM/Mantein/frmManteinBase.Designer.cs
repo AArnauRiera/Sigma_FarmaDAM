@@ -100,7 +100,7 @@
             this.bntNew.Name = "bntNew";
             this.bntNew.Size = new System.Drawing.Size(78, 41);
             this.bntNew.TabIndex = 14;
-            this.bntNew.Text = "New";
+            this.bntNew.Text = "Nuevo";
             this.bntNew.UseVisualStyleBackColor = true;
             this.bntNew.Click += new System.EventHandler(this.bntNew_Click);
             // 
@@ -111,7 +111,7 @@
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.Size = new System.Drawing.Size(78, 41);
             this.btnQuery.TabIndex = 0;
-            this.btnQuery.Text = "Search";
+            this.btnQuery.Text = "Buscar";
             this.btnQuery.UseVisualStyleBackColor = true;
             this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click_1);
             // 
@@ -122,7 +122,7 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(82, 41);
             this.btnUpdate.TabIndex = 13;
-            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // btnGet
@@ -132,13 +132,13 @@
             this.btnGet.Name = "btnGet";
             this.btnGet.Size = new System.Drawing.Size(87, 41);
             this.btnGet.TabIndex = 12;
-            this.btnGet.Text = "Get";
+            this.btnGet.Text = "Obtener";
             this.btnGet.UseVisualStyleBackColor = true;
             this.btnGet.Click += new System.EventHandler(this.btnGet_Click_1);
             // 
             // frmManteinBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1069, 760);

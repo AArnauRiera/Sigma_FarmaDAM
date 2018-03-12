@@ -47,10 +47,12 @@
             // btnQuery
             // 
             this.btnQuery.TabIndex = 4;
+            this.btnQuery.Text = "Buscar";
             // 
             // btnUpdate
             // 
             this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.Text = "Actualizar";
             // 
             // btnGet
             // 
@@ -59,6 +61,7 @@
             // bntNew
             // 
             this.bntNew.TabIndex = 5;
+            this.bntNew.Text = "Nuevo";
             // 
             // lblName
             // 
@@ -87,7 +90,7 @@
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtName.ForeColor = System.Drawing.Color.Gray;
             this.txtName.Location = new System.Drawing.Point(195, 31);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(132, 20);
             this.txtName.TabIndex = 1;
@@ -100,7 +103,7 @@
             this.txtSRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtSRN.ForeColor = System.Drawing.Color.Gray;
             this.txtSRN.Location = new System.Drawing.Point(195, 4);
-            this.txtSRN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSRN.Margin = new System.Windows.Forms.Padding(4);
             this.txtSRN.Name = "txtSRN";
             this.txtSRN.Size = new System.Drawing.Size(132, 20);
             this.txtSRN.TabIndex = 0;
@@ -110,7 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.ClientSize = new System.Drawing.Size(1011, 629);
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "frmManteinActivePrinciple";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
             this.pnlTextBox.ResumeLayout(false);
