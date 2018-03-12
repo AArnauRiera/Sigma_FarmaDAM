@@ -50,6 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
             this.pnlButtons.SuspendLayout();
+            this.pnlMantein.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTextBox
@@ -122,7 +123,7 @@
             this.lblReplaceable.Name = "lblReplaceable";
             this.lblReplaceable.Size = new System.Drawing.Size(85, 19);
             this.lblReplaceable.TabIndex = 30;
-            this.lblReplaceable.Text = "Remplacable";
+            this.lblReplaceable.Text = "Remplazable";
             // 
             // lblContent
             // 
@@ -295,12 +296,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.ClientSize = new System.Drawing.Size(949, 628);
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "frmManteinDrugs";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();
             this.pnlButtons.ResumeLayout(false);
+            this.pnlMantein.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
