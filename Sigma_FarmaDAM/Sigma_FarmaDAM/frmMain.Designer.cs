@@ -100,6 +100,7 @@
             this.btnGestioComandes.Text = "Gestion de comandas";
             this.btnGestioComandes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGestioComandes.UseVisualStyleBackColor = false;
+            this.btnGestioComandes.Click += new System.EventHandler(this.btnGestioComandes_Click);
             // 
             // btnLaboratorisFarmaceutiques
             // 
