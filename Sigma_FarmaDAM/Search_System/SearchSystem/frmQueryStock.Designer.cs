@@ -34,6 +34,7 @@
             this.lblQuantity = new System.Windows.Forms.Label();
             this.lblBasePrice = new System.Windows.Forms.Label();
             this.lblIvaType = new System.Windows.Forms.Label();
+            this.pnlButtons.SuspendLayout();
             this.pnlTB.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,33 +82,34 @@
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Location = new System.Drawing.Point(191, 43);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(46, 13);
+            this.lblQuantity.Size = new System.Drawing.Size(49, 13);
             this.lblQuantity.TabIndex = 2;
-            this.lblQuantity.Text = "Quantity";
+            this.lblQuantity.Text = "Cantidad";
             // 
             // lblBasePrice
             // 
             this.lblBasePrice.AutoSize = true;
             this.lblBasePrice.Location = new System.Drawing.Point(179, 69);
             this.lblBasePrice.Name = "lblBasePrice";
-            this.lblBasePrice.Size = new System.Drawing.Size(58, 13);
+            this.lblBasePrice.Size = new System.Drawing.Size(64, 13);
             this.lblBasePrice.TabIndex = 3;
-            this.lblBasePrice.Text = "Base Price";
+            this.lblBasePrice.Text = "Precio Base";
             // 
             // lblIvaType
             // 
             this.lblIvaType.AutoSize = true;
             this.lblIvaType.Location = new System.Drawing.Point(186, 95);
             this.lblIvaType.Name = "lblIvaType";
-            this.lblIvaType.Size = new System.Drawing.Size(51, 13);
+            this.lblIvaType.Size = new System.Drawing.Size(48, 13);
             this.lblIvaType.TabIndex = 4;
-            this.lblIvaType.Text = "IVA Type";
+            this.lblIvaType.Text = "Tipo IVA";
             // 
             // frmQueryStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(595, 501);
             this.Name = "frmQueryStock";
+            this.pnlButtons.ResumeLayout(false);
             this.pnlTB.ResumeLayout(false);
             this.pnlTB.PerformLayout();
             this.ResumeLayout(false);
