@@ -34,8 +34,17 @@
             this.lblDenomination = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblCIF = new System.Windows.Forms.Label();
+            this.pnlButtons.SuspendLayout();
             this.pnlTB.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Text = "Buscar";
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Text = "Seleccionar";
             // 
             // pnlTB
             // 
@@ -81,18 +90,18 @@
             this.lblDenomination.AutoSize = true;
             this.lblDenomination.Location = new System.Drawing.Point(176, 44);
             this.lblDenomination.Name = "lblDenomination";
-            this.lblDenomination.Size = new System.Drawing.Size(72, 13);
+            this.lblDenomination.Size = new System.Drawing.Size(75, 13);
             this.lblDenomination.TabIndex = 1;
-            this.lblDenomination.Text = "Denomination";
+            this.lblDenomination.Text = "Denominacion";
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(203, 70);
+            this.lblAddress.Location = new System.Drawing.Point(196, 70);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(45, 13);
+            this.lblAddress.Size = new System.Drawing.Size(52, 13);
             this.lblAddress.TabIndex = 1;
-            this.lblAddress.Text = "Address";
+            this.lblAddress.Text = "Direccion";
             // 
             // lblCIF
             // 
@@ -108,6 +117,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(595, 501);
             this.Name = "frmQueryLaboratories";
+            this.pnlButtons.ResumeLayout(false);
             this.pnlTB.ResumeLayout(false);
             this.pnlTB.PerformLayout();
             this.ResumeLayout(false);

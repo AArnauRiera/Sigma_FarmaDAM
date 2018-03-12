@@ -46,8 +46,17 @@ namespace SearchSystem
             this.lblLastName2 = new System.Windows.Forms.Label();
             this.lblDNI = new System.Windows.Forms.Label();
             this.lblNTS = new System.Windows.Forms.Label();
+            this.pnlButtons.SuspendLayout();
             this.pnlTB.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Text = "Buscar";
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Text = "Seleccionar";
             // 
             // pnlTB
             // 
@@ -117,27 +126,27 @@ namespace SearchSystem
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(210, 19);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.Size = new System.Drawing.Size(44, 13);
             this.lblName.TabIndex = 6;
-            this.lblName.Text = "Name";
+            this.lblName.Text = "Nombre";
             // 
             // lblLastName1
             // 
             this.lblLastName1.AutoSize = true;
             this.lblLastName1.Location = new System.Drawing.Point(171, 42);
             this.lblLastName1.Name = "lblLastName1";
-            this.lblLastName1.Size = new System.Drawing.Size(74, 13);
+            this.lblLastName1.Size = new System.Drawing.Size(75, 13);
             this.lblLastName1.TabIndex = 7;
-            this.lblLastName1.Text = "First last name";
+            this.lblLastName1.Text = "Primer apellido";
             // 
             // lblLastName2
             // 
             this.lblLastName2.AutoSize = true;
             this.lblLastName2.Location = new System.Drawing.Point(153, 68);
             this.lblLastName2.Name = "lblLastName2";
-            this.lblLastName2.Size = new System.Drawing.Size(92, 13);
+            this.lblLastName2.Size = new System.Drawing.Size(89, 13);
             this.lblLastName2.TabIndex = 8;
-            this.lblLastName2.Text = "Second last name";
+            this.lblLastName2.Text = "Segundo apellido";
             // 
             // lblDNI
             // 
@@ -162,6 +171,7 @@ namespace SearchSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(595, 501);
             this.Name = "frmQueryClients";
+            this.pnlButtons.ResumeLayout(false);
             this.pnlTB.ResumeLayout(false);
             this.pnlTB.PerformLayout();
             this.ResumeLayout(false);

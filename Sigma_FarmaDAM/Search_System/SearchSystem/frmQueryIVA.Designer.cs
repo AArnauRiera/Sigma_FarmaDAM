@@ -32,8 +32,17 @@
             this.txtValue = new Sigma_Controls.TxtSigma();
             this.lblId = new System.Windows.Forms.Label();
             this.lblValue = new System.Windows.Forms.Label();
+            this.pnlButtons.SuspendLayout();
             this.pnlTB.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Text = "Busca";
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Text = "Seleccionar";
             // 
             // pnlTB
             // 
@@ -76,15 +85,16 @@
             this.lblValue.AutoSize = true;
             this.lblValue.Location = new System.Drawing.Point(199, 82);
             this.lblValue.Name = "lblValue";
-            this.lblValue.Size = new System.Drawing.Size(34, 13);
+            this.lblValue.Size = new System.Drawing.Size(31, 13);
             this.lblValue.TabIndex = 1;
-            this.lblValue.Text = "Value";
+            this.lblValue.Text = "Valor";
             // 
             // frmQueryIVA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(595, 501);
             this.Name = "frmQueryIVA";
+            this.pnlButtons.ResumeLayout(false);
             this.pnlTB.ResumeLayout(false);
             this.pnlTB.PerformLayout();
             this.ResumeLayout(false);

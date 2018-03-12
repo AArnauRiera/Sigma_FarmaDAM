@@ -32,8 +32,17 @@
             this.txtId_Stock = new Sigma_Controls.TxtSigma();
             this.lblIdLaboratories = new System.Windows.Forms.Label();
             this.lblIdStock = new System.Windows.Forms.Label();
+            this.pnlButtons.SuspendLayout();
             this.pnlTB.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Text = "Buscar";
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Text = "Seleccionar";
             // 
             // pnlTB
             // 
@@ -69,7 +78,7 @@
             this.lblIdLaboratories.Name = "lblIdLaboratories";
             this.lblIdLaboratories.Size = new System.Drawing.Size(77, 13);
             this.lblIdLaboratories.TabIndex = 1;
-            this.lblIdLaboratories.Text = "Id Laboratories";
+            this.lblIdLaboratories.Text = "Id Laboratorios";
             // 
             // lblIdStock
             // 
@@ -85,6 +94,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(595, 501);
             this.Name = "frmQueryProviders";
+            this.pnlButtons.ResumeLayout(false);
             this.pnlTB.ResumeLayout(false);
             this.pnlTB.PerformLayout();
             this.ResumeLayout(false);

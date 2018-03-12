@@ -61,6 +61,9 @@
     <EmbeddedResource Include="frmLoadDataXML.resx">
       <DependentUpon>frmLoadDataXML.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadPAXml.resx">
+      <DependentUpon>frmLoadPAXml.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DBUtils\DBUtils.csproj">

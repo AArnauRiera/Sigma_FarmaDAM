@@ -42,8 +42,17 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
+            this.pnlButtons.SuspendLayout();
             this.pnlTB.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Text = "Buscar";
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Text = "Seleccionar";
             // 
             // pnlTB
             // 
@@ -137,27 +146,27 @@
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Location = new System.Drawing.Point(76, 24);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(57, 13);
+            this.lblFirstName.Size = new System.Drawing.Size(44, 13);
             this.lblFirstName.TabIndex = 1;
-            this.lblFirstName.Text = "First Name";
+            this.lblFirstName.Text = "Nombre";
             // 
             // lblLastName1
             // 
             this.lblLastName1.AutoSize = true;
-            this.lblLastName1.Location = new System.Drawing.Point(66, 47);
+            this.lblLastName1.Location = new System.Drawing.Point(58, 47);
             this.lblLastName1.Name = "lblLastName1";
-            this.lblLastName1.Size = new System.Drawing.Size(67, 13);
+            this.lblLastName1.Size = new System.Drawing.Size(75, 13);
             this.lblLastName1.TabIndex = 1;
-            this.lblLastName1.Text = "Last Name 1";
+            this.lblLastName1.Text = "Primer apellido";
             // 
             // lblLastName2
             // 
             this.lblLastName2.AutoSize = true;
-            this.lblLastName2.Location = new System.Drawing.Point(66, 73);
+            this.lblLastName2.Location = new System.Drawing.Point(44, 76);
             this.lblLastName2.Name = "lblLastName2";
-            this.lblLastName2.Size = new System.Drawing.Size(67, 13);
+            this.lblLastName2.Size = new System.Drawing.Size(89, 13);
             this.lblLastName2.TabIndex = 1;
-            this.lblLastName2.Text = "Last Name 2";
+            this.lblLastName2.Text = "Segundo apellido";
             // 
             // lblDNI
             // 
@@ -182,24 +191,25 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Location = new System.Drawing.Point(284, 50);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(55, 13);
+            this.lblUsername.Size = new System.Drawing.Size(43, 13);
             this.lblUsername.TabIndex = 1;
-            this.lblUsername.Text = "Username";
+            this.lblUsername.Text = "Usuario";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Location = new System.Drawing.Point(286, 76);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(53, 13);
+            this.lblPassword.Size = new System.Drawing.Size(61, 13);
             this.lblPassword.TabIndex = 1;
-            this.lblPassword.Text = "Password";
+            this.lblPassword.Text = "Contraseña";
             // 
             // frmQuerySeller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(595, 501);
             this.Name = "frmQuerySeller";
+            this.pnlButtons.ResumeLayout(false);
             this.pnlTB.ResumeLayout(false);
             this.pnlTB.PerformLayout();
             this.ResumeLayout(false);
