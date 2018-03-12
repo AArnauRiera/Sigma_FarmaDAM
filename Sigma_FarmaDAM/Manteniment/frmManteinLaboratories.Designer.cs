@@ -51,14 +51,21 @@
             // btnQuery
             // 
             this.btnQuery.TabIndex = 2;
+            this.btnQuery.Text = "Buscar";
             // 
             // btnUpdate
             // 
             this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "Actualizar";
+            // 
+            // btnGet
+            // 
+            this.btnGet.Text = "Obtener";
             // 
             // bntNew
             // 
             this.bntNew.TabIndex = 3;
+            this.bntNew.Text = "Nuevo";
             // 
             // lblCIF
             // 
@@ -76,9 +83,9 @@
             this.lblAddress.Location = new System.Drawing.Point(4, 32);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(58, 19);
+            this.lblAddress.Size = new System.Drawing.Size(65, 19);
             this.lblAddress.TabIndex = 6;
-            this.lblAddress.Text = "Address";
+            this.lblAddress.Text = "Direccion";
             // 
             // lblDenomination
             // 
@@ -86,9 +93,9 @@
             this.lblDenomination.Location = new System.Drawing.Point(4, 4);
             this.lblDenomination.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDenomination.Name = "lblDenomination";
-            this.lblDenomination.Size = new System.Drawing.Size(96, 19);
+            this.lblDenomination.Size = new System.Drawing.Size(97, 19);
             this.lblDenomination.TabIndex = 7;
-            this.lblDenomination.Text = "Denomination";
+            this.lblDenomination.Text = "Denominacion";
             // 
             // txtCIF
             // 
