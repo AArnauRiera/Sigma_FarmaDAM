@@ -38,6 +38,15 @@ namespace Mantein
                 if (control is TxtSigma)
                 {
                     TxtSigma txt = control as TxtSigma;
+                    txt.DataBindings.Clear();
+                }
+            }
+
+            foreach (Control control in pnlTextBox.Controls)
+            {
+                if (control is TxtSigma)
+                {
+                    TxtSigma txt = control as TxtSigma;
                     txt.DataBindings.Add(new Binding("Text", dgwBase.DataSource, txt.DBReference, true));
                 }
             }                  
@@ -72,10 +81,18 @@ namespace Mantein
             dts = db.PortarPerConsulta(query);
         }
 
+        public void RefreshQuery(string newQuery)
+        {
+            query = newQuery;
+            DBUtilities db = new DBUtilities();
+            dts = db.PortarPerConsulta(query);
+            BindingDate();
+        }
+
         protected void UpdateQuery()
         {
             DBUtilities db = new DBUtilities();
-            db.Actualizar(query,Table,dts);
+            db.Actualizar(query, "Taula",dts);
         }
        
         protected void btnUpdate_Click(object sender, EventArgs e)

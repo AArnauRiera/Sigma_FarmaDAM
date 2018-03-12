@@ -22,10 +22,10 @@ namespace SearchSystem
         private Sigma_Controls.TxtSigma txtDNI;
         private Sigma_Controls.TxtSigma txtName;
 
-        public frmQueryClients(DataGridView dgw, string table) : base(dgw, table)
+        public frmQueryClients(frmManteinBase frm, string table) : base(frm, table)
         {
             InitializeComponent();
-            _dgw = dgw;
+            _frm = frm;
             Table = table;
         }
 

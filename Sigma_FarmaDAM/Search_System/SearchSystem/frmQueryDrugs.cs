@@ -21,10 +21,10 @@ namespace SearchSystem
             InitializeComponent();
         }
 
-        public frmQueryDrugs(DataGridView dgw, string table)
+        public frmQueryDrugs(frmManteinBase frm, string table)
         {
             InitializeComponent();
-            _dgw = dgw;
+            _frm = frm;
             Table = table;
         }
 

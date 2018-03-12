@@ -17,15 +17,15 @@ namespace Mantein
 
         protected DataSet dts;
         protected string query;
-        protected DataGridView _dgw;
+        protected frmManteinBase _frm;
 
 
         public string Table { get; set; }
 
-        public frmQueryBase(DataGridView dgw, string table)
+        public frmQueryBase(frmManteinBase frm, string table)
         {
             InitializeComponent();
-            _dgw = dgw;
+            _frm = frm;
             Table = table;
 
         }
@@ -126,13 +126,9 @@ namespace Mantein
                 conditions.Add(dgwDB.SelectedRows[i].Cells[0].OwningColumn.Name + " = " + "'" + dgwDB.SelectedRows[i].Cells[0].FormattedValue.ToString() + "'");
             }
 
-            DBUtilities db = new DBUtilities();
-            
-            selected = "select * from " + Table + " where " + string.Join(" or ", conditions); ;
+            selected = "select * from " + Table + " where " + string.Join(" or ", conditions);
 
-            ds = db.PortarPerConsulta(selected);
-
-            _dgw.DataSource = ds.Tables["Taula"];         
+            _frm.RefreshQuery(selected);      
 
             this.Close();
 

@@ -19,7 +19,7 @@ namespace Manteniment
 
         protected override void OpenQuery()
         {
-            frmQueryLaboratories query = new frmQueryLaboratories(dgwBase, "Laboratories");
+            frmQueryLaboratories query = new frmQueryLaboratories(this, "Laboratories");
             query.Show();
         }
     }
