@@ -76,7 +76,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Azure;
             this.pictureBox1.Image = global::Sigma_FarmaDAM.Properties.Resources.logoSigma2;
             this.pictureBox1.Location = new System.Drawing.Point(9, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(229, 98);
             this.pictureBox1.TabIndex = 10;
@@ -97,7 +97,7 @@
             this.btnGestioComandes.Name = "btnGestioComandes";
             this.btnGestioComandes.Size = new System.Drawing.Size(271, 66);
             this.btnGestioComandes.TabIndex = 7;
-            this.btnGestioComandes.Text = "Gestió de comandes ";
+            this.btnGestioComandes.Text = "Gestion de comandas";
             this.btnGestioComandes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGestioComandes.UseVisualStyleBackColor = false;
             // 
@@ -116,7 +116,7 @@
             this.btnLaboratorisFarmaceutiques.Name = "btnLaboratorisFarmaceutiques";
             this.btnLaboratorisFarmaceutiques.Size = new System.Drawing.Size(271, 66);
             this.btnLaboratorisFarmaceutiques.TabIndex = 5;
-            this.btnLaboratorisFarmaceutiques.Text = "Laboratoris Farmacèutiques";
+            this.btnLaboratorisFarmaceutiques.Text = "Laboratorios Farmaceuticos";
             this.btnLaboratorisFarmaceutiques.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLaboratorisFarmaceutiques.UseVisualStyleBackColor = false;
             this.btnLaboratorisFarmaceutiques.Click += new System.EventHandler(this.btnLaboratorisFarmaceutiques_Click);
@@ -136,7 +136,7 @@
             this.btnMantenimentProductes.Name = "btnMantenimentProductes";
             this.btnMantenimentProductes.Size = new System.Drawing.Size(271, 66);
             this.btnMantenimentProductes.TabIndex = 4;
-            this.btnMantenimentProductes.Text = "Manteniment productes";
+            this.btnMantenimentProductes.Text = "Mantenimento productos";
             this.btnMantenimentProductes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMantenimentProductes.UseVisualStyleBackColor = false;
             this.btnMantenimentProductes.Click += new System.EventHandler(this.btnMantenimentProductes_Click);
@@ -156,7 +156,7 @@
             this.btnMantenimenPrincipiActius.Name = "btnMantenimenPrincipiActius";
             this.btnMantenimenPrincipiActius.Size = new System.Drawing.Size(271, 66);
             this.btnMantenimenPrincipiActius.TabIndex = 3;
-            this.btnMantenimenPrincipiActius.Text = "Manteniment principis actius ";
+            this.btnMantenimenPrincipiActius.Text = "Mantenimento principios activos ";
             this.btnMantenimenPrincipiActius.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMantenimenPrincipiActius.UseVisualStyleBackColor = false;
             this.btnMantenimenPrincipiActius.Click += new System.EventHandler(this.btnMantenimenPrincipiActius_Click);
@@ -244,7 +244,7 @@
             this.tbMain.HorizontalLineColor = System.Drawing.SystemColors.Highlight;
             this.tbMain.ItemSize = new System.Drawing.Size(240, 16);
             this.tbMain.Location = new System.Drawing.Point(0, 0);
-            this.tbMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMain.Margin = new System.Windows.Forms.Padding(2);
             this.tbMain.Name = "tbMain";
             this.tbMain.SelectedIndex = 0;
             this.tbMain.SelectedTextColor = System.Drawing.SystemColors.Highlight;
