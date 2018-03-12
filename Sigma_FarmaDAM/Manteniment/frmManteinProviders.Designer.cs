@@ -35,6 +35,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
             this.pnlButtons.SuspendLayout();
+            this.pnlMantein.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTextBox
@@ -43,22 +44,6 @@
             this.pnlTextBox.Controls.Add(this.lblIdLaboratories);
             this.pnlTextBox.Controls.Add(this.txtId_Stock);
             this.pnlTextBox.Controls.Add(this.txtIdLaboratories);
-            // 
-            // btnQuery
-            // 
-            this.btnQuery.Text = "Buscar";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Text = "Actualizar";
-            // 
-            // btnGet
-            // 
-            this.btnGet.Text = "Obtener";
-            // 
-            // bntNew
-            // 
-            this.bntNew.Text = "Nuevo";
             // 
             // lblIdStock
             // 
@@ -76,9 +61,9 @@
             this.lblIdLaboratories.Location = new System.Drawing.Point(4, 3);
             this.lblIdLaboratories.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdLaboratories.Name = "lblIdLaboratories";
-            this.lblIdLaboratories.Size = new System.Drawing.Size(101, 19);
+            this.lblIdLaboratories.Size = new System.Drawing.Size(102, 19);
             this.lblIdLaboratories.TabIndex = 5;
-            this.lblIdLaboratories.Text = "Id Laboratories";
+            this.lblIdLaboratories.Text = "Id Laboratorios";
             // 
             // txtId_Stock
             // 
@@ -116,6 +101,7 @@
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();
             this.pnlButtons.ResumeLayout(false);
+            this.pnlMantein.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
