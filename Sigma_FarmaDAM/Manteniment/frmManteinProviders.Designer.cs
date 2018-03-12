@@ -44,6 +44,22 @@
             this.pnlTextBox.Controls.Add(this.txtId_Stock);
             this.pnlTextBox.Controls.Add(this.txtIdLaboratories);
             // 
+            // btnQuery
+            // 
+            this.btnQuery.Text = "Buscar";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Text = "Actualizar";
+            // 
+            // btnGet
+            // 
+            this.btnGet.Text = "Obtener";
+            // 
+            // bntNew
+            // 
+            this.bntNew.Text = "Nuevo";
+            // 
             // lblIdStock
             // 
             this.lblIdStock.AutoSize = true;
