@@ -303,6 +303,16 @@ namespace SellSystem
             }
             else{ MessageBox.Show("Error al Actualizar"); }
         }
+
+        private void pnltxt_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgView_Sell_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 
