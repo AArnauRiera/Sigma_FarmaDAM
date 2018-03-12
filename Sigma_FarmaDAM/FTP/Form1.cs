@@ -9,6 +9,10 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System;
+using System.IO;
+using System.Net;
+using System.Text;
 
 namespace FTP
 {
@@ -21,24 +25,7 @@ namespace FTP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using
-System;
-            using
-            System.IO;
-            using
-            System.Net;
-            using
-            System.Text;
-public
-class
-WebRequestGetExample
-        {
-            public
-            static
-            void
-            Main
-            ()
-            {
+
                 // Get the object used to communicate with the server.
                 FtpWebRequest request = (FtpWebRequest)WebRequest.Create(
                 "172.17.6.0"
@@ -70,8 +57,8 @@ WebRequestGetExample
                 "Upload File Complete, status {0}"
                 , response.StatusDescription);
                 response.Close();
-            }
         }
-    }
-    }
-}
+     }
+ }
+
+
