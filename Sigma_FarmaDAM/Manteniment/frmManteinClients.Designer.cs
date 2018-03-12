@@ -56,6 +56,22 @@
             this.pnlTextBox.Controls.Add(this.txtDNI);
             this.pnlTextBox.Controls.Add(this.txtName);
             // 
+            // btnQuery
+            // 
+            this.btnQuery.Text = "Buscar";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Text = "Actualizar";
+            // 
+            // btnGet
+            // 
+            this.btnGet.Text = "Obtener";
+            // 
+            // bntNew
+            // 
+            this.bntNew.Text = "Nuevo";
+            // 
             // lblNTS
             // 
             this.lblNTS.AutoSize = true;
@@ -82,9 +98,9 @@
             this.lblLastName2.Location = new System.Drawing.Point(4, 61);
             this.lblLastName2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastName2.Name = "lblLastName2";
-            this.lblLastName2.Size = new System.Drawing.Size(116, 19);
+            this.lblLastName2.Size = new System.Drawing.Size(114, 19);
             this.lblLastName2.TabIndex = 18;
-            this.lblLastName2.Text = "Second last name";
+            this.lblLastName2.Text = "Segundo apellido";
             // 
             // lblLastName1
             // 
@@ -92,9 +108,9 @@
             this.lblLastName1.Location = new System.Drawing.Point(4, 32);
             this.lblLastName1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastName1.Name = "lblLastName1";
-            this.lblLastName1.Size = new System.Drawing.Size(98, 19);
+            this.lblLastName1.Size = new System.Drawing.Size(100, 19);
             this.lblLastName1.TabIndex = 15;
-            this.lblLastName1.Text = "First last name";
+            this.lblLastName1.Text = "Primer apellido";
             // 
             // lblName
             // 
@@ -102,9 +118,9 @@
             this.lblName.Location = new System.Drawing.Point(4, 5);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(45, 19);
+            this.lblName.Size = new System.Drawing.Size(59, 19);
             this.lblName.TabIndex = 14;
-            this.lblName.Text = "Name";
+            this.lblName.Text = "Nombre";
             // 
             // txtNTS
             // 

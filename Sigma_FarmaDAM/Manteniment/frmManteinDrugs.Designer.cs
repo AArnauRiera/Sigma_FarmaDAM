@@ -80,9 +80,9 @@
             this.lblProspectus.Location = new System.Drawing.Point(4, 183);
             this.lblProspectus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProspectus.Name = "lblProspectus";
-            this.lblProspectus.Size = new System.Drawing.Size(76, 19);
+            this.lblProspectus.Size = new System.Drawing.Size(70, 19);
             this.lblProspectus.TabIndex = 34;
-            this.lblProspectus.Text = "Prospectus";
+            this.lblProspectus.Text = "Prospecto";
             // 
             // lblDocumentation
             // 
@@ -90,9 +90,9 @@
             this.lblDocumentation.Location = new System.Drawing.Point(4, 160);
             this.lblDocumentation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDocumentation.Name = "lblDocumentation";
-            this.lblDocumentation.Size = new System.Drawing.Size(104, 19);
+            this.lblDocumentation.Size = new System.Drawing.Size(105, 19);
             this.lblDocumentation.TabIndex = 33;
-            this.lblDocumentation.Text = "Documentation";
+            this.lblDocumentation.Text = "Documentacion";
             // 
             // lblObligatory
             // 
@@ -100,9 +100,9 @@
             this.lblObligatory.Location = new System.Drawing.Point(4, 138);
             this.lblObligatory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblObligatory.Name = "lblObligatory";
-            this.lblObligatory.Size = new System.Drawing.Size(86, 19);
+            this.lblObligatory.Size = new System.Drawing.Size(101, 19);
             this.lblObligatory.TabIndex = 32;
-            this.lblObligatory.Text = "NeedsRecipe";
+            this.lblObligatory.Text = "Necesita receta";
             // 
             // lblGeneric
             // 
@@ -110,9 +110,9 @@
             this.lblGeneric.Location = new System.Drawing.Point(4, 116);
             this.lblGeneric.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGeneric.Name = "lblGeneric";
-            this.lblGeneric.Size = new System.Drawing.Size(55, 19);
+            this.lblGeneric.Size = new System.Drawing.Size(63, 19);
             this.lblGeneric.TabIndex = 31;
-            this.lblGeneric.Text = "Generic";
+            this.lblGeneric.Text = "Generico";
             // 
             // lblReplaceable
             // 
@@ -120,9 +120,9 @@
             this.lblReplaceable.Location = new System.Drawing.Point(4, 93);
             this.lblReplaceable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblReplaceable.Name = "lblReplaceable";
-            this.lblReplaceable.Size = new System.Drawing.Size(80, 19);
+            this.lblReplaceable.Size = new System.Drawing.Size(85, 19);
             this.lblReplaceable.TabIndex = 30;
-            this.lblReplaceable.Text = "Replaceable";
+            this.lblReplaceable.Text = "Remplacable";
             // 
             // lblContent
             // 
@@ -140,9 +140,9 @@
             this.lblIdActive.Location = new System.Drawing.Point(4, 49);
             this.lblIdActive.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdActive.Name = "lblIdActive";
-            this.lblIdActive.Size = new System.Drawing.Size(62, 19);
+            this.lblIdActive.Size = new System.Drawing.Size(63, 19);
             this.lblIdActive.TabIndex = 36;
-            this.lblIdActive.Text = "Id Active";
+            this.lblIdActive.Text = "Id Activo";
             // 
             // lblDenomination
             // 
@@ -150,9 +150,9 @@
             this.lblDenomination.Location = new System.Drawing.Point(4, 26);
             this.lblDenomination.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDenomination.Name = "lblDenomination";
-            this.lblDenomination.Size = new System.Drawing.Size(96, 19);
+            this.lblDenomination.Size = new System.Drawing.Size(97, 19);
             this.lblDenomination.TabIndex = 29;
-            this.lblDenomination.Text = "Denomination";
+            this.lblDenomination.Text = "Denominacion";
             // 
             // lblSRN
             // 

@@ -112,7 +112,7 @@
             // frmManteinActivePrinciple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.ClientSize = new System.Drawing.Size(1011, 629);
+            this.ClientSize = new System.Drawing.Size(1011, 770);
             this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "frmManteinActivePrinciple";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
