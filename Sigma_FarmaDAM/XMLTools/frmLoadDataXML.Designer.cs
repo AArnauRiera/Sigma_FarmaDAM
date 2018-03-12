@@ -42,9 +42,9 @@
             // 
             this.btnSelectXml.Location = new System.Drawing.Point(344, 186);
             this.btnSelectXml.Name = "btnSelectXml";
-            this.btnSelectXml.Size = new System.Drawing.Size(75, 23);
+            this.btnSelectXml.Size = new System.Drawing.Size(105, 23);
             this.btnSelectXml.TabIndex = 1;
-            this.btnSelectXml.Text = "Select Xml";
+            this.btnSelectXml.Text = "Seleccionar Xml";
             this.btnSelectXml.UseVisualStyleBackColor = true;
             this.btnSelectXml.Click += new System.EventHandler(this.btnSelectXml_Click);
             // 
@@ -61,7 +61,7 @@
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(75, 23);
             this.btnUpload.TabIndex = 3;
-            this.btnUpload.Text = "Upload Xml";
+            this.btnUpload.Text = "Subir Xml";
             this.btnUpload.UseVisualStyleBackColor = true;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 

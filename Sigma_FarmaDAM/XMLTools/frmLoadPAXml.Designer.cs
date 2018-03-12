@@ -28,7 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.Text = "Subir Xml";
+            // 
+            // frmLoadPAXml
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(682, 394);
+            this.Name = "frmLoadPAXml";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
