@@ -90,6 +90,12 @@
     <Compile Include="frmManteinStock.Designer.cs">
       <DependentUpon>frmManteinStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmManteinUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManteinUsers.Designer.cs">
+      <DependentUpon>frmManteinUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -117,8 +123,15 @@
     <EmbeddedResource Include="frmManteinStock.resx">
       <DependentUpon>frmManteinStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmManteinUsers.resx">
+      <DependentUpon>frmManteinUsers.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DBUtils\DBUtils.csproj">
+      <Project>{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}</Project>
+      <Name>DBUtils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Mantein\Mantein.csproj">
       <Project>{951a95b0-6b1f-40d7-a091-29ca118d6756}</Project>
       <Name>Mantein</Name>

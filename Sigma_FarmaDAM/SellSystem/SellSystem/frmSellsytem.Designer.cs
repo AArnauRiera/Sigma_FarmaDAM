@@ -232,6 +232,80 @@
             this.panel1.Size = new System.Drawing.Size(947, 125);
             this.panel1.TabIndex = 13;
             // 
+            // txtClient
+            // 
+            this.txtClient.DBReference = "NTS";
+            this.txtClient.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
+            this.txtClient.Location = new System.Drawing.Point(185, 33);
+            this.txtClient.Name = "txtClient";
+            this.txtClient.Size = new System.Drawing.Size(100, 20);
+            this.txtClient.TabIndex = 28;
+            this.txtClient.Table = null;
+            this.txtClient.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClient_KeyDown);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(105, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Producto";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(69, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 13);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Numero de Registro";
+            // 
+            // txtCod
+            // 
+            this.txtCod.DBReference = "Register_Number";
+            this.txtCod.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCod.ForeColor = System.Drawing.Color.White;
+            this.txtCod.Location = new System.Drawing.Point(88, 115);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(100, 20);
+            this.txtCod.TabIndex = 25;
+            this.txtCod.Table = null;
+            this.txtCod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCod_KeyDown);
+            // 
+            // label4
+            // 
+            this.txtClient.DBReference = "NTS";
+            this.txtClient.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtClient.ForeColor = System.Drawing.Color.White;
+            this.txtClient.Location = new System.Drawing.Point(124, 51);
+            this.txtClient.Name = "txtClient";
+            this.txtClient.Size = new System.Drawing.Size(106, 20);
+            this.txtClient.TabIndex = 30;
+            this.txtClient.Table = null;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(661, 114);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "Cantidad";
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.DBReference = "Quantity";
+            this.txtCantidad.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
+            this.txtCantidad.Location = new System.Drawing.Point(750, 112);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(108, 20);
+            this.txtCantidad.TabIndex = 35;
+            this.txtCantidad.Table = null;
+            // 
             // frmSellsytem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
