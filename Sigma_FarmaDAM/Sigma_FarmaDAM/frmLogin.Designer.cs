@@ -144,7 +144,7 @@
             this.Controls.Add(this.pnltxt);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmLogin";
+            this.Text = "Inicio sesion";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
             this.pnltxt.ResumeLayout(false);
             this.pnltxt.PerformLayout();
