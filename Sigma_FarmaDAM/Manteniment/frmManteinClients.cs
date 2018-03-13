@@ -16,5 +16,11 @@ namespace Manteniment
         {
             InitializeComponent();
         }
+
+        protected override void OpenQuery()
+        {
+            frmQueryClients frm = new frmQueryClients(this, "Clients");
+            frm.Show();
+        }
     }
 }

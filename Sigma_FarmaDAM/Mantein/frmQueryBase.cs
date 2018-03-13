@@ -111,6 +111,7 @@ namespace Mantein
         {
             GetQuery();
             BindingDate();
+            DisableColumns();
         }
 
         protected virtual void btnSelect_Click(object sender, EventArgs e)
@@ -132,6 +133,31 @@ namespace Mantein
 
             this.Close();
 
+        }
+
+        public void DisableColumns()
+        {
+            for (int i = 0; i < dgwDB.Columns.Count; i++)
+            {
+                dgwDB.Columns[i].Visible = false;
+            }
+            for (int i = 0; i < dgwDB.Columns.Count; i++)
+            {
+                for (int q = pnlTB.Controls.Count - 1; q >= 0; q--)
+                {
+                    if (pnlTB.Controls[q] is TxtSigma)
+                    {
+                        TxtSigma t = pnlTB.Controls[q] as TxtSigma;
+                        if (!String.IsNullOrWhiteSpace(t.DBReference))
+                        {
+                            if (dgwDB.Columns[i].Name.Equals(t.DBReference))
+                            {
+                                dgwDB.Columns[i].Visible = true;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

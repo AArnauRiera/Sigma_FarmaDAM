@@ -22,9 +22,12 @@ namespace DBUtils
         #region OleDBMethods
         public void Conexion()
         {
-            con = new MySqlConnection(_stringMySQL);
-            con.Open();
-            con.InitializeLifetimeService();
+            if (con == null)
+            {
+                con = new MySqlConnection(_stringMySQL);
+                con.Open();
+                con.InitializeLifetimeService();
+            }
         }
 
         public DataSet PortarPerConsulta(string query)
@@ -64,6 +67,7 @@ namespace DBUtils
 
             try
             {
+                Conexion();
                 dta = new MySqlDataAdapter(query, con);
                 construct = new MySqlCommandBuilder(dta);
 

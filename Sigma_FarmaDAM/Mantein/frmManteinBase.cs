@@ -25,8 +25,6 @@ namespace Mantein
             InitializeComponent();
             dts = new DataSet();
             CenterPanel(pnlMantein);
-            GetQuery();
-            BindingDate();
         }
         
         protected void BindingDate()
@@ -77,7 +75,7 @@ namespace Mantein
         {
             DBUtilities db = new DBUtilities();
             string cols = GetColumns();
-            query = "select "+ cols + " from " + Table;
+            query = "select * from " + Table;
             dts = db.PortarPerConsulta(query);
         }
 
@@ -117,16 +115,11 @@ namespace Mantein
 
         }
 
-        private void btnGet_Click(object sender, EventArgs e)
-        {
-            GetQuery();
-            BindingDate();
-        }
-
         private void btnGet_Click_1(object sender, EventArgs e)
         {
             GetQuery();
             BindingDate();
+            DisableColumns();
         }
 
         private void btnQuery_Click_1(object sender, EventArgs e)
@@ -143,21 +136,49 @@ namespace Mantein
                 BindingDate();
             }
 
-            DataRow row = dts.Tables["Taula"].NewRow();
-
-            dts.Tables["Taula"].Rows.Add(row);
-
-            foreach (DataGridViewRow item in dgwBase.SelectedRows)
-            {
-                item.Selected = false;
-            }
-             
-            dgwBase.Rows[dgwBase.Rows.Count - 1].Selected = true;
+            dgwBase.CurrentCell = dgwBase.Rows[dgwBase.Rows.Count - 1].Cells[1];
         }
 
         private void bntNew_Click(object sender, EventArgs e)
         {
             AddNewRow();
+        }
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+            UpdateQuery();
+        }
+
+        private void frmManteinBase_Load(object sender, EventArgs e)
+        {
+            GetQuery();
+            BindingDate();
+            DisableColumns();
+        }
+
+        public void DisableColumns()
+        {
+            for (int i = 0; i < dgwBase.Columns.Count; i++)
+            {
+                dgwBase.Columns[i].Visible = false;
+            }
+            for (int i = 0; i < dgwBase.Columns.Count; i++)
+            {
+                for (int q = pnlTextBox.Controls.Count - 1; q >= 0; q--)
+                {
+                    if (pnlTextBox.Controls[q] is TxtSigma)
+                    {
+                        TxtSigma t = pnlTextBox.Controls[q] as TxtSigma;
+                        if (!String.IsNullOrWhiteSpace(t.DBReference))
+                        {
+                            if (dgwBase.Columns[i].Name.Equals(t.DBReference))
+                            {
+                                dgwBase.Columns[i].Visible = true;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

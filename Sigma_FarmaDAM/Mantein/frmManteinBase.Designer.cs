@@ -124,6 +124,7 @@
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // btnGet
             // 
@@ -138,7 +139,7 @@
             // 
             // frmManteinBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1068, 760);
@@ -148,6 +149,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmManteinBase";
             this.Text = "frmManteinBase";
+            this.Load += new System.EventHandler(this.frmManteinBase_Load);
             this.pnlMantein.ResumeLayout(false);
             this.pnlGW.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgwBase)).EndInit();
