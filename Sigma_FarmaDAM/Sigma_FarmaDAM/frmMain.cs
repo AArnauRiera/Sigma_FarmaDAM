@@ -203,7 +203,7 @@ namespace Sigma_FarmaDAM
 
             // Get the object used to communicate with the server.
             FtpWebRequest request = (FtpWebRequest)WebRequest.Create(
-            "ftp://172.17.6.0/Grupo_1/1/"
+            "ftp://172.17.6.0/Grupo_1/1/testfile.txt"
             );
             request.Method = WebRequestMethods.Ftp.UploadFile;
             // This example assumes the FTP site uses anonymous logon.
