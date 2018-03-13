@@ -14,6 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UserManagament;
+using XMLTools;
 
 namespace Sigma_FarmaDAM
 {
