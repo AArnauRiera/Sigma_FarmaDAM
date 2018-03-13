@@ -30,6 +30,7 @@
         private void InitializeComponent()
         {
             this.pnltxt = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.txtCantidad = new Sigma_Controls.TxtSigma();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCod = new Sigma_Controls.TxtSigma();
@@ -40,7 +41,6 @@
             this.txtProd = new Sigma_Controls.TxtSigma();
             this.lblName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.pnlDgw = new System.Windows.Forms.Panel();
             this.dgView_Sell = new System.Windows.Forms.DataGridView();
             this.btnBuy = new System.Windows.Forms.Button();
@@ -64,22 +64,31 @@
             this.pnltxt.Controls.Add(this.txtProd);
             this.pnltxt.Controls.Add(this.lblName);
             this.pnltxt.Controls.Add(this.label1);
-            this.pnltxt.Location = new System.Drawing.Point(4, 4);
-            this.pnltxt.Margin = new System.Windows.Forms.Padding(4);
+            this.pnltxt.Location = new System.Drawing.Point(3, 3);
             this.pnltxt.Name = "pnltxt";
-            this.pnltxt.Size = new System.Drawing.Size(462, 589);
+            this.pnltxt.Size = new System.Drawing.Size(346, 479);
             this.pnltxt.TabIndex = 10;
             this.pnltxt.Paint += new System.Windows.Forms.PaintEventHandler(this.pnltxt_Paint);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAdd.Location = new System.Drawing.Point(12, 219);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(98, 29);
+            this.btnAdd.TabIndex = 10;
+            this.btnAdd.Text = "Añadir";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtCantidad
             // 
             this.txtCantidad.DBReference = "Quantity";
             this.txtCantidad.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtCantidad.ForeColor = System.Drawing.Color.White;
-            this.txtCantidad.Location = new System.Drawing.Point(143, 175);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCantidad.Location = new System.Drawing.Point(107, 142);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(143, 22);
+            this.txtCantidad.Size = new System.Drawing.Size(108, 20);
             this.txtCantidad.TabIndex = 35;
             this.txtCantidad.Table = null;
             // 
@@ -87,10 +96,9 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(-394, 340);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(-296, 276);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 17);
+            this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 34;
             this.label6.Text = "Cantidad";
             // 
@@ -100,10 +108,9 @@
             this.txtCod.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCod.ForeColor = System.Drawing.Color.White;
-            this.txtCod.Location = new System.Drawing.Point(16, 133);
-            this.txtCod.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCod.Location = new System.Drawing.Point(12, 108);
             this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(132, 23);
+            this.txtCod.Size = new System.Drawing.Size(100, 20);
             this.txtCod.TabIndex = 25;
             this.txtCod.Table = null;
             this.txtCod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCod_KeyDown);
@@ -111,10 +118,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 112);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(10, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 17);
+            this.label3.Size = new System.Drawing.Size(101, 13);
             this.label3.TabIndex = 30;
             this.label3.Text = "Numero de Registro";
             // 
@@ -122,10 +128,9 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(-340, 234);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(-255, 190);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 29;
             this.label2.Text = "Producto";
             // 
@@ -134,10 +139,9 @@
             this.txtClient.DBReference = "NTS";
             this.txtClient.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtClient.ForeColor = System.Drawing.Color.White;
-            this.txtClient.Location = new System.Drawing.Point(65, 37);
-            this.txtClient.Margin = new System.Windows.Forms.Padding(4);
+            this.txtClient.Location = new System.Drawing.Point(49, 30);
             this.txtClient.Name = "txtClient";
-            this.txtClient.Size = new System.Drawing.Size(140, 22);
+            this.txtClient.Size = new System.Drawing.Size(106, 20);
             this.txtClient.TabIndex = 30;
             this.txtClient.Table = null;
             this.txtClient.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClient_KeyDown);
@@ -145,10 +149,9 @@
             // NTS
             // 
             this.NTS.AutoSize = true;
-            this.NTS.Location = new System.Drawing.Point(13, 40);
-            this.NTS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NTS.Location = new System.Drawing.Point(10, 32);
             this.NTS.Name = "NTS";
-            this.NTS.Size = new System.Drawing.Size(36, 17);
+            this.NTS.Size = new System.Drawing.Size(29, 13);
             this.NTS.TabIndex = 27;
             this.NTS.Text = "NTS";
             // 
@@ -160,10 +163,9 @@
             this.txtProd.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtProd.ForeColor = System.Drawing.Color.Gray;
-            this.txtProd.Location = new System.Drawing.Point(166, 133);
-            this.txtProd.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProd.Location = new System.Drawing.Point(124, 108);
             this.txtProd.Name = "txtProd";
-            this.txtProd.Size = new System.Drawing.Size(273, 23);
+            this.txtProd.Size = new System.Drawing.Size(206, 20);
             this.txtProd.TabIndex = 26;
             this.txtProd.Table = null;
             // 
@@ -173,62 +175,46 @@
             this.lblName.AutoSize = true;
             this.lblName.BackColor = System.Drawing.SystemColors.Control;
             this.lblName.Enabled = false;
-            this.lblName.Location = new System.Drawing.Point(-163, 205);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Location = new System.Drawing.Point(180, 37);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(0, 17);
+            this.lblName.Size = new System.Drawing.Size(87, 13);
             this.lblName.TabIndex = 12;
+            this.lblName.Text = "Datos del Cliente";
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-326, 171);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(-244, 139);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 17);
+            this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "Cliente";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAdd.Location = new System.Drawing.Point(16, 269);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(131, 36);
-            this.btnAdd.TabIndex = 10;
-            this.btnAdd.Text = "Añadir";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // pnlDgw
             // 
             this.pnlDgw.Controls.Add(this.dgView_Sell);
             this.pnlDgw.Controls.Add(this.btnBuy);
-            this.pnlDgw.Location = new System.Drawing.Point(474, 4);
-            this.pnlDgw.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlDgw.Location = new System.Drawing.Point(356, 3);
             this.pnlDgw.Name = "pnlDgw";
-            this.pnlDgw.Size = new System.Drawing.Size(494, 589);
+            this.pnlDgw.Size = new System.Drawing.Size(370, 479);
             this.pnlDgw.TabIndex = 11;
             // 
             // dgView_Sell
             // 
             this.dgView_Sell.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgView_Sell.Location = new System.Drawing.Point(4, 0);
-            this.dgView_Sell.Margin = new System.Windows.Forms.Padding(4);
+            this.dgView_Sell.Location = new System.Drawing.Point(3, 0);
             this.dgView_Sell.Name = "dgView_Sell";
-            this.dgView_Sell.Size = new System.Drawing.Size(490, 547);
+            this.dgView_Sell.Size = new System.Drawing.Size(368, 444);
             this.dgView_Sell.TabIndex = 13;
             this.dgView_Sell.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgView_Sell_CellContentClick);
             // 
             // btnBuy
             // 
             this.btnBuy.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBuy.Location = new System.Drawing.Point(158, 550);
-            this.btnBuy.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuy.Location = new System.Drawing.Point(118, 447);
             this.btnBuy.Name = "btnBuy";
-            this.btnBuy.Size = new System.Drawing.Size(177, 28);
+            this.btnBuy.Size = new System.Drawing.Size(133, 23);
             this.btnBuy.TabIndex = 12;
             this.btnBuy.Text = "Comprar";
             this.btnBuy.UseVisualStyleBackColor = true;
@@ -238,18 +224,18 @@
             // 
             this.panel1.Controls.Add(this.pnltxt);
             this.panel1.Controls.Add(this.pnlDgw);
-            this.panel1.Location = new System.Drawing.Point(94, 36);
+            this.panel1.Location = new System.Drawing.Point(70, 29);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 605);
+            this.panel1.Size = new System.Drawing.Size(750, 492);
             this.panel1.TabIndex = 36;
             // 
             // frmSellsytem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1163, 678);
+            this.ClientSize = new System.Drawing.Size(872, 551);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSellsytem";
             this.Text = "SellSystem";
             this.Load += new System.EventHandler(this.frmSellsytem_Load);
