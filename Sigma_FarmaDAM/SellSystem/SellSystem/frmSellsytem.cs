@@ -13,7 +13,7 @@ using Sigma_Controls;
 
 namespace SellSystem
 {
-    public partial class frmSellsytem : Form
+    public partial class frmSellsytem : CentredForm
     {
         DBUtilities DBUTILS = new DBUtils.DBUtilities();
         public DataSet dts;
@@ -30,7 +30,14 @@ namespace SellSystem
         private string ID_Sell ="1";
 
         ///***CONSTRUCTOR***///
-        public frmSellsytem(String ID_sell){ ID_Sell = ID_sell; }
+        public frmSellsytem(String ID_sell)
+        {
+
+            CenterPanel(panel1);
+
+            ID_Sell = ID_sell;
+
+        }
 
         ///***FUNCTIONS***///
         #region    
