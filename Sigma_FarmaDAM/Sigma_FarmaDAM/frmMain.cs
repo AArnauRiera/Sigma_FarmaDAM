@@ -14,14 +14,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UserManagament;
+using UserRegister;
+using XMLTools;
 
 namespace Sigma_FarmaDAM
 {
     public partial class frmMain : Form
     {
-
-
         private int childFormNumber = 0;
+        private int userId;
 
         public frmMain()
         {
@@ -29,6 +30,13 @@ namespace Sigma_FarmaDAM
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
 
+        }
+        public frmMain(int value)
+        {
+
+            InitializeComponent();
+            WindowState = FormWindowState.Maximized;
+            userId = value;
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -199,38 +207,25 @@ namespace Sigma_FarmaDAM
 
         private void btnGestioComandes_Click(object sender, EventArgs e)
         {
+     
+        }
+        
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            AddNewTab("Añadir Usuario", new frmManteinUsers()
+            {
+                Table = "Seller"
+            });
+        }
 
-            // Get the object used to communicate with the server.
-            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(
-            "ftp://172.17.6.0/Grupo_1/1/"
-            );
-            request.Method = WebRequestMethods.Ftp.UploadFile;
-            // This example assumes the FTP site uses anonymous logon.
-            request.Credentials =
-            new
-            NetworkCredential(
-            "grupo1"
-            ,
-            "12345aA"
-            );
-            // Copy the contents of the file to the request stream.
-            StreamReader sourceStream =
-            new
-            StreamReader(
-            "testfile.txt"
-            );
-            byte
-            [] fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
-            sourceStream.Close();
-            request.ContentLength = fileContents.Length;
-            Stream requestStream = request.GetRequestStream();
-            requestStream.Write(fileContents, 0, fileContents.Length);
-            requestStream.Close();
-            FtpWebResponse response = (FtpWebResponse)request.GetResponse();
-            Console.WriteLine(
-            "Upload File Complete, status {0}"
-            , response.StatusDescription);
-            response.Close();
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            LoginControl.LoginControl logControl = new LoginControl.LoginControl();
+
+            if (!logControl.CheckIfUserIsAdmin(userId, btnUserManagement))
+            {
+                btnUserManagement.Hide();
+            }
         }
     }
 }

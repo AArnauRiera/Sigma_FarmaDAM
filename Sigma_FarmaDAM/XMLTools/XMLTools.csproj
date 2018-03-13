@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\dll\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -48,6 +48,7 @@
     <Compile Include="frmLoadPAXml.Designer.cs">
       <DependentUpon>frmLoadPAXml.cs</DependentUpon>
     </Compile>
+    <Compile Include="FTPHelper.cs" />
     <Compile Include="XMLGenerator.cs" />
     <Compile Include="frmLoadDataXML.cs">
       <SubType>Form</SubType>

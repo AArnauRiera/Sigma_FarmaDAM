@@ -21,20 +21,21 @@ namespace Sigma_FarmaDAM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             frmLogin Login = new frmLogin();
-            //frmLoadDataXML xml = new frmLoadDataXML();
+            
             if (Login.ShowDialog() == DialogResult.OK)
             {
                 SplashScreen splash = new SplashScreen();
                 
                 if(splash.ShowDialog() == DialogResult.OK)
                 {
-                    Application.Run(new frmMain());
+                    Application.Run(new frmMain(Login.getUserId()));
                 }
             }
             else
             {
                 Application.Exit();
             }
+           
             
         }
     }

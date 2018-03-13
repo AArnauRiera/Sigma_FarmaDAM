@@ -49,6 +49,7 @@
             this.tbxRepeatPassword = new Sigma_Controls.TxtSigma();
             this.chbAdmin = new Sigma_Controls.CheckBoxSigma();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +68,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(175, 494);
+            this.btnGuardar.Location = new System.Drawing.Point(67, 495);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(105, 23);
             this.btnGuardar.TabIndex = 1;
@@ -266,11 +267,22 @@
             this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(278, 495);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(105, 23);
+            this.btnCancel.TabIndex = 21;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // frmUserRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 565);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.chbAdmin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbxRepeatPassword);
@@ -290,7 +302,12 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.tbxName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmUserRegister";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUserRegister";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUserRegister_KeyDown);
@@ -322,5 +339,6 @@
         private Sigma_Controls.TxtSigma tbxRepeatPassword;
         private Sigma_Controls.CheckBoxSigma chbAdmin;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

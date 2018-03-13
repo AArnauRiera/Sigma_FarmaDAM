@@ -58,6 +58,7 @@ namespace Mantein
 
             for (int i = pnlTextBox.Controls.Count - 1; i >= 0; i--)
             {
+
                 if (pnlTextBox.Controls[i] is TxtSigma)
                 {
                     TxtSigma t = pnlTextBox.Controls[i] as TxtSigma;
@@ -66,6 +67,7 @@ namespace Mantein
                         col.Add(t.DBReference);
                     }
                 }
+
             }
 
             columns = string.Join(",", col);
@@ -154,8 +156,7 @@ namespace Mantein
              
             dgwBase.Rows[dgwBase.Rows.Count - 1].Selected = true;
         }
-
-        private void bntNew_Click(object sender, EventArgs e)
+        public virtual void bntNew_Click(object sender, EventArgs e)
         {
             AddNewRow();
         }
