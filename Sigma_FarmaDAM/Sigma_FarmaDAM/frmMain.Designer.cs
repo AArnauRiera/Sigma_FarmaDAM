@@ -335,7 +335,7 @@
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
             this.Name = "frmMain";
-            this.Text = "frmMain";
+            this.Text = "FarmaDAM";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
