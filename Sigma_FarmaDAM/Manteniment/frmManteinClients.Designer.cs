@@ -28,148 +28,236 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNTS = new System.Windows.Forms.Label();
-            this.lblDNI = new System.Windows.Forms.Label();
-            this.lblLastName2 = new System.Windows.Forms.Label();
-            this.lblLastName1 = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.txtNTS = new Sigma_Controls.TxtSigma();
-            this.txtLastName2 = new Sigma_Controls.TxtSigma();
-            this.txtLastName1 = new Sigma_Controls.TxtSigma();
-            this.txtDNI = new Sigma_Controls.TxtSigma();
-            this.txtName = new Sigma_Controls.TxtSigma();
+            this.tbxAddress2 = new Sigma_Controls.TxtSigma();
+            this.tbxAddress1 = new Sigma_Controls.TxtSigma();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbxFirstName = new Sigma_Controls.TxtSigma();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
+            this.tbxLastName1 = new Sigma_Controls.TxtSigma();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbxLastName2 = new Sigma_Controls.TxtSigma();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbxDNI = new Sigma_Controls.TxtSigma();
+            this.tbxNTS = new Sigma_Controls.TxtSigma();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSigma1 = new Sigma_Controls.TxtSigma();
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
             this.pnlButtons.SuspendLayout();
+            this.pnlMantein.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTextBox
             // 
-            this.pnlTextBox.Controls.Add(this.lblNTS);
-            this.pnlTextBox.Controls.Add(this.lblDNI);
-            this.pnlTextBox.Controls.Add(this.lblLastName2);
-            this.pnlTextBox.Controls.Add(this.lblLastName1);
-            this.pnlTextBox.Controls.Add(this.lblName);
-            this.pnlTextBox.Controls.Add(this.txtNTS);
-            this.pnlTextBox.Controls.Add(this.txtLastName2);
-            this.pnlTextBox.Controls.Add(this.txtLastName1);
-            this.pnlTextBox.Controls.Add(this.txtDNI);
-            this.pnlTextBox.Controls.Add(this.txtName);
+            this.pnlTextBox.Controls.Add(this.txtSigma1);
+            this.pnlTextBox.Controls.Add(this.tbxAddress2);
+            this.pnlTextBox.Controls.Add(this.tbxAddress1);
+            this.pnlTextBox.Controls.Add(this.label5);
+            this.pnlTextBox.Controls.Add(this.tbxFirstName);
+            this.pnlTextBox.Controls.Add(this.label1);
+            this.pnlTextBox.Controls.Add(this.lblError);
+            this.pnlTextBox.Controls.Add(this.tbxLastName1);
+            this.pnlTextBox.Controls.Add(this.label2);
+            this.pnlTextBox.Controls.Add(this.tbxLastName2);
+            this.pnlTextBox.Controls.Add(this.label7);
+            this.pnlTextBox.Controls.Add(this.label3);
+            this.pnlTextBox.Controls.Add(this.label6);
+            this.pnlTextBox.Controls.Add(this.tbxDNI);
+            this.pnlTextBox.Controls.Add(this.tbxNTS);
+            this.pnlTextBox.Controls.Add(this.label4);
             // 
-            // lblNTS
+            // pnlMantein
             // 
-            this.lblNTS.AutoSize = true;
-            this.lblNTS.Location = new System.Drawing.Point(4, 146);
-            this.lblNTS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNTS.Name = "lblNTS";
-            this.lblNTS.Size = new System.Drawing.Size(41, 23);
-            this.lblNTS.TabIndex = 16;
-            this.lblNTS.Text = "NTS";
+            this.pnlMantein.Location = new System.Drawing.Point(1, 7);
+            this.pnlMantein.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             // 
-            // lblDNI
+            // tbxAddress2
             // 
-            this.lblDNI.AutoSize = true;
-            this.lblDNI.Location = new System.Drawing.Point(4, 108);
-            this.lblDNI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(40, 23);
-            this.lblDNI.TabIndex = 17;
-            this.lblDNI.Text = "DNI";
+            this.tbxAddress2.DBReference = "address2";
+            this.tbxAddress2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
+            this.tbxAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxAddress2.ForeColor = System.Drawing.Color.Black;
+            this.tbxAddress2.Location = new System.Drawing.Point(156, 144);
+            this.tbxAddress2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tbxAddress2.Name = "tbxAddress2";
+            this.tbxAddress2.Size = new System.Drawing.Size(211, 23);
+            this.tbxAddress2.TabIndex = 43;
+            this.tbxAddress2.Table = null;
             // 
-            // lblLastName2
+            // tbxAddress1
             // 
-            this.lblLastName2.AutoSize = true;
-            this.lblLastName2.Location = new System.Drawing.Point(4, 74);
-            this.lblLastName2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblLastName2.Name = "lblLastName2";
-            this.lblLastName2.Size = new System.Drawing.Size(145, 23);
-            this.lblLastName2.TabIndex = 18;
-            this.lblLastName2.Text = "Second last name";
+            this.tbxAddress1.DBReference = "address1";
+            this.tbxAddress1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
+            this.tbxAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxAddress1.ForeColor = System.Drawing.Color.Black;
+            this.tbxAddress1.Location = new System.Drawing.Point(156, 111);
+            this.tbxAddress1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tbxAddress1.Name = "tbxAddress1";
+            this.tbxAddress1.Size = new System.Drawing.Size(211, 23);
+            this.tbxAddress1.TabIndex = 42;
+            this.tbxAddress1.Table = null;
             // 
-            // lblLastName1
+            // label5
             // 
-            this.lblLastName1.AutoSize = true;
-            this.lblLastName1.Location = new System.Drawing.Point(4, 39);
-            this.lblLastName1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblLastName1.Name = "lblLastName1";
-            this.lblLastName1.Size = new System.Drawing.Size(120, 23);
-            this.lblLastName1.TabIndex = 15;
-            this.lblLastName1.Text = "First last name";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 111);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 23);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "Dirección";
             // 
-            // lblName
+            // tbxFirstName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(4, 6);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(56, 23);
-            this.lblName.TabIndex = 14;
-            this.lblName.Text = "Name";
+            this.tbxFirstName.DBReference = "Name";
+            this.tbxFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.tbxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxFirstName.ForeColor = System.Drawing.Color.Black;
+            this.tbxFirstName.Location = new System.Drawing.Point(157, 176);
+            this.tbxFirstName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tbxFirstName.Name = "tbxFirstName";
+            this.tbxFirstName.Size = new System.Drawing.Size(211, 23);
+            this.tbxFirstName.TabIndex = 45;
+            this.tbxFirstName.Table = null;
             // 
-            // txtNTS
+            // label1
             // 
-            this.txtNTS.DBReference = "NTS";
-            this.txtNTS.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtNTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
-            this.txtNTS.ForeColor = System.Drawing.Color.Gray;
-            this.txtNTS.Location = new System.Drawing.Point(219, 146);
-            this.txtNTS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtNTS.Name = "txtNTS";
-            this.txtNTS.Size = new System.Drawing.Size(148, 22);
-            this.txtNTS.TabIndex = 13;
-            this.txtNTS.Table = "Clients";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 175);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 23);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Nombre";
             // 
-            // txtLastName2
+            // lblError
             // 
-            this.txtLastName2.DBReference = "lastName2";
-            this.txtLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtLastName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
-            this.txtLastName2.ForeColor = System.Drawing.Color.Gray;
-            this.txtLastName2.Location = new System.Drawing.Point(219, 74);
-            this.txtLastName2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtLastName2.Name = "txtLastName2";
-            this.txtLastName2.Size = new System.Drawing.Size(148, 22);
-            this.txtLastName2.TabIndex = 12;
-            this.txtLastName2.Table = "Clients";
+            this.lblError.AutoSize = true;
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(151, -23);
+            this.lblError.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 23);
+            this.lblError.TabIndex = 52;
             // 
-            // txtLastName1
+            // tbxLastName1
             // 
-            this.txtLastName1.DBReference = "lastName1";
-            this.txtLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtLastName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
-            this.txtLastName1.ForeColor = System.Drawing.Color.Gray;
-            this.txtLastName1.Location = new System.Drawing.Point(219, 40);
-            this.txtLastName1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtLastName1.Name = "txtLastName1";
-            this.txtLastName1.Size = new System.Drawing.Size(148, 22);
-            this.txtLastName1.TabIndex = 11;
-            this.txtLastName1.Table = "Clients";
+            this.tbxLastName1.DBReference = "lastName1";
+            this.tbxLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.LastName;
+            this.tbxLastName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxLastName1.ForeColor = System.Drawing.Color.Black;
+            this.tbxLastName1.Location = new System.Drawing.Point(157, 211);
+            this.tbxLastName1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tbxLastName1.Name = "tbxLastName1";
+            this.tbxLastName1.Size = new System.Drawing.Size(211, 23);
+            this.tbxLastName1.TabIndex = 46;
+            this.tbxLastName1.Table = null;
             // 
-            // txtDNI
+            // label2
             // 
-            this.txtDNI.DBReference = "DNI";
-            this.txtDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
-            this.txtDNI.ForeColor = System.Drawing.Color.Gray;
-            this.txtDNI.Location = new System.Drawing.Point(219, 108);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(148, 22);
-            this.txtDNI.TabIndex = 10;
-            this.txtDNI.Table = "Clients";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 211);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 23);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Primer apellido";
             // 
-            // txtName
+            // tbxLastName2
             // 
-            this.txtName.DBReference = "Name";
-            this.txtName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
-            this.txtName.ForeColor = System.Drawing.Color.Gray;
-            this.txtName.Location = new System.Drawing.Point(219, 6);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(148, 22);
-            this.txtName.TabIndex = 9;
-            this.txtName.Table = "Clients";
+            this.tbxLastName2.DBReference = "lastName2";
+            this.tbxLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.LastName;
+            this.tbxLastName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxLastName2.ForeColor = System.Drawing.Color.Black;
+            this.tbxLastName2.Location = new System.Drawing.Point(156, 246);
+            this.tbxLastName2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tbxLastName2.Name = "tbxLastName2";
+            this.tbxLastName2.Size = new System.Drawing.Size(211, 23);
+            this.tbxLastName2.TabIndex = 47;
+            this.tbxLastName2.Table = null;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(5, 76);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 23);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "Tipo NSS";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(5, 246);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(143, 23);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "Segundo apellido";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(5, 6);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 23);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "NSS";
+            // 
+            // tbxDNI
+            // 
+            this.tbxDNI.DBReference = "DNI";
+            this.tbxDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.DNI;
+            this.tbxDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxDNI.ForeColor = System.Drawing.Color.Black;
+            this.tbxDNI.Location = new System.Drawing.Point(156, 41);
+            this.tbxDNI.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tbxDNI.Name = "tbxDNI";
+            this.tbxDNI.Size = new System.Drawing.Size(211, 23);
+            this.tbxDNI.TabIndex = 40;
+            this.tbxDNI.Table = null;
+            this.tbxDNI.Tag = "";
+            // 
+            // tbxNTS
+            // 
+            this.tbxNTS.DBReference = "NTS";
+            this.tbxNTS.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.tbxNTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxNTS.ForeColor = System.Drawing.Color.Black;
+            this.tbxNTS.Location = new System.Drawing.Point(155, 6);
+            this.tbxNTS.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tbxNTS.Name = "tbxNTS";
+            this.tbxNTS.Size = new System.Drawing.Size(211, 23);
+            this.tbxNTS.TabIndex = 38;
+            this.tbxNTS.Table = null;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 40);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 23);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "DNI";
+            // 
+            // txtSigma1
+            // 
+            this.txtSigma1.DBReference = "Type_NTS";
+            this.txtSigma1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
+            this.txtSigma1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSigma1.ForeColor = System.Drawing.Color.Black;
+            this.txtSigma1.Location = new System.Drawing.Point(155, 76);
+            this.txtSigma1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtSigma1.Name = "txtSigma1";
+            this.txtSigma1.Size = new System.Drawing.Size(211, 23);
+            this.txtSigma1.TabIndex = 54;
+            this.txtSigma1.Table = null;
             // 
             // frmManteinClients
             // 
@@ -181,21 +269,28 @@
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();
             this.pnlButtons.ResumeLayout(false);
+            this.pnlMantein.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblNTS;
-        private System.Windows.Forms.Label lblDNI;
-        private System.Windows.Forms.Label lblLastName2;
-        private System.Windows.Forms.Label lblLastName1;
-        private System.Windows.Forms.Label lblName;
-        private Sigma_Controls.TxtSigma txtNTS;
-        private Sigma_Controls.TxtSigma txtLastName2;
-        private Sigma_Controls.TxtSigma txtLastName1;
-        private Sigma_Controls.TxtSigma txtDNI;
-        private Sigma_Controls.TxtSigma txtName;
+        public Sigma_Controls.TxtSigma tbxAddress2;
+        public Sigma_Controls.TxtSigma tbxAddress1;
+        private System.Windows.Forms.Label label5;
+        public Sigma_Controls.TxtSigma tbxFirstName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblError;
+        public Sigma_Controls.TxtSigma tbxLastName1;
+        private System.Windows.Forms.Label label2;
+        public Sigma_Controls.TxtSigma tbxLastName2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        public Sigma_Controls.TxtSigma tbxDNI;
+        public Sigma_Controls.TxtSigma tbxNTS;
+        private System.Windows.Forms.Label label4;
+        public Sigma_Controls.TxtSigma txtSigma1;
     }
 }

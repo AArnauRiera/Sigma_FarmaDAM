@@ -35,6 +35,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
             this.pnlButtons.SuspendLayout();
+            this.pnlMantein.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTextBox
@@ -66,9 +67,9 @@
             this.lblName.Location = new System.Drawing.Point(4, 31);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(45, 19);
+            this.lblName.Size = new System.Drawing.Size(59, 19);
             this.lblName.TabIndex = 4;
-            this.lblName.Text = "Name";
+            this.lblName.Text = "Nombre";
             // 
             // lblSRN
             // 
@@ -87,7 +88,7 @@
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtName.ForeColor = System.Drawing.Color.Gray;
             this.txtName.Location = new System.Drawing.Point(195, 31);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(132, 20);
             this.txtName.TabIndex = 1;
@@ -100,7 +101,7 @@
             this.txtSRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtSRN.ForeColor = System.Drawing.Color.Gray;
             this.txtSRN.Location = new System.Drawing.Point(195, 4);
-            this.txtSRN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSRN.Margin = new System.Windows.Forms.Padding(4);
             this.txtSRN.Name = "txtSRN";
             this.txtSRN.Size = new System.Drawing.Size(132, 20);
             this.txtSRN.TabIndex = 0;
@@ -109,13 +110,14 @@
             // frmManteinActivePrinciple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.ClientSize = new System.Drawing.Size(1011, 629);
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.ClientSize = new System.Drawing.Size(1011, 770);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "frmManteinActivePrinciple";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();
             this.pnlButtons.ResumeLayout(false);
+            this.pnlMantein.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

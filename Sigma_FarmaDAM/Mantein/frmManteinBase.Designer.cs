@@ -48,7 +48,7 @@
             this.pnlMantein.Controls.Add(this.pnlGW);
             this.pnlMantein.Controls.Add(this.pnlTextBox);
             this.pnlMantein.Controls.Add(this.pnlButtons);
-            this.pnlMantein.Location = new System.Drawing.Point(2, 0);
+            this.pnlMantein.Location = new System.Drawing.Point(3, 0);
             this.pnlMantein.Name = "pnlMantein";
             this.pnlMantein.Size = new System.Drawing.Size(1065, 748);
             this.pnlMantein.TabIndex = 0;
@@ -100,7 +100,7 @@
             this.bntNew.Name = "bntNew";
             this.bntNew.Size = new System.Drawing.Size(78, 41);
             this.bntNew.TabIndex = 14;
-            this.bntNew.Text = "New";
+            this.bntNew.Text = "Nuevo";
             this.bntNew.UseVisualStyleBackColor = true;
             this.bntNew.Click += new System.EventHandler(this.bntNew_Click);
             // 
@@ -111,7 +111,7 @@
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.Size = new System.Drawing.Size(78, 41);
             this.btnQuery.TabIndex = 0;
-            this.btnQuery.Text = "Search";
+            this.btnQuery.Text = "Buscar";
             this.btnQuery.UseVisualStyleBackColor = true;
             this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click_1);
             // 
@@ -122,7 +122,7 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(82, 41);
             this.btnUpdate.TabIndex = 13;
-            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // btnGet
@@ -132,7 +132,7 @@
             this.btnGet.Name = "btnGet";
             this.btnGet.Size = new System.Drawing.Size(87, 41);
             this.btnGet.TabIndex = 12;
-            this.btnGet.Text = "Get";
+            this.btnGet.Text = "Obtener";
             this.btnGet.UseVisualStyleBackColor = true;
             this.btnGet.Click += new System.EventHandler(this.btnGet_Click_1);
             // 
@@ -141,7 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1069, 760);
+            this.ClientSize = new System.Drawing.Size(1068, 760);
             this.Controls.Add(this.pnlMantein);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -157,8 +157,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlMantein;
         protected System.Windows.Forms.Panel pnlTextBox;
         protected System.Windows.Forms.Button btnQuery;
         protected System.Windows.Forms.Panel pnlButtons;
@@ -167,5 +165,6 @@
         private System.Windows.Forms.Panel pnlGW;
         protected System.Windows.Forms.DataGridView dgwBase;
         protected System.Windows.Forms.Button bntNew;
+        protected System.Windows.Forms.Panel pnlMantein;
     }
 }

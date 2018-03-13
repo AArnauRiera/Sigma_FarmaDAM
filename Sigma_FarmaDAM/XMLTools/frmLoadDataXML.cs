@@ -126,9 +126,17 @@ namespace XMLTools
                             break;
                     }
                 }
+
                 dtr["IVAId"] = 2;
                 dtr["Price"] = 10;
-                ds.Tables["Taula"].Rows.Add(dtr);
+
+                DataSet exist = db.PortarPerConsulta("select * from Drugs where Register_number = " + dtr["Register_number"]);
+
+                if (exist.Tables["Taula"].Rows.Count == 0)
+                {
+                    ds.Tables["Taula"].Rows.Add(dtr);
+                }   
+                
             }
 
             db.Actualizar("select * from Drugs where 1 = 2", "Taula", ds);

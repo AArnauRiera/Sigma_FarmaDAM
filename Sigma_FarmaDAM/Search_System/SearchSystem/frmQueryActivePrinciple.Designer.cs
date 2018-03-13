@@ -32,8 +32,13 @@
             this.txtName = new Sigma_Controls.TxtSigma();
             this.lblSRN = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.pnlButtons.SuspendLayout();
             this.pnlTB.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Text = "Selccionar";
             // 
             // pnlTB
             // 
@@ -74,17 +79,18 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(202, 88);
+            this.lblName.Location = new System.Drawing.Point(195, 88);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.Size = new System.Drawing.Size(44, 13);
             this.lblName.TabIndex = 1;
-            this.lblName.Text = "Name";
+            this.lblName.Text = "Nombre";
             // 
             // frmQueryActivePrinciple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(595, 501);
             this.Name = "frmQueryActivePrinciple";
+            this.pnlButtons.ResumeLayout(false);
             this.pnlTB.ResumeLayout(false);
             this.pnlTB.PerformLayout();
             this.ResumeLayout(false);

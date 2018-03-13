@@ -76,18 +76,18 @@
             this.lblReplaceable.AutoSize = true;
             this.lblReplaceable.Location = new System.Drawing.Point(129, 127);
             this.lblReplaceable.Name = "lblReplaceable";
-            this.lblReplaceable.Size = new System.Drawing.Size(67, 13);
+            this.lblReplaceable.Size = new System.Drawing.Size(68, 13);
             this.lblReplaceable.TabIndex = 16;
-            this.lblReplaceable.Text = "Replaceable";
+            this.lblReplaceable.Text = "Remplazable";
             // 
             // lblContent
             // 
             this.lblContent.AutoSize = true;
-            this.lblContent.Location = new System.Drawing.Point(152, 98);
+            this.lblContent.Location = new System.Drawing.Point(144, 98);
             this.lblContent.Name = "lblContent";
-            this.lblContent.Size = new System.Drawing.Size(44, 13);
+            this.lblContent.Size = new System.Drawing.Size(55, 13);
             this.lblContent.TabIndex = 17;
-            this.lblContent.Text = "Content";
+            this.lblContent.Text = "Contenido";
             // 
             // lblIdActive
             // 
@@ -103,9 +103,9 @@
             this.lblDenomination.AutoSize = true;
             this.lblDenomination.Location = new System.Drawing.Point(124, 50);
             this.lblDenomination.Name = "lblDenomination";
-            this.lblDenomination.Size = new System.Drawing.Size(72, 13);
+            this.lblDenomination.Size = new System.Drawing.Size(75, 13);
             this.lblDenomination.TabIndex = 15;
-            this.lblDenomination.Text = "Denomination";
+            this.lblDenomination.Text = "Denominacion";
             // 
             // lblSRN
             // 
@@ -181,27 +181,27 @@
             this.lblGeneric.AutoSize = true;
             this.lblGeneric.Location = new System.Drawing.Point(341, 23);
             this.lblGeneric.Name = "lblGeneric";
-            this.lblGeneric.Size = new System.Drawing.Size(44, 13);
+            this.lblGeneric.Size = new System.Drawing.Size(50, 13);
             this.lblGeneric.TabIndex = 16;
-            this.lblGeneric.Text = "Generic";
+            this.lblGeneric.Text = "Generico";
             // 
             // lblObligatory
             // 
             this.lblObligatory.AutoSize = true;
             this.lblObligatory.Location = new System.Drawing.Point(331, 46);
             this.lblObligatory.Name = "lblObligatory";
-            this.lblObligatory.Size = new System.Drawing.Size(54, 13);
+            this.lblObligatory.Size = new System.Drawing.Size(57, 13);
             this.lblObligatory.TabIndex = 16;
-            this.lblObligatory.Text = "Obligatory";
+            this.lblObligatory.Text = "Obligatorio";
             // 
             // lblDocumentation
             // 
             this.lblDocumentation.AutoSize = true;
-            this.lblDocumentation.Location = new System.Drawing.Point(310, 72);
+            this.lblDocumentation.Location = new System.Drawing.Point(306, 72);
             this.lblDocumentation.Name = "lblDocumentation";
-            this.lblDocumentation.Size = new System.Drawing.Size(79, 13);
+            this.lblDocumentation.Size = new System.Drawing.Size(82, 13);
             this.lblDocumentation.TabIndex = 16;
-            this.lblDocumentation.Text = "Documentation";
+            this.lblDocumentation.Text = "Documentacion";
             // 
             // lblProspectus
             // 
@@ -210,7 +210,7 @@
             this.lblProspectus.Name = "lblProspectus";
             this.lblProspectus.Size = new System.Drawing.Size(60, 13);
             this.lblProspectus.TabIndex = 16;
-            this.lblProspectus.Text = "Prospectus";
+            this.lblProspectus.Text = "Prospectos";
             // 
             // txtGeneric
             // 

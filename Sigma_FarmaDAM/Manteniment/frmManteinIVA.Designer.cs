@@ -44,23 +44,39 @@
             this.pnlTextBox.Controls.Add(this.txtValue);
             this.pnlTextBox.Controls.Add(this.txtId);
             // 
+            // btnQuery
+            // 
+            this.btnQuery.Text = "Buscar";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Text = "Actualizar";
+            // 
+            // btnGet
+            // 
+            this.btnGet.Text = "Obtener";
+            // 
+            // bntNew
+            // 
+            this.bntNew.Text = "Nuevo";
+            // 
             // lblValue
             // 
             this.lblValue.AutoSize = true;
-            this.lblValue.Location = new System.Drawing.Point(4, 40);
+            this.lblValue.Location = new System.Drawing.Point(4, 33);
             this.lblValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValue.Name = "lblValue";
-            this.lblValue.Size = new System.Drawing.Size(52, 23);
+            this.lblValue.Size = new System.Drawing.Size(40, 19);
             this.lblValue.TabIndex = 4;
-            this.lblValue.Text = "Value";
+            this.lblValue.Text = "Valor";
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(4, 6);
+            this.lblId.Location = new System.Drawing.Point(4, 5);
             this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(25, 23);
+            this.lblId.Size = new System.Drawing.Size(21, 19);
             this.lblId.TabIndex = 5;
             this.lblId.Text = "Id";
             // 
@@ -70,10 +86,10 @@
             this.txtValue.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtValue.ForeColor = System.Drawing.Color.Gray;
-            this.txtValue.Location = new System.Drawing.Point(219, 40);
-            this.txtValue.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtValue.Location = new System.Drawing.Point(195, 33);
+            this.txtValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtValue.Name = "txtValue";
-            this.txtValue.Size = new System.Drawing.Size(148, 22);
+            this.txtValue.Size = new System.Drawing.Size(132, 19);
             this.txtValue.TabIndex = 2;
             this.txtValue.Table = "IVA";
             // 
@@ -83,18 +99,18 @@
             this.txtId.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtId.ForeColor = System.Drawing.Color.Gray;
-            this.txtId.Location = new System.Drawing.Point(219, 6);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtId.Location = new System.Drawing.Point(195, 5);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(148, 22);
+            this.txtId.Size = new System.Drawing.Size(132, 19);
             this.txtId.TabIndex = 3;
             this.txtId.Table = "IVA";
             // 
             // frmManteinIVA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
-            this.ClientSize = new System.Drawing.Size(1068, 760);
-            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.ClientSize = new System.Drawing.Size(949, 628);
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmManteinIVA";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
             this.pnlTextBox.ResumeLayout(false);
