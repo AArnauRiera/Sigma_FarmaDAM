@@ -257,6 +257,10 @@ namespace UserManagament
                 {
                     errorProvider.SetError(button, "Algun campo es incorrecto");
 
+                } else
+                {
+                    errorProvider.SetError(button, "");
+
                 }
 
                 if (correct)
