@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mantein;
+using UserRegister;
 
 namespace Manteniment
 {
@@ -18,9 +19,30 @@ namespace Manteniment
             InitializeComponent();
         }
 
+        private bool isOpened = false;
+
         public override void bntNew_Click(object sender, EventArgs e)
         {
             AddNewUser();
+        }
+
+        private void AddNewUser()
+        {
+            bool isOpened = false;
+            frmUserRegister frmReg = new frmUserRegister();
+            FormCollection fc = Application.OpenForms;
+
+            foreach (Form frm in fc)
+            {
+                if (frm.GetType() == frmReg.GetType())
+                {
+                    isOpened = true;
+                }
+            }
+            if (!isOpened)
+            {
+                frmReg.Show();
+            }
         }
     }
 }

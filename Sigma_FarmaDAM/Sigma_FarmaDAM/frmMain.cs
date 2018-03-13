@@ -253,10 +253,9 @@ namespace Sigma_FarmaDAM
         {
             LoginControl.LoginControl logControl = new LoginControl.LoginControl();
 
-            if (!logControl.CheckIfUserIsAdmin(userId, errorProvider, btnAddUser))
+            if (!logControl.CheckIfUserIsAdmin(userId, btnUserManagement))
             {
-                btnAddUser.Enabled = false;
-                btnAddUser.Hide();
+                btnUserManagement.Hide();
             }
         }
     }

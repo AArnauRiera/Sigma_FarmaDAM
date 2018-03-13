@@ -156,8 +156,7 @@ namespace Mantein
              
             dgwBase.Rows[dgwBase.Rows.Count - 1].Selected = true;
         }
-
-        private void bntNew_Click(object sender, EventArgs e)
+        public virtual void bntNew_Click(object sender, EventArgs e)
         {
             AddNewRow();
         }

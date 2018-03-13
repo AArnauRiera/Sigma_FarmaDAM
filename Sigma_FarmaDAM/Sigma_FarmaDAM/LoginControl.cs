@@ -88,7 +88,7 @@ namespace LoginControl
             return isAdmin;
         }
 
-        public bool CheckIfUserIsAdmin(int Id, ErrorProvider errorProvider, Button btn)
+        public bool CheckIfUserIsAdmin(int Id, Button btn)
         {
             bool isAdmin = false;
 
@@ -98,10 +98,6 @@ namespace LoginControl
             if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0 && dts.Tables["Taula"].Rows[0]["rol"].Equals(true))
             {
                 isAdmin = true;
-            }
-            if (!isAdmin)
-            {
-                errorProvider.SetError(btn, "El usuario debe ser administrador");
             }
 
             return isAdmin;
