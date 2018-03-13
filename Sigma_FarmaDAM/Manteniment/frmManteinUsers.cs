@@ -17,5 +17,10 @@ namespace Manteniment
         {
             InitializeComponent();
         }
+
+        public override void bntNew_Click(object sender, EventArgs e)
+        {
+            AddNewUser();
+        }
     }
 }

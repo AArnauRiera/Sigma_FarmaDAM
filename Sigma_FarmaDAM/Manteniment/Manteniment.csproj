@@ -128,6 +128,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DBUtils\DBUtils.csproj">
+      <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
+      <Name>DBUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Helpers\Helpers.csproj">
+      <Project>{e1addef3-7ed3-4c2b-b454-e637e10a6a35}</Project>
+      <Name>Helpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Mantein\Mantein.csproj">
       <Project>{951a95b0-6b1f-40d7-a091-29ca118d6756}</Project>
       <Name>Mantein</Name>

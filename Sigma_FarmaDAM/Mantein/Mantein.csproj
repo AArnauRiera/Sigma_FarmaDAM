@@ -55,6 +55,13 @@
       <DependentUpon>frmQueryBase.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserRegister\frmUserRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRegister\frmUserRegister.Designer.cs">
+      <DependentUpon>frmUserRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserRegister\LoginControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmManteinBase.resx">
@@ -62,6 +69,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQueryBase.resx">
       <DependentUpon>frmQueryBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRegister\frmUserRegister.resx">
+      <DependentUpon>frmUserRegister.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +82,10 @@
     <ProjectReference Include="..\DBUtils\DBUtils.csproj">
       <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
       <Name>DBUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Helpers\Helpers.csproj">
+      <Project>{e1addef3-7ed3-4c2b-b454-e637e10a6a35}</Project>
+      <Name>Helpers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Sigma_Controls\Sigma_Controls.csproj">
       <Project>{bafea927-64a5-4fc5-bcd7-16df3e7c71e4}</Project>

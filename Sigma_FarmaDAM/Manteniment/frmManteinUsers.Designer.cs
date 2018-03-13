@@ -56,6 +56,10 @@
             this.pnlTextBox.Controls.Add(this.tbxEmail);
             this.pnlTextBox.Controls.Add(this.label4);
             // 
+            // bntNew
+            // 
+            this.bntNew.Click += new System.EventHandler(this.bntNew_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
