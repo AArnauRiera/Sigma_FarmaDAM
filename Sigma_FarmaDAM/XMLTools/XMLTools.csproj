@@ -48,6 +48,7 @@
     <Compile Include="frmLoadPAXml.Designer.cs">
       <DependentUpon>frmLoadPAXml.cs</DependentUpon>
     </Compile>
+    <Compile Include="FTPHelper.cs" />
     <Compile Include="XMLGenerator.cs" />
     <Compile Include="frmLoadDataXML.cs">
       <SubType>Form</SubType>
