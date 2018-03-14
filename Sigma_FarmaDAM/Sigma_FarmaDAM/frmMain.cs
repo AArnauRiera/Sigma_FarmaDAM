@@ -208,6 +208,8 @@ namespace Sigma_FarmaDAM
         private void btnGestioComandes_Click(object sender, EventArgs e)
         {
      
+            AddNewTab("Gestio de Comandes", new frmGestionComandas());
+
         }
         
         private void btnAddUser_Click(object sender, EventArgs e)
@@ -226,6 +228,11 @@ namespace Sigma_FarmaDAM
             {
                 btnUserManagement.Hide();
             }
+        }
+
+        private void btnXml_Click(object sender, EventArgs e)
+        {
+            AddNewTab("Xml", new frmLoadLabXml());
         }
     }
 }

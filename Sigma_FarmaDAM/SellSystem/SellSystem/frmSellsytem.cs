@@ -33,7 +33,7 @@ namespace SellSystem
         }
 
         /////***FUNCTIONS***///
-        //#region    
+        #region    
         /////Busca si el cliente existe///
         //private bool Client_exist()
         //{
@@ -134,7 +134,7 @@ namespace SellSystem
             int drug_id = Convert.ToInt32(Drug);
             return drug_id;
         }
-        //#endregion
+        #endregion
         ///***MAIN***///
         #region
         public frmSellsytem()
@@ -165,8 +165,8 @@ namespace SellSystem
                     dgView_Sell.DataSource = dt;
                     dgView_Sell.Columns[0].HeaderText = "ID Medicamento";
                     dgView_Sell.Columns[1].HeaderText = "Nombre Medicamento";
-                    dgView_Sell.Columns[2].Visible = false;
-                    dgView_Sell.Columns[3].Visible = false;
+                    // dgView_Sell.Columns[2].Visible = false;
+                    // dgView_Sell.Columns[3].Visible = false;
                 }
                 else { MessageBox.Show("There are no values "); }
                 ///Si no existe lo introduce a la Tabla///
@@ -177,8 +177,7 @@ namespace SellSystem
                     dr[0] = txtCod.Text;
                     dr[1] = txtProd.Text;
                     dr[2] = ID_Sell;
-                    //dr[3] = Client_ID(txtClient.Text);
-                    dr[3] = SSHelper.Client_ID(txtClient);
+                    dr[3] = SSHelper.Client_ID(txtClient.Text);
                     dr[4] = txtCantidad.Text;
 
                     dt.Rows.Add(dr);
@@ -271,12 +270,24 @@ namespace SellSystem
             }
         }
 
+        public string getIdDrugsStock(DataSet data)
+        {
+            string idQuery = "";
+
+            foreach (DataRow r in data.Tables["Taula"].Rows)
+            {
+                idQuery += " || ID_Drug = '" + Convert.ToInt32(r["ID_Drug"]) + "'";
+            }
+
+
+            return idQuery;
+        }
+
         private void btnBuy_Click(object sender, EventArgs e)
         {
             DataRow drOrder;
-            DataRow drStock;
+            string stockQuery;
             string queryHeader = "select * from Order_Header  where 1 = 2";
-            string queryStock = "";
 
             dts = DBUTILS.PortarPerConsulta(queryHeader);
             dr = dts.Tables["taula"].NewRow();
@@ -295,25 +306,47 @@ namespace SellSystem
                 int Id_Header = Convert.ToInt32(dts.Tables[0].Rows[0][0].ToString());
 
                 string queryOrder = "select * from Order_Content where 1 = 2";
-                DataSet dtsOrder = DBUTILS.PortarPerConsulta(queryOrder);
+                dts = DBUTILS.PortarPerConsulta(queryOrder);
 
                 for (int row = 0; row < dgView_Sell.Rows.Count - 1; row++)
                 {
-                    drOrder = dtsOrder.Tables["Taula"].NewRow();
+                    drOrder = dts.Tables["Taula"].NewRow();
                     drOrder["Id_Header"] = Id_Header;
                     drOrder["Id_Drug"] = Drug_ID(dgView_Sell.Rows[row].Cells[0].Value.ToString());//ojo
                     drOrder["Quantity"] = Convert.ToInt32(dgView_Sell.Rows[row].Cells[4].Value.ToString());
-                    dtsOrder.Tables["Taula"].Rows.Add(drOrder);
+                    dts.Tables["Taula"].Rows.Add(drOrder);
+                    Console.WriteLine(drOrder);
                 }
-                bool correcte_FK = DBUTILS.Actualizar(queryOrder, "Taula", dtsOrder);
-                if (correcte_FK){
+                bool correcte_FK = DBUTILS.Actualizar(queryOrder, "Taula", dts);
+                if (correcte_FK)
+                {
+                    int i = 0;
+                    int quantity;
+                    stockQuery = "SELECT * FROM Stock where ID_Drug = -1" + getIdDrugsStock(dts);
+                    dts = DBUTILS.PortarPerConsulta(stockQuery);
+                    
+                    foreach (DataRow r in dts.Tables["Taula"].Rows)
+                    {
+                        foreach (DataGridViewRow row in dgView_Sell.Rows)
+                        {
+                            if (Drug_ID(row.Cells[0].Value.ToString()).ToString().Equals(r["ID_Drug"].ToString()))
+                            {
+                                quantity = Convert.ToInt32(r["Quantity"]) - Convert.ToInt32(row.Cells["quantity"].Value.ToString());
+                                r["Quantity"] = quantity;
+                                break;
+                            }
+                        }
+                    }
+                    bool stockUpdated = DBUTILS.Actualizar(stockQuery, "Taula", dts);
+                    if (stockUpdated)
+                    {
+                        MessageBox.Show("yay");
+                    }
+                    else
+                    {
+                        MessageBox.Show("no yay");
 
-                    //for (int row = 0; row < dgView_Sell.Rows.Count - 1; row++)
-                    //{
-                      
-                    //}
-                    //bool stockUpdate = DBUTILS.Actualizar(queryStock, "Taula",dts);
-                    //if (stockUpdate) { MessageBox.Show("Stock Actualizado"); }
+                    }
                 }
                 else { MessageBox.Show("Error al Actualizar FK "); }
             }

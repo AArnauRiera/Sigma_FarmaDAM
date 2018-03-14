@@ -18,7 +18,7 @@ namespace XMLTools
     public class XMLGenerator
     {
 
-        public bool GenerateCommand(DataSet dataSet)
+        public bool GenerateCommand(DataSet dataSet, string date)
         {
             try
             {
@@ -27,30 +27,30 @@ namespace XMLTools
                 settingsWriter.Indent = true;
                 settingsWriter.IndentChars = "    ";
 
-                using (XmlWriter writer = XmlWriter.Create("comandes.xml", settingsWriter))
+                using (XmlWriter writer = XmlWriter.Create("Comanda_"+date+".xml", settingsWriter))
                 {
                     writer.WriteStartDocument();
                     writer.WriteDocType("comanda", null, "comandes.dtd", null);
                     List<Article> articles = new List<Article>();
-                    DataTable table = dataSet.Tables[0];
+                    DataTable table = dataSet.Tables["Taula"];
 
                     foreach (DataRow row in table.Rows)
                     {
                         Article article = new Article()
                         {
-                            Name = Convert.ToString(row["Name"]),
-                            Quantity = Convert.ToString(row["quantity"]),
-                            Reference = Convert.ToString(row["ID_Stock"]),
-                            Receipt = Convert.ToBoolean(row["receipt"])
+                            Name = Convert.ToString(row["CommercialName"]),
+                            Quantity = Convert.ToString(row["Quantity"]),
+                            Reference = Convert.ToString(row["Sanitary_Register_Num"]),
+                            Receipt = Convert.ToBoolean(row["NeedsRecipe"])
                         };
 
                         articles.Add(article);
                     }
 
                     writer.WriteStartElement("comanda");
-                    writer.WriteElementString("client", Convert.ToString(table.Rows[0]["ID_Client"]));
-                    writer.WriteElementString("dataComanda", Convert.ToString(table.Rows[0]["dataCamanda"]));
-                    writer.WriteElementString("num", Convert.ToString(table.Rows[0]["num"]));
+                    writer.WriteElementString("client", "SigmaCoders");
+                    writer.WriteElementString("dataComanda", date);
+                    writer.WriteElementString("num", "1");
                     writer.WriteStartElement("articles");
 
                     for (int i = 0; i < articles.Count; i++)

@@ -32,6 +32,7 @@
             this.btnSelectXml = new System.Windows.Forms.Button();
             this.txtbxXml = new System.Windows.Forms.TextBox();
             this.btnUpload = new System.Windows.Forms.Button();
+            this.lblCounter = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -65,11 +66,20 @@
             this.btnUpload.UseVisualStyleBackColor = true;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
+            // lblCounter
+            // 
+            this.lblCounter.AutoSize = true;
+            this.lblCounter.Location = new System.Drawing.Point(213, 241);
+            this.lblCounter.Name = "lblCounter";
+            this.lblCounter.Size = new System.Drawing.Size(0, 13);
+            this.lblCounter.TabIndex = 4;
+            // 
             // frmLoadDataXML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 394);
+            this.Controls.Add(this.lblCounter);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.txtbxXml);
             this.Controls.Add(this.btnSelectXml);
@@ -85,5 +95,6 @@
         private System.Windows.Forms.Button btnSelectXml;
         protected System.Windows.Forms.TextBox txtbxXml;
         protected System.Windows.Forms.Button btnUpload;
+        public System.Windows.Forms.Label lblCounter;
     }
 }
