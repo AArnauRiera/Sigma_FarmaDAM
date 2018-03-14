@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmSMTPProva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSMTPProva.Designer.cs">
+      <DependentUpon>frmSMTPProva.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLoadPAXml.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoadPAXml.resx">
       <DependentUpon>frmLoadPAXml.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSMTPProva.resx">
+      <DependentUpon>frmSMTPProva.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

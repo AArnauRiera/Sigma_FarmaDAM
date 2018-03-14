@@ -1,33 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace XMLTools
 {
-    class SMTPHelper
+    public class SMTPHelper
     {
-        try
+        public void SendEmail()
         {
-            MailMessage mail = new MailMessage();
-            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-            mail.From = new MailAddress("el meu_mail@gmail.com");
-            mail.To.Add("to_address");
-            mail.Subject = "Test Mail - 1";
-            mail.Body = "mail amb adjunt";
-            System.Net.Mail.Attachment attachment;
-            attachment = new System.Net.Mail.Attachment("C:\\arxiu.pdf");
-            mail.Attachments.Add(attachment);
-            SmtpServer.Port = 587;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("username", "password");
-            SmtpServer.EnableSsl = true;
-            SmtpServer.Send(mail);
-            MessageBox.Show("Mail enviat!!!");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.ToString());
+            try
+            {
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                mail.From = new MailAddress("SigmaFarmaDAM@gmail.com");
+                mail.To.Add("to_address");
+                mail.Subject = "Comanda enviada correctament";
+                mail.Body = "mail amb adjunt";
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("SigmaFarmaDAM", "Dam123456");
+                SmtpServer.EnableSsl = true;
+                SmtpServer.Send(mail);
+                //MessageBox.Show("Mail enviat!!!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
     }
 }
