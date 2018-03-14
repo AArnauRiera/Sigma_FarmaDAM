@@ -361,6 +361,19 @@ namespace SellSystem
         {
 
         }
+
+        private void txtCantidad_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            Querry = "SELECT Quantity FROM Stock WHERE ID_Drug ='" + SSHelper.Client_ID(txtClient.Text) + "'";
+            dts = DBUTILS.PortarPerConsulta(Querry);
+            int Stock = Convert.ToInt32(dts.Tables[0].Rows[0][0].ToString());
+            if (Stock < Convert.ToInt32(txtCantidad.Text) && Stock - Convert.ToInt32(txtCantidad.Text) <= 0)
+            {
+                MessageBox.Show("No hay suficiente Cantidad");
+                txtCantidad.Text = "";
+            }
+        }
     }
 }
 

@@ -126,6 +126,7 @@
             this.txtCantidad.Size = new System.Drawing.Size(32, 20);
             this.txtCantidad.TabIndex = 35;
             this.txtCantidad.Table = null;
+            this.txtCantidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCantidad_KeyDown);
             // 
             // NTS
             // 
