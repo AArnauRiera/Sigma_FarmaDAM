@@ -56,6 +56,7 @@
       <DependentUpon>frmSellsytem.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SellSystemHelper.cs" />
     <EmbeddedResource Include="frmSellsytem.resx">
       <DependentUpon>frmSellsytem.cs</DependentUpon>
     </EmbeddedResource>
