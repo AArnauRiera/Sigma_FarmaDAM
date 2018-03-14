@@ -116,22 +116,30 @@ namespace Mantein
 
         protected virtual void btnSelect_Click(object sender, EventArgs e)
         {
-            DataSet ds = null;
-
-            string selected = "";
-
-            List<string> conditions = new List<string>();
-
-            for (int i = 0; i < dgwDB.SelectedRows.Count; i++)
+            if(dgwDB.SelectedRows.Count > 0)
             {
-                conditions.Add(dgwDB.SelectedRows[i].Cells[0].OwningColumn.Name + " = " + "'" + dgwDB.SelectedRows[i].Cells[0].FormattedValue.ToString() + "'");
+                DataSet ds = null;
+
+                string selected = "";
+
+                List<string> conditions = new List<string>();
+
+                for(int i = 0; i < dgwDB.SelectedRows.Count; i++)
+                {
+                    //for(int q = 0; q < dgwDB.SelectedRows[i].Cells.Count; q++)
+                    //{
+                    //    conditions.Add(dgwDB.SelectedRows[i].Cells[q].OwningColumn.Name + " = " + "'" + dgwDB.SelectedRows[i].Cells[q].FormattedValue.ToString() + "'");
+                    //}
+                    conditions.Add(dgwDB.SelectedRows[i].Cells[0].OwningColumn.Name + " = " + "'" + dgwDB.SelectedRows[i].Cells[0].FormattedValue.ToString() + "'");
+
+                }
+
+                selected = "select * from " + Table + " where " + string.Join(" or ", conditions);
+
+                _frm.RefreshQuery(selected);
+
+                this.Close();
             }
-
-            selected = "select * from " + Table + " where " + string.Join(" or ", conditions);
-
-            _frm.RefreshQuery(selected);      
-
-            this.Close();
 
         }
 
