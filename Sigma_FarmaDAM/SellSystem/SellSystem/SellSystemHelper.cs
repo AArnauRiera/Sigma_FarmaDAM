@@ -34,10 +34,10 @@ namespace SellSystem
             return validate;
         }
         ///Devuelve la ID del cliente///
-        public string Client_ID(TxtSigma textBoxSigma)//la variable "id" no se usa en ningún momento
+        public string Client_ID(string textBoxSigma)//la variable "id" no se usa en ningún momento
         {
             String ID;
-            Query = "select NTS  from Clients  where NTS ='" + textBoxSigma.Text + "'";
+            Query = "select id from Clients where NTS = '" + textBoxSigma + "'";
             dts = db.PortarPerConsulta(Query);
             try
             {
