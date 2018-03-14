@@ -42,11 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <Compile Include="frmSMTPProva.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSMTPProva.Designer.cs">
       <DependentUpon>frmSMTPProva.cs</DependentUpon>
+=======
+    <Compile Include="frmGestionComandas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionComandas.Designer.cs">
+      <DependentUpon>frmGestionComandas.cs</DependentUpon>
+>>>>>>> Stashed changes
     </Compile>
     <Compile Include="frmLoadPAXml.cs">
       <SubType>Form</SubType>
@@ -66,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmGestionComandas.resx">
+      <DependentUpon>frmGestionComandas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLoadDataXML.resx">
       <DependentUpon>frmLoadDataXML.cs</DependentUpon>
     </EmbeddedResource>
