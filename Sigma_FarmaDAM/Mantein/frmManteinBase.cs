@@ -138,7 +138,21 @@ namespace Mantein
                 BindingDate();
             }
 
-            dgwBase.CurrentCell = dgwBase.Rows[dgwBase.Rows.Count - 1].Cells[1];
+            TxtSigma cell = null;
+
+            bool find = true;
+
+            for(int i = pnlTextBox.Controls.Count - 1; i >= 0 && find; i--)
+            {
+
+                if(pnlTextBox.Controls[i] is TxtSigma)
+                {
+                    cell = pnlTextBox.Controls[i] as TxtSigma;
+                    find = false;
+                }
+
+            }
+            dgwBase.CurrentCell = dgwBase.Rows[dgwBase.Rows.Count - 1].Cells[cell.DBReference];
         }
         public virtual void bntNew_Click(object sender, EventArgs e)
         {

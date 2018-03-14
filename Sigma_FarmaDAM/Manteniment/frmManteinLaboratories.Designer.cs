@@ -37,6 +37,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
             this.pnlButtons.SuspendLayout();
+            this.pnlMantein.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTextBox
@@ -51,21 +52,14 @@
             // btnQuery
             // 
             this.btnQuery.TabIndex = 2;
-            this.btnQuery.Text = "Buscar";
             // 
             // btnUpdate
             // 
             this.btnUpdate.TabIndex = 1;
-            this.btnUpdate.Text = "Actualizar";
-            // 
-            // btnGet
-            // 
-            this.btnGet.Text = "Obtener";
             // 
             // bntNew
             // 
             this.bntNew.TabIndex = 3;
-            this.bntNew.Text = "Nuevo";
             // 
             // lblCIF
             // 
@@ -101,12 +95,12 @@
             // 
             this.txtCIF.DBReference = "CIF";
             this.txtCIF.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtCIF.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
-            this.txtCIF.ForeColor = System.Drawing.Color.Gray;
+            this.txtCIF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCIF.ForeColor = System.Drawing.Color.Black;
             this.txtCIF.Location = new System.Drawing.Point(195, 61);
             this.txtCIF.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCIF.Name = "txtCIF";
-            this.txtCIF.Size = new System.Drawing.Size(132, 19);
+            this.txtCIF.Size = new System.Drawing.Size(132, 20);
             this.txtCIF.TabIndex = 6;
             this.txtCIF.Table = "Laboratories";
             // 
@@ -114,12 +108,12 @@
             // 
             this.txtAddress.DBReference = "Address";
             this.txtAddress.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
-            this.txtAddress.ForeColor = System.Drawing.Color.Gray;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.ForeColor = System.Drawing.Color.Black;
             this.txtAddress.Location = new System.Drawing.Point(195, 33);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(132, 19);
+            this.txtAddress.Size = new System.Drawing.Size(132, 20);
             this.txtAddress.TabIndex = 5;
             this.txtAddress.Table = "Laboratories";
             // 
@@ -127,12 +121,12 @@
             // 
             this.txtDenomination.DBReference = "Denomination";
             this.txtDenomination.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtDenomination.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
-            this.txtDenomination.ForeColor = System.Drawing.Color.Gray;
+            this.txtDenomination.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDenomination.ForeColor = System.Drawing.Color.Black;
             this.txtDenomination.Location = new System.Drawing.Point(195, 5);
             this.txtDenomination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDenomination.Name = "txtDenomination";
-            this.txtDenomination.Size = new System.Drawing.Size(132, 19);
+            this.txtDenomination.Size = new System.Drawing.Size(132, 20);
             this.txtDenomination.TabIndex = 4;
             this.txtDenomination.Table = "Laboratories";
             // 
@@ -146,6 +140,7 @@
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();
             this.pnlButtons.ResumeLayout(false);
+            this.pnlMantein.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

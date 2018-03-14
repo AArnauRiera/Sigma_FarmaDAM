@@ -85,8 +85,8 @@
             // 
             this.txtName.DBReference = "Name";
             this.txtName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.txtName.ForeColor = System.Drawing.Color.Gray;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.Black;
             this.txtName.Location = new System.Drawing.Point(195, 31);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
@@ -98,8 +98,8 @@
             // 
             this.txtSRN.DBReference = "Sanitary_Register_Number";
             this.txtSRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtSRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.txtSRN.ForeColor = System.Drawing.Color.Gray;
+            this.txtSRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSRN.ForeColor = System.Drawing.Color.Black;
             this.txtSRN.Location = new System.Drawing.Point(195, 4);
             this.txtSRN.Margin = new System.Windows.Forms.Padding(4);
             this.txtSRN.Name = "txtSRN";
