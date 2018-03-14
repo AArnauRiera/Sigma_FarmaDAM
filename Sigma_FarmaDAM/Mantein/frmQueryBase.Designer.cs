@@ -103,7 +103,7 @@
             this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.panel1);
             this.Name = "frmQueryBase";
-            this.Text = "frmQueryBase";
+            this.Text = "Buscar";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgwDB)).EndInit();
             this.pnlButtons.ResumeLayout(false);

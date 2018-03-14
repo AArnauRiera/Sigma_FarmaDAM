@@ -12,7 +12,6 @@ namespace Login
         LoginControl.LoginControl control;
         public frmLogin()
         {
-            // Console.WriteLine(Cryptography.Cryptography.Encrypt("12345aA", "admin"));
             InitializeComponent();
         }
 
