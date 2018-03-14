@@ -49,6 +49,7 @@
       <DependentUpon>frmLoadPAXml.cs</DependentUpon>
     </Compile>
     <Compile Include="FTPHelper.cs" />
+    <Compile Include="SMTPHelper.cs" />
     <Compile Include="XMLGenerator.cs" />
     <Compile Include="frmLoadDataXML.cs">
       <SubType>Form</SubType>
