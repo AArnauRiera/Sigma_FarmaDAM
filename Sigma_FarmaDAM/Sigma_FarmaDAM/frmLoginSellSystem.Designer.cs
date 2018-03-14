@@ -107,7 +107,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbxPassword);
             this.Controls.Add(this.tbxUsername);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "frmLoginSellSystem";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
