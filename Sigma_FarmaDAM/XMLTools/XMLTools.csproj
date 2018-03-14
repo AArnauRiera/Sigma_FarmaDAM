@@ -42,17 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmGestionComandas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionComandas.Designer.cs" />
     <Compile Include="frmLoadLabXml.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLoadLabXml.Designer.cs">
       <DependentUpon>frmLoadLabXml.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmSMTPProva.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSMTPProva.Designer.cs">
-      <DependentUpon>frmSMTPProva.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLoadPAXml.cs">
       <SubType>Form</SubType>
@@ -72,14 +70,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmGestionComandas.resx" />
     <EmbeddedResource Include="frmLoadDataXML.resx">
       <DependentUpon>frmLoadDataXML.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoadPAXml.resx">
       <DependentUpon>frmLoadPAXml.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSMTPProva.resx">
-      <DependentUpon>frmSMTPProva.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
