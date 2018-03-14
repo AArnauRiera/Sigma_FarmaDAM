@@ -50,58 +50,6 @@ namespace LoginControl
             return isReal;
         }
 
-        public bool CheckCredentials (TxtSigma userName, TxtSigma password, ErrorProvider error)
-        {
-            bool isCorrect = false;
-
-            Console.WriteLine(Cryptography.Cryptography.Encrypt(password.Text, userName.Text));
-            Console.WriteLine(dts.Tables[0].Rows[0]["password"].ToString());
-
-            if (dts.Tables[0].Rows.Count > 0 && 
-                userName.Text == dts.Tables[0].Rows[0][userName.DBReference].ToString() && 
-                Cryptography.Cryptography.Encrypt(password.Text, userName.Text) == dts.Tables[0].Rows[0][password.DBReference].ToString())
-            {
-                isCorrect = true;
-            }
-
-            if (!isCorrect)
-            {
-                error.SetError(password, "Contraseña incorrecta");
-            }
-
-            return isCorrect;
-        }
-
-        public bool CheckIfUserIsAdmin (TxtSigma userName, ErrorProvider errorProvider)
-        {
-            bool isAdmin = false;
-
-            if (dts.Tables[0].Rows[0]["rol"].Equals(true))
-            {
-                isAdmin = true;
-            }
-            if (!isAdmin)
-            {
-                errorProvider.SetError(userName, "El usuario debe ser administrador");
-            }
-
-            return isAdmin;
-        }
-
-        public bool CheckIfUserIsAdmin(int Id, Button btn)
-        {
-            bool isAdmin = false;
-
-            string query = "SELECT * FROM Seller WHERE id = '" + Id + "'";
-            DataSet dts = db.PortarPerConsulta(query);
-
-            if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0 && dts.Tables["Taula"].Rows[0]["rol"].Equals(true))
-            {
-                isAdmin = true;
-            }
-
-            return isAdmin;
-        }
 
         public bool CheckIfPasswordRepeatIsEqual (TxtSigma password, TxtSigma repeatPassword, TxtSigma username)
         {
@@ -117,27 +65,6 @@ namespace LoginControl
                 }
             }
             return isEqual;
-        }
-
-        public bool CheckControlsFormat (ErrorProvider error, Control.ControlCollection Controls)
-        {
-            bool isCorrect = false;
-            bool pass = true;
-
-            foreach (Control control in Controls)
-            {
-                if (control is TxtSigma || control is cbxSigma)
-                {
-                    isCorrect = ControlsErrorsHelper.CheckControlsErrors(error, control);
-
-                    if (!isCorrect)
-                    {
-                        pass = isCorrect;
-                    }
-                }
-            }
-
-            return pass;
         }
 
         public bool CheckControlsFormat(ErrorProvider error, Control.ControlCollection Controls, TxtSigma username, TxtSigma password)
@@ -163,34 +90,6 @@ namespace LoginControl
             }
 
             return pass;
-        }
-
-        public bool CheckControlsFormat(Control.ControlCollection Controls)
-        {
-            bool error = false;
-
-            foreach (var control in Controls)
-            {
-                if (control is TxtSigma)
-                {
-                    TxtSigma cntrl = (TxtSigma)control;
-                    if (!cntrl.IsFieldCorrect() || String.IsNullOrWhiteSpace(cntrl.Text))
-                    {
-                        error = true;
-                        cntrl.Text = "";
-                    }
-                }
-                else if (control is cbxSigma)
-                {
-                    cbxSigma cntrl = (cbxSigma)control;
-                    if (cntrl.SelectedIndex == 0)
-                    {
-                        error = true;
-                    }
-                }
-            }
-
-            return error;
         }
 
         public DataRow CreateDataRowFromControls(DataRow r, Control.ControlCollection controls)
@@ -219,19 +118,6 @@ namespace LoginControl
                 }
             }
             return r;
-        }
-
-        public int getId(TxtSigma username)
-        {
-            DataSet dts = db.PortarPerConsulta("SELECT * FROM Seller WHERE " + username.DBReference + " = '" + username.Text + "'");
-
-            if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0)
-            {
-                return (Int32)dts.Tables[0].Rows[0]["id"];
-            } else
-            {
-                return -1;
-            }
         }
 
         public bool SaveChanges(Control.ControlCollection Controls)

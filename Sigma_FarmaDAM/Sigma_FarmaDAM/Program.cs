@@ -28,7 +28,7 @@ namespace Sigma_FarmaDAM
                 
                 if(splash.ShowDialog() == DialogResult.OK)
                 {
-                    Application.Run(new frmMain());
+                    Application.Run(new frmMain(Login.getUserId()));
                 }
             }
             else

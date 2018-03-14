@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LoginControl;
 
 namespace UserRegister
 {
@@ -38,7 +37,7 @@ namespace UserRegister
                     exit = control.SaveChanges(Controls);
                     if (exit)
                     {
-                        Clear();
+                        Close();
                     }
                 }
             }
@@ -70,6 +69,11 @@ namespace UserRegister
         private void tbxName_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

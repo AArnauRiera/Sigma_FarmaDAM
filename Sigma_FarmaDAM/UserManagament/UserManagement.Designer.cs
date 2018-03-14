@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.lblErrorText = new System.Windows.Forms.Label();
             this.pnlUserManagmnet = new System.Windows.Forms.Panel();
-            this.tbxAddress2 = new Sigma_Controls.TxtSigma();
             this.tbxAddress1 = new Sigma_Controls.TxtSigma();
             this.label5 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -66,7 +65,6 @@
             // 
             // pnlUserManagmnet
             // 
-            this.pnlUserManagmnet.Controls.Add(this.tbxAddress2);
             this.pnlUserManagmnet.Controls.Add(this.tbxAddress1);
             this.pnlUserManagmnet.Controls.Add(this.label5);
             this.pnlUserManagmnet.Controls.Add(this.btnGuardar);
@@ -88,19 +86,6 @@
             this.pnlUserManagmnet.Name = "pnlUserManagmnet";
             this.pnlUserManagmnet.Size = new System.Drawing.Size(415, 461);
             this.pnlUserManagmnet.TabIndex = 22;
-            // 
-            // tbxAddress2
-            // 
-            this.tbxAddress2.DBReference = "address2";
-            this.tbxAddress2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
-            this.tbxAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxAddress2.ForeColor = System.Drawing.Color.Black;
-            this.tbxAddress2.Location = new System.Drawing.Point(159, 252);
-            this.tbxAddress2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.tbxAddress2.Name = "tbxAddress2";
-            this.tbxAddress2.Size = new System.Drawing.Size(211, 20);
-            this.tbxAddress2.TabIndex = 26;
-            this.tbxAddress2.Table = null;
             // 
             // tbxAddress1
             // 
@@ -127,7 +112,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(158, 396);
+            this.btnGuardar.Location = new System.Drawing.Point(157, 363);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(113, 40);
@@ -153,7 +138,7 @@
             this.tbxFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.tbxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxFirstName.ForeColor = System.Drawing.Color.Black;
-            this.tbxFirstName.Location = new System.Drawing.Point(160, 284);
+            this.tbxFirstName.Location = new System.Drawing.Point(159, 251);
             this.tbxFirstName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbxFirstName.Name = "tbxFirstName";
             this.tbxFirstName.Size = new System.Drawing.Size(211, 20);
@@ -163,7 +148,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(82, 283);
+            this.label1.Location = new System.Drawing.Point(81, 250);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 19);
@@ -186,7 +171,7 @@
             this.tbxLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.LastName;
             this.tbxLastName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxLastName1.ForeColor = System.Drawing.Color.Black;
-            this.tbxLastName1.Location = new System.Drawing.Point(160, 319);
+            this.tbxLastName1.Location = new System.Drawing.Point(159, 286);
             this.tbxLastName1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbxLastName1.Name = "tbxLastName1";
             this.tbxLastName1.Size = new System.Drawing.Size(211, 20);
@@ -207,7 +192,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 318);
+            this.label2.Location = new System.Drawing.Point(51, 285);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 19);
@@ -220,7 +205,7 @@
             this.tbxLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.LastName;
             this.tbxLastName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxLastName2.ForeColor = System.Drawing.Color.Black;
-            this.tbxLastName2.Location = new System.Drawing.Point(159, 354);
+            this.tbxLastName2.Location = new System.Drawing.Point(158, 321);
             this.tbxLastName2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbxLastName2.Name = "tbxLastName2";
             this.tbxLastName2.Size = new System.Drawing.Size(211, 20);
@@ -240,7 +225,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 354);
+            this.label3.Location = new System.Drawing.Point(38, 321);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 19);
@@ -343,7 +328,6 @@
         public Sigma_Controls.TxtSigma tbxNTS;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ErrorProvider errorProvider;
-        public Sigma_Controls.TxtSigma tbxAddress2;
         public Sigma_Controls.TxtSigma tbxAddress1;
         private System.Windows.Forms.Label label5;
     }
