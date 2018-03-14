@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
@@ -14,7 +15,7 @@ namespace XMLTools
 {
     public partial class frmLoadDataXML : Form
     {
-
+        protected int nodeCount;
         public frmLoadDataXML()
         {
             InitializeComponent();
@@ -34,6 +35,11 @@ namespace XMLTools
 
         public virtual void btnUpload_Click(object sender, EventArgs e)
         {
+            Thread t = new Thread(UploadData); // Kick off a new thread
+            t.Start();
+        }
+        public virtual void UploadData()
+        {
             XmlDocument reader = new XmlDocument();
             reader.Load(txtbxXml.Text);
 
@@ -43,15 +49,21 @@ namespace XMLTools
 
             XmlNodeList nodeList = reader.DocumentElement.GetElementsByTagName("prescription");
 
-            foreach (XmlNode node in nodeList)
-            {
-                DataRow dtr =  ds.Tables["Taula"].NewRow();               
+            int count = 0;
 
-                foreach (XmlNode child in node.ChildNodes)
+            nodeCount = nodeList.Count;
+
+            lblCounter.Text = count + " / " + nodeCount;
+
+            foreach(XmlNode node in nodeList)
+            {
+                DataRow dtr = ds.Tables["Taula"].NewRow();
+
+                foreach(XmlNode child in node.ChildNodes)
                 {
                     string value;
 
-                    switch (child.Name)
+                    switch(child.Name)
                     {
                         case "cod_nacion":
                             value = child.InnerText;
@@ -95,15 +107,15 @@ namespace XMLTools
                             break;
                         case "formasfarmaceuticas":
                             bool found = false;
-                            foreach (XmlNode item in child.ChildNodes)
+                            foreach(XmlNode item in child.ChildNodes)
                             {
-                                switch (item.Name)
+                                switch(item.Name)
                                 {
                                     case "composicion_pa":
 
-                                        foreach (XmlNode cod in item.ChildNodes)
+                                        foreach(XmlNode cod in item.ChildNodes)
                                         {
-                                            switch (cod.Name)
+                                            switch(cod.Name)
                                             {
                                                 case "cod_principio_activo":
                                                     value = cod.InnerText;
@@ -112,15 +124,15 @@ namespace XMLTools
                                                     break;
                                             }
                                         }
-                                
+
                                         break;
                                 }
 
-                                if (found)
+                                if(found)
                                 {
                                     break;
                                 }
-                                
+
                             }
 
                             break;
@@ -132,16 +144,18 @@ namespace XMLTools
 
                 DataSet exist = db.PortarPerConsulta("select * from Drugs where Register_number = " + dtr["Register_number"]);
 
-                if (exist.Tables["Taula"].Rows.Count == 0)
+                if(exist.Tables["Taula"].Rows.Count == 0)
                 {
                     ds.Tables["Taula"].Rows.Add(dtr);
-                }   
-                
+                }
+
+                count++;
+
+                lblCounter.Text = count + " / " + nodeCount;
             }
 
             db.Actualizar("select * from Drugs where 1 = 2", "Taula", ds);
         }
-
         private bool ConvertTo(string value)
         {
             if (value.Equals("1"))
