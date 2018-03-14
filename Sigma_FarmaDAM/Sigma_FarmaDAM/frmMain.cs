@@ -227,5 +227,10 @@ namespace Sigma_FarmaDAM
                 btnUserManagement.Hide();
             }
         }
+
+        private void btnXml_Click(object sender, EventArgs e)
+        {
+            AddNewTab("Xml", new frmLoadLabXml());
+        }
     }
 }
