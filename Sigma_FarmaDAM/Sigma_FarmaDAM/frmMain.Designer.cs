@@ -41,6 +41,7 @@
             this.btnUser = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tbMain = new VisualStudioTabControl.VisualStudioTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -48,7 +49,6 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tbMain = new VisualStudioTabControl.VisualStudioTabControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -254,6 +254,29 @@
             this.panel2.Size = new System.Drawing.Size(845, 716);
             this.panel2.TabIndex = 8;
             // 
+            // tbMain
+            // 
+            this.tbMain.ActiveColor = System.Drawing.Color.LightBlue;
+            this.tbMain.AllowDrop = true;
+            this.tbMain.BackTabColor = System.Drawing.Color.Azure;
+            this.tbMain.BorderColor = System.Drawing.Color.Azure;
+            this.tbMain.ClosingButtonColor = System.Drawing.Color.Firebrick;
+            this.tbMain.ClosingMessage = null;
+            this.tbMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbMain.HeaderColor = System.Drawing.Color.Azure;
+            this.tbMain.HorizontalLineColor = System.Drawing.SystemColors.Highlight;
+            this.tbMain.ItemSize = new System.Drawing.Size(240, 16);
+            this.tbMain.Location = new System.Drawing.Point(0, 0);
+            this.tbMain.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMain.Name = "tbMain";
+            this.tbMain.SelectedIndex = 0;
+            this.tbMain.SelectedTextColor = System.Drawing.SystemColors.Highlight;
+            this.tbMain.ShowClosingButton = true;
+            this.tbMain.ShowClosingMessage = false;
+            this.tbMain.Size = new System.Drawing.Size(845, 716);
+            this.tbMain.TabIndex = 0;
+            this.tbMain.TextColor = System.Drawing.Color.LightBlue;
+            // 
             // tabPage1
             // 
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -323,29 +346,6 @@
             this.tabPage7.Size = new System.Drawing.Size(778, 324);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "tabPage7";
-            // 
-            // tbMain
-            // 
-            this.tbMain.ActiveColor = System.Drawing.Color.LightBlue;
-            this.tbMain.AllowDrop = true;
-            this.tbMain.BackTabColor = System.Drawing.Color.Azure;
-            this.tbMain.BorderColor = System.Drawing.Color.Azure;
-            this.tbMain.ClosingButtonColor = System.Drawing.Color.Firebrick;
-            this.tbMain.ClosingMessage = null;
-            this.tbMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbMain.HeaderColor = System.Drawing.Color.Azure;
-            this.tbMain.HorizontalLineColor = System.Drawing.SystemColors.Highlight;
-            this.tbMain.ItemSize = new System.Drawing.Size(240, 16);
-            this.tbMain.Location = new System.Drawing.Point(0, 0);
-            this.tbMain.Margin = new System.Windows.Forms.Padding(2);
-            this.tbMain.Name = "tbMain";
-            this.tbMain.SelectedIndex = 0;
-            this.tbMain.SelectedTextColor = System.Drawing.SystemColors.Highlight;
-            this.tbMain.ShowClosingButton = true;
-            this.tbMain.ShowClosingMessage = false;
-            this.tbMain.Size = new System.Drawing.Size(845, 716);
-            this.tbMain.TabIndex = 0;
-            this.tbMain.TextColor = System.Drawing.Color.LightBlue;
             // 
             // frmMain
             // 
