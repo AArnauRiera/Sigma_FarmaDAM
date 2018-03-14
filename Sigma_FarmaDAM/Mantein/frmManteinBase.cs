@@ -87,6 +87,7 @@ namespace Mantein
             DBUtilities db = new DBUtilities();
             dts = db.PortarPerConsulta(query);
             BindingDate();
+            DisableColumns();
         }
 
         protected void UpdateQuery()
@@ -193,6 +194,14 @@ namespace Mantein
                         }
                     }
                 }
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            for(int i = dgwBase.SelectedRows.Count - 1; i >= 0; i--)
+            {
+                dgwBase.Rows.Remove(dgwBase.SelectedRows[i]);                
             }
         }
     }

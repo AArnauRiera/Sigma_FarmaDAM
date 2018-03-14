@@ -37,6 +37,7 @@
             this.btnQuery = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnGet = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.pnlMantein.SuspendLayout();
             this.pnlGW.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwBase)).BeginInit();
@@ -83,6 +84,7 @@
             // 
             // pnlButtons
             // 
+            this.pnlButtons.Controls.Add(this.btnEliminar);
             this.pnlButtons.Controls.Add(this.bntNew);
             this.pnlButtons.Controls.Add(this.btnQuery);
             this.pnlButtons.Controls.Add(this.btnUpdate);
@@ -95,10 +97,10 @@
             // 
             // bntNew
             // 
-            this.bntNew.Location = new System.Drawing.Point(282, 17);
+            this.bntNew.Location = new System.Drawing.Point(308, 17);
             this.bntNew.Margin = new System.Windows.Forms.Padding(5);
             this.bntNew.Name = "bntNew";
-            this.bntNew.Size = new System.Drawing.Size(78, 41);
+            this.bntNew.Size = new System.Drawing.Size(59, 41);
             this.bntNew.TabIndex = 14;
             this.bntNew.Text = "Nuevo";
             this.bntNew.UseVisualStyleBackColor = true;
@@ -106,10 +108,10 @@
             // 
             // btnQuery
             // 
-            this.btnQuery.Location = new System.Drawing.Point(194, 17);
+            this.btnQuery.Location = new System.Drawing.Point(244, 17);
             this.btnQuery.Margin = new System.Windows.Forms.Padding(5);
             this.btnQuery.Name = "btnQuery";
-            this.btnQuery.Size = new System.Drawing.Size(78, 41);
+            this.btnQuery.Size = new System.Drawing.Size(59, 41);
             this.btnQuery.TabIndex = 0;
             this.btnQuery.Text = "Buscar";
             this.btnQuery.UseVisualStyleBackColor = true;
@@ -117,7 +119,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(102, 17);
+            this.btnUpdate.Location = new System.Drawing.Point(154, 17);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(5);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(82, 41);
@@ -131,11 +133,21 @@
             this.btnGet.Location = new System.Drawing.Point(5, 17);
             this.btnGet.Margin = new System.Windows.Forms.Padding(5);
             this.btnGet.Name = "btnGet";
-            this.btnGet.Size = new System.Drawing.Size(87, 41);
+            this.btnGet.Size = new System.Drawing.Size(71, 41);
             this.btnGet.TabIndex = 12;
             this.btnGet.Text = "Obtener";
             this.btnGet.UseVisualStyleBackColor = true;
             this.btnGet.Click += new System.EventHandler(this.btnGet_Click_1);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(82, 17);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(66, 41);
+            this.btnEliminar.TabIndex = 15;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // frmManteinBase
             // 
@@ -168,5 +180,6 @@
         protected System.Windows.Forms.DataGridView dgwBase;
         protected System.Windows.Forms.Button bntNew;
         protected System.Windows.Forms.Panel pnlMantein;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
