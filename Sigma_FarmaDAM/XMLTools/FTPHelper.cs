@@ -19,7 +19,7 @@ namespace XMLTools
                 "ftp://172.17.6.0/Grupo_1/1/testfile.txt"
                 );
                 request.Method = WebRequestMethods.Ftp.UploadFile;
-                // This example assumes the FTP site uses anonymous logon.
+                // Nos logeamos
                 request.Credentials =
                 new NetworkCredential("grupo1", "12345aA");
                 // Copy the contents of the file to the request stream.
