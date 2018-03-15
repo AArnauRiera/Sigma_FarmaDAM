@@ -35,11 +35,17 @@ namespace Mantein
             InitializeComponent();
 
         }
+        /// <summary>
+        /// Relaciona el dataSet con el DataGridView.
+        /// </summary>
         protected void BindingDate()
         {
             dgwDB.DataSource = dts.Tables["Taula"];
         }
 
+        /// <summary>
+        /// Rellena el DataSet.
+        /// </summary>
         protected void GetQuery()
         {
             DBUtilities db = new DBUtilities();
@@ -56,7 +62,10 @@ namespace Mantein
             dts = db.PortarPerConsulta(query);
         }
 
-
+        /// <summary>
+        /// Une las columnas.
+        /// </summary>
+        /// <returns>cosulta personalizada.</returns>
         protected string Conditions()
         {
             string[] txts = GetAllTxtSigma();
@@ -65,6 +74,11 @@ namespace Mantein
             return con;
         }
 
+
+        /// <summary>
+        /// Recoge todos los txtSigma del control.
+        /// </summary>
+        /// <returns>Consulta personalizada.</returns>
         protected string[] GetAllTxtSigma()
         {
             List<string> txtb = new List<string>();
@@ -82,6 +96,10 @@ namespace Mantein
             return txtb.ToArray();
         }
 
+        /// <summary>
+        /// Recoge la información de la base de datos para hacer la consulta.
+        /// </summary>
+        /// <returns>Conjunto de columnas de la base de datos.</returns>
         public string GetColumns()
         {
             string columns = "*";
@@ -116,6 +134,14 @@ namespace Mantein
 
         protected virtual void btnSelect_Click(object sender, EventArgs e)
         {
+            SelectRows();
+        }
+
+        /// <summary>
+        /// Selecciona las filas y las manda al forms de mantenimiento.
+        /// </summary>
+        protected void SelectRows()
+        {
             if(dgwDB.SelectedRows.Count > 0)
             {
                 DataSet ds = null;
@@ -140,9 +166,11 @@ namespace Mantein
 
                 this.Close();
             }
-
         }
 
+        /// <summary>
+        /// Desactiva las columnas que no se quieren mostrar.
+        /// </summary>
         public void DisableColumns()
         {
             for (int i = 0; i < dgwDB.Columns.Count; i++)

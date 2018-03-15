@@ -18,6 +18,9 @@ namespace Mantein
 
         protected string query;
 
+        /// <summary>
+        /// Tabla de mantenimiento.
+        /// </summary>
         public string Table { get; set; }
 
         public frmManteinBase()
@@ -27,6 +30,9 @@ namespace Mantein
             CenterPanel(pnlMantein);
         }
         
+        /// <summary>
+        /// Relaciona el DataSet con los textBox.
+        /// </summary>
         protected void BindingDate()
         {
             dgwBase.DataSource = dts.Tables["Taula"];
@@ -49,34 +55,13 @@ namespace Mantein
                 }
             }                  
         }
-        public string GetColumns()
-        {
-            string columns = "*";
-            List<string> col = new List<string>();
 
-            for (int i = pnlTextBox.Controls.Count - 1; i >= 0; i--)
-            {
-
-                if (pnlTextBox.Controls[i] is TxtSigma)
-                {
-                    TxtSigma t = pnlTextBox.Controls[i] as TxtSigma;
-                    if (!String.IsNullOrWhiteSpace(t.DBReference))
-                    {
-                        col.Add(t.DBReference);
-                    }
-                }
-
-            }
-
-            columns = string.Join(",", col);
-
-            return columns;
-        }
-
+        /// <summary>
+        /// Recoge el DataSet de la base de datos.
+        /// </summary>
         protected void GetQuery()
         {
             DBUtilities db = new DBUtilities();
-            string cols = GetColumns();
             query = "select * from " + Table;
             dts = db.PortarPerConsulta(query);
 
@@ -101,6 +86,10 @@ namespace Mantein
 
         }
 
+        /// <summary>
+        /// Refresca el DataSet para cuando se hace una busqueda.
+        /// </summary>
+        /// <param name="newQuery">Nueva Query.</param>
         public void RefreshQuery(string newQuery)
         {
             query = newQuery;
@@ -110,6 +99,9 @@ namespace Mantein
             DisableColumns();
         }
 
+        /// <summary>
+        /// Actualiza el DataSet.
+        /// </summary>
         protected void UpdateQuery()
         {
             DBUtilities db = new DBUtilities();
@@ -133,6 +125,9 @@ namespace Mantein
             OpenQuery();
         }
 
+        /// <summary>
+        /// Abre la ventana de busqueda.
+        /// </summary>
         protected virtual void OpenQuery()
         {
 
@@ -150,6 +145,9 @@ namespace Mantein
             OpenQuery();
         }
 
+        /// <summary>
+        /// Selecciona la ultima row ya que esta esta vacia y asi es como añadir una nueva row.
+        /// </summary>
         public void AddNewRow()
         {
             if (dts == null)
@@ -192,6 +190,9 @@ namespace Mantein
             DisableColumns();
         }
 
+        /// <summary>
+        /// Desactiva las columnas que no se quieren modificar.
+        /// </summary>
         public void DisableColumns()
         {
             for (int i = 0; i < dgwBase.Columns.Count; i++)
@@ -219,21 +220,26 @@ namespace Mantein
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            DeleteRows();
+        }
+
+        /// <summary>
+        /// Elminina las columnas seleccionadas
+        /// </summary>
+        protected virtual void DeleteRows()
+        {
             try
             {
-
                 for(int i = dgwBase.SelectedRows.Count - 1; i >= 0; i--)
                 {
                     dgwBase.Rows.Remove(dgwBase.SelectedRows[i]);
                 }
-
             }
             catch(Exception ex)
             {
 
                 Console.WriteLine(ex);
             }
-
         }
     }
 }

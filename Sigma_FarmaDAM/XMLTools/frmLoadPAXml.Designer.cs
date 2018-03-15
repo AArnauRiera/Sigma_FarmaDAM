@@ -32,7 +32,7 @@
             // 
             // btnUpload
             // 
-            this.btnUpload.Text = "Subir Xml";
+            this.btnUploadLab.Text = "Subir Xml";
             // 
             // frmLoadPAXml
             // 
