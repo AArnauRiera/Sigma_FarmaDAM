@@ -19,7 +19,6 @@ namespace XMLTools
                 mail.From = new MailAddress("SigmaFarmaDAM@gmail.com");
                 mail.To.Add("SigmaFarmaDAM@gmail.com");
                 mail.Subject = "Comanda enviada correctamente";
-                mail.Body = "mail con adjunto";
                 SmtpServer.Port = 587;
                 SmtpServer.Credentials = new System.Net.NetworkCredential("SigmaFarmaDAM", "Dam123456");
                 SmtpServer.EnableSsl = true;
