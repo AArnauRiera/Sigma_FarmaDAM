@@ -22,8 +22,9 @@ namespace SellSystem
 
         string Query;
         ///***FUNCTIONS***///
-   
+
         ///Busca si el cliente existe///
+        ///<param name="textboxSigma">Textbox del Cliente</param>
         public bool Client_exist(TxtSigma textBoxSigma)
         {
             Query = "select* from Clients  where NTS ='" + textBoxSigma.Text + "'";
@@ -34,6 +35,7 @@ namespace SellSystem
             return validate;
         }
         ///Devuelve la ID del cliente///
+        ///<param name="textboxSigma">Textbox del cliente</param>
         public string Client_ID(string textBoxSigma)//la variable "id" no se usa en ningún momento
         {
             String ID;
@@ -50,6 +52,7 @@ namespace SellSystem
             return ID;
         }
         ///Busca si el medicamento existe///
+        ///<param name="drug">texbox del medicamento(register_number)</param>
         public bool drug_exist(String drug)
         {
             Query = "select* from Drugs  where Register_Number = '" + drug + "'";
@@ -60,6 +63,7 @@ namespace SellSystem
             return validate;
         }
         ///Busca si el medicamento tiene stock///
+        ///<param name="drug">register_number</param>
         public bool stock(String drug)
         {
             int stock = 0;
@@ -74,6 +78,7 @@ namespace SellSystem
         }
 
         ///Devuelve un DataSet con los valores de la taula Clients donde NTS sea igual al valor introducido///
+        ///<param name="textBoxSigma">NTS del cliente</param>
         public DataSet client(TxtSigma textBoxSigma)
         {
             Query = "select Name,lastName1,lastName2,DNI from Clients where NTS = '" + textBoxSigma.Text + "'";
@@ -81,6 +86,7 @@ namespace SellSystem
             return dts;
         }
         ///Devuelve el nombre del producto///
+        ///<param  name="textBoxSigma_txt">Register_Number text</param>
         public string name_product(string textBoxSigma_txt)
         {
             String Query = "select CommercialName from Drugs where Register_Number= '" + textBoxSigma_txt + "'";
@@ -97,6 +103,7 @@ namespace SellSystem
             return Name;
         }
         ///Devuelve la ID  del principio activo de la tabla drugs///
+        ///<param  name="ActivePrincipleStr">Register Number string</param>
         public string id_active(string ActivePrincipleStr)
         {
             DataSet dts;
@@ -113,10 +120,29 @@ namespace SellSystem
             }
             return active;
         }
-        public void Stock_Update(string Register_Number)
+        ///Devuelve la ID  de la tabla drugs a partir de el Register Number/// 
+        ///<param  name="drug">Register Number Drug</param>
+        public int Drug_ID(string drug)
         {
-            String Query = "Select  Stock.Quantity from Drugs,Stock where Drugs.id = Stock.ID_Drug and Drugs.Register_Number ='" + Register_Number + "'";
+            DataSet dts;
+            String Query = "select id from Drugs where Register_Number='" + drug + "'";
+            dts = db.PortarPerConsulta(Query);
+            string Drug = dts.Tables[0].Rows[0][0].ToString();
+            int drug_id = Convert.ToInt32(Drug);
+            return drug_id;
+        }
+        ///Devuelve la ID del medicamento  que esta en el Dataset///
+        ///<param  name="data">Dataset con valores tabla Stock</param>
+        public string getIdDrugsStock(DataSet data)
+        {
+            string idQuery = "";
 
+            foreach (DataRow r in data.Tables["Taula"].Rows)
+            {
+                idQuery += " || ID_Drug = '" + Convert.ToInt32(r["ID_Drug"]) + "'";
+            }
+
+            return idQuery;
         }
 
     }
