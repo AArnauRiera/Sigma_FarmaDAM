@@ -159,7 +159,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 501);
             this.Name = "frmQueryUsers";
-            this.Text = "frmQueryUsers";
+            this.Text = "Buscar Usuario";
             this.pnlButtons.ResumeLayout(false);
             this.pnlTB.ResumeLayout(false);
             this.pnlTB.PerformLayout();
