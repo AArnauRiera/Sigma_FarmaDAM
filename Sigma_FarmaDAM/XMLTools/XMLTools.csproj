@@ -46,18 +46,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmGestionComandas.Designer.cs" />
-    <Compile Include="frmLoadLabXml.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLoadLabXml.Designer.cs">
-      <DependentUpon>frmLoadLabXml.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmLoadPAXml.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLoadPAXml.Designer.cs">
-      <DependentUpon>frmLoadPAXml.cs</DependentUpon>
-    </Compile>
     <Compile Include="FTPHelper.cs" />
     <Compile Include="SMTPHelper.cs" />
     <Compile Include="XMLGenerator.cs" />
@@ -73,9 +61,6 @@
     <EmbeddedResource Include="frmGestionComandas.resx" />
     <EmbeddedResource Include="frmLoadDataXML.resx">
       <DependentUpon>frmLoadDataXML.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLoadPAXml.resx">
-      <DependentUpon>frmLoadPAXml.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
