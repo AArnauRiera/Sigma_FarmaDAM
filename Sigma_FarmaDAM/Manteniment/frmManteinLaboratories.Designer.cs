@@ -119,7 +119,7 @@
             // 
             // txtDenomination
             // 
-            this.txtDenomination.DBReference = "Denomination";
+            this.txtDenomination.DBReference = "LabName";
             this.txtDenomination.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtDenomination.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDenomination.ForeColor = System.Drawing.Color.Black;

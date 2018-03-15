@@ -234,5 +234,10 @@ namespace Sigma_FarmaDAM
         {
             AddNewTab("Xml", new frmLoadLabXml());
         }
+
+        private void btnDataXml_Click(object sender, EventArgs e)
+        {
+            AddNewTab("Xml", new frmLoadDataXML());
+        }
     }
 }
