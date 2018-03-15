@@ -23,6 +23,13 @@ namespace Sigma_Controls
         public enum FieldTypes
         {
             None,
+            RN_Drugs,
+            RN_AP,
+            Number,
+            Double,
+            IVAid,
+            Price,
+            CIF,
             NSS,
             DNI,
             Name,
@@ -84,7 +91,21 @@ namespace Sigma_Controls
 
             switch (_fieldType)
             {
-
+                case FieldTypes.RN_Drugs:
+                    regularExpresion = @"^/d{6}";
+                    break;
+                case FieldTypes.Number:
+                    regularExpresion = @"^/d{1,}";
+                    break;
+                case FieldTypes.Double:
+                    regularExpresion = @"^(/d{1,})(.|,)(/d{1,})";
+                    break;
+                case FieldTypes.CIF:
+                    regularExpresion = @"^[A-Z]/d{9}";
+                    break;
+                case FieldTypes.RN_AP:
+                    regularExpresion = @"^/d{1,}[A-Z]{1,}";
+                    break;
                 case FieldTypes.DNI:
                     regularExpresion = @"^[0-9]{8,8}[A-Z]$";
                     break;
