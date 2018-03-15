@@ -18,11 +18,19 @@ namespace UserRegister
             InitializeComponent();
         }
 
+        /// <summary>
+        /// cuando se preme el boton de guardar intentara guardar el nuevo usuario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Save();
         }
 
+        /// <summary>
+        /// comprueba que el formato de los controles sea el correcto y que los datos unicos no esten insertados en la BBDD, comprueba que las contraseñas sean iguales, si es todo correcto actualiza la BBDD con el nuevo usuario
+        /// </summary>
         private void Save()
         {
             LoginControl.LoginControl control = new LoginControl.LoginControl(tbxUsername.Text);
@@ -42,21 +50,12 @@ namespace UserRegister
                 }
             }
         }
-        private void Clear()
-        {
-            foreach (Control control in Controls)
-            {
-                if (control is CheckBox)
-                {
-                    CheckBox cntrl = (CheckBox)control;
-                    cntrl.Checked = false;
-                } else
-                {
-                    control.Text = "";
-                }
-            }
-        }
 
+        /// <summary>
+        /// Cuando se preme una tecla comprueba si es un Enter, si lo es guarda el nuevo usuario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmUserRegister_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
@@ -71,6 +70,11 @@ namespace UserRegister
 
         }
 
+        /// <summary>
+        /// al pulsar el boton de Cancelar cierra el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();

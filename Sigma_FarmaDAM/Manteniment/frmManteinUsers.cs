@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mantein;
+using SearchSystem;
 using UserRegister;
 
 namespace Manteniment
@@ -26,6 +27,9 @@ namespace Manteniment
             AddNewUser();
         }
 
+        /// <summary>
+        /// abre un formulario para crear un nuevo usuario
+        /// </summary>
         private void AddNewUser()
         {
             bool isOpened = false;
@@ -43,6 +47,12 @@ namespace Manteniment
             {
                 frmReg.Show();
             }
+        }
+
+        protected override void OpenQuery()
+        {
+            frmQueryUsers frm = new frmQueryUsers(this, "Seller");
+            frm.Show();
         }
     }
 }

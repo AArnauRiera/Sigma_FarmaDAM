@@ -18,6 +18,11 @@ namespace UserManagament
         {
         }
 
+        /// <summary>
+        /// Genera una tabla a partir de la query pasada
+        /// </summary>
+        /// <param name="query">Query de busqueda</param>
+        /// <returns>DataTable</returns>
         public DataTable SearchTableFromQuery (string query)
         {
             DBUtilities db = new DBUtilities();
@@ -39,6 +44,11 @@ namespace UserManagament
             }
         }
 
+        /// <summary>
+        /// Busca un combobox dentro de la coleccíon de controles y inyecta los datos correspondientes dentro del mismo
+        /// </summary>
+        /// <param name="dts">DataSet con la informacion a inyectar</param>
+        /// <param name="Controls">Todos los controles en el formulario o panel</param>
         private void DataBindingComboBox(DataSet dts, Control.ControlCollection Controls)
         {
             foreach (Control control in Controls)
@@ -58,6 +68,13 @@ namespace UserManagament
             }
         }
 
+        /// <summary>
+        /// Comprueba en la BBDD si el usuario esta registrado
+        /// </summary>
+        /// <param name="NTS"></param>
+        /// <param name="DNI"></param>
+        /// <param name="dts"></param>
+        /// <returns>Un booleano (true=esta registrado / false=no registrado)</returns>
         public bool CheckIfUserIsRegistered(TxtSigma NTS, TxtSigma DNI, DataSet dts)
         {
             bool isRegistered = false;
@@ -74,6 +91,11 @@ namespace UserManagament
             return isRegistered;
         }
 
+        /// <summary>
+        /// comprueba que el dato en el campo de NTS sea correcto, si es asi coje los datos del usuario con ese NTS y los inyecta en el formulario
+        /// </summary>
+        /// <param name="Controls">Coleccion de controles</param>
+        /// <param name="errorProvider">errorProvider donde se lanzaran los errores recibidos</param>
         public void getDataFromNtsSeach (Control.ControlCollection Controls, ErrorProvider errorProvider)
         {
             TxtSigma tbxNTS = (TxtSigma)Controls.Find("tbxNTS", false)[0];
@@ -106,6 +128,11 @@ namespace UserManagament
             }
         }
 
+        /// <summary>
+        /// inyecta los datos del DataTable en un combobox
+        /// </summary>
+        /// <param name="t">DataTable con los datos</param>
+        /// <param name="comboBox">Combobox donde se inyectan los datos</param>
         public void AddComboBoxData(DataTable t, cbxSigma comboBox)
         {
 
@@ -122,41 +149,12 @@ namespace UserManagament
 
         }
 
-        public bool CheckControlsFormat(Control.ControlCollection Controls, ErrorProvider errorProvider)
-        {
-            bool error = false;
-            bool pass = true;
-
-            foreach (Control control in Controls)
-            {
-                error = ControlsErrorsHelper.CheckControlsErrors(errorProvider, control);
-                
-                if (!error)
-                {
-                    pass = false;
-                }
-            }
-
-            return pass;
-        }
-        public bool CheckControlsFormat(TxtSigma[] Controls, ErrorProvider errorProvider)
-        {
-            bool error = false;
-            bool pass = true;
-
-            foreach (Control control in Controls)
-            {
-                error = ControlsErrorsHelper.CheckControlsErrors(errorProvider, control);
-
-                if (!error)
-                {
-                    pass = false;
-                }
-            }
-
-            return pass;
-        }
-
+        /// <summary>
+        /// Inyecta un dataRow con los datos de los controles
+        /// </summary>
+        /// <param name="r">DataRow donde inyectar los datos</param>
+        /// <param name="controls">Coleccion de controles donde conseguir los datos</param>
+        /// <returns></returns>
         public DataRow CreateDataRowFromControls(DataRow r, Control.ControlCollection controls)
         {
             foreach (var control in controls)
@@ -175,6 +173,14 @@ namespace UserManagament
             }
             return r;
         }
+
+
+        /// <summary>
+        /// compueba que los datos introducidos sean correctos
+        /// </summary>
+        /// <param name="Controls">Coleccion de controles</param>
+        /// <param name="errorProvider">ErrorProvider donde se lanzaran los errores</param>
+        /// <returns></returns>
         public bool CheckControlsFormat(ErrorProvider error, Control.ControlCollection Controls)
         {
             bool isCorrect = false;
@@ -196,6 +202,12 @@ namespace UserManagament
             return pass;
         }
 
+        /// <summary>
+        /// Comprueba si los datos introducidos son correctos, y actualiza la BBDD con los nuevos valores: estes añadiendo una entidad nueva o editando una existente
+        /// </summary>
+        /// <param name="Controls">coleccion de controles donde conseguir los datos</param>
+        /// <param name="edit">boolean que informa si se esta editando</param>
+        /// <param name="errorProvider">ErrorProvider donde lanzar los errores</param>
         public void SaveChanges(Control.ControlCollection Controls, bool edit, ErrorProvider errorProvider)
         {
             DBUtilities db = new DBUtilities();
