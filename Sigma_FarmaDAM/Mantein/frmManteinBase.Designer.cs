@@ -33,11 +33,11 @@
             this.dgwBase = new System.Windows.Forms.DataGridView();
             this.pnlTextBox = new System.Windows.Forms.Panel();
             this.pnlButtons = new System.Windows.Forms.Panel();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.bntNew = new System.Windows.Forms.Button();
             this.btnQuery = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnGet = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.pnlMantein.SuspendLayout();
             this.pnlGW.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwBase)).BeginInit();
@@ -64,9 +64,11 @@
             // 
             // dgwBase
             // 
+            this.dgwBase.AllowUserToDeleteRows = false;
             this.dgwBase.BackgroundColor = System.Drawing.Color.White;
             this.dgwBase.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwBase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwBase.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgwBase.GridColor = System.Drawing.Color.White;
             this.dgwBase.Location = new System.Drawing.Point(7, 5);
             this.dgwBase.Margin = new System.Windows.Forms.Padding(5);
@@ -94,6 +96,16 @@
             this.pnlButtons.Name = "pnlButtons";
             this.pnlButtons.Size = new System.Drawing.Size(372, 78);
             this.pnlButtons.TabIndex = 4;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(82, 17);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(66, 41);
+            this.btnEliminar.TabIndex = 15;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // bntNew
             // 
@@ -138,16 +150,6 @@
             this.btnGet.Text = "Obtener";
             this.btnGet.UseVisualStyleBackColor = true;
             this.btnGet.Click += new System.EventHandler(this.btnGet_Click_1);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(82, 17);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(66, 41);
-            this.btnEliminar.TabIndex = 15;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // frmManteinBase
             // 

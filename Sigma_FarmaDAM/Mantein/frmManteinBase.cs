@@ -79,6 +79,26 @@ namespace Mantein
             string cols = GetColumns();
             query = "select * from " + Table;
             dts = db.PortarPerConsulta(query);
+
+            try
+            {
+                TxtSigma cell = null;
+                bool find = true;
+                for(int i = pnlTextBox.Controls.Count - 1; i >= 0 && find; i--)
+                {
+                    if(pnlTextBox.Controls[i] is TxtSigma)
+                    {
+                        cell = pnlTextBox.Controls[i] as TxtSigma;
+                        find = false;
+                    }
+                }
+                dgwBase.CurrentCell = dgwBase.Rows[0].Cells[cell.DBReference];
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
         }
 
         public void RefreshQuery(string newQuery)
