@@ -13,18 +13,18 @@ namespace XMLTools
 {
     public partial class frmGestionComandas : Form
     {
-    public frmGestionComandas()
-    {
-    InitializeComponent();
-    }
+        public frmGestionComandas()
+        {
+            InitializeComponent();
+        }
 
-    private void button1_Click(object sender, EventArgs e)
-    {
-    GetCommanndByDate();
-    }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GetCommanndByDate();
+        }
 
-    private void GetCommanndByDate()
-    {
+        private void GetCommanndByDate()
+        {
 
             DataSet ds;
             XMLGenerator xmlGenerator = new XMLGenerator();
@@ -35,9 +35,13 @@ namespace XMLTools
             DBUtils.DBUtilities dbUtilities = new DBUtilities();
 
             ds = dbUtilities.PortarPerConsulta(
-            "SELECT Drugs.CommercialName, Drugs.Sanitary_Register_Num, SUM(Order_Content.Quantity) AS Quantity, Drugs.NeedsRecipe FROM Order_Header, Order_Content, Drugs WHERE Order_Header.Id_Header = Order_Content.Id_Header AND Drugs.id = Order_Content.Id_Drug AND Date LIKE '%" + dateTimePicker1.AccessibilityObject.Value + "%' GROUP BY Order_Content.Id_Drug, Drugs.CommercialName, Drugs.Sanitary_Register_Num");
+                "SELECT Drugs.CommercialName, Drugs.Sanitary_Register_Num, SUM(Order_Content.Quantity) AS Quantity, Drugs.NeedsRecipe FROM Order_Header, Order_Content, Drugs WHERE Order_Header.Id_Header = Order_Content.Id_Header AND Drugs.id = Order_Content.Id_Drug AND Date LIKE '%" + dateTimePicker1.AccessibilityObject.Value + "%' GROUP BY Order_Content.Id_Drug, Drugs.CommercialName, Drugs.Sanitary_Register_Num");
 
             xmlGenerator.GenerateCommand(ds, dateTimePicker1.Text);
+
+            FTPHelper.UploadFile("Comanda_" + dateTimePicker1.Text + ".xml");
+
+            SMTPHelper.SendEmail();
 
         }
 

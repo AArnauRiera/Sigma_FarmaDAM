@@ -54,5 +54,12 @@ namespace Sigma_FarmaDAM
                     break;
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+            Close();
+
+        }
     }
 }
