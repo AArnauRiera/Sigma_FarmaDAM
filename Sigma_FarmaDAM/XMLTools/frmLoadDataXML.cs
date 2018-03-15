@@ -40,121 +40,142 @@ namespace XMLTools
         }
         public virtual void UploadData()
         {
-            XmlDocument reader = new XmlDocument();
-            reader.Load(txtbxXml.Text);
 
-            DBUtilities db = new DBUtilities();
-
-            DataSet ds = db.PortarPerConsulta("select * from Drugs where 1 = 2");
-
-            XmlNodeList nodeList = reader.DocumentElement.GetElementsByTagName("prescription");
-
-            int count = 0;
-
-            nodeCount = nodeList.Count;
-
-            lblCounter.Text = count + " / " + nodeCount;
-
-            foreach(XmlNode node in nodeList)
+            try
             {
-                DataRow dtr = ds.Tables["Taula"].NewRow();
+                XmlDocument reader = new XmlDocument();
+                reader.Load(txtbxXml.Text);
 
-                foreach(XmlNode child in node.ChildNodes)
+                DBUtilities db = new DBUtilities();
+
+                DataSet ds = db.PortarPerConsulta("select * from Drugs where 1 = 2");
+
+                XmlNodeList nodeList = reader.DocumentElement.GetElementsByTagName("prescription");
+
+                int count = 0;
+
+                nodeCount = nodeList.Count;
+
+                Invoke((MethodInvoker)delegate { lblCounter.Text = count + " / " + nodeCount; });
+
+                foreach(XmlNode node in nodeList)
                 {
-                    string value;
+                    DataRow dtr = ds.Tables["Taula"].NewRow();
 
-                    switch(child.Name)
+                    foreach(XmlNode child in node.ChildNodes)
                     {
-                        case "cod_nacion":
-                            value = child.InnerText;
-                            dtr["Register_number"] = value;
-                            break;
-                        case "nro_definitivo":
-                            value = child.InnerText;
-                            dtr["Sanitary_Register_Num"] = value;
-                            break;
-                        case "des_nomco":
-                            value = child.InnerText;
-                            dtr["CommercialName"] = value;
-                            break;
-                        case "nro_conte":
-                            value = child.InnerText;
-                            dtr["Content"] = value;
-                            break;
-                        case "url_fictec":
-                            value = child.InnerText;
-                            dtr["Documentation"] = value;
-                            break;
-                        case "url_prosp":
-                            value = child.InnerText;
-                            dtr["Prospectus"] = value;
-                            break;
-                        case "sw_receta":
-                            value = child.InnerText;
-                            dtr["NeedsRecipe"] = ConvertTo(value);
-                            break;
-                        case "sw_generico":
-                            value = child.InnerText;
-                            dtr["IsGeneric"] = ConvertTo(value);
-                            break;
-                        case "sw_sustituible":
-                            value = child.InnerText;
-                            dtr["Replaceable"] = ConvertTo(value);
-                            break;
-                        case "laboratorio_titular":
-                            value = child.InnerText;
-                            dtr["LabId"] = value;
-                            break;
-                        case "formasfarmaceuticas":
-                            bool found = false;
-                            foreach(XmlNode item in child.ChildNodes)
-                            {
-                                switch(item.Name)
-                                {
-                                    case "composicion_pa":
+                        string value;
 
-                                        foreach(XmlNode cod in item.ChildNodes)
-                                        {
-                                            switch(cod.Name)
+                        switch(child.Name)
+                        {
+                            case "cod_nacion":
+                                value = child.InnerText;
+                                dtr["Register_number"] = value;
+                                break;
+                            case "nro_definitivo":
+                                value = child.InnerText;
+                                dtr["Sanitary_Register_Num"] = value;
+                                break;
+                            case "des_nomco":
+                                value = child.InnerText;
+                                dtr["CommercialName"] = value;
+                                break;
+                            case "nro_conte":
+                                value = child.InnerText;
+                                dtr["Content"] = value;
+                                break;
+                            case "url_fictec":
+                                value = child.InnerText;
+                                dtr["Documentation"] = value;
+                                break;
+                            case "url_prosp":
+                                value = child.InnerText;
+                                dtr["Prospectus"] = value;
+                                break;
+                            case "sw_receta":
+                                value = child.InnerText;
+                                dtr["NeedsRecipe"] = ConvertTo(value);
+                                break;
+                            case "sw_generico":
+                                value = child.InnerText;
+                                dtr["IsGeneric"] = ConvertTo(value);
+                                break;
+                            case "sw_sustituible":
+                                value = child.InnerText;
+                                dtr["Replaceable"] = ConvertTo(value);
+                                break;
+                            case "laboratorio_titular":
+                                value = child.InnerText;
+                                dtr["LabId"] = value;
+                                break;
+                            case "formasfarmaceuticas":
+                                bool found = false;
+                                foreach(XmlNode item in child.ChildNodes)
+                                {
+                                    switch(item.Name)
+                                    {
+                                        case "composicion_pa":
+
+                                            foreach(XmlNode cod in item.ChildNodes)
                                             {
-                                                case "cod_principio_activo":
-                                                    value = cod.InnerText;
-                                                    dtr["ActivePrincipleID"] = value;
-                                                    found = true;
-                                                    break;
+                                                switch(cod.Name)
+                                                {
+                                                    case "cod_principio_activo":
+                                                        value = cod.InnerText;
+                                                        dtr["ActivePrincipleID"] = value;
+                                                        found = true;
+                                                        break;
+                                                }
                                             }
-                                        }
 
+                                            break;
+                                    }
+
+                                    if(found)
+                                    {
                                         break;
+                                    }
+
                                 }
 
-                                if(found)
-                                {
-                                    break;
-                                }
-
-                            }
-
-                            break;
+                                break;
+                        }
                     }
+
+                    dtr["IVAId"] = 2;
+
+                    dtr["Price"] = 10;
+
+                    try
+                    {
+                        DataSet exist = db.PortarPerConsulta("select * from Drugs where Register_number = " + dtr["Register_number"]);
+
+                        if(exist.Tables["Taula"].Rows.Count == 0)
+                        {
+                            ds.Tables["Taula"].Rows.Add(dtr);
+                        }
+                    }
+                    catch(Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }                    
+
+                    count++;
+
+                    Invoke((MethodInvoker)delegate { lblCounter.Text = count + " / " + nodeCount; });
                 }
 
-                dtr["IVAId"] = 2;
-                dtr["Price"] = 10;
+                db.Actualizar("select * from Drugs where 1 = 2", "Taula", ds);
 
-                DataSet exist = db.PortarPerConsulta("select * from Drugs where Register_number = " + dtr["Register_number"]);
+                Invoke((MethodInvoker)delegate { lblCounter.Text = "Finalizado!"; });
 
-                if(exist.Tables["Taula"].Rows.Count == 0)
-                {
-                    ds.Tables["Taula"].Rows.Add(dtr);
-                }
-
-                count++;
-
-                lblCounter.Text = count + " / " + nodeCount;
             }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            
 
-            db.Actualizar("select * from Drugs where 1 = 2", "Taula", ds);
         }
         private bool ConvertTo(string value)
         {

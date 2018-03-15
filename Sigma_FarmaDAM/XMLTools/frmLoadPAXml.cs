@@ -36,7 +36,7 @@ namespace XMLTools
 
                 nodeCount = nodeList.Count;
 
-                lblCounter.Text = count + " / " + nodeCount;
+                Invoke((MethodInvoker)delegate { lblCounter.Text = count + " / " + nodeCount; });
 
                 foreach(XmlNode node in nodeList)
                 {
@@ -62,21 +62,34 @@ namespace XMLTools
                                 break;
                         }
                     }
-                    string query = "select * from Active_Principles where Sanitary_Register_Number = " + "'" + dtr["Sanitary_Register_Number"] + "'";
-                    DataSet exist = db.PortarPerConsulta(query);
 
-                    if(exist.Tables["Taula"].Rows.Count == 0)
+                    try
                     {
-                        ds.Tables["Taula"].Rows.Add(dtr);
+                        string query = "select * from Active_Principles where Sanitary_Register_Number = " + "'" + dtr["Sanitary_Register_Number"] + "'";
+
+                        DataSet exist = db.PortarPerConsulta(query);
+
+                        if(exist.Tables["Taula"].Rows.Count == 0)
+                        {
+                            ds.Tables["Taula"].Rows.Add(dtr);
+                        }
+
+                    }
+                    catch(Exception e)
+                    {
+
+                        Console.WriteLine(e);
                     }
 
                     count++;
 
-                    lblCounter.Text = count + " / " + nodeCount;
+                    Invoke((MethodInvoker)delegate { lblCounter.Text = count + " / " + nodeCount; });
 
                 }
 
                 db.Actualizar("select * from Active_Principles where 1 = 2", "Taula", ds);
+
+                Invoke((MethodInvoker)delegate { lblCounter.Text = "Finalizado!"; });
 
             }
             catch(Exception ex)
