@@ -16,7 +16,7 @@ namespace XMLTools
             {
                 // Get the object used to communicate with the server.
                 FtpWebRequest request = (FtpWebRequest)WebRequest.Create(
-                "ftp://172.17.6.0/Grupo_1/1/testfile.txt"
+                "ftp://172.17.6.0/Grupo_1/1/" + path
                 );
                 request.Method = WebRequestMethods.Ftp.UploadFile;
                 // Nos logeamos

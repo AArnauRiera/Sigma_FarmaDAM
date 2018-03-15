@@ -10,7 +10,7 @@ namespace XMLTools
 {
     public class SMTPHelper
     {
-        public void SendEmail()
+        public static void SendEmail()
         {
             try
             {
