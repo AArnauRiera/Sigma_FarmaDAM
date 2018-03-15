@@ -23,7 +23,7 @@ namespace XMLTools
                 SmtpServer.Credentials = new System.Net.NetworkCredential("SigmaFarmaDAM", "Dam123456");
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
-                MessageBox.Show("Mail enviadoª!!");
+                MessageBox.Show("Mail enviado!!");
             }
             catch (Exception ex)
             {
