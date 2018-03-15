@@ -208,7 +208,7 @@ namespace Sigma_FarmaDAM
         private void btnGestioComandes_Click(object sender, EventArgs e)
         {
      
-            AddNewTab("Gestio de Comandes", new frmGestionComandas());
+            AddNewTab("Gestión de Comandas", new frmGestionComandas());
 
         }
         

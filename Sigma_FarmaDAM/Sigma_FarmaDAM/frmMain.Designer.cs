@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnUserManagement = new System.Windows.Forms.Button();
@@ -69,8 +70,9 @@
             this.panel1.Controls.Add(this.btnVentas);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(271, 716);
+            this.panel1.Size = new System.Drawing.Size(361, 881);
             this.panel1.TabIndex = 6;
             // 
             // btnUserManagement
@@ -84,11 +86,12 @@
             this.btnUserManagement.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnUserManagement.Image = global::Sigma_FarmaDAM.Properties.Resources.user__1_;
             this.btnUserManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUserManagement.Location = new System.Drawing.Point(0, 623);
+            this.btnUserManagement.Location = new System.Drawing.Point(0, 767);
+            this.btnUserManagement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUserManagement.Name = "btnUserManagement";
-            this.btnUserManagement.Size = new System.Drawing.Size(271, 66);
+            this.btnUserManagement.Size = new System.Drawing.Size(361, 81);
             this.btnUserManagement.TabIndex = 11;
-            this.btnUserManagement.Text = "Mantenimiento de Usuarios";
+            this.btnUserManagement.Text = "Mantenimiento de usuarios";
             this.btnUserManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUserManagement.UseVisualStyleBackColor = false;
             this.btnUserManagement.Click += new System.EventHandler(this.btnAddUser_Click);
@@ -97,10 +100,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Azure;
             this.pictureBox1.Image = global::Sigma_FarmaDAM.Properties.Resources.logoSigma2;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(229, 98);
+            this.pictureBox1.Size = new System.Drawing.Size(305, 121);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
@@ -115,9 +118,10 @@
             this.btnGestioComandes.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnGestioComandes.Image = global::Sigma_FarmaDAM.Properties.Resources.worker_loading_boxes;
             this.btnGestioComandes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGestioComandes.Location = new System.Drawing.Point(0, 551);
+            this.btnGestioComandes.Location = new System.Drawing.Point(0, 678);
+            this.btnGestioComandes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGestioComandes.Name = "btnGestioComandes";
-            this.btnGestioComandes.Size = new System.Drawing.Size(271, 66);
+            this.btnGestioComandes.Size = new System.Drawing.Size(361, 81);
             this.btnGestioComandes.TabIndex = 7;
             this.btnGestioComandes.Text = "Gestion de comandas";
             this.btnGestioComandes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,11 +139,12 @@
             this.btnLaboratorisFarmaceutiques.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnLaboratorisFarmaceutiques.Image = global::Sigma_FarmaDAM.Properties.Resources.flask;
             this.btnLaboratorisFarmaceutiques.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLaboratorisFarmaceutiques.Location = new System.Drawing.Point(0, 479);
+            this.btnLaboratorisFarmaceutiques.Location = new System.Drawing.Point(0, 590);
+            this.btnLaboratorisFarmaceutiques.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLaboratorisFarmaceutiques.Name = "btnLaboratorisFarmaceutiques";
-            this.btnLaboratorisFarmaceutiques.Size = new System.Drawing.Size(271, 66);
+            this.btnLaboratorisFarmaceutiques.Size = new System.Drawing.Size(361, 81);
             this.btnLaboratorisFarmaceutiques.TabIndex = 5;
-            this.btnLaboratorisFarmaceutiques.Text = "Laboratorios Farmaceuticos";
+            this.btnLaboratorisFarmaceutiques.Text = "Laboratorios farmaceuticos";
             this.btnLaboratorisFarmaceutiques.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLaboratorisFarmaceutiques.UseVisualStyleBackColor = false;
             this.btnLaboratorisFarmaceutiques.Click += new System.EventHandler(this.btnLaboratorisFarmaceutiques_Click);
@@ -155,9 +160,10 @@
             this.btnMantenimentProductes.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnMantenimentProductes.Image = global::Sigma_FarmaDAM.Properties.Resources._2_pills;
             this.btnMantenimentProductes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMantenimentProductes.Location = new System.Drawing.Point(0, 406);
+            this.btnMantenimentProductes.Location = new System.Drawing.Point(0, 500);
+            this.btnMantenimentProductes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMantenimentProductes.Name = "btnMantenimentProductes";
-            this.btnMantenimentProductes.Size = new System.Drawing.Size(271, 66);
+            this.btnMantenimentProductes.Size = new System.Drawing.Size(361, 81);
             this.btnMantenimentProductes.TabIndex = 4;
             this.btnMantenimentProductes.Text = "Mantenimento productos";
             this.btnMantenimentProductes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -175,9 +181,10 @@
             this.btnMantenimenPrincipiActius.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnMantenimenPrincipiActius.Image = global::Sigma_FarmaDAM.Properties.Resources.biological_cell;
             this.btnMantenimenPrincipiActius.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMantenimenPrincipiActius.Location = new System.Drawing.Point(0, 334);
+            this.btnMantenimenPrincipiActius.Location = new System.Drawing.Point(0, 411);
+            this.btnMantenimenPrincipiActius.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMantenimenPrincipiActius.Name = "btnMantenimenPrincipiActius";
-            this.btnMantenimenPrincipiActius.Size = new System.Drawing.Size(271, 66);
+            this.btnMantenimenPrincipiActius.Size = new System.Drawing.Size(361, 81);
             this.btnMantenimenPrincipiActius.TabIndex = 3;
             this.btnMantenimenPrincipiActius.Text = "Mantenimento principios activos ";
             this.btnMantenimenPrincipiActius.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,11 +202,12 @@
             this.btnEditClient.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnEditClient.Image = global::Sigma_FarmaDAM.Properties.Resources.user;
             this.btnEditClient.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditClient.Location = new System.Drawing.Point(0, 262);
+            this.btnEditClient.Location = new System.Drawing.Point(0, 322);
+            this.btnEditClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditClient.Name = "btnEditClient";
-            this.btnEditClient.Size = new System.Drawing.Size(271, 66);
+            this.btnEditClient.Size = new System.Drawing.Size(361, 81);
             this.btnEditClient.TabIndex = 2;
-            this.btnEditClient.Text = "Editar Cliente";
+            this.btnEditClient.Text = "Editar cliente";
             this.btnEditClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditClient.UseVisualStyleBackColor = false;
             this.btnEditClient.Click += new System.EventHandler(this.btnEditClient_Click);
@@ -215,11 +223,12 @@
             this.btnUser.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnUser.Image = global::Sigma_FarmaDAM.Properties.Resources.user__1_;
             this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUser.Location = new System.Drawing.Point(0, 189);
+            this.btnUser.Location = new System.Drawing.Point(0, 233);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(271, 66);
+            this.btnUser.Size = new System.Drawing.Size(361, 81);
             this.btnUser.TabIndex = 1;
-            this.btnUser.Text = "Registro Cliente";
+            this.btnUser.Text = "Registro cliente";
             this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUser.UseVisualStyleBackColor = false;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
@@ -235,10 +244,10 @@
             this.btnVentas.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnVentas.Image = global::Sigma_FarmaDAM.Properties.Resources.shopping_cart__2_;
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVentas.Location = new System.Drawing.Point(0, 117);
+            this.btnVentas.Location = new System.Drawing.Point(0, 144);
             this.btnVentas.Margin = new System.Windows.Forms.Padding(0);
             this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(271, 66);
+            this.btnVentas.Size = new System.Drawing.Size(361, 81);
             this.btnVentas.TabIndex = 0;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -249,9 +258,10 @@
             // 
             this.panel2.Controls.Add(this.tbMain);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(271, 0);
+            this.panel2.Location = new System.Drawing.Point(361, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(845, 716);
+            this.panel2.Size = new System.Drawing.Size(1127, 881);
             this.panel2.TabIndex = 8;
             // 
             // tbMain
@@ -267,13 +277,13 @@
             this.tbMain.HorizontalLineColor = System.Drawing.SystemColors.Highlight;
             this.tbMain.ItemSize = new System.Drawing.Size(240, 16);
             this.tbMain.Location = new System.Drawing.Point(0, 0);
-            this.tbMain.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMain.Name = "tbMain";
             this.tbMain.SelectedIndex = 0;
             this.tbMain.SelectedTextColor = System.Drawing.SystemColors.Highlight;
             this.tbMain.ShowClosingButton = true;
             this.tbMain.ShowClosingMessage = false;
-            this.tbMain.Size = new System.Drawing.Size(845, 716);
+            this.tbMain.Size = new System.Drawing.Size(1127, 881);
             this.tbMain.TabIndex = 0;
             this.tbMain.TextColor = System.Drawing.Color.LightBlue;
             // 
@@ -349,13 +359,15 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(1116, 716);
+            this.ClientSize = new System.Drawing.Size(1488, 881);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMain";
             this.Text = "FarmaDAM";
             this.panel1.ResumeLayout(false);
