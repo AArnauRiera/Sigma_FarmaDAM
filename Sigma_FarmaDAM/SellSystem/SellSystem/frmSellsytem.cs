@@ -31,110 +31,6 @@ namespace SellSystem
             ID_Sell = ID_sell;
 
         }
-
-        /////***FUNCTIONS***///
-        #region    
-        /////Busca si el cliente existe///
-        //private bool Client_exist()
-        //{
-        //    DataSet dts;
-        //    Querry = "select* from Clients  where NTS ='" + txtClient.Text + "'";
-        //    dts = DBUTILS.PortarPerConsulta(Querry);
-        //    if (dts.Tables[0].Rows.Count > 0) { validate = true; }
-        //    else { validate = false; }
-        //    return validate;
-        //}
-        /////Devuelve la ID del cliente///
-        //private string Client_ID(string id)
-        //{
-        //    DataSet dts;
-        //    Querry = "select ID from Clients  where NTS ='" + id + "'";
-        //    dts = DBUTILS.PortarPerConsulta(Querry);
-        //    String ID;
-        //    try
-        //    {
-        //        ID = dts.Tables[0].Rows[0][0].ToString();
-        //    }
-        //    catch
-        //    {
-        //        ID = "";
-        //    }
-        //    return ID;
-        //}
-        /////Busca si el medicamento existe///
-        //private bool drug_exist(string drug)
-        //{
-        //    Querry = "select* from Drugs  where Register_Number = '" + drug + "'";
-        //    dts = DBUTILS.PortarPerConsulta(Querry);
-        //    if (dts.Tables[0].Rows.Count > 0) { validate = true; }
-        //    else { validate = false; }
-        //    return validate;
-        //}
-        /////Busca si el medicamento tiene stock///
-        //private bool stock(string drug)
-        //{
-        //    int stock = 0;
-        //    String ID_Drug = "select id from Drugs where where Register_Number = '" + drug + "";
-        //    String Drug = dts.Tables[0].Rows[0][0].ToString();
-        //    Querry = "select * from Stock where ID_Drug='" + Drug + "'and Quantity >'" + stock + "'";
-        //    dts = DBUTILS.PortarPerConsulta(Querry);
-        //    if (dts.Tables[0].Rows.Count > 0) { validate = true; }
-        //    else { validate = false; }
-        //    return validate;
-        //}
-
-        /////Devuelve un DataSet con los valores de la taula Clients donde NTS sea igual al valor introduido///
-        //private DataSet client()
-        //{
-        //    DataSet dts;
-        //    Querry = "select Name,lastName1,lastName2,DNI from Clients where NTS = '" + txtClient.Text + "'";
-        //    dts = DBUTILS.PortarPerConsulta(Querry);
-        //    return dts;
-        //}
-        /////Devuelve el nombre del producto///
-        //private string name_product()
-        //{
-        //    DataSet dts;
-        //    Querry = "select CommercialName from Drugs where Register_Number= '" + txtCod.Text + "'";
-        //    dts = DBUTILS.PortarPerConsulta(Querry);
-        //    string Name;
-        //    try
-        //    {
-        //        Name = dts.Tables[0].Rows[0][0].ToString();
-        //    }
-        //    catch
-        //    {
-        //        Name = "";
-        //    }
-        //    return Name;
-        //}
-        /////Devuelve la ID  del principio activo de la tabla drugs///
-        //private string id_active()
-        //{
-        //    DataSet dts;
-        //    Querry = "select ActivePrincipleID from Drugs where Register_Number ='" + txtCod.Text + "'";
-        //    dts = DBUTILS.PortarPerConsulta(Querry);
-        //    string active;
-        //    try
-        //    {
-        //        active = dts.Tables[0].Rows[0][0].ToString();
-        //    }
-        //    catch
-        //    {
-        //        active = "";
-        //    }
-        //    return active;
-        //}
-        private int Drug_ID(string drug)
-        {
-            DataSet dts;
-            Querry = "select id from Drugs where Register_Number='" + drug + "'";
-            dts = DBUTILS.PortarPerConsulta(Querry);
-            string Drug = dts.Tables[0].Rows[0][0].ToString();
-            int drug_id = Convert.ToInt32(Drug);
-            return drug_id;
-        }
-        #endregion
         ///***MAIN***///
         #region
         public frmSellsytem()
@@ -142,15 +38,23 @@ namespace SellSystem
             InitializeComponent();
             lblName.Text = "";
         }
+        /// <summary>
+        /// Este metodo actualiza los valores de los medicamentos en el DataGridView 
+        /// Lo que hace es primero comprueva si el nombre del producto no es nullo
+        /// si no lo es entonces comprueva si el valor existe con un for si existe actualiza la cantidad y pone el boolean
+        /// exist en true si no es true entonces añade los valores en un datarow 
+        /// luego si el dataset que guarda el nombre del medicamento codigo etz tiene mas de una row entonces
+        /// muestra el datagridview si no es asi muestra  un mensaje por pantalla avisando que es nullo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAdd_Click(object sender, EventArgs e)
-        {
-            
+        {    
             bool exist = false;
             String Drug = txtCod.Text.ToString();
 
             if (!String.IsNullOrEmpty(txtProd.Text))
             {
-
                 ///comprueba si un medicamento esta introduido en la tabla y si esta introduido le añade suma la cantidad introduida///
                 for (int row = 0; row < dgView_Sell.Rows.Count - 1; row++)
                 {
@@ -187,6 +91,12 @@ namespace SellSystem
                 }
             }
         }
+
+        /// <summary>
+        /// Al cargar el form genera estas columnas en el datagridview
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmSellsytem_Load(object sender, EventArgs e)
         {
             dt.Columns.Add("ID_Stock ");
@@ -196,6 +106,15 @@ namespace SellSystem
             dt.Columns.Add("quantity");
             txtCantidad.Text = "1";
         }
+        /// <summary>
+        /// Este metodo valida si el codigo del medicamento existe y si tiene stock
+        /// Pulsando la tecla enter actualiza el txtProd que es donde se pone el nombre del medicamento
+        /// entonces mediante dos funciones una que comprueva si el medicamento existe y otra si tiene stock 
+        /// te permite añadir el medicamento o si no tiene stock o no existe te busca medicamentos que tengan la misma ID 
+        /// de Active Principle abriendo   el from frmQueryDrugs 
+        /// </summary>
+        /// <param name="sender">Objeto del evento</param>
+        /// <param name="e">Argumento del evento</param>
         private void txtCod_KeyDown(object sender, KeyEventArgs e)
         {
             ///Comprueba si se pulsa la key enter y que no este null el campo del codigo del medicamento///
@@ -227,7 +146,11 @@ namespace SellSystem
                 }
             }
         }
-        ///Genera un Array a partir del custom control donde los valores son todos los de el panel///
+       /// <summary>
+       /// Esta Fucion utiliza el custom control para sacar el texto de cada control que hay en el panel
+       /// utiliza un from que recorre todos los valores de el panel 
+       /// </summary>
+       /// <returns></returns>
         private TxtSigma[] GetTxtSigma()
         {
             List<TxtSigma> txts = new List<TxtSigma>();
@@ -240,7 +163,11 @@ namespace SellSystem
             }
             return txts.ToArray();
         }
-
+        /// <summary>
+        ///Permite validar si un client existe gracias a la funcion Client_exist y  introducce el nombre y apellidos a  lblName.text
+        /// </summary>
+        /// <param name="sender">Objeto del evento</param>
+        /// <param name="e">Argumento del evento</param>
         private void txtClient_KeyDown(object sender, KeyEventArgs e)
         {
             ///Comprueba si es pulsada la key enter y si el cliente existe añade el nombre y apellidos a los  textbox de nombre y apellido///
@@ -252,7 +179,6 @@ namespace SellSystem
                     txtClient.ReadOnly = true;
                     dts = SSHelper.client(txtClient);
                     lblName.Text = dts.Tables[0].Rows[0][0].ToString() + " " + dts.Tables[0].Rows[0][1].ToString() + " " + dts.Tables[0].Rows[0][2].ToString();
-
                 }
                 else
                 {
@@ -261,34 +187,30 @@ namespace SellSystem
                 }
             }
         }
-
+        /// <summary>
+        ///Evita que se pueda hacer click en las columnas del DataGridView///
+        /// </summary>
+        /// <param name="sender">Objeto del evento</param>
+        /// <param name="e">Argumento del evento</param>
         private void dgView_Sell_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+        { 
             foreach (DataGridViewBand band in dgView_Sell.Columns)
             {
                 band.ReadOnly = true;
             }
         }
-
-        public string getIdDrugsStock(DataSet data)
-        {
-            string idQuery = "";
-
-            foreach (DataRow r in data.Tables["Taula"].Rows)
-            {
-                idQuery += " || ID_Drug = '" + Convert.ToInt32(r["ID_Drug"]) + "'";
-            }
-
-
-            return idQuery;
-        }
-
+        /// <summary>
+        /// Actualiza las tablas Order_Header y  Order_Content que se utilizan para generar el crystal report
+        /// </summary>
+        /// <param name="sender">Objeto del evento</param>
+        /// <param name="e">Argumento del evento</param>
         private void btnBuy_Click(object sender, EventArgs e)
         {
             DataRow drOrder;
             string stockQuery;
             string queryHeader = "select * from Order_Header  where 1 = 2";
 
+            ///Se añade un nuevo Header para el ticket de compra que esta en la tabla Order_Header///
             dts = DBUTILS.PortarPerConsulta(queryHeader);
             dr = dts.Tables["taula"].NewRow();
 
@@ -301,6 +223,7 @@ namespace SellSystem
             bool correct = DBUTILS.Actualizar(queryHeader, "taula", dts);
             if (correct)
             {
+                ///Si se genera correctamente el header en la BBDD se actualiza la tabla Order_Content con el contenido de cada medicamento de la lista de la compra///
                 string queryID = "select Id_header from Order_Header where Id_Header =(SELECT MAX(Id_Header) FROM Order_Header)";
                 dts = DBUTILS.PortarPerConsulta(queryID);
                 int Id_Header = Convert.ToInt32(dts.Tables[0].Rows[0][0].ToString());
@@ -312,24 +235,25 @@ namespace SellSystem
                 {
                     drOrder = dts.Tables["Taula"].NewRow();
                     drOrder["Id_Header"] = Id_Header;
-                    drOrder["Id_Drug"] = Drug_ID(dgView_Sell.Rows[row].Cells[0].Value.ToString());//ojo
+                    drOrder["Id_Drug"] = SSHelper.Drug_ID(dgView_Sell.Rows[row].Cells[0].Value.ToString());//ojo
                     drOrder["Quantity"] = Convert.ToInt32(dgView_Sell.Rows[row].Cells[4].Value.ToString());
                     dts.Tables["Taula"].Rows.Add(drOrder);
                     Console.WriteLine(drOrder);
                 }
                 bool correcte_FK = DBUTILS.Actualizar(queryOrder, "Taula", dts);
+                ///Si se introducen correctamente tanto el header como los valores del los medicamentos de la lista de la compra///
                 if (correcte_FK)
                 {
                     int i = 0;
                     int quantity;
-                    stockQuery = "SELECT * FROM Stock where ID_Drug = -1" + getIdDrugsStock(dts);
-                    dts = DBUTILS.PortarPerConsulta(stockQuery);
-                    
+                    stockQuery = "SELECT * FROM Stock where ID_Drug = -1" + SSHelper.getIdDrugsStock(dts);
+                    dts = DBUTILS.PortarPerConsulta(stockQuery);      
+                    ///Se Actualiza el Stock del medicamento que esta en la tabla stock con el stock que se quiere sacar en cada venda///
                     foreach (DataRow r in dts.Tables["Taula"].Rows)
                     {
                         foreach (DataGridViewRow row in dgView_Sell.Rows)
                         {
-                            if (Drug_ID(row.Cells[0].Value.ToString()).ToString().Equals(r["ID_Drug"].ToString()))
+                            if (SSHelper.Drug_ID(row.Cells[0].Value.ToString()).ToString().Equals(r["ID_Drug"].ToString()))
                             {
                                 quantity = Convert.ToInt32(r["Quantity"]) - Convert.ToInt32(row.Cells["quantity"].Value.ToString());
                                 r["Quantity"] = quantity;
@@ -361,17 +285,23 @@ namespace SellSystem
         {
 
         }
-
+        /// <summary>
+        ///comprueva que la cantidad introducida para comprar sea  mayor que la cantidad actual que hay en la tabla stock
+        /// </summary>
+        /// <param name="sender">Objeto del evento</param>
+        /// <param name="e">Argumento del evento</param>
         private void txtCantidad_KeyDown(object sender, KeyEventArgs e)
         {
-
-            Querry = "SELECT Quantity FROM Stock WHERE ID_Drug ='" + SSHelper.Client_ID(txtClient.Text) + "'";
-            dts = DBUTILS.PortarPerConsulta(Querry);
-            int Stock = Convert.ToInt32(dts.Tables[0].Rows[0][0].ToString());
-            if (Stock < Convert.ToInt32(txtCantidad.Text) && Stock - Convert.ToInt32(txtCantidad.Text) <= 0)
+            if (e.KeyCode == Keys.Enter)
             {
-                MessageBox.Show("No hay suficiente Cantidad");
-                txtCantidad.Text = "";
+                Querry = "SELECT Quantity FROM Stock WHERE ID_Drug ='" + SSHelper.Drug_ID(txtCod.Text) + "'";
+                dts = DBUTILS.PortarPerConsulta(Querry);
+                int Stock = Convert.ToInt32(dts.Tables[0].Rows[0][0].ToString());
+                if (Stock < Convert.ToInt32(txtCantidad.Text))
+                {
+                    MessageBox.Show("No hay suficiente Cantidad");
+                    txtCantidad.Text ="1";
+                }
             }
         }
     }

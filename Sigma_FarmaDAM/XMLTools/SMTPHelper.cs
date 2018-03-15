@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace XMLTools
@@ -14,17 +10,18 @@ namespace XMLTools
         {
             try
             {
+                //Nos logeamos
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
                 mail.From = new MailAddress("SigmaFarmaDAM@gmail.com");
                 mail.To.Add("SigmaFarmaDAM@gmail.com");
                 mail.Subject = "Comanda enviada correctamente";
-                mail.Body = "mail con adjunto";
                 SmtpServer.Port = 587;
                 SmtpServer.Credentials = new System.Net.NetworkCredential("SigmaFarmaDAM", "Dam123456");
                 SmtpServer.EnableSsl = true;
+                //Enviamos el mail
                 SmtpServer.Send(mail);
-                MessageBox.Show("Mail enviadoª!!");
+                MessageBox.Show("Mail enviado!!");
             }
             catch (Exception ex)
             {
