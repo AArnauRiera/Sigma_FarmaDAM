@@ -28,6 +28,7 @@ namespace MDI_basic
             timer.Stop();
             
             this.Close();
+            this.Dispose();
             DialogResult = DialogResult.OK;
         }
     }

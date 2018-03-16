@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using SearchSystem;
 using Helpers;
+using Sigma_Controls;
 
 namespace Manteniment
 {
@@ -35,9 +36,20 @@ namespace Manteniment
                 cntrl.Focus();
             }
         }
-
-        private void tbx_Leave(object sender, EventArgs e)
+        
+	/// <summary>
+        /// Selecciona la ultima row ya que esta esta vacia y asi es como añadir una nueva row.
+        /// </summary>
+        public override void AddNewRow()
         {
+            base.AddNewRow();
+
+            int index = Convert.ToInt32(dgwBase.Rows[dgwBase.Rows.Count - 3].Cells["id"].Value);
+            index++;
+            dgwBase.Rows[dgwBase.Rows.Count - 2].Cells["id"].Value = index;
+        }
+        private void tbx_Leave(object sender, EventArgs e)
+        {        
             updated = false;
             if (!ControlsErrorsHelper.CheckControlsErrors(errorProvider, (Control)sender))
             {

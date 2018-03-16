@@ -104,8 +104,33 @@ namespace Mantein
         /// </summary>
         protected void UpdateQuery()
         {
-            DBUtilities db = new DBUtilities();
+            try
+            {
+                TxtSigma cell = null;
+
+                bool find = true;
+
+                for(int i = pnlTextBox.Controls.Count - 1; i >= 0 && find; i--)
+                {
+
+                    if(pnlTextBox.Controls[i] is TxtSigma)
+                    {
+                        cell = pnlTextBox.Controls[i] as TxtSigma;
+                        find = false;
+                    }
+
+                }
+
+                dgwBase.CurrentCell = dgwBase.Rows[dgwBase.Rows.Count - 1].Cells[cell.DBReference];
+
+                DBUtilities db = new DBUtilities();
             db.Actualizar(query, "Taula", dts);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
         }
        
         protected void btnUpdate_Click(object sender, EventArgs e)
@@ -148,14 +173,19 @@ namespace Mantein
         /// <summary>
         /// Selecciona la ultima row ya que esta esta vacia y asi es como añadir una nueva row.
         /// </summary>
-        public void AddNewRow()
+        public virtual void AddNewRow()
         {
+
             if (dts == null)
             {
                 GetQuery();
 
                 BindingDate();
             }
+
+            DataRow row = dts.Tables["Taula"].NewRow();
+
+            dts.Tables["Taula"].Rows.Add(row);
 
             TxtSigma cell = null;
 
@@ -171,7 +201,8 @@ namespace Mantein
                 }
 
             }
-            dgwBase.CurrentCell = dgwBase.Rows[dgwBase.Rows.Count - 1].Cells[cell.DBReference];
+
+            dgwBase.CurrentCell = dgwBase.Rows[dgwBase.Rows.Count - 2].Cells[cell.DBReference];
         }
         public virtual void bntNew_Click(object sender, EventArgs e)
         {

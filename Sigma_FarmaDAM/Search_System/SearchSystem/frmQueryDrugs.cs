@@ -67,6 +67,7 @@ namespace SearchSystem
                         }
                     }
                     this.Close();
+                    this.Dispose();
                 }
                 else
                 {

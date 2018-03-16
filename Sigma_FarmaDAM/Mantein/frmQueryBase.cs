@@ -157,6 +157,7 @@ namespace Mantein
                 _frm.RefreshQuery(selected);
 
                 this.Close();
+                this.Dispose();
             }
         }
 

@@ -55,168 +55,202 @@
             // 
             // btnSelectXmlLab
             // 
-            this.btnSelectXmlLab.Location = new System.Drawing.Point(266, 183);
+            this.btnSelectXmlLab.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnSelectXmlLab.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnSelectXmlLab.Location = new System.Drawing.Point(417, 61);
+            this.btnSelectXmlLab.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectXmlLab.Name = "btnSelectXmlLab";
-            this.btnSelectXmlLab.Size = new System.Drawing.Size(105, 23);
+            this.btnSelectXmlLab.Size = new System.Drawing.Size(151, 35);
             this.btnSelectXmlLab.TabIndex = 1;
-            this.btnSelectXmlLab.Text = "Seleccionar Xml";
+            this.btnSelectXmlLab.Text = "Seleccionar XML";
             this.btnSelectXmlLab.UseVisualStyleBackColor = true;
             this.btnSelectXmlLab.Click += new System.EventHandler(this.btnSelectXml_Click);
             // 
             // txtbxXmlLab
             // 
-            this.txtbxXmlLab.Location = new System.Drawing.Point(15, 184);
+            this.txtbxXmlLab.Location = new System.Drawing.Point(86, 67);
+            this.txtbxXmlLab.Margin = new System.Windows.Forms.Padding(4);
             this.txtbxXmlLab.Name = "txtbxXmlLab";
-            this.txtbxXmlLab.Size = new System.Drawing.Size(243, 20);
+            this.txtbxXmlLab.Size = new System.Drawing.Size(323, 22);
             this.txtbxXmlLab.TabIndex = 2;
             // 
             // btnUploadLab
             // 
-            this.btnUploadLab.Location = new System.Drawing.Point(121, 102);
+            this.btnUploadLab.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnUploadLab.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnUploadLab.Location = new System.Drawing.Point(417, 97);
+            this.btnUploadLab.Margin = new System.Windows.Forms.Padding(4);
             this.btnUploadLab.Name = "btnUploadLab";
-            this.btnUploadLab.Size = new System.Drawing.Size(75, 23);
+            this.btnUploadLab.Size = new System.Drawing.Size(151, 35);
             this.btnUploadLab.TabIndex = 3;
-            this.btnUploadLab.Text = "Subir Xml";
+            this.btnUploadLab.Text = "Subir XML";
             this.btnUploadLab.UseVisualStyleBackColor = true;
             this.btnUploadLab.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // lblLab
             // 
             this.lblLab.AutoSize = true;
-            this.lblLab.Location = new System.Drawing.Point(135, 238);
+            this.lblLab.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.lblLab.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblLab.Location = new System.Drawing.Point(83, 129);
+            this.lblLab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLab.Name = "lblLab";
-            this.lblLab.Size = new System.Drawing.Size(0, 13);
+            this.lblLab.Size = new System.Drawing.Size(0, 19);
             this.lblLab.TabIndex = 4;
             // 
             // lblPa
             // 
             this.lblPa.AutoSize = true;
-            this.lblPa.Location = new System.Drawing.Point(510, 238);
+            this.lblPa.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.lblPa.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblPa.Location = new System.Drawing.Point(83, 298);
+            this.lblPa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPa.Name = "lblPa";
-            this.lblPa.Size = new System.Drawing.Size(0, 13);
+            this.lblPa.Size = new System.Drawing.Size(0, 19);
             this.lblPa.TabIndex = 8;
             // 
             // btnUploadPA
             // 
-            this.btnUploadPA.Location = new System.Drawing.Point(496, 102);
+            this.btnUploadPA.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnUploadPA.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnUploadPA.Location = new System.Drawing.Point(417, 261);
+            this.btnUploadPA.Margin = new System.Windows.Forms.Padding(4);
             this.btnUploadPA.Name = "btnUploadPA";
-            this.btnUploadPA.Size = new System.Drawing.Size(75, 23);
+            this.btnUploadPA.Size = new System.Drawing.Size(151, 35);
             this.btnUploadPA.TabIndex = 7;
-            this.btnUploadPA.Text = "Subir Xml";
+            this.btnUploadPA.Text = "Subir XML";
             this.btnUploadPA.UseVisualStyleBackColor = true;
             this.btnUploadPA.Click += new System.EventHandler(this.btnUploadPA_Click);
             // 
             // txbPA
             // 
-            this.txbPA.Location = new System.Drawing.Point(390, 184);
+            this.txbPA.Location = new System.Drawing.Point(86, 230);
+            this.txbPA.Margin = new System.Windows.Forms.Padding(4);
             this.txbPA.Name = "txbPA";
-            this.txbPA.Size = new System.Drawing.Size(243, 20);
+            this.txbPA.Size = new System.Drawing.Size(323, 22);
             this.txbPA.TabIndex = 6;
             // 
             // btnSelectXmlPA
             // 
-            this.btnSelectXmlPA.Location = new System.Drawing.Point(641, 183);
+            this.btnSelectXmlPA.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnSelectXmlPA.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnSelectXmlPA.Location = new System.Drawing.Point(417, 225);
+            this.btnSelectXmlPA.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectXmlPA.Name = "btnSelectXmlPA";
-            this.btnSelectXmlPA.Size = new System.Drawing.Size(105, 23);
+            this.btnSelectXmlPA.Size = new System.Drawing.Size(151, 35);
             this.btnSelectXmlPA.TabIndex = 5;
-            this.btnSelectXmlPA.Text = "Seleccionar Xml";
+            this.btnSelectXmlPA.Text = "Seleccionar XML";
             this.btnSelectXmlPA.UseVisualStyleBackColor = true;
             this.btnSelectXmlPA.Click += new System.EventHandler(this.btnSelectXmlPA_Click);
             // 
             // lblDrug
             // 
             this.lblDrug.AutoSize = true;
-            this.lblDrug.Location = new System.Drawing.Point(886, 238);
+            this.lblDrug.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.lblDrug.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblDrug.Location = new System.Drawing.Point(83, 458);
+            this.lblDrug.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDrug.Name = "lblDrug";
-            this.lblDrug.Size = new System.Drawing.Size(0, 13);
+            this.lblDrug.Size = new System.Drawing.Size(0, 19);
             this.lblDrug.TabIndex = 12;
             // 
             // btnUploadDrug
             // 
-            this.btnUploadDrug.Location = new System.Drawing.Point(872, 102);
+            this.btnUploadDrug.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnUploadDrug.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnUploadDrug.Location = new System.Drawing.Point(417, 429);
+            this.btnUploadDrug.Margin = new System.Windows.Forms.Padding(4);
             this.btnUploadDrug.Name = "btnUploadDrug";
-            this.btnUploadDrug.Size = new System.Drawing.Size(75, 23);
+            this.btnUploadDrug.Size = new System.Drawing.Size(151, 35);
             this.btnUploadDrug.TabIndex = 11;
-            this.btnUploadDrug.Text = "Subir Xml";
+            this.btnUploadDrug.Text = "Subir XML";
             this.btnUploadDrug.UseVisualStyleBackColor = true;
             this.btnUploadDrug.Click += new System.EventHandler(this.btnUploadDrug_Click);
             // 
             // txbDrug
             // 
-            this.txbDrug.Location = new System.Drawing.Point(766, 184);
+            this.txbDrug.Location = new System.Drawing.Point(86, 396);
+            this.txbDrug.Margin = new System.Windows.Forms.Padding(4);
             this.txbDrug.Name = "txbDrug";
-            this.txbDrug.Size = new System.Drawing.Size(243, 20);
+            this.txbDrug.Size = new System.Drawing.Size(323, 22);
             this.txbDrug.TabIndex = 10;
             // 
             // btnSelectXmlDrug
             // 
-            this.btnSelectXmlDrug.Location = new System.Drawing.Point(1014, 180);
+            this.btnSelectXmlDrug.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnSelectXmlDrug.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnSelectXmlDrug.Location = new System.Drawing.Point(417, 393);
+            this.btnSelectXmlDrug.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectXmlDrug.Name = "btnSelectXmlDrug";
-            this.btnSelectXmlDrug.Size = new System.Drawing.Size(105, 23);
+            this.btnSelectXmlDrug.Size = new System.Drawing.Size(151, 35);
             this.btnSelectXmlDrug.TabIndex = 9;
-            this.btnSelectXmlDrug.Text = "Seleccionar Xml";
+            this.btnSelectXmlDrug.Text = "Seleccionar XML";
             this.btnSelectXmlDrug.UseVisualStyleBackColor = true;
             this.btnSelectXmlDrug.Click += new System.EventHandler(this.btnSelectXmlDrug_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(113, 26);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label3.Location = new System.Drawing.Point(82, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 17);
+            this.label3.Size = new System.Drawing.Size(165, 31);
             this.label3.TabIndex = 13;
             this.label3.Text = "Laboratorios";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(479, 26);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label4.Location = new System.Drawing.Point(82, 195);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 17);
+            this.label4.Size = new System.Drawing.Size(225, 31);
             this.label4.TabIndex = 14;
             this.label4.Text = "Principios activos";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(872, 26);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label5.Location = new System.Drawing.Point(82, 361);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 17);
+            this.label5.Size = new System.Drawing.Size(123, 31);
             this.label5.TabIndex = 15;
             this.label5.Text = "Producto";
             // 
             // pgbLab
             // 
-            this.pgbLab.Location = new System.Drawing.Point(12, 263);
+            this.pgbLab.Location = new System.Drawing.Point(86, 97);
+            this.pgbLab.Margin = new System.Windows.Forms.Padding(4);
             this.pgbLab.Name = "pgbLab";
-            this.pgbLab.Size = new System.Drawing.Size(246, 23);
+            this.pgbLab.Size = new System.Drawing.Size(323, 28);
             this.pgbLab.TabIndex = 16;
             // 
             // pgbPA
             // 
-            this.pgbPA.Location = new System.Drawing.Point(390, 263);
+            this.pgbPA.Location = new System.Drawing.Point(86, 260);
+            this.pgbPA.Margin = new System.Windows.Forms.Padding(4);
             this.pgbPA.Name = "pgbPA";
-            this.pgbPA.Size = new System.Drawing.Size(246, 23);
+            this.pgbPA.Size = new System.Drawing.Size(323, 28);
             this.pgbPA.TabIndex = 17;
             // 
             // pgbDrugs
             // 
-            this.pgbDrugs.Location = new System.Drawing.Point(766, 263);
+            this.pgbDrugs.Location = new System.Drawing.Point(86, 426);
+            this.pgbDrugs.Margin = new System.Windows.Forms.Padding(4);
             this.pgbDrugs.Name = "pgbDrugs";
-            this.pgbDrugs.Size = new System.Drawing.Size(246, 23);
+            this.pgbDrugs.Size = new System.Drawing.Size(323, 28);
             this.pgbDrugs.TabIndex = 18;
             // 
             // frmLoadDataXML
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 394);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1604, 659);
             this.Controls.Add(this.pgbDrugs);
             this.Controls.Add(this.pgbPA);
             this.Controls.Add(this.pgbLab);
@@ -235,6 +269,7 @@
             this.Controls.Add(this.btnUploadLab);
             this.Controls.Add(this.txtbxXmlLab);
             this.Controls.Add(this.btnSelectXmlLab);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLoadDataXML";
             this.Text = "frmLoadDataXML";
             this.ResumeLayout(false);
