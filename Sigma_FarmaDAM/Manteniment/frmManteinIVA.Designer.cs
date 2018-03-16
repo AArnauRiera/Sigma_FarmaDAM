@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblValue = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.txtValue = new Sigma_Controls.TxtSigma();
             this.txtId = new Sigma_Controls.TxtSigma();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
             this.pnlButtons.SuspendLayout();
+            this.pnlMantein.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTextBox
@@ -44,21 +48,13 @@
             this.pnlTextBox.Controls.Add(this.txtValue);
             this.pnlTextBox.Controls.Add(this.txtId);
             // 
-            // btnQuery
-            // 
-            this.btnQuery.Text = "Buscar";
-            // 
             // btnUpdate
             // 
-            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
-            // btnGet
+            // pnlMantein
             // 
-            this.btnGet.Text = "Obtener";
-            // 
-            // bntNew
-            // 
-            this.bntNew.Text = "Nuevo";
+            this.pnlMantein.Location = new System.Drawing.Point(-1, 6);
             // 
             // lblValue
             // 
@@ -83,7 +79,7 @@
             // txtValue
             // 
             this.txtValue.DBReference = "value";
-            this.txtValue.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtValue.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
             this.txtValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtValue.ForeColor = System.Drawing.Color.Gray;
             this.txtValue.Location = new System.Drawing.Point(195, 33);
@@ -92,11 +88,13 @@
             this.txtValue.Size = new System.Drawing.Size(132, 19);
             this.txtValue.TabIndex = 2;
             this.txtValue.Table = "IVA";
+            this.txtValue.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.txtValue.Leave += new System.EventHandler(this.tbx_Leave);
             // 
             // txtId
             // 
             this.txtId.DBReference = "id";
-            this.txtId.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtId.FieldType = Sigma_Controls.TxtSigma.FieldTypes.IVAid;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtId.ForeColor = System.Drawing.Color.Gray;
             this.txtId.Location = new System.Drawing.Point(195, 5);
@@ -105,6 +103,14 @@
             this.txtId.Size = new System.Drawing.Size(132, 19);
             this.txtId.TabIndex = 3;
             this.txtId.Table = "IVA";
+            this.txtId.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.txtId.Leave += new System.EventHandler(this.tbx_Leave);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
             // 
             // frmManteinIVA
             // 
@@ -116,6 +122,8 @@
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();
             this.pnlButtons.ResumeLayout(false);
+            this.pnlMantein.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -126,5 +134,6 @@
         private System.Windows.Forms.Label lblId;
         private Sigma_Controls.TxtSigma txtValue;
         private Sigma_Controls.TxtSigma txtId;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

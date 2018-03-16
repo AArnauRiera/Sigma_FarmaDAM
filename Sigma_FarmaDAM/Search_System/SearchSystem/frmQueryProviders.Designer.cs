@@ -28,21 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtIdLaboratories = new Sigma_Controls.TxtSigma();
             this.txtId_Stock = new Sigma_Controls.TxtSigma();
             this.lblIdLaboratories = new System.Windows.Forms.Label();
             this.lblIdStock = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlButtons.SuspendLayout();
             this.pnlTB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearch
             // 
-            this.btnSearch.Text = "Buscar";
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.Text = "Seleccionar";
+            this.btnSearch.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // pnlTB
             // 
@@ -54,22 +53,26 @@
             // txtIdLaboratories
             // 
             this.txtIdLaboratories.DBReference = "id_laboratories";
-            this.txtIdLaboratories.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtIdLaboratories.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
             this.txtIdLaboratories.Location = new System.Drawing.Point(257, 54);
             this.txtIdLaboratories.Name = "txtIdLaboratories";
             this.txtIdLaboratories.Size = new System.Drawing.Size(100, 20);
             this.txtIdLaboratories.TabIndex = 0;
             this.txtIdLaboratories.Table = "Providers";
+            this.txtIdLaboratories.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtIdLaboratories.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtId_Stock
             // 
             this.txtId_Stock.DBReference = "id_stock";
-            this.txtId_Stock.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtId_Stock.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
             this.txtId_Stock.Location = new System.Drawing.Point(257, 80);
             this.txtId_Stock.Name = "txtId_Stock";
             this.txtId_Stock.Size = new System.Drawing.Size(100, 20);
             this.txtId_Stock.TabIndex = 0;
             this.txtId_Stock.Table = "Providers";
+            this.txtId_Stock.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtId_Stock.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // lblIdLaboratories
             // 
@@ -89,6 +92,12 @@
             this.lblIdStock.TabIndex = 1;
             this.lblIdStock.Text = "Id Stock";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmQueryProviders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -97,6 +106,7 @@
             this.pnlButtons.ResumeLayout(false);
             this.pnlTB.ResumeLayout(false);
             this.pnlTB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -107,5 +117,6 @@
         private System.Windows.Forms.Label lblIdStock;
         private System.Windows.Forms.Label lblIdLaboratories;
         private Sigma_Controls.TxtSigma txtId_Stock;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -42,9 +43,12 @@
             this.txtLastName2 = new Sigma_Controls.TxtSigma();
             this.txtLastName1 = new Sigma_Controls.TxtSigma();
             this.txtFirstName = new Sigma_Controls.TxtSigma();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
             this.pnlButtons.SuspendLayout();
+            this.pnlMantein.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTextBox
@@ -64,21 +68,13 @@
             this.pnlTextBox.Controls.Add(this.txtLastName1);
             this.pnlTextBox.Controls.Add(this.txtFirstName);
             // 
-            // btnQuery
-            // 
-            this.btnQuery.Text = "Buscar";
-            // 
             // btnUpdate
             // 
-            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
-            // btnGet
+            // pnlMantein
             // 
-            this.btnGet.Text = "Obtener";
-            // 
-            // bntNew
-            // 
-            this.bntNew.Text = "Nuevo";
+            this.pnlMantein.Location = new System.Drawing.Point(1, 6);
             // 
             // lblPassword
             // 
@@ -153,7 +149,7 @@
             // txtEmail
             // 
             this.txtEmail.DBReference = "email";
-            this.txtEmail.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtEmail.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Email;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtEmail.ForeColor = System.Drawing.Color.Gray;
             this.txtEmail.Location = new System.Drawing.Point(195, 117);
@@ -162,11 +158,13 @@
             this.txtEmail.Size = new System.Drawing.Size(132, 19);
             this.txtEmail.TabIndex = 2;
             this.txtEmail.Table = "Seller";
+            this.txtEmail.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.txtEmail.Leave += new System.EventHandler(this.tbx_Leave);
             // 
             // txtPassword
             // 
             this.txtPassword.DBReference = "password";
-            this.txtPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Password;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtPassword.ForeColor = System.Drawing.Color.Gray;
             this.txtPassword.Location = new System.Drawing.Point(195, 173);
@@ -175,11 +173,13 @@
             this.txtPassword.Size = new System.Drawing.Size(132, 19);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Table = "Seller";
+            this.txtPassword.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.txtPassword.Leave += new System.EventHandler(this.tbx_Leave);
             // 
             // txtUsername
             // 
             this.txtUsername.DBReference = "username";
-            this.txtUsername.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtUsername.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtUsername.ForeColor = System.Drawing.Color.Gray;
             this.txtUsername.Location = new System.Drawing.Point(195, 145);
@@ -188,11 +188,13 @@
             this.txtUsername.Size = new System.Drawing.Size(132, 19);
             this.txtUsername.TabIndex = 4;
             this.txtUsername.Table = "Seller";
+            this.txtUsername.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.txtUsername.Leave += new System.EventHandler(this.tbx_Leave);
             // 
             // txtDNI
             // 
             this.txtDNI.DBReference = "dni";
-            this.txtDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.DNI;
             this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtDNI.ForeColor = System.Drawing.Color.Gray;
             this.txtDNI.Location = new System.Drawing.Point(195, 89);
@@ -201,11 +203,13 @@
             this.txtDNI.Size = new System.Drawing.Size(132, 19);
             this.txtDNI.TabIndex = 5;
             this.txtDNI.Table = "Seller";
+            this.txtDNI.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.txtDNI.Leave += new System.EventHandler(this.tbx_Leave);
             // 
             // txtLastName2
             // 
             this.txtLastName2.DBReference = "lastName2";
-            this.txtLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.txtLastName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtLastName2.ForeColor = System.Drawing.Color.Gray;
             this.txtLastName2.Location = new System.Drawing.Point(195, 61);
@@ -214,11 +218,13 @@
             this.txtLastName2.Size = new System.Drawing.Size(132, 19);
             this.txtLastName2.TabIndex = 6;
             this.txtLastName2.Table = "Seller";
+            this.txtLastName2.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtLastName2.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtLastName1
             // 
             this.txtLastName1.DBReference = "lastName1";
-            this.txtLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.txtLastName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtLastName1.ForeColor = System.Drawing.Color.Gray;
             this.txtLastName1.Location = new System.Drawing.Point(195, 33);
@@ -227,11 +233,13 @@
             this.txtLastName1.Size = new System.Drawing.Size(132, 19);
             this.txtLastName1.TabIndex = 7;
             this.txtLastName1.Table = "Seller";
+            this.txtLastName1.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.txtLastName1.Leave += new System.EventHandler(this.tbx_Leave);
             // 
             // txtFirstName
             // 
             this.txtFirstName.DBReference = "firstName";
-            this.txtFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtFirstName.ForeColor = System.Drawing.Color.Gray;
             this.txtFirstName.Location = new System.Drawing.Point(195, 5);
@@ -240,6 +248,14 @@
             this.txtFirstName.Size = new System.Drawing.Size(132, 19);
             this.txtFirstName.TabIndex = 8;
             this.txtFirstName.Table = "Seller";
+            this.txtFirstName.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.txtFirstName.Leave += new System.EventHandler(this.tbx_Leave);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
             // 
             // frmManteinSeller
             // 
@@ -251,6 +267,8 @@
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();
             this.pnlButtons.ResumeLayout(false);
+            this.pnlMantein.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -271,5 +289,6 @@
         private Sigma_Controls.TxtSigma txtLastName2;
         private Sigma_Controls.TxtSigma txtLastName1;
         private Sigma_Controls.TxtSigma txtFirstName;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

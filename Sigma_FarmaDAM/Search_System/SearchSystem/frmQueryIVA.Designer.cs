@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtId = new Sigma_Controls.TxtSigma();
             this.txtValue = new Sigma_Controls.TxtSigma();
             this.lblId = new System.Windows.Forms.Label();
             this.lblValue = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlButtons.SuspendLayout();
             this.pnlTB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearch
             // 
             this.btnSearch.Text = "Busca";
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.Text = "Seleccionar";
+            this.btnSearch.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // pnlTB
             // 
@@ -54,22 +54,26 @@
             // txtId
             // 
             this.txtId.DBReference = "id";
-            this.txtId.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtId.FieldType = Sigma_Controls.TxtSigma.FieldTypes.IVAid;
             this.txtId.Location = new System.Drawing.Point(240, 53);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 0;
             this.txtId.Table = "IVA";
+            this.txtId.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtId.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtValue
             // 
             this.txtValue.DBReference = "value";
-            this.txtValue.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtValue.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
             this.txtValue.Location = new System.Drawing.Point(240, 79);
             this.txtValue.Name = "txtValue";
             this.txtValue.Size = new System.Drawing.Size(100, 20);
             this.txtValue.TabIndex = 0;
             this.txtValue.Table = "IVA";
+            this.txtValue.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtValue.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // lblId
             // 
@@ -89,6 +93,12 @@
             this.lblValue.TabIndex = 1;
             this.lblValue.Text = "Valor";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmQueryIVA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -97,6 +107,7 @@
             this.pnlButtons.ResumeLayout(false);
             this.pnlTB.ResumeLayout(false);
             this.pnlTB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -107,5 +118,6 @@
         private Sigma_Controls.TxtSigma txtValue;
         private System.Windows.Forms.Label lblValue;
         private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

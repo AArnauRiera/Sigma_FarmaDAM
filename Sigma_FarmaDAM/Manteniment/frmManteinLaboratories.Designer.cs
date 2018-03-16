@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblCIF = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblDenomination = new System.Windows.Forms.Label();
@@ -38,10 +39,12 @@
             this.txtSigma2 = new Sigma_Controls.TxtSigma();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
             this.pnlButtons.SuspendLayout();
             this.pnlMantein.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTextBox
@@ -64,6 +67,7 @@
             // btnUpdate
             // 
             this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // bntNew
             // 
@@ -71,135 +75,151 @@
             // 
             // pnlMantein
             // 
-            this.pnlMantein.Location = new System.Drawing.Point(-21, 7);
-            this.pnlMantein.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlMantein.Location = new System.Drawing.Point(-19, 6);
             // 
             // lblCIF
             // 
             this.lblCIF.AutoSize = true;
-            this.lblCIF.Location = new System.Drawing.Point(4, 71);
+            this.lblCIF.Location = new System.Drawing.Point(4, 59);
             this.lblCIF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCIF.Name = "lblCIF";
-            this.lblCIF.Size = new System.Drawing.Size(34, 23);
+            this.lblCIF.Size = new System.Drawing.Size(29, 19);
             this.lblCIF.TabIndex = 5;
             this.lblCIF.Text = "CIF";
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(4, 39);
+            this.lblAddress.Location = new System.Drawing.Point(4, 32);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(81, 23);
+            this.lblAddress.Size = new System.Drawing.Size(65, 19);
             this.lblAddress.TabIndex = 6;
             this.lblAddress.Text = "Dirección";
             // 
             // lblDenomination
             // 
             this.lblDenomination.AutoSize = true;
-            this.lblDenomination.Location = new System.Drawing.Point(4, 5);
+            this.lblDenomination.Location = new System.Drawing.Point(4, 4);
             this.lblDenomination.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDenomination.Name = "lblDenomination";
-            this.lblDenomination.Size = new System.Drawing.Size(73, 23);
+            this.lblDenomination.Size = new System.Drawing.Size(59, 19);
             this.lblDenomination.TabIndex = 7;
             this.lblDenomination.Text = "Nombre";
             // 
             // txtCIF
             // 
             this.txtCIF.DBReference = "CIF";
-            this.txtCIF.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtCIF.FieldType = Sigma_Controls.TxtSigma.FieldTypes.CIF;
             this.txtCIF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCIF.ForeColor = System.Drawing.Color.Black;
-            this.txtCIF.Location = new System.Drawing.Point(219, 74);
-            this.txtCIF.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtCIF.Location = new System.Drawing.Point(195, 61);
+            this.txtCIF.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCIF.Name = "txtCIF";
-            this.txtCIF.Size = new System.Drawing.Size(148, 23);
+            this.txtCIF.Size = new System.Drawing.Size(132, 20);
             this.txtCIF.TabIndex = 6;
             this.txtCIF.Table = "Laboratories";
+            this.txtCIF.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtCIF.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtAddress
             // 
             this.txtAddress.DBReference = "Address";
-            this.txtAddress.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtAddress.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.ForeColor = System.Drawing.Color.Black;
-            this.txtAddress.Location = new System.Drawing.Point(219, 40);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtAddress.Location = new System.Drawing.Point(195, 33);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(148, 23);
+            this.txtAddress.Size = new System.Drawing.Size(132, 20);
             this.txtAddress.TabIndex = 5;
             this.txtAddress.Table = "Laboratories";
+            this.txtAddress.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.txtAddress.Leave += new System.EventHandler(this.tbx_Leave);
             // 
             // txtDenomination
             // 
             this.txtDenomination.DBReference = "LabName";
-            this.txtDenomination.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtDenomination.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtDenomination.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDenomination.ForeColor = System.Drawing.Color.Black;
-            this.txtDenomination.Location = new System.Drawing.Point(219, 6);
-            this.txtDenomination.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtDenomination.Location = new System.Drawing.Point(195, 5);
+            this.txtDenomination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDenomination.Name = "txtDenomination";
-            this.txtDenomination.Size = new System.Drawing.Size(148, 23);
+            this.txtDenomination.Size = new System.Drawing.Size(132, 20);
             this.txtDenomination.TabIndex = 4;
             this.txtDenomination.Table = "Laboratories";
+            this.txtDenomination.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.txtDenomination.Leave += new System.EventHandler(this.tbx_Leave);
             // 
             // txtSigma1
             // 
             this.txtSigma1.DBReference = "cp";
-            this.txtSigma1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtSigma1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtSigma1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSigma1.ForeColor = System.Drawing.Color.Black;
-            this.txtSigma1.Location = new System.Drawing.Point(219, 109);
-            this.txtSigma1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtSigma1.Location = new System.Drawing.Point(195, 90);
+            this.txtSigma1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSigma1.Name = "txtSigma1";
-            this.txtSigma1.Size = new System.Drawing.Size(148, 23);
+            this.txtSigma1.Size = new System.Drawing.Size(132, 20);
             this.txtSigma1.TabIndex = 8;
             this.txtSigma1.Table = "Laboratories";
+            this.txtSigma1.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtSigma1.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtSigma2
             // 
             this.txtSigma2.DBReference = "Location";
-            this.txtSigma2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtSigma2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtSigma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSigma2.ForeColor = System.Drawing.Color.Black;
-            this.txtSigma2.Location = new System.Drawing.Point(219, 144);
-            this.txtSigma2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtSigma2.Location = new System.Drawing.Point(195, 119);
+            this.txtSigma2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSigma2.Name = "txtSigma2";
-            this.txtSigma2.Size = new System.Drawing.Size(148, 23);
+            this.txtSigma2.Size = new System.Drawing.Size(132, 20);
             this.txtSigma2.TabIndex = 9;
             this.txtSigma2.Table = "Laboratories";
+            this.txtSigma2.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtSigma2.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 108);
+            this.label1.Location = new System.Drawing.Point(4, 89);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 23);
+            this.label1.Size = new System.Drawing.Size(94, 19);
             this.label1.TabIndex = 10;
             this.label1.Text = "Código postal";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 144);
+            this.label2.Location = new System.Drawing.Point(4, 119);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 23);
+            this.label2.Size = new System.Drawing.Size(81, 19);
             this.label2.TabIndex = 11;
             this.label2.Text = "Localización";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmManteinLaboratories
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
-            this.ClientSize = new System.Drawing.Size(1068, 760);
-            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.ClientSize = new System.Drawing.Size(949, 628);
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmManteinLaboratories";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();
             this.pnlButtons.ResumeLayout(false);
             this.pnlMantein.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -216,5 +236,6 @@
         private System.Windows.Forms.Label label1;
         private Sigma_Controls.TxtSigma txtSigma2;
         private Sigma_Controls.TxtSigma txtSigma1;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

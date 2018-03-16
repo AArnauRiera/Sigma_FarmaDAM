@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtFirstName = new Sigma_Controls.TxtSigma();
             this.txtLastName1 = new Sigma_Controls.TxtSigma();
             this.txtLastName2 = new Sigma_Controls.TxtSigma();
             this.txtDNI = new Sigma_Controls.TxtSigma();
             this.txtUsername = new Sigma_Controls.TxtSigma();
-            this.txtPassword = new Sigma_Controls.TxtSigma();
             this.txtEmail = new Sigma_Controls.TxtSigma();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName1 = new System.Windows.Forms.Label();
@@ -41,14 +41,18 @@
             this.lblDNI = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlButtons.SuspendLayout();
             this.pnlTB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // pnlTB
             // 
-            this.pnlTB.Controls.Add(this.lblPassword);
             this.pnlTB.Controls.Add(this.lblUsername);
             this.pnlTB.Controls.Add(this.lblEmail);
             this.pnlTB.Controls.Add(this.lblDNI);
@@ -56,7 +60,6 @@
             this.pnlTB.Controls.Add(this.lblLastName1);
             this.pnlTB.Controls.Add(this.lblFirstName);
             this.pnlTB.Controls.Add(this.txtEmail);
-            this.pnlTB.Controls.Add(this.txtPassword);
             this.pnlTB.Controls.Add(this.txtUsername);
             this.pnlTB.Controls.Add(this.txtDNI);
             this.pnlTB.Controls.Add(this.txtLastName2);
@@ -66,72 +69,74 @@
             // txtFirstName
             // 
             this.txtFirstName.DBReference = "firstName";
-            this.txtFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.txtFirstName.Location = new System.Drawing.Point(139, 21);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(100, 20);
             this.txtFirstName.TabIndex = 0;
             this.txtFirstName.Table = "Seller";
+            this.txtFirstName.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtFirstName.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtLastName1
             // 
             this.txtLastName1.DBReference = "lastName1";
-            this.txtLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.txtLastName1.Location = new System.Drawing.Point(139, 47);
             this.txtLastName1.Name = "txtLastName1";
             this.txtLastName1.Size = new System.Drawing.Size(100, 20);
             this.txtLastName1.TabIndex = 0;
             this.txtLastName1.Table = "Seller";
+            this.txtLastName1.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtLastName1.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtLastName2
             // 
             this.txtLastName2.DBReference = "lastName2";
-            this.txtLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.txtLastName2.Location = new System.Drawing.Point(139, 73);
             this.txtLastName2.Name = "txtLastName2";
             this.txtLastName2.Size = new System.Drawing.Size(100, 20);
             this.txtLastName2.TabIndex = 0;
             this.txtLastName2.Table = "Seller";
+            this.txtLastName2.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtLastName2.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtDNI
             // 
             this.txtDNI.DBReference = "dni";
-            this.txtDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.DNI;
             this.txtDNI.Location = new System.Drawing.Point(139, 99);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(100, 20);
             this.txtDNI.TabIndex = 0;
             this.txtDNI.Table = "Seller";
+            this.txtDNI.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtDNI.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtUsername
             // 
             this.txtUsername.DBReference = "username";
-            this.txtUsername.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtUsername.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.txtUsername.Location = new System.Drawing.Point(345, 47);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 20);
             this.txtUsername.TabIndex = 0;
             this.txtUsername.Table = "Seller";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.DBReference = "password";
-            this.txtPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
-            this.txtPassword.Location = new System.Drawing.Point(345, 73);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtPassword.TabIndex = 0;
-            this.txtPassword.Table = "Seller";
+            this.txtUsername.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtUsername.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtEmail
             // 
             this.txtEmail.DBReference = "email";
-            this.txtEmail.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtEmail.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Email;
             this.txtEmail.Location = new System.Drawing.Point(345, 21);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 0;
             this.txtEmail.Table = "Seller";
+            this.txtEmail.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtEmail.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // lblFirstName
             // 
@@ -187,14 +192,11 @@
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "Usuario";
             // 
-            // lblPassword
+            // errorProvider
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(278, 76);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(61, 13);
-            this.lblPassword.TabIndex = 1;
-            this.lblPassword.Text = "Contraseña";
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
             // 
             // frmQuerySeller
             // 
@@ -204,6 +206,7 @@
             this.pnlButtons.ResumeLayout(false);
             this.pnlTB.ResumeLayout(false);
             this.pnlTB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,17 +215,16 @@
 
         private Sigma_Controls.TxtSigma txtFirstName;
         private Sigma_Controls.TxtSigma txtEmail;
-        private Sigma_Controls.TxtSigma txtPassword;
         private Sigma_Controls.TxtSigma txtUsername;
         private Sigma_Controls.TxtSigma txtDNI;
         private Sigma_Controls.TxtSigma txtLastName2;
         private Sigma_Controls.TxtSigma txtLastName1;
-        private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblDNI;
         private System.Windows.Forms.Label lblLastName2;
         private System.Windows.Forms.Label lblLastName1;
         private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

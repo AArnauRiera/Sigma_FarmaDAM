@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtSRN = new Sigma_Controls.TxtSigma();
             this.txtName = new Sigma_Controls.TxtSigma();
             this.lblSRN = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlButtons.SuspendLayout();
             this.pnlTB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // btnSelect
             // 
@@ -50,22 +57,26 @@
             // txtSRN
             // 
             this.txtSRN.DBReference = "Sanitary_Register_Number";
-            this.txtSRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtSRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.RN_AP;
             this.txtSRN.Location = new System.Drawing.Point(243, 59);
             this.txtSRN.Name = "txtSRN";
             this.txtSRN.Size = new System.Drawing.Size(100, 20);
             this.txtSRN.TabIndex = 0;
             this.txtSRN.Table = "Active_Principles";
+            this.txtSRN.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtSRN.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtName
             // 
             this.txtName.DBReference = "Name";
-            this.txtName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtName.Location = new System.Drawing.Point(243, 85);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 0;
             this.txtName.Table = "Active_Principles";
+            this.txtName.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtName.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // lblSRN
             // 
@@ -85,6 +96,12 @@
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Nombre";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmQueryActivePrinciple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -93,6 +110,7 @@
             this.pnlButtons.ResumeLayout(false);
             this.pnlTB.ResumeLayout(false);
             this.pnlTB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -103,5 +121,6 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblSRN;
         private Sigma_Controls.TxtSigma txtName;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

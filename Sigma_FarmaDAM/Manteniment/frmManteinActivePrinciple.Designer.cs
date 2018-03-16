@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblName = new System.Windows.Forms.Label();
             this.lblSRN = new System.Windows.Forms.Label();
             this.txtName = new Sigma_Controls.TxtSigma();
             this.txtSRN = new Sigma_Controls.TxtSigma();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
             this.pnlButtons.SuspendLayout();
             this.pnlMantein.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTextBox
@@ -52,6 +55,7 @@
             // btnUpdate
             // 
             this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // btnGet
             // 
@@ -88,7 +92,7 @@
             // txtName
             // 
             this.txtName.DBReference = "Name";
-            this.txtName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.Black;
             this.txtName.Location = new System.Drawing.Point(195, 31);
@@ -101,7 +105,7 @@
             // txtSRN
             // 
             this.txtSRN.DBReference = "Sanitary_Register_Number";
-            this.txtSRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtSRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.RN_AP;
             this.txtSRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSRN.ForeColor = System.Drawing.Color.Black;
             this.txtSRN.Location = new System.Drawing.Point(195, 4);
@@ -110,6 +114,14 @@
             this.txtSRN.Size = new System.Drawing.Size(132, 20);
             this.txtSRN.TabIndex = 0;
             this.txtSRN.Table = "Active_Principles";
+            this.txtSRN.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.txtSRN.Leave += new System.EventHandler(this.tbx_Leave);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
             // 
             // frmManteinActivePrinciple
             // 
@@ -122,6 +134,7 @@
             this.pnlTextBox.PerformLayout();
             this.pnlButtons.ResumeLayout(false);
             this.pnlMantein.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -132,5 +145,6 @@
         private System.Windows.Forms.Label lblSRN;
         private Sigma_Controls.TxtSigma txtName;
         private Sigma_Controls.TxtSigma txtSRN;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

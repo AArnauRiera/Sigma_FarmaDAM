@@ -28,15 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtQuantity = new Sigma_Controls.TxtSigma();
             this.txtSigma2 = new Sigma_Controls.TxtSigma();
             this.txtSigma3 = new Sigma_Controls.TxtSigma();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.lblBasePrice = new System.Windows.Forms.Label();
             this.lblIvaType = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlButtons.SuspendLayout();
             this.pnlTB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // pnlTB
             // 
@@ -50,32 +57,38 @@
             // txtQuantity
             // 
             this.txtQuantity.DBReference = "Quantity";
-            this.txtQuantity.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtQuantity.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
             this.txtQuantity.Location = new System.Drawing.Point(243, 36);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(100, 20);
             this.txtQuantity.TabIndex = 0;
             this.txtQuantity.Table = "Stock";
+            this.txtQuantity.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtQuantity.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtSigma2
             // 
             this.txtSigma2.DBReference = "Base_Price";
-            this.txtSigma2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtSigma2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
             this.txtSigma2.Location = new System.Drawing.Point(243, 62);
             this.txtSigma2.Name = "txtSigma2";
             this.txtSigma2.Size = new System.Drawing.Size(100, 20);
             this.txtSigma2.TabIndex = 1;
             this.txtSigma2.Table = "Stock";
+            this.txtSigma2.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtSigma2.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtSigma3
             // 
             this.txtSigma3.DBReference = "iva_type";
-            this.txtSigma3.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtSigma3.FieldType = Sigma_Controls.TxtSigma.FieldTypes.IVAid;
             this.txtSigma3.Location = new System.Drawing.Point(243, 88);
             this.txtSigma3.Name = "txtSigma3";
             this.txtSigma3.Size = new System.Drawing.Size(100, 20);
             this.txtSigma3.TabIndex = 1;
             this.txtSigma3.Table = "Stock";
+            this.txtSigma3.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.txtSigma3.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // lblQuantity
             // 
@@ -104,6 +117,12 @@
             this.lblIvaType.TabIndex = 4;
             this.lblIvaType.Text = "Tipo IVA";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmQueryStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,6 +131,7 @@
             this.pnlButtons.ResumeLayout(false);
             this.pnlTB.ResumeLayout(false);
             this.pnlTB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -124,5 +144,6 @@
         private System.Windows.Forms.Label lblIvaType;
         private System.Windows.Forms.Label lblBasePrice;
         private System.Windows.Forms.Label lblQuantity;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

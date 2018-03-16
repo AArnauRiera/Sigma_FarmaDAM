@@ -124,14 +124,6 @@ namespace Mantein
             return columns;
         }
 
-
-        public void btnSearch_Click(object sender, EventArgs e)
-        {
-            GetQuery();
-            BindingDate();
-            DisableColumns();
-        }
-
         protected virtual void btnSelect_Click(object sender, EventArgs e)
         {
             SelectRows();

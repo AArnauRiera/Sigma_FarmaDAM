@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblIdStock = new System.Windows.Forms.Label();
             this.lblIdLaboratories = new System.Windows.Forms.Label();
             this.txtId_Stock = new Sigma_Controls.TxtSigma();
             this.txtIdLaboratories = new Sigma_Controls.TxtSigma();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
             this.pnlButtons.SuspendLayout();
             this.pnlMantein.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTextBox
@@ -44,6 +47,14 @@
             this.pnlTextBox.Controls.Add(this.lblIdLaboratories);
             this.pnlTextBox.Controls.Add(this.txtId_Stock);
             this.pnlTextBox.Controls.Add(this.txtIdLaboratories);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
+            // 
+            // pnlMantein
+            // 
+            this.pnlMantein.Location = new System.Drawing.Point(1, 6);
             // 
             // lblIdStock
             // 
@@ -68,7 +79,7 @@
             // txtId_Stock
             // 
             this.txtId_Stock.DBReference = "id_stock";
-            this.txtId_Stock.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtId_Stock.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
             this.txtId_Stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtId_Stock.ForeColor = System.Drawing.Color.Gray;
             this.txtId_Stock.Location = new System.Drawing.Point(195, 33);
@@ -77,11 +88,13 @@
             this.txtId_Stock.Size = new System.Drawing.Size(132, 19);
             this.txtId_Stock.TabIndex = 2;
             this.txtId_Stock.Table = "Providers";
+            this.txtId_Stock.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.txtId_Stock.Leave += new System.EventHandler(this.tbx_Leave);
             // 
             // txtIdLaboratories
             // 
             this.txtIdLaboratories.DBReference = "id_laboratories";
-            this.txtIdLaboratories.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.txtIdLaboratories.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
             this.txtIdLaboratories.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtIdLaboratories.ForeColor = System.Drawing.Color.Gray;
             this.txtIdLaboratories.Location = new System.Drawing.Point(195, 5);
@@ -90,6 +103,14 @@
             this.txtIdLaboratories.Size = new System.Drawing.Size(132, 19);
             this.txtIdLaboratories.TabIndex = 3;
             this.txtIdLaboratories.Table = "Providers";
+            this.txtIdLaboratories.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.txtIdLaboratories.Leave += new System.EventHandler(this.tbx_Leave);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
             // 
             // frmManteinProviders
             // 
@@ -102,6 +123,7 @@
             this.pnlTextBox.PerformLayout();
             this.pnlButtons.ResumeLayout(false);
             this.pnlMantein.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -112,5 +134,6 @@
         private System.Windows.Forms.Label lblIdLaboratories;
         private Sigma_Controls.TxtSigma txtId_Stock;
         private Sigma_Controls.TxtSigma txtIdLaboratories;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
