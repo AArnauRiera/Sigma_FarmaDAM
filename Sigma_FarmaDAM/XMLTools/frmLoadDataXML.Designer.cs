@@ -44,6 +44,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pgbLab = new System.Windows.Forms.ProgressBar();
+            this.pgbPA = new System.Windows.Forms.ProgressBar();
+            this.pgbDrugs = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -188,11 +191,35 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Producto";
             // 
+            // pgbLab
+            // 
+            this.pgbLab.Location = new System.Drawing.Point(12, 263);
+            this.pgbLab.Name = "pgbLab";
+            this.pgbLab.Size = new System.Drawing.Size(246, 23);
+            this.pgbLab.TabIndex = 16;
+            // 
+            // pgbPA
+            // 
+            this.pgbPA.Location = new System.Drawing.Point(390, 263);
+            this.pgbPA.Name = "pgbPA";
+            this.pgbPA.Size = new System.Drawing.Size(246, 23);
+            this.pgbPA.TabIndex = 17;
+            // 
+            // pgbDrugs
+            // 
+            this.pgbDrugs.Location = new System.Drawing.Point(766, 263);
+            this.pgbDrugs.Name = "pgbDrugs";
+            this.pgbDrugs.Size = new System.Drawing.Size(246, 23);
+            this.pgbDrugs.TabIndex = 18;
+            // 
             // frmLoadDataXML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1203, 394);
+            this.Controls.Add(this.pgbDrugs);
+            this.Controls.Add(this.pgbPA);
+            this.Controls.Add(this.pgbLab);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -232,5 +259,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ProgressBar pgbLab;
+        private System.Windows.Forms.ProgressBar pgbPA;
+        private System.Windows.Forms.ProgressBar pgbDrugs;
     }
 }
