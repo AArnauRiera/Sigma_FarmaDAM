@@ -25,6 +25,7 @@ namespace GenerateTicket
 
             cmdVisor.Hide();
             txtTicket.Hide();
+            lblIdHeader.Hide();
 
             cryRpt = GenTicketHelp.generateTicket(cryRpt, idTicket);
 
@@ -44,7 +45,10 @@ namespace GenerateTicket
 
         private void btnGenPDF_Click(object sender, EventArgs e)
         {
-            string exportPath = "C:\\Users\\anbit\\Desktop\\report.pdf";
+            DateTime localDate = DateTime.Now;
+            string dateStr = String.Format("{0:MM-dd-yy_hh.mm.ss}", localDate);
+            string exportPath = Application.StartupPath + "\\CrystalReports\\Ticket_" + dateStr + ".pdf";
+
             GenTicketHelp.exportTicketPDF(cryRpt, exportPath);
 
         }

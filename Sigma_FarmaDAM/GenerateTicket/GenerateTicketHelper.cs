@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GenerateTicket
 {
@@ -22,7 +23,8 @@ namespace GenerateTicket
 
             ConnectionInfo crConnectionInfo = new ConnectionInfo();
 
-            crystalRepDoc.Load("C:\\Users\\anbit\\Documents\\FarmaDAM\\Sigma_FarmaDAM\\GenerateTicket\\TicketSigmaFarmaDAM.rpt");//mod
+            
+            crystalRepDoc.Load(Application.StartupPath + "\\TicketSigmaFarmaDAM.rpt");
             crystalRepDoc.RecordSelectionFormula = "{Order_Header1.Id_Header} = " + idTicket;
 
             crConnectionInfo.ServerName = "FarmaDAM";
@@ -40,7 +42,17 @@ namespace GenerateTicket
         /// <param name="exportPath">Ruta a la que se exporta el PDF</param>
         public void exportTicketPDF(ReportDocument crystalRepDoc, string exportPath) {
 
-            crystalRepDoc.ExportToDisk(ExportFormatType.PortableDocFormat, exportPath);
+            try
+            {
+
+                crystalRepDoc.ExportToDisk(ExportFormatType.PortableDocFormat, exportPath);
+
+                MessageBox.Show("El Ticket Se ha generado correctamente en la ruta:" + "\n" + exportPath);
+            }
+            catch
+            {
+                MessageBox.Show("Error en la generación de ticket");
+            }
 
         }
 

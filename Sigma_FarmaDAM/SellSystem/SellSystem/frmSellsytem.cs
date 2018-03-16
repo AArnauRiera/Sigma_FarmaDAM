@@ -291,9 +291,9 @@ namespace SellSystem
                 }
                 else { MessageBox.Show("Error al Actualizar"); }
             }
-            catch
+            catch (Exception x)
             {
-                MessageBox.Show("ERROR: Faltan datos por rellenar");
+                MessageBox.Show("ERROR: Faltan datos por rellenar" + x);
             }
             
         }

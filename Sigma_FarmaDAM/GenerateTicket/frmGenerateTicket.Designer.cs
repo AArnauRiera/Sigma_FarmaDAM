@@ -66,7 +66,7 @@
             // 
             this.btnGenPDF.Location = new System.Drawing.Point(12, 107);
             this.btnGenPDF.Name = "btnGenPDF";
-            this.btnGenPDF.Size = new System.Drawing.Size(98, 23);
+            this.btnGenPDF.Size = new System.Drawing.Size(98, 43);
             this.btnGenPDF.TabIndex = 22;
             this.btnGenPDF.Text = "Generate PDF";
             this.btnGenPDF.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@
             this.Controls.Add(this.lblIdHeader);
             this.Controls.Add(this.btnGenPDF);
             this.Name = "frmGenerateTicket";
-            this.Text = "frmGenerateTicket";
+            this.Text = "Impresión Factura";
             this.ResumeLayout(false);
             this.PerformLayout();
 
