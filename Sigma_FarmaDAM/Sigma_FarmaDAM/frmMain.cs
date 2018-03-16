@@ -230,9 +230,14 @@ namespace Sigma_FarmaDAM
             }
         }
 
-        private void btnXml_Click(object sender, EventArgs e)
+        //private void btnXml_Click(object sender, EventArgs e)
+        //{
+        //    AddNewTab("Xml", new frmLoadLabXml());
+        //}
+
+        private void btnDataXml_Click(object sender, EventArgs e)
         {
-            AddNewTab("Xml", new frmLoadLabXml());
+            AddNewTab("Xml", new frmLoadDataXML());
         }
     }
 }

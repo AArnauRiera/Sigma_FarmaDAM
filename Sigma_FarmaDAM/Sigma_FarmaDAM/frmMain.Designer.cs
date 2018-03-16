@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDataXml = new System.Windows.Forms.Button();
             this.btnUserManagement = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGestioComandes = new System.Windows.Forms.Button();
@@ -59,6 +60,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.Controls.Add(this.btnDataXml);
             this.panel1.Controls.Add(this.btnUserManagement);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnGestioComandes);
@@ -74,6 +76,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(361, 881);
             this.panel1.TabIndex = 6;
+            // 
+            // btnDataXml
+            // 
+            this.btnDataXml.BackColor = System.Drawing.Color.Azure;
+            this.btnDataXml.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnDataXml.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
+            this.btnDataXml.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
+            this.btnDataXml.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDataXml.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnDataXml.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnDataXml.Image = global::Sigma_FarmaDAM.Properties.Resources.database;
+            this.btnDataXml.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDataXml.Location = new System.Drawing.Point(0, 854);
+            this.btnDataXml.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDataXml.Name = "btnDataXml";
+            this.btnDataXml.Size = new System.Drawing.Size(359, 81);
+            this.btnDataXml.TabIndex = 12;
+            this.btnDataXml.Text = "Base de datos";
+            this.btnDataXml.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDataXml.UseVisualStyleBackColor = false;
+            this.btnDataXml.Click += new System.EventHandler(this.btnDataXml_Click);
             // 
             // btnUserManagement
             // 
@@ -397,6 +420,7 @@
         private VisualStudioTabControl.VisualStudioTabControl tbMain;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnUserManagement;
+        private System.Windows.Forms.Button btnDataXml;
     }
 }
 

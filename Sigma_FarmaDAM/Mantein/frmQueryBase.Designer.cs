@@ -44,27 +44,24 @@
             // 
             this.panel1.Controls.Add(this.dgwDB);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 251);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 204);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(793, 366);
+            this.panel1.Size = new System.Drawing.Size(595, 297);
             this.panel1.TabIndex = 1;
             // 
             // dgwDB
             // 
             this.dgwDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwDB.Location = new System.Drawing.Point(4, 7);
-            this.dgwDB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgwDB.Location = new System.Drawing.Point(3, 6);
             this.dgwDB.Name = "dgwDB";
-            this.dgwDB.Size = new System.Drawing.Size(785, 354);
+            this.dgwDB.Size = new System.Drawing.Size(589, 288);
             this.dgwDB.TabIndex = 0;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(219, 5);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Location = new System.Drawing.Point(164, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(100, 28);
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "Buscar";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -72,10 +69,9 @@
             // 
             // btnSelect
             // 
-            this.btnSelect.Location = new System.Drawing.Point(460, 5);
-            this.btnSelect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelect.Location = new System.Drawing.Point(345, 4);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(100, 28);
+            this.btnSelect.Size = new System.Drawing.Size(75, 23);
             this.btnSelect.TabIndex = 1;
             this.btnSelect.Text = "Seleccionar";
             this.btnSelect.UseVisualStyleBackColor = true;
@@ -86,31 +82,28 @@
             this.pnlButtons.Controls.Add(this.btnSelect);
             this.pnlButtons.Controls.Add(this.btnSearch);
             this.pnlButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlButtons.Location = new System.Drawing.Point(0, 210);
-            this.pnlButtons.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlButtons.Location = new System.Drawing.Point(0, 171);
             this.pnlButtons.Name = "pnlButtons";
-            this.pnlButtons.Size = new System.Drawing.Size(793, 41);
+            this.pnlButtons.Size = new System.Drawing.Size(595, 33);
             this.pnlButtons.TabIndex = 3;
             // 
             // pnlTB
             // 
             this.pnlTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTB.Location = new System.Drawing.Point(0, 0);
-            this.pnlTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTB.Name = "pnlTB";
-            this.pnlTB.Size = new System.Drawing.Size(793, 210);
+            this.pnlTB.Size = new System.Drawing.Size(595, 171);
             this.pnlTB.TabIndex = 4;
             // 
             // frmQueryBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 617);
+            this.ClientSize = new System.Drawing.Size(595, 501);
             this.Controls.Add(this.pnlTB);
             this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmQueryBase";
             this.Text = "Buscar";
             this.panel1.ResumeLayout(false);

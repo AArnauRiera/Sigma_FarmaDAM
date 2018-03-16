@@ -29,60 +29,212 @@
         private void InitializeComponent()
         {
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnSelectXml = new System.Windows.Forms.Button();
-            this.txtbxXml = new System.Windows.Forms.TextBox();
-            this.btnUpload = new System.Windows.Forms.Button();
-            this.lblCounter = new System.Windows.Forms.Label();
+            this.btnSelectXmlLab = new System.Windows.Forms.Button();
+            this.txtbxXmlLab = new System.Windows.Forms.TextBox();
+            this.btnUploadLab = new System.Windows.Forms.Button();
+            this.lblLab = new System.Windows.Forms.Label();
+            this.lblPa = new System.Windows.Forms.Label();
+            this.btnUploadPA = new System.Windows.Forms.Button();
+            this.txbPA = new System.Windows.Forms.TextBox();
+            this.btnSelectXmlPA = new System.Windows.Forms.Button();
+            this.lblDrug = new System.Windows.Forms.Label();
+            this.btnUploadDrug = new System.Windows.Forms.Button();
+            this.txbDrug = new System.Windows.Forms.TextBox();
+            this.btnSelectXmlDrug = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pgbLab = new System.Windows.Forms.ProgressBar();
+            this.pgbPA = new System.Windows.Forms.ProgressBar();
+            this.pgbDrugs = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // btnSelectXml
+            // btnSelectXmlLab
             // 
-            this.btnSelectXml.Location = new System.Drawing.Point(344, 186);
-            this.btnSelectXml.Name = "btnSelectXml";
-            this.btnSelectXml.Size = new System.Drawing.Size(105, 23);
-            this.btnSelectXml.TabIndex = 1;
-            this.btnSelectXml.Text = "Seleccionar Xml";
-            this.btnSelectXml.UseVisualStyleBackColor = true;
-            this.btnSelectXml.Click += new System.EventHandler(this.btnSelectXml_Click);
+            this.btnSelectXmlLab.Location = new System.Drawing.Point(266, 183);
+            this.btnSelectXmlLab.Name = "btnSelectXmlLab";
+            this.btnSelectXmlLab.Size = new System.Drawing.Size(105, 23);
+            this.btnSelectXmlLab.TabIndex = 1;
+            this.btnSelectXmlLab.Text = "Seleccionar Xml";
+            this.btnSelectXmlLab.UseVisualStyleBackColor = true;
+            this.btnSelectXmlLab.Click += new System.EventHandler(this.btnSelectXml_Click);
             // 
-            // txtbxXml
+            // txtbxXmlLab
             // 
-            this.txtbxXml.Location = new System.Drawing.Point(93, 188);
-            this.txtbxXml.Name = "txtbxXml";
-            this.txtbxXml.Size = new System.Drawing.Size(243, 20);
-            this.txtbxXml.TabIndex = 2;
+            this.txtbxXmlLab.Location = new System.Drawing.Point(15, 184);
+            this.txtbxXmlLab.Name = "txtbxXmlLab";
+            this.txtbxXmlLab.Size = new System.Drawing.Size(243, 20);
+            this.txtbxXmlLab.TabIndex = 2;
             // 
-            // btnUpload
+            // btnUploadLab
             // 
-            this.btnUpload.Location = new System.Drawing.Point(199, 106);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(75, 23);
-            this.btnUpload.TabIndex = 3;
-            this.btnUpload.Text = "Subir Xml";
-            this.btnUpload.UseVisualStyleBackColor = true;
-            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            this.btnUploadLab.Location = new System.Drawing.Point(121, 102);
+            this.btnUploadLab.Name = "btnUploadLab";
+            this.btnUploadLab.Size = new System.Drawing.Size(75, 23);
+            this.btnUploadLab.TabIndex = 3;
+            this.btnUploadLab.Text = "Subir Xml";
+            this.btnUploadLab.UseVisualStyleBackColor = true;
+            this.btnUploadLab.Click += new System.EventHandler(this.btnUpload_Click);
             // 
-            // lblCounter
+            // lblLab
             // 
-            this.lblCounter.AutoSize = true;
-            this.lblCounter.Location = new System.Drawing.Point(213, 241);
-            this.lblCounter.Name = "lblCounter";
-            this.lblCounter.Size = new System.Drawing.Size(0, 13);
-            this.lblCounter.TabIndex = 4;
+            this.lblLab.AutoSize = true;
+            this.lblLab.Location = new System.Drawing.Point(135, 238);
+            this.lblLab.Name = "lblLab";
+            this.lblLab.Size = new System.Drawing.Size(0, 13);
+            this.lblLab.TabIndex = 4;
+            // 
+            // lblPa
+            // 
+            this.lblPa.AutoSize = true;
+            this.lblPa.Location = new System.Drawing.Point(510, 238);
+            this.lblPa.Name = "lblPa";
+            this.lblPa.Size = new System.Drawing.Size(0, 13);
+            this.lblPa.TabIndex = 8;
+            // 
+            // btnUploadPA
+            // 
+            this.btnUploadPA.Location = new System.Drawing.Point(496, 102);
+            this.btnUploadPA.Name = "btnUploadPA";
+            this.btnUploadPA.Size = new System.Drawing.Size(75, 23);
+            this.btnUploadPA.TabIndex = 7;
+            this.btnUploadPA.Text = "Subir Xml";
+            this.btnUploadPA.UseVisualStyleBackColor = true;
+            this.btnUploadPA.Click += new System.EventHandler(this.btnUploadPA_Click);
+            // 
+            // txbPA
+            // 
+            this.txbPA.Location = new System.Drawing.Point(390, 184);
+            this.txbPA.Name = "txbPA";
+            this.txbPA.Size = new System.Drawing.Size(243, 20);
+            this.txbPA.TabIndex = 6;
+            // 
+            // btnSelectXmlPA
+            // 
+            this.btnSelectXmlPA.Location = new System.Drawing.Point(641, 183);
+            this.btnSelectXmlPA.Name = "btnSelectXmlPA";
+            this.btnSelectXmlPA.Size = new System.Drawing.Size(105, 23);
+            this.btnSelectXmlPA.TabIndex = 5;
+            this.btnSelectXmlPA.Text = "Seleccionar Xml";
+            this.btnSelectXmlPA.UseVisualStyleBackColor = true;
+            this.btnSelectXmlPA.Click += new System.EventHandler(this.btnSelectXmlPA_Click);
+            // 
+            // lblDrug
+            // 
+            this.lblDrug.AutoSize = true;
+            this.lblDrug.Location = new System.Drawing.Point(886, 238);
+            this.lblDrug.Name = "lblDrug";
+            this.lblDrug.Size = new System.Drawing.Size(0, 13);
+            this.lblDrug.TabIndex = 12;
+            // 
+            // btnUploadDrug
+            // 
+            this.btnUploadDrug.Location = new System.Drawing.Point(872, 102);
+            this.btnUploadDrug.Name = "btnUploadDrug";
+            this.btnUploadDrug.Size = new System.Drawing.Size(75, 23);
+            this.btnUploadDrug.TabIndex = 11;
+            this.btnUploadDrug.Text = "Subir Xml";
+            this.btnUploadDrug.UseVisualStyleBackColor = true;
+            this.btnUploadDrug.Click += new System.EventHandler(this.btnUploadDrug_Click);
+            // 
+            // txbDrug
+            // 
+            this.txbDrug.Location = new System.Drawing.Point(766, 184);
+            this.txbDrug.Name = "txbDrug";
+            this.txbDrug.Size = new System.Drawing.Size(243, 20);
+            this.txbDrug.TabIndex = 10;
+            // 
+            // btnSelectXmlDrug
+            // 
+            this.btnSelectXmlDrug.Location = new System.Drawing.Point(1014, 180);
+            this.btnSelectXmlDrug.Name = "btnSelectXmlDrug";
+            this.btnSelectXmlDrug.Size = new System.Drawing.Size(105, 23);
+            this.btnSelectXmlDrug.TabIndex = 9;
+            this.btnSelectXmlDrug.Text = "Seleccionar Xml";
+            this.btnSelectXmlDrug.UseVisualStyleBackColor = true;
+            this.btnSelectXmlDrug.Click += new System.EventHandler(this.btnSelectXmlDrug_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(113, 26);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 17);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Laboratorios";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(479, 26);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 17);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Principios activos";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(872, 26);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 17);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Producto";
+            // 
+            // pgbLab
+            // 
+            this.pgbLab.Location = new System.Drawing.Point(12, 263);
+            this.pgbLab.Name = "pgbLab";
+            this.pgbLab.Size = new System.Drawing.Size(246, 23);
+            this.pgbLab.TabIndex = 16;
+            // 
+            // pgbPA
+            // 
+            this.pgbPA.Location = new System.Drawing.Point(390, 263);
+            this.pgbPA.Name = "pgbPA";
+            this.pgbPA.Size = new System.Drawing.Size(246, 23);
+            this.pgbPA.TabIndex = 17;
+            // 
+            // pgbDrugs
+            // 
+            this.pgbDrugs.Location = new System.Drawing.Point(766, 263);
+            this.pgbDrugs.Name = "pgbDrugs";
+            this.pgbDrugs.Size = new System.Drawing.Size(246, 23);
+            this.pgbDrugs.TabIndex = 18;
             // 
             // frmLoadDataXML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 394);
-            this.Controls.Add(this.lblCounter);
-            this.Controls.Add(this.btnUpload);
-            this.Controls.Add(this.txtbxXml);
-            this.Controls.Add(this.btnSelectXml);
+            this.ClientSize = new System.Drawing.Size(1203, 394);
+            this.Controls.Add(this.pgbDrugs);
+            this.Controls.Add(this.pgbPA);
+            this.Controls.Add(this.pgbLab);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblDrug);
+            this.Controls.Add(this.btnUploadDrug);
+            this.Controls.Add(this.txbDrug);
+            this.Controls.Add(this.btnSelectXmlDrug);
+            this.Controls.Add(this.lblPa);
+            this.Controls.Add(this.btnUploadPA);
+            this.Controls.Add(this.txbPA);
+            this.Controls.Add(this.btnSelectXmlPA);
+            this.Controls.Add(this.lblLab);
+            this.Controls.Add(this.btnUploadLab);
+            this.Controls.Add(this.txtbxXmlLab);
+            this.Controls.Add(this.btnSelectXmlLab);
             this.Name = "frmLoadDataXML";
             this.Text = "frmLoadDataXML";
             this.ResumeLayout(false);
@@ -92,9 +244,23 @@
 
         #endregion
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button btnSelectXml;
-        protected System.Windows.Forms.TextBox txtbxXml;
-        protected System.Windows.Forms.Button btnUpload;
-        public System.Windows.Forms.Label lblCounter;
+        private System.Windows.Forms.Button btnSelectXmlLab;
+        protected System.Windows.Forms.TextBox txtbxXmlLab;
+        protected System.Windows.Forms.Button btnUploadLab;
+        public System.Windows.Forms.Label lblLab;
+        public System.Windows.Forms.Label lblPa;
+        protected System.Windows.Forms.Button btnUploadPA;
+        protected System.Windows.Forms.TextBox txbPA;
+        private System.Windows.Forms.Button btnSelectXmlPA;
+        public System.Windows.Forms.Label lblDrug;
+        protected System.Windows.Forms.Button btnUploadDrug;
+        protected System.Windows.Forms.TextBox txbDrug;
+        private System.Windows.Forms.Button btnSelectXmlDrug;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ProgressBar pgbLab;
+        private System.Windows.Forms.ProgressBar pgbPA;
+        private System.Windows.Forms.ProgressBar pgbDrugs;
     }
 }

@@ -64,9 +64,11 @@
             // 
             // dgwBase
             // 
+            this.dgwBase.AllowUserToDeleteRows = false;
             this.dgwBase.BackgroundColor = System.Drawing.Color.White;
             this.dgwBase.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwBase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwBase.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgwBase.GridColor = System.Drawing.Color.White;
             this.dgwBase.Location = new System.Drawing.Point(7, 5);
             this.dgwBase.Margin = new System.Windows.Forms.Padding(5);
