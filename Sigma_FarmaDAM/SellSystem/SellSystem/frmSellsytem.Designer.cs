@@ -45,6 +45,7 @@
             this.dgView_Sell = new System.Windows.Forms.DataGridView();
             this.btnBuy = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn = new System.Windows.Forms.Button();
             this.pnltxt.SuspendLayout();
             this.pnlDgw.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgView_Sell)).BeginInit();
@@ -53,6 +54,7 @@
             // 
             // pnltxt
             // 
+            this.pnltxt.Controls.Add(this.btn);
             this.pnltxt.Controls.Add(this.label3);
             this.pnltxt.Controls.Add(this.btnAdd);
             this.pnltxt.Controls.Add(this.txtClient);
@@ -100,7 +102,7 @@
             this.txtClient.Size = new System.Drawing.Size(106, 20);
             this.txtClient.TabIndex = 30;
             this.txtClient.Table = null;
-            this.txtClient.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClient_KeyDown);
+            this.txtClient.Leave += new System.EventHandler(this.txtClient_Leave);
             // 
             // txtProd
             // 
@@ -127,6 +129,7 @@
             this.txtCantidad.TabIndex = 35;
             this.txtCantidad.Table = null;
             this.txtCantidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCantidad_KeyDown);
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.checkNumKeyPress);
             // 
             // NTS
             // 
@@ -230,6 +233,16 @@
             this.panel1.Size = new System.Drawing.Size(950, 620);
             this.panel1.TabIndex = 36;
             // 
+            // btn
+            // 
+            this.btn.Location = new System.Drawing.Point(161, 27);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(75, 23);
+            this.btn.TabIndex = 36;
+            this.btn.Text = "button1";
+            this.btn.UseVisualStyleBackColor = true;
+            this.btn.Click += new System.EventHandler(this.btn_Click);
+            // 
             // frmSellsytem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,6 +278,7 @@
         private Sigma_Controls.TxtSigma txtCod;
         private System.Windows.Forms.DataGridView dgView_Sell;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn;
     }
 }
 

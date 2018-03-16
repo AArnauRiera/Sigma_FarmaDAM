@@ -49,24 +49,35 @@ namespace SearchSystem
 
         protected override void btnSelect_Click(object sender, EventArgs e)
         {
-            if (_isSellSystem)
+            try
             {
-                for (int i = 0; i < dgwDB.SelectedRows[0].Cells.Count; i++)
+
+                if (_isSellSystem)
                 {
-                    for (int j = 0; j < _txts.Length; j++)
+                    for (int i = 0; i < dgwDB.SelectedRows[0].Cells.Count; i++)
                     {
-                        if (_txts[j].DBReference.Equals(dgwDB.SelectedRows[0].Cells[i].OwningColumn.Name))
+                        for (int j = 0; j < _txts.Length; j++)
                         {
-                            _txts[j].Text = dgwDB.SelectedRows[0].Cells[i].FormattedValue.ToString();
+                            if (_txts[j].DBReference.Equals(dgwDB.SelectedRows[0].Cells[i].OwningColumn.Name))
+                            {
+                                _txts[j].Text = dgwDB.SelectedRows[0].Cells[i].FormattedValue.ToString();
+                            }
                         }
                     }
+                    this.Close();
                 }
-                this.Close();
+                else
+                {
+                    base.btnSelect_Click(sender, e);
+                }
+
             }
-            else
-            {
-                base.btnSelect_Click(sender,e);
+            catch {
+
+                MessageBox.Show("Se ha seleccionado un registro vacío");
+
             }
+            
 
             
         }
