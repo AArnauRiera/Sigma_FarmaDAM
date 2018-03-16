@@ -104,6 +104,7 @@
             this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmQueryBase";
             this.Text = "Buscar";
             this.panel1.ResumeLayout(false);
