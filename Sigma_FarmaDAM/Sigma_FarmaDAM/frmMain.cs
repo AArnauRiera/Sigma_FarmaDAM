@@ -144,9 +144,10 @@ namespace Sigma_FarmaDAM
         private void btnVentas_Click(object sender, EventArgs e)
         {
             frmLoginSellSystem loginSell = new frmLoginSellSystem();
+
             if (loginSell.ShowDialog() == DialogResult.OK)
             {
-                AddNewTab("Nueva Venta", new frmSellsytem());
+                AddNewTab("Nueva Venta", new frmSellsytem(loginSell.getIdSeller().ToString()));
             }
         }
 
@@ -230,11 +231,6 @@ namespace Sigma_FarmaDAM
                 btnUserManagement.Hide();
             }
         }
-
-        //private void btnXml_Click(object sender, EventArgs e)
-        //{
-        //    AddNewTab("Xml", new frmLoadLabXml());
-        //}
 
         private void btnDataXml_Click(object sender, EventArgs e)
         {

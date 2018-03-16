@@ -132,7 +132,7 @@ namespace Mantein
         /// <summary>
         /// Selecciona las filas y las manda al forms de mantenimiento.
         /// </summary>
-        protected void SelectRows()
+        protected virtual void SelectRows()
         {
             if(dgwDB.SelectedRows.Count > 0)
             {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using Mantein;
+using Sigma_Controls;
 using Helpers;
 
 namespace SearchSystem
@@ -27,6 +28,8 @@ namespace SearchSystem
         private System.ComponentModel.IContainer components;
         private Sigma_Controls.TxtSigma txtName;
 
+        private bool sellSystem;
+        private TxtSigma _txt;
         public frmQueryClients(frmManteinBase frm, string table) : base(frm, table)
         {
             InitializeComponent();
@@ -37,6 +40,38 @@ namespace SearchSystem
         public frmQueryClients()
         {
             InitializeComponent();
+        }
+
+        public frmQueryClients(TxtSigma txt, string table)
+        {
+            InitializeComponent();
+            sellSystem = true;
+            _txt = txt;
+        }
+
+        /// <summary>
+        /// Selecciona las filas y las manda al forms de mantenimiento.
+        /// </summary>
+        protected override void SelectRows()
+        {
+            if (sellSystem)
+            {
+                try
+                {
+                    string id = Convert.ToString(dgwDB.SelectedRows[0].Cells["NTS"].Value);
+                    _txt.Text = id;
+                    this.Close();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                
+            }
+            else{
+                base.SelectRows();
+            }
         }
 
         private void InitializeComponent()

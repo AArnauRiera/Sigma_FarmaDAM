@@ -259,5 +259,13 @@ namespace LoginControl
             }
             return correct;
         }
+
+        //public int GetUserId(string userName)
+        //{
+        //    query = "SELECT id FROM Seller WHERE username = '" + userName + "'";
+        //    dts = db.PortarPerConsulta(query);
+
+        //    return isAdmin;
+        //}
     }
 }
