@@ -256,7 +256,7 @@ namespace XMLTools
                             ds.Tables["Taula"].Rows.Add(dtr);
                         }
                     }
-                    catch(Exception e)
+                    catch(Exception ex)
                     {
 
                         MessageBox.Show(ex.ToString());
