@@ -96,6 +96,38 @@ namespace Helpers
             return isCorrect;
         }
 
+        public static bool CheckControlsErrors(ErrorProvider error, Control control, bool empty)
+        {
+            var isCorrect = true;
+
+            if (control is TxtSigma)
+            {
+                TxtSigma cntrl = (TxtSigma)control;
+
+                if (!cntrl.IsFieldCorrect() && cntrl.Text != "")
+                {
+                    error.SetError(cntrl, "Formato incorrecto");
+                    isCorrect = false;
+                }
+            }
+            else if (control is cbxSigma)
+            {
+                cbxSigma cntrl = (cbxSigma)control;
+                if (cntrl.SelectedIndex == 0)
+                {
+                    error.SetError(cntrl, "No se ha seleccionado un campo valido");
+                    isCorrect = false;
+                }
+            }
+
+            if (isCorrect)
+            {
+                error.SetError(control, "");
+            }
+
+            return isCorrect;
+        }
+
         /// <summary>
         /// Comprueba que los campos de password y repeatPassword sean correctos y iguales
         /// </summary>

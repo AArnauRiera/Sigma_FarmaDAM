@@ -93,7 +93,7 @@ namespace Mantein
         protected void UpdateQuery()
         {
             DBUtilities db = new DBUtilities();
-            db.Actualizar(query, "Taula",dts);
+            db.Actualizar(query, "Taula", dts);
         }
        
         protected void btnUpdate_Click(object sender, EventArgs e)
@@ -160,10 +160,12 @@ namespace Mantein
             AddNewRow();
         }
 
-        private void btnUpdate_Click_1(object sender, EventArgs e)
+        /*
+        public virtual void btnUpdate_Click_1(object sender, EventArgs e)
         {
             UpdateQuery();
         }
+        */
 
         private void frmManteinBase_Load(object sender, EventArgs e)
         {

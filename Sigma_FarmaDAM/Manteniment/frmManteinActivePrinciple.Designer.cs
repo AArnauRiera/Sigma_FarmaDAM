@@ -61,6 +61,10 @@
             // 
             this.bntNew.TabIndex = 5;
             // 
+            // pnlMantein
+            // 
+            this.pnlMantein.Location = new System.Drawing.Point(15, 6);
+            // 
             // lblName
             // 
             this.lblName.AutoSize = true;

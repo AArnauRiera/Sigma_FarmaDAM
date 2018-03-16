@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tbxAddress1 = new Sigma_Controls.TxtSigma();
             this.label5 = new System.Windows.Forms.Label();
             this.tbxFirstName = new Sigma_Controls.TxtSigma();
@@ -43,10 +44,12 @@
             this.tbxNTS = new Sigma_Controls.TxtSigma();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSigma1 = new Sigma_Controls.TxtSigma();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
             this.pnlButtons.SuspendLayout();
             this.pnlMantein.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTextBox
@@ -67,6 +70,10 @@
             this.pnlTextBox.Controls.Add(this.tbxNTS);
             this.pnlTextBox.Controls.Add(this.label4);
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
+            // 
             // pnlMantein
             // 
             this.pnlMantein.Location = new System.Drawing.Point(5, 23);
@@ -83,6 +90,8 @@
             this.tbxAddress1.Size = new System.Drawing.Size(188, 20);
             this.tbxAddress1.TabIndex = 42;
             this.tbxAddress1.Table = null;
+            this.tbxAddress1.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.tbxAddress1.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // label5
             // 
@@ -106,6 +115,8 @@
             this.tbxFirstName.Size = new System.Drawing.Size(188, 20);
             this.tbxFirstName.TabIndex = 45;
             this.tbxFirstName.Table = null;
+            this.tbxFirstName.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.tbxFirstName.Leave += new System.EventHandler(this.tbx_Leave);
             // 
             // label1
             // 
@@ -139,6 +150,8 @@
             this.tbxLastName1.Size = new System.Drawing.Size(188, 20);
             this.tbxLastName1.TabIndex = 46;
             this.tbxLastName1.Table = null;
+            this.tbxLastName1.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.tbxLastName1.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // label2
             // 
@@ -162,6 +175,8 @@
             this.tbxLastName2.Size = new System.Drawing.Size(188, 20);
             this.tbxLastName2.TabIndex = 47;
             this.tbxLastName2.Table = null;
+            this.tbxLastName2.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
+            this.tbxLastName2.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // label7
             // 
@@ -206,6 +221,8 @@
             this.tbxDNI.TabIndex = 40;
             this.tbxDNI.Table = null;
             this.tbxDNI.Tag = "";
+            this.tbxDNI.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.tbxDNI.Leave += new System.EventHandler(this.tbx_Leave);
             // 
             // tbxNTS
             // 
@@ -219,6 +236,8 @@
             this.tbxNTS.Size = new System.Drawing.Size(188, 20);
             this.tbxNTS.TabIndex = 38;
             this.tbxNTS.Table = null;
+            this.tbxNTS.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.tbxNTS.Leave += new System.EventHandler(this.tbx_Leave);
             // 
             // label4
             // 
@@ -242,6 +261,14 @@
             this.txtSigma1.Size = new System.Drawing.Size(188, 20);
             this.txtSigma1.TabIndex = 54;
             this.txtSigma1.Table = null;
+            this.txtSigma1.TextChanged += new System.EventHandler(this.tbx_Leave);
+            this.txtSigma1.Leave += new System.EventHandler(this.tbx_Leave);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
             // 
             // frmManteinClients
             // 
@@ -254,6 +281,7 @@
             this.pnlTextBox.PerformLayout();
             this.pnlButtons.ResumeLayout(false);
             this.pnlMantein.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -274,5 +302,6 @@
         public Sigma_Controls.TxtSigma tbxNTS;
         private System.Windows.Forms.Label label4;
         public Sigma_Controls.TxtSigma txtSigma1;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
