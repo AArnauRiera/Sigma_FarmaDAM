@@ -47,10 +47,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Click += new System.EventHandler(this.btnUpdate_Click_1);
-            // 
             // pnlTB
             // 
             this.pnlTB.Controls.Add(this.label6);
@@ -75,8 +71,6 @@
             this.txtSigma1.Size = new System.Drawing.Size(100, 20);
             this.txtSigma1.TabIndex = 0;
             this.txtSigma1.Table = null;
-            this.txtSigma1.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtSigma1.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // label1
             // 
@@ -105,8 +99,6 @@
             this.txtSigma2.Size = new System.Drawing.Size(100, 20);
             this.txtSigma2.TabIndex = 2;
             this.txtSigma2.Table = null;
-            this.txtSigma2.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtSigma2.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // label3
             // 
@@ -127,8 +119,6 @@
             this.txtSigma3.Size = new System.Drawing.Size(100, 20);
             this.txtSigma3.TabIndex = 5;
             this.txtSigma3.Table = null;
-            this.txtSigma3.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtSigma3.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // label4
             // 
@@ -148,8 +138,6 @@
             this.txtSigma4.Size = new System.Drawing.Size(100, 20);
             this.txtSigma4.TabIndex = 7;
             this.txtSigma4.Table = null;
-            this.txtSigma4.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtSigma4.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // label5
             // 
@@ -169,8 +157,6 @@
             this.txtSigma5.Size = new System.Drawing.Size(100, 20);
             this.txtSigma5.TabIndex = 9;
             this.txtSigma5.Table = null;
-            this.txtSigma5.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtSigma5.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // label6
             // 
@@ -190,8 +176,6 @@
             this.txtSigma6.Size = new System.Drawing.Size(100, 20);
             this.txtSigma6.TabIndex = 11;
             this.txtSigma6.Table = null;
-            this.txtSigma6.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtSigma6.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // errorProvider
             // 

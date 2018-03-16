@@ -58,10 +58,6 @@ namespace SearchSystem
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Click += new System.EventHandler(this.btnUpdate_Click_1);
-            // 
             // pnlTB
             // 
             this.pnlTB.Controls.Add(this.lblNTS);
@@ -84,8 +80,6 @@ namespace SearchSystem
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 0;
             this.txtName.Table = "Clients";
-            this.txtName.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtName.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtDNI
             // 
@@ -96,8 +90,6 @@ namespace SearchSystem
             this.txtDNI.Size = new System.Drawing.Size(100, 20);
             this.txtDNI.TabIndex = 1;
             this.txtDNI.Table = "Clients";
-            this.txtDNI.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtDNI.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtLastName1
             // 
@@ -108,8 +100,6 @@ namespace SearchSystem
             this.txtLastName1.Size = new System.Drawing.Size(100, 20);
             this.txtLastName1.TabIndex = 3;
             this.txtLastName1.Table = "Clients";
-            this.txtLastName1.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtLastName1.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtLastName2
             // 
@@ -120,8 +110,6 @@ namespace SearchSystem
             this.txtLastName2.Size = new System.Drawing.Size(100, 20);
             this.txtLastName2.TabIndex = 4;
             this.txtLastName2.Table = "Clients";
-            this.txtLastName2.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtLastName2.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtNTS
             // 
@@ -132,8 +120,6 @@ namespace SearchSystem
             this.txtNTS.Size = new System.Drawing.Size(100, 20);
             this.txtNTS.TabIndex = 5;
             this.txtNTS.Table = "Clients";
-            this.txtNTS.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtNTS.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // lblName
             // 
@@ -197,43 +183,6 @@ namespace SearchSystem
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
-        }
-        private void checkControls()
-        {
-            error = false;
-            foreach (Control cntrl in pnlTB.Controls)
-            {
-                cntrl.Focus();
-            }
-        }
-
-        private void tbxEmpty_Leave(object sender, EventArgs e)
-        {
-            updated = false;
-            if (!ControlsErrorsHelper.CheckControlsErrors(errorProvider, (Control)sender, true))
-            {
-                error = true;
-            }
-        }
-        private void tbx_Leave(object sender, EventArgs e)
-        {
-            updated = false;
-            if (!ControlsErrorsHelper.CheckControlsErrors(errorProvider, (Control)sender))
-            {
-                error = true;
-            }
-        }
-
-        public void btnUpdate_Click_1(object sender, EventArgs e)
-        {
-            checkControls();
-            if (!error && !updated)
-            {
-                GetQuery();
-                BindingDate();
-                DisableColumns();
-                updated = true;
-            }
         }
     }
 }

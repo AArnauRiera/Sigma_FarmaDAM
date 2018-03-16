@@ -57,10 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Click += new System.EventHandler(this.btnUpdate_Click_1);
-            // 
             // pnlTB
             // 
             this.pnlTB.Controls.Add(this.label1);
@@ -142,8 +138,6 @@
             this.txtReplaceable.Size = new System.Drawing.Size(100, 20);
             this.txtReplaceable.TabIndex = 13;
             this.txtReplaceable.Table = "Drugs";
-            this.txtReplaceable.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtReplaceable.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtIdActive
             // 
@@ -156,8 +150,6 @@
             this.txtIdActive.Size = new System.Drawing.Size(100, 20);
             this.txtIdActive.TabIndex = 12;
             this.txtIdActive.Table = "Drugs";
-            this.txtIdActive.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtIdActive.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtDenomination
             // 
@@ -170,8 +162,6 @@
             this.txtDenomination.Size = new System.Drawing.Size(100, 20);
             this.txtDenomination.TabIndex = 11;
             this.txtDenomination.Table = "Drugs";
-            this.txtDenomination.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtDenomination.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtContent
             // 
@@ -184,8 +174,6 @@
             this.txtContent.Size = new System.Drawing.Size(100, 20);
             this.txtContent.TabIndex = 10;
             this.txtContent.Table = "Drugs";
-            this.txtContent.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtContent.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtSRN
             // 
@@ -198,8 +186,6 @@
             this.txtSRN.Size = new System.Drawing.Size(100, 20);
             this.txtSRN.TabIndex = 9;
             this.txtSRN.Table = "Drugs";
-            this.txtSRN.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtSRN.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // lblGeneric
             // 
@@ -248,8 +234,6 @@
             this.txtGeneric.Size = new System.Drawing.Size(100, 20);
             this.txtGeneric.TabIndex = 9;
             this.txtGeneric.Table = "Drugs";
-            this.txtGeneric.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtGeneric.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtProspectus
             // 
@@ -262,8 +246,6 @@
             this.txtProspectus.Size = new System.Drawing.Size(100, 20);
             this.txtProspectus.TabIndex = 10;
             this.txtProspectus.Table = "Drugs";
-            this.txtProspectus.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtProspectus.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtObligatory
             // 
@@ -276,8 +258,6 @@
             this.txtObligatory.Size = new System.Drawing.Size(100, 20);
             this.txtObligatory.TabIndex = 11;
             this.txtObligatory.Table = "Drugs";
-            this.txtObligatory.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtObligatory.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtDocumentation
             // 
@@ -290,8 +270,6 @@
             this.txtDocumentation.Size = new System.Drawing.Size(100, 20);
             this.txtDocumentation.TabIndex = 12;
             this.txtDocumentation.Table = "Drugs";
-            this.txtDocumentation.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtDocumentation.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // label1
             // 
@@ -322,8 +300,6 @@
             this.txtSigma1.Size = new System.Drawing.Size(100, 20);
             this.txtSigma1.TabIndex = 20;
             this.txtSigma1.Table = "Drugs";
-            this.txtSigma1.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtSigma1.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtSigma2
             // 
@@ -336,8 +312,6 @@
             this.txtSigma2.Size = new System.Drawing.Size(100, 20);
             this.txtSigma2.TabIndex = 19;
             this.txtSigma2.Table = "Drugs";
-            this.txtSigma2.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtSigma2.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // errorProvider
             // 

@@ -41,10 +41,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Click += new System.EventHandler(this.btnUpdate_Click_1);
-            // 
             // pnlTB
             // 
             this.pnlTB.Controls.Add(this.lblIvaType);
@@ -63,8 +59,6 @@
             this.txtQuantity.Size = new System.Drawing.Size(100, 20);
             this.txtQuantity.TabIndex = 0;
             this.txtQuantity.Table = "Stock";
-            this.txtQuantity.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtQuantity.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtSigma2
             // 
@@ -75,8 +69,6 @@
             this.txtSigma2.Size = new System.Drawing.Size(100, 20);
             this.txtSigma2.TabIndex = 1;
             this.txtSigma2.Table = "Stock";
-            this.txtSigma2.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtSigma2.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtSigma3
             // 
@@ -87,8 +79,6 @@
             this.txtSigma3.Size = new System.Drawing.Size(100, 20);
             this.txtSigma3.TabIndex = 1;
             this.txtSigma3.Table = "Stock";
-            this.txtSigma3.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtSigma3.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // lblQuantity
             // 

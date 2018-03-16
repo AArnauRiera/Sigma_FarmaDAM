@@ -47,10 +47,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Click += new System.EventHandler(this.btnUpdate_Click_1);
-            // 
             // pnlTB
             // 
             this.pnlTB.Controls.Add(this.lblUsername);
@@ -75,8 +71,6 @@
             this.txtFirstName.Size = new System.Drawing.Size(100, 20);
             this.txtFirstName.TabIndex = 0;
             this.txtFirstName.Table = "Seller";
-            this.txtFirstName.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtFirstName.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtLastName1
             // 
@@ -87,8 +81,6 @@
             this.txtLastName1.Size = new System.Drawing.Size(100, 20);
             this.txtLastName1.TabIndex = 0;
             this.txtLastName1.Table = "Seller";
-            this.txtLastName1.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtLastName1.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtLastName2
             // 
@@ -99,8 +91,6 @@
             this.txtLastName2.Size = new System.Drawing.Size(100, 20);
             this.txtLastName2.TabIndex = 0;
             this.txtLastName2.Table = "Seller";
-            this.txtLastName2.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtLastName2.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtDNI
             // 
@@ -111,8 +101,6 @@
             this.txtDNI.Size = new System.Drawing.Size(100, 20);
             this.txtDNI.TabIndex = 0;
             this.txtDNI.Table = "Seller";
-            this.txtDNI.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtDNI.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtUsername
             // 
@@ -123,8 +111,6 @@
             this.txtUsername.Size = new System.Drawing.Size(100, 20);
             this.txtUsername.TabIndex = 0;
             this.txtUsername.Table = "Seller";
-            this.txtUsername.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtUsername.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtEmail
             // 
@@ -135,8 +121,6 @@
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 0;
             this.txtEmail.Table = "Seller";
-            this.txtEmail.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtEmail.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // lblFirstName
             // 

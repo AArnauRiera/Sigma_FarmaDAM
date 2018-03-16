@@ -39,11 +39,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Text = "Busca";
-            this.btnSearch.Click += new System.EventHandler(this.btnUpdate_Click_1);
-            // 
             // pnlTB
             // 
             this.pnlTB.Controls.Add(this.lblValue);
@@ -60,8 +55,6 @@
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 0;
             this.txtId.Table = "IVA";
-            this.txtId.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtId.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtValue
             // 
@@ -72,8 +65,6 @@
             this.txtValue.Size = new System.Drawing.Size(100, 20);
             this.txtValue.TabIndex = 0;
             this.txtValue.Table = "IVA";
-            this.txtValue.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtValue.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // lblId
             // 

@@ -39,10 +39,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Click += new System.EventHandler(this.btnUpdate_Click_1);
-            // 
             // btnSelect
             // 
             this.btnSelect.Text = "Selccionar";
@@ -63,8 +59,6 @@
             this.txtSRN.Size = new System.Drawing.Size(100, 20);
             this.txtSRN.TabIndex = 0;
             this.txtSRN.Table = "Active_Principles";
-            this.txtSRN.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtSRN.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtName
             // 
@@ -75,8 +69,6 @@
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 0;
             this.txtName.Table = "Active_Principles";
-            this.txtName.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtName.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // lblSRN
             // 

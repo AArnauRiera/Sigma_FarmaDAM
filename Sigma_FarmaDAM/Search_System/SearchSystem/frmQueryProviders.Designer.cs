@@ -39,10 +39,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Click += new System.EventHandler(this.btnUpdate_Click_1);
-            // 
             // pnlTB
             // 
             this.pnlTB.Controls.Add(this.lblIdStock);
@@ -59,8 +55,6 @@
             this.txtIdLaboratories.Size = new System.Drawing.Size(100, 20);
             this.txtIdLaboratories.TabIndex = 0;
             this.txtIdLaboratories.Table = "Providers";
-            this.txtIdLaboratories.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtIdLaboratories.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // txtId_Stock
             // 
@@ -71,8 +65,6 @@
             this.txtId_Stock.Size = new System.Drawing.Size(100, 20);
             this.txtId_Stock.TabIndex = 0;
             this.txtId_Stock.Table = "Providers";
-            this.txtId_Stock.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
-            this.txtId_Stock.Leave += new System.EventHandler(this.tbxEmpty_Leave);
             // 
             // lblIdLaboratories
             // 
