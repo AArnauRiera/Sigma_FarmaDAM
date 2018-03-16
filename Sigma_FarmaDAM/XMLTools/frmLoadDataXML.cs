@@ -57,6 +57,13 @@ namespace XMLTools
 
                 Invoke((MethodInvoker)delegate { lblDrug.Text = count + " / " + nodeCount; });
 
+                Invoke((MethodInvoker)delegate {
+                    pgbDrugs.Step = 1;
+                    pgbDrugs.Minimum = 1;
+                    pgbDrugs.Maximum = nodeCount;
+                    pgbDrugs.Value = 1;
+                });
+
                 foreach(XmlNode node in nodeList)
                 {
                     DataRow dtr = ds.Tables["Taula"].NewRow();
@@ -162,6 +169,10 @@ namespace XMLTools
                     count++;
 
                     Invoke((MethodInvoker)delegate { lblDrug.Text = count + " / " + nodeCount; });
+
+                    Invoke((MethodInvoker)delegate {
+                        pgbDrugs.PerformStep();
+                    });
                 }
 
                 db.Actualizar("select * from Drugs where 1 = 2", "Taula", ds);
@@ -193,6 +204,13 @@ namespace XMLTools
                 int count = 0;
 
                 int nodeCount = nodeList.Count;
+
+                Invoke((MethodInvoker)delegate {
+                    pgbLab.Step = 1;
+                    pgbLab.Minimum = 1;
+                    pgbLab.Maximum = nodeCount;
+                    pgbLab.Value = 1;
+                });
 
                 Invoke((MethodInvoker)delegate { lblLab.Text = count + " / " + nodeCount; });
 
@@ -253,6 +271,12 @@ namespace XMLTools
                     count++;
 
                     Invoke((MethodInvoker)delegate { lblLab.Text = count + " / " + nodeCount; });
+
+                    Invoke((MethodInvoker)delegate {
+                        pgbLab.PerformStep();
+                    });
+
+
                 }
 
                 db.Actualizar("select * from Laboratories where 1 = 2", "Taula", ds);
@@ -284,6 +308,13 @@ namespace XMLTools
                 int nodeCount = nodeList.Count;
 
                 Invoke((MethodInvoker)delegate { lblPa.Text = count + " / " + nodeCount; });
+
+                Invoke((MethodInvoker)delegate {
+                    pgbPA.Step = 1;
+                    pgbPA.Minimum = 1;
+                    pgbPA.Maximum = nodeCount;
+                    pgbPA.Value = 1;
+                });
 
                 foreach(XmlNode node in nodeList)
                 {
@@ -337,6 +368,10 @@ namespace XMLTools
                 db.Actualizar("select * from Active_Principles where 1 = 2", "Taula", ds);
 
                 Invoke((MethodInvoker)delegate { lblPa.Text = "Finalizado!"; });
+
+                Invoke((MethodInvoker)delegate {
+                    pgbPA.PerformStep();
+                });
 
             }
             catch(Exception ex)
