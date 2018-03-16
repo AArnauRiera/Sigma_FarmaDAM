@@ -56,6 +56,22 @@ namespace Sigma_FarmaDAM
             }
         }
 
+        public int getIdSeller() {
+
+            DBUtils.DBUtilities db = new DBUtils.DBUtilities();
+
+            DataSet dts = db.PortarPerConsulta("SELECT * FROM Seller WHERE username = '" + tbxUsername.Text + "'");
+
+            if (dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0)
+            {
+                return (Int32)dts.Tables[0].Rows[0]["id"];
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
 

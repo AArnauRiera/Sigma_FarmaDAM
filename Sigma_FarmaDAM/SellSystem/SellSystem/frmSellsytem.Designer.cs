@@ -78,7 +78,7 @@
             this.btn.Name = "btn";
             this.btn.Size = new System.Drawing.Size(75, 23);
             this.btn.TabIndex = 36;
-            this.btn.Text = "button1";
+            this.btn.Text = "Buscar";
             this.btn.UseVisualStyleBackColor = true;
             this.btn.Click += new System.EventHandler(this.btn_Click);
             // 

@@ -28,7 +28,12 @@ namespace SellSystem
 
         ///***CONSTRUCTOR***///
         public frmSellsytem(String ID_sell) {
-
+            InitializeComponent();
+            lblName.Text = "";
+            txtCantidad.Enabled = false;
+            txtCod.Enabled = false;
+            btnAdd.Enabled = false;
+            btnBuy.Enabled = false;
             ID_Sell = ID_sell;
 
         }
@@ -381,7 +386,8 @@ namespace SellSystem
 
         private void btn_Click(object sender, EventArgs e)
         {
-            frmQueryClients clientQuery = new frmQueryClients();
+            frmQueryClients clientQuery = new frmQueryClients(txtClient,"Clients");
+            clientQuery.Show();
         }
 
         private void frmSellsytem_FormClosing(object sender, FormClosingEventArgs e)
