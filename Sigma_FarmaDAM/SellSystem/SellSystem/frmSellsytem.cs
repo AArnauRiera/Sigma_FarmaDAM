@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using DBUtils;
+using GenerateTicket;
 using SearchSystem;
 using Sigma_Controls;
 
@@ -37,6 +38,10 @@ namespace SellSystem
         {
             InitializeComponent();
             lblName.Text = "";
+            txtCantidad.Enabled = false;
+            txtCod.Enabled      = false;
+            btnAdd.Enabled      = false;
+            btnBuy.Enabled      = false;
         }
         /// <summary>
         /// Este metodo actualiza los valores de los medicamentos en el DataGridView 
@@ -59,50 +64,60 @@ namespace SellSystem
             {
                 ///comprueba si un medicamento esta introduido en la tabla y si esta introduido le añade suma la cantidad introduida///
                 CheckDrugData();
-
-                try
+                if (SSHelper.stock(txtCod.Text, txtCantidad.Text))
                 {
-                    for (int row = 0; row < dgView_Sell.Rows.Count - 1; row++)
+
+                    try
                     {
-                        if (dgView_Sell.Rows[row].Cells[0].Value.ToString().Equals(Drug))
+                        for (int row = 0; row < dgView_Sell.Rows.Count - 1; row++)
                         {
-                            exist = true;
-                            dgView_Sell.Rows[row].Cells[4].Value = txtCantidad.Text;
+                            if (dgView_Sell.Rows[row].Cells[0].Value.ToString().Equals(Drug))
+                            {
+                                exist = true;
+                                dgView_Sell.Rows[row].Cells[4].Value = txtCantidad.Text;
+                            }
                         }
-                    }
-                    if (dts.Tables[0].Rows.Count != 0)
-                    {
-                        dgView_Sell.DataSource = dt;
-                        dgView_Sell.Columns[0].HeaderText = "ID Medicamento";
-                        dgView_Sell.Columns[1].HeaderText = "Nombre Medicamento";
-                        // dgView_Sell.Columns[2].Visible = false;
-                        // dgView_Sell.Columns[3].Visible = false;
-                    }
-                    else { MessageBox.Show("There are no values "); }
-                    ///Si no existe lo introduce a la Tabla///
-                    if ((!exist))
-                    {
-                        contador = 1;
-                        dr = dt.NewRow();
-                        dr[0] = txtCod.Text;
-                        dr[1] = txtProd.Text;
-                        dr[2] = ID_Sell;
-                        dr[3] = SSHelper.Client_ID(txtClient.Text);
-                        dr[4] = txtCantidad.Text;
+                        if (dts.Tables[0].Rows.Count != 0)
+                        {
+                            dgView_Sell.DataSource = dt;
+                            dgView_Sell.Columns[0].HeaderText = "ID Medicamento";
+                            dgView_Sell.Columns[1].HeaderText = "Nombre Medicamento";
+                            // dgView_Sell.Columns[2].Visible = false;
+                            // dgView_Sell.Columns[3].Visible = false;
+                        }
+                        else { MessageBox.Show("There are no values "); }
+                        ///Si no existe lo introduce a la Tabla///
+                        if ((!exist))
+                        {
+                            contador = 1;
+                            dr = dt.NewRow();
+                            dr[0] = txtCod.Text;
+                            dr[1] = txtProd.Text;
+                            dr[2] = ID_Sell;
+                            dr[3] = SSHelper.Client_ID(txtClient.Text);
+                            dr[4] = txtCantidad.Text;
 
-                        dt.Rows.Add(dr);
-                        txtCod.Text = "";
-                        txtProd.Text = "";
-                        txtCantidad.Text = "1";
+                            dt.Rows.Add(dr);
+                            txtCod.Text = "";
+                            txtProd.Text = "";
+                            txtCantidad.Text = "1";
+                        }
+
                     }
+
+                    catch
+                    {
+                        MessageBox.Show("There are no values ");
+                    }
+
+                } else {
+
+                    MessageBox.Show("La candidad solicitada sobrepasa el stock actual");
 
                 }
-
-                catch {
-                    MessageBox.Show("There are no values ");
-                }
-                
+            
             }
+
         }
 
         /// <summary>
@@ -261,6 +276,13 @@ namespace SellSystem
                             }
                         }
                         bool stockUpdated = DBUTILS.Actualizar(stockQuery, "Taula", dts);
+
+                        int testing = 18;
+
+                        frmGenerateTicket frmGenTicket = new frmGenerateTicket(testing);
+
+                        frmGenTicket.Show();
+
                     }
                     else { MessageBox.Show("Error al Actualizar FK "); }
                 }
@@ -268,7 +290,7 @@ namespace SellSystem
             }
             catch
             {
-                MessageBox.Show("///ERROR///");
+                MessageBox.Show("ERROR: Faltan datos por rellenar");
             }
             
         }
@@ -320,6 +342,13 @@ namespace SellSystem
                 txtClient.ReadOnly = true;
                 dts = SSHelper.client(txtClient);
                 lblName.Text = dts.Tables[0].Rows[0][0].ToString() + " " + dts.Tables[0].Rows[0][1].ToString() + " " + dts.Tables[0].Rows[0][2].ToString();
+
+                txtCantidad.Enabled = true;
+                txtCod.Enabled      = true;
+                btnAdd.Enabled      = true;
+                btnBuy.Enabled      = true;
+
+                txtClient.Enabled   = false;
             }
             else
             {
@@ -355,6 +384,15 @@ namespace SellSystem
         private void btn_Click(object sender, EventArgs e)
         {
             frmQueryClients clientQuery = new frmQueryClients();
+        }
+
+        private void frmSellsytem_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            //DBUTILS = null;
+            //DBUTILS = DBUTILS.Dispose();
+            //SSHelper = SSHelper.Dispose();
+            //dt = dt.Dispose();
         }
     }
 }

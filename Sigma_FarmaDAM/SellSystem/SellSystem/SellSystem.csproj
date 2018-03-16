@@ -86,6 +86,10 @@
       <Project>{fcf73ece-3f7c-4097-8783-93bc4403e0fd}</Project>
       <Name>DBUtils</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\GenerateTicket\GenerateTicket.csproj">
+      <Project>{04b7a81a-15a2-4623-be1f-c57bbe21b373}</Project>
+      <Name>GenerateTicket</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Mantein\Mantein.csproj">
       <Project>{951a95b0-6b1f-40d7-a091-29ca118d6756}</Project>
       <Name>Mantein</Name>

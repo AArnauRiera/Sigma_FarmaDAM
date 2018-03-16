@@ -30,6 +30,7 @@
         private void InitializeComponent()
         {
             this.pnltxt = new System.Windows.Forms.Panel();
+            this.btn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtClient = new Sigma_Controls.TxtSigma();
@@ -45,7 +46,6 @@
             this.dgView_Sell = new System.Windows.Forms.DataGridView();
             this.btnBuy = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn = new System.Windows.Forms.Button();
             this.pnltxt.SuspendLayout();
             this.pnlDgw.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgView_Sell)).BeginInit();
@@ -71,6 +71,16 @@
             this.pnltxt.Size = new System.Drawing.Size(346, 479);
             this.pnltxt.TabIndex = 10;
             this.pnltxt.Paint += new System.Windows.Forms.PaintEventHandler(this.pnltxt_Paint);
+            // 
+            // btn
+            // 
+            this.btn.Location = new System.Drawing.Point(161, 28);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(75, 23);
+            this.btn.TabIndex = 36;
+            this.btn.Text = "button1";
+            this.btn.UseVisualStyleBackColor = true;
+            this.btn.Click += new System.EventHandler(this.btn_Click);
             // 
             // label3
             // 
@@ -233,16 +243,6 @@
             this.panel1.Size = new System.Drawing.Size(950, 620);
             this.panel1.TabIndex = 36;
             // 
-            // btn
-            // 
-            this.btn.Location = new System.Drawing.Point(161, 27);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(75, 23);
-            this.btn.TabIndex = 36;
-            this.btn.Text = "button1";
-            this.btn.UseVisualStyleBackColor = true;
-            this.btn.Click += new System.EventHandler(this.btn_Click);
-            // 
             // frmSellsytem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,6 +251,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmSellsytem";
             this.Text = "SellSystem";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSellsytem_FormClosing);
             this.Load += new System.EventHandler(this.frmSellsytem_Load);
             this.pnltxt.ResumeLayout(false);
             this.pnltxt.PerformLayout();

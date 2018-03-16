@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using DBUtils;
-using SearchSystem;
 using Sigma_Controls;
 
 namespace SellSystem
@@ -63,13 +55,33 @@ namespace SellSystem
             return validate;
         }
         ///Busca si el medicamento tiene stock///
-        ///<param name="drug">register_number</param>
+        ///<param name="drug">ID del medicamento</param>
         public bool stock(String drug)
         {
             int stock = 0;
-            String ID_Drug = "select id from Drugs where where Register_Number = '" + drug + "";
+            String ID_Drug = "select id from Drugs where Register_Number = " + drug;// devuelve la id interna del medicamento
+            dts = db.PortarPerConsulta(ID_Drug);
+
             String Drug = dts.Tables[0].Rows[0][0].ToString();
-            Query = "select * from Stock where ID_Drug='" + Drug + "'and Quantity >'" + stock + "'";
+            Query = "select Quantity from Stock where ID_Drug='" + Drug + "'and Quantity >'" + stock + "'";
+            dts = db.PortarPerConsulta(Query);
+
+            bool validate = dts.Tables[0].Rows.Count > 0;
+
+            return validate;
+        }
+
+        ///Busca si el medicamento tiene el stock solicitado por el usuario///
+        ///<param name="drug">ID del medicamento</param>
+        ///<param name="quantity">Cantidad solicitada</param>
+        public bool stock(String drug, string quantity)
+        {
+            int stock = int.Parse(quantity);
+            String ID_Drug = "select id from Drugs where Register_Number = " + drug;// devuelve la id interna del medicamento
+            dts = db.PortarPerConsulta(ID_Drug);
+
+            String Drug = dts.Tables[0].Rows[0][0].ToString();
+            Query = "select Quantity from Stock where ID_Drug='" + Drug + "'and Quantity >='" + stock + "'";
             dts = db.PortarPerConsulta(Query);
 
             bool validate = dts.Tables[0].Rows.Count > 0;
