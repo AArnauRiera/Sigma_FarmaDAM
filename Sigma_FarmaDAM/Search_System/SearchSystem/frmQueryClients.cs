@@ -61,7 +61,7 @@ namespace SearchSystem
                 {
                     string id = Convert.ToString(dgwDB.SelectedRows[0].Cells["NTS"].Value);
                     _txt.Text = id;
-
+                    _txt.ExecuteOnExit();
                     this.Close();
                 }
                 catch (Exception)

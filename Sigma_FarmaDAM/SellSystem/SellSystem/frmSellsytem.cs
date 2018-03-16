@@ -320,13 +320,14 @@ namespace SellSystem
                     Querry = "SELECT Quantity FROM Stock WHERE ID_Drug ='" + SSHelper.Drug_ID(txtCod.Text) + "'";
                     dts = DBUTILS.PortarPerConsulta(Querry);
                     int Stock = Convert.ToInt32(dts.Tables[0].Rows[0][0].ToString());
-                if (Stock < Convert.ToInt32(txtCantidad.Text))
+
+                    if (Stock < Convert.ToInt32(txtCantidad.Text))
                     {
                         MessageBox.Show("No hay suficiente Cantidad");
                         txtCantidad.Text = "1";
                     }
 
-            }
+                }
 
             }
         }
@@ -344,27 +345,30 @@ namespace SellSystem
 
         public void SetClient(TxtSigma txt)
         {
-            Client = SSHelper.Client_exist(txtClient);
-            if (Client)
+            if(!String.IsNullOrEmpty(txt.Text))
             {
-                txtClient.ReadOnly = true;
-                dts = SSHelper.client(txtClient);
-                lblName.Text = dts.Tables[0].Rows[0][0].ToString() + " " + dts.Tables[0].Rows[0][1].ToString() + " " + dts.Tables[0].Rows[0][2].ToString();
+                Client = SSHelper.Client_exist(txtClient);
+                if(Client)
+                {
+                    txtClient.ReadOnly = true;
+                    dts = SSHelper.client(txtClient);
+                    lblName.Text = dts.Tables[0].Rows[0][0].ToString() + " " + dts.Tables[0].Rows[0][1].ToString() + " " + dts.Tables[0].Rows[0][2].ToString();
 
-                txtCantidad.Enabled = true;
-                txtCod.Enabled = true;
-                btnAdd.Enabled = true;
-                btnBuy.Enabled = true;
+                    txtCantidad.Enabled = true;
+                    txtCod.Enabled = true;
+                    btnAdd.Enabled = true;
+                    btnBuy.Enabled = true;
 
-                txtClient.Enabled = false;
-            }
-            else
-            {
-                MessageBox.Show("No existe el cliente");
-                txtClient.Text = "";
+                    txtClient.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("No existe el cliente");
+                    txtClient.Text = "";
+                }
             }
         }
-    }
+    
 
         /// <summary>
         /// Controla que solo se puedan introducir números y letras.
@@ -392,8 +396,7 @@ namespace SellSystem
 
         private void btn_Click(object sender, EventArgs e)
         {
-            frmQueryClients clientQuery = new frmQueryClients(txtClient,"Clients");
-            clientQuery.Show();
+            
         }
 
         private void frmSellsytem_FormClosing(object sender, FormClosingEventArgs e)
@@ -403,6 +406,12 @@ namespace SellSystem
             //DBUTILS = DBUTILS.Dispose();
             //SSHelper = SSHelper.Dispose();
             //dt = dt.Dispose();
+        }
+
+        private void btn_Click_1(object sender, EventArgs e)
+        {
+            frmQueryClients clientQuery = new frmQueryClients(txtClient, "Clients");
+            clientQuery.Show();
         }
     }
 }

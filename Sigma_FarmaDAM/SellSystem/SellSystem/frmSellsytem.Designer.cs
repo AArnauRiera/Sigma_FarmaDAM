@@ -82,6 +82,7 @@
             this.btn.TabIndex = 36;
             this.btn.Text = "Buscar";
             this.btn.UseVisualStyleBackColor = true;
+            this.btn.Click += new System.EventHandler(this.btn_Click_1);
             // 
             // label3
             // 
@@ -178,7 +179,7 @@
             this.lblName.BackColor = System.Drawing.Color.White;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.lblName.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblName.Location = new System.Drawing.Point(237, 75);
+            this.lblName.Location = new System.Drawing.Point(163, 75);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(113, 19);
             this.lblName.TabIndex = 12;
@@ -258,7 +259,7 @@
             this.panel1.Controls.Add(this.pnltxt);
             this.panel1.Controls.Add(this.pnlDgw);
             this.panel1.Location = new System.Drawing.Point(70, 29);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(950, 620);
             this.panel1.TabIndex = 36;

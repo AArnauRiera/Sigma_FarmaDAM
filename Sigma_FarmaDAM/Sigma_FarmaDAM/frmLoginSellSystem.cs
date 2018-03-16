@@ -35,7 +35,6 @@ namespace Sigma_FarmaDAM
                 if (control.CheckCredentials(tbxUsername, tbxPassword, errorProvider))
                 {
                     this.Close();
-                    this.Dispose();
                     DialogResult = DialogResult.OK;
                 }
             }

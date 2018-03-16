@@ -10,7 +10,13 @@ namespace GenerateTicket
 {
     public class GenerateTicketHelper
     {
-
+        /// <summary>
+        /// Accede a los datos de la Base de Datos y rellena el documento en función de la ID 
+        /// que recibe la función, que corresponde a la del ticket de compra
+        /// </summary>
+        /// <param name="crystalRepDoc">Documento Crystal Reports</param>
+        /// <param name="idTicket">Id del ticket a imprimir</param>
+        /// <returns></returns>
         public ReportDocument generateTicket(ReportDocument crystalRepDoc, int idTicket)
         {
 
