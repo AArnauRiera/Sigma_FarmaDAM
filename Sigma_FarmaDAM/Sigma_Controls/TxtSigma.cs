@@ -81,6 +81,11 @@ namespace Sigma_Controls
         #endregion
 
 
+        public void ExecuteOnExit()
+        {
+            OnLeave(EventArgs.Empty);
+        }
+
         /// <summary>
         /// Regular expresion.
         /// </summary>
