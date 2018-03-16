@@ -64,10 +64,10 @@ namespace SearchSystem
                     _txt.ExecuteOnExit();
                     this.Close();
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-
-                    throw;
+                    Console.WriteLine(e);
+                    
                 }
                 
             }
