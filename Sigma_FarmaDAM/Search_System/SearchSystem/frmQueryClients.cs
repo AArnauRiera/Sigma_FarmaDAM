@@ -42,11 +42,12 @@ namespace SearchSystem
             InitializeComponent();
         }
 
-        public frmQueryClients(TxtSigma txt, string table)
+        public frmQueryClients( TxtSigma txt, string table)
         {
             InitializeComponent();
             sellSystem = true;
             _txt = txt;
+            Table = table;
         }
 
         /// <summary>
@@ -60,6 +61,7 @@ namespace SearchSystem
                 {
                     string id = Convert.ToString(dgwDB.SelectedRows[0].Cells["NTS"].Value);
                     _txt.Text = id;
+
                     this.Close();
                 }
                 catch (Exception)

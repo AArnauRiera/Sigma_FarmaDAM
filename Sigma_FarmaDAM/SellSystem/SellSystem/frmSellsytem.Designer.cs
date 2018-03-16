@@ -66,10 +66,9 @@
             this.pnltxt.Controls.Add(this.label6);
             this.pnltxt.Controls.Add(this.label1);
             this.pnltxt.Controls.Add(this.txtCod);
-            this.pnltxt.Location = new System.Drawing.Point(4, 4);
-            this.pnltxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnltxt.Location = new System.Drawing.Point(3, 3);
             this.pnltxt.Name = "pnltxt";
-            this.pnltxt.Size = new System.Drawing.Size(461, 752);
+            this.pnltxt.Size = new System.Drawing.Size(346, 611);
             this.pnltxt.TabIndex = 10;
             this.pnltxt.Paint += new System.Windows.Forms.PaintEventHandler(this.pnltxt_Paint);
             // 
@@ -77,24 +76,21 @@
             // 
             this.btn.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btn.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn.Location = new System.Drawing.Point(357, 42);
-            this.btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn.Location = new System.Drawing.Point(261, 35);
             this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(100, 28);
+            this.btn.Size = new System.Drawing.Size(75, 37);
             this.btn.TabIndex = 36;
             this.btn.Text = "Buscar";
             this.btn.UseVisualStyleBackColor = true;
-            this.btn.Click += new System.EventHandler(this.btn_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(5, 147);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(4, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 23);
+            this.label3.Size = new System.Drawing.Size(132, 19);
             this.label3.TabIndex = 30;
             this.label3.Text = "Numero de Registro";
             // 
@@ -103,10 +99,9 @@
             this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnAdd.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnAdd.Location = new System.Drawing.Point(317, 712);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Location = new System.Drawing.Point(238, 578);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(131, 36);
+            this.btnAdd.Size = new System.Drawing.Size(98, 29);
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Añadir";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -118,10 +113,9 @@
             this.txtClient.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtClient.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtClient.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtClient.Location = new System.Drawing.Point(317, 4);
-            this.txtClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtClient.Location = new System.Drawing.Point(238, 3);
             this.txtClient.Name = "txtClient";
-            this.txtClient.Size = new System.Drawing.Size(140, 30);
+            this.txtClient.Size = new System.Drawing.Size(106, 26);
             this.txtClient.TabIndex = 30;
             this.txtClient.Table = null;
             this.txtClient.Leave += new System.EventHandler(this.txtClient_Leave);
@@ -134,10 +128,9 @@
             this.txtProd.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtProd.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtProd.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtProd.Location = new System.Drawing.Point(108, 182);
-            this.txtProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProd.Location = new System.Drawing.Point(81, 148);
             this.txtProd.Name = "txtProd";
-            this.txtProd.Size = new System.Drawing.Size(349, 30);
+            this.txtProd.Size = new System.Drawing.Size(263, 26);
             this.txtProd.TabIndex = 26;
             this.txtProd.Table = null;
             // 
@@ -147,10 +140,9 @@
             this.txtCantidad.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtCantidad.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtCantidad.Location = new System.Drawing.Point(416, 220);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantidad.Location = new System.Drawing.Point(312, 179);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(41, 30);
+            this.txtCantidad.Size = new System.Drawing.Size(32, 26);
             this.txtCantidad.TabIndex = 35;
             this.txtCantidad.Table = null;
             this.txtCantidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCantidad_KeyDown);
@@ -161,10 +153,9 @@
             this.NTS.AutoSize = true;
             this.NTS.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.NTS.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.NTS.Location = new System.Drawing.Point(4, 4);
-            this.NTS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NTS.Location = new System.Drawing.Point(3, 3);
             this.NTS.Name = "NTS";
-            this.NTS.Size = new System.Drawing.Size(41, 23);
+            this.NTS.Size = new System.Drawing.Size(33, 19);
             this.NTS.TabIndex = 27;
             this.NTS.Text = "NTS";
             // 
@@ -174,10 +165,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(5, 189);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(4, 154);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 23);
+            this.label2.Size = new System.Drawing.Size(65, 19);
             this.label2.TabIndex = 29;
             this.label2.Text = "Producto";
             // 
@@ -188,10 +178,9 @@
             this.lblName.BackColor = System.Drawing.Color.White;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.lblName.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblName.Location = new System.Drawing.Point(317, 74);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Location = new System.Drawing.Point(237, 75);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(140, 23);
+            this.lblName.Size = new System.Drawing.Size(113, 19);
             this.lblName.TabIndex = 12;
             this.lblName.Text = "Datos del Cliente";
             // 
@@ -201,10 +190,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(4, 227);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(3, 184);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 23);
+            this.label6.Size = new System.Drawing.Size(64, 19);
             this.label6.TabIndex = 34;
             this.label6.Text = "Cantidad";
             // 
@@ -214,10 +202,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(5, 74);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 23);
+            this.label1.Size = new System.Drawing.Size(54, 19);
             this.label1.TabIndex = 11;
             this.label1.Text = "Cliente:";
             // 
@@ -227,10 +214,9 @@
             this.txtCod.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtCod.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtCod.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtCod.Location = new System.Drawing.Point(325, 144);
-            this.txtCod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCod.Location = new System.Drawing.Point(244, 117);
             this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(132, 30);
+            this.txtCod.Size = new System.Drawing.Size(100, 26);
             this.txtCod.TabIndex = 25;
             this.txtCod.Table = null;
             this.txtCod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCod_KeyDown);
@@ -239,10 +225,9 @@
             // 
             this.pnlDgw.Controls.Add(this.dgView_Sell);
             this.pnlDgw.Controls.Add(this.btnBuy);
-            this.pnlDgw.Location = new System.Drawing.Point(475, 4);
-            this.pnlDgw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlDgw.Location = new System.Drawing.Point(356, 3);
             this.pnlDgw.Name = "pnlDgw";
-            this.pnlDgw.Size = new System.Drawing.Size(788, 756);
+            this.pnlDgw.Size = new System.Drawing.Size(591, 614);
             this.pnlDgw.TabIndex = 11;
             // 
             // dgView_Sell
@@ -251,20 +236,18 @@
             this.dgView_Sell.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgView_Sell.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgView_Sell.GridColor = System.Drawing.Color.White;
-            this.dgView_Sell.Location = new System.Drawing.Point(4, 0);
-            this.dgView_Sell.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgView_Sell.Location = new System.Drawing.Point(3, 0);
             this.dgView_Sell.Name = "dgView_Sell";
-            this.dgView_Sell.Size = new System.Drawing.Size(780, 716);
+            this.dgView_Sell.Size = new System.Drawing.Size(585, 582);
             this.dgView_Sell.TabIndex = 13;
             this.dgView_Sell.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgView_Sell_CellContentClick);
             // 
             // btnBuy
             // 
             this.btnBuy.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBuy.Location = new System.Drawing.Point(335, 724);
-            this.btnBuy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuy.Location = new System.Drawing.Point(251, 588);
             this.btnBuy.Name = "btnBuy";
-            this.btnBuy.Size = new System.Drawing.Size(177, 28);
+            this.btnBuy.Size = new System.Drawing.Size(133, 23);
             this.btnBuy.TabIndex = 12;
             this.btnBuy.Text = "Comprar";
             this.btnBuy.UseVisualStyleBackColor = true;
@@ -274,20 +257,19 @@
             // 
             this.panel1.Controls.Add(this.pnltxt);
             this.panel1.Controls.Add(this.pnlDgw);
-            this.panel1.Location = new System.Drawing.Point(93, 36);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(70, 29);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1267, 763);
+            this.panel1.Size = new System.Drawing.Size(950, 620);
             this.panel1.TabIndex = 36;
             // 
             // frmSellsytem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1375, 812);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmSellsytem";
             this.Text = "SellSystem";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSellsytem_FormClosing);

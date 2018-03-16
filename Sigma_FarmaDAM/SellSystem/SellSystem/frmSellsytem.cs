@@ -339,6 +339,11 @@ namespace SellSystem
         /// <param name="e">Argumento del evento</param>
         private void txtClient_Leave(object sender, EventArgs e)
         {
+            SetClient(txtClient);
+        }
+
+        public void SetClient(TxtSigma txt)
+        {
             Client = SSHelper.Client_exist(txtClient);
             if (Client)
             {
@@ -347,11 +352,11 @@ namespace SellSystem
                 lblName.Text = dts.Tables[0].Rows[0][0].ToString() + " " + dts.Tables[0].Rows[0][1].ToString() + " " + dts.Tables[0].Rows[0][2].ToString();
 
                 txtCantidad.Enabled = true;
-                txtCod.Enabled      = true;
-                btnAdd.Enabled      = true;
-                btnBuy.Enabled      = true;
+                txtCod.Enabled = true;
+                btnAdd.Enabled = true;
+                btnBuy.Enabled = true;
 
-                txtClient.Enabled   = false;
+                txtClient.Enabled = false;
             }
             else
             {
@@ -359,6 +364,7 @@ namespace SellSystem
                 txtClient.Text = "";
             }
         }
+    }
 
         /// <summary>
         /// Controla que solo se puedan introducir números y letras.
