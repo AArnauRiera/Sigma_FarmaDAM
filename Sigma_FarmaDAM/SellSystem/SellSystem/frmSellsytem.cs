@@ -277,9 +277,7 @@ namespace SellSystem
                         }
                         bool stockUpdated = DBUTILS.Actualizar(stockQuery, "Taula", dts);
 
-                        int testing = 18;
-
-                        frmGenerateTicket frmGenTicket = new frmGenerateTicket(testing);
+                        frmGenerateTicket frmGenTicket = new frmGenerateTicket(Id_Header);
 
                         frmGenTicket.Show();
 
