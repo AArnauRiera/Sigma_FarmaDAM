@@ -72,6 +72,7 @@ namespace Sigma_FarmaDAM
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+            this.Dispose();
         }
 
         private void CutToolStripMenuItem_Click(object sender, EventArgs e)
