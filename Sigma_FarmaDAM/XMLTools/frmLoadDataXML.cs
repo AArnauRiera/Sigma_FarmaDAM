@@ -1,13 +1,7 @@
 ﻿using DBUtils;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -182,7 +176,7 @@ namespace XMLTools
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex);
+                MessageBox.Show(ex.ToString());
             }
             
 
@@ -265,7 +259,7 @@ namespace XMLTools
                     catch(Exception e)
                     {
 
-                        Console.WriteLine(e);
+                        MessageBox.Show(ex.ToString());
                     }
 
                     count++;
@@ -286,7 +280,7 @@ namespace XMLTools
             catch(Exception ex)
             {
 
-                Console.WriteLine(ex);
+                MessageBox.Show(ex.ToString());
             }
         }
         public virtual void UploadDataPA()
@@ -376,8 +370,7 @@ namespace XMLTools
             }
             catch(Exception ex)
             {
-
-                Console.WriteLine(ex);
+                MessageBox.Show(ex.ToString());
             }
         }
 
