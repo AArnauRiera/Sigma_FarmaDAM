@@ -254,7 +254,7 @@ namespace SellSystem
                     {
                         drOrder = dts.Tables["Taula"].NewRow();
                         drOrder["Id_Header"] = Id_Header;
-                        drOrder["Id_Drug"] = SSHelper.Drug_ID(dgView_Sell.Rows[row].Cells[0].Value.ToString());//ojo
+                        drOrder["Id_Drug"] = Convert.ToInt32(dgView_Sell.Rows[row].Cells[0].Value.ToString());
                         drOrder["Quantity"] = Convert.ToInt32(dgView_Sell.Rows[row].Cells[4].Value.ToString());
                         dts.Tables["Taula"].Rows.Add(drOrder);
                         Console.WriteLine(drOrder);
@@ -272,7 +272,7 @@ namespace SellSystem
                         {
                             foreach (DataGridViewRow row in dgView_Sell.Rows)
                             {
-                                if (SSHelper.Drug_ID(row.Cells[0].Value.ToString()).ToString().Equals(r["ID_Drug"].ToString()))
+                                if (row.Cells[0].Value.ToString().Equals(r["ID_Drug"].ToString()))
                                 {
                                     quantity = Convert.ToInt32(r["Quantity"]) - Convert.ToInt32(row.Cells["quantity"].Value.ToString());
                                     r["Quantity"] = quantity;
@@ -317,7 +317,7 @@ namespace SellSystem
             {
                 if (!String.IsNullOrEmpty(txtCod.Text)) { 
 
-                    Querry = "SELECT Quantity FROM Stock WHERE ID_Drug ='" + SSHelper.Drug_ID(txtCod.Text) + "'";
+                    Querry = "SELECT Quantity FROM Stock WHERE ID_Drug ='" + txtCod.Text + "'";
                     dts = DBUTILS.PortarPerConsulta(Querry);
                     int Stock = Convert.ToInt32(dts.Tables[0].Rows[0][0].ToString());
 

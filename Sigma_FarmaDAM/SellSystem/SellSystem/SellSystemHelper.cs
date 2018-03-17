@@ -59,11 +59,8 @@ namespace SellSystem
         public bool stock(String drug)
         {
             int stock = 0;
-            String ID_Drug = "select id from Drugs where Register_Number = " + drug;// devuelve la id interna del medicamento
-            dts = db.PortarPerConsulta(ID_Drug);
-
-            String Drug = dts.Tables[0].Rows[0][0].ToString();
-            Query = "select Quantity from Stock where ID_Drug='" + Drug + "'and Quantity >'" + stock + "'";
+            
+            Query = "select Quantity from Stock where ID_Drug='" + drug + "'and Quantity >'" + stock + "'";
             dts = db.PortarPerConsulta(Query);
 
             bool validate = dts.Tables[0].Rows.Count > 0;
@@ -77,11 +74,8 @@ namespace SellSystem
         public bool stock(String drug, string quantity)
         {
             int stock = int.Parse(quantity);
-            String ID_Drug = "select id from Drugs where Register_Number = " + drug;// devuelve la id interna del medicamento
-            dts = db.PortarPerConsulta(ID_Drug);
 
-            String Drug = dts.Tables[0].Rows[0][0].ToString();
-            Query = "select Quantity from Stock where ID_Drug='" + Drug + "'and Quantity >='" + stock + "'";
+            Query = "select Quantity from Stock where ID_Drug='" + drug + "'and Quantity >='" + stock + "'";
             dts = db.PortarPerConsulta(Query);
 
             bool validate = dts.Tables[0].Rows.Count > 0;
