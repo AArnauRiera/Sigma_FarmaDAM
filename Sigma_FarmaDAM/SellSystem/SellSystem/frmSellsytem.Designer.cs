@@ -79,7 +79,7 @@
             this.btn.Location = new System.Drawing.Point(261, 35);
             this.btn.Name = "btn";
             this.btn.Size = new System.Drawing.Size(75, 37);
-            this.btn.TabIndex = 36;
+            this.btn.TabIndex = 1;
             this.btn.Text = "Buscar";
             this.btn.UseVisualStyleBackColor = true;
             this.btn.Click += new System.EventHandler(this.btn_Click_1);
@@ -103,7 +103,7 @@
             this.btnAdd.Location = new System.Drawing.Point(238, 578);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(98, 29);
-            this.btnAdd.TabIndex = 10;
+            this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Añadir";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -117,7 +117,7 @@
             this.txtClient.Location = new System.Drawing.Point(238, 3);
             this.txtClient.Name = "txtClient";
             this.txtClient.Size = new System.Drawing.Size(106, 26);
-            this.txtClient.TabIndex = 30;
+            this.txtClient.TabIndex = 0;
             this.txtClient.Table = null;
             this.txtClient.Leave += new System.EventHandler(this.txtClient_Leave);
             // 
@@ -144,7 +144,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(312, 179);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(32, 26);
-            this.txtCantidad.TabIndex = 35;
+            this.txtCantidad.TabIndex = 3;
             this.txtCantidad.Table = null;
             this.txtCantidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCantidad_KeyDown);
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.checkNumKeyPress);
@@ -218,7 +218,7 @@
             this.txtCod.Location = new System.Drawing.Point(244, 117);
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(100, 26);
-            this.txtCod.TabIndex = 25;
+            this.txtCod.TabIndex = 2;
             this.txtCod.Table = null;
             this.txtCod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCod_KeyDown);
             // 
@@ -246,10 +246,12 @@
             // btnBuy
             // 
             this.btnBuy.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBuy.Location = new System.Drawing.Point(251, 588);
+            this.btnBuy.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnBuy.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnBuy.Location = new System.Drawing.Point(251, 581);
             this.btnBuy.Name = "btnBuy";
-            this.btnBuy.Size = new System.Drawing.Size(133, 23);
-            this.btnBuy.TabIndex = 12;
+            this.btnBuy.Size = new System.Drawing.Size(133, 33);
+            this.btnBuy.TabIndex = 0;
             this.btnBuy.Text = "Comprar";
             this.btnBuy.UseVisualStyleBackColor = true;
             this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);

@@ -8,6 +8,10 @@ namespace XMLTools
 {
     public class FTPHelper
     {
+        /// <summary>
+        /// Sube el archivo definido al servidor FTP
+        /// </summary>
+        /// <param name="path">Ruta completa del archivo a subir</param>
         public static void UploadFile(string path)
         {
             try

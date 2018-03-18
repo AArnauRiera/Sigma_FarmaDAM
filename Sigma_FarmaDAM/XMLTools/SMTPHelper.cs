@@ -6,6 +6,9 @@ namespace XMLTools
 {
     public class SMTPHelper
     {
+        /// <summary>
+        /// Envia un mail
+        /// </summary>
         public static void SendEmail()
         {
             try
@@ -21,7 +24,7 @@ namespace XMLTools
                 SmtpServer.EnableSsl = true;
                 //Enviamos el mail
                 SmtpServer.Send(mail);
-                MessageBox.Show("Mail enviado!!");
+                MessageBox.Show("Mail enviado correctamente");
             }
             catch (Exception ex)
             {

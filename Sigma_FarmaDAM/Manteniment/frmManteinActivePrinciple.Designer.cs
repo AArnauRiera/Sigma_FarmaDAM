@@ -105,7 +105,7 @@
             // txtSRN
             // 
             this.txtSRN.DBReference = "Sanitary_Register_Number";
-            this.txtSRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.RN_AP;
+            this.txtSRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtSRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSRN.ForeColor = System.Drawing.Color.Black;
             this.txtSRN.Location = new System.Drawing.Point(195, 4);
@@ -126,7 +126,7 @@
             // frmManteinActivePrinciple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.ClientSize = new System.Drawing.Size(1011, 770);
+            this.ClientSize = new System.Drawing.Size(1011, 749);
             this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "frmManteinActivePrinciple";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
