@@ -38,7 +38,7 @@ namespace Manteniment
         private void tbxEmpty_Leave(object sender, EventArgs e)
         {
             updated = false;
-            if (!ControlsErrorsHelper.CheckControlsErrors(errorProvider, (Control)sender, true))
+            if (!ControlsErrorsHelper.CheckControlsErrors(errorProvider, (Control)sender, true) && !((Control)sender).Name.Equals("txtCIF"))
             {
                 error = true;
             }
