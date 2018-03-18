@@ -63,7 +63,7 @@
             this.txtValue.Location = new System.Drawing.Point(240, 79);
             this.txtValue.Name = "txtValue";
             this.txtValue.Size = new System.Drawing.Size(100, 20);
-            this.txtValue.TabIndex = 0;
+            this.txtValue.TabIndex = 1;
             this.txtValue.Table = "IVA";
             // 
             // lblId

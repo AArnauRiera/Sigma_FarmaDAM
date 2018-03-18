@@ -79,7 +79,7 @@
             this.txtLastName1.Location = new System.Drawing.Point(139, 47);
             this.txtLastName1.Name = "txtLastName1";
             this.txtLastName1.Size = new System.Drawing.Size(100, 20);
-            this.txtLastName1.TabIndex = 0;
+            this.txtLastName1.TabIndex = 1;
             this.txtLastName1.Table = "Seller";
             // 
             // txtLastName2
@@ -89,7 +89,7 @@
             this.txtLastName2.Location = new System.Drawing.Point(139, 73);
             this.txtLastName2.Name = "txtLastName2";
             this.txtLastName2.Size = new System.Drawing.Size(100, 20);
-            this.txtLastName2.TabIndex = 0;
+            this.txtLastName2.TabIndex = 2;
             this.txtLastName2.Table = "Seller";
             // 
             // txtDNI
@@ -99,7 +99,7 @@
             this.txtDNI.Location = new System.Drawing.Point(139, 99);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(100, 20);
-            this.txtDNI.TabIndex = 0;
+            this.txtDNI.TabIndex = 3;
             this.txtDNI.Table = "Seller";
             // 
             // txtUsername
@@ -109,7 +109,7 @@
             this.txtUsername.Location = new System.Drawing.Point(345, 47);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 20);
-            this.txtUsername.TabIndex = 0;
+            this.txtUsername.TabIndex = 5;
             this.txtUsername.Table = "Seller";
             // 
             // txtEmail
@@ -119,7 +119,7 @@
             this.txtEmail.Location = new System.Drawing.Point(345, 21);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
-            this.txtEmail.TabIndex = 0;
+            this.txtEmail.TabIndex = 4;
             this.txtEmail.Table = "Seller";
             // 
             // lblFirstName

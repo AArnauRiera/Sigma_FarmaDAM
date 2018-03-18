@@ -86,7 +86,7 @@
             this.txtId_Stock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtId_Stock.Name = "txtId_Stock";
             this.txtId_Stock.Size = new System.Drawing.Size(132, 19);
-            this.txtId_Stock.TabIndex = 2;
+            this.txtId_Stock.TabIndex = 1;
             this.txtId_Stock.Table = "Providers";
             this.txtId_Stock.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtId_Stock.Leave += new System.EventHandler(this.tbx_Leave);
@@ -101,7 +101,7 @@
             this.txtIdLaboratories.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdLaboratories.Name = "txtIdLaboratories";
             this.txtIdLaboratories.Size = new System.Drawing.Size(132, 19);
-            this.txtIdLaboratories.TabIndex = 3;
+            this.txtIdLaboratories.TabIndex = 0;
             this.txtIdLaboratories.Table = "Providers";
             this.txtIdLaboratories.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtIdLaboratories.Leave += new System.EventHandler(this.tbx_Leave);

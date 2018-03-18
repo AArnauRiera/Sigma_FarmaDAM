@@ -88,7 +88,7 @@
             this.tbxAddress1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxAddress1.Name = "tbxAddress1";
             this.tbxAddress1.Size = new System.Drawing.Size(188, 20);
-            this.tbxAddress1.TabIndex = 42;
+            this.tbxAddress1.TabIndex = 3;
             this.tbxAddress1.Table = null;
             this.tbxAddress1.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
             this.tbxAddress1.Leave += new System.EventHandler(this.tbxEmpty_Leave);
@@ -113,7 +113,7 @@
             this.tbxFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxFirstName.Name = "tbxFirstName";
             this.tbxFirstName.Size = new System.Drawing.Size(188, 20);
-            this.tbxFirstName.TabIndex = 45;
+            this.tbxFirstName.TabIndex = 4;
             this.tbxFirstName.Table = null;
             this.tbxFirstName.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.tbxFirstName.Leave += new System.EventHandler(this.tbx_Leave);
@@ -148,7 +148,7 @@
             this.tbxLastName1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxLastName1.Name = "tbxLastName1";
             this.tbxLastName1.Size = new System.Drawing.Size(188, 20);
-            this.tbxLastName1.TabIndex = 46;
+            this.tbxLastName1.TabIndex = 5;
             this.tbxLastName1.Table = null;
             this.tbxLastName1.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
             this.tbxLastName1.Leave += new System.EventHandler(this.tbxEmpty_Leave);
@@ -173,7 +173,7 @@
             this.tbxLastName2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxLastName2.Name = "tbxLastName2";
             this.tbxLastName2.Size = new System.Drawing.Size(188, 20);
-            this.tbxLastName2.TabIndex = 47;
+            this.tbxLastName2.TabIndex = 6;
             this.tbxLastName2.Table = null;
             this.tbxLastName2.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
             this.tbxLastName2.Leave += new System.EventHandler(this.tbxEmpty_Leave);
@@ -218,7 +218,7 @@
             this.tbxDNI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxDNI.Name = "tbxDNI";
             this.tbxDNI.Size = new System.Drawing.Size(188, 20);
-            this.tbxDNI.TabIndex = 40;
+            this.tbxDNI.TabIndex = 1;
             this.tbxDNI.Table = null;
             this.tbxDNI.Tag = "";
             this.tbxDNI.TextChanged += new System.EventHandler(this.tbx_Leave);
@@ -234,7 +234,7 @@
             this.tbxNTS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxNTS.Name = "tbxNTS";
             this.tbxNTS.Size = new System.Drawing.Size(188, 20);
-            this.tbxNTS.TabIndex = 38;
+            this.tbxNTS.TabIndex = 0;
             this.tbxNTS.Table = null;
             this.tbxNTS.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.tbxNTS.Leave += new System.EventHandler(this.tbx_Leave);
@@ -259,7 +259,7 @@
             this.txtSigma1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSigma1.Name = "txtSigma1";
             this.txtSigma1.Size = new System.Drawing.Size(188, 20);
-            this.txtSigma1.TabIndex = 54;
+            this.txtSigma1.TabIndex = 2;
             this.txtSigma1.Table = null;
             this.txtSigma1.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtSigma1.Leave += new System.EventHandler(this.tbx_Leave);

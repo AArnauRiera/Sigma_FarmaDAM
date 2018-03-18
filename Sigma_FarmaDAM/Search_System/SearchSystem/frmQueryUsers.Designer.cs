@@ -117,7 +117,7 @@
             this.txtSigma3.Location = new System.Drawing.Point(167, 112);
             this.txtSigma3.Name = "txtSigma3";
             this.txtSigma3.Size = new System.Drawing.Size(100, 20);
-            this.txtSigma3.TabIndex = 5;
+            this.txtSigma3.TabIndex = 4;
             this.txtSigma3.Table = null;
             // 
             // label4
@@ -136,7 +136,7 @@
             this.txtSigma4.Location = new System.Drawing.Point(415, 44);
             this.txtSigma4.Name = "txtSigma4";
             this.txtSigma4.Size = new System.Drawing.Size(100, 20);
-            this.txtSigma4.TabIndex = 7;
+            this.txtSigma4.TabIndex = 1;
             this.txtSigma4.Table = null;
             // 
             // label5
@@ -155,7 +155,7 @@
             this.txtSigma5.Location = new System.Drawing.Point(415, 80);
             this.txtSigma5.Name = "txtSigma5";
             this.txtSigma5.Size = new System.Drawing.Size(100, 20);
-            this.txtSigma5.TabIndex = 9;
+            this.txtSigma5.TabIndex = 3;
             this.txtSigma5.Table = null;
             // 
             // label6
@@ -174,7 +174,7 @@
             this.txtSigma6.Location = new System.Drawing.Point(415, 115);
             this.txtSigma6.Name = "txtSigma6";
             this.txtSigma6.Size = new System.Drawing.Size(100, 20);
-            this.txtSigma6.TabIndex = 11;
+            this.txtSigma6.TabIndex = 5;
             this.txtSigma6.Table = null;
             // 
             // errorProvider
@@ -188,7 +188,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 501);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQueryUsers";
             this.Text = "Buscar Usuario";
             this.pnlButtons.ResumeLayout(false);

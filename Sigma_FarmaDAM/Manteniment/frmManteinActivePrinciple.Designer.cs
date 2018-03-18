@@ -99,7 +99,7 @@
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(132, 20);
-            this.txtName.TabIndex = 1;
+            this.txtName.TabIndex = 2;
             this.txtName.Table = "Active_Principles";
             // 
             // txtSRN
@@ -112,7 +112,7 @@
             this.txtSRN.Margin = new System.Windows.Forms.Padding(4);
             this.txtSRN.Name = "txtSRN";
             this.txtSRN.Size = new System.Drawing.Size(132, 20);
-            this.txtSRN.TabIndex = 0;
+            this.txtSRN.TabIndex = 1;
             this.txtSRN.Table = "Active_Principles";
             this.txtSRN.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtSRN.Leave += new System.EventHandler(this.tbx_Leave);

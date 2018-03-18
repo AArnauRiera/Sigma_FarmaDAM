@@ -67,7 +67,7 @@
             this.txtName.Location = new System.Drawing.Point(243, 85);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
-            this.txtName.TabIndex = 0;
+            this.txtName.TabIndex = 1;
             this.txtName.Table = "Active_Principles";
             // 
             // lblSRN

@@ -125,7 +125,7 @@ namespace SearchSystem
             this.txtDNI.Location = new System.Drawing.Point(280, 94);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(100, 20);
-            this.txtDNI.TabIndex = 1;
+            this.txtDNI.TabIndex = 3;
             this.txtDNI.Table = "Clients";
             // 
             // txtLastName1
@@ -135,7 +135,7 @@ namespace SearchSystem
             this.txtLastName1.Location = new System.Drawing.Point(280, 42);
             this.txtLastName1.Name = "txtLastName1";
             this.txtLastName1.Size = new System.Drawing.Size(100, 20);
-            this.txtLastName1.TabIndex = 3;
+            this.txtLastName1.TabIndex = 1;
             this.txtLastName1.Table = "Clients";
             // 
             // txtLastName2
@@ -145,7 +145,7 @@ namespace SearchSystem
             this.txtLastName2.Location = new System.Drawing.Point(280, 68);
             this.txtLastName2.Name = "txtLastName2";
             this.txtLastName2.Size = new System.Drawing.Size(100, 20);
-            this.txtLastName2.TabIndex = 4;
+            this.txtLastName2.TabIndex = 2;
             this.txtLastName2.Table = "Clients";
             // 
             // txtNTS
@@ -155,7 +155,7 @@ namespace SearchSystem
             this.txtNTS.Location = new System.Drawing.Point(280, 120);
             this.txtNTS.Name = "txtNTS";
             this.txtNTS.Size = new System.Drawing.Size(100, 20);
-            this.txtNTS.TabIndex = 5;
+            this.txtNTS.TabIndex = 4;
             this.txtNTS.Table = "Clients";
             // 
             // lblName

@@ -156,7 +156,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(132, 19);
-            this.txtEmail.TabIndex = 2;
+            this.txtEmail.TabIndex = 4;
             this.txtEmail.Table = "Seller";
             this.txtEmail.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtEmail.Leave += new System.EventHandler(this.tbx_Leave);
@@ -171,7 +171,7 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(132, 19);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 6;
             this.txtPassword.Table = "Seller";
             this.txtPassword.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtPassword.Leave += new System.EventHandler(this.tbx_Leave);
@@ -186,7 +186,7 @@
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(132, 19);
-            this.txtUsername.TabIndex = 4;
+            this.txtUsername.TabIndex = 5;
             this.txtUsername.Table = "Seller";
             this.txtUsername.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtUsername.Leave += new System.EventHandler(this.tbx_Leave);
@@ -201,7 +201,7 @@
             this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(132, 19);
-            this.txtDNI.TabIndex = 5;
+            this.txtDNI.TabIndex = 3;
             this.txtDNI.Table = "Seller";
             this.txtDNI.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtDNI.Leave += new System.EventHandler(this.tbx_Leave);
@@ -216,7 +216,7 @@
             this.txtLastName2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLastName2.Name = "txtLastName2";
             this.txtLastName2.Size = new System.Drawing.Size(132, 19);
-            this.txtLastName2.TabIndex = 6;
+            this.txtLastName2.TabIndex = 2;
             this.txtLastName2.Table = "Seller";
             this.txtLastName2.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
             this.txtLastName2.Leave += new System.EventHandler(this.tbxEmpty_Leave);
@@ -231,7 +231,7 @@
             this.txtLastName1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLastName1.Name = "txtLastName1";
             this.txtLastName1.Size = new System.Drawing.Size(132, 19);
-            this.txtLastName1.TabIndex = 7;
+            this.txtLastName1.TabIndex = 1;
             this.txtLastName1.Table = "Seller";
             this.txtLastName1.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtLastName1.Leave += new System.EventHandler(this.tbx_Leave);
@@ -246,7 +246,7 @@
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(132, 19);
-            this.txtFirstName.TabIndex = 8;
+            this.txtFirstName.TabIndex = 0;
             this.txtFirstName.Table = "Seller";
             this.txtFirstName.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtFirstName.Leave += new System.EventHandler(this.tbx_Leave);

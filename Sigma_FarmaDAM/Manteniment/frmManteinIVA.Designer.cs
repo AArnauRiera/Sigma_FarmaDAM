@@ -86,7 +86,7 @@
             this.txtValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtValue.Name = "txtValue";
             this.txtValue.Size = new System.Drawing.Size(132, 19);
-            this.txtValue.TabIndex = 2;
+            this.txtValue.TabIndex = 1;
             this.txtValue.Table = "IVA";
             this.txtValue.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtValue.Leave += new System.EventHandler(this.tbx_Leave);
@@ -101,7 +101,7 @@
             this.txtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(132, 19);
-            this.txtId.TabIndex = 3;
+            this.txtId.TabIndex = 0;
             this.txtId.Table = "IVA";
             this.txtId.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtId.Leave += new System.EventHandler(this.tbx_Leave);

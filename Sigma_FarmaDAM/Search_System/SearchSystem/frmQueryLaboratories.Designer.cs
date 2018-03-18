@@ -75,7 +75,7 @@
             this.txtAddress.Location = new System.Drawing.Point(256, 48);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(100, 20);
-            this.txtAddress.TabIndex = 0;
+            this.txtAddress.TabIndex = 1;
             this.txtAddress.Table = "Laboratories";
             // 
             // txtCIF
@@ -85,7 +85,7 @@
             this.txtCIF.Location = new System.Drawing.Point(256, 74);
             this.txtCIF.Name = "txtCIF";
             this.txtCIF.Size = new System.Drawing.Size(100, 20);
-            this.txtCIF.TabIndex = 0;
+            this.txtCIF.TabIndex = 2;
             this.txtCIF.Table = "Laboratories";
             // 
             // lblDenomination
@@ -131,7 +131,7 @@
             this.txtSigma1.Location = new System.Drawing.Point(256, 98);
             this.txtSigma1.Name = "txtSigma1";
             this.txtSigma1.Size = new System.Drawing.Size(100, 20);
-            this.txtSigma1.TabIndex = 2;
+            this.txtSigma1.TabIndex = 3;
             this.txtSigma1.Table = "Laboratories";
             // 
             // label2
@@ -163,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(595, 501);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQueryLaboratories";
             this.pnlButtons.ResumeLayout(false);
             this.pnlTB.ResumeLayout(false);

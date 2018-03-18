@@ -136,7 +136,7 @@
             this.txtReplaceable.Location = new System.Drawing.Point(204, 124);
             this.txtReplaceable.Name = "txtReplaceable";
             this.txtReplaceable.Size = new System.Drawing.Size(100, 20);
-            this.txtReplaceable.TabIndex = 13;
+            this.txtReplaceable.TabIndex = 8;
             this.txtReplaceable.Table = "Drugs";
             // 
             // txtIdActive
@@ -148,7 +148,7 @@
             this.txtIdActive.Location = new System.Drawing.Point(204, 69);
             this.txtIdActive.Name = "txtIdActive";
             this.txtIdActive.Size = new System.Drawing.Size(100, 20);
-            this.txtIdActive.TabIndex = 12;
+            this.txtIdActive.TabIndex = 4;
             this.txtIdActive.Table = "Drugs";
             // 
             // txtDenomination
@@ -160,7 +160,7 @@
             this.txtDenomination.Location = new System.Drawing.Point(204, 43);
             this.txtDenomination.Name = "txtDenomination";
             this.txtDenomination.Size = new System.Drawing.Size(100, 20);
-            this.txtDenomination.TabIndex = 11;
+            this.txtDenomination.TabIndex = 2;
             this.txtDenomination.Table = "Drugs";
             // 
             // txtContent
@@ -172,7 +172,7 @@
             this.txtContent.Location = new System.Drawing.Point(204, 95);
             this.txtContent.Name = "txtContent";
             this.txtContent.Size = new System.Drawing.Size(100, 20);
-            this.txtContent.TabIndex = 10;
+            this.txtContent.TabIndex = 6;
             this.txtContent.Table = "Drugs";
             // 
             // txtSRN
@@ -184,7 +184,7 @@
             this.txtSRN.Location = new System.Drawing.Point(204, 17);
             this.txtSRN.Name = "txtSRN";
             this.txtSRN.Size = new System.Drawing.Size(100, 20);
-            this.txtSRN.TabIndex = 9;
+            this.txtSRN.TabIndex = 0;
             this.txtSRN.Table = "Drugs";
             // 
             // lblGeneric
@@ -232,7 +232,7 @@
             this.txtGeneric.Location = new System.Drawing.Point(391, 11);
             this.txtGeneric.Name = "txtGeneric";
             this.txtGeneric.Size = new System.Drawing.Size(100, 20);
-            this.txtGeneric.TabIndex = 9;
+            this.txtGeneric.TabIndex = 1;
             this.txtGeneric.Table = "Drugs";
             // 
             // txtProspectus
@@ -244,7 +244,7 @@
             this.txtProspectus.Location = new System.Drawing.Point(391, 89);
             this.txtProspectus.Name = "txtProspectus";
             this.txtProspectus.Size = new System.Drawing.Size(100, 20);
-            this.txtProspectus.TabIndex = 10;
+            this.txtProspectus.TabIndex = 7;
             this.txtProspectus.Table = "Drugs";
             // 
             // txtObligatory
@@ -256,7 +256,7 @@
             this.txtObligatory.Location = new System.Drawing.Point(391, 37);
             this.txtObligatory.Name = "txtObligatory";
             this.txtObligatory.Size = new System.Drawing.Size(100, 20);
-            this.txtObligatory.TabIndex = 11;
+            this.txtObligatory.TabIndex = 3;
             this.txtObligatory.Table = "Drugs";
             // 
             // txtDocumentation
@@ -268,7 +268,7 @@
             this.txtDocumentation.Location = new System.Drawing.Point(391, 63);
             this.txtDocumentation.Name = "txtDocumentation";
             this.txtDocumentation.Size = new System.Drawing.Size(100, 20);
-            this.txtDocumentation.TabIndex = 12;
+            this.txtDocumentation.TabIndex = 5;
             this.txtDocumentation.Table = "Drugs";
             // 
             // label1
@@ -298,7 +298,7 @@
             this.txtSigma1.Location = new System.Drawing.Point(391, 113);
             this.txtSigma1.Name = "txtSigma1";
             this.txtSigma1.Size = new System.Drawing.Size(100, 20);
-            this.txtSigma1.TabIndex = 20;
+            this.txtSigma1.TabIndex = 9;
             this.txtSigma1.Table = "Drugs";
             // 
             // txtSigma2
@@ -310,7 +310,7 @@
             this.txtSigma2.Location = new System.Drawing.Point(391, 139);
             this.txtSigma2.Name = "txtSigma2";
             this.txtSigma2.Size = new System.Drawing.Size(100, 20);
-            this.txtSigma2.TabIndex = 19;
+            this.txtSigma2.TabIndex = 10;
             this.txtSigma2.Table = "Drugs";
             // 
             // errorProvider

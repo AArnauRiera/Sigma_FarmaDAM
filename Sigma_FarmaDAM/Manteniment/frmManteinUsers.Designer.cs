@@ -72,6 +72,10 @@
             // 
             this.bntNew.Click += new System.EventHandler(this.bntNew_Click);
             // 
+            // pnlMantein
+            // 
+            this.pnlMantein.Location = new System.Drawing.Point(-106, 0);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -90,7 +94,7 @@
             this.tbxEmail.Location = new System.Drawing.Point(227, 254);
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(141, 20);
-            this.tbxEmail.TabIndex = 29;
+            this.tbxEmail.TabIndex = 4;
             this.tbxEmail.Table = null;
             this.tbxEmail.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.tbxEmail.Leave += new System.EventHandler(this.tbx_Leave);
@@ -113,7 +117,7 @@
             this.tbxDNI.Location = new System.Drawing.Point(227, 211);
             this.tbxDNI.Name = "tbxDNI";
             this.tbxDNI.Size = new System.Drawing.Size(141, 20);
-            this.tbxDNI.TabIndex = 27;
+            this.tbxDNI.TabIndex = 3;
             this.tbxDNI.Table = null;
             this.tbxDNI.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.tbxDNI.Leave += new System.EventHandler(this.tbx_Leave);
@@ -136,7 +140,7 @@
             this.tbxLastName2.Location = new System.Drawing.Point(227, 166);
             this.tbxLastName2.Name = "tbxLastName2";
             this.tbxLastName2.Size = new System.Drawing.Size(141, 20);
-            this.tbxLastName2.TabIndex = 25;
+            this.tbxLastName2.TabIndex = 2;
             this.tbxLastName2.Table = null;
             this.tbxLastName2.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
             this.tbxLastName2.Leave += new System.EventHandler(this.tbxEmpty_Leave);
@@ -159,7 +163,7 @@
             this.tbxLastName1.Location = new System.Drawing.Point(227, 123);
             this.tbxLastName1.Name = "tbxLastName1";
             this.tbxLastName1.Size = new System.Drawing.Size(141, 20);
-            this.tbxLastName1.TabIndex = 23;
+            this.tbxLastName1.TabIndex = 1;
             this.tbxLastName1.Table = null;
             this.tbxLastName1.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.tbxLastName1.Leave += new System.EventHandler(this.tbx_Leave);
@@ -182,7 +186,7 @@
             this.tbxName.Location = new System.Drawing.Point(227, 83);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(141, 20);
-            this.tbxName.TabIndex = 21;
+            this.tbxName.TabIndex = 0;
             this.tbxName.Table = null;
             this.tbxName.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.tbxName.Leave += new System.EventHandler(this.tbx_Leave);
@@ -196,7 +200,7 @@
             this.txtSigma1.Location = new System.Drawing.Point(227, 290);
             this.txtSigma1.Name = "txtSigma1";
             this.txtSigma1.Size = new System.Drawing.Size(141, 20);
-            this.txtSigma1.TabIndex = 31;
+            this.txtSigma1.TabIndex = 5;
             this.txtSigma1.Table = null;
             this.txtSigma1.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtSigma1.Leave += new System.EventHandler(this.tbx_Leave);

@@ -77,7 +77,7 @@
             this.txtSigma3.Location = new System.Drawing.Point(243, 88);
             this.txtSigma3.Name = "txtSigma3";
             this.txtSigma3.Size = new System.Drawing.Size(100, 20);
-            this.txtSigma3.TabIndex = 1;
+            this.txtSigma3.TabIndex = 2;
             this.txtSigma3.Table = "Stock";
             // 
             // lblQuantity

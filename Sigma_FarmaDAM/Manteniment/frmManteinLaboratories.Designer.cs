@@ -117,7 +117,7 @@
             this.txtCIF.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCIF.Name = "txtCIF";
             this.txtCIF.Size = new System.Drawing.Size(132, 20);
-            this.txtCIF.TabIndex = 6;
+            this.txtCIF.TabIndex = 2;
             this.txtCIF.Table = "Laboratories";
             this.txtCIF.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
             this.txtCIF.Leave += new System.EventHandler(this.tbxEmpty_Leave);
@@ -132,7 +132,7 @@
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(132, 20);
-            this.txtAddress.TabIndex = 5;
+            this.txtAddress.TabIndex = 1;
             this.txtAddress.Table = "Laboratories";
             this.txtAddress.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtAddress.Leave += new System.EventHandler(this.tbx_Leave);
@@ -147,7 +147,7 @@
             this.txtDenomination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDenomination.Name = "txtDenomination";
             this.txtDenomination.Size = new System.Drawing.Size(132, 20);
-            this.txtDenomination.TabIndex = 4;
+            this.txtDenomination.TabIndex = 0;
             this.txtDenomination.Table = "Laboratories";
             this.txtDenomination.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtDenomination.Leave += new System.EventHandler(this.tbx_Leave);
@@ -162,7 +162,7 @@
             this.txtSigma1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSigma1.Name = "txtSigma1";
             this.txtSigma1.Size = new System.Drawing.Size(132, 20);
-            this.txtSigma1.TabIndex = 8;
+            this.txtSigma1.TabIndex = 3;
             this.txtSigma1.Table = "Laboratories";
             this.txtSigma1.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
             this.txtSigma1.Leave += new System.EventHandler(this.tbxEmpty_Leave);
@@ -177,7 +177,7 @@
             this.txtSigma2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSigma2.Name = "txtSigma2";
             this.txtSigma2.Size = new System.Drawing.Size(132, 20);
-            this.txtSigma2.TabIndex = 9;
+            this.txtSigma2.TabIndex = 4;
             this.txtSigma2.Table = "Laboratories";
             this.txtSigma2.TextChanged += new System.EventHandler(this.tbxEmpty_Leave);
             this.txtSigma2.Leave += new System.EventHandler(this.tbxEmpty_Leave);
