@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 16-03-2018 a las 16:24:39
+-- Tiempo de generación: 18-03-2018 a las 21:38:17
 -- Versión del servidor: 5.6.38
 -- Versión de PHP: 5.6.30
 
@@ -34,7 +34,7 @@ CREATE TABLE `Active_Principles` (
   `Name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
+------------------------
 
 --
 -- Estructura de tabla para la tabla `Chronic`
@@ -63,14 +63,11 @@ CREATE TABLE `Clients` (
   `Type_NTS` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
--- --------------------------------------------------------
-
 --
 -- Estructura de tabla para la tabla `Drugs`
 --
 
 CREATE TABLE `Drugs` (
-  `id` int(8) NOT NULL,
   `Register_Number` int(11) NOT NULL,
   `Sanitary_Register_Num` varchar(150) NOT NULL,
   `CommercialName` varchar(100) NOT NULL,
@@ -86,8 +83,6 @@ CREATE TABLE `Drugs` (
   `Prospectus` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
 --
 -- Estructura de tabla para la tabla `IVA`
 --
@@ -96,8 +91,6 @@ CREATE TABLE `IVA` (
   `id` int(2) NOT NULL,
   `value` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `Laboratories`
@@ -112,7 +105,6 @@ CREATE TABLE `Laboratories` (
   `CIF` varchar(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
 --
 -- Estructura de tabla para la tabla `Order_Content`
 --
@@ -120,11 +112,9 @@ CREATE TABLE `Laboratories` (
 CREATE TABLE `Order_Content` (
   `Id_Header` int(10) NOT NULL,
   `Id_Content` int(10) NOT NULL,
-  `Id_Drug` int(8) NOT NULL,
+  `Id_Drug` int(11) NOT NULL,
   `Quantity` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `Order_Header`
@@ -137,25 +127,6 @@ CREATE TABLE `Order_Header` (
   `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `Seller`
---
-
-CREATE TABLE `Seller` (
-  `firstName` varchar(30) NOT NULL,
-  `lastName1` varchar(30) NOT NULL,
-  `lastName2` varchar(30) NOT NULL,
-  `dni` varchar(9) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `username` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL,
-  `rol` tinyint(1) NOT NULL,
-  `id` int(8) NOT NULL,
-  `comission` int(7) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 --
 -- Estructura de tabla para la tabla `Stock`
 --
@@ -163,10 +134,8 @@ CREATE TABLE `Seller` (
 CREATE TABLE `Stock` (
   `Id_lab` int(8) NOT NULL,
   `Quantity` int(5) NOT NULL,
-  `ID_Drug` int(8) NOT NULL
+  `ID_Drug` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `Type_NTS`
@@ -208,8 +177,7 @@ ALTER TABLE `Clients`
 -- Indices de la tabla `Drugs`
 --
 ALTER TABLE `Drugs`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `Register_Number` (`id`),
+  ADD PRIMARY KEY (`Register_Number`),
   ADD KEY `fk_IVA` (`IVAId`),
   ADD KEY `fk_principle` (`ActivePrincipleID`);
 
@@ -273,13 +241,7 @@ ALTER TABLE `Type_NTS`
 -- AUTO_INCREMENT de la tabla `Clients`
 --
 ALTER TABLE `Clients`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
-
---
--- AUTO_INCREMENT de la tabla `Drugs`
---
-ALTER TABLE `Drugs`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT de la tabla `IVA`
@@ -291,13 +253,13 @@ ALTER TABLE `IVA`
 -- AUTO_INCREMENT de la tabla `Order_Content`
 --
 ALTER TABLE `Order_Content`
-  MODIFY `Id_Content` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+  MODIFY `Id_Content` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
 
 --
 -- AUTO_INCREMENT de la tabla `Order_Header`
 --
 ALTER TABLE `Order_Header`
-  MODIFY `Id_Header` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `Id_Header` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT de la tabla `Seller`
@@ -326,8 +288,8 @@ ALTER TABLE `Drugs`
 -- Filtros para la tabla `Order_Content`
 --
 ALTER TABLE `Order_Content`
-  ADD CONSTRAINT `Order_Content_ibfk_1` FOREIGN KEY (`Id_Header`) REFERENCES `Order_Header` (`Id_Header`),
-  ADD CONSTRAINT `Order_Content_ibfk_2` FOREIGN KEY (`Id_Drug`) REFERENCES `Drugs` (`id`);
+  ADD CONSTRAINT `Order_Content_ibfk_1` FOREIGN KEY (`Id_Drug`) REFERENCES `Drugs` (`Register_Number`),
+  ADD CONSTRAINT `Order_Content_ibfk_2` FOREIGN KEY (`Id_Header`) REFERENCES `Order_Header` (`Id_Header`);
 
 --
 -- Filtros para la tabla `Order_Header`
@@ -341,7 +303,7 @@ ALTER TABLE `Order_Header`
 --
 ALTER TABLE `Stock`
   ADD CONSTRAINT `fk_lab` FOREIGN KEY (`Id_lab`) REFERENCES `Laboratories` (`id`),
-  ADD CONSTRAINT `fk_meds` FOREIGN KEY (`ID_Drug`) REFERENCES `Drugs` (`id`);
+  ADD CONSTRAINT `fk_meds` FOREIGN KEY (`ID_Drug`) REFERENCES `Drugs` (`Register_Number`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
