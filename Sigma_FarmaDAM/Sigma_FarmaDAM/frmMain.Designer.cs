@@ -92,7 +92,7 @@
             this.btnDataXml.Location = new System.Drawing.Point(0, 766);
             this.btnDataXml.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDataXml.Name = "btnDataXml";
-            this.btnDataXml.Size = new System.Drawing.Size(269, 66);
+            this.btnDataXml.Size = new System.Drawing.Size(271, 66);
             this.btnDataXml.TabIndex = 12;
             this.btnDataXml.Text = "Base de datos";
             this.btnDataXml.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -387,7 +387,7 @@
             this.btnGestioStock.Location = new System.Drawing.Point(0, 622);
             this.btnGestioStock.Margin = new System.Windows.Forms.Padding(2);
             this.btnGestioStock.Name = "btnGestioStock";
-            this.btnGestioStock.Size = new System.Drawing.Size(269, 66);
+            this.btnGestioStock.Size = new System.Drawing.Size(271, 66);
             this.btnGestioStock.TabIndex = 13;
             this.btnGestioStock.Text = "Gestión stock";
             this.btnGestioStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

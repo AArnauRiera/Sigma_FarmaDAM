@@ -63,7 +63,7 @@ namespace Manteniment
         private void tbx_Leave(object sender, EventArgs e)
         {
             updated = false;
-            if (!ControlsErrorsHelper.CheckControlsErrors(errorProvider, (Control)sender))
+            if (!ControlsErrorsHelper.CheckControlsErrors(errorProvider, (Control)sender) && !((Control)sender).Name.Equals("txtDocumentation") && !((Control)sender).Name.Equals("txtProspectus"))
             {
                 error = true;
             }

@@ -52,6 +52,10 @@
             this.pnlTextBox.Controls.Add(this.txtSigma2);
             this.pnlTextBox.Controls.Add(this.txtQuantity);
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
+            // 
             // pnlMantein
             // 
             this.pnlMantein.Location = new System.Drawing.Point(-14, 6);
@@ -69,7 +73,7 @@
             // lblBasePrice
             // 
             this.lblBasePrice.AutoSize = true;
-            this.lblBasePrice.Location = new System.Drawing.Point(4, 32);
+            this.lblBasePrice.Location = new System.Drawing.Point(4, 4);
             this.lblBasePrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBasePrice.Name = "lblBasePrice";
             this.lblBasePrice.Size = new System.Drawing.Size(96, 19);
@@ -79,7 +83,7 @@
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Location = new System.Drawing.Point(4, 5);
+            this.lblQuantity.Location = new System.Drawing.Point(4, 33);
             this.lblQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(64, 19);
@@ -102,14 +106,14 @@
             // txtSigma2
             // 
             this.txtSigma2.DBReference = "Id_lab";
-            this.txtSigma2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Double;
+            this.txtSigma2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
             this.txtSigma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtSigma2.ForeColor = System.Drawing.Color.Black;
-            this.txtSigma2.Location = new System.Drawing.Point(195, 33);
+            this.txtSigma2.Location = new System.Drawing.Point(195, 5);
             this.txtSigma2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSigma2.Name = "txtSigma2";
             this.txtSigma2.Size = new System.Drawing.Size(132, 20);
-            this.txtSigma2.TabIndex = 1;
+            this.txtSigma2.TabIndex = 0;
             this.txtSigma2.Table = "Stock";
             // 
             // txtQuantity
@@ -118,11 +122,11 @@
             this.txtQuantity.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtQuantity.ForeColor = System.Drawing.Color.Black;
-            this.txtQuantity.Location = new System.Drawing.Point(195, 5);
+            this.txtQuantity.Location = new System.Drawing.Point(195, 33);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(132, 20);
-            this.txtQuantity.TabIndex = 0;
+            this.txtQuantity.TabIndex = 1;
             this.txtQuantity.Table = "Stock";
             // 
             // errorProvider
@@ -137,6 +141,7 @@
             this.ClientSize = new System.Drawing.Size(949, 628);
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmManteinStock";
+            this.Text = "0";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();
