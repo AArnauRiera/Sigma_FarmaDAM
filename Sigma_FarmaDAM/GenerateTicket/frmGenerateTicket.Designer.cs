@@ -38,9 +38,11 @@
             // 
             // cmdVisor
             // 
+            this.cmdVisor.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.cmdVisor.ForeColor = System.Drawing.SystemColors.Highlight;
             this.cmdVisor.Location = new System.Drawing.Point(12, 78);
             this.cmdVisor.Name = "cmdVisor";
-            this.cmdVisor.Size = new System.Drawing.Size(98, 23);
+            this.cmdVisor.Size = new System.Drawing.Size(98, 47);
             this.cmdVisor.TabIndex = 21;
             this.cmdVisor.Text = "Generar Ticket";
             this.cmdVisor.UseVisualStyleBackColor = true;
@@ -48,27 +50,32 @@
             // 
             // txtTicket
             // 
-            this.txtTicket.Location = new System.Drawing.Point(71, 52);
+            this.txtTicket.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.txtTicket.Location = new System.Drawing.Point(71, 48);
             this.txtTicket.Name = "txtTicket";
-            this.txtTicket.Size = new System.Drawing.Size(39, 20);
+            this.txtTicket.Size = new System.Drawing.Size(39, 26);
             this.txtTicket.TabIndex = 20;
             // 
             // lblIdHeader
             // 
             this.lblIdHeader.AutoSize = true;
-            this.lblIdHeader.Location = new System.Drawing.Point(12, 55);
+            this.lblIdHeader.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.lblIdHeader.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblIdHeader.Location = new System.Drawing.Point(-2, 51);
             this.lblIdHeader.Name = "lblIdHeader";
-            this.lblIdHeader.Size = new System.Drawing.Size(57, 13);
+            this.lblIdHeader.Size = new System.Drawing.Size(71, 19);
             this.lblIdHeader.TabIndex = 23;
             this.lblIdHeader.Text = "Id_Header";
             // 
             // btnGenPDF
             // 
-            this.btnGenPDF.Location = new System.Drawing.Point(12, 107);
+            this.btnGenPDF.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnGenPDF.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnGenPDF.Location = new System.Drawing.Point(12, 131);
             this.btnGenPDF.Name = "btnGenPDF";
-            this.btnGenPDF.Size = new System.Drawing.Size(98, 43);
+            this.btnGenPDF.Size = new System.Drawing.Size(98, 48);
             this.btnGenPDF.TabIndex = 22;
-            this.btnGenPDF.Text = "Generate PDF";
+            this.btnGenPDF.Text = "Generar PDF";
             this.btnGenPDF.UseVisualStyleBackColor = true;
             this.btnGenPDF.Click += new System.EventHandler(this.btnGenPDF_Click);
             // 
@@ -87,6 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1257, 682);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.cmdVisor);
