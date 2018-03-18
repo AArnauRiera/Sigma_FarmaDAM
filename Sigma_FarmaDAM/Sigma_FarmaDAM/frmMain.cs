@@ -139,6 +139,7 @@ namespace Sigma_FarmaDAM
         private void cerrarPestañaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tbMain.TabPages.Remove(tbMain.SelectedTab);
+            tbMain.SelectedTab.Dispose();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
