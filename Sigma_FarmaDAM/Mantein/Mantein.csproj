@@ -62,7 +62,7 @@
     <Compile Include="UserRegister\frmUserRegister.Designer.cs">
       <DependentUpon>frmUserRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserRegister\LoginControl.cs" />
+    <Compile Include="UserRegister\UserRegisterControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmManteinBase.resx">
