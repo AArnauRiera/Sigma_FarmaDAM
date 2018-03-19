@@ -67,7 +67,7 @@
             // 
             // pnlMantein
             // 
-            this.pnlMantein.Location = new System.Drawing.Point(15, 6);
+            this.pnlMantein.Location = new System.Drawing.Point(15, 58);
             // 
             // lblName
             // 

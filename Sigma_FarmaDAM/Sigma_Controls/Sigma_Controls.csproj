@@ -58,7 +58,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="VisualStudioTabControl.cs">
+    <Compile Include="SigmaTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="TxtSigma.cs">

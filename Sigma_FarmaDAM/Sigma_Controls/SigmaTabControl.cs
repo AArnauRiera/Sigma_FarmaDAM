@@ -7,7 +7,7 @@ using System.Windows.Forms;
 namespace VisualStudioTabControl
 {
 
-    public class VisualStudioTabControl : TabControl
+    public class SigmaTabControl : TabControl
     {
         /// <summary>
         ///     Format of the title of the TabPage
@@ -75,7 +75,7 @@ namespace VisualStudioTabControl
         /// <summary>
         ///     Init
         /// </summary>
-        public VisualStudioTabControl()
+        public SigmaTabControl()
         {
             SetStyle(
                 ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.ResizeRedraw

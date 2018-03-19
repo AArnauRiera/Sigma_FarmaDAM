@@ -43,7 +43,7 @@
             this.btnUser = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tbMain = new VisualStudioTabControl.VisualStudioTabControl();
+            this.tbMain = new VisualStudioTabControl.SigmaTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -430,7 +430,7 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage5;
-        private VisualStudioTabControl.VisualStudioTabControl tbMain;
+        private VisualStudioTabControl.SigmaTabControl tbMain;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnUserManagement;
         private System.Windows.Forms.Button btnDataXml;
