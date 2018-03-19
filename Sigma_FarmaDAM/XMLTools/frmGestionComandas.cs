@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBUtils;
 
@@ -28,6 +22,7 @@ namespace XMLTools
 
             DataSet ds;
             XMLGenerator xmlGenerator = new XMLGenerator();
+			bool correct;
 
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "yyyy-MM-dd";
@@ -39,9 +34,11 @@ namespace XMLTools
 
             xmlGenerator.GenerateCommand(ds, dateTimePicker1.Text);
 
-            FTPHelper.UploadFile("Comanda_" + dateTimePicker1.Text + ".xml");
-
-            SMTPHelper.SendEmail();
+            correct = FTPHelper.UploadFile("Comanda_" + dateTimePicker1.Text + ".xml");
+			if (correct)
+			{
+				SMTPHelper.SendEmail();
+			}
 
         }
 

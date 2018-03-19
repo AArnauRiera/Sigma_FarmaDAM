@@ -12,8 +12,10 @@ namespace XMLTools
         /// Sube el archivo definido al servidor FTP
         /// </summary>
         /// <param name="path">Ruta completa del archivo a subir</param>
-        public static void UploadFile(string path)
+        public static bool UploadFile(string path)
         {
+			bool correct = false;
+
             try
             {
                 // Pasamos la ruta completa al FTP
@@ -35,11 +37,14 @@ namespace XMLTools
                 response.Close();
                 response.Dispose();
                 MessageBox.Show("Archivo subido al FTP correctamente");
+				correct = true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-        }
-    }
+
+			return correct;
+		}
+	}
 }
