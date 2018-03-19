@@ -19,7 +19,7 @@ namespace UserRegister
         }
 
         /// <summary>
-        /// cuando se preme el boton de guardar intentara guardar el nuevo usuario
+        /// Evento Click para guardar el nuevo usuario
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -29,11 +29,11 @@ namespace UserRegister
         }
 
         /// <summary>
-        /// comprueba que el formato de los controles sea el correcto y que los datos unicos no esten insertados en la BBDD, comprueba que las contraseñas sean iguales, si es todo correcto actualiza la BBDD con el nuevo usuario
+        /// comprueba que el formato del texto sea el correcto y que los datos unicos no esten insertados en la BBDD, comprueba que las contraseñas sean iguales, si es todo correcto actualiza la BBDD con el nuevo usuario
         /// </summary>
         private void Save()
         {
-            LoginControl.LoginControl control = new LoginControl.LoginControl(tbxUsername.Text);
+            UserRegisterControl.UserRegisterControl control = new UserRegisterControl.UserRegisterControl(tbxUsername.Text);
 
             if (control.CheckControlsFormat(errorProvider, Controls, tbxUsername, tbxPassword) &&
                 !control.CheckIsReal(tbxUsername, errorProvider, "Seller") &&

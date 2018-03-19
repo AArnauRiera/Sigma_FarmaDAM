@@ -33,38 +33,7 @@ namespace Cryptography
             }
             catch (Exception ex)
             {
-                return "Wrong Input. " + ex.Message;
-            }
-        }
-
-        /// <summary>
-        /// Usa el strKey para generar el hash con el que desencryptara strEncrypted
-        /// </summary>
-        /// <param name="strEncrypted">texto a desencriptar</param>
-        /// <param name="strKey"></param>
-        /// <returns>texto desencryptado</returns>
-        public static string Decrypt(string strEncrypted, string strKey)
-        {
-            try
-            {
-                TripleDESCryptoServiceProvider objDESCrypto = new TripleDESCryptoServiceProvider();
-                MD5CryptoServiceProvider objHashMD5 = new MD5CryptoServiceProvider();
-                byte[] byteHash, byteBuff;
-                string strTempKey = strKey;
-                byteHash = objHashMD5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(strTempKey));
-                objHashMD5 = null;
-                objDESCrypto.Key = byteHash;
-                objDESCrypto.Mode = CipherMode.ECB; //CBC, CFB
-                byteBuff = Convert.FromBase64String(strEncrypted);
-                string strDecrypted = ASCIIEncoding.ASCII.GetString
-                (objDESCrypto.CreateDecryptor().TransformFinalBlock
-                (byteBuff, 0, byteBuff.Length));
-                objDESCrypto = null;
-                return strDecrypted;
-            }
-            catch (Exception ex)
-            {
-                return "Wrong Input. " + ex.Message;
+                return ex.Message;
             }
         }
     }

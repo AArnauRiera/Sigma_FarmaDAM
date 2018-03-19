@@ -20,7 +20,7 @@ namespace Helpers
         /// <returns></returns>
         public static bool CheckControlsErrors(ErrorProvider error, Control control, TxtSigma password, TxtSigma username)
         {
-            var isCorrect = false;
+            var isCorrect = true;
 
             if (control is TxtSigma)
             {

@@ -6,9 +6,9 @@ using Sigma_Controls;
 using System.Threading.Tasks;
 using Helpers;
 
-namespace LoginControl
+namespace UserRegisterControl
 {
-    class LoginControl
+    class UserRegisterControl
     {
         DBUtilities db = new DBUtilities();
         DataSet dts = new DataSet();
@@ -18,7 +18,7 @@ namespace LoginControl
         /// al inicial crea un DataSet con los datos del usuario
         /// </summary>
         /// <param name="userName">nombre del usuario</param>
-        public LoginControl(string userName)
+        public UserRegisterControl(string userName)
         {
             query = "SELECT * FROM Seller WHERE username = '" + userName + "'";
 
@@ -31,7 +31,7 @@ namespace LoginControl
                 MessageBox.Show(e.ToString());
             }
         }
-        public LoginControl()
+        public UserRegisterControl()
         {
 
         }
