@@ -26,19 +26,19 @@ namespace Sigma_Controls
 
         protected virtual void CenterPanel(Panel form)
         {
-            form.Location = new Point(0 - form.Size.Width/10, this.ClientSize.Height / 2 - form.Size.Height / 2);
+            form.Location = new Point(0 - form.Size.Width/10, ClientSize.Height / 2 - form.Size.Height / 2);
             form.Anchor = AnchorStyles.None;
         }
 
         private void InitializeComponent()
         {
-            this.SuspendLayout();
+            SuspendLayout();
             // 
             // CentredForm
             // 
-            this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Name = "CentredForm";
-            this.ResumeLayout(false);
+            ClientSize = new System.Drawing.Size(282, 253);
+            Name = "CentredForm";
+            ResumeLayout(false);
 
         }
     }
