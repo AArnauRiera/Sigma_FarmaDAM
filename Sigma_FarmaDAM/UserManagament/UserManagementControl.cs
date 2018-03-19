@@ -111,20 +111,18 @@ namespace UserManagament
                     lblError.Text = "";
                     DBHelper.BindingTextBox(Controls, dts);
                     DataBindingComboBox(dts, Controls);
-
-                    // tbxNTS.Enabled = false;
-                    // tbxDNI.Enabled = false;
+                    
                 }
                 else
                 {
                     errorProvider.SetError((Control)control[0], "Entrada no valida para buscar");
-                    tbxNTS.Focus(); // NOSE SI ESTA BE AIXO
+                    tbxNTS.Focus();
                 }
             }
             else
             {
                 errorProvider.SetError((Control)control[0], "Entrada no valida para buscar");
-                tbxNTS.Focus(); // AIXO TAMPOC
+                tbxNTS.Focus();
             }
         }
 

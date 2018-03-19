@@ -29,7 +29,6 @@ namespace Sigma_FarmaDAM
                 {
                     Close();
                     DialogResult = DialogResult.OK;
-                    Dispose();
                 }
             }
         }
