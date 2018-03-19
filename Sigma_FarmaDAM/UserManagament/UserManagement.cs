@@ -75,10 +75,5 @@ namespace UserManagament
         {
             control.SaveChanges(pnlUserManagmnet.Controls, _edit, errorProvider);
         }
-
-        private void tbxDNI_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
