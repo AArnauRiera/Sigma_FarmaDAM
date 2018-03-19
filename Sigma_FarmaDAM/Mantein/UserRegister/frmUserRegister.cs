@@ -65,11 +65,6 @@ namespace UserRegister
             }
         }
 
-        private void tbxName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
         /// <summary>
         /// al pulsar el boton de Cancelar cierra el formulario
         /// </summary>
