@@ -23,6 +23,7 @@ namespace XMLTools
                 System.IO.StreamReader sr = new System.IO.StreamReader(openFileDialog1.FileName);
                 txtbxXmlLab.Text = openFileDialog1.FileName;
                 sr.Close();
+                sr.Dispose();
             }
         }
 
@@ -407,6 +408,7 @@ namespace XMLTools
                 System.IO.StreamReader sr = new System.IO.StreamReader(openFileDialog1.FileName);
                 txbPA.Text = openFileDialog1.FileName;
                 sr.Close();
+                sr.Dispose();
             }
 
         }
@@ -420,6 +422,7 @@ namespace XMLTools
                 System.IO.StreamReader sr = new System.IO.StreamReader(openFileDialog1.FileName);
                 txbDrug.Text = openFileDialog1.FileName;
                 sr.Close();
+                sr.Dispose();
             }
         }
     }

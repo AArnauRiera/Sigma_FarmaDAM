@@ -25,12 +25,15 @@ namespace XMLTools
                 StreamReader sourceStream = new StreamReader(path);
                 byte[] fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
                 sourceStream.Close();
+                sourceStream.Dispose();
                 request.ContentLength = fileContents.Length;
                 Stream requestStream = request.GetRequestStream();
                 requestStream.Write(fileContents, 0, fileContents.Length);
                 requestStream.Close();
+                requestStream.Dispose();
                 FtpWebResponse response = (FtpWebResponse)request.GetResponse();
                 response.Close();
+                response.Dispose();
                 MessageBox.Show("Archivo subido al FTP correctamente");
             }
             catch (Exception ex)

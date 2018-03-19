@@ -120,6 +120,7 @@ namespace Sigma_FarmaDAM
             foreach (Form childForm in MdiChildren)
             {
                 childForm.Close();
+                childForm.Dispose();
             }
         }
 

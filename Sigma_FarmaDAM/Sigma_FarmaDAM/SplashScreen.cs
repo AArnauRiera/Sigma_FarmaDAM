@@ -26,9 +26,9 @@ namespace MDI_basic
         private void timer_Tick(object sender, EventArgs e)
         {
             timer.Stop();
-            
-            this.Close();
-            this.Dispose();
+
+            Close();
+            Dispose();
             DialogResult = DialogResult.OK;
         }
     }

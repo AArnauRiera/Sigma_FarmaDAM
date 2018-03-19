@@ -29,8 +29,9 @@ namespace Login
             {
                 if (control.CheckCredentials(tbxUsername, tbxPassword, errorProvider))
                 {
-                    this.Close();
+                    Close();
                     DialogResult = DialogResult.OK;
+                    Dispose();
                 }
             }
         }
@@ -65,7 +66,7 @@ namespace Login
         {
 
             Close();
-
+            Dispose();
         }
     }
 }

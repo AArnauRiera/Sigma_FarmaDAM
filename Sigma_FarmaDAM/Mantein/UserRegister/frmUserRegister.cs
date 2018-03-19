@@ -46,6 +46,7 @@ namespace UserRegister
                     if (exit)
                     {
                         Close();
+                        Dispose();
                     }
                 }
             }
@@ -73,6 +74,7 @@ namespace UserRegister
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+            Dispose();
         }
     }
 }

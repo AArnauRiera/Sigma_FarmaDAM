@@ -27,8 +27,9 @@ namespace Sigma_FarmaDAM
             {
                 if (control.CheckCredentials(tbxUsername, tbxPassword, errorProvider))
                 {
-                    this.Close();
+                    Close();
                     DialogResult = DialogResult.OK;
+                    Dispose();
                 }
             }
         }
@@ -68,7 +69,7 @@ namespace Sigma_FarmaDAM
         {
 
             Close();
-
+            Dispose();
         }
     }
 }
