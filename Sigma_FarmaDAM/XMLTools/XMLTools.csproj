@@ -69,6 +69,10 @@
       <Project>{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}</Project>
       <Name>DBUtils</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sigma_Controls\Sigma_Controls.csproj">
+      <Project>{bafea927-64a5-4fc5-bcd7-16df3e7c71e4}</Project>
+      <Name>Sigma_Controls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -2,19 +2,42 @@
 using System.Data;
 using System.Windows.Forms;
 using DBUtils;
+using Sigma_Controls;
 
 namespace XMLTools
 {
-    public partial class frmGestionComandas : Form
+    public partial class frmGestionComandas : CentredForm
     {
         public frmGestionComandas()
         {
             InitializeComponent();
+            CenterPanel(panel1);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             GetCommanndByDate();
+        }
+
+        private void btnSelectXmlLab_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Select a Xml file";
+
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                System.IO.StreamReader sr = new System.IO.StreamReader(openFileDialog1.FileName);
+                txtbxXmlLab.Text = openFileDialog1.FileName;
+                sr.Close();
+            }
+        }
+
+        private void btnUploadLab_Click(object sender, EventArgs e)
+        {
+
+            FTPHelper.UploadFile(txtbxXmlLab.Text);
+
+            SMTPHelper.SendEmail();
+
         }
 
         private void GetCommanndByDate()
