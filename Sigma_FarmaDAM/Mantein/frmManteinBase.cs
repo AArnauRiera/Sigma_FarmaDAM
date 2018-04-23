@@ -27,7 +27,6 @@ namespace Mantein
         {
             InitializeComponent();
             dts = new DataSet();
-            CenterPanel(pnlMantein);
         }
         
         /// <summary>
