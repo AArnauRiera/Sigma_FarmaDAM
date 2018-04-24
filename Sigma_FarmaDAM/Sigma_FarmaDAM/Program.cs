@@ -7,6 +7,7 @@ using Login;
 using MDI_basic;
 using RegisterEditDrugs;
 using XMLTools;
+using SellSystem;
 
 namespace Sigma_FarmaDAM
 {
@@ -21,22 +22,23 @@ namespace Sigma_FarmaDAM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             frmLogin Login = new frmLogin();
-            
+
             if (Login.ShowDialog() == DialogResult.OK)
             {
                 SplashScreen splash = new SplashScreen();
-                
-                if(splash.ShowDialog() == DialogResult.OK)
+
+                if (splash.ShowDialog() == DialogResult.OK)
                 {
                     Application.Run(new frmMain(Login.getUserId()));
+                    //Application.Run(new frmSellsytem("1"));
                 }
             }
             else
             {
                 Application.Exit();
             }
-           
-            
+
+
         }
     }
 }

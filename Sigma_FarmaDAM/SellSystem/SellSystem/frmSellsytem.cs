@@ -13,11 +13,11 @@ namespace SellSystem
     {
         DBUtilities DBUTILS = new DBUtils.DBUtilities();
         SellSystemHelper SSHelper = new SellSystemHelper();
-        public DataSet dts;
         DataTable dt = new DataTable();
+        public DataSet dts;
         public DataRow dr;
 
-        string Querry;
+        string Query;
         bool validate = false;
         bool Client = false;
         int contador = 1;
@@ -26,23 +26,31 @@ namespace SellSystem
 
         private string ID_Sell = "1";
 
-        ///***CONSTRUCTOR***///
+        
         public frmSellsytem(String ID_sell) {
+
             InitializeComponent();
-            lblName.Text = "";
+
+            lblName.Text        = "";
+            lblPrice.Text       = "";
+            lblTotalPrice.Text  = "";
+
             txtCantidad.Enabled = false;
-            txtCod.Enabled = false;
-            btnAdd.Enabled = false;
-            btnBuy.Enabled = false;
+            txtCod.Enabled      = false;
+            btnAdd.Enabled      = false;
+            btnBuy.Enabled      = false;
+
             ID_Sell = ID_sell;
 
         }
-        ///***MAIN***///
+        
         #region
         public frmSellsytem()
         {
             InitializeComponent();
-            lblName.Text = "";
+
+            lblName.Text        = "";
+
             txtCantidad.Enabled = false;
             txtCod.Enabled      = false;
             btnAdd.Enabled      = false;
@@ -60,7 +68,7 @@ namespace SellSystem
         /// <param name="e"></param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //CheckDrugData();
+            CheckDrugData();
 
             bool exist = false;
             String Drug = txtCod.Text.ToString();
@@ -87,8 +95,10 @@ namespace SellSystem
                             dgView_Sell.DataSource = dt;
                             dgView_Sell.Columns[0].HeaderText = "ID Medicamento";
                             dgView_Sell.Columns[1].HeaderText = "Nombre Medicamento";
-                            // dgView_Sell.Columns[2].Visible = false;
-                            // dgView_Sell.Columns[3].Visible = false;
+                            dgView_Sell.Columns[2].Visible = false;
+                            dgView_Sell.Columns[3].Visible = false;
+                            dgView_Sell.Columns[4].HeaderText = "Cantidad";
+                            dgView_Sell.Columns[5].HeaderText = "Precio/Unidad";
                         }
                         else { MessageBox.Show("There are no values "); }
                         ///Si no existe lo introduce a la Tabla///
@@ -101,11 +111,13 @@ namespace SellSystem
                             dr[2] = ID_Sell;
                             dr[3] = SSHelper.Client_ID(txtClient.Text);
                             dr[4] = txtCantidad.Text;
-
+                            dr[5] = lblPrice.Text;
                             dt.Rows.Add(dr);
                             txtCod.Text = "";
                             txtProd.Text = "";
                             txtCantidad.Text = "1";
+
+                            lblTotalPrice.Text = SSHelper.TotalPrice(dgView_Sell, 5, 4).ToString() + " €";
                         }
 
                     }
@@ -137,6 +149,8 @@ namespace SellSystem
             dt.Columns.Add("ID_Seller");
             dt.Columns.Add("ID_client");
             dt.Columns.Add("quantity");
+            dt.Columns.Add("Price");
+
             txtCantidad.Text = "1";
         }
         /// <summary>
@@ -151,7 +165,7 @@ namespace SellSystem
         private void txtCod_KeyDown(object sender, KeyEventArgs e)
         {
             ///Comprueba si se pulsa la key enter y que no este null el campo del codigo del medicamento///
-            if (e.KeyCode == Keys.Enter && !string.IsNullOrEmpty(txtCod.Text))
+            if ((e.KeyCode == Keys.Tab || e.KeyCode == Keys.Enter) && !string.IsNullOrEmpty(txtCod.Text))
             {
                 CheckDrugData();
             }
@@ -163,24 +177,35 @@ namespace SellSystem
             string productName = SSHelper.name_product(txtCod.Text);
             if (!String.IsNullOrEmpty(productName))
             {
+                lblPrice.Text = SSHelper.price(txtCod.Text) + " €";
                 txtProd.Text = productName;
-                if (!(SSHelper.drug_exist(txtCod.Text) && SSHelper.stock(txtCod.Text)))
-                {
-                    if (MessageBox.Show("¿Quieres buscar medicamentos similares?", "Buscar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                //if ((SSHelper.drug_exist(txtCod.Text)))// si el medicamento existe
+                //{
+                    if (!SSHelper.stock(txtCod.Text))//check stock
                     {
-                        string condition2 = txtCod.Text;
-                        frmQueryDrugs r = new frmQueryDrugs(GetTxtSigma(), "Drugs", SSHelper.id_active(txtCod.Text), txtCod.Text);
-                        r.Show();
+
+                        if (MessageBox.Show("El medicamento solicitado carece de stock.¿Quieres buscar medicamentos similares?", "Buscar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            frmQueryDrugs r = new frmQueryDrugs(GetTxtSigma(), "Drugs", SSHelper.id_active(txtCod.Text), txtCod.Text);
+                            r.Show();
+                        }
+                        else
+                        {
+                            txtCod.Text = "";
+                            txtProd.Text = "";
+                        }
+
                     }
-                    else
-                    {
-                        txtCod.Text = "";
-                        txtProd.Text = "";
-                    }
-                }
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Error: el producto insertado no existe");
+                //}
             }
             else
             {
+                MessageBox.Show("Error: el producto insertado no existe");
+
                 txtCod.Text = "";
                 txtProd.Text = "";
             }
@@ -315,17 +340,27 @@ namespace SellSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (!String.IsNullOrEmpty(txtCod.Text)) { 
+                if (!String.IsNullOrEmpty(txtCod.Text)) {
 
-                    Querry = "SELECT Quantity FROM Stock WHERE ID_Drug ='" + txtCod.Text + "'";
-                    dts = DBUTILS.PortarPerConsulta(Querry);
-                    int Stock = Convert.ToInt32(dts.Tables[0].Rows[0][0].ToString());
-
-                    if (Stock < Convert.ToInt32(txtCantidad.Text))
+                    if (SSHelper.stock(txtCod.Text, txtCantidad.Text))
                     {
-                        MessageBox.Show("No hay suficiente Cantidad");
+                        CheckDrugData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("La candidad solicitada sobrepasa el stock actual");
                         txtCantidad.Text = "1";
                     }
+
+                    //Query = "SELECT Quantity FROM Stock WHERE ID_Drug ='" + txtCod.Text + "'";
+                    //dts = DBUTILS.PortarPerConsulta(Query);
+                    //int Stock = Convert.ToInt32(dts.Tables[0].Rows[0][0].ToString());
+
+                    //if (Stock < Convert.ToInt32(txtCantidad.Text))
+                    //{
+                    //    MessageBox.Show("No hay suficiente Cantidad");
+                    //    txtCantidad.Text = "1";
+                    //}
 
                 }
 
@@ -412,6 +447,11 @@ namespace SellSystem
         {
             frmQueryClients clientQuery = new frmQueryClients(txtClient, "Clients");
             clientQuery.Show();
+        }
+
+        private void dgView_Sell_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            lblTotalPrice.Text = SSHelper.TotalPrice(dgView_Sell, 5, 4).ToString() + " €";
         }
     }
 }

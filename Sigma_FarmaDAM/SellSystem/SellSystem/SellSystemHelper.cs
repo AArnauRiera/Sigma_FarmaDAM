@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Windows.Forms;
 using DBUtils;
 using Sigma_Controls;
 
@@ -50,7 +51,7 @@ namespace SellSystem
             Query = "select* from Drugs  where Register_Number = '" + drug + "'";
             dts = db.PortarPerConsulta(Query);
 
-            bool validate = dts.Tables[0].Rows.Count > 0;//tst
+            bool validate = dts.Tables[0].Rows.Count > 0;
             
             return validate;
         }
@@ -81,6 +82,22 @@ namespace SellSystem
             bool validate = dts.Tables[0].Rows.Count > 0;
 
             return validate;
+        }
+
+        public string price(string textBoxSigma_txt)
+        {
+            String Query = "select Price from Drugs where Register_Number= '" + textBoxSigma_txt + "'";
+            dts = db.PortarPerConsulta(Query);
+            string Price;
+            try
+            {
+                Price = dts.Tables[0].Rows[0][0].ToString();
+            }
+            catch
+            {
+                Price = "";
+            }
+            return Price;
         }
 
         ///Devuelve un DataSet con los valores de la taula Clients donde NTS sea igual al valor introducido///
@@ -126,6 +143,28 @@ namespace SellSystem
             }
             return active;
         }
+
+        public double TotalPrice(DataGridView DGView, int colNumPrice, int colNumQty)
+        {
+
+            double total = 0;
+
+            for (int i = 0; i < DGView.RowCount-1; i++) {
+                // estaria bien pillar el precio con iva, que es el que le interesa al usuario final
+                String strPrice = (DGView.Rows[i].Cells[colNumPrice].Value).ToString();
+                String strQuantity = (DGView.Rows[i].Cells[colNumQty].Value).ToString().Trim();
+
+                strPrice = strPrice.Substring(0, strPrice.Length-2).Trim();
+
+                double totalProd = double.Parse(strPrice) * int.Parse(strQuantity);
+
+                total = total + totalProd;
+
+            }
+
+            return total;
+        }
+
         ///Devuelve la ID  de la tabla drugs a partir de el Register Number/// 
         ///<param  name="drug">Register Number Drug</param>
         public int Drug_ID(string drug)

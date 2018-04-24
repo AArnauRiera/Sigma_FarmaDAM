@@ -200,6 +200,7 @@
             this.txtDocumentation.Size = new System.Drawing.Size(118, 20);
             this.txtDocumentation.TabIndex = 8;
             this.txtDocumentation.Table = "Drugs";
+            this.txtDocumentation.TextChanged += new System.EventHandler(this.txtDocumentation_TextChanged);
             this.txtDocumentation.Leave += new System.EventHandler(this.tbx_Leave);
             // 
             // txtReplaceable
@@ -323,7 +324,7 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(3, 291);
+            this.webBrowser1.Location = new System.Drawing.Point(31, 336);
             this.webBrowser1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(16, 14);
             this.webBrowser1.Name = "webBrowser1";
