@@ -39,12 +39,12 @@
             this.lblDenomination = new System.Windows.Forms.Label();
             this.lblSRN = new System.Windows.Forms.Label();
             this.txtDocumentation = new Sigma_Controls.TxtSigma();
-            this.txtReplaceable = new Sigma_Controls.TxtSigma();
-            this.txtObligatory = new Sigma_Controls.TxtSigma();
+            this.txtReplaceable = new Sigma_Controls.CheckBoxSigma();
+            this.txtObligatory = new Sigma_Controls.CheckBoxSigma();
             this.txtIdActive = new Sigma_Controls.TxtSigma();
             this.txtProspectus = new Sigma_Controls.TxtSigma();
             this.txtDenomination = new Sigma_Controls.TxtSigma();
-            this.txtGeneric = new Sigma_Controls.TxtSigma();
+            this.txtGeneric = new Sigma_Controls.CheckBoxSigma();
             this.txtContent = new Sigma_Controls.TxtSigma();
             this.txtSRN = new Sigma_Controls.TxtSigma();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
@@ -204,11 +204,11 @@
             this.txtDocumentation.TabIndex = 8;
             this.txtDocumentation.Table = "Drugs";
             this.txtDocumentation.Leave += new System.EventHandler(this.tbx_Leave);
+            this.txtDocumentation.TextChanged += new System.EventHandler(txtDocumentation_TextChanged);
             // 
             // txtReplaceable
             // 
             this.txtReplaceable.DBReference = "Replaceable";
-            this.txtReplaceable.FieldType = Sigma_Controls.TxtSigma.FieldTypes.IVAid;
             this.txtReplaceable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReplaceable.ForeColor = System.Drawing.Color.Black;
             this.txtReplaceable.Location = new System.Drawing.Point(173, 130);
@@ -223,7 +223,6 @@
             // txtObligatory
             // 
             this.txtObligatory.DBReference = "NeedsRecipe";
-            this.txtObligatory.FieldType = Sigma_Controls.TxtSigma.FieldTypes.IVAid;
             this.txtObligatory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObligatory.ForeColor = System.Drawing.Color.Black;
             this.txtObligatory.Location = new System.Drawing.Point(173, 175);
@@ -282,7 +281,6 @@
             // txtGeneric
             // 
             this.txtGeneric.DBReference = "IsGeneric";
-            this.txtGeneric.FieldType = Sigma_Controls.TxtSigma.FieldTypes.IVAid;
             this.txtGeneric.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGeneric.ForeColor = System.Drawing.Color.Black;
             this.txtGeneric.Location = new System.Drawing.Point(173, 153);
@@ -440,12 +438,12 @@
         private System.Windows.Forms.Label lblDenomination;
         private System.Windows.Forms.Label lblSRN;
         private Sigma_Controls.TxtSigma txtDocumentation;
-        private Sigma_Controls.TxtSigma txtReplaceable;
-        private Sigma_Controls.TxtSigma txtObligatory;
+        private Sigma_Controls.CheckBoxSigma txtReplaceable;
+        private Sigma_Controls.CheckBoxSigma txtObligatory;
         private Sigma_Controls.TxtSigma txtIdActive;
         private Sigma_Controls.TxtSigma txtProspectus;
         private Sigma_Controls.TxtSigma txtDenomination;
-        private Sigma_Controls.TxtSigma txtGeneric;
+        private Sigma_Controls.CheckBoxSigma txtGeneric;
         private Sigma_Controls.TxtSigma txtContent;
         private Sigma_Controls.TxtSigma txtSRN;
         private System.Windows.Forms.WebBrowser webBrowser1;

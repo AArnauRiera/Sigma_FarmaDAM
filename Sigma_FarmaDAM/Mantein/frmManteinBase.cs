@@ -42,6 +42,10 @@ namespace Mantein
                 {
                     TxtSigma txt = control as TxtSigma;
                     txt.DataBindings.Clear();
+                }else if (control is CheckBoxSigma)
+                {
+                    CheckBoxSigma chk = control as CheckBoxSigma;
+                    chk.DataBindings.Clear();
                 }
             }
 
@@ -51,6 +55,11 @@ namespace Mantein
                 {
                     TxtSigma txt = control as TxtSigma;
                     txt.DataBindings.Add(new Binding("Text", dgwBase.DataSource, txt.DBReference, true));
+                }
+                else if (control is CheckBoxSigma)
+                {
+                    CheckBoxSigma chk = control as CheckBoxSigma;
+                    chk.DataBindings.Add(new Binding("Checked", dgwBase.DataSource, chk.DBReference, true));
                 }
             }                  
         }
@@ -75,6 +84,7 @@ namespace Mantein
                         cell = pnlTextBox.Controls[i] as TxtSigma;
                         find = false;
                     }
+
                 }
                 dgwBase.CurrentCell = dgwBase.Rows[0].Cells[cell.DBReference];
             }
@@ -272,6 +282,11 @@ namespace Mantein
 
                 Console.WriteLine(ex);
             }
+        }
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -53,7 +53,7 @@ namespace XMLTools
             DBUtils.DBUtilities dbUtilities = new DBUtilities();
 
             ds = dbUtilities.PortarPerConsulta(
-                "SELECT Drugs.CommercialName, Drugs.Sanitary_Register_Num, SUM(Order_Content.Quantity) AS Quantity, Drugs.NeedsRecipe FROM Order_Header, Order_Content, Drugs WHERE Order_Header.Id_Header = Order_Content.Id_Header AND Drugs.id = Order_Content.Id_Drug AND Date LIKE '%" + dateTimePicker1.AccessibilityObject.Value + "%' GROUP BY Order_Content.Id_Drug, Drugs.CommercialName, Drugs.Sanitary_Register_Num");
+                "SELECT Drugs.CommercialName, Drugs.Sanitary_Register_Num, SUM(Order_Content.Quantity) AS Quantity, Drugs.NeedsRecipe FROM Order_Header, Order_Content, Drugs WHERE Order_Header.Id_Header = Order_Content.Id_Header AND Drugs.Register_Number = Order_Content.Id_Drug AND Date LIKE '%" + dateTimePicker1.AccessibilityObject.Value + "%' GROUP BY Order_Content.Id_Drug, Drugs.CommercialName, Drugs.Sanitary_Register_Num");
 
             xmlGenerator.GenerateCommand(ds, dateTimePicker1.Text);
 
