@@ -129,7 +129,30 @@ namespace SellSystem
 
                 } else {
 
-                    MessageBox.Show("La candidad solicitada sobrepasa el stock actual");
+                    //MessageBox.Show("La candidad solicitada sobrepasa el stock actual");
+                    ////query meds equivalents
+
+                    if (SSHelper.CheckAlternatives(SSHelper.id_active(txtCod.Text), txtCod.Text, txtCantidad.Text))
+                    {
+
+                        if (MessageBox.Show("La candidad solicitada sobrepasa el stock actual.¿Quieres buscar medicamentos similares?", "Buscar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            frmQueryDrugs r = new frmQueryDrugs(GetTxtSigma(), "Drugs", SSHelper.id_active(txtCod.Text), txtCod.Text, txtCantidad.Text);
+                            r.Show();
+                        }
+                        else
+                        {
+                            txtCod.Text = "";
+                            txtProd.Text = "";
+                        }
+
+
+                    }
+                    else {
+
+                        MessageBox.Show("La candidad solicitada sobrepasa el stock actual. Tampoco hay medicamentos alternativos.");
+
+                    }
 
                 }
             
@@ -184,9 +207,14 @@ namespace SellSystem
                     if (!SSHelper.stock(txtCod.Text))//check stock
                     {
 
-                        if (MessageBox.Show("El medicamento solicitado carece de stock.¿Quieres buscar medicamentos similares?", "Buscar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    //////////////////////////////////////////
+
+                    if (SSHelper.CheckAlternatives(SSHelper.id_active(txtCod.Text), txtCod.Text, txtCantidad.Text))
+                    {
+
+                        if (MessageBox.Show("La candidad solicitada sobrepasa el stock actual.¿Quieres buscar medicamentos similares?", "Buscar", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
-                            frmQueryDrugs r = new frmQueryDrugs(GetTxtSigma(), "Drugs", SSHelper.id_active(txtCod.Text), txtCod.Text);
+                            frmQueryDrugs r = new frmQueryDrugs(GetTxtSigma(), "Drugs", SSHelper.id_active(txtCod.Text), txtCod.Text, txtCantidad.Text);
                             r.Show();
                         }
                         else
@@ -194,6 +222,29 @@ namespace SellSystem
                             txtCod.Text = "";
                             txtProd.Text = "";
                         }
+
+
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("La candidad solicitada sobrepasa el stock actual. Tampoco hay medicamentos alternativos.");
+
+                    }
+
+
+                    ///////////////////////////////////////////
+
+                    //if (MessageBox.Show("El medicamento solicitado carece de stock.¿Quieres buscar medicamentos similares?", "Buscar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    //    {
+                    //        frmQueryDrugs r = new frmQueryDrugs(GetTxtSigma(), "Drugs", SSHelper.id_active(txtCod.Text), txtCod.Text);
+                    //        r.Show();
+                    //    }
+                    //    else
+                    //    {
+                    //        txtCod.Text = "";
+                    //        txtProd.Text = "";
+                    //    }
 
                     }
                 //}
@@ -348,8 +399,50 @@ namespace SellSystem
                     }
                     else
                     {
-                        MessageBox.Show("La candidad solicitada sobrepasa el stock actual");
-                        txtCantidad.Text = "1";
+                        //MessageBox.Show("La candidad solicitada sobrepasa el stock actual");
+                        //txtCantidad.Text = "1";
+                        ////Query meds equivalents
+
+                        //if (MessageBox.Show("La candidad solicitada sobrepasa el stock actual.¿Quieres buscar medicamentos similares?", "Buscar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        //{
+                        //    frmQueryDrugs r = new frmQueryDrugs(GetTxtSigma(), "Drugs", SSHelper.id_active(txtCod.Text), txtCod.Text);
+                        //    r.Show();
+                        //}
+                        //else
+                        //{
+                        //    txtCod.Text = "";
+                        //    txtProd.Text = "";
+                        //}
+
+                        //////////////////////////////////////////
+
+                        if (SSHelper.CheckAlternatives(SSHelper.id_active(txtCod.Text), txtCod.Text, txtCantidad.Text))
+                        {
+
+                            if (MessageBox.Show("La candidad solicitada sobrepasa el stock actual.¿Quieres buscar medicamentos similares?", "Buscar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                            {
+                                frmQueryDrugs r = new frmQueryDrugs(GetTxtSigma(), "Drugs", SSHelper.id_active(txtCod.Text), txtCod.Text, txtCantidad.Text);
+                                r.Show();
+                            }
+                            else
+                            {
+                                txtCod.Text = "";
+                                txtProd.Text = "";
+                            }
+
+
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("La candidad solicitada sobrepasa el stock actual. Tampoco hay medicamentos alternativos.");
+
+                        }
+
+
+                        ///////////////////////////////////////////
+
+
                     }
 
                     //Query = "SELECT Quantity FROM Stock WHERE ID_Drug ='" + txtCod.Text + "'";

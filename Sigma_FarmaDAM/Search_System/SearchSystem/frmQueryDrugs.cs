@@ -40,11 +40,30 @@ namespace SearchSystem
             BindingDate();
         }
 
+        public frmQueryDrugs(TxtSigma[] txts, string table, string conditon, string condition2, string quantity)
+        {
+            InitializeComponent();
+            _isSellSystem = true;
+            _txts = txts;
+            Table = table;
+            GetQueryQuantity(conditon, condition2, quantity);
+            BindingDate();
+        }
+
         protected void GetQuery(string condition, string condition2)
         {
             DBUtilities db = new DBUtilities();
 
             query = "select * from Drugs,Stock where Drugs.Register_Number = Stock.ID_Drug and Drugs.ActivePrincipleID='" + condition+ "' and Drugs.Register_Number!='" + condition2+"'and Stock.Quantity>0";
+
+            dts = db.PortarPerConsulta(query);
+        }
+
+        protected void GetQueryQuantity(string condition, string condition2, string quantity)
+        {
+            DBUtilities db = new DBUtilities();
+
+            query = "select * from Drugs,Stock where Drugs.Register_Number = Stock.ID_Drug and Drugs.ActivePrincipleID='" + condition + "' and Drugs.Register_Number!='" + condition2 + "'and Stock.Quantity>="+ quantity;
 
             dts = db.PortarPerConsulta(query);
         }

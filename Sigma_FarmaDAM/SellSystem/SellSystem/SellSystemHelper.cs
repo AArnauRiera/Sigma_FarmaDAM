@@ -165,6 +165,19 @@ namespace SellSystem
             return total;
         }
 
+        public bool CheckAlternatives(string condition, string condition2, string quantity)
+        {
+            DBUtilities db = new DBUtilities();
+
+            Query = "select * from Drugs,Stock where Drugs.Register_Number = Stock.ID_Drug and Drugs.ActivePrincipleID='" + condition + "' and Drugs.Register_Number!='" + condition2 + "'and Stock.Quantity>=" + quantity;
+
+            dts = db.PortarPerConsulta(Query);
+
+            bool validate = dts.Tables[0].Rows.Count > 0;
+
+            return validate;
+        }
+
         ///Devuelve la ID  de la tabla drugs a partir de el Register Number/// 
         ///<param  name="drug">Register Number Drug</param>
         public int Drug_ID(string drug)
