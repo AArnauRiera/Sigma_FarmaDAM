@@ -58,7 +58,8 @@
             // 
             // pnlMantein
             // 
-            this.pnlMantein.Location = new System.Drawing.Point(-14, 6);
+            this.pnlMantein.Location = new System.Drawing.Point(1, 6);
+            this.pnlMantein.Size = new System.Drawing.Size(1050, 748);
             // 
             // errorProvider
             // 

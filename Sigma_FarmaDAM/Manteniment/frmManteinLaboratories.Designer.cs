@@ -62,20 +62,29 @@
             // 
             // btnQuery
             // 
+            this.btnQuery.Location = new System.Drawing.Point(246, 17);
             this.btnQuery.TabIndex = 2;
+            // 
+            // pnlButtons
+            // 
+            this.pnlButtons.Size = new System.Drawing.Size(377, 78);
             // 
             // btnUpdate
             // 
+            this.btnUpdate.Location = new System.Drawing.Point(156, 17);
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // bntNew
             // 
+            this.bntNew.Location = new System.Drawing.Point(313, 17);
+            this.bntNew.Size = new System.Drawing.Size(64, 41);
             this.bntNew.TabIndex = 3;
             // 
             // pnlMantein
             // 
-            this.pnlMantein.Location = new System.Drawing.Point(-19, 6);
+            this.pnlMantein.Location = new System.Drawing.Point(1, 6);
+            this.pnlMantein.Size = new System.Drawing.Size(1045, 748);
             // 
             // lblCIF
             // 

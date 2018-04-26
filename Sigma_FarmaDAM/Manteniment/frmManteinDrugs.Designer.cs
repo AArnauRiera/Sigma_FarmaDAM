@@ -98,7 +98,8 @@
             // 
             // pnlMantein
             // 
-            this.pnlMantein.Location = new System.Drawing.Point(-15, 6);
+            this.pnlMantein.Location = new System.Drawing.Point(1, 6);
+            this.pnlMantein.Size = new System.Drawing.Size(1049, 748);
             // 
             // lblProspectus
             // 
