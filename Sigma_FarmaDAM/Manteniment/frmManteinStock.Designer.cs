@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lblIvaType = new System.Windows.Forms.Label();
-            this.lblBasePrice = new System.Windows.Forms.Label();
-            this.lblQuantity = new System.Windows.Forms.Label();
-            this.txtSigma3 = new Sigma_Controls.TxtSigma();
-            this.txtSigma2 = new Sigma_Controls.TxtSigma();
-            this.txtQuantity = new Sigma_Controls.TxtSigma();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtQuantity = new Sigma_Controls.TxtSigma();
+            this.txtSigma2 = new Sigma_Controls.TxtSigma();
+            this.txtSigma3 = new Sigma_Controls.TxtSigma();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.lblBasePrice = new System.Windows.Forms.Label();
+            this.lblIvaType = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
             this.pnlButtons.SuspendLayout();
@@ -58,63 +58,14 @@
             // 
             // pnlMantein
             // 
-            this.pnlMantein.Location = new System.Drawing.Point(-14, 6);
+            this.pnlMantein.Location = new System.Drawing.Point(1, 6);
+            this.pnlMantein.Size = new System.Drawing.Size(1050, 748);
             // 
-            // lblIvaType
+            // errorProvider
             // 
-            this.lblIvaType.AutoSize = true;
-            this.lblIvaType.Location = new System.Drawing.Point(4, 61);
-            this.lblIvaType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblIvaType.Name = "lblIvaType";
-            this.lblIvaType.Size = new System.Drawing.Size(109, 19);
-            this.lblIvaType.TabIndex = 10;
-            this.lblIvaType.Text = "Id Medicamento";
-            // 
-            // lblBasePrice
-            // 
-            this.lblBasePrice.AutoSize = true;
-            this.lblBasePrice.Location = new System.Drawing.Point(4, 4);
-            this.lblBasePrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblBasePrice.Name = "lblBasePrice";
-            this.lblBasePrice.Size = new System.Drawing.Size(96, 19);
-            this.lblBasePrice.TabIndex = 9;
-            this.lblBasePrice.Text = "Id Laboratorio";
-            // 
-            // lblQuantity
-            // 
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Location = new System.Drawing.Point(4, 33);
-            this.lblQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(64, 19);
-            this.lblQuantity.TabIndex = 8;
-            this.lblQuantity.Text = "Cantidad";
-            // 
-            // txtSigma3
-            // 
-            this.txtSigma3.DBReference = "ID_Drug";
-            this.txtSigma3.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
-            this.txtSigma3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtSigma3.ForeColor = System.Drawing.Color.Black;
-            this.txtSigma3.Location = new System.Drawing.Point(195, 61);
-            this.txtSigma3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtSigma3.Name = "txtSigma3";
-            this.txtSigma3.Size = new System.Drawing.Size(132, 20);
-            this.txtSigma3.TabIndex = 2;
-            this.txtSigma3.Table = "Stock";
-            // 
-            // txtSigma2
-            // 
-            this.txtSigma2.DBReference = "Id_lab";
-            this.txtSigma2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
-            this.txtSigma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtSigma2.ForeColor = System.Drawing.Color.Black;
-            this.txtSigma2.Location = new System.Drawing.Point(195, 5);
-            this.txtSigma2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtSigma2.Name = "txtSigma2";
-            this.txtSigma2.Size = new System.Drawing.Size(132, 20);
-            this.txtSigma2.TabIndex = 0;
-            this.txtSigma2.Table = "Stock";
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
             // 
             // txtQuantity
             // 
@@ -129,11 +80,61 @@
             this.txtQuantity.TabIndex = 1;
             this.txtQuantity.Table = "Stock";
             // 
-            // errorProvider
+            // txtSigma2
             // 
-            this.errorProvider.BlinkRate = 0;
-            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errorProvider.ContainerControl = this;
+            this.txtSigma2.DBReference = "Id_lab";
+            this.txtSigma2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
+            this.txtSigma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtSigma2.ForeColor = System.Drawing.Color.Black;
+            this.txtSigma2.Location = new System.Drawing.Point(195, 5);
+            this.txtSigma2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSigma2.Name = "txtSigma2";
+            this.txtSigma2.Size = new System.Drawing.Size(132, 20);
+            this.txtSigma2.TabIndex = 0;
+            this.txtSigma2.Table = "Stock";
+            // 
+            // txtSigma3
+            // 
+            this.txtSigma3.DBReference = "ID_Drug";
+            this.txtSigma3.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
+            this.txtSigma3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtSigma3.ForeColor = System.Drawing.Color.Black;
+            this.txtSigma3.Location = new System.Drawing.Point(195, 61);
+            this.txtSigma3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSigma3.Name = "txtSigma3";
+            this.txtSigma3.Size = new System.Drawing.Size(132, 20);
+            this.txtSigma3.TabIndex = 2;
+            this.txtSigma3.Table = "Stock";
+            // 
+            // lblQuantity
+            // 
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Location = new System.Drawing.Point(37, 33);
+            this.lblQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(64, 19);
+            this.lblQuantity.TabIndex = 8;
+            this.lblQuantity.Text = "Cantidad";
+            // 
+            // lblBasePrice
+            // 
+            this.lblBasePrice.AutoSize = true;
+            this.lblBasePrice.Location = new System.Drawing.Point(37, 6);
+            this.lblBasePrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBasePrice.Name = "lblBasePrice";
+            this.lblBasePrice.Size = new System.Drawing.Size(96, 19);
+            this.lblBasePrice.TabIndex = 9;
+            this.lblBasePrice.Text = "Id Laboratorio";
+            // 
+            // lblIvaType
+            // 
+            this.lblIvaType.AutoSize = true;
+            this.lblIvaType.Location = new System.Drawing.Point(37, 61);
+            this.lblIvaType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIvaType.Name = "lblIvaType";
+            this.lblIvaType.Size = new System.Drawing.Size(109, 19);
+            this.lblIvaType.TabIndex = 10;
+            this.lblIvaType.Text = "Id Medicamento";
             // 
             // frmManteinStock
             // 
@@ -153,13 +154,12 @@
         }
 
         #endregion
-
+        private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Label lblIvaType;
         private System.Windows.Forms.Label lblBasePrice;
         private System.Windows.Forms.Label lblQuantity;
         private Sigma_Controls.TxtSigma txtSigma3;
         private Sigma_Controls.TxtSigma txtSigma2;
         private Sigma_Controls.TxtSigma txtQuantity;
-        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

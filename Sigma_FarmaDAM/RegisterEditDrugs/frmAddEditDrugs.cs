@@ -36,8 +36,6 @@ namespace RegisterEditDrugs
 
             lblTitol.Text = "Añadir medicamentos";
 
-            CenterPanel(pnlAddEditDrugs);
-
         }
 
         /// <summary>

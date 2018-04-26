@@ -62,25 +62,34 @@
             // 
             // btnQuery
             // 
+            this.btnQuery.Location = new System.Drawing.Point(246, 17);
             this.btnQuery.TabIndex = 2;
+            // 
+            // pnlButtons
+            // 
+            this.pnlButtons.Size = new System.Drawing.Size(377, 78);
             // 
             // btnUpdate
             // 
+            this.btnUpdate.Location = new System.Drawing.Point(156, 17);
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // bntNew
             // 
+            this.bntNew.Location = new System.Drawing.Point(313, 17);
+            this.bntNew.Size = new System.Drawing.Size(64, 41);
             this.bntNew.TabIndex = 3;
             // 
             // pnlMantein
             // 
-            this.pnlMantein.Location = new System.Drawing.Point(-19, 6);
+            this.pnlMantein.Location = new System.Drawing.Point(1, 6);
+            this.pnlMantein.Size = new System.Drawing.Size(1045, 748);
             // 
             // lblCIF
             // 
             this.lblCIF.AutoSize = true;
-            this.lblCIF.Location = new System.Drawing.Point(4, 59);
+            this.lblCIF.Location = new System.Drawing.Point(40, 54);
             this.lblCIF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCIF.Name = "lblCIF";
             this.lblCIF.Size = new System.Drawing.Size(29, 19);
@@ -90,7 +99,7 @@
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(4, 32);
+            this.lblAddress.Location = new System.Drawing.Point(40, 27);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(65, 19);
@@ -100,7 +109,7 @@
             // lblDenomination
             // 
             this.lblDenomination.AutoSize = true;
-            this.lblDenomination.Location = new System.Drawing.Point(4, 4);
+            this.lblDenomination.Location = new System.Drawing.Point(40, 4);
             this.lblDenomination.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDenomination.Name = "lblDenomination";
             this.lblDenomination.Size = new System.Drawing.Size(59, 19);
@@ -185,7 +194,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 89);
+            this.label1.Location = new System.Drawing.Point(40, 84);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 19);
@@ -195,7 +204,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 119);
+            this.label2.Location = new System.Drawing.Point(40, 114);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 19);
@@ -211,7 +220,7 @@
             // frmManteinLaboratories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.ClientSize = new System.Drawing.Size(949, 628);
+            this.ClientSize = new System.Drawing.Size(1047, 668);
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmManteinLaboratories";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
