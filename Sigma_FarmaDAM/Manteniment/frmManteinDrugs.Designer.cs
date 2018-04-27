@@ -39,12 +39,12 @@
             this.lblDenomination = new System.Windows.Forms.Label();
             this.lblSRN = new System.Windows.Forms.Label();
             this.txtDocumentation = new Sigma_Controls.TxtSigma();
-            this.txtReplaceable = new Sigma_Controls.TxtSigma();
-            this.txtObligatory = new Sigma_Controls.TxtSigma();
+            this.txtReplaceable = new Sigma_Controls.CheckBoxSigma();
+            this.txtObligatory = new Sigma_Controls.CheckBoxSigma();
             this.txtIdActive = new Sigma_Controls.TxtSigma();
             this.txtProspectus = new Sigma_Controls.TxtSigma();
             this.txtDenomination = new Sigma_Controls.TxtSigma();
-            this.txtGeneric = new Sigma_Controls.TxtSigma();
+            this.txtGeneric = new Sigma_Controls.CheckBoxSigma();
             this.txtContent = new Sigma_Controls.TxtSigma();
             this.txtSRN = new Sigma_Controls.TxtSigma();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
@@ -207,6 +207,7 @@
             this.txtDocumentation.Table = "Drugs";
             this.txtDocumentation.TextChanged += new System.EventHandler(this.txtDocumentation_TextChanged);
             this.txtDocumentation.Leave += new System.EventHandler(this.tbx_Leave);
+            this.txtDocumentation.TextChanged += new System.EventHandler(txtDocumentation_TextChanged);
             // 
             // txtReplaceable
             // 
@@ -482,12 +483,12 @@
         private System.Windows.Forms.Label lblDenomination;
         private System.Windows.Forms.Label lblSRN;
         private Sigma_Controls.TxtSigma txtDocumentation;
-        private Sigma_Controls.TxtSigma txtReplaceable;
-        private Sigma_Controls.TxtSigma txtObligatory;
+        private Sigma_Controls.CheckBoxSigma txtReplaceable;
+        private Sigma_Controls.CheckBoxSigma txtObligatory;
         private Sigma_Controls.TxtSigma txtIdActive;
         private Sigma_Controls.TxtSigma txtProspectus;
         private Sigma_Controls.TxtSigma txtDenomination;
-        private Sigma_Controls.TxtSigma txtGeneric;
+        private Sigma_Controls.CheckBoxSigma txtGeneric;
         private Sigma_Controls.TxtSigma txtContent;
         private Sigma_Controls.TxtSigma txtSRN;
         private System.Windows.Forms.WebBrowser webBrowser1;

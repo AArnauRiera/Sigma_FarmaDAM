@@ -18,5 +18,13 @@ namespace Sigma_Controls
             get { return _DBReference; }
             set { _DBReference = value; }
         }
+
+        private string _table;
+
+        public string Table
+        {
+            get { return _table; }
+            set { _table = value; }
+        }
     }
 }

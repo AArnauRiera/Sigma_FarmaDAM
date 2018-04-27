@@ -27,6 +27,7 @@ namespace Mantein
         {
             InitializeComponent();
             dts = new DataSet();
+            CenterPanel(pnlMantein);
         }
         
         /// <summary>
@@ -150,7 +151,7 @@ namespace Mantein
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             UpdateQuery();
-			resetCombobox();
+            resetCombobox();
         }
 
         protected void btnSelect_Click(object sender, EventArgs e)
@@ -219,8 +220,8 @@ namespace Mantein
 
             dgwBase.CurrentCell = dgwBase.Rows[dgwBase.Rows.Count - 2].Cells[cell.DBReference];
         }
-		
-		public void resetCombobox()
+
+        public void resetCombobox()
         {
             foreach (Control item in pnlTextBox.Controls)
             {
@@ -231,11 +232,11 @@ namespace Mantein
                 }
             }
         }
-		
+
         public virtual void bntNew_Click(object sender, EventArgs e)
         {
             AddNewRow();
-			resetCombobox();
+            resetCombobox();
         }
 
         /*
@@ -270,7 +271,7 @@ namespace Mantein
                         TxtSigma t = pnlTextBox.Controls[q] as TxtSigma;
                         if (!String.IsNullOrWhiteSpace(t.DBReference))
                         {
-                            if (dgwBase.Columns[i].Name.Equals(t.DBReference))
+                            if (dgwBase.Columns[i].Name.Equals(t.DBReference) && !t.IsForeginKey)
                             {
                                 dgwBase.Columns[i].Visible = true;
                             }
