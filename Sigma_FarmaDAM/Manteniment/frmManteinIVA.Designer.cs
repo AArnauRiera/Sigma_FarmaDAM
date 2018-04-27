@@ -79,9 +79,10 @@
             // txtValue
             // 
             this.txtValue.DBReference = "value";
-            this.txtValue.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
+            this.txtValue.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtValue.ForeColor = System.Drawing.Color.Gray;
+            this.txtValue.IsForeginKey = false;
             this.txtValue.Location = new System.Drawing.Point(195, 33);
             this.txtValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtValue.Name = "txtValue";
@@ -94,9 +95,10 @@
             // txtId
             // 
             this.txtId.DBReference = "id";
-            this.txtId.FieldType = Sigma_Controls.TxtSigma.FieldTypes.IVAid;
+            this.txtId.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtId.ForeColor = System.Drawing.Color.Gray;
+            this.txtId.IsForeginKey = false;
             this.txtId.Location = new System.Drawing.Point(195, 5);
             this.txtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtId.Name = "txtId";

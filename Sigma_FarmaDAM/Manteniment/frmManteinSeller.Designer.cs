@@ -149,9 +149,10 @@
             // txtEmail
             // 
             this.txtEmail.DBReference = "email";
-            this.txtEmail.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Email;
+            this.txtEmail.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtEmail.ForeColor = System.Drawing.Color.Gray;
+            this.txtEmail.IsForeginKey = false;
             this.txtEmail.Location = new System.Drawing.Point(195, 117);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
@@ -164,9 +165,10 @@
             // txtPassword
             // 
             this.txtPassword.DBReference = "password";
-            this.txtPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Password;
+            this.txtPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtPassword.ForeColor = System.Drawing.Color.Gray;
+            this.txtPassword.IsForeginKey = false;
             this.txtPassword.Location = new System.Drawing.Point(195, 173);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
@@ -179,9 +181,10 @@
             // txtUsername
             // 
             this.txtUsername.DBReference = "username";
-            this.txtUsername.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.txtUsername.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtUsername.ForeColor = System.Drawing.Color.Gray;
+            this.txtUsername.IsForeginKey = false;
             this.txtUsername.Location = new System.Drawing.Point(195, 145);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsername.Name = "txtUsername";
@@ -194,9 +197,10 @@
             // txtDNI
             // 
             this.txtDNI.DBReference = "dni";
-            this.txtDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.DNI;
+            this.txtDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtDNI.ForeColor = System.Drawing.Color.Gray;
+            this.txtDNI.IsForeginKey = false;
             this.txtDNI.Location = new System.Drawing.Point(195, 89);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDNI.Name = "txtDNI";
@@ -209,9 +213,10 @@
             // txtLastName2
             // 
             this.txtLastName2.DBReference = "lastName2";
-            this.txtLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.txtLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtLastName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtLastName2.ForeColor = System.Drawing.Color.Gray;
+            this.txtLastName2.IsForeginKey = false;
             this.txtLastName2.Location = new System.Drawing.Point(195, 61);
             this.txtLastName2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLastName2.Name = "txtLastName2";
@@ -224,9 +229,10 @@
             // txtLastName1
             // 
             this.txtLastName1.DBReference = "lastName1";
-            this.txtLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.txtLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtLastName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtLastName1.ForeColor = System.Drawing.Color.Gray;
+            this.txtLastName1.IsForeginKey = false;
             this.txtLastName1.Location = new System.Drawing.Point(195, 33);
             this.txtLastName1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLastName1.Name = "txtLastName1";
@@ -239,9 +245,10 @@
             // txtFirstName
             // 
             this.txtFirstName.DBReference = "firstName";
-            this.txtFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.txtFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtFirstName.ForeColor = System.Drawing.Color.Gray;
+            this.txtFirstName.IsForeginKey = false;
             this.txtFirstName.Location = new System.Drawing.Point(195, 5);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFirstName.Name = "txtFirstName";

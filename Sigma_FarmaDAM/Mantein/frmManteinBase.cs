@@ -52,6 +52,21 @@ namespace Mantein
                     TxtSigma txt = control as TxtSigma;
                     txt.DataBindings.Add(new Binding("Text", dgwBase.DataSource, txt.DBReference, true));
                 }
+                if (control is cbxSigma)
+                {
+                    DBUtilities db = new DBUtilities();
+                    DataSet newdts = new DataSet();
+                    cbxSigma cbx = control as cbxSigma;
+                    newdts = db.PortarPerConsulta("SELECT * FROM " + cbx.ForeginTable);
+
+                    cbx.Items.Add("Selecciona...");
+                    foreach (DataRow row in newdts.Tables[0].Rows)
+                    {
+                        cbx.Items.Add(row[cbx.ForeginData].ToString());
+                    }
+                    dgwBase.Columns[cbx.DBReference].Visible = false;
+                    cbx.DataBindings.Add(new Binding("SelectedIndex", dgwBase.DataSource, cbx.DBReference, true));
+                }
             }                  
         }
 
@@ -135,6 +150,7 @@ namespace Mantein
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             UpdateQuery();
+			resetCombobox();
         }
 
         protected void btnSelect_Click(object sender, EventArgs e)
@@ -203,9 +219,23 @@ namespace Mantein
 
             dgwBase.CurrentCell = dgwBase.Rows[dgwBase.Rows.Count - 2].Cells[cell.DBReference];
         }
+		
+		public void resetCombobox()
+        {
+            foreach (Control item in pnlTextBox.Controls)
+            {
+                if (item is cbxSigma)
+                {
+                    cbxSigma cbx = item as cbxSigma;
+                    cbx.SelectedIndex = 0;
+                }
+            }
+        }
+		
         public virtual void bntNew_Click(object sender, EventArgs e)
         {
             AddNewRow();
+			resetCombobox();
         }
 
         /*

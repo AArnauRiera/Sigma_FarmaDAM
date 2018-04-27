@@ -16,6 +16,8 @@ namespace Manteniment
         bool updated;
         public frmManteinStock()
         {
+            btnGet.Visible = false;
+            dgwBase.Visible = false;
             InitializeComponent();
         }
 

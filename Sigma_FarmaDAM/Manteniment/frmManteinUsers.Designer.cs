@@ -63,11 +63,9 @@
             this.pnlTextBox.Controls.Add(this.tbxDNI);
             this.pnlTextBox.Controls.Add(this.tbxEmail);
             this.pnlTextBox.Controls.Add(this.label4);
-            this.pnlTextBox.Size = new System.Drawing.Size(314, 559);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(156, 17);
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // bntNew
@@ -76,13 +74,12 @@
             // 
             // pnlMantein
             // 
-            this.pnlMantein.Location = new System.Drawing.Point(-1, -3);
-            this.pnlMantein.Size = new System.Drawing.Size(1072, 733);
+            this.pnlMantein.Location = new System.Drawing.Point(-106, 0);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 241);
+            this.label5.Location = new System.Drawing.Point(90, 257);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 19);
             this.label5.TabIndex = 30;
@@ -91,10 +88,11 @@
             // tbxEmail
             // 
             this.tbxEmail.DBReference = "email";
-            this.tbxEmail.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Email;
+            this.tbxEmail.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.tbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tbxEmail.ForeColor = System.Drawing.Color.Black;
-            this.tbxEmail.Location = new System.Drawing.Point(133, 238);
+            this.tbxEmail.IsForeginKey = false;
+            this.tbxEmail.Location = new System.Drawing.Point(227, 254);
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(141, 20);
             this.tbxEmail.TabIndex = 4;
@@ -105,7 +103,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 198);
+            this.label4.Location = new System.Drawing.Point(90, 214);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 19);
             this.label4.TabIndex = 28;
@@ -114,10 +112,11 @@
             // tbxDNI
             // 
             this.tbxDNI.DBReference = "dni";
-            this.tbxDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.DNI;
+            this.tbxDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.tbxDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tbxDNI.ForeColor = System.Drawing.Color.Black;
-            this.tbxDNI.Location = new System.Drawing.Point(133, 195);
+            this.tbxDNI.IsForeginKey = false;
+            this.tbxDNI.Location = new System.Drawing.Point(227, 211);
             this.tbxDNI.Name = "tbxDNI";
             this.tbxDNI.Size = new System.Drawing.Size(141, 20);
             this.tbxDNI.TabIndex = 3;
@@ -128,7 +127,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 153);
+            this.label3.Location = new System.Drawing.Point(90, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 19);
             this.label3.TabIndex = 26;
@@ -137,10 +136,11 @@
             // tbxLastName2
             // 
             this.tbxLastName2.DBReference = "lastName2";
-            this.tbxLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.tbxLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.tbxLastName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tbxLastName2.ForeColor = System.Drawing.Color.Black;
-            this.tbxLastName2.Location = new System.Drawing.Point(133, 150);
+            this.tbxLastName2.IsForeginKey = false;
+            this.tbxLastName2.Location = new System.Drawing.Point(227, 166);
             this.tbxLastName2.Name = "tbxLastName2";
             this.tbxLastName2.Size = new System.Drawing.Size(141, 20);
             this.tbxLastName2.TabIndex = 2;
@@ -151,7 +151,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 110);
+            this.label2.Location = new System.Drawing.Point(90, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 19);
             this.label2.TabIndex = 24;
@@ -160,10 +160,11 @@
             // tbxLastName1
             // 
             this.tbxLastName1.DBReference = "lastName1";
-            this.tbxLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.tbxLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.tbxLastName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tbxLastName1.ForeColor = System.Drawing.Color.Black;
-            this.tbxLastName1.Location = new System.Drawing.Point(133, 107);
+            this.tbxLastName1.IsForeginKey = false;
+            this.tbxLastName1.Location = new System.Drawing.Point(227, 123);
             this.tbxLastName1.Name = "tbxLastName1";
             this.tbxLastName1.Size = new System.Drawing.Size(141, 20);
             this.tbxLastName1.TabIndex = 1;
@@ -174,7 +175,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(16, 66);
+            this.lblName.Location = new System.Drawing.Point(90, 86);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(59, 19);
             this.lblName.TabIndex = 22;
@@ -183,10 +184,11 @@
             // tbxName
             // 
             this.tbxName.DBReference = "firstName";
-            this.tbxName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.tbxName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.tbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tbxName.ForeColor = System.Drawing.Color.Black;
-            this.tbxName.Location = new System.Drawing.Point(133, 67);
+            this.tbxName.IsForeginKey = false;
+            this.tbxName.Location = new System.Drawing.Point(227, 83);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(141, 20);
             this.tbxName.TabIndex = 0;
@@ -197,10 +199,11 @@
             // txtSigma1
             // 
             this.txtSigma1.DBReference = "username";
-            this.txtSigma1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.txtSigma1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtSigma1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtSigma1.ForeColor = System.Drawing.Color.Black;
-            this.txtSigma1.Location = new System.Drawing.Point(133, 274);
+            this.txtSigma1.IsForeginKey = false;
+            this.txtSigma1.Location = new System.Drawing.Point(227, 290);
             this.txtSigma1.Name = "txtSigma1";
             this.txtSigma1.Size = new System.Drawing.Size(141, 20);
             this.txtSigma1.TabIndex = 5;
@@ -211,7 +214,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 274);
+            this.label1.Location = new System.Drawing.Point(90, 290);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 19);
             this.label1.TabIndex = 32;
@@ -227,7 +230,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 728);
+            this.ClientSize = new System.Drawing.Size(1069, 728);
             this.Name = "frmManteinUsers";
             this.Text = "frmManteinUsers";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();

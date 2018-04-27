@@ -45,6 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtSigma1 = new Sigma_Controls.TxtSigma();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbxSigma1 = new Sigma_Controls.cbxSigma();
             ((System.ComponentModel.ISupportInitialize)(this.dts)).BeginInit();
             this.pnlTextBox.SuspendLayout();
             this.pnlButtons.SuspendLayout();
@@ -54,6 +55,7 @@
             // 
             // pnlTextBox
             // 
+            this.pnlTextBox.Controls.Add(this.cbxSigma1);
             this.pnlTextBox.Controls.Add(this.txtSigma1);
             this.pnlTextBox.Controls.Add(this.tbxAddress1);
             this.pnlTextBox.Controls.Add(this.label5);
@@ -84,7 +86,8 @@
             this.tbxAddress1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.tbxAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAddress1.ForeColor = System.Drawing.Color.Black;
-            this.tbxAddress1.Location = new System.Drawing.Point(139, 92);
+            this.tbxAddress1.IsForeginKey = false;
+            this.tbxAddress1.Location = new System.Drawing.Point(139, 98);
             this.tbxAddress1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxAddress1.Name = "tbxAddress1";
             this.tbxAddress1.Size = new System.Drawing.Size(188, 20);
@@ -96,7 +99,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 92);
+            this.label5.Location = new System.Drawing.Point(4, 98);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 19);
@@ -106,10 +109,11 @@
             // tbxFirstName
             // 
             this.tbxFirstName.DBReference = "Name";
-            this.tbxFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
+            this.tbxFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.tbxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxFirstName.ForeColor = System.Drawing.Color.Black;
-            this.tbxFirstName.Location = new System.Drawing.Point(139, 122);
+            this.tbxFirstName.IsForeginKey = false;
+            this.tbxFirstName.Location = new System.Drawing.Point(139, 128);
             this.tbxFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxFirstName.Name = "tbxFirstName";
             this.tbxFirstName.Size = new System.Drawing.Size(188, 20);
@@ -121,7 +125,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 122);
+            this.label1.Location = new System.Drawing.Point(3, 128);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 19);
@@ -141,10 +145,11 @@
             // tbxLastName1
             // 
             this.tbxLastName1.DBReference = "lastName1";
-            this.tbxLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.LastName;
+            this.tbxLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.tbxLastName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxLastName1.ForeColor = System.Drawing.Color.Black;
-            this.tbxLastName1.Location = new System.Drawing.Point(139, 151);
+            this.tbxLastName1.IsForeginKey = false;
+            this.tbxLastName1.Location = new System.Drawing.Point(139, 157);
             this.tbxLastName1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxLastName1.Name = "tbxLastName1";
             this.tbxLastName1.Size = new System.Drawing.Size(188, 20);
@@ -156,7 +161,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 151);
+            this.label2.Location = new System.Drawing.Point(3, 157);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 19);
@@ -166,10 +171,11 @@
             // tbxLastName2
             // 
             this.tbxLastName2.DBReference = "lastName2";
-            this.tbxLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.LastName;
+            this.tbxLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.tbxLastName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxLastName2.ForeColor = System.Drawing.Color.Black;
-            this.tbxLastName2.Location = new System.Drawing.Point(138, 180);
+            this.tbxLastName2.IsForeginKey = false;
+            this.tbxLastName2.Location = new System.Drawing.Point(138, 186);
             this.tbxLastName2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxLastName2.Name = "tbxLastName2";
             this.tbxLastName2.Size = new System.Drawing.Size(188, 20);
@@ -191,7 +197,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 180);
+            this.label3.Location = new System.Drawing.Point(3, 186);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 19);
@@ -211,9 +217,10 @@
             // tbxDNI
             // 
             this.tbxDNI.DBReference = "DNI";
-            this.tbxDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.DNI;
+            this.tbxDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.tbxDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxDNI.ForeColor = System.Drawing.Color.Black;
+            this.tbxDNI.IsForeginKey = false;
             this.tbxDNI.Location = new System.Drawing.Point(139, 34);
             this.tbxDNI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxDNI.Name = "tbxDNI";
@@ -227,9 +234,10 @@
             // tbxNTS
             // 
             this.tbxNTS.DBReference = "NTS";
-            this.tbxNTS.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
+            this.tbxNTS.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.tbxNTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxNTS.ForeColor = System.Drawing.Color.Black;
+            this.tbxNTS.IsForeginKey = false;
             this.tbxNTS.Location = new System.Drawing.Point(138, 5);
             this.tbxNTS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxNTS.Name = "tbxNTS";
@@ -255,12 +263,14 @@
             this.txtSigma1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtSigma1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSigma1.ForeColor = System.Drawing.Color.Black;
-            this.txtSigma1.Location = new System.Drawing.Point(138, 63);
+            this.txtSigma1.IsForeginKey = true;
+            this.txtSigma1.Location = new System.Drawing.Point(95, 50);
             this.txtSigma1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSigma1.Name = "txtSigma1";
-            this.txtSigma1.Size = new System.Drawing.Size(188, 20);
+            this.txtSigma1.Size = new System.Drawing.Size(36, 20);
             this.txtSigma1.TabIndex = 2;
             this.txtSigma1.Table = null;
+            this.txtSigma1.Visible = false;
             this.txtSigma1.TextChanged += new System.EventHandler(this.tbx_Leave);
             this.txtSigma1.Leave += new System.EventHandler(this.tbx_Leave);
             // 
@@ -269,6 +279,19 @@
             this.errorProvider.BlinkRate = 0;
             this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
+            // 
+            // cbxSigma1
+            // 
+            this.cbxSigma1.DBReference = "Type_NTS";
+            this.cbxSigma1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSigma1.ForeginData = "name";
+            this.cbxSigma1.ForeginTable = "Type_NTS";
+            this.cbxSigma1.ForeginValue = null;
+            this.cbxSigma1.FormattingEnabled = true;
+            this.cbxSigma1.Location = new System.Drawing.Point(139, 63);
+            this.cbxSigma1.Name = "cbxSigma1";
+            this.cbxSigma1.Size = new System.Drawing.Size(188, 27);
+            this.cbxSigma1.TabIndex = 54;
             // 
             // frmManteinClients
             // 
@@ -303,5 +326,6 @@
         private System.Windows.Forms.Label label4;
         public Sigma_Controls.TxtSigma txtSigma1;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private Sigma_Controls.cbxSigma cbxSigma1;
     }
 }

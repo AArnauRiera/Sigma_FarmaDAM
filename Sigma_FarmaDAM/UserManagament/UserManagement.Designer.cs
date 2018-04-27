@@ -93,6 +93,7 @@
             this.tbxAddress1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.tbxAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAddress1.ForeColor = System.Drawing.Color.Black;
+            this.tbxAddress1.IsForeginKey = false;
             this.tbxAddress1.Location = new System.Drawing.Point(159, 219);
             this.tbxAddress1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbxAddress1.Name = "tbxAddress1";
@@ -125,6 +126,9 @@
             // 
             this.cbxNTS_Type.DBReference = "Type_NTS";
             this.cbxNTS_Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxNTS_Type.ForeginData = null;
+            this.cbxNTS_Type.ForeginTable = null;
+            this.cbxNTS_Type.ForeginValue = null;
             this.cbxNTS_Type.FormattingEnabled = true;
             this.cbxNTS_Type.Location = new System.Drawing.Point(159, 171);
             this.cbxNTS_Type.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -138,6 +142,7 @@
             this.tbxFirstName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.tbxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxFirstName.ForeColor = System.Drawing.Color.Black;
+            this.tbxFirstName.IsForeginKey = false;
             this.tbxFirstName.Location = new System.Drawing.Point(159, 251);
             this.tbxFirstName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbxFirstName.Name = "tbxFirstName";
@@ -171,6 +176,7 @@
             this.tbxLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.LastName;
             this.tbxLastName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxLastName1.ForeColor = System.Drawing.Color.Black;
+            this.tbxLastName1.IsForeginKey = false;
             this.tbxLastName1.Location = new System.Drawing.Point(159, 286);
             this.tbxLastName1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbxLastName1.Name = "tbxLastName1";
@@ -205,6 +211,7 @@
             this.tbxLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.LastName;
             this.tbxLastName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxLastName2.ForeColor = System.Drawing.Color.Black;
+            this.tbxLastName2.IsForeginKey = false;
             this.tbxLastName2.Location = new System.Drawing.Point(158, 321);
             this.tbxLastName2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbxLastName2.Name = "tbxLastName2";
@@ -245,9 +252,10 @@
             // tbxDNI
             // 
             this.tbxDNI.DBReference = "DNI";
-            this.tbxDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.DNI;
+            this.tbxDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.tbxDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxDNI.ForeColor = System.Drawing.Color.Black;
+            this.tbxDNI.IsForeginKey = false;
             this.tbxDNI.Location = new System.Drawing.Point(159, 136);
             this.tbxDNI.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbxDNI.Name = "tbxDNI";
@@ -262,6 +270,7 @@
             this.tbxNTS.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.tbxNTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxNTS.ForeColor = System.Drawing.Color.Black;
+            this.tbxNTS.IsForeginKey = false;
             this.tbxNTS.Location = new System.Drawing.Point(158, 101);
             this.tbxNTS.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbxNTS.Name = "tbxNTS";

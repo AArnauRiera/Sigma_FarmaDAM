@@ -54,6 +54,8 @@ namespace Sigma_Controls
 
         private string _dBReference;
 
+        private bool _isForeginKey = false;
+
 
         #endregion
         
@@ -76,6 +78,11 @@ namespace Sigma_Controls
         {
             get { return _fieldType; }
             set { _fieldType = value; }
+        }
+        public bool IsForeginKey
+        {
+            get { return _isForeginKey; }
+            set { _isForeginKey = value; }
         }
 
         #endregion

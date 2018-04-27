@@ -59,6 +59,7 @@
             this.tbxName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.tbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tbxName.ForeColor = System.Drawing.Color.Black;
+			this.tbxName.IsForeginKey = false;
             this.tbxName.Location = new System.Drawing.Point(201, 95);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(182, 20);
@@ -100,6 +101,7 @@
             this.tbxLastName1.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.tbxLastName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tbxLastName1.ForeColor = System.Drawing.Color.Black;
+            this.tbxLastName1.IsForeginKey = false;
             this.tbxLastName1.Location = new System.Drawing.Point(201, 135);
             this.tbxLastName1.Name = "tbxLastName1";
             this.tbxLastName1.Size = new System.Drawing.Size(182, 20);
@@ -122,6 +124,7 @@
             this.tbxLastName2.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.tbxLastName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tbxLastName2.ForeColor = System.Drawing.Color.Black;
+            this.tbxLastName2.IsForeginKey = false;
             this.tbxLastName2.Location = new System.Drawing.Point(201, 178);
             this.tbxLastName2.Name = "tbxLastName2";
             this.tbxLastName2.Size = new System.Drawing.Size(182, 20);
@@ -144,6 +147,7 @@
             this.tbxDNI.FieldType = Sigma_Controls.TxtSigma.FieldTypes.DNI;
             this.tbxDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tbxDNI.ForeColor = System.Drawing.Color.Black;
+			this.tbxDNI.IsForeginKey = false;
             this.tbxDNI.Location = new System.Drawing.Point(201, 223);
             this.tbxDNI.Name = "tbxDNI";
             this.tbxDNI.Size = new System.Drawing.Size(182, 20);
@@ -166,6 +170,7 @@
             this.tbxEmail.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Email;
             this.tbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tbxEmail.ForeColor = System.Drawing.Color.Black;
+            this.tbxEmail.IsForeginKey = false;
             this.tbxEmail.Location = new System.Drawing.Point(201, 266);
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(182, 20);
@@ -188,6 +193,7 @@
             this.tbxUsername.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Name;
             this.tbxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tbxUsername.ForeColor = System.Drawing.Color.Black;
+            this.tbxUsername.IsForeginKey = false;
             this.tbxUsername.Location = new System.Drawing.Point(201, 311);
             this.tbxUsername.Name = "tbxUsername";
             this.tbxUsername.Size = new System.Drawing.Size(182, 20);
@@ -210,6 +216,7 @@
             this.tbxPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Password;
             this.tbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tbxPassword.ForeColor = System.Drawing.Color.Black;
+            this.tbxPassword.IsForeginKey = false;
             this.tbxPassword.Location = new System.Drawing.Point(201, 352);
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.Size = new System.Drawing.Size(182, 20);
@@ -242,6 +249,7 @@
             this.tbxRepeatPassword.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Password;
             this.tbxRepeatPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tbxRepeatPassword.ForeColor = System.Drawing.Color.Black;
+            this.tbxRepeatPassword.IsForeginKey = false;
             this.tbxRepeatPassword.Location = new System.Drawing.Point(201, 394);
             this.tbxRepeatPassword.Name = "tbxRepeatPassword";
             this.tbxRepeatPassword.Size = new System.Drawing.Size(182, 20);

@@ -79,9 +79,10 @@
             // txtId_Stock
             // 
             this.txtId_Stock.DBReference = "id_stock";
-            this.txtId_Stock.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
+            this.txtId_Stock.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtId_Stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtId_Stock.ForeColor = System.Drawing.Color.Gray;
+            this.txtId_Stock.IsForeginKey = false;
             this.txtId_Stock.Location = new System.Drawing.Point(195, 33);
             this.txtId_Stock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtId_Stock.Name = "txtId_Stock";
@@ -94,9 +95,10 @@
             // txtIdLaboratories
             // 
             this.txtIdLaboratories.DBReference = "id_laboratories";
-            this.txtIdLaboratories.FieldType = Sigma_Controls.TxtSigma.FieldTypes.Number;
+            this.txtIdLaboratories.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtIdLaboratories.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtIdLaboratories.ForeColor = System.Drawing.Color.Gray;
+            this.txtIdLaboratories.IsForeginKey = false;
             this.txtIdLaboratories.Location = new System.Drawing.Point(195, 5);
             this.txtIdLaboratories.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdLaboratories.Name = "txtIdLaboratories";

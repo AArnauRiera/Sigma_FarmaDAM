@@ -138,6 +138,7 @@
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnGet
             // 
@@ -178,9 +179,9 @@
         protected System.Windows.Forms.Button btnUpdate;
         protected System.Windows.Forms.Button btnGet;
         private System.Windows.Forms.Panel pnlGW;
-        protected System.Windows.Forms.DataGridView dgwBase;
         protected System.Windows.Forms.Button bntNew;
         protected System.Windows.Forms.Panel pnlMantein;
         private System.Windows.Forms.Button btnEliminar;
+        public System.Windows.Forms.DataGridView dgwBase;
     }
 }
