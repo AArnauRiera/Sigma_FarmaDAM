@@ -212,10 +212,8 @@
             // txtReplaceable
             // 
             this.txtReplaceable.DBReference = "Replaceable";
-            this.txtReplaceable.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtReplaceable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReplaceable.ForeColor = System.Drawing.Color.Black;
-            this.txtReplaceable.IsForeginKey = false;
             this.txtReplaceable.Location = new System.Drawing.Point(173, 137);
             this.txtReplaceable.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtReplaceable.Name = "txtReplaceable";
@@ -228,10 +226,8 @@
             // txtObligatory
             // 
             this.txtObligatory.DBReference = "NeedsRecipe";
-            this.txtObligatory.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtObligatory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObligatory.ForeColor = System.Drawing.Color.Black;
-            this.txtObligatory.IsForeginKey = false;
             this.txtObligatory.Location = new System.Drawing.Point(173, 182);
             this.txtObligatory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtObligatory.Name = "txtObligatory";
@@ -292,10 +288,8 @@
             // txtGeneric
             // 
             this.txtGeneric.DBReference = "IsGeneric";
-            this.txtGeneric.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtGeneric.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGeneric.ForeColor = System.Drawing.Color.Black;
-            this.txtGeneric.IsForeginKey = false;
             this.txtGeneric.Location = new System.Drawing.Point(173, 160);
             this.txtGeneric.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtGeneric.Name = "txtGeneric";
