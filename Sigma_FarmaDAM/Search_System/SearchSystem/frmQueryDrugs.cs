@@ -18,6 +18,7 @@ namespace SearchSystem
         bool updated;
         private TxtSigma[] _txts;
         private bool _isSellSystem;
+        Form _form = null;
         public frmQueryDrugs()
         {
             InitializeComponent();
@@ -50,6 +51,15 @@ namespace SearchSystem
             BindingDate();
         }
 
+        public frmQueryDrugs(TxtSigma[] txts, string table, Form form)
+        {
+            InitializeComponent();
+            _isSellSystem = true;
+            _txts = txts;
+            Table = table;
+            _form = form;
+        }
+
         protected void GetQuery(string condition, string condition2)
         {
             DBUtilities db = new DBUtilities();
@@ -72,7 +82,6 @@ namespace SearchSystem
         {
             try
             {
-
                 if (_isSellSystem)
                 {
                     for (int i = 0; i < dgwDB.SelectedRows[0].Cells.Count; i++)
@@ -84,6 +93,10 @@ namespace SearchSystem
                                 _txts[j].Text = dgwDB.SelectedRows[0].Cells[i].FormattedValue.ToString();
                             }
                         }
+                    }
+                    if (_form != null)
+                    {
+                        //_form.GetType().GetMethod("CheckProduct").Invoke(this, null);
                     }
                     this.Close();
                     this.Dispose();

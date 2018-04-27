@@ -45,11 +45,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCod = new Sigma_Controls.TxtSigma();
             this.pnlDgw = new System.Windows.Forms.Panel();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.dgView_Sell = new System.Windows.Forms.DataGridView();
             this.btnBuy = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTotal = new System.Windows.Forms.Label();
+            this.btnSearchProduct = new System.Windows.Forms.Button();
             this.pnltxt.SuspendLayout();
             this.pnlDgw.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgView_Sell)).BeginInit();
@@ -59,6 +60,7 @@
             // pnltxt
             // 
             this.pnltxt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnltxt.Controls.Add(this.btnSearchProduct);
             this.pnltxt.Controls.Add(this.btn);
             this.pnltxt.Controls.Add(this.label3);
             this.pnltxt.Controls.Add(this.btnAdd);
@@ -124,6 +126,7 @@
             this.txtClient.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtClient.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtClient.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtClient.IsForeginKey = false;
             this.txtClient.Location = new System.Drawing.Point(145, 51);
             this.txtClient.Name = "txtClient";
             this.txtClient.Size = new System.Drawing.Size(221, 26);
@@ -139,6 +142,7 @@
             this.txtProd.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtProd.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtProd.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtProd.IsForeginKey = false;
             this.txtProd.Location = new System.Drawing.Point(145, 250);
             this.txtProd.Multiline = true;
             this.txtProd.Name = "txtProd";
@@ -153,6 +157,7 @@
             this.txtCantidad.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtCantidad.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtCantidad.IsForeginKey = false;
             this.txtCantidad.Location = new System.Drawing.Point(145, 329);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(47, 26);
@@ -179,7 +184,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(2, 222);
+            this.label2.Location = new System.Drawing.Point(2, 212);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 19);
             this.label2.TabIndex = 29;
@@ -254,9 +259,10 @@
             this.txtCod.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtCod.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtCod.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtCod.Location = new System.Drawing.Point(145, 219);
+            this.txtCod.IsForeginKey = false;
+            this.txtCod.Location = new System.Drawing.Point(145, 209);
             this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(100, 26);
+            this.txtCod.Size = new System.Drawing.Size(221, 26);
             this.txtCod.TabIndex = 2;
             this.txtCod.Table = null;
             this.txtCod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCod_KeyDown);
@@ -272,6 +278,19 @@
             this.pnlDgw.Name = "pnlDgw";
             this.pnlDgw.Size = new System.Drawing.Size(483, 614);
             this.pnlDgw.TabIndex = 11;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.Color.White;
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.lblTotal.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblTotal.Location = new System.Drawing.Point(8, 454);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(41, 19);
+            this.lblTotal.TabIndex = 15;
+            this.lblTotal.Text = "Total:";
             // 
             // lblTotalPrice
             // 
@@ -323,18 +342,18 @@
             this.panel1.Size = new System.Drawing.Size(950, 620);
             this.panel1.TabIndex = 36;
             // 
-            // lblTotal
+            // btnSearchProduct
             // 
-            this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.BackColor = System.Drawing.Color.White;
-            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.lblTotal.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblTotal.Location = new System.Drawing.Point(8, 454);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(41, 19);
-            this.lblTotal.TabIndex = 15;
-            this.lblTotal.Text = "Total:";
+            this.btnSearchProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSearchProduct.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnSearchProduct.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnSearchProduct.Location = new System.Drawing.Point(372, 203);
+            this.btnSearchProduct.Name = "btnSearchProduct";
+            this.btnSearchProduct.Size = new System.Drawing.Size(75, 37);
+            this.btnSearchProduct.TabIndex = 35;
+            this.btnSearchProduct.Text = "Buscar";
+            this.btnSearchProduct.UseVisualStyleBackColor = true;
+            this.btnSearchProduct.Click += new System.EventHandler(this.btnSearchProduct_Click);
             // 
             // frmSellsytem
             // 
@@ -379,6 +398,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Button btnSearchProduct;
     }
 }
 
