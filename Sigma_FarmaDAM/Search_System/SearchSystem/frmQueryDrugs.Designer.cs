@@ -224,7 +224,7 @@
             // 
             // txtGeneric
             // 
-            this.txtGeneric.DBReference = "Generic";
+            this.txtGeneric.DBReference = "IsGeneric";
             this.txtGeneric.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtGeneric.ForeColor = System.Drawing.Color.Black;
             this.txtGeneric.Location = new System.Drawing.Point(391, 11);
@@ -247,7 +247,7 @@
             // 
             // txtObligatory
             // 
-            this.txtObligatory.DBReference = "Obligatory";
+            this.txtObligatory.DBReference = "NeedsRecipe";
             this.txtObligatory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtObligatory.ForeColor = System.Drawing.Color.Black;
             this.txtObligatory.Location = new System.Drawing.Point(391, 37);

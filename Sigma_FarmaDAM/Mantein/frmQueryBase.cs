@@ -92,6 +92,18 @@ namespace Mantein
                         txtb.Add(t.DBReference + " = '" + t.Text + "'");
                     }
                 }
+                else if (txt is CheckBoxSigma)
+                {
+                    CheckBoxSigma t = (CheckBoxSigma)txt;
+                    if (t.Checked)
+                    {
+                        txtb.Add(t.DBReference + " = 1");
+                    }
+                    else
+                    {
+                        txtb.Add(t.DBReference + " = 0");
+                    }
+                }
             }
             return txtb.ToArray();
         }
