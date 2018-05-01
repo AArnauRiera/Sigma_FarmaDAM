@@ -241,7 +241,7 @@ namespace Sigma_FarmaDAM
 
         private void btnGestioStock_Click(object sender, EventArgs e)
         {
-            AddNewTab("Gestión stock", new frmManteinStock() { Table = "Stock" });
+            AddNewTab("Gestión stock", new frmManteinStock());
         }
     }
 }
