@@ -521,7 +521,7 @@ namespace SellSystem
 
         private void btnSearchProduct_Click(object sender, EventArgs e)
         {
-            frmQueryDrugs queryDrugs = new frmQueryDrugs(new TxtSigma[]{txtCod},"Drugs", this);
+            frmQueryDrugs queryDrugs = new frmQueryDrugs(new TxtSigma[] { txtCod }, "Drugs", () => CheckProduct());
             queryDrugs.Show();
         }
     }

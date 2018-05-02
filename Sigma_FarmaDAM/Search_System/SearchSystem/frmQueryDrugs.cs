@@ -18,7 +18,7 @@ namespace SearchSystem
         bool updated;
         private TxtSigma[] _txts;
         private bool _isSellSystem;
-        Form _form = null;
+        Action _action = null;
         public frmQueryDrugs()
         {
             InitializeComponent();
@@ -51,13 +51,13 @@ namespace SearchSystem
             BindingDate();
         }
 
-        public frmQueryDrugs(TxtSigma[] txts, string table, Form form)
+        public frmQueryDrugs(TxtSigma[] txts, string table, Action action)
         {
             InitializeComponent();
             _isSellSystem = true;
             _txts = txts;
             Table = table;
-            _form = form;
+            _action = action;
         }
 
         protected void GetQuery(string condition, string condition2)
@@ -94,10 +94,7 @@ namespace SearchSystem
                             }
                         }
                     }
-                    if (_form != null)
-                    {
-                        //_form.GetType().GetMethod("CheckProduct").Invoke(this, null);
-                    }
+                    _action?.Invoke();
                     this.Close();
                     this.Dispose();
                 }

@@ -69,6 +69,7 @@
             this.txtNRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.MedRegNum;
             this.txtNRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtNRN.ForeColor = System.Drawing.Color.Gray;
+            this.txtNRN.IsForeginKey = false;
             this.txtNRN.Location = new System.Drawing.Point(208, 37);
             this.txtNRN.Margin = new System.Windows.Forms.Padding(2);
             this.txtNRN.Name = "txtNRN";
@@ -103,6 +104,7 @@
             this.txtNRS.FieldType = Sigma_Controls.TxtSigma.FieldTypes.MedRegNum;
             this.txtNRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtNRS.ForeColor = System.Drawing.Color.Gray;
+            this.txtNRS.IsForeginKey = false;
             this.txtNRS.Location = new System.Drawing.Point(208, 70);
             this.txtNRS.Margin = new System.Windows.Forms.Padding(2);
             this.txtNRS.Name = "txtNRS";
@@ -127,6 +129,7 @@
             this.txtActivePrinciple.FieldType = Sigma_Controls.TxtSigma.FieldTypes.MedRegNum;
             this.txtActivePrinciple.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtActivePrinciple.ForeColor = System.Drawing.Color.Gray;
+            this.txtActivePrinciple.IsForeginKey = false;
             this.txtActivePrinciple.Location = new System.Drawing.Point(208, 138);
             this.txtActivePrinciple.Margin = new System.Windows.Forms.Padding(2);
             this.txtActivePrinciple.Name = "txtActivePrinciple";
@@ -151,6 +154,7 @@
             this.txtName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.MedRegName;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtName.ForeColor = System.Drawing.Color.Gray;
+            this.txtName.IsForeginKey = false;
             this.txtName.Location = new System.Drawing.Point(208, 105);
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
@@ -174,6 +178,7 @@
             this.txtBasePrice.FieldType = Sigma_Controls.TxtSigma.FieldTypes.NSS;
             this.txtBasePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtBasePrice.ForeColor = System.Drawing.Color.Gray;
+            this.txtBasePrice.IsForeginKey = false;
             this.txtBasePrice.Location = new System.Drawing.Point(208, 250);
             this.txtBasePrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtBasePrice.Name = "txtBasePrice";
@@ -208,6 +213,7 @@
             this.txtContent.FieldType = Sigma_Controls.TxtSigma.FieldTypes.MedRegContent;
             this.txtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtContent.ForeColor = System.Drawing.Color.Gray;
+            this.txtContent.IsForeginKey = false;
             this.txtContent.Location = new System.Drawing.Point(208, 174);
             this.txtContent.Margin = new System.Windows.Forms.Padding(2);
             this.txtContent.Name = "txtContent";
@@ -324,6 +330,7 @@
             this.chkRecipe.Name = "chkRecipe";
             this.chkRecipe.Size = new System.Drawing.Size(68, 23);
             this.chkRecipe.TabIndex = 17;
+            this.chkRecipe.Table = null;
             this.chkRecipe.Text = "Receta";
             this.chkRecipe.UseVisualStyleBackColor = true;
             // 
@@ -336,6 +343,7 @@
             this.chkGeneric.Name = "chkGeneric";
             this.chkGeneric.Size = new System.Drawing.Size(82, 23);
             this.chkGeneric.TabIndex = 16;
+            this.chkGeneric.Table = null;
             this.chkGeneric.Text = "Generico";
             this.chkGeneric.UseVisualStyleBackColor = true;
             // 
@@ -348,6 +356,7 @@
             this.chkReplaceable.Name = "chkReplaceable";
             this.chkReplaceable.Size = new System.Drawing.Size(104, 23);
             this.chkReplaceable.TabIndex = 15;
+            this.chkReplaceable.Table = null;
             this.chkReplaceable.Text = "Remplazable";
             this.chkReplaceable.UseVisualStyleBackColor = true;
             // 
@@ -386,6 +395,9 @@
             // 
             this.cmbIVA.DBReference = "IVA";
             this.cmbIVA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIVA.ForeginData = null;
+            this.cmbIVA.ForeginTable = null;
+            this.cmbIVA.ForeginValue = null;
             this.cmbIVA.FormattingEnabled = true;
             this.cmbIVA.Location = new System.Drawing.Point(208, 275);
             this.cmbIVA.Margin = new System.Windows.Forms.Padding(2);
@@ -397,6 +409,9 @@
             // 
             this.cmbPharmaceuticLab.DBReference = "Laboratories";
             this.cmbPharmaceuticLab.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPharmaceuticLab.ForeginData = null;
+            this.cmbPharmaceuticLab.ForeginTable = null;
+            this.cmbPharmaceuticLab.ForeginValue = null;
             this.cmbPharmaceuticLab.FormattingEnabled = true;
             this.cmbPharmaceuticLab.Location = new System.Drawing.Point(208, 203);
             this.cmbPharmaceuticLab.Margin = new System.Windows.Forms.Padding(2);

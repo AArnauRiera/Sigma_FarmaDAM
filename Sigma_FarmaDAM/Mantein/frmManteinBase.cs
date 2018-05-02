@@ -26,8 +26,7 @@ namespace Mantein
         public frmManteinBase()
         {
             InitializeComponent();
-            dts = new DataSet();
-            CenterPanel(pnlMantein);
+            dts = new DataSet();            
         }
         
         /// <summary>

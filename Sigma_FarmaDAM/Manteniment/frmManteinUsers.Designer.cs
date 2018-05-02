@@ -66,6 +66,7 @@
             // 
             // btnUpdate
             // 
+            this.btnUpdate.Location = new System.Drawing.Point(156, 17);
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // bntNew
