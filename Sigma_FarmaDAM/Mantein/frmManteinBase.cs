@@ -43,6 +43,11 @@ namespace Mantein
                     TxtSigma txt = control as TxtSigma;
                     txt.DataBindings.Clear();
                 }
+                else if (control is cbxSigma)
+                {
+                    cbxSigma cbx = control as cbxSigma;
+                    cbx.Items.Clear();
+                }
             }
 
             foreach (Control control in pnlTextBox.Controls)
