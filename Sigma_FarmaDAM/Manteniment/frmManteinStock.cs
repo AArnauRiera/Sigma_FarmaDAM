@@ -12,7 +12,7 @@ using DBUtils;
 
 namespace Manteniment
 {
-    public partial class frmManteinStock : CentredForm
+    public partial class frmManteinStock : Form
     {
         DBUtilities db = new DBUtilities();
         DataSet dts = new DataSet();
@@ -100,12 +100,19 @@ namespace Manteniment
 
             } catch
             {
-                DataRow newRow = dts.Tables[0].NewRow();
-                newRow["ID_Drug"] = cbxMedId.SelectedItem;
-                newRow["Id_lab"] = cbxSigma1.SelectedItem;
-                newRow["Quantity"] = int.Parse(tbxCant.Text);
+                try
+                {
+                    DataRow newRow = dts.Tables[0].NewRow();
+                    newRow["ID_Drug"] = cbxMedId.SelectedItem;
+                    newRow["Id_lab"] = cbxSigma1.SelectedItem;
+                    newRow["Quantity"] = int.Parse(tbxCant.Text);
 
-                dts.Tables[0].Rows.Add(newRow);
+                    dts.Tables[0].Rows.Add(newRow);
+
+                }
+                catch {
+                    MessageBox.Show("Asegurese de que los campos estén rellenados e inténtelo de nuevo", "Error");
+                }
             }
             db.Actualizar("SELECT * FROM Stock", "Taula", dts);
         }

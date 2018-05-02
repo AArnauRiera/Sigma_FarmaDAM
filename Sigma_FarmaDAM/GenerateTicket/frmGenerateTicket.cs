@@ -22,7 +22,7 @@ namespace GenerateTicket
         public frmGenerateTicket(int idTicket)
         {
             InitializeComponent();
-
+            
             cmdVisor.Hide();
             txtTicket.Hide();
             lblIdHeader.Hide();
@@ -31,6 +31,10 @@ namespace GenerateTicket
 
             crystalReportViewer1.ReportSource = cryRpt;
             crystalReportViewer1.Refresh();
+
+            GenTicketHelp.PrintPDF(cryRpt);
+
+            this.Dispose();
 
         }
 

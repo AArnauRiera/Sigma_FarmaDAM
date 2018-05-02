@@ -100,7 +100,10 @@ namespace SellSystem
                             dgView_Sell.Columns[4].HeaderText = "Cantidad";
                             dgView_Sell.Columns[5].HeaderText = "Precio/Unidad";
                         }
-                        else { MessageBox.Show("There are no values "); }
+                        else
+                        {
+                            MessageBox.Show("There are no values ");
+                        }
                         ///Si no existe lo introduce a la Tabla///
                         if ((!exist))
                         {
@@ -358,9 +361,7 @@ namespace SellSystem
                         }
                         bool stockUpdated = DBUTILS.Actualizar(stockQuery, "Taula", dts);
 
-                        frmGenerateTicket frmGenTicket = new frmGenerateTicket(Id_Header);
-
-                        frmGenTicket.Show();
+                        GeneratePrintTicket frmGenTicket = new GeneratePrintTicket(Id_Header);
 
                     }
                     else { MessageBox.Show("Error al Actualizar FK "); }

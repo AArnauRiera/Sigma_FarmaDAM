@@ -65,6 +65,10 @@
             // dgwBase
             // 
             this.dgwBase.AllowUserToDeleteRows = false;
+            this.dgwBase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgwBase.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgwBase.BackgroundColor = System.Drawing.Color.White;
             this.dgwBase.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwBase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -153,7 +157,7 @@
             // 
             // frmManteinBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1068, 760);
@@ -178,10 +182,10 @@
         protected System.Windows.Forms.Panel pnlButtons;
         protected System.Windows.Forms.Button btnUpdate;
         protected System.Windows.Forms.Button btnGet;
-        private System.Windows.Forms.Panel pnlGW;
         protected System.Windows.Forms.Button bntNew;
         protected System.Windows.Forms.Panel pnlMantein;
         private System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.DataGridView dgwBase;
+        public System.Windows.Forms.Panel pnlGW;
     }
 }

@@ -71,6 +71,12 @@
             this.pnlTextBox.Controls.Add(this.tbxDNI);
             this.pnlTextBox.Controls.Add(this.tbxNTS);
             this.pnlTextBox.Controls.Add(this.label4);
+            this.pnlTextBox.Location = new System.Drawing.Point(5, 23);
+            this.pnlTextBox.Size = new System.Drawing.Size(371, 694);
+            // 
+            // pnlButtons
+            // 
+            this.pnlButtons.Location = new System.Drawing.Point(4, 727);
             // 
             // btnUpdate
             // 
@@ -79,6 +85,12 @@
             // pnlMantein
             // 
             this.pnlMantein.Location = new System.Drawing.Point(5, 23);
+            this.pnlMantein.Size = new System.Drawing.Size(1299, 819);
+            // 
+            // pnlGW
+            // 
+            this.pnlGW.Location = new System.Drawing.Point(384, 23);
+            this.pnlGW.Size = new System.Drawing.Size(907, 793);
             // 
             // tbxAddress1
             // 
@@ -87,7 +99,7 @@
             this.tbxAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAddress1.ForeColor = System.Drawing.Color.Black;
             this.tbxAddress1.IsForeginKey = false;
-            this.tbxAddress1.Location = new System.Drawing.Point(139, 98);
+            this.tbxAddress1.Location = new System.Drawing.Point(149, 107);
             this.tbxAddress1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxAddress1.Name = "tbxAddress1";
             this.tbxAddress1.Size = new System.Drawing.Size(188, 20);
@@ -99,7 +111,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 98);
+            this.label5.Location = new System.Drawing.Point(14, 107);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 19);
@@ -113,7 +125,7 @@
             this.tbxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxFirstName.ForeColor = System.Drawing.Color.Black;
             this.tbxFirstName.IsForeginKey = false;
-            this.tbxFirstName.Location = new System.Drawing.Point(139, 128);
+            this.tbxFirstName.Location = new System.Drawing.Point(149, 137);
             this.tbxFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxFirstName.Name = "tbxFirstName";
             this.tbxFirstName.Size = new System.Drawing.Size(188, 20);
@@ -125,7 +137,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 128);
+            this.label1.Location = new System.Drawing.Point(13, 137);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 19);
@@ -149,7 +161,7 @@
             this.tbxLastName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxLastName1.ForeColor = System.Drawing.Color.Black;
             this.tbxLastName1.IsForeginKey = false;
-            this.tbxLastName1.Location = new System.Drawing.Point(139, 157);
+            this.tbxLastName1.Location = new System.Drawing.Point(149, 166);
             this.tbxLastName1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxLastName1.Name = "tbxLastName1";
             this.tbxLastName1.Size = new System.Drawing.Size(188, 20);
@@ -161,7 +173,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 157);
+            this.label2.Location = new System.Drawing.Point(13, 166);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 19);
@@ -175,7 +187,7 @@
             this.tbxLastName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxLastName2.ForeColor = System.Drawing.Color.Black;
             this.tbxLastName2.IsForeginKey = false;
-            this.tbxLastName2.Location = new System.Drawing.Point(138, 186);
+            this.tbxLastName2.Location = new System.Drawing.Point(148, 195);
             this.tbxLastName2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxLastName2.Name = "tbxLastName2";
             this.tbxLastName2.Size = new System.Drawing.Size(188, 20);
@@ -187,7 +199,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 63);
+            this.label7.Location = new System.Drawing.Point(14, 72);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 19);
@@ -197,7 +209,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 186);
+            this.label3.Location = new System.Drawing.Point(13, 195);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 19);
@@ -207,7 +219,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 5);
+            this.label6.Location = new System.Drawing.Point(14, 14);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 19);
@@ -221,7 +233,7 @@
             this.tbxDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxDNI.ForeColor = System.Drawing.Color.Black;
             this.tbxDNI.IsForeginKey = false;
-            this.tbxDNI.Location = new System.Drawing.Point(139, 34);
+            this.tbxDNI.Location = new System.Drawing.Point(149, 43);
             this.tbxDNI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxDNI.Name = "tbxDNI";
             this.tbxDNI.Size = new System.Drawing.Size(188, 20);
@@ -238,7 +250,7 @@
             this.tbxNTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxNTS.ForeColor = System.Drawing.Color.Black;
             this.tbxNTS.IsForeginKey = false;
-            this.tbxNTS.Location = new System.Drawing.Point(138, 5);
+            this.tbxNTS.Location = new System.Drawing.Point(148, 14);
             this.tbxNTS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbxNTS.Name = "tbxNTS";
             this.tbxNTS.Size = new System.Drawing.Size(188, 20);
@@ -250,7 +262,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 33);
+            this.label4.Location = new System.Drawing.Point(14, 42);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 19);
@@ -264,7 +276,7 @@
             this.txtSigma1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSigma1.ForeColor = System.Drawing.Color.Black;
             this.txtSigma1.IsForeginKey = true;
-            this.txtSigma1.Location = new System.Drawing.Point(95, 50);
+            this.txtSigma1.Location = new System.Drawing.Point(105, 59);
             this.txtSigma1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSigma1.Name = "txtSigma1";
             this.txtSigma1.Size = new System.Drawing.Size(36, 20);
@@ -288,7 +300,7 @@
             this.cbxSigma1.ForeginTable = "Type_NTS";
             this.cbxSigma1.ForeginValue = null;
             this.cbxSigma1.FormattingEnabled = true;
-            this.cbxSigma1.Location = new System.Drawing.Point(139, 63);
+            this.cbxSigma1.Location = new System.Drawing.Point(149, 72);
             this.cbxSigma1.Name = "cbxSigma1";
             this.cbxSigma1.Size = new System.Drawing.Size(188, 27);
             this.cbxSigma1.TabIndex = 54;
@@ -296,7 +308,7 @@
             // frmManteinClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.ClientSize = new System.Drawing.Size(957, 662);
+            this.ClientSize = new System.Drawing.Size(1308, 854);
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmManteinClients";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();

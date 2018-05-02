@@ -64,6 +64,10 @@
             // 
             this.btnQuery.TabIndex = 2;
             // 
+            // pnlButtons
+            // 
+            this.pnlButtons.Location = new System.Drawing.Point(17, 747);
+            // 
             // btnUpdate
             // 
             this.btnUpdate.TabIndex = 1;
@@ -75,7 +79,12 @@
             // 
             // pnlMantein
             // 
-            this.pnlMantein.Location = new System.Drawing.Point(-19, 6);
+            this.pnlMantein.Location = new System.Drawing.Point(6, 5);
+            this.pnlMantein.Size = new System.Drawing.Size(1336, 860);
+            // 
+            // pnlGW
+            // 
+            this.pnlGW.Size = new System.Drawing.Size(906, 785);
             // 
             // lblCIF
             // 
@@ -216,7 +225,7 @@
             // frmManteinLaboratories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.ClientSize = new System.Drawing.Size(949, 628);
+            this.ClientSize = new System.Drawing.Size(1354, 877);
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmManteinLaboratories";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();

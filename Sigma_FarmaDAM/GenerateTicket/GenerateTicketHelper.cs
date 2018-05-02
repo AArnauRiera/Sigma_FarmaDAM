@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
 
 namespace GenerateTicket
 {
@@ -23,7 +24,7 @@ namespace GenerateTicket
 
             ConnectionInfo crConnectionInfo = new ConnectionInfo();
 
-            
+
             crystalRepDoc.Load(Application.StartupPath + "\\TicketSigmaFarmaDAM.rpt");
             crystalRepDoc.RecordSelectionFormula = "{Order_Header1.Id_Header} = " + idTicket;
 
@@ -52,6 +53,48 @@ namespace GenerateTicket
             catch
             {
                 MessageBox.Show("Error en la generación de ticket");
+            }
+
+        }
+
+        /// <summary>
+        /// Genera un archivo PDF del documento a partir de la impresora.
+        /// </summary>
+        /// <param name="crystalRepDoc">Documento Crystal Reports</param>
+        public void PrintPDF(ReportDocument crystalRepDoc){
+
+            Print(crystalRepDoc, "Microsoft Print to PDF");
+
+        }
+
+        /// <summary>
+        /// Lleva a cabo la impresión del informe entrante.
+        /// </summary>
+        /// <param name="crystalRepDoc"></param>
+        /// <param name="printerName"></param>
+        public void Print(ReportDocument crystalRepDoc, string printerName)
+        {
+
+            int i;
+            string pkInstalledPrinters;
+            try
+            {
+                for (i = 0; i <= PrinterSettings.InstalledPrinters.Count - 1; i++)
+                {
+                    pkInstalledPrinters = PrinterSettings.InstalledPrinters[i];
+                    if (pkInstalledPrinters.Equals(printerName))
+                    {
+                        crystalRepDoc.PrintOptions.PrinterName = pkInstalledPrinters;
+                        crystalRepDoc.PrintToPrinter(1, true, 0, 0);
+
+                    }
+                }
+
+                MessageBox.Show("La impresión se ha realizado correctamente");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Se ha producido un error durante la impresión: " + e);
             }
 
         }

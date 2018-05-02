@@ -47,10 +47,15 @@
             this.pnlTextBox.Controls.Add(this.lblSRN);
             this.pnlTextBox.Controls.Add(this.txtName);
             this.pnlTextBox.Controls.Add(this.txtSRN);
+            this.pnlTextBox.Location = new System.Drawing.Point(5, 23);
             // 
             // btnQuery
             // 
             this.btnQuery.TabIndex = 4;
+            // 
+            // pnlButtons
+            // 
+            this.pnlButtons.Location = new System.Drawing.Point(12, 745);
             // 
             // btnUpdate
             // 
@@ -67,7 +72,12 @@
             // 
             // pnlMantein
             // 
-            this.pnlMantein.Location = new System.Drawing.Point(15, 58);
+            this.pnlMantein.Location = new System.Drawing.Point(2, 12);
+            this.pnlMantein.Size = new System.Drawing.Size(1354, 849);
+            // 
+            // pnlGW
+            // 
+            this.pnlGW.Size = new System.Drawing.Size(909, 783);
             // 
             // lblName
             // 
@@ -95,6 +105,7 @@
             this.txtName.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.Black;
+            this.txtName.IsForeginKey = false;
             this.txtName.Location = new System.Drawing.Point(195, 31);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
@@ -108,6 +119,7 @@
             this.txtSRN.FieldType = Sigma_Controls.TxtSigma.FieldTypes.None;
             this.txtSRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSRN.ForeColor = System.Drawing.Color.Black;
+            this.txtSRN.IsForeginKey = false;
             this.txtSRN.Location = new System.Drawing.Point(195, 4);
             this.txtSRN.Margin = new System.Windows.Forms.Padding(4);
             this.txtSRN.Name = "txtSRN";
@@ -126,7 +138,7 @@
             // frmManteinActivePrinciple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.ClientSize = new System.Drawing.Size(1011, 749);
+            this.ClientSize = new System.Drawing.Size(1368, 873);
             this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "frmManteinActivePrinciple";
             ((System.ComponentModel.ISupportInitialize)(this.dts)).EndInit();
