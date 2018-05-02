@@ -47,6 +47,7 @@ namespace Mantein
                 {
                     cbxSigma cbx = control as cbxSigma;
                     cbx.Items.Clear();
+                    cbx.DataBindings.Clear();
                 }
             }
             foreach (Control control in pnlTextBox.Controls)
