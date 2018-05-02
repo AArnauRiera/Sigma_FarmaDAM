@@ -42,6 +42,7 @@
             // cbxMed
             // 
             this.cbxMed.DBReference = "CommercialName";
+            this.cbxMed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMed.ForeginData = "Register_Number";
             this.cbxMed.ForeginTable = "Drugs";
             this.cbxMed.ForeginValue = null;
@@ -55,6 +56,7 @@
             // cbxLab
             // 
             this.cbxLab.DBReference = "LabName";
+            this.cbxLab.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxLab.ForeginData = "id";
             this.cbxLab.ForeginTable = "Laboratories";
             this.cbxLab.ForeginValue = null;
@@ -120,7 +122,7 @@
             this.lblLab.BackColor = System.Drawing.Color.White;
             this.lblLab.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.lblLab.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblLab.Location = new System.Drawing.Point(25, 48);
+            this.lblLab.Location = new System.Drawing.Point(25, 81);
             this.lblLab.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLab.Name = "lblLab";
             this.lblLab.Size = new System.Drawing.Size(80, 19);
@@ -133,7 +135,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(12, 84);
+            this.label1.Location = new System.Drawing.Point(12, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 19);
