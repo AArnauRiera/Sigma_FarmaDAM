@@ -18,6 +18,7 @@ namespace Manteniment
         public frmManteinClients()
         {
             InitializeComponent();
+            cbxSigma1.FillDictionary("Type_NTS", "name", "Id");
         }
 
         protected override void OpenQuery()
@@ -51,7 +52,7 @@ namespace Manteniment
                 error = true;
             }
         }
-        
+
         public void btnUpdate_Click_1(object sender, EventArgs e)
         {
             checkControls();
@@ -60,11 +61,12 @@ namespace Manteniment
                 MessageBox.Show("Actualizado");
                 base.UpdateQuery();
                 updated = true;
-            } else
+            }
+            else
             {
                 MessageBox.Show("Algun campo no es correcto");
             }
         }
-        
+
     }
 }

@@ -69,8 +69,8 @@ namespace Mantein
                     {
                         cbx.Items.Add(row[cbx.ForeginData].ToString());
                     }
-                    dgwBase.Columns[cbx.DBReference].Visible = false;
-                    cbx.DataBindings.Add(new Binding("SelectedIndex", dgwBase.DataSource, cbx.DBReference, true));
+                    //dgwBase.Columns[cbx.DBReference].Visible = false;
+                    cbx.DataBindings.Add(new Binding("IndexDB", dgwBase.DataSource, cbx.DBReference, true));
                 }
             }                  
         }
@@ -140,7 +140,11 @@ namespace Mantein
 
                 }
 
-                dgwBase.CurrentCell = dgwBase.Rows[dgwBase.Rows.Count - 1].Cells[cell.DBReference];
+                Random r = new Random();
+                int count = dgwBase.Rows.Count - 2;
+                int index = 0;
+               index = r.Next(count);
+                dgwBase.CurrentCell = dgwBase.Rows[index].Cells[cell.DBReference];
 
                 DBUtilities db = new DBUtilities();
             db.Actualizar(query, "Taula", dts);
@@ -155,7 +159,6 @@ namespace Mantein
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             UpdateQuery();
-            resetCombobox();
         }
 
         protected void btnSelect_Click(object sender, EventArgs e)

@@ -80,5 +80,11 @@
   <ItemGroup>
     <None Include="Resources\logoSigma2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBUtils\DBUtils.csproj">
+      <Project>{FCF73ECE-3F7C-4097-8783-93BC4403E0FD}</Project>
+      <Name>DBUtils</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

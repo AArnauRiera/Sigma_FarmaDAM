@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using SearchSystem;
 using Helpers;
+using DBUtils;
 
 namespace Manteniment
 {
@@ -15,9 +16,26 @@ namespace Manteniment
     {
         bool error;
         bool updated;
+
+
+
         public frmManteinDrugs()
         {
             InitializeComponent();
+            cbxSigma1.FillDictionary("Active_Principles", "Name", "Id");
+            cbxSigma2.FillDictionary("IVA", "value", "id");
+        }
+
+        private void fillDictionary(Dictionary<string, int> dicctionary)
+        {
+            DBUtilities db = new DBUtilities();
+            DataSet Dict_dts = db.PortarPerConsulta("SELECT Id, Name FROM Active_Principles");
+
+            foreach (DataRow row in Dict_dts.Tables[0].Rows)
+            {
+                dicctionary.Add(row["Name"].ToString(), int.Parse(row["Id"].ToString()));
+            }
+
         }
 
         protected override void OpenQuery()

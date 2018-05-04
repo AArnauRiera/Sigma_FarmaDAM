@@ -94,7 +94,7 @@
             this.pnlTextBox.Controls.Add(this.txtContent);
             this.pnlTextBox.Controls.Add(this.txtSRN);
             this.pnlTextBox.Location = new System.Drawing.Point(17, 23);
-            this.pnlTextBox.Size = new System.Drawing.Size(372, 707);
+            this.pnlTextBox.Size = new System.Drawing.Size(401, 707);
             // 
             // pnlButtons
             // 
@@ -111,12 +111,13 @@
             // 
             // pnlGW
             // 
-            this.pnlGW.Size = new System.Drawing.Size(906, 795);
+            this.pnlGW.Location = new System.Drawing.Point(426, 23);
+            this.pnlGW.Size = new System.Drawing.Size(877, 795);
             // 
             // lblProspectus
             // 
             this.lblProspectus.AutoSize = true;
-            this.lblProspectus.Location = new System.Drawing.Point(13, 219);
+            this.lblProspectus.Location = new System.Drawing.Point(13, 226);
             this.lblProspectus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProspectus.Name = "lblProspectus";
             this.lblProspectus.Size = new System.Drawing.Size(70, 19);
@@ -126,7 +127,7 @@
             // lblDocumentation
             // 
             this.lblDocumentation.AutoSize = true;
-            this.lblDocumentation.Location = new System.Drawing.Point(13, 196);
+            this.lblDocumentation.Location = new System.Drawing.Point(13, 203);
             this.lblDocumentation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDocumentation.Name = "lblDocumentation";
             this.lblDocumentation.Size = new System.Drawing.Size(105, 19);
@@ -136,7 +137,7 @@
             // lblObligatory
             // 
             this.lblObligatory.AutoSize = true;
-            this.lblObligatory.Location = new System.Drawing.Point(13, 174);
+            this.lblObligatory.Location = new System.Drawing.Point(13, 181);
             this.lblObligatory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblObligatory.Name = "lblObligatory";
             this.lblObligatory.Size = new System.Drawing.Size(101, 19);
@@ -146,7 +147,7 @@
             // lblGeneric
             // 
             this.lblGeneric.AutoSize = true;
-            this.lblGeneric.Location = new System.Drawing.Point(13, 152);
+            this.lblGeneric.Location = new System.Drawing.Point(13, 159);
             this.lblGeneric.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGeneric.Name = "lblGeneric";
             this.lblGeneric.Size = new System.Drawing.Size(63, 19);
@@ -156,7 +157,7 @@
             // lblReplaceable
             // 
             this.lblReplaceable.AutoSize = true;
-            this.lblReplaceable.Location = new System.Drawing.Point(13, 129);
+            this.lblReplaceable.Location = new System.Drawing.Point(13, 136);
             this.lblReplaceable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblReplaceable.Name = "lblReplaceable";
             this.lblReplaceable.Size = new System.Drawing.Size(85, 19);
@@ -166,7 +167,7 @@
             // lblContent
             // 
             this.lblContent.AutoSize = true;
-            this.lblContent.Location = new System.Drawing.Point(13, 106);
+            this.lblContent.Location = new System.Drawing.Point(13, 114);
             this.lblContent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContent.Name = "lblContent";
             this.lblContent.Size = new System.Drawing.Size(73, 19);
@@ -176,7 +177,7 @@
             // lblIdActive
             // 
             this.lblIdActive.AutoSize = true;
-            this.lblIdActive.Location = new System.Drawing.Point(13, 85);
+            this.lblIdActive.Location = new System.Drawing.Point(13, 89);
             this.lblIdActive.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdActive.Name = "lblIdActive";
             this.lblIdActive.Size = new System.Drawing.Size(63, 19);
@@ -186,7 +187,7 @@
             // lblDenomination
             // 
             this.lblDenomination.AutoSize = true;
-            this.lblDenomination.Location = new System.Drawing.Point(13, 62);
+            this.lblDenomination.Location = new System.Drawing.Point(13, 64);
             this.lblDenomination.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDenomination.Name = "lblDenomination";
             this.lblDenomination.Size = new System.Drawing.Size(97, 19);
@@ -196,7 +197,7 @@
             // lblSRN
             // 
             this.lblSRN.AutoSize = true;
-            this.lblSRN.Location = new System.Drawing.Point(13, 41);
+            this.lblSRN.Location = new System.Drawing.Point(13, 39);
             this.lblSRN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSRN.Name = "lblSRN";
             this.lblSRN.Size = new System.Drawing.Size(34, 19);
@@ -353,7 +354,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 252);
+            this.label1.Location = new System.Drawing.Point(13, 250);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 19);
@@ -379,7 +380,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 278);
+            this.label2.Location = new System.Drawing.Point(13, 277);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 19);
@@ -426,7 +427,7 @@
             // lblRegNum
             // 
             this.lblRegNum.AutoSize = true;
-            this.lblRegNum.Location = new System.Drawing.Point(13, 18);
+            this.lblRegNum.Location = new System.Drawing.Point(13, 16);
             this.lblRegNum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegNum.Name = "lblRegNum";
             this.lblRegNum.Size = new System.Drawing.Size(113, 19);
@@ -439,8 +440,9 @@
             this.cbxSigma1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSigma1.ForeginData = "Name";
             this.cbxSigma1.ForeginTable = "Active_Principles";
-            this.cbxSigma1.ForeginValue = null;
+            this.cbxSigma1.ForeginValue = "Id";
             this.cbxSigma1.FormattingEnabled = true;
+            this.cbxSigma1.IndexDB = 0;
             this.cbxSigma1.Location = new System.Drawing.Point(163, 86);
             this.cbxSigma1.Name = "cbxSigma1";
             this.cbxSigma1.Size = new System.Drawing.Size(204, 27);
@@ -452,8 +454,9 @@
             this.cbxSigma2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSigma2.ForeginData = "value";
             this.cbxSigma2.ForeginTable = "IVA";
-            this.cbxSigma2.ForeginValue = null;
+            this.cbxSigma2.ForeginValue = "id";
             this.cbxSigma2.FormattingEnabled = true;
+            this.cbxSigma2.IndexDB = 0;
             this.cbxSigma2.Location = new System.Drawing.Point(163, 274);
             this.cbxSigma2.Name = "cbxSigma2";
             this.cbxSigma2.Size = new System.Drawing.Size(118, 27);

@@ -298,8 +298,9 @@
             this.cbxSigma1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSigma1.ForeginData = "name";
             this.cbxSigma1.ForeginTable = "Type_NTS";
-            this.cbxSigma1.ForeginValue = null;
+            this.cbxSigma1.ForeginValue = "Id";
             this.cbxSigma1.FormattingEnabled = true;
+            this.cbxSigma1.IndexDB = 0;
             this.cbxSigma1.Location = new System.Drawing.Point(149, 72);
             this.cbxSigma1.Name = "cbxSigma1";
             this.cbxSigma1.Size = new System.Drawing.Size(188, 27);
