@@ -218,7 +218,6 @@
             this.txtDocumentation.TabIndex = 8;
             this.txtDocumentation.Table = "Drugs";
             this.txtDocumentation.TextChanged += new System.EventHandler(this.txtDocumentation_TextChanged);
-            this.txtDocumentation.Leave += new System.EventHandler(this.tbx_Leave);
             // 
             // txtReplaceable
             // 
@@ -278,7 +277,6 @@
             this.txtProspectus.Size = new System.Drawing.Size(204, 20);
             this.txtProspectus.TabIndex = 9;
             this.txtProspectus.Table = "Drugs";
-            this.txtProspectus.Leave += new System.EventHandler(this.tbx_Leave);
             // 
             // txtDenomination
             // 

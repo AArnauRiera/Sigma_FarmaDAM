@@ -19,7 +19,7 @@ namespace XMLTools
             try
             {
                 // Pasamos la ruta completa al FTP
-                FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://172.17.6.0/Grupo_1/1/" + path);
+                FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://172.17.6.50/Grupo_1/1/" + path);
                 request.Method = WebRequestMethods.Ftp.UploadFile;
                 // Nos logeamos
                 request.Credentials = new NetworkCredential("grupo1", "12345aA");
